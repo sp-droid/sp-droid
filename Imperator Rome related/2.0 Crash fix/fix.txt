@@ -1,4 +1,4 @@
-You will need to create an event and store in the /events folder, e.g.:
+You will need to create an event and store it in the /events folder, e.g.:
 
 If the file is called 'crashfix';
 ////////////////////////////////////////////////////////////////////////
