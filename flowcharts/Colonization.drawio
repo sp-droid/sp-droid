@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-12T19:10:34.230Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36" etag="eZkJv-qYhXtoqRvsZQZm" version="15.5.1" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-12T19:26:23.549Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36" etag="yQPmJcGT0NbUTXfBdtWz" version="15.5.1" type="github">
   <diagram id="2izPmhNQT8do5wb_NxUC" name="Page-1">
     <mxGraphModel dx="1673" dy="896" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -26,7 +26,7 @@
         <mxCell id="NNfmtYUVBrDQ10D037eb-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-2" target="NNfmtYUVBrDQ10D037eb-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-2" value="OVERSEAS COLONIZATION" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-2" value="OVERSEAS COLONIZATION" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
           <mxGeometry x="240" y="220" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NNfmtYUVBrDQ10D037eb-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=1;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-4" target="NNfmtYUVBrDQ10D037eb-40">
@@ -37,10 +37,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-4" value="ADJACENT&lt;br&gt;PROVINCE COLONIZATION" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-4" value="ADJACENT&lt;br&gt;PROVINCE COLONIZATION" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
           <mxGeometry x="240" y="770" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-6" value="BEACHHEAD NATION FOUNDING" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-6" value="BEACHHEAD NATION FOUNDING" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="400" y="90" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NNfmtYUVBrDQ10D037eb-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-7" target="NNfmtYUVBrDQ10D037eb-4">
@@ -48,7 +48,7 @@
             <mxPoint x="270" y="700" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-7" value="COLONIZING" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-7" value="COLONIZING" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="240" y="430" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NNfmtYUVBrDQ10D037eb-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-16" target="NNfmtYUVBrDQ10D037eb-7">
@@ -57,13 +57,13 @@
         <mxCell id="NNfmtYUVBrDQ10D037eb-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-16" target="NNfmtYUVBrDQ10D037eb-17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-16" value="COLONIAL NATION&lt;br&gt;EXPANSION WAYS" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-16" value="COLONIAL NATION&lt;br&gt;EXPANSION WAYS" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="310" y="330" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-17" value="CONQUERING NATIVE CIVILIZATIONS" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-17" value="CONQUERING NATIVE CIVILIZATIONS" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="384" y="430" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-21" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;strokeWidth=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.011;entryY=0.563;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-6" target="NNfmtYUVBrDQ10D037eb-30">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-21" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;strokeWidth=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.011;entryY=0.563;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-6" target="NNfmtYUVBrDQ10D037eb-30">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="480" y="170" as="sourcePoint" />
             <mxPoint x="550" y="130" as="targetPoint" />
@@ -75,19 +75,19 @@
         <mxCell id="NNfmtYUVBrDQ10D037eb-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-30" target="NNfmtYUVBrDQ10D037eb-32">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-30" value="Explorers with the right mindset are born&lt;br&gt;&lt;br&gt;If naval tech allows it, expedition succeeds&lt;br&gt;&lt;br&gt;Discovers new lands&lt;br&gt;&lt;br&gt;Chooses beachhead" style="whiteSpace=wrap;html=1;aspect=fixed;shadow=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-30" value="Explorers with the right mindset are born&lt;br&gt;&lt;br&gt;If naval tech allows it, expedition succeeds&lt;br&gt;&lt;br&gt;Discovers new lands&lt;br&gt;&lt;br&gt;Chooses beachhead" style="whiteSpace=wrap;html=1;aspect=fixed;shadow=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="600" y="30" width="160" height="160" as="geometry" />
         </mxCell>
         <mxCell id="NNfmtYUVBrDQ10D037eb-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-31" target="NNfmtYUVBrDQ10D037eb-16">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-31" value="FOUND COLONIAL&lt;br&gt;NATION" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-31" value="FOUND COLONIAL&lt;br&gt;NATION" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="510" y="230" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NNfmtYUVBrDQ10D037eb-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=1;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-32" target="NNfmtYUVBrDQ10D037eb-40">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-32" value="ISLAND&lt;br&gt;COLONIZATION" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-32" value="ISLAND&lt;br&gt;COLONIZATION" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
           <mxGeometry x="690" y="230" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NNfmtYUVBrDQ10D037eb-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeWidth=1;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-40" target="NNfmtYUVBrDQ10D037eb-43">
@@ -96,13 +96,13 @@
         <mxCell id="NNfmtYUVBrDQ10D037eb-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeWidth=1;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-40" target="NNfmtYUVBrDQ10D037eb-44">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-40" value="&lt;span&gt;X Max. colonies, x current colonies&lt;/span&gt;&lt;br&gt;&lt;span&gt;If x=X, button greys out&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span&gt;Click --&amp;gt; Try to establish an outpost in around 180 days&lt;br&gt;to 2 years&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-40" value="&lt;span&gt;X Max. colonies, x current colonies&lt;/span&gt;&lt;br&gt;&lt;span&gt;If x=X, button greys out&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span&gt;Click --&amp;gt; Try to establish an outpost in around 180 days&lt;br&gt;to 2 years&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
           <mxGeometry x="570" y="470" width="160" height="120" as="geometry" />
         </mxCell>
         <mxCell id="NNfmtYUVBrDQ10D037eb-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeWidth=1;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-43" target="NNfmtYUVBrDQ10D037eb-45">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-43" value="All goes well" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-43" value="All goes well" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="420" y="640" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NNfmtYUVBrDQ10D037eb-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-44" target="NNfmtYUVBrDQ10D037eb-56">
@@ -111,19 +111,19 @@
         <mxCell id="NNfmtYUVBrDQ10D037eb-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-44" target="NNfmtYUVBrDQ10D037eb-57">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-44" value="Conflict" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-44" value="Conflict" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="750" y="640" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-45" value="Gains control over province&lt;br&gt;Sets &quot;Colony developing&quot;&lt;br&gt;modifier" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-45" value="Gains control over province&lt;br&gt;Sets &quot;Colony developing&quot;&lt;br&gt;modifier" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="405" y="740" width="150" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-47" value="&lt;span&gt;Province provides&lt;/span&gt;&lt;br&gt;&lt;span&gt;no tax or manpower for some years. The time depends on the province and population&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-47" value="&lt;span&gt;Province provides&lt;/span&gt;&lt;br&gt;&lt;span&gt;no tax or manpower for some years. The time depends on the province and population&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
           <mxGeometry x="395" y="820" width="170" height="100" as="geometry" />
         </mxCell>
         <mxCell id="NNfmtYUVBrDQ10D037eb-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.029;entryY=0.605;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=1;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-49" target="NNfmtYUVBrDQ10D037eb-47">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-49" value="This modified can be used to trigger events" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-49" value="This modified can be used to trigger events" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="250" y="850" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NNfmtYUVBrDQ10D037eb-52" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-47" target="NNfmtYUVBrDQ10D037eb-45">
@@ -141,7 +141,7 @@
         <mxCell id="NNfmtYUVBrDQ10D037eb-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-56" target="NNfmtYUVBrDQ10D037eb-67">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-56" value="with nations trying&lt;br&gt;to colonize&lt;br&gt;the same province" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-56" value="with nations trying&lt;br&gt;to colonize&lt;br&gt;the same province" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="670" y="740" width="110" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NNfmtYUVBrDQ10D037eb-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-57" target="NNfmtYUVBrDQ10D037eb-71">
@@ -150,10 +150,10 @@
         <mxCell id="NNfmtYUVBrDQ10D037eb-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=1;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-57" target="NNfmtYUVBrDQ10D037eb-72">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-57" value="with natives" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-57" value="with natives" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="970" y="740" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-58" value="Base time depends on&lt;br&gt;attitude toward natives, province size, terrain&lt;br&gt;and RNG" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-58" value="Base time depends on&lt;br&gt;attitude toward natives, province size, terrain&lt;br&gt;and RNG" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
           <mxGeometry x="760" y="490" width="140" height="80" as="geometry" />
         </mxCell>
         <mxCell id="NNfmtYUVBrDQ10D037eb-59" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-40" target="NNfmtYUVBrDQ10D037eb-58">
@@ -170,13 +170,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-63" value="Force nation to&lt;br&gt;abandon outpost" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-63" value="Force nation to&lt;br&gt;abandon outpost" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="590" y="840" width="90" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-64" value="Be forced to &lt;br&gt;abandon outpost" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-64" value="Be forced to &lt;br&gt;abandon outpost" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="700" y="840" width="80" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-67" value="War" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-67" value="War" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="800" y="840" width="90" height="70" as="geometry" />
         </mxCell>
         <mxCell id="NNfmtYUVBrDQ10D037eb-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=1;" edge="1" parent="1" source="NNfmtYUVBrDQ10D037eb-71" target="NNfmtYUVBrDQ10D037eb-45">
@@ -189,10 +189,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-71" value="Spend gold,&lt;br&gt;men, and/or&lt;br&gt;time" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-71" value="Spend gold,&lt;br&gt;men, and/or&lt;br&gt;time" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="940" y="840" width="80" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="NNfmtYUVBrDQ10D037eb-72" value="Abandon&lt;br&gt;outpost" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;" vertex="1" parent="1">
+        <mxCell id="NNfmtYUVBrDQ10D037eb-72" value="Abandon&lt;br&gt;outpost" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="1060" y="840" width="80" height="70" as="geometry" />
         </mxCell>
       </root>
