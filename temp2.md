@@ -5,4 +5,4 @@
 ### The opposing nation’s “/f i”
 ![image](https://user-images.githubusercontent.com/52839915/141457097-63d008d7-830e-4cdc-a7a9-42b5dce72b77.png)
 ### An image on the dynmap which shows both your nation and the enemy’s nation
-![image](https://user-images.githubusercontent.com/52839915/141456997-448f3fe6-3764-4bb6-9a37-c748d307fbae.png)
+![image](https://user-images.githubusercontent.com/52839915/141509242-11dc9d6f-d5b6-4800-8c22-816865351a38.png)
