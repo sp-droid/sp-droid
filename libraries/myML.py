@@ -225,11 +225,13 @@ class ANN:
     ## STORAGE
 
     def test(self, x):
+        self.typealert(x)
         for layer in self.layers:
             x = layer.feedforward(x)
         return x
     
     def testwithplot(self, x, mtest, nodes):   #mtest has to be 1
+        self.typealert(x)
         l = 0
         A = {}
         for layer in self.layers:
@@ -245,11 +247,13 @@ class ANN:
             neuralplot(nodes, True, W, A)
         return x
     
-    def train(self, x_train, y_train, epochs, optimizer, lr, lambd):
+    def train(self, x_train: np.ndarray, y_train: np.ndarray, epochs, optimizer, lr, lambd, printepochs=2000):
+        self.typealert(x_train, y_train)
         costs = []
-        if optimizer == 'GD':                                           #Gradient descent
-            for epoch in range(epochs):
-                if (epoch+1) % 2000 == 0: print('Epoch nº'+str(epoch))
+        for epoch in range(epochs):
+            if printepochs != False: 
+                if (epoch+1) % printepochs == 0: print('Epoch nº'+str(epoch))
+            if optimizer == 'GD':                                           #Gradient descent
                 y = self.test(x_train)
 
                 dJdy = self.d_loss(y_train, y)
@@ -259,9 +263,7 @@ class ANN:
                 J = np.sum(self.loss(y_train, y))
                 costs.append(J)
 
-        elif optimizer == 'SGD':                                        #Stochastic GD
-            for epoch in range(epochs):
-                if epoch % 50 == 0: print('Epoch nº '+str(epoch))
+            elif optimizer == 'SGD':                                        #Stochastic GD
                 for i in range(y_train.shape[1]):
                     y = self.test(x_train.T[i].reshape(-1,1))
 
@@ -272,12 +274,8 @@ class ANN:
                 J = np.sum(self.loss(y_train, y))
                 costs.append(J)
 
-        elif optimizer == 'Adam':                                       #Adam stochastic optimizer, recommended values: alfa = 0.001, beta1 = 0.9, beta2 = 0.999, epsilon = 1e-08
-            beta1 = 0.9
-            beta2 = 0.999
-            epsilon = 1e-08
-            for epoch in range(epochs):
-                if epoch % 50 == 0: print('Epoch nº '+str(epoch))
+            elif optimizer == 'Adam':                                       #Adam stochastic optimizer, recommended values: alfa = 0.001, beta1 = 0.9, beta2 = 0.999, epsilon = 1e-08
+                beta1, beta2, epsilon = 0.9, 0.999, 1e-08
                 for i in range(y_train.shape[1]):
                     y = self.test(x_train.T[i].reshape(-1,1))
 
@@ -288,10 +286,16 @@ class ANN:
                 y = self.test(x_train)
                 J = np.sum(self.loss(y_train, y))
                 costs.append(J)
-        else:
-            print('No optimizer found. This library offers GD, SGD and Adam')
+            else:
+                print('No optimizer found. This library offers GD, SGD and Adam')
+                break
 
         return costs
+    
+    def typealert(self, *arguments):
+        for entry in arguments:
+            if type(entry) != np.ndarray: raise ValueError('X and Y must be ndarrays, not np.matrix or similar')
+        
 
 #############################################################
 """
@@ -597,31 +601,44 @@ class norm0to1_minmax: #Knowing the sampling plan before, one must know the limi
 #Normalize NOT knowing the true limits of the variables (X[d,m])
 #@Normalize or @recover a matrix of points (X[d,m])
 class norm0to1: #Knowing the initial dataset
-    def __init__(self, X):
+    def __init__(self, X, array_format='inverted'):
+        '''
+        Default array "format" is inverted or (row=categories, column=samples).
+        If your array is like a normal pandas dataframe (row=samples, column=categories), specify array_format='normal'
+        '''
+        self.array_format = array_format
+        if self.array_format!='inverted': X = X.T
+        if X.shape[0] > X.shape[1]: print('Number of samples smaller than number of categories. If you got an error be sure to specify the right "array_format" class var')
+
         self.d = X.shape[0]
-        self.max = []
-        self.min = []
+        self.max, self.min = [None]*self.d, [None]*self.d
         for i in range(self.d):
-            self.max.append(np.amax(X[i,:]))
-            self.min.append(np.amin(X[i,:]))
+            if type(X[i,0])==str: continue
+            self.max[i] = np.amax(X[i,:])
+            self.min[i] = np.amin(X[i,:])
 
     def normalize(self, X):                  #X is a matrix with dimension-rows and points-columns
-        npoints = X.shape[1]
+        if self.array_format!='inverted': X = X.T
+        samplesize = X.shape[1]
         if X.shape[0] != self.d: print('Unmatching dimensions: '+str(self.d)+' vs. '+str(X.shape[0]))
-        Y = X*1.0
-        Y = Y.astype('float64')
+        Y = np.copy(X)
         for i in range(self.d):
-            for j in range(npoints):
+            if self.max[i] == None: continue
+            for j in range(samplesize):
                 Y[i,j] = (Y[i,j]-self.min[i])/(self.max[i]-self.min[i])
+        if self.array_format!='inverted': return Y.T
         return Y
 
     def recover(self, X):
-        npoints = X.shape[1]
+        if self.array_format!='inverted': X = X.T
+        samplesize = X.shape[1]
         if X.shape[0] != self.d: print('Unmatching dimensions: '+str(self.d)+' vs. '+str(X.shape[0]))
-        Y = X*1.0
+        Y = np.copy(X)
         for i in range(self.d):
-            for j in range(npoints):
+            if self.max[i] == None: continue
+            for j in range(samplesize):
                 Y[i,j] = Y[i,j]*(self.max[i]-self.min[i])+self.min[i]
+        if self.array_format!='inverted': return Y.T
         return Y
 
 #############################################################
