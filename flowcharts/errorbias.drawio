@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-05-04T09:43:38.403Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36" etag="Js_AefC4t6tlf58JHWHE" version="17.5.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-10T19:49:38.916Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36" etag="pJDYHs0Leozdjn2TzqOx" version="17.5.0" type="github">
   <diagram id="nlkPnwCIeHFaATNDk7t9" name="Page-1">
-    <mxGraphModel dx="2249" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2249" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -10,14 +10,13 @@
         <mxCell id="x7gbHvze0u9rKhDAbI1o-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="x7gbHvze0u9rKhDAbI1o-1" target="x7gbHvze0u9rKhDAbI1o-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="x7gbHvze0u9rKhDAbI1o-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="x7gbHvze0u9rKhDAbI1o-1" target="x7gbHvze0u9rKhDAbI1o-60" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="x7gbHvze0u9rKhDAbI1o-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="x7gbHvze0u9rKhDAbI1o-1" target="sU1CsyUOXi9waq4NskRp-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="990" y="125" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="x7gbHvze0u9rKhDAbI1o-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="x7gbHvze0u9rKhDAbI1o-1" target="x7gbHvze0u9rKhDAbI1o-62" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="x7gbHvze0u9rKhDAbI1o-1" value="HOMOGENEITY OF ERROR MEANS / ERROR BIAS" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="354" y="40" width="120" height="60" as="geometry" />
+        <mxCell id="x7gbHvze0u9rKhDAbI1o-1" value="ERROR BIAS" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="580" y="40" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="x7gbHvze0u9rKhDAbI1o-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="x7gbHvze0u9rKhDAbI1o-2" target="x7gbHvze0u9rKhDAbI1o-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -57,19 +56,26 @@
         <mxCell id="x7gbHvze0u9rKhDAbI1o-6" value="N-WAY&lt;br&gt;N independent vars&lt;br&gt;vs&lt;br&gt;Dependent var" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="560" y="150" width="160" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="x7gbHvze0u9rKhDAbI1o-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="x7gbHvze0u9rKhDAbI1o-7" target="x7gbHvze0u9rKhDAbI1o-10" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="40" y="360" />
-              <mxPoint x="-65" y="360" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="x7gbHvze0u9rKhDAbI1o-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="x7gbHvze0u9rKhDAbI1o-7" target="x7gbHvze0u9rKhDAbI1o-8" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="40" y="430" />
               <mxPoint x="40" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sU1CsyUOXi9waq4NskRp-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=none;" edge="1" parent="1" source="x7gbHvze0u9rKhDAbI1o-7" target="sU1CsyUOXi9waq4NskRp-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sU1CsyUOXi9waq4NskRp-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="x7gbHvze0u9rKhDAbI1o-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-80" y="360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="40" y="360" />
+              <mxPoint x="-70" y="360" />
+              <mxPoint x="-70" y="350" />
+              <mxPoint x="-60" y="350" />
+              <mxPoint x="-60" y="370" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -82,11 +88,11 @@
         <mxCell id="x7gbHvze0u9rKhDAbI1o-8" value="&lt;i&gt;&quot;Normality&quot;&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="10" y="380" width="60" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="x7gbHvze0u9rKhDAbI1o-9" value="Pearson&lt;br&gt;correlation&lt;br&gt;+ inference" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-5" y="510" width="90" height="60" as="geometry" />
+        <mxCell id="x7gbHvze0u9rKhDAbI1o-9" value="Pearson&lt;br&gt;(linear) correlation" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-2.5" y="515" width="85" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="x7gbHvze0u9rKhDAbI1o-10" value="Spearman&lt;br&gt;correlation&lt;br&gt;+ inference" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-110" y="510" width="90" height="60" as="geometry" />
+        <mxCell id="x7gbHvze0u9rKhDAbI1o-10" value="Spearman (rank)&lt;br&gt;correlation" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-120" y="512.5" width="90" height="65" as="geometry" />
         </mxCell>
         <mxCell id="x7gbHvze0u9rKhDAbI1o-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;" parent="1" source="x7gbHvze0u9rKhDAbI1o-20" target="x7gbHvze0u9rKhDAbI1o-21" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -112,7 +118,7 @@
         <mxCell id="x7gbHvze0u9rKhDAbI1o-28" value="1-Way ANOVA" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="254" y="510" width="90" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="x7gbHvze0u9rKhDAbI1o-32" value="H0: Both variables are NOT linearly&lt;br&gt;correlated" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="x7gbHvze0u9rKhDAbI1o-32" value="H0: Both variables are NOT&lt;br&gt;correlated" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-70" y="600" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="x7gbHvze0u9rKhDAbI1o-33" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="x7gbHvze0u9rKhDAbI1o-10" target="x7gbHvze0u9rKhDAbI1o-32" edge="1">
@@ -166,7 +172,7 @@
         <mxCell id="x7gbHvze0u9rKhDAbI1o-46" value="&lt;span&gt;2-Way ANCOVA&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="827" y="500" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="x7gbHvze0u9rKhDAbI1o-47" value="&lt;span&gt;Multiple correlation&lt;br&gt;(Pearson or Spearman)&lt;br&gt;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="x7gbHvze0u9rKhDAbI1o-47" value="&lt;span&gt;Multiple correlation&lt;br&gt;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="530" y="400" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="x7gbHvze0u9rKhDAbI1o-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="x7gbHvze0u9rKhDAbI1o-48" target="x7gbHvze0u9rKhDAbI1o-49" edge="1">
@@ -181,11 +187,20 @@
         <mxCell id="x7gbHvze0u9rKhDAbI1o-58" value="+ Homogeneity of covariances" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="700" y="410" width="220" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="x7gbHvze0u9rKhDAbI1o-60" value="Multiple dependent variables (RFs)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="770" y="110" width="170" height="30" as="geometry" />
+        <mxCell id="sU1CsyUOXi9waq4NskRp-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sU1CsyUOXi9waq4NskRp-2" target="x7gbHvze0u9rKhDAbI1o-10">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="x7gbHvze0u9rKhDAbI1o-62" value="Non-Linear correlation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-150" y="110" width="100" height="30" as="geometry" />
+        <mxCell id="sU1CsyUOXi9waq4NskRp-2" value="Non-linear&lt;br&gt;correlation" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-115" y="340" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sU1CsyUOXi9waq4NskRp-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sU1CsyUOXi9waq4NskRp-3" target="x7gbHvze0u9rKhDAbI1o-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sU1CsyUOXi9waq4NskRp-3" value="N-WAY&lt;br&gt;N independent vars&lt;br&gt;vs&lt;br&gt;K Dependent vars" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="150" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="sU1CsyUOXi9waq4NskRp-5" value="Multiple correlation,&lt;br&gt;MANOVA or&lt;br&gt;MANCOVA" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="790" y="152.5" width="130" height="85" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
