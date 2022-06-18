@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-18T09:04:40.110Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="tqiupXsl3L9uHSsXh-iq" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-18T09:06:14.053Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="l7rrH8FPwTgF3QY99xMN" version="20.0.1" type="github">
   <diagram id="2DXzXWBS7C-gEXa2fv9D" name="Page-1">
     <mxGraphModel dx="2249" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -191,13 +191,13 @@
         <mxCell id="8qUbt3mJaNu10ZsMwTm5-61" value="Pagan Europe" style="swimlane;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="600" y="240" width="120" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="8qUbt3mJaNu10ZsMwTm5-50" value="Old Norse&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Tengrism%22%20style%3D%22shape%3Dparallelogram%3Bperimeter%3DhexagonPerimeter2%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfixedSize%3D1%3BfillColor%3D%23dae8fc%3BstrokeColor%3D%236c8ebf%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22340%22%20y%3D%22130%22%20width%3D%22120%22%20height%3D%2220%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="shape=parallelogram;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="8qUbt3mJaNu10ZsMwTm5-61" vertex="1">
+        <mxCell id="8qUbt3mJaNu10ZsMwTm5-50" value="Germanic" style="shape=parallelogram;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="8qUbt3mJaNu10ZsMwTm5-61" vertex="1">
           <mxGeometry y="30" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="8qUbt3mJaNu10ZsMwTm5-49" value="Old Slavic" style="shape=parallelogram;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="8qUbt3mJaNu10ZsMwTm5-61" vertex="1">
+        <mxCell id="8qUbt3mJaNu10ZsMwTm5-49" value="Slavic" style="shape=parallelogram;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="8qUbt3mJaNu10ZsMwTm5-61" vertex="1">
           <mxGeometry y="50" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="8qUbt3mJaNu10ZsMwTm5-51" value="Druidism" style="shape=parallelogram;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="8qUbt3mJaNu10ZsMwTm5-61" vertex="1">
+        <mxCell id="8qUbt3mJaNu10ZsMwTm5-51" value="Celtic" style="shape=parallelogram;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="8qUbt3mJaNu10ZsMwTm5-61" vertex="1">
           <mxGeometry y="70" width="120" height="20" as="geometry" />
         </mxCell>
         <mxCell id="8qUbt3mJaNu10ZsMwTm5-62" value="Pagan Asia + Oce" style="swimlane;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
