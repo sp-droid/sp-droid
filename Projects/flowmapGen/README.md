@@ -1,4 +1,6 @@
-Hi, I made this for Imperator but it works for ck3 too. It's a normal map but using a combination of linear, exponential and constant gradients + averages of nearest points instead of just using the minimum distance. The only drawback is the need to iterate over the image, which can be time consuming. To account for it i've also used paralellization and it's quite fast. On default settings takes around a minute to work on ck3's map on my pc (i7 4790k). **Download the "flowmapGen.rar", unzip and you will find...**:
+Hi, I made this for Imperator but it works for ck3 too. It's a normal map but using a combination of linear, exponential and constant gradients + averages of nearest points instead of just using the minimum distance. The only drawback is the need to iterate over the image, which can be time consuming. To account for it i've also used paralellization and it's quite fast. On default settings takes around a minute to work on ck3's map on my pc (i7 4790k). 
+https://github.com/sp-droid/myrepo/raw/main/Projects/flowmapGen/flowmapGen.rar
+**Download the "flowmapGen.rar" (link above), unzip and you will find...**:
 - Program folder
 - main.ipynb notebook with the code, fine tuned for ck3
 - **To open and run the notebook it's recommended to have either JupyterLab, Visual Studio Code or any code editor that can run notebooks**
