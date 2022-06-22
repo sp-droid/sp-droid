@@ -15,5 +15,4 @@ I've attached an example output for ck3, ![image](https://user-images.githubuser
 Then a basic flowmap using a normal map online generator ![image](https://user-images.githubusercontent.com/52839915/175093908-4bb28cbc-3684-4381-b11d-b3f404572cd4.png)
 Lastly an example with a world map from imperator ![image](https://user-images.githubusercontent.com/52839915/175093934-d2353273-4e32-46cb-b122-710305fb6fee.png)
 
-This was made in large part thanks to Carlberg messages about flowmaps, they were useful to design the algorithm  
-P.S.: I found some interesting patterns from this technique which i may use to develop a watercolor map generator, which could be useful aswell for big maps or new maps altogether (submerged water appeareance & water color)
+This was made in large part thanks to Carlberg & MattAlexi messages about flowmaps, they were useful to design the algorithm  
