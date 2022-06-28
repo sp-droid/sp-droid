@@ -7,6 +7,8 @@ Here you can find 3 compressed splitted files, download all and extract the firs
 
 The only parameters you really have to tune correctly are in the **last cell (with instructions): equator, temperate_center and artic_center**
 
+If you are using it on Imperator, I advise you to increase the contrast 10%, brightness 10% and then lighting 4-6% with an external tool like Gimp
+
 You need to install Python and have the following modules:
 Numpy, pandas, scipy, scikit-learn, tqdm, joblib, matplotlib, PIL and dill.
 
