@@ -45,3 +45,9 @@ Some results:
 
 ![watercolor_rgb_waterspec_a](https://user-images.githubusercontent.com/52839915/176159484-c16611d5-24d1-405b-be7e-3ce2ac11f5ef.jpg)
 
+Intermediate steps example [Vanilla CK3]:
+![step1](https://user-images.githubusercontent.com/52839915/176160226-3f68c35e-f70a-43db-a3bf-42dcfbf55ae3.jpg)
+![step2](https://user-images.githubusercontent.com/52839915/176160283-611d3a30-539c-4d62-bb5a-ee0e9053f6f1.jpg)
+![step3](https://user-images.githubusercontent.com/52839915/176160294-492bf387-cc78-4496-ad07-5d4aeab84058.jpg)
+![step4](https://user-images.githubusercontent.com/52839915/176160302-77633476-cabe-4928-9517-c7186566d34c.jpg)
+![step5](https://user-images.githubusercontent.com/52839915/176160334-019b5774-f04f-4b97-93d1-d5df0d296ac2.jpg)
