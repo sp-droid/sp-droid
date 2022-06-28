@@ -3,6 +3,7 @@ Hi, I've had the need to make a good quality watercolor map for a mod in Imperat
 A frequent "problem" we modders usually have is that we go to great lengths to make an exquisite heightmap, specially if the map is based on some real part of the world and we can access satellite data, but then we have to hand paint or apply rough shaders to the watercolor map that defines the height below sea level. Sometimes if you are really talented, you can achieve a very good result, but other times (like in my case) one can't always wake up the inner Bob Ross.
  
 The github page with instructions: https://github.com/sp-droid/myrepo/tree/main/Projects/watercolorGen
+
 Here you can find 3 compressed splitted files, download all and extract the first one to get the program. To run it, open the watercolor.ipynb with a notebook editor like VSCode or JupyterLab and run cell by cell. Be sure to drop your heightmap in the input folder. For ck3, you have to downscale your heightmap by TWO and color all WATER to BLACK rgb(0,0,0). For imperator the downscale factor is FOUR.
 
 The only parameters you really have to tune correctly are in the **last cell (with instructions): equator, temperate_center and artic_center**
