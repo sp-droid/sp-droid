@@ -1,6 +1,14 @@
-Hi, I made this for Imperator but it works for ck3 too. It's a normal map but using a combination of linear, exponential and constant gradients + averages of nearest points instead of just using the minimum distance. The only drawback is the need to iterate over the image, which can be time consuming. To account for it i've also used paralellization and it's quite fast. On default settings takes around a minute to work on ck3's map on my pc (i7 4790k). 
+Hi, I've had the need to make a good quality watercolor map for a mod in Imperator Rome, one in which the sea floor elevation realistically resembles the land right next to it. So I made a generator that works for ck3 and Imperator. 
+
+A frequent "problem" we modders usually have is that we go to great lengths to make an exquisite heightmap, specially if the map is based on some real part of the world and we can access satellite data, but then we have to hand paint or apply rough shaders to the watercolor map that defines the height below sea level. Sometimes if you are really talented, you can achieve a very good result, but other times (like in my case) one can't always wake up the inner Bob Ross.
  
-https://github.com/sp-droid/myrepo/raw/main/Projects/flowmapGen/flowmapGen.rar
+The github page with instructions: https://github.com/sp-droid/myrepo/tree/main/Projects/watercolorGen
+Here you can find 3 compressed splitted files, download all and extract the first one to get the program. To run it, open the watercolor.ipynb with a notebook editor like VSCode or JupyterLab and run cell by cell. Be sure to drop your heightmap in the input folder. For ck3, you have to downscale your heightmap by TWO and color all WATER to BLACK rgb(0,0,0). For imperator the downscale factor is FOUR.
+
+The only parameters you really have to tune correctly are in the **last cell**:
+equator = 0 #If 0 is the top, 1 the bottom, where is the equator in your map? The equation for m works with equator = 0, 0.5 or 1. Haven't done the math on the others, but you can ofc
+temperate_center = 0.2 #If 0 is the equator, 0.5 the pole. You want this between Gibraltar and the Pirinees, or equivalent in your mod
+artic_center = 0.36 #If 0 is the equator, 0.5 the pole. You want this around Helsinki in Finland, or equivalent in your mod
  
 **Download the "flowmapGen.rar" (link above), unzip and you will find...**:
 - Program folder
