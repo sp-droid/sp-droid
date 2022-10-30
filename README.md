@@ -14,7 +14,7 @@
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)&nbsp;
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=fff&style=for-the-badge)&nbsp;
 
-### 🛠 &nbsp;To learn 100%
+### ⚡ &nbsp;To learn 100%
 
 ![Rust](https://img.shields.io/badge/Rust-000?logo=rust&logoColor=fff&style=for-the-badge)&nbsp;
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge)&nbsp;
