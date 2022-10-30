@@ -1,4 +1,4 @@
-[//]: # This page is awesome to make badges like the matlabicon.svg I uploaded
+[//]: # (This page is awesome to make badges like the matlabicon.svg I uploaded)
 
 ### 🛠 &nbsp;Proficiency in
 
