@@ -3,7 +3,7 @@
 [//]: # (https://badges.pages.dev/?q=python This one too)
 ## Hello fellows
 
-<a href="https://github.com/DenverCoder1/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com?&font=IBM+Plex+Sans&color=abcdef&size=20&lines=Welcome+to+my+GitHub+Profile!;I'm+an+Aerospace+engineer;I+work+in+ML+and+Big+Data;I+love+modding" /></a>
+<a href="https://github.com/DenverCoder1/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com?&font=IBM+Plex+Sans&color=abcdef&size=20&lines=Welcome+to+my+GitHub+Profile!;I'm+an+Aerospace+engineer;I+work+in+ML+validation+techniques;I+love+modding" /></a>
 
 ## Skills
 ### 📝 &nbsp;Professional Proficiency in
