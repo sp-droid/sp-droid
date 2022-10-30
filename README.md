@@ -3,7 +3,7 @@
 ### 🛠 &nbsp;Proficiency in
 
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=for-the-badge)&nbsp;
-![Matlab](https://png.pngitem.com/pimgs/s/1-10424_matlab-logo-matlab-png-transparent-png.png)&nbsp;
+![Matlab](matlabicon.svg)&nbsp;
 
 ### 🛠 &nbsp;Not a complete stranger to
 
