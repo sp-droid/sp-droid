@@ -1,4 +1,5 @@
-*.ipynb linguist-language=Python
+# *.ipynb linguist-language=Python
+*.ipynb linguist-detectable=false
 
 *.md linguist-detectable=true
 *.md linguist-language=Markdown
