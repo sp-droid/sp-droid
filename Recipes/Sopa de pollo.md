@@ -45,4 +45,4 @@ Para preparar una cantidad diferente no es necesario cambiar tiempos de cocción
 
 ## Fotos
 
-![image-20221031123938956](Q:\Pablo\Recetas\assets\image-20221031123938956.png)
+![image-20221031123938956](assets\image-20221031123938956.png)
