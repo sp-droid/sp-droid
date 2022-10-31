@@ -9,7 +9,7 @@
 ### 📝 &nbsp;Professional Proficiency in
 
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=for-the-badge)&nbsp;
-![Matlab](matlabicon.svg)&nbsp;
+![Matlab](icons/matlabicon.svg)&nbsp;
 
 ### 📝 &nbsp;Familiar with (in descending order)
 
