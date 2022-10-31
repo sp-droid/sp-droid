@@ -1,0 +1,375 @@
+﻿	22={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="shamanist_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	63={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="shamanist_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	90={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="animist_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	155={
+		terrain="drylands"
+		culture="primitiveculture"
+		religion="animist_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	229={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="shamanist_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	258={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="animist_rel"
+		trade_goods="glass"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	305={
+		terrain="mountain"
+		culture="primitiveculture"
+		religion="shamanist_rel"
+		trade_goods="spices"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	489={
+		terrain="drylands"
+		culture="primitiveculture"
+		religion="animist_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	670={
+		terrain="drylands"
+		culture="primitiveculture"
+		religion="shamanist_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	740={
+		terrain="desert"
+		culture="primitiveculture"
+		religion="animist_rel"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	850={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="shamanist_rel"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1026={
+		terrain="drylands"
+		culture="primitiveculture"
+		religion="animist_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1127={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="shamanist_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1171={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="shamanist_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1176={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="shamanist_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1233={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="shamanist_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1238={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="shamanist_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1253={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="shamanist_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1264={
+		terrain="mountain"
+		culture="primitiveculture"
+		religion="shamanist_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1273={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="shamanist_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1339={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="shamanist_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1641={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="shamanist_rel"
+		trade_goods="stone"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1694={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="shamanist_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2138={
+		terrain="mountain"
+		culture="primitiveculture"
+		religion="shamanist_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2713={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="shamanist_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+

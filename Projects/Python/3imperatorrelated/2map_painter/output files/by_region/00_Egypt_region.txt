@@ -1,0 +1,2040 @@
+﻿	284={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="iron"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	304={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="fur"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-10
+		#
+		#
+		freemen={amount= 4 culture="egyptianara" religion="sunni_rel" }
+		#
+	}
+
+	321={
+		terrain="drylands"
+		culture="cyrenaican"
+		religion="sunni_rel"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 8 } # Total-10
+		#
+		port_building=1
+		freemen={amount= 2 culture="egyptianara" religion="sunni_rel" }
+		#
+	}
+
+	408={
+		terrain="drylands"
+		culture="cyrenaican"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-9
+		#
+		#
+		freemen={amount= 2 culture="qatabanian" religion="sunni_rel" }
+		#
+	}
+
+	496={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="honey"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-11
+		#
+		#
+		freemen={amount= 2 culture="egyptianara" religion="oriental_rel" }
+		freemen={amount= 2 culture="egyptianara" religion="sunni_rel" }
+	}
+
+	499={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="oriental_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-8
+		#
+		#
+		#
+		#
+	}
+
+	542={
+		terrain="plains"
+		culture="coptic"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 17 } # Total-29
+		#
+		port_building=1
+		freemen={amount= 12 culture="egyptianara" religion="sunni_rel" }
+		#
+	}
+
+	611={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="egyptianara" religion="oriental_rel" }
+		#
+	}
+
+	679={
+		terrain="drylands"
+		culture="primitiveculture"
+		religion="oriental_rel"
+		trade_goods="iron"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-5
+		#
+		#
+		freemen={amount= 1 culture="primitiveculture" religion="animist_rel" }
+		freemen={amount= 1 culture="primitiveculture" religion="kemetic_rel" }
+	}
+
+	681={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="oriental_rel"
+		trade_goods="incense"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-3
+		#
+		#
+		freemen={amount= 1 culture="bedouin" religion="sunni_rel" }
+		freemen={amount= 1 culture="bedouin" religion="animist_rel" }
+	}
+
+	737={
+		terrain="desert"
+		culture="berber"
+		religion="animist_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	762={
+		terrain="drylands"
+		culture="primitiveculture"
+		religion="oriental_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 } # Total-9
+		#
+		#
+		#
+		#
+	}
+
+	800={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-7
+		#
+		#
+		#
+		#
+	}
+
+	867={
+		terrain="drylands"
+		culture="cyrenaican"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-8
+		#
+		#
+		#
+		#
+	}
+
+	926={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-10
+		#
+		#
+		freemen={amount= 4 culture="egyptianara" religion="oriental_rel" }
+		#
+	}
+
+	972={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="oriental_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-6
+		#
+		#
+		freemen={amount= 2 culture="coptic" religion="oriental_rel" }
+		#
+	}
+
+	1080={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 5 } # Total-9
+		#
+		#
+		freemen={amount= 4 culture="egyptianara" religion="oriental_rel" }
+		#
+	}
+
+	1196={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	1255={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="base_metals"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	1311={
+		terrain="plains"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 16 } # Total-20
+		#
+		#
+		freemen={amount= 4 culture="coptic" religion="sunni_rel" }
+		#
+	}
+
+	1326={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="glass"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 11 } # Total-11
+		#
+		#
+		#
+		#
+	}
+
+	1358={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-8
+		#
+		#
+		#
+		#
+	}
+
+	1418={
+		terrain="drylands"
+		culture="primitiveculture"
+		religion="oriental_rel"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-6
+		#
+		#
+		#
+		#
+	}
+
+	1459={
+		terrain="plains"
+		culture="egyptianara"
+		religion="oriental_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 } # Total-24
+		#
+		#
+		freemen={amount= 10 culture="egyptianara" religion="sunni_rel" }
+		freemen={amount= 5 culture="coptic" religion="sunni_rel" }
+	}
+
+	1489={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="silk"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-5
+		#
+		#
+		freemen={amount= 2 culture="cyrenaican" religion="sunni_rel" }
+		#
+	}
+
+	1494={
+		terrain="plains"
+		culture="coptic"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-12
+		#
+		#
+		freemen={amount= 2 culture="coptic" religion="oriental_rel" }
+		freemen={amount= 2 culture="egyptianara" religion="sunni_rel" }
+	}
+
+	1572={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-5
+		#
+		#
+		freemen={amount= 2 culture="egyptianara" religion="oriental_rel" }
+		#
+	}
+
+	1616={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-7
+		#
+		#
+		freemen={amount= 3 culture="coptic" religion="oriental_rel" }
+		#
+	}
+
+	1617={
+		terrain="plains"
+		culture="egyptianara"
+		religion="oriental_rel"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-9
+		#
+		#
+		freemen={amount= 4 culture="coptic" religion="oriental_rel" }
+		#
+	}
+
+	1621={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="horses"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-8
+		#
+		#
+		#
+		#
+	}
+
+	1689={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-10
+		#
+		#
+		freemen={amount= 4 culture="egyptianara" religion="oriental_rel" }
+		#
+	}
+
+	1710={
+		terrain="plains"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="coptic" religion="oriental_rel" }
+		freemen={amount= 1 culture="egyptianara" religion="oriental_rel" }
+	}
+
+	1759={
+		terrain="desert"
+		culture="berber"
+		religion="animist_rel"
+		trade_goods="leather"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1836={
+		terrain="plains"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="dates"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 22 } # Total-28
+		#
+		#
+		freemen={amount= 6 culture="egyptianara" religion="oriental_rel" }
+		#
+	}
+
+	1865={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-2
+		#
+		#
+		freemen={amount= 1 culture="egyptianara" religion="oriental_rel" }
+		#
+	}
+
+	1872={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-12
+		#
+		#
+		freemen={amount= 5 culture="egyptianara" religion="oriental_rel" }
+		#
+	}
+
+	1878={
+		terrain="plains"
+		culture="coptic"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 13 } # Total-21
+		#
+		#
+		freemen={amount= 8 culture="egyptianara" religion="sunni_rel" }
+		#
+	}
+
+	1890={
+		terrain="plains"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="marble"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 11 } # Total-18
+		#
+		#
+		freemen={amount= 4 culture="coptic" religion="sunni_rel" }
+		freemen={amount= 4 culture="egyptianara" religion="sunni_rel" }
+	}
+
+	1891={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="oriental_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-4
+		#
+		#
+		freemen={amount= 2 culture="egyptianara" religion="sunni_rel" }
+		freemen={amount= 1 culture="berber" religion="animist_rel" }
+	}
+
+	1899={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="oriental_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 } # Total-10
+		#
+		#
+		#
+		#
+	}
+
+	1964={
+		terrain="drylands"
+		culture="cyrenaican"
+		religion="sunni_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-2
+		#
+		#
+		freemen={amount= 1 culture="egyptianara" religion="sunni_rel" }
+		#
+	}
+
+	2001={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 11 } # Total-11
+		#
+		#
+		#
+		#
+	}
+
+	2007={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="oriental_rel"
+		trade_goods="fur"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-7
+		#
+		#
+		#
+		#
+	}
+
+	2101={
+		terrain="desert"
+		culture="berber"
+		religion="animist_rel"
+		trade_goods="spices"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2119={
+		terrain="drylands"
+		culture="cyrenaican"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-7
+		#
+		#
+		#
+		#
+	}
+
+	2160={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-7
+		#
+		#
+		#
+		#
+	}
+
+	2164={
+		terrain="plains"
+		culture="egyptianara"
+		religion="oriental_rel"
+		trade_goods="stone"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-13
+		#
+		#
+		freemen={amount= 5 culture="coptic" religion="oriental_rel" }
+		#
+	}
+
+	2201={
+		terrain="plains"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 18 } # Total-23
+		#
+		#
+		freemen={amount= 5 culture="coptic" religion="sunni_rel" }
+		#
+	}
+
+	2237={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 } # Total-9
+		#
+		#
+		#
+		#
+	}
+
+	2260={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="horses"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-8
+		#
+		#
+		#
+		#
+	}
+
+	2276={
+		terrain="plains"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-8
+		#
+		#
+		freemen={amount= 3 culture="egyptianara" religion="oriental_rel" }
+		#
+	}
+
+	2279={
+		terrain="plains"
+		culture="coptic"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-16
+		#
+		#
+		freemen={amount= 6 culture="egyptianara" religion="sunni_rel" }
+		freemen={amount= 3 culture="coptic" religion="oriental_rel" }
+	}
+
+	2289={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-6
+		#
+		#
+		freemen={amount= 1 culture="egyptianara" religion="oriental_rel" }
+		#
+	}
+
+	2291={
+		terrain="marsh"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 } # Total-11
+		#
+		#
+		#
+		#
+	}
+
+	2298={
+		terrain="drylands"
+		culture="cyrenaican"
+		religion="sunni_rel"
+		trade_goods="wild_game"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-6
+		#
+		#
+		#
+		#
+	}
+
+	2329={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="oriental_rel"
+		trade_goods="glass"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="coptic" religion="oriental_rel" }
+		freemen={amount= 1 culture="egyptianara" religion="sunni_rel" }
+	}
+
+	2456={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="egyptianara" religion="sunni_rel" }
+		#
+	}
+
+	2462={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="oriental_rel"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-6
+		#
+		#
+		freemen={amount= 1 culture="egyptianara" religion="sunni_rel" }
+		#
+	}
+
+	2468={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 } # Total-11
+		#
+		#
+		#
+		#
+	}
+
+	2488={
+		terrain="plains"
+		culture="coptic"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 } # Total-19
+		#
+		#
+		freemen={amount= 8 culture="egyptianara" religion="sunni_rel" }
+		#
+	}
+
+	2588={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 } # Total-11
+		#
+		#
+		#
+		#
+	}
+
+	2666={
+		terrain="plains"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 7 } # Total-18
+		#
+		#
+		freemen={amount= 7 culture="egyptianara" religion="oriental_rel" }
+		freemen={amount= 4 culture="egyptianara" religion="sunni_rel" }
+	}
+
+	2745={
+		terrain="plains"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 12 } # Total-12
+		#
+		#
+		#
+		#
+	}
+
+	2824={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	2841={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="egyptianara" religion="sunni_rel" }
+		#
+	}
+
+	2844={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 } # Total-11
+		#
+		#
+		#
+		#
+	}
+
+	2862={
+		terrain="plains"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 17 } # Total-21
+		#
+		#
+		freemen={amount= 4 culture="coptic" religion="sunni_rel" }
+		#
+	}
+
+	2872={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 16 } # Total-16
+		#
+		port_building=1
+		#
+		#
+	}
+
+	2873={
+		terrain="plains"
+		culture="coptic"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 17 } # Total-29
+		#
+		#
+		freemen={amount= 6 culture="coptic" religion="oriental_rel" }
+		freemen={amount= 6 culture="egyptianara" religion="sunni_rel" }
+	}
+
+	2900={
+		terrain="plains"
+		culture="coptic"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 } # Total-12
+		#
+		#
+		freemen={amount= 2 culture="egyptianara" religion="sunni_rel" }
+		#
+	}
+
+	2905={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="glass"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 4 } # Total-5
+		#
+		port_building=1
+		freemen={amount= 1 culture="egyptianara" religion="sunni_rel" }
+		#
+	}
+
+	2906={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-3
+		#
+		#
+		freemen={amount= 1 culture="egyptianara" religion="oriental_rel" }
+		#
+	}
+
+	2952={
+		terrain="plains"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="leather"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 } # Total-19
+		#
+		#
+		freemen={amount= 8 culture="coptic" religion="sunni_rel" }
+		#
+	}
+
+	3035={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-10
+		#
+		#
+		freemen={amount= 4 culture="egyptianara" religion="sunni_rel" }
+		freemen={amount= 2 culture="egyptianara" religion="oriental_rel" }
+	}
+
+	3080={
+		terrain="desert"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3138={
+		terrain="marsh"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 17 } # Total-17
+		#
+		#
+		#
+		#
+	}
+
+	3144={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-5
+		#
+		#
+		freemen={amount= 1 culture="cyrenaican" religion="sunni_rel" }
+		#
+	}
+
+	3195={
+		terrain="plains"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 14 } # Total-14
+		#
+		#
+		#
+		#
+	}
+
+	3236={
+		terrain="plains"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="horses"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 17 } # Total-17
+		#
+		#
+		#
+		#
+	}
+
+	3246={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-3
+		#
+		#
+		#
+		#
+	}
+
+	3266={
+		terrain="drylands"
+		culture="cyrenaican"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-7
+		#
+		#
+		#
+		#
+	}
+
+	3282={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 15 } # Total-15
+		#
+		#
+		#
+		#
+	}
+
+	3375={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-10
+		#
+		#
+		freemen={amount= 2 culture="coptic" religion="oriental_rel" }
+		#
+	}
+
+	3438={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 11 } # Total-11
+		#
+		#
+		#
+		#
+	}
+
+	3469={
+		terrain="drylands"
+		culture="cyrenaican"
+		religion="sunni_rel"
+		trade_goods="wild_game"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 11 } # Total-11
+		#
+		port_building=1
+		#
+		#
+	}
+
+	3475={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="horses"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-2
+		#
+		#
+		freemen={amount= 1 culture="egyptianara" religion="oriental_rel" }
+		#
+	}
+
+	3522={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-7
+		#
+		#
+		#
+		#
+	}
+
+	3523={
+		terrain="plains"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-10
+		#
+		#
+		freemen={amount= 4 culture="coptic" religion="oriental_rel" }
+		#
+	}
+
+	3525={
+		terrain="drylands"
+		culture="primitiveculture"
+		religion="oriental_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-7
+		#
+		#
+		#
+		#
+	}
+
+	3570={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 } # Total-10
+		#
+		#
+		#
+		#
+	}
+
+	3583={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-6
+		#
+		#
+		freemen={amount= 1 culture="qatabanian" religion="sunni_rel" }
+		#
+	}
+
+	3615={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-3
+		#
+		#
+		freemen={amount= 1 culture="coptic" religion="oriental_rel" }
+		freemen={amount= 1 culture="egyptianara" religion="oriental_rel" }
+	}
+
+	3631={
+		terrain="drylands"
+		culture="cyrenaican"
+		religion="sunni_rel"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 } # Total-10
+		#
+		#
+		#
+		#
+	}
+
+	3643={
+		terrain="drylands"
+		culture="cyrenaican"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-10
+		#
+		#
+		freemen={amount= 4 culture="egyptianara" religion="sunni_rel" }
+		#
+	}
+
+	3644={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	3656={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-5
+		#
+		#
+		#
+		#
+	}
+
+	3669={
+		terrain="plains"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 14 } # Total-17
+		#
+		#
+		freemen={amount= 3 culture="egyptianara" religion="oriental_rel" }
+		#
+	}
+
+	3681={
+		terrain="desert"
+		culture="berber"
+		religion="animist_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3692={
+		terrain="drylands"
+		culture="cyrenaican"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 } # Total-9
+		#
+		#
+		#
+		#
+	}
+
+	3756={
+		terrain="plains"
+		culture="egyptianara"
+		religion="oriental_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-7
+		#
+		#
+		freemen={amount= 3 culture="coptic" religion="oriental_rel" }
+		#
+	}
+
+	3789={
+		terrain="plains"
+		culture="egyptianara"
+		religion="oriental_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 } # Total-17
+		#
+		#
+		freemen={amount= 3 culture="coptic" religion="sunni_rel" }
+		freemen={amount= 3 culture="egyptianara" religion="sunni_rel" }
+	}
+
+	3907={
+		terrain="plains"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="horses"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 18 } # Total-18
+		#
+		#
+		#
+		#
+	}
+
+	3911={
+		terrain="marsh"
+		culture="coptic"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 } # Total-19
+		#
+		#
+		freemen={amount= 8 culture="egyptianara" religion="sunni_rel" }
+		#
+	}
+
+	3929={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-7
+		#
+		#
+		#
+		#
+	}
+
+	3936={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="oriental_rel"
+		trade_goods="silk"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 } # Total-10
+		#
+		#
+		#
+		#
+	}
+
+	3952={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-5
+		#
+		#
+		freemen={amount= 2 culture="egyptianara" religion="oriental_rel" }
+		#
+	}
+
+	4047={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-5
+		#
+		#
+		#
+		#
+	}
+
+	4054={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-8
+		#
+		#
+		freemen={amount= 3 culture="egyptianara" religion="oriental_rel" }
+		#
+	}
+
+	4082={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="oriental_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-7
+		#
+		#
+		#
+		#
+	}
+
+	4113={
+		terrain="drylands"
+		culture="cyrenaican"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-7
+		#
+		#
+		#
+		#
+	}
+
+	4116={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 9 } # Total-11
+		#
+		#
+		freemen={amount= 2 culture="egyptianara" religion="oriental_rel" }
+		#
+	}
+
+	4123={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="oriental_rel"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-10
+		#
+		#
+		freemen={amount= 4 culture="coptic" religion="oriental_rel" }
+		#
+	}
+
+	4126={
+		terrain="drylands"
+		culture="primitiveculture"
+		religion="oriental_rel"
+		trade_goods="leather"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-11
+		#
+		#
+		freemen={amount= 4 culture="coptic" religion="oriental_rel" }
+		#
+	}
+
+	4202={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="primitiveculture" religion="oriental_rel" }
+		#
+	}
+
+	4230={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="leather"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 17 } # Total-17
+		#
+		#
+		#
+		#
+	}
+
+	4295={
+		terrain="plains"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-10
+		#
+		#
+		freemen={amount= 2 culture="coptic" religion="oriental_rel" }
+		#
+	}
+
+	4303={
+		terrain="marsh"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-13
+		#
+		#
+		freemen={amount= 5 culture="coptic" religion="sunni_rel" }
+		#
+	}
+
+	4318={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-6
+		#
+		#
+		freemen={amount= 1 culture="coptic" religion="oriental_rel" }
+		#
+	}
+
+	4332={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	4334={
+		terrain="desert"
+		culture="berber"
+		religion="animist_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4348={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-5
+		#
+		#
+		freemen={amount= 2 culture="egyptianara" religion="oriental_rel" }
+		#
+	}
+
+	4513={
+		terrain="drylands"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-4
+		#
+		#
+		freemen={amount= 2 culture="cyrenaican" religion="sunni_rel" }
+		#
+	}
+
+	4515={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-9
+		#
+		#
+		freemen={amount= 2 culture="egyptianara" religion="oriental_rel" }
+		#
+	}
+
+	4531={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	4596={
+		terrain="plains"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-8
+		#
+		#
+		freemen={amount= 3 culture="coptic" religion="oriental_rel" }
+		#
+	}
+
+	4616={
+		terrain="drylands"
+		culture="cyrenaican"
+		religion="sunni_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-7
+		#
+		#
+		#
+		#
+	}
+
+	4633={
+		terrain="plains"
+		culture="coptic"
+		religion="sunni_rel"
+		trade_goods="dates"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 16 } # Total-26
+		#
+		#
+		freemen={amount= 10 culture="egyptianara" religion="oriental_rel" }
+		#
+	}
+
+	4689={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 } # Total-11
+		#
+		#
+		freemen={amount= 2 culture="egyptianara" religion="sunni_rel" }
+		#
+	}
+
+	4725={
+		terrain="drylands"
+		culture="cyrenaican"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 } # Total-11
+		#
+		#
+		#
+		#
+	}
+
+	4758={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-11
+		#
+		#
+		freemen={amount= 4 culture="egyptianara" religion="sunni_rel" }
+		#
+	}
+
+	4761={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-8
+		#
+		#
+		#
+		#
+	}
+
+	4806={
+		terrain="drylands"
+		culture="coptic"
+		religion="oriental_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-6
+		#
+		#
+		#
+		#
+	}
+
+	4832={
+		terrain="plains"
+		culture="egyptianara"
+		religion="oriental_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 } # Total-15
+		#
+		#
+		freemen={amount= 3 culture="coptic" religion="oriental_rel" }
+		freemen={amount= 3 culture="egyptianara" religion="sunni_rel" }
+	}
+
+	4840={
+		terrain="plains"
+		culture="egyptianara"
+		religion="sunni_rel"
+		trade_goods="amber"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 } # Total-10
+		#
+		#
+		#
+		#
+	}
+
+	4841={
+		terrain="drylands"
+		culture="primitiveculture"
+		religion="oriental_rel"
+		trade_goods="spices"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-9
+		#
+		#
+		freemen={amount= 4 culture="coptic" religion="oriental_rel" }
+		#
+	}
+
+	4881={
+		terrain="drylands"
+		culture="primitiveculture"
+		religion="oriental_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-6
+		#
+		#
+		#
+		#
+	}
+

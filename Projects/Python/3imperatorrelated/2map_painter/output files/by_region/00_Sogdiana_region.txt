@@ -1,0 +1,240 @@
+﻿	51={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 5 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="cuman" religion="sunni_rel" }
+		freemen={amount= 2 culture="turkmen" religion="sunni_rel" }
+	}
+
+	64={
+		terrain="hills"
+		culture="sogdian"
+		religion="oriental_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	132={
+		terrain="drylands"
+		culture="turkmen"
+		religion="tengri_rel"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 4 } # Total-9
+		#
+		#
+		freemen={amount= 2 culture="persian" religion="ibadi_rel" }
+		freemen={amount= 2 culture="afghans" religion="sunni_rel" }
+	}
+
+	139={
+		terrain="desert"
+		culture="turkmen"
+		religion="sunni_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	255={
+		terrain="desert"
+		culture="turkmen"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	401={
+		terrain="desert"
+		culture="turkmen"
+		religion="tengri_rel"
+		trade_goods="woad"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	414={
+		terrain="drylands"
+		culture="sogdian"
+		religion="oriental_rel"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 3 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="persian" religion="ibadi_rel" }
+		freemen={amount= 1 culture="afghans" religion="sunni_rel" }
+	}
+
+	604={
+		terrain="desert"
+		culture="turkmen"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1107={
+		terrain="desert"
+		culture="turkmen"
+		religion="sunni_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1173={
+		terrain="forest"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 3 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="uyghurs" religion="nestorian_rel" }
+		freemen={amount= 2 culture="sogdian" religion="oriental_rel" }
+	}
+
+	1351={
+		terrain="drylands"
+		culture="turkmen"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1463={
+		terrain="desert"
+		culture="turkmen"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1639={
+		terrain="drylands"
+		culture="sogdian"
+		religion="oriental_rel"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-6
+		#
+		#
+		freemen={amount= 2 culture="primitiveculture" religion="hindu_rel" }
+		#
+	}
+
+	1954={
+		terrain="desert"
+		culture="turkmen"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2257={
+		terrain="steppes"
+		culture="cuman"
+		religion="sunni_rel"
+		trade_goods="glass"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4204={
+		terrain="desert"
+		culture="turkmen"
+		religion="sunni_rel"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+

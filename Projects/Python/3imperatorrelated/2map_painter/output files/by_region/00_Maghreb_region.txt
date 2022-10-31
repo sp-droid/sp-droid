@@ -1,0 +1,2730 @@
+﻿	31={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-10
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	36={
+		terrain="desert"
+		culture="berber"
+		religion="ibadi_rel"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	37={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="fur"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 7 } # Total-11
+		#
+		#
+		freemen={amount= 4 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	52={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-5
+		#
+		#
+		#
+		#
+	}
+
+	133={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="maghrebi" religion="ibadi_rel" }
+		freemen={amount= 1 culture="berber" religion="sunni_rel" }
+	}
+
+	138={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 9 } # Total-11
+		#
+		#
+		freemen={amount= 2 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	162={
+		terrain="desert"
+		culture="cyrenaican"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	172={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="honey"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	223={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="dates"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	245={
+		terrain="desert"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	291={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-9
+		#
+		#
+		freemen={amount= 4 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	318={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-8
+		#
+		#
+		#
+		#
+	}
+
+	365={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-9
+		#
+		#
+		freemen={amount= 2 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	514={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-6
+		#
+		#
+		#
+		#
+	}
+
+	535={
+		terrain="desert"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	554={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 } # Total-11
+		#
+		#
+		freemen={amount= 2 culture="maghrebi" religion="ibadi_rel" }
+		#
+	}
+
+	634={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="dates"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-10
+		#
+		#
+		freemen={amount= 4 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	685={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="leather"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	862={
+		terrain="desert"
+		culture="berber"
+		religion="ibadi_rel"
+		trade_goods="leather"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	868={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="leather"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	875={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-9
+		#
+		#
+		freemen={amount= 4 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	887={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-6
+		#
+		#
+		#
+		#
+	}
+
+	910={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-9
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	988={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="leather"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 9 } # Total-11
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	1092={
+		terrain="drylands"
+		culture="qatabanian"
+		religion="sunni_rel"
+		trade_goods="olive"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 } # Total-15
+		#
+		#
+		freemen={amount= 6 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	1135={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-8
+		#
+		#
+		#
+		#
+	}
+
+	1146={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	1168={
+		terrain="desert"
+		culture="berber"
+		religion="ibadi_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1248={
+		terrain="mountain"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-4
+		#
+		#
+		freemen={amount= 1 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	1283={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="honey"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="maghrebi" religion="ibadi_rel" }
+		freemen={amount= 1 culture="berber" religion="sunni_rel" }
+	}
+
+	1286={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="leather"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	1333={
+		terrain="desert"
+		culture="berber"
+		religion="ibadi_rel"
+		trade_goods="dates"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1341={
+		terrain="desert"
+		culture="berber"
+		religion="ibadi_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-1
+		#
+		port_building=1
+		#
+		#
+	}
+
+	1411={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-4
+		#
+		#
+		freemen={amount= 2 culture="maghrebi" religion="sunni_rel" }
+		freemen={amount= 1 culture="berber" religion="ibadi_rel" }
+	}
+
+	1422={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	1425={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="ibadi_rel" }
+		freemen={amount= 2 culture="maghrebi" religion="ibadi_rel" }
+	}
+
+	1445={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="silk"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-8
+		#
+		#
+		freemen={amount= 3 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	1451={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-10
+		#
+		#
+		freemen={amount= 2 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	1478={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1491={
+		terrain="desert"
+		culture="berber"
+		religion="ibadi_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1510={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-8
+		#
+		#
+		#
+		#
+	}
+
+	1515={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 } # Total-9
+		#
+		#
+		#
+		#
+	}
+
+	1529={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="dates"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 } # Total-11
+		#
+		#
+		freemen={amount= 2 culture="maghrebi" religion="ibadi_rel" }
+		#
+	}
+
+	1573={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	1576={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	1635={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 6 } # Total-10
+		#
+		#
+		freemen={amount= 4 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	1656={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 11 } # Total-11
+		#
+		#
+		#
+		#
+	}
+
+	1669={
+		terrain="desert"
+		culture="berber"
+		religion="ibadi_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1712={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-9
+		#
+		#
+		freemen={amount= 2 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	1774={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="honey"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 } # Total-10
+		#
+		#
+		#
+		#
+	}
+
+	1784={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1803={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-6
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	1810={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-9
+		#
+		#
+		freemen={amount= 2 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	1829={
+		terrain="desert"
+		culture="berber"
+		religion="animist_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1841={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1853={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="honey"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-8
+		#
+		#
+		freemen={amount= 3 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	1856={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-7
+		#
+		#
+		#
+		#
+	}
+
+	1862={
+		terrain="mountain"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-4
+		#
+		#
+		freemen={amount= 2 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	1863={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-5
+		#
+		#
+		freemen={amount= 2 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	1873={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	1883={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 11 } # Total-11
+		#
+		port_building=1
+		#
+		#
+	}
+
+	1884={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="maghrebi" religion="ibadi_rel" }
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+	}
+
+	1919={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-10
+		#
+		#
+		freemen={amount= 2 culture="andalusian" religion="sunni_rel" }
+		freemen={amount= 2 culture="maghrebi" religion="sunni_rel" }
+	}
+
+	1941={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 } # Total-11
+		#
+		#
+		freemen={amount= 2 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	1990={
+		terrain="desert"
+		culture="berber"
+		religion="ibadi_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2023={
+		terrain="drylands"
+		culture="qatabanian"
+		religion="sunni_rel"
+		trade_goods="leather"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 13 } # Total-16
+		#
+		port_building=1
+		freemen={amount= 3 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	2036={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-10
+		#
+		#
+		freemen={amount= 4 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	2038={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	2052={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-6
+		#
+		#
+		freemen={amount= 2 culture="qatabanian" religion="sunni_rel" }
+		#
+	}
+
+	2110={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 } # Total-11
+		#
+		#
+		#
+		#
+	}
+
+	2148={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-3
+		#
+		#
+		#
+		#
+	}
+
+	2179={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="honey"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2190={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 11 } # Total-11
+		#
+		#
+		#
+		#
+	}
+
+	2197={
+		terrain="desert"
+		culture="berber"
+		religion="ibadi_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2252={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-6
+		#
+		#
+		freemen={amount= 1 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	2253={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-10
+		#
+		#
+		freemen={amount= 4 culture="maghrebi" religion="sunni_rel" }
+		freemen={amount= 2 culture="berber" religion="ibadi_rel" }
+	}
+
+	2272={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-6
+		#
+		#
+		#
+		#
+	}
+
+	2278={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	2317={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	2343={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="dates"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	2380={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2387={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="maghrebi" religion="ibadi_rel" }
+		#
+	}
+
+	2388={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2433={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	2450={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-9
+		#
+		#
+		freemen={amount= 2 culture="maghrebi" religion="ibadi_rel" }
+		freemen={amount= 2 culture="maghrebi" religion="sunni_rel" }
+	}
+
+	2455={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-9
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	2457={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-8
+		#
+		#
+		#
+		#
+	}
+
+	2479={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-9
+		#
+		#
+		freemen={amount= 2 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	2520={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 } # Total-9
+		#
+		#
+		#
+		#
+	}
+
+	2541={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-8
+		#
+		#
+		freemen={amount= 3 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	2572={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-6
+		#
+		#
+		freemen={amount= 1 culture="andalusian" religion="sunni_rel" }
+		freemen={amount= 1 culture="maghrebi" religion="sunni_rel" }
+	}
+
+	2608={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	2635={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="camel"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 } # Total-10
+		#
+		#
+		#
+		#
+	}
+
+	2649={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-5
+		#
+		#
+		#
+		#
+	}
+
+	2664={
+		terrain="hills"
+		culture="andalusian"
+		religion="sunni_rel"
+		trade_goods="olive"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-9
+		#
+		#
+		freemen={amount= 4 culture="berber" religion="sunni_rel" }
+		freemen={amount= 2 culture="maghrebi" religion="sunni_rel" }
+	}
+
+	2665={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-11
+		#
+		#
+		freemen={amount= 4 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	2695={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 } # Total-10
+		#
+		#
+		#
+		#
+	}
+
+	2697={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-7
+		#
+		#
+		freemen={amount= 3 culture="qatabanian" religion="sunni_rel" }
+		#
+	}
+
+	2741={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	2902={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 9 } # Total-11
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="ibadi_rel" }
+		#
+	}
+
+	2918={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="honey"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2969={
+		terrain="drylands"
+		culture="andalusian"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-11
+		#
+		#
+		freemen={amount= 4 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	2970={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-9
+		#
+		#
+		freemen={amount= 2 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	2976={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-10
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	2989={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 } # Total-10
+		#
+		#
+		#
+		#
+	}
+
+	3061={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	3086={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	3115={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-7
+		#
+		#
+		freemen={amount= 3 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	3116={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-6
+		#
+		#
+		freemen={amount= 1 culture="maghrebi" religion="ibadi_rel" }
+		#
+	}
+
+	3136={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="maghrebi" religion="ibadi_rel" }
+		#
+	}
+
+	3155={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-7
+		#
+		#
+		#
+		#
+	}
+
+	3224={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 9 } # Total-11
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	3229={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-8
+		#
+		#
+		#
+		#
+	}
+
+	3237={
+		terrain="desert"
+		culture="berber"
+		religion="ibadi_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3238={
+		terrain="desert"
+		culture="berber"
+		religion="ibadi_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3280={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-6
+		#
+		#
+		freemen={amount= 1 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	3337={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-7
+		#
+		#
+		freemen={amount= 3 culture="maghrebi" religion="sunni_rel" }
+		freemen={amount= 1 culture="maghrebi" religion="ibadi_rel" }
+	}
+
+	3353={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="maghrebi" religion="ibadi_rel" }
+		#
+	}
+
+	3373={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-10
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="ibadi_rel" }
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+	}
+
+	3395={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3400={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	3403={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-10
+		#
+		#
+		freemen={amount= 4 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	3444={
+		terrain="drylands"
+		culture="qatabanian"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 } # Total-13
+		#
+		#
+		freemen={amount= 3 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	3467={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-10
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	3499={
+		terrain="drylands"
+		culture="qatabanian"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 } # Total-16
+		#
+		#
+		freemen={amount= 6 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	3559={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-4
+		#
+		#
+		freemen={amount= 1 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	3567={
+		terrain="mountain"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 16 } # Total-16
+		#
+		#
+		#
+		#
+	}
+
+	3584={
+		terrain="mountain"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 } # Total-13
+		#
+		#
+		freemen={amount= 3 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	3590={
+		terrain="hills"
+		culture="andalusian"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-11
+		#
+		#
+		freemen={amount= 4 culture="maghrebi" religion="sunni_rel" }
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+	}
+
+	3592={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 } # Total-10
+		#
+		#
+		#
+		#
+	}
+
+	3620={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-9
+		#
+		#
+		freemen={amount= 4 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	3633={
+		terrain="drylands"
+		culture="qatabanian"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-9
+		#
+		#
+		freemen={amount= 4 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	3660={
+		terrain="mountain"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3690={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3703={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	3722={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="dates"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-9
+		#
+		#
+		freemen={amount= 4 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	3795={
+		terrain="desert"
+		culture="berber"
+		religion="ibadi_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3797={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-10
+		#
+		#
+		freemen={amount= 4 culture="maghrebi" religion="sunni_rel" }
+		freemen={amount= 2 culture="berber" religion="ibadi_rel" }
+	}
+
+	3813={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-7
+		#
+		#
+		freemen={amount= 3 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	3856={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 } # Total-9
+		#
+		#
+		#
+		#
+	}
+
+	3863={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="fur"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	3894={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3904={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="marble"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-10
+		#
+		#
+		freemen={amount= 2 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	3928={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 10 } # Total-10
+		#
+		port_building=1
+		#
+		#
+	}
+
+	4013={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="maghrebi" religion="ibadi_rel" }
+		freemen={amount= 1 culture="maghrebi" religion="sunni_rel" }
+	}
+
+	4083={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-7
+		#
+		#
+		#
+		#
+	}
+
+	4086={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-10
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	4094={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4114={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-6
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	4145={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 9 } # Total-11
+		#
+		port_building=1
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	4149={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-9
+		#
+		#
+		freemen={amount= 2 culture="maghrebi" religion="ibadi_rel" }
+		#
+	}
+
+	4165={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-9
+		#
+		#
+		freemen={amount= 2 culture="andalusian" religion="sunni_rel" }
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+	}
+
+	4174={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	4200={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-8
+		#
+		#
+		#
+		#
+	}
+
+	4208={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	4212={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 } # Total-10
+		#
+		#
+		#
+		#
+	}
+
+	4265={
+		terrain="desert"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4320={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 11 } # Total-18
+		#
+		#
+		freemen={amount= 4 culture="andalusian" religion="sunni_rel" }
+		freemen={amount= 4 culture="berber" religion="sunni_rel" }
+	}
+
+	4377={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="wild_game"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 } # Total-11
+		#
+		#
+		#
+		#
+	}
+
+	4406={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-9
+		#
+		#
+		freemen={amount= 4 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	4425={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-6
+		#
+		#
+		freemen={amount= 1 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	4474={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-6
+		#
+		#
+		#
+		#
+	}
+
+	4485={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	4486={
+		terrain="mountain"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-3
+		#
+		#
+		freemen={amount= 1 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	4537={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-3
+		#
+		#
+		#
+		#
+	}
+
+	4546={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	4621={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-8
+		#
+		#
+		freemen={amount= 3 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	4635={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="honey"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4681={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4683={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-3
+		#
+		#
+		#
+		#
+	}
+
+	4698={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="iron"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="qatabanian" religion="sunni_rel" }
+		#
+	}
+
+	4718={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-6
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+
+	4724={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4731={
+		terrain="drylands"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="olive"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-8
+		#
+		#
+		#
+		#
+	}
+
+	4756={
+		terrain="desert"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4766={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-7
+		#
+		#
+		#
+		#
+	}
+
+	4809={
+		terrain="drylands"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-9
+		#
+		#
+		freemen={amount= 2 culture="qatabanian" religion="sunni_rel" }
+		#
+	}
+
+	4811={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 } # Total-10
+		#
+		#
+		#
+		#
+	}
+
+	4844={
+		terrain="hills"
+		culture="andalusian"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 } # Total-9
+		#
+		#
+		#
+		#
+	}
+
+	4852={
+		terrain="hills"
+		culture="berber"
+		religion="sunni_rel"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-8
+		#
+		#
+		freemen={amount= 3 culture="maghrebi" religion="sunni_rel" }
+		#
+	}
+
+	4853={
+		terrain="desert"
+		culture="berber"
+		religion="ibadi_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4860={
+		terrain="hills"
+		culture="maghrebi"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="berber" religion="sunni_rel" }
+		#
+	}
+

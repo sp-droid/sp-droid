@@ -1,0 +1,1695 @@
+﻿	302={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	439={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	663={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	691={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-9
+		#
+		#
+		freemen={amount= 2 culture="cuman" religion="sunni_rel" }
+		freemen={amount= 2 culture="cuman" religion="suomenusko_rel" }
+	}
+
+	885={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	903={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-6
+		#
+		#
+		freemen={amount= 1 culture="cuman" religion="orthodox_rel" }
+		#
+	}
+
+	934={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1050={
+		terrain="steppes"
+		culture="cuman"
+		religion="orthodox_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-7
+		#
+		#
+		#
+		#
+	}
+
+	1226={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1243={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1323={
+		terrain="steppes"
+		culture="cuman"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1344={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1398={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="cuman" religion="suomenusko_rel" }
+		#
+	}
+
+	1408={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1426={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-5
+		#
+		#
+		freemen={amount= 1 culture="cuman" religion="orthodox_rel" }
+		#
+	}
+
+	1499={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1558={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 3 } # Total-5
+		#
+		#
+		freemen={amount= 2 culture="cuman" religion="orthodox_rel" }
+		#
+	}
+
+	1568={
+		terrain="steppes"
+		culture="cuman"
+		religion="suomenusko_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-10
+		#
+		#
+		freemen={amount= 2 culture="cuman" religion="sunni_rel" }
+		#
+	}
+
+	1588={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="iron"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-4
+		#
+		#
+		freemen={amount= 1 culture="cuman" religion="orthodox_rel" }
+		#
+	}
+
+	1608={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1633={
+		terrain="steppes"
+		culture="cuman"
+		religion="suomenusko_rel"
+		trade_goods="honey"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="cuman" religion="tengri_rel" }
+		#
+	}
+
+	1723={
+		terrain="steppes"
+		culture="cuman"
+		religion="suomenusko_rel"
+		trade_goods="stone"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	1735={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	1800={
+		terrain="steppes"
+		culture="alans"
+		religion="orthodox_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-5
+		#
+		#
+		freemen={amount= 2 culture="cuman" religion="orthodox_rel" }
+		freemen={amount= 1 culture="cuman" religion="tengri_rel" }
+	}
+
+	1807={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-4
+		#
+		#
+		freemen={amount= 1 culture="cuman" religion="orthodox_rel" }
+		#
+	}
+
+	1826={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2057={
+		terrain="steppes"
+		culture="cuman"
+		religion="orthodox_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-5
+		#
+		#
+		freemen={amount= 2 culture="cuman" religion="tengri_rel" }
+		#
+	}
+
+	2083={
+		terrain="steppes"
+		culture="cuman"
+		religion="orthodox_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-7
+		#
+		#
+		freemen={amount= 3 culture="cuman" religion="tengri_rel" }
+		#
+	}
+
+	2098={
+		terrain="marsh"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-3
+		#
+		#
+		freemen={amount= 1 culture="cuman" religion="orthodox_rel" }
+		#
+	}
+
+	2181={
+		terrain="steppes"
+		culture="cuman"
+		religion="orthodox_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-4
+		#
+		#
+		freemen={amount= 1 culture="greco_pontic" religion="orthodox_rel" }
+		#
+	}
+
+	2189={
+		terrain="steppes"
+		culture="alans"
+		religion="orthodox_rel"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-3
+		#
+		#
+		freemen={amount= 1 culture="cuman" religion="orthodox_rel" }
+		#
+	}
+
+	2231={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2249={
+		terrain="steppes"
+		culture="cuman"
+		religion="orthodox_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 6 } # Total-10
+		#
+		#
+		freemen={amount= 4 culture="alans" religion="orthodox_rel" }
+		#
+	}
+
+	2250={
+		terrain="steppes"
+		culture="cuman"
+		religion="orthodox_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-4
+		#
+		#
+		freemen={amount= 2 culture="cuman" religion="tengri_rel" }
+		#
+	}
+
+	2262={
+		terrain="steppes"
+		culture="alans"
+		religion="orthodox_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-4
+		#
+		#
+		freemen={amount= 2 culture="cuman" religion="tengri_rel" }
+		freemen={amount= 1 culture="cuman" religion="orthodox_rel" }
+	}
+
+	2267={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-4
+		#
+		#
+		freemen={amount= 1 culture="cuman" religion="orthodox_rel" }
+		#
+	}
+
+	2275={
+		terrain="steppes"
+		culture="cuman"
+		religion="orthodox_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-5
+		#
+		#
+		freemen={amount= 1 culture="alans" religion="orthodox_rel" }
+		#
+	}
+
+	2362={
+		terrain="steppes"
+		culture="cuman"
+		religion="orthodox_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-7
+		#
+		#
+		#
+		#
+	}
+
+	2421={
+		terrain="steppes"
+		culture="cuman"
+		religion="sunni_rel"
+		trade_goods="wild_game"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2429={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2503={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2521={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2563={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="amber"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2633={
+		terrain="steppes"
+		culture="cuman"
+		religion="suomenusko_rel"
+		trade_goods="glass"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 7 } # Total-11
+		#
+		#
+		freemen={amount= 4 culture="cuman" religion="tengri_rel" }
+		#
+	}
+
+	2645={
+		terrain="steppes"
+		culture="cuman"
+		religion="suomenusko_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-8
+		#
+		#
+		#
+		#
+	}
+
+	2658={
+		terrain="steppes"
+		culture="bulghar"
+		religion="sunni_rel"
+		trade_goods="honey"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2662={
+		terrain="steppes"
+		culture="cuman"
+		religion="orthodox_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 10 } # Total-10
+		#
+		#
+		#
+		#
+	}
+
+	2754={
+		terrain="drylands"
+		culture="alans"
+		religion="orthodox_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-9
+		#
+		#
+		freemen={amount= 4 culture="cuman" religion="orthodox_rel" }
+		#
+	}
+
+	2801={
+		terrain="steppes"
+		culture="cuman"
+		religion="suomenusko_rel"
+		trade_goods="fur"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-7
+		#
+		#
+		#
+		#
+	}
+
+	2875={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="dates"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3020={
+		terrain="forest"
+		culture="cuman"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-6
+		#
+		#
+		freemen={amount= 2 culture="cuman" religion="suomenusko_rel" }
+		#
+	}
+
+	3038={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="base_metals"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3046={
+		terrain="steppes"
+		culture="cuman"
+		religion="orthodox_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-10
+		#
+		#
+		freemen={amount= 2 culture="cuman" religion="tengri_rel" }
+		#
+	}
+
+	3059={
+		terrain="steppes"
+		culture="cuman"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3067={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3077={
+		terrain="marsh"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-3
+		#
+		#
+		freemen={amount= 1 culture="cuman" religion="orthodox_rel" }
+		#
+	}
+
+	3079={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="leather"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3133={
+		terrain="steppes"
+		culture="cuman"
+		religion="suomenusko_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3165={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="olive"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-5
+		#
+		#
+		#
+		#
+	}
+
+	3230={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3235={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="amber"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3284={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3296={
+		terrain="drylands"
+		culture="alans"
+		religion="orthodox_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-9
+		#
+		#
+		freemen={amount= 2 culture="cuman" religion="orthodox_rel" }
+		#
+	}
+
+	3298={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="honey"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	3313={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-5
+		#
+		#
+		#
+		#
+	}
+
+	3435={
+		terrain="steppes"
+		culture="alans"
+		religion="orthodox_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-5
+		#
+		#
+		freemen={amount= 2 culture="cuman" religion="orthodox_rel" }
+		#
+	}
+
+	3456={
+		terrain="steppes"
+		culture="cuman"
+		religion="suomenusko_rel"
+		trade_goods="honey"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	3480={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-5
+		#
+		#
+		freemen={amount= 2 culture="cuman" religion="orthodox_rel" }
+		#
+	}
+
+	3505={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	3509={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3517={
+		terrain="steppes"
+		culture="cuman"
+		religion="orthodox_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-4
+		#
+		#
+		freemen={amount= 1 culture="cuman" religion="tengri_rel" }
+		#
+	}
+
+	3537={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3555={
+		terrain="steppes"
+		culture="cuman"
+		religion="suomenusko_rel"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-6
+		#
+		#
+		#
+		#
+	}
+
+	3642={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3650={
+		terrain="steppes"
+		culture="cuman"
+		religion="orthodox_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	3658={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3733={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="base_metals"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3747={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="honey"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3769={
+		terrain="steppes"
+		culture="cuman"
+		religion="suomenusko_rel"
+		trade_goods="leather"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-6
+		#
+		#
+		#
+		#
+	}
+
+	3787={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-3
+		#
+		#
+		freemen={amount= 1 culture="cuman" religion="orthodox_rel" }
+		#
+	}
+
+	3818={
+		terrain="steppes"
+		culture="cuman"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3833={
+		terrain="forest"
+		culture="cuman"
+		religion="sunni_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 7 } # Total-11
+		#
+		#
+		freemen={amount= 4 culture="cuman" religion="suomenusko_rel" }
+		#
+	}
+
+	3854={
+		terrain="steppes"
+		culture="cuman"
+		religion="orthodox_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-7
+		#
+		#
+		freemen={amount= 3 culture="cuman" religion="tengri_rel" }
+		#
+	}
+
+	3855={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="dates"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3862={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3889={
+		terrain="steppes"
+		culture="cuman"
+		religion="orthodox_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-8
+		#
+		#
+		freemen={amount= 3 culture="cuman" religion="tengri_rel" }
+		freemen={amount= 2 culture="alans" religion="orthodox_rel" }
+	}
+
+	3926={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3947={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-4
+		#
+		#
+		freemen={amount= 1 culture="cuman" religion="orthodox_rel" }
+		#
+	}
+
+	3972={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="cuman" religion="suomenusko_rel" }
+		#
+	}
+
+	4038={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4068={
+		terrain="steppes"
+		culture="cuman"
+		religion="orthodox_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="cuman" religion="tengri_rel" }
+		#
+	}
+
+	4120={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-10
+		#
+		#
+		freemen={amount= 4 culture="cuman" religion="suomenusko_rel" }
+		#
+	}
+
+	4146={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-2
+		#
+		#
+		freemen={amount= 1 culture="cuman" religion="sunni_rel" }
+		#
+	}
+
+	4171={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="fur"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-4
+		#
+		#
+		freemen={amount= 1 culture="cuman" religion="orthodox_rel" }
+		#
+	}
+
+	4182={
+		terrain="steppes"
+		culture="cuman"
+		religion="suomenusko_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="cuman" religion="tengri_rel" }
+		#
+	}
+
+	4226={
+		terrain="steppes"
+		culture="cuman"
+		religion="orthodox_rel"
+		trade_goods="fur"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-8
+		#
+		#
+		#
+		#
+	}
+
+	4239={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4316={
+		terrain="steppes"
+		culture="cuman"
+		religion="orthodox_rel"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-6
+		#
+		#
+		freemen={amount= 2 culture="alans" religion="orthodox_rel" }
+		#
+	}
+
+	4352={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4359={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-10
+		#
+		#
+		freemen={amount= 2 culture="cuman" religion="suomenusko_rel" }
+		#
+	}
+
+	4361={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4390={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4426={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	4460={
+		terrain="steppes"
+		culture="cuman"
+		religion="suomenusko_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="cuman" religion="sunni_rel" }
+		#
+	}
+
+	4511={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4557={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-5
+		#
+		#
+		#
+		#
+	}
+
+	4570={
+		terrain="steppes"
+		culture="cuman"
+		religion="orthodox_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-5
+		#
+		#
+		freemen={amount= 1 culture="alans" religion="orthodox_rel" }
+		freemen={amount= 1 culture="cuman" religion="tengri_rel" }
+	}
+
+	4584={
+		terrain="steppes"
+		culture="cuman"
+		religion="suomenusko_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4606={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-5
+		#
+		#
+		freemen={amount= 1 culture="cuman" religion="sunni_rel" }
+		#
+	}
+
+	4776={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="dates"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4800={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4803={
+		terrain="steppes"
+		culture="cuman"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4813={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+

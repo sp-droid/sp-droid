@@ -1,0 +1,540 @@
+﻿	25={
+		terrain="mountain"
+		culture="lurish"
+		religion="shia_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-2
+		#
+		#
+		freemen={amount= 1 culture="persian" religion="sunni_rel" }
+		#
+	}
+
+	87={
+		terrain="drylands"
+		culture="balochi"
+		religion="sunni_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	160={
+		terrain="hills"
+		culture="persian"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-4
+		#
+		#
+		freemen={amount= 1 culture="qatabanian" religion="shia_rel" }
+		freemen={amount= 1 culture="persian" religion="zoroastrianism_rel" }
+	}
+
+	366={
+		terrain="drylands"
+		culture="persian"
+		religion="sunni_rel"
+		trade_goods="wild_game"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	378={
+		terrain="mountain"
+		culture="azerbaijani"
+		religion="shia_rel"
+		trade_goods="dates"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 2 } # Total-10
+		#
+		#
+		freemen={amount= 2 culture="persian" religion="shia_rel" }
+		freemen={amount= 2 culture="persian" religion="sunni_rel" }
+	}
+
+	382={
+		terrain="hills"
+		culture="persian"
+		religion="sunni_rel"
+		trade_goods="incense"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 3 } # Total-7
+		#
+		port_building=1
+		freemen={amount= 1 culture="persian" religion="animist_rel" }
+		freemen={amount= 1 culture="makan" religion="ibadi_rel" }
+	}
+
+	457={
+		terrain="mountain"
+		culture="lurish"
+		religion="shia_rel"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-3
+		#
+		#
+		freemen={amount= 1 culture="kurds" religion="sunni_rel" }
+		freemen={amount= 1 culture="lurish" religion="sunni_rel" }
+	}
+
+	618={
+		terrain="drylands"
+		culture="lurish"
+		religion="shia_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	755={
+		terrain="mountain"
+		culture="persian"
+		religion="oriental_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	764={
+		terrain="mountain"
+		culture="azerbaijani"
+		religion="shia_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-10
+		#
+		#
+		freemen={amount= 2 culture="persian" religion="shia_rel" }
+		freemen={amount= 2 culture="azerbaijani" religion="sunni_rel" }
+	}
+
+	916={
+		terrain="drylands"
+		culture="persian"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 5 } # Total-9
+		#
+		#
+		freemen={amount= 2 culture="qatabanian" religion="shia_rel" }
+		freemen={amount= 2 culture="persian" religion="zoroastrianism_rel" }
+	}
+
+	923={
+		terrain="mountain"
+		culture="persian"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 5 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="afghans" religion="sunni_rel" }
+		freemen={amount= 2 culture="balochi" religion="sunni_rel" }
+	}
+
+	976={
+		terrain="mountain"
+		culture="persian"
+		religion="sunni_rel"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="persian" religion="oriental_rel" }
+		#
+	}
+
+	978={
+		terrain="mountain"
+		culture="azerbaijani"
+		religion="shia_rel"
+		trade_goods="fur"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-9
+		#
+		#
+		freemen={amount= 4 culture="azerbaijani" religion="sunni_rel" }
+		freemen={amount= 2 culture="azerbaijani" religion="zoroastrianism_rel" }
+	}
+
+	1002={
+		terrain="drylands"
+		culture="azerbaijani"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-10
+		#
+		#
+		freemen={amount= 2 culture="azerbaijani" religion="shia_rel" }
+		#
+	}
+
+	1074={
+		terrain="desert"
+		culture="primitiveculture"
+		religion="hindu_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-6
+		#
+		#
+		freemen={amount= 1 culture="primitiveculture" religion="ibadi_rel" }
+		freemen={amount= 1 culture="balochi" religion="sunni_rel" }
+	}
+
+	1097={
+		terrain="mountain"
+		culture="primitiveculture"
+		religion="hindu_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-5
+		#
+		#
+		freemen={amount= 2 culture="primitiveculture" religion="sunni_rel" }
+		freemen={amount= 1 culture="afghans" religion="sunni_rel" }
+	}
+
+	1154={
+		terrain="drylands"
+		culture="persian"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-4
+		#
+		#
+		freemen={amount= 1 culture="persian" religion="oriental_rel" }
+		freemen={amount= 1 culture="afghans" religion="sunni_rel" }
+	}
+
+	1303={
+		terrain="mountain"
+		culture="sogdian"
+		religion="oriental_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-6
+		#
+		#
+		freemen={amount= 1 culture="afghans" religion="sunni_rel" }
+		freemen={amount= 1 culture="balochi" religion="sunni_rel" }
+	}
+
+	1503={
+		terrain="mountain"
+		culture="azerbaijani"
+		religion="oriental_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-2
+		#
+		#
+		freemen={amount= 1 culture="azerbaijani" religion="sunni_rel" }
+		#
+	}
+
+	1747={
+		terrain="drylands"
+		culture="persian"
+		religion="sunni_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1957={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="hindu_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2039={
+		terrain="mountain"
+		culture="azerbaijani"
+		religion="sunni_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-10
+		#
+		#
+		freemen={amount= 4 culture="azerbaijani" religion="oriental_rel" }
+		#
+	}
+
+	2443={
+		terrain="mountain"
+		culture="azerbaijani"
+		religion="sunni_rel"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="azerbaijani" religion="shia_rel" }
+		#
+	}
+
+	2653={
+		terrain="mountain"
+		culture="azerbaijani"
+		religion="shia_rel"
+		trade_goods="marble"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-9
+		#
+		#
+		freemen={amount= 2 culture="azerbaijani" religion="sunni_rel" }
+		#
+	}
+
+	2707={
+		terrain="drylands"
+		culture="azerbaijani"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="azerbaijani" religion="orthodox_rel" }
+		#
+	}
+
+	3277={
+		terrain="mountain"
+		culture="azerbaijani"
+		religion="shia_rel"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 4 } # Total-11
+		#
+		#
+		freemen={amount= 4 culture="azerbaijani" religion="sunni_rel" }
+		freemen={amount= 2 culture="azerbaijani" religion="zoroastrianism_rel" }
+	}
+
+	3794={
+		terrain="mountain"
+		culture="azerbaijani"
+		religion="sunni_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-9
+		#
+		#
+		freemen={amount= 2 culture="azerbaijani" religion="oriental_rel" }
+		freemen={amount= 2 culture="azerbaijani" religion="shia_rel" }
+	}
+
+	3845={
+		terrain="marsh"
+		culture="azerbaijani"
+		religion="sunni_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-8
+		#
+		#
+		#
+		#
+	}
+
+	4018={
+		terrain="mountain"
+		culture="azerbaijani"
+		religion="sunni_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 7 } # Total-11
+		#
+		port_building=1
+		freemen={amount= 4 culture="azerbaijani" religion="shia_rel" }
+		#
+	}
+
+	4028={
+		terrain="mountain"
+		culture="azerbaijani"
+		religion="shia_rel"
+		trade_goods="base_metals"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="azerbaijani" religion="sunni_rel" }
+		#
+	}
+
+	4351={
+		terrain="mountain"
+		culture="azerbaijani"
+		religion="sunni_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-7
+		#
+		#
+		freemen={amount= 3 culture="azerbaijani" religion="shia_rel" }
+		#
+	}
+
+	4362={
+		terrain="mountain"
+		culture="azerbaijani"
+		religion="shia_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-6
+		#
+		#
+		#
+		#
+	}
+
+	4525={
+		terrain="drylands"
+		culture="azerbaijani"
+		religion="sunni_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="azerbaijani" religion="oriental_rel" }
+		freemen={amount= 2 culture="azerbaijani" religion="orthodox_rel" }
+	}
+
+	4622={
+		terrain="drylands"
+		culture="persian"
+		religion="sunni_rel"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="persian" religion="animist_rel" }
+		freemen={amount= 1 culture="makan" religion="ibadi_rel" }
+	}
+
+	4727={
+		terrain="mountain"
+		culture="armenian"
+		religion="oriental_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-9
+		#
+		#
+		freemen={amount= 4 culture="azerbaijani" religion="oriental_rel" }
+		freemen={amount= 2 culture="azerbaijani" religion="sunni_rel" }
+	}
+

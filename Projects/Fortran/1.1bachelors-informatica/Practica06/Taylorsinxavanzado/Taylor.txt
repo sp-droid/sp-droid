@@ -1,0 +1,4 @@
+Con una tolerancia establecida de  0.100000E-01
+
+  Nº de términos    Valor de la serie    Diferencia con el valor exacto
+         1               0.200000                 0.133067E-02

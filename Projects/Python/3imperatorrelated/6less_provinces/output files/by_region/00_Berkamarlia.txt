@@ -1,0 +1,72 @@
+	51={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 }
+		#
+	}
+
+	401={
+		terrain="desert"
+		culture="primitiveculture"
+		religion="tengri_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 }
+		#
+	}
+
+	473={
+		terrain="steppes"
+		culture="cuman"
+		religion="animist_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 }
+		#
+	}
+
+	666={
+		terrain="hills"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="iron"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 }
+		#
+	}
+
+	837={
+		terrain="steppes"
+		culture="cuman"
+		religion="tengri_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 }
+		#
+	}
+
+	1954={
+		terrain="desert"
+		culture="primitiveculture"
+		religion="islam_sunni"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 }
+		#
+	}
+

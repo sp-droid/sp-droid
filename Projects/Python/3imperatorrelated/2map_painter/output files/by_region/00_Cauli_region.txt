@@ -1,0 +1,165 @@
+﻿	232={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	511={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-5
+		#
+		#
+		freemen={amount= 2 culture="primitiveculture" religion="tengri_rel" }
+		#
+	}
+
+	615={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="steppe_horses"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-4
+		#
+		#
+		freemen={amount= 1 culture="primitiveculture" religion="animist_rel" }
+		#
+	}
+
+	924={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-4
+		#
+		#
+		freemen={amount= 2 culture="primitiveculture" religion="tengri_rel" }
+		#
+	}
+
+	932={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-3
+		#
+		#
+		freemen={amount= 1 culture="primitiveculture" religion="animist_rel" }
+		#
+	}
+
+	975={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	1038={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-3
+		#
+		#
+		#
+		#
+	}
+
+	1045={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="animist_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 5 } # Total-9
+		#
+		#
+		freemen={amount= 4 culture="primitiveculture" religion="mahayana_rel" }
+		#
+	}
+
+	1063={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="animist_rel"
+		trade_goods="silk"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 2 } # Total-6
+		#
+		#
+		freemen={amount= 2 culture="primitiveculture" religion="tengri_rel" }
+		freemen={amount= 1 culture="primitiveculture" religion="mahayana_rel" }
+	}
+
+	1487={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="stone"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1691={
+		terrain="mountain"
+		culture="primitiveculture"
+		religion="animist_rel"
+		trade_goods="marble"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-5
+		#
+		#
+		freemen={amount= 1 culture="primitiveculture" religion="mahayana_rel" }
+		#
+	}
+

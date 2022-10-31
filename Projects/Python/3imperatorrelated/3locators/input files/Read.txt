@@ -1,0 +1,11 @@
+Place in this folder:
+combat locators
+fort locators
+port locators
+province.png
+definition file, opened in excel and saved as excel workbook (xlsx)
+
+-The script takes information from, first provinces that have connection to the sea, then land provinces, then every province where movement is possible. So, editing
+the locator of a province with access to the sea in the fort locators or combat locators files won't affect it in the slightest.
+-The script will try to find the province if the locator given wrongly points to the sea or another province, but islands are much more difficult to track, so those might
+ have to be fixed manually.

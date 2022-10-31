@@ -1,0 +1,6196 @@
+{
+ "tournaments": [
+  {
+   "name": "IEM San Jose 2015",
+   "region": "WR",
+   "game": [
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Origen",
+     "result": "0 - 3",
+     "date": "2015-11-23"
+    },
+    {
+     "blueside": "Jin Air Greenwings",
+     "redside": "Counter Logic Gaming",
+     "result": "0 - 2",
+     "date": "2015-11-22"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Team SoloMid",
+     "result": "2 - 0",
+     "date": "2015-11-22"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Unicorns of Love",
+     "result": "2 - 0",
+     "date": "2015-11-21"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "LGD Gaming",
+     "result": "2 - 0",
+     "date": "2015-11-21"
+    }
+   ]
+  },
+  {
+   "name": "World Championship 2015",
+   "region": "WR",
+   "game": [
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "KOO Tigers",
+     "result": "3 - 1",
+     "date": "2015-10-31"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "KOO Tigers",
+     "result": "0 - 3",
+     "date": "2015-10-25"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "Origen",
+     "result": "3 - 0",
+     "date": "2015-10-24"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "KOO Tigers",
+     "result": "1 - 3",
+     "date": "2015-10-18"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Edward Gaming",
+     "result": "3 - 0",
+     "date": "2015-10-17"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "AHQ E-Sports Club",
+     "result": "3 - 0",
+     "date": "2015-10-16"
+    },
+    {
+     "blueside": "Flash Wolves",
+     "redside": "Origen",
+     "result": "1 - 3",
+     "date": "2015-10-15"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "AHQ E-Sports Club",
+     "result": "0 - 1",
+     "date": "2015-10-11"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "AHQ E-Sports Club",
+     "result": "1 - 0",
+     "date": "2015-10-11"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Invictus Gaming",
+     "result": "0 - 1",
+     "date": "2015-10-11"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Fnatic",
+     "result": "0 - 1",
+     "date": "2015-10-11"
+    },
+    {
+     "blueside": "AHQ E-Sports Club",
+     "redside": "Cloud 9",
+     "result": "1 - 0",
+     "date": "2015-10-11"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Cloud 9",
+     "result": "1 - 0",
+     "date": "2015-10-11"
+    },
+    {
+     "blueside": "AHQ E-Sports Club",
+     "redside": "Invictus Gaming",
+     "result": "1 - 0",
+     "date": "2015-10-11"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Team SoloMid",
+     "result": "1 - 0",
+     "date": "2015-10-10"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "KT Rolster",
+     "result": "0 - 1",
+     "date": "2015-10-10"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "LGD Gaming",
+     "result": "0 - 1",
+     "date": "2015-10-10"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "KT Rolster",
+     "result": "0 - 1",
+     "date": "2015-10-10"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "LGD Gaming",
+     "result": "1 - 0",
+     "date": "2015-10-10"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Origen",
+     "result": "0 - 1",
+     "date": "2015-10-10"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "Bangkok Titans",
+     "result": "1 - 0",
+     "date": "2015-10-09"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "H2k-Gaming",
+     "result": "1 - 0",
+     "date": "2015-10-09"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "SKTelecom T1",
+     "result": "0 - 1",
+     "date": "2015-10-09"
+    },
+    {
+     "blueside": "Bangkok Titans",
+     "redside": "Edward Gaming",
+     "result": "0 - 1",
+     "date": "2015-10-09"
+    },
+    {
+     "blueside": "Bangkok Titans",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2015-10-09"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "Edward Gaming",
+     "result": "1 - 0",
+     "date": "2015-10-09"
+    },
+    {
+     "blueside": "paiN Gaming",
+     "redside": "Counter Logic Gaming",
+     "result": "1 - 0",
+     "date": "2015-10-08"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "Flash Wolves",
+     "result": "0 - 1",
+     "date": "2015-10-08"
+    },
+    {
+     "blueside": "Flash Wolves",
+     "redside": "Counter Logic Gaming",
+     "result": "1 - 0",
+     "date": "2015-10-08"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "paiN Gaming",
+     "result": "1 - 0",
+     "date": "2015-10-08"
+    },
+    {
+     "blueside": "Flash Wolves",
+     "redside": "paiN Gaming",
+     "result": "1 - 0",
+     "date": "2015-10-08"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "KOO Tigers",
+     "result": "0 - 1",
+     "date": "2015-10-08"
+    },
+    {
+     "blueside": "paiN Gaming",
+     "redside": "Flash Wolves",
+     "result": "1 - 0",
+     "date": "2015-10-04"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "Counter Logic Gaming",
+     "result": "1 - 0",
+     "date": "2015-10-04"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Fnatic",
+     "result": "1 - 0",
+     "date": "2015-10-04"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "AHQ E-Sports Club",
+     "result": "1 - 0",
+     "date": "2015-10-04"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "Origen",
+     "result": "0 - 1",
+     "date": "2015-10-04"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "LGD Gaming",
+     "result": "1 - 0",
+     "date": "2015-10-04"
+    },
+    {
+     "blueside": "AHQ E-Sports Club",
+     "redside": "Fnatic",
+     "result": "1 - 0",
+     "date": "2015-10-03"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Cloud 9",
+     "result": "0 - 1",
+     "date": "2015-10-03"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Team SoloMid",
+     "result": "1 - 0",
+     "date": "2015-10-03"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "KT Rolster",
+     "result": "0 - 1",
+     "date": "2015-10-03"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Bangkok Titans",
+     "result": "1 - 0",
+     "date": "2015-10-03"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "SKTelecom T1",
+     "result": "0 - 1",
+     "date": "2015-10-03"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "paiN Gaming",
+     "result": "1 - 0",
+     "date": "2015-10-02"
+    },
+    {
+     "blueside": "Flash Wolves",
+     "redside": "KOO Tigers",
+     "result": "1 - 0",
+     "date": "2015-10-02"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Edward Gaming",
+     "result": "0 - 1",
+     "date": "2015-10-02"
+    },
+    {
+     "blueside": "Bangkok Titans",
+     "redside": "SKTelecom T1",
+     "result": "0 - 1",
+     "date": "2015-10-02"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Origen",
+     "result": "0 - 1",
+     "date": "2015-10-02"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "Team SoloMid",
+     "result": "1 - 0",
+     "date": "2015-10-02"
+    },
+    {
+     "blueside": "paiN Gaming",
+     "redside": "KOO Tigers",
+     "result": "0 - 1",
+     "date": "2015-10-01"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Flash Wolves",
+     "result": "1 - 0",
+     "date": "2015-10-01"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Bangkok Titans",
+     "result": "1 - 0",
+     "date": "2015-10-01"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "H2k-Gaming",
+     "result": "1 - 0",
+     "date": "2015-10-01"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "AHQ E-Sports Club",
+     "result": "1 - 0",
+     "date": "2015-10-01"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Invictus Gaming",
+     "result": "1 - 0",
+     "date": "2015-10-01"
+    }
+   ]
+  },
+  {
+   "name": "LCK Spring Promotion 2015",
+   "region": "KR",
+   "game": [
+    {
+     "blueside": "SBENU",
+     "redside": "Ever",
+     "result": "3 - 1",
+     "date": "2015-09-12"
+    },
+    {
+     "blueside": "Incredible Miracle",
+     "redside": "Dark Wolves",
+     "result": "3 - 1",
+     "date": "2015-09-11"
+    }
+   ]
+  },
+  {
+   "name": "NA LCS Spring Promotion 2015",
+   "region": "NA",
+   "game": [
+    {
+     "blueside": "Team Imagine",
+     "redside": "Team 8",
+     "result": "1 - 3",
+     "date": "2015-09-07"
+    },
+    {
+     "blueside": "Team Coast",
+     "redside": "Enemy E-Sports",
+     "result": "3 - 0",
+     "date": "2015-09-06"
+    }
+   ]
+  },
+  {
+   "name": "LPL Regional Qualifiers 2015",
+   "region": "CN",
+   "game": [
+    {
+     "blueside": "Qiao Gu",
+     "redside": "Invictus Gaming",
+     "result": "0 - 3",
+     "date": "2015-09-05"
+    },
+    {
+     "blueside": "Qiao Gu",
+     "redside": "Snake",
+     "result": "3 - 0",
+     "date": "2015-09-05"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Invictus Gaming",
+     "result": "3 - 1",
+     "date": "2015-09-04"
+    },
+    {
+     "blueside": "Qiao Gu",
+     "redside": "Invictus Gaming",
+     "result": "0 - 2",
+     "date": "2015-09-04"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Snake",
+     "result": "2 - 0",
+     "date": "2015-09-04"
+    }
+   ]
+  },
+  {
+   "name": "EU LCS Spring Promotion 2015",
+   "region": "EUW",
+   "game": [
+    {
+     "blueside": "Mousesports",
+     "redside": "Gambit Gaming",
+     "result": "0 - 3",
+     "date": "2015-09-05"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "Gamers2",
+     "result": "2 - 3",
+     "date": "2015-09-05"
+    }
+   ]
+  },
+  {
+   "name": "LCK Regional Qualifier 2015",
+   "region": "KR",
+   "game": [
+    {
+     "blueside": "KT Rolster",
+     "redside": "Jin Air Greenwings",
+     "result": "3 - 1",
+     "date": "2015-09-05"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Jin Air Greenwings",
+     "result": "2 - 3",
+     "date": "2015-09-04"
+    },
+    {
+     "blueside": "Jin Air Greenwings",
+     "redside": "Najin e-Emfire",
+     "result": "3 - 0",
+     "date": "2015-09-02"
+    }
+   ]
+  },
+  {
+   "name": "IWC Desafio 2015",
+   "region": "WR",
+   "game": [
+    {
+     "blueside": "Kaos Latin Gamers",
+     "redside": "paiN Gaming",
+     "result": "0 - 3",
+     "date": "2015-09-05"
+    },
+    {
+     "blueside": "paiN Gaming",
+     "redside": "Hard Random",
+     "result": "1 - 0",
+     "date": "2015-08-30"
+    },
+    {
+     "blueside": "Kaos Latin Gamers",
+     "redside": "Hard Random",
+     "result": "1 - 0",
+     "date": "2015-08-30"
+    },
+    {
+     "blueside": "Kaos Latin Gamers",
+     "redside": "paiN Gaming",
+     "result": "0 - 1",
+     "date": "2015-08-30"
+    },
+    {
+     "blueside": "paiN Gaming",
+     "redside": "Kaos Latin Gamers",
+     "result": "1 - 0",
+     "date": "2015-08-29"
+    },
+    {
+     "blueside": "Hard Random",
+     "redside": "Kaos Latin Gamers",
+     "result": "1 - 0",
+     "date": "2015-08-29"
+    },
+    {
+     "blueside": "Hard Random",
+     "redside": "paiN Gaming",
+     "result": "0 - 1",
+     "date": "2015-08-29"
+    }
+   ]
+  },
+  {
+   "name": "NA Regional Qualifiers 2015",
+   "region": "NA",
+   "game": [
+    {
+     "blueside": "Team Liquid",
+     "redside": "Cloud 9",
+     "result": "1 - 3",
+     "date": "2015-08-31"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Cloud 9",
+     "result": "2 - 3",
+     "date": "2015-08-30"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Gravity",
+     "result": "3 - 2",
+     "date": "2015-08-29"
+    }
+   ]
+  },
+  {
+   "name": "EU Regional Qualifiers 2015",
+   "region": "EUW",
+   "game": [
+    {
+     "blueside": "Unicorns of Love",
+     "redside": "Origen",
+     "result": "0 - 3",
+     "date": "2015-08-31"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Roccat",
+     "result": "3 - 2",
+     "date": "2015-08-30"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Roccat",
+     "result": "0 - 3",
+     "date": "2015-08-29"
+    }
+   ]
+  },
+  {
+   "name": "IWC Turkey 2015",
+   "region": "WR",
+   "game": [
+    {
+     "blueside": "Chiefs eSports Club",
+     "redside": "Bangkok Titans",
+     "result": "1 - 3",
+     "date": "2015-08-29"
+    },
+    {
+     "blueside": "Bangkok Titans",
+     "redside": "DetonatioN",
+     "result": "1 - 0",
+     "date": "2015-08-27"
+    },
+    {
+     "blueside": "Dark Passage",
+     "redside": "Chiefs eSports Club",
+     "result": "1 - 0",
+     "date": "2015-08-27"
+    },
+    {
+     "blueside": "Chiefs eSports Club",
+     "redside": "DetonatioN",
+     "result": "1 - 0",
+     "date": "2015-08-27"
+    },
+    {
+     "blueside": "Dark Passage",
+     "redside": "Bangkok Titans",
+     "result": "0 - 1",
+     "date": "2015-08-27"
+    },
+    {
+     "blueside": "Bangkok Titans",
+     "redside": "Chiefs eSports Club",
+     "result": "0 - 1",
+     "date": "2015-08-27"
+    },
+    {
+     "blueside": "DetonatioN",
+     "redside": "Dark Passage",
+     "result": "0 - 1",
+     "date": "2015-08-27"
+    },
+    {
+     "blueside": "DetonatioN",
+     "redside": "Bangkok Titans",
+     "result": "1 - 0",
+     "date": "2015-08-26"
+    },
+    {
+     "blueside": "Chiefs eSports Club",
+     "redside": "Dark Passage",
+     "result": "1 - 0",
+     "date": "2015-08-26"
+    },
+    {
+     "blueside": "Bangkok Titans",
+     "redside": "Dark Passage",
+     "result": "1 - 0",
+     "date": "2015-08-26"
+    },
+    {
+     "blueside": "DetonatioN",
+     "redside": "Chiefs eSports Club",
+     "result": "1 - 0",
+     "date": "2015-08-26"
+    },
+    {
+     "blueside": "Dark Passage",
+     "redside": "DetonatioN",
+     "result": "1 - 0",
+     "date": "2015-08-26"
+    },
+    {
+     "blueside": "Chiefs eSports Club",
+     "redside": "Bangkok Titans",
+     "result": "1 - 0",
+     "date": "2015-08-26"
+    }
+   ]
+  },
+  {
+   "name": "LCK Summer Playoffs 2015",
+   "region": "KR",
+   "game": [
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "KT Rolster",
+     "result": "3 - 0",
+     "date": "2015-08-29"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "KT Rolster",
+     "result": "2 - 3",
+     "date": "2015-08-21"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "KOO Tigers",
+     "result": "0 - 3",
+     "date": "2015-08-19"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "Najin e-Emfire",
+     "result": "2 - 1",
+     "date": "2015-08-16"
+    }
+   ]
+  },
+  {
+   "name": "LPL Summer Playoffs 2015",
+   "region": "CN",
+   "game": [
+    {
+     "blueside": "Qiao Gu",
+     "redside": "LGD Gaming",
+     "result": "2 - 3",
+     "date": "2015-08-23"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Invictus Gaming",
+     "result": "1 - 3",
+     "date": "2015-08-17"
+    },
+    {
+     "blueside": "Qiao Gu",
+     "redside": "Invictus Gaming",
+     "result": "3 - 2",
+     "date": "2015-08-16"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "LGD Gaming",
+     "result": "0 - 3",
+     "date": "2015-08-16"
+    },
+    {
+     "blueside": "Snake",
+     "redside": "LGD Gaming",
+     "result": "1 - 3",
+     "date": "2015-08-15"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Vici Gaming",
+     "result": "3 - 2",
+     "date": "2015-08-15"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Vici Gaming",
+     "result": "3 - 1",
+     "date": "2015-08-13"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "OMG",
+     "result": "3 - 1",
+     "date": "2015-08-12"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Master3",
+     "result": "3 - 0",
+     "date": "2015-08-11"
+    }
+   ]
+  },
+  {
+   "name": "EU LCS Summer Playoffs 2015",
+   "region": "EUW",
+   "game": [
+    {
+     "blueside": "Fnatic",
+     "redside": "Origen",
+     "result": "3 - 2",
+     "date": "2015-08-23"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Unicorns of Love",
+     "result": "3 - 0",
+     "date": "2015-08-22"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Unicorns of Love",
+     "result": "3 - 0",
+     "date": "2015-08-16"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Origen",
+     "result": "1 - 3",
+     "date": "2015-08-15"
+    },
+    {
+     "blueside": "Unicorns of Love",
+     "redside": "Roccat",
+     "result": "3 - 2",
+     "date": "2015-08-09"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Giants Gaming",
+     "result": "3 - 0",
+     "date": "2015-08-08"
+    }
+   ]
+  },
+  {
+   "name": "NA LCS Summer Playoffs 2015",
+   "region": "NA",
+   "game": [
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Team SoloMid",
+     "result": "3 - 0",
+     "date": "2015-08-23"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Team Impulse",
+     "result": "3 - 1",
+     "date": "2015-08-23"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Team SoloMid",
+     "result": "1 - 3",
+     "date": "2015-08-16"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Team Impulse",
+     "result": "3 - 0",
+     "date": "2015-08-15"
+    },
+    {
+     "blueside": "Gravity",
+     "redside": "Team SoloMid",
+     "result": "1 - 3",
+     "date": "2015-08-09"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Team Dignitas",
+     "result": "3 - 0",
+     "date": "2015-08-08"
+    }
+   ]
+  },
+  {
+   "name": "LMS Regional 2015",
+   "region": "TW",
+   "game": [
+    {
+     "blueside": "Flash Wolves",
+     "redside": "Hong Kong Esports",
+     "result": "3 - 2",
+     "date": "2015-08-16"
+    },
+    {
+     "blueside": "Midnight Sun E-Sports",
+     "redside": "Flash Wolves",
+     "result": "0 - 3",
+     "date": "2015-08-15"
+    },
+    {
+     "blueside": "Hong Kong Esports",
+     "redside": "Taipei Assassins",
+     "result": "3 - 2",
+     "date": "2015-08-14"
+    }
+   ]
+  },
+  {
+   "name": "LCK Summer 2015",
+   "region": "KR",
+   "game": [
+    {
+     "blueside": "SBENU",
+     "redside": "KOO Tigers",
+     "result": "0 - 2",
+     "date": "2015-08-13"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "CJ Entus",
+     "result": "2 - 1",
+     "date": "2015-08-12"
+    },
+    {
+     "blueside": "Najin e-Emfire",
+     "redside": "SKTelecom T1",
+     "result": "1 - 2",
+     "date": "2015-08-12"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "Anarchy",
+     "result": "2 - 1",
+     "date": "2015-08-08"
+    },
+    {
+     "blueside": "Incredible Miracle",
+     "redside": "CJ Entus",
+     "result": "1 - 2",
+     "date": "2015-08-08"
+    },
+    {
+     "blueside": "SBENU",
+     "redside": "Najin e-Emfire",
+     "result": "0 - 2",
+     "date": "2015-08-07"
+    },
+    {
+     "blueside": "Jin Air Greenwings",
+     "redside": "KOO Tigers",
+     "result": "2 - 1",
+     "date": "2015-08-07"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "SKTelecom T1",
+     "result": "0 - 2",
+     "date": "2015-08-06"
+    },
+    {
+     "blueside": "Jin Air Greenwings",
+     "redside": "Anarchy",
+     "result": "0 - 2",
+     "date": "2015-08-05"
+    },
+    {
+     "blueside": "Incredible Miracle",
+     "redside": "KT Rolster",
+     "result": "1 - 2",
+     "date": "2015-08-05"
+    },
+    {
+     "blueside": "Jin Air Greenwings",
+     "redside": "SBENU",
+     "result": "1 - 2",
+     "date": "2015-08-01"
+    },
+    {
+     "blueside": "Incredible Miracle",
+     "redside": "SKTelecom T1",
+     "result": "0 - 2",
+     "date": "2015-08-01"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "KOO Tigers",
+     "result": "2 - 0",
+     "date": "2015-07-31"
+    },
+    {
+     "blueside": "Najin e-Emfire",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 0",
+     "date": "2015-07-31"
+    },
+    {
+     "blueside": "Anarchy",
+     "redside": "CJ Entus",
+     "result": "0 - 2",
+     "date": "2015-07-30"
+    },
+    {
+     "blueside": "SBENU",
+     "redside": "Incredible Miracle",
+     "result": "0 - 2",
+     "date": "2015-07-29"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Jin Air Greenwings",
+     "result": "1 - 2",
+     "date": "2015-07-29"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "KT Rolster",
+     "result": "0 - 2",
+     "date": "2015-07-25"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "Najin e-Emfire",
+     "result": "1 - 2",
+     "date": "2015-07-25"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "CJ Entus",
+     "result": "1 - 2",
+     "date": "2015-07-24"
+    },
+    {
+     "blueside": "SBENU",
+     "redside": "Anarchy",
+     "result": "1 - 2",
+     "date": "2015-07-24"
+    },
+    {
+     "blueside": "Jin Air Greenwings",
+     "redside": "Incredible Miracle",
+     "result": "2 - 0",
+     "date": "2015-07-23"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "Anarchy",
+     "result": "2 - 0",
+     "date": "2015-07-22"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "KT Rolster",
+     "result": "2 - 1",
+     "date": "2015-07-22"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "Jin Air Greenwings",
+     "result": "2 - 0",
+     "date": "2015-07-18"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "SBENU",
+     "result": "2 - 1",
+     "date": "2015-07-18"
+    },
+    {
+     "blueside": "Incredible Miracle",
+     "redside": "Najin e-Emfire",
+     "result": "1 - 2",
+     "date": "2015-07-17"
+    },
+    {
+     "blueside": "Anarchy",
+     "redside": "Samsung Galaxy",
+     "result": "1 - 2",
+     "date": "2015-07-17"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "SKTelecom T1",
+     "result": "0 - 2",
+     "date": "2015-07-16"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Najin e-Emfire",
+     "result": "2 - 1",
+     "date": "2015-07-15"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "SBENU",
+     "result": "2 - 1",
+     "date": "2015-07-15"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "Incredible Miracle",
+     "result": "2 - 0",
+     "date": "2015-07-11"
+    },
+    {
+     "blueside": "Najin e-Emfire",
+     "redside": "Anarchy",
+     "result": "2 - 1",
+     "date": "2015-07-11"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "Jin Air Greenwings",
+     "result": "2 - 0",
+     "date": "2015-07-10"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "KT Rolster",
+     "result": "1 - 2",
+     "date": "2015-07-10"
+    },
+    {
+     "blueside": "SBENU",
+     "redside": "Samsung Galaxy",
+     "result": "1 - 2",
+     "date": "2015-07-09"
+    },
+    {
+     "blueside": "Anarchy",
+     "redside": "SKTelecom T1",
+     "result": "0 - 2",
+     "date": "2015-07-08"
+    },
+    {
+     "blueside": "Najin e-Emfire",
+     "redside": "Jin Air Greenwings",
+     "result": "1 - 2",
+     "date": "2015-07-08"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 0",
+     "date": "2015-07-04"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "SBENU",
+     "result": "2 - 0",
+     "date": "2015-07-04"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Jin Air Greenwings",
+     "result": "2 - 0",
+     "date": "2015-07-03"
+    },
+    {
+     "blueside": "Anarchy",
+     "redside": "Incredible Miracle",
+     "result": "0 - 2",
+     "date": "2015-07-03"
+    },
+    {
+     "blueside": "Najin e-Emfire",
+     "redside": "KT Rolster",
+     "result": "0 - 2",
+     "date": "2015-07-02"
+    },
+    {
+     "blueside": "Incredible Miracle",
+     "redside": "Samsung Galaxy",
+     "result": "0 - 2",
+     "date": "2015-07-01"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "KOO Tigers",
+     "result": "0 - 2",
+     "date": "2015-07-01"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "Jin Air Greenwings",
+     "result": "2 - 0",
+     "date": "2015-06-27"
+    },
+    {
+     "blueside": "Najin e-Emfire",
+     "redside": "KT Rolster",
+     "result": "2 - 0",
+     "date": "2015-06-27"
+    },
+    {
+     "blueside": "Incredible Miracle",
+     "redside": "KOO Tigers",
+     "result": "0 - 2",
+     "date": "2015-06-26"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 0",
+     "date": "2015-06-26"
+    },
+    {
+     "blueside": "Jin Air Greenwings",
+     "redside": "Najin e-Emfire",
+     "result": "2 - 0",
+     "date": "2015-06-25"
+    },
+    {
+     "blueside": "SBENU",
+     "redside": "Anarchy",
+     "result": "1 - 2",
+     "date": "2015-06-25"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "SKTelecom T1",
+     "result": "0 - 2",
+     "date": "2015-06-24"
+    },
+    {
+     "blueside": "Incredible Miracle",
+     "redside": "CJ Entus",
+     "result": "0 - 2",
+     "date": "2015-06-24"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "Anarchy",
+     "result": "2 - 0",
+     "date": "2015-06-20"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Incredible Miracle",
+     "result": "2 - 0",
+     "date": "2015-06-20"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Najin e-Emfire",
+     "result": "1 - 2",
+     "date": "2015-06-19"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "SBENU",
+     "result": "2 - 0",
+     "date": "2015-06-19"
+    },
+    {
+     "blueside": "Anarchy",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 0",
+     "date": "2015-06-18"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "Incredible Miracle",
+     "result": "2 - 0",
+     "date": "2015-06-18"
+    },
+    {
+     "blueside": "SBENU",
+     "redside": "KOO Tigers",
+     "result": "0 - 2",
+     "date": "2015-06-17"
+    },
+    {
+     "blueside": "Jin Air Greenwings",
+     "redside": "CJ Entus",
+     "result": "2 - 0",
+     "date": "2015-06-17"
+    },
+    {
+     "blueside": "Anarchy",
+     "redside": "KT Rolster",
+     "result": "1 - 2",
+     "date": "2015-06-13"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "Jin Air Greenwings",
+     "result": "2 - 1",
+     "date": "2015-06-13"
+    },
+    {
+     "blueside": "Najin e-Emfire",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 0",
+     "date": "2015-06-12"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "SKTelecom T1",
+     "result": "0 - 2",
+     "date": "2015-06-12"
+    },
+    {
+     "blueside": "Incredible Miracle",
+     "redside": "SBENU",
+     "result": "2 - 1",
+     "date": "2015-06-11"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "KOO Tigers",
+     "result": "0 - 2",
+     "date": "2015-06-11"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "Anarchy",
+     "result": "2 - 1",
+     "date": "2015-06-10"
+    },
+    {
+     "blueside": "SBENU",
+     "redside": "Najin e-Emfire",
+     "result": "0 - 2",
+     "date": "2015-06-10"
+    },
+    {
+     "blueside": "Incredible Miracle",
+     "redside": "KT Rolster",
+     "result": "1 - 2",
+     "date": "2015-06-06"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "SKTelecom T1",
+     "result": "1 - 2",
+     "date": "2015-06-06"
+    },
+    {
+     "blueside": "SBENU",
+     "redside": "Jin Air Greenwings",
+     "result": "0 - 2",
+     "date": "2015-06-05"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "CJ Entus",
+     "result": "1 - 2",
+     "date": "2015-06-05"
+    },
+    {
+     "blueside": "Najin e-Emfire",
+     "redside": "Incredible Miracle",
+     "result": "2 - 0",
+     "date": "2015-06-04"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Jin Air Greenwings",
+     "result": "1 - 2",
+     "date": "2015-06-03"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "KOO Tigers",
+     "result": "2 - 0",
+     "date": "2015-06-03"
+    },
+    {
+     "blueside": "Jin Air Greenwings",
+     "redside": "KT Rolster",
+     "result": "0 - 2",
+     "date": "2015-05-30"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "SBENU",
+     "result": "2 - 0",
+     "date": "2015-05-30"
+    },
+    {
+     "blueside": "Anarchy",
+     "redside": "Incredible Miracle",
+     "result": "1 - 2",
+     "date": "2015-05-29"
+    },
+    {
+     "blueside": "Najin e-Emfire",
+     "redside": "SKTelecom T1",
+     "result": "0 - 2",
+     "date": "2015-05-29"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 1",
+     "date": "2015-05-28"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "CJ Entus",
+     "result": "1 - 2",
+     "date": "2015-05-27"
+    },
+    {
+     "blueside": "Jin Air Greenwings",
+     "redside": "Anarchy",
+     "result": "2 - 0",
+     "date": "2015-05-27"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "Najin e-Emfire",
+     "result": "1 - 2",
+     "date": "2015-05-23"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "SBENU",
+     "result": "2 - 0",
+     "date": "2015-05-23"
+    },
+    {
+     "blueside": "Jin Air Greenwings",
+     "redside": "Incredible Miracle",
+     "result": "2 - 0",
+     "date": "2015-05-22"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 0",
+     "date": "2015-05-22"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Anarchy",
+     "result": "2 - 1",
+     "date": "2015-05-21"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "SBENU",
+     "result": "2 - 0",
+     "date": "2015-05-20"
+    },
+    {
+     "blueside": "Anarchy",
+     "redside": "Najin e-Emfire",
+     "result": "2 - 1",
+     "date": "2015-05-20"
+    }
+   ]
+  },
+  {
+   "name": "LPL Summer 2015",
+   "region": "CN",
+   "game": [
+    {
+     "blueside": "OMG",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2015-08-09"
+    },
+    {
+     "blueside": "Unlimited Potential",
+     "redside": "Team WE",
+     "result": "2 - 0",
+     "date": "2015-08-09"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Vici Gaming",
+     "result": "1 - 1",
+     "date": "2015-08-09"
+    },
+    {
+     "blueside": "Snake",
+     "redside": "Invictus Gaming",
+     "result": "0 - 2",
+     "date": "2015-08-09"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Team WE",
+     "result": "0 - 2",
+     "date": "2015-08-08"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "OMG",
+     "result": "2 - 0",
+     "date": "2015-08-08"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2015-08-08"
+    },
+    {
+     "blueside": "Unlimited Potential",
+     "redside": "King",
+     "result": "1 - 1",
+     "date": "2015-08-08"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "LGD Gaming",
+     "result": "1 - 1",
+     "date": "2015-08-07"
+    },
+    {
+     "blueside": "Unlimited Potential",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2015-08-07"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Royal Never Give Up",
+     "result": "1 - 1",
+     "date": "2015-08-07"
+    },
+    {
+     "blueside": "Qiao Gu",
+     "redside": "OMG",
+     "result": "2 - 0",
+     "date": "2015-08-07"
+    },
+    {
+     "blueside": "King",
+     "redside": "OMG",
+     "result": "1 - 1",
+     "date": "2015-08-02"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Royal Never Give Up",
+     "result": "1 - 1",
+     "date": "2015-08-02"
+    },
+    {
+     "blueside": "Qiao Gu",
+     "redside": "Team WE",
+     "result": "1 - 1",
+     "date": "2015-08-02"
+    },
+    {
+     "blueside": "Snake",
+     "redside": "Master3",
+     "result": "2 - 0",
+     "date": "2015-08-02"
+    },
+    {
+     "blueside": "King",
+     "redside": "Team WE",
+     "result": "1 - 1",
+     "date": "2015-08-01"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Master3",
+     "result": "2 - 0",
+     "date": "2015-08-01"
+    },
+    {
+     "blueside": "Unlimited Potential",
+     "redside": "Snake",
+     "result": "0 - 2",
+     "date": "2015-08-01"
+    },
+    {
+     "blueside": "Qiao Gu",
+     "redside": "Royal Never Give Up",
+     "result": "1 - 1",
+     "date": "2015-08-01"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2015-07-31"
+    },
+    {
+     "blueside": "Snake",
+     "redside": "Royal Never Give Up",
+     "result": "0 - 2",
+     "date": "2015-07-31"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "King",
+     "result": "1 - 1",
+     "date": "2015-07-31"
+    },
+    {
+     "blueside": "Unlimited Potential",
+     "redside": "Vici Gaming",
+     "result": "0 - 2",
+     "date": "2015-07-31"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "OMG",
+     "result": "1 - 1",
+     "date": "2015-07-26"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Royal Never Give Up",
+     "result": "2 - 0",
+     "date": "2015-07-26"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Vici Gaming",
+     "result": "1 - 1",
+     "date": "2015-07-26"
+    },
+    {
+     "blueside": "Qiao Gu",
+     "redside": "Snake",
+     "result": "1 - 1",
+     "date": "2015-07-26"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Team WE",
+     "result": "2 - 0",
+     "date": "2015-07-25"
+    },
+    {
+     "blueside": "Qiao Gu",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2015-07-25"
+    },
+    {
+     "blueside": "King",
+     "redside": "Invictus Gaming",
+     "result": "0 - 2",
+     "date": "2015-07-25"
+    },
+    {
+     "blueside": "Snake",
+     "redside": "Vici Gaming",
+     "result": "1 - 1",
+     "date": "2015-07-25"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Team WE",
+     "result": "1 - 1",
+     "date": "2015-07-24"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2015-07-24"
+    },
+    {
+     "blueside": "King",
+     "redside": "Vici Gaming",
+     "result": "0 - 2",
+     "date": "2015-07-24"
+    },
+    {
+     "blueside": "Qiao Gu",
+     "redside": "Master3",
+     "result": "1 - 1",
+     "date": "2015-07-24"
+    },
+    {
+     "blueside": "Snake",
+     "redside": "OMG",
+     "result": "2 - 0",
+     "date": "2015-07-19"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "LGD Gaming",
+     "result": "0 - 2",
+     "date": "2015-07-19"
+    },
+    {
+     "blueside": "Unlimited Potential",
+     "redside": "Invictus Gaming",
+     "result": "1 - 1",
+     "date": "2015-07-19"
+    },
+    {
+     "blueside": "King",
+     "redside": "Royal Never Give Up",
+     "result": "1 - 1",
+     "date": "2015-07-19"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2015-07-18"
+    },
+    {
+     "blueside": "Snake",
+     "redside": "LGD Gaming",
+     "result": "1 - 1",
+     "date": "2015-07-18"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Master3",
+     "result": "2 - 0",
+     "date": "2015-07-18"
+    },
+    {
+     "blueside": "Unlimited Potential",
+     "redside": "Qiao Gu",
+     "result": "0 - 2",
+     "date": "2015-07-18"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2015-07-17"
+    },
+    {
+     "blueside": "Qiao Gu",
+     "redside": "King",
+     "result": "1 - 1",
+     "date": "2015-07-17"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Invictus Gaming",
+     "result": "1 - 1",
+     "date": "2015-07-17"
+    },
+    {
+     "blueside": "Unlimited Potential",
+     "redside": "Royal Never Give Up",
+     "result": "1 - 1",
+     "date": "2015-07-17"
+    },
+    {
+     "blueside": "Qiao Gu",
+     "redside": "Vici Gaming",
+     "result": "2 - 0",
+     "date": "2015-07-05"
+    },
+    {
+     "blueside": "Snake",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2015-07-05"
+    },
+    {
+     "blueside": "Unlimited Potential",
+     "redside": "Master3",
+     "result": "1 - 1",
+     "date": "2015-07-05"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "OMG",
+     "result": "1 - 1",
+     "date": "2015-07-05"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Team WE",
+     "result": "1 - 1",
+     "date": "2015-07-04"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Qiao Gu",
+     "result": "1 - 1",
+     "date": "2015-07-04"
+    },
+    {
+     "blueside": "Unlimited Potential",
+     "redside": "OMG",
+     "result": "2 - 0",
+     "date": "2015-07-04"
+    },
+    {
+     "blueside": "Snake",
+     "redside": "King",
+     "result": "1 - 1",
+     "date": "2015-07-04"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "OMG",
+     "result": "0 - 2",
+     "date": "2015-07-03"
+    },
+    {
+     "blueside": "Snake",
+     "redside": "Team WE",
+     "result": "1 - 1",
+     "date": "2015-07-03"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Royal Never Give Up",
+     "result": "2 - 0",
+     "date": "2015-07-03"
+    },
+    {
+     "blueside": "King",
+     "redside": "Master3",
+     "result": "1 - 1",
+     "date": "2015-07-03"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Team WE",
+     "result": "1 - 1",
+     "date": "2015-06-28"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Royal Never Give Up",
+     "result": "2 - 0",
+     "date": "2015-06-28"
+    },
+    {
+     "blueside": "King",
+     "redside": "Edward Gaming",
+     "result": "1 - 1",
+     "date": "2015-06-28"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Qiao Gu",
+     "result": "1 - 1",
+     "date": "2015-06-28"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Edward Gaming",
+     "result": "1 - 1",
+     "date": "2015-06-27"
+    },
+    {
+     "blueside": "Unlimited Potential",
+     "redside": "LGD Gaming",
+     "result": "1 - 1",
+     "date": "2015-06-27"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Snake",
+     "result": "0 - 2",
+     "date": "2015-06-27"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Qiao Gu",
+     "result": "1 - 1",
+     "date": "2015-06-27"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "LGD Gaming",
+     "result": "1 - 1",
+     "date": "2015-06-26"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "King",
+     "result": "1 - 1",
+     "date": "2015-06-26"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Unlimited Potential",
+     "result": "1 - 1",
+     "date": "2015-06-26"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Qiao Gu",
+     "result": "1 - 1",
+     "date": "2015-06-26"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "King",
+     "result": "2 - 0",
+     "date": "2015-06-21"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "OMG",
+     "result": "1 - 1",
+     "date": "2015-06-21"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Qiao Gu",
+     "result": "1 - 1",
+     "date": "2015-06-21"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Snake",
+     "result": "1 - 1",
+     "date": "2015-06-21"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Team WE",
+     "result": "0 - 2",
+     "date": "2015-06-20"
+    },
+    {
+     "blueside": "King",
+     "redside": "Unlimited Potential",
+     "result": "2 - 0",
+     "date": "2015-06-20"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "LGD Gaming",
+     "result": "0 - 2",
+     "date": "2015-06-20"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Master3",
+     "result": "1 - 1",
+     "date": "2015-06-20"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "King",
+     "result": "1 - 1",
+     "date": "2015-06-19"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "LGD Gaming",
+     "result": "2 - 0",
+     "date": "2015-06-19"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Invictus Gaming",
+     "result": "2 - 0",
+     "date": "2015-06-19"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Qiao Gu",
+     "result": "1 - 1",
+     "date": "2015-06-19"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Unlimited Potential",
+     "result": "1 - 1",
+     "date": "2015-06-14"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Snake",
+     "result": "2 - 0",
+     "date": "2015-06-14"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Invictus Gaming",
+     "result": "0 - 2",
+     "date": "2015-06-14"
+    },
+    {
+     "blueside": "King",
+     "redside": "LGD Gaming",
+     "result": "1 - 1",
+     "date": "2015-06-14"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Unlimited Potential",
+     "result": "0 - 2",
+     "date": "2015-06-13"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Team WE",
+     "result": "2 - 0",
+     "date": "2015-06-13"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Invictus Gaming",
+     "result": "2 - 0",
+     "date": "2015-06-13"
+    },
+    {
+     "blueside": "Snake",
+     "redside": "Qiao Gu",
+     "result": "1 - 1",
+     "date": "2015-06-13"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Invictus Gaming",
+     "result": "1 - 1",
+     "date": "2015-06-12"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Vici Gaming",
+     "result": "1 - 1",
+     "date": "2015-06-12"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Qiao Gu",
+     "result": "0 - 2",
+     "date": "2015-06-12"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Master3",
+     "result": "2 - 0",
+     "date": "2015-06-12"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Royal Never Give Up",
+     "result": "2 - 0",
+     "date": "2015-06-07"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Snake",
+     "result": "1 - 1",
+     "date": "2015-06-07"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "King",
+     "result": "1 - 1",
+     "date": "2015-06-07"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Unlimited Potential",
+     "result": "2 - 0",
+     "date": "2015-06-07"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Vici Gaming",
+     "result": "1 - 1",
+     "date": "2015-06-06"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "OMG",
+     "result": "0 - 2",
+     "date": "2015-06-06"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Snake",
+     "result": "0 - 2",
+     "date": "2015-06-06"
+    },
+    {
+     "blueside": "Qiao Gu",
+     "redside": "Unlimited Potential",
+     "result": "2 - 0",
+     "date": "2015-06-06"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "LGD Gaming",
+     "result": "0 - 2",
+     "date": "2015-06-05"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Invictus Gaming",
+     "result": "2 - 0",
+     "date": "2015-06-05"
+    },
+    {
+     "blueside": "King",
+     "redside": "Qiao Gu",
+     "result": "1 - 1",
+     "date": "2015-06-05"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Snake",
+     "result": "1 - 1",
+     "date": "2015-06-05"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Vici Gaming",
+     "result": "2 - 0",
+     "date": "2015-05-31"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Master3",
+     "result": "1 - 1",
+     "date": "2015-05-31"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Unlimited Potential",
+     "result": "1 - 1",
+     "date": "2015-05-31"
+    },
+    {
+     "blueside": "King",
+     "redside": "Snake",
+     "result": "0 - 2",
+     "date": "2015-05-31"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "OMG",
+     "result": "1 - 1",
+     "date": "2015-05-30"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Unlimited Potential",
+     "result": "1 - 1",
+     "date": "2015-05-30"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Qiao Gu",
+     "result": "0 - 2",
+     "date": "2015-05-30"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "King",
+     "result": "2 - 0",
+     "date": "2015-05-30"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Royal Never Give Up",
+     "result": "2 - 0",
+     "date": "2015-05-29"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Master3",
+     "result": "1 - 1",
+     "date": "2015-05-29"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Snake",
+     "result": "2 - 0",
+     "date": "2015-05-29"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Unlimited Potential",
+     "result": "2 - 0",
+     "date": "2015-05-29"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Vici Gaming",
+     "result": "1 - 1",
+     "date": "2015-05-24"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "LGD Gaming",
+     "result": "1 - 1",
+     "date": "2015-05-24"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Qiao Gu",
+     "result": "1 - 1",
+     "date": "2015-05-24"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "King",
+     "result": "2 - 0",
+     "date": "2015-05-24"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "King",
+     "result": "2 - 0",
+     "date": "2015-05-23"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Master3",
+     "result": "1 - 1",
+     "date": "2015-05-23"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Snake",
+     "result": "0 - 2",
+     "date": "2015-05-23"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Unlimited Potential",
+     "result": "1 - 1",
+     "date": "2015-05-23"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Vici Gaming",
+     "result": "1 - 1",
+     "date": "2015-05-22"
+    },
+    {
+     "blueside": "Qiao Gu",
+     "redside": "LGD Gaming",
+     "result": "2 - 0",
+     "date": "2015-05-22"
+    },
+    {
+     "blueside": "Snake",
+     "redside": "Unlimited Potential",
+     "result": "1 - 1",
+     "date": "2015-05-22"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Invictus Gaming",
+     "result": "0 - 2",
+     "date": "2015-05-22"
+    }
+   ]
+  },
+  {
+   "name": "NA LCS Summer 2015",
+   "region": "NA",
+   "game": [
+    {
+     "blueside": "Team Liquid",
+     "redside": "Counter Logic Gaming",
+     "result": "1 - 0",
+     "date": "2015-07-26"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Gravity",
+     "result": "1 - 0",
+     "date": "2015-07-26"
+    },
+    {
+     "blueside": "Team 8",
+     "redside": "Cloud 9",
+     "result": "0 - 1",
+     "date": "2015-07-26"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Team Impulse",
+     "result": "1 - 0",
+     "date": "2015-07-26"
+    },
+    {
+     "blueside": "Gravity",
+     "redside": "Team Dragon Knights",
+     "result": "0 - 1",
+     "date": "2015-07-26"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Cloud 9",
+     "result": "0 - 1",
+     "date": "2015-07-26"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Team 8",
+     "result": "1 - 0",
+     "date": "2015-07-26"
+    },
+    {
+     "blueside": "Enemy E-Sports",
+     "redside": "Team Dignitas",
+     "result": "0 - 1",
+     "date": "2015-07-26"
+    },
+    {
+     "blueside": "Team Dragon Knights",
+     "redside": "Cloud 9",
+     "result": "1 - 0",
+     "date": "2015-07-25"
+    },
+    {
+     "blueside": "Enemy E-Sports",
+     "redside": "Team SoloMid",
+     "result": "0 - 1",
+     "date": "2015-07-25"
+    },
+    {
+     "blueside": "Gravity",
+     "redside": "Team Impulse",
+     "result": "0 - 1",
+     "date": "2015-07-25"
+    },
+    {
+     "blueside": "Team Dignitas",
+     "redside": "Counter Logic Gaming",
+     "result": "0 - 1",
+     "date": "2015-07-25"
+    },
+    {
+     "blueside": "Team 8",
+     "redside": "Team Liquid",
+     "result": "0 - 1",
+     "date": "2015-07-25"
+    },
+    {
+     "blueside": "Team 8",
+     "redside": "Gravity",
+     "result": "0 - 1",
+     "date": "2015-07-19"
+    },
+    {
+     "blueside": "Team Dragon Knights",
+     "redside": "Team Impulse",
+     "result": "0 - 1",
+     "date": "2015-07-19"
+    },
+    {
+     "blueside": "Team Dignitas",
+     "redside": "Team SoloMid",
+     "result": "0 - 1",
+     "date": "2015-07-19"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Counter Logic Gaming",
+     "result": "0 - 1",
+     "date": "2015-07-19"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Enemy E-Sports",
+     "result": "1 - 0",
+     "date": "2015-07-19"
+    },
+    {
+     "blueside": "Team Dragon Knights",
+     "redside": "Team 8",
+     "result": "0 - 1",
+     "date": "2015-07-18"
+    },
+    {
+     "blueside": "Gravity",
+     "redside": "Team Dignitas",
+     "result": "0 - 1",
+     "date": "2015-07-18"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Team Liquid",
+     "result": "1 - 0",
+     "date": "2015-07-18"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Team SoloMid",
+     "result": "1 - 0",
+     "date": "2015-07-18"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Enemy E-Sports",
+     "result": "1 - 0",
+     "date": "2015-07-18"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Team Dragon Knights",
+     "result": "1 - 0",
+     "date": "2015-07-11"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Team 8",
+     "result": "1 - 0",
+     "date": "2015-07-11"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Team Liquid",
+     "result": "0 - 1",
+     "date": "2015-07-11"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Team Dignitas",
+     "result": "1 - 0",
+     "date": "2015-07-11"
+    },
+    {
+     "blueside": "Enemy E-Sports",
+     "redside": "Gravity",
+     "result": "0 - 1",
+     "date": "2015-07-11"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Team Dignitas",
+     "result": "1 - 0",
+     "date": "2015-07-11"
+    },
+    {
+     "blueside": "Team 8",
+     "redside": "Team SoloMid",
+     "result": "1 - 0",
+     "date": "2015-07-11"
+    },
+    {
+     "blueside": "Gravity",
+     "redside": "Cloud 9",
+     "result": "1 - 0",
+     "date": "2015-07-11"
+    },
+    {
+     "blueside": "Enemy E-Sports",
+     "redside": "Counter Logic Gaming",
+     "result": "0 - 1",
+     "date": "2015-07-11"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Team Dragon Knights",
+     "result": "1 - 0",
+     "date": "2015-07-11"
+    },
+    {
+     "blueside": "Team 8",
+     "redside": "Cloud 9",
+     "result": "1 - 0",
+     "date": "2015-07-05"
+    },
+    {
+     "blueside": "Team Dignitas",
+     "redside": "Team Liquid",
+     "result": "0 - 1",
+     "date": "2015-07-05"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Gravity",
+     "result": "0 - 1",
+     "date": "2015-07-05"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Team Impulse",
+     "result": "0 - 1",
+     "date": "2015-07-05"
+    },
+    {
+     "blueside": "Enemy E-Sports",
+     "redside": "Team Dragon Knights",
+     "result": "1 - 0",
+     "date": "2015-07-05"
+    },
+    {
+     "blueside": "Team Dignitas",
+     "redside": "Team 8",
+     "result": "1 - 0",
+     "date": "2015-07-04"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Gravity",
+     "result": "0 - 1",
+     "date": "2015-07-04"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Team Liquid",
+     "result": "0 - 1",
+     "date": "2015-07-04"
+    },
+    {
+     "blueside": "Team Dragon Knights",
+     "redside": "Team SoloMid",
+     "result": "0 - 1",
+     "date": "2015-07-04"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Enemy E-Sports",
+     "result": "1 - 0",
+     "date": "2015-07-04"
+    },
+    {
+     "blueside": "Team 8",
+     "redside": "Enemy E-Sports",
+     "result": "1 - 0",
+     "date": "2015-06-28"
+    },
+    {
+     "blueside": "Team Dragon Knights",
+     "redside": "Team Dignitas",
+     "result": "1 - 0",
+     "date": "2015-06-28"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Counter Logic Gaming",
+     "result": "1 - 0",
+     "date": "2015-06-28"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Cloud 9",
+     "result": "1 - 0",
+     "date": "2015-06-28"
+    },
+    {
+     "blueside": "Gravity",
+     "redside": "Team Liquid",
+     "result": "1 - 0",
+     "date": "2015-06-28"
+    },
+    {
+     "blueside": "Team Dignitas",
+     "redside": "Enemy E-Sports",
+     "result": "1 - 0",
+     "date": "2015-06-27"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Team Dragon Knights",
+     "result": "1 - 0",
+     "date": "2015-06-27"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Team 8",
+     "result": "1 - 0",
+     "date": "2015-06-27"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Counter Logic Gaming",
+     "result": "1 - 0",
+     "date": "2015-06-27"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Gravity",
+     "result": "0 - 1",
+     "date": "2015-06-27"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Team Dignitas",
+     "result": "0 - 1",
+     "date": "2015-06-21"
+    },
+    {
+     "blueside": "Enemy E-Sports",
+     "redside": "Team Impulse",
+     "result": "0 - 1",
+     "date": "2015-06-21"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Cloud 9",
+     "result": "1 - 0",
+     "date": "2015-06-21"
+    },
+    {
+     "blueside": "Gravity",
+     "redside": "Team SoloMid",
+     "result": "0 - 1",
+     "date": "2015-06-21"
+    },
+    {
+     "blueside": "Team 8",
+     "redside": "Team Dragon Knights",
+     "result": "1 - 0",
+     "date": "2015-06-21"
+    },
+    {
+     "blueside": "Enemy E-Sports",
+     "redside": "Cloud 9",
+     "result": "1 - 0",
+     "date": "2015-06-20"
+    },
+    {
+     "blueside": "Gravity",
+     "redside": "Team 8",
+     "result": "1 - 0",
+     "date": "2015-06-20"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Team SoloMid",
+     "result": "0 - 1",
+     "date": "2015-06-20"
+    },
+    {
+     "blueside": "Team Dragon Knights",
+     "redside": "Counter Logic Gaming",
+     "result": "0 - 1",
+     "date": "2015-06-20"
+    },
+    {
+     "blueside": "Team Dignitas",
+     "redside": "Team Impulse",
+     "result": "1 - 0",
+     "date": "2015-06-20"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Enemy E-Sports",
+     "result": "1 - 0",
+     "date": "2015-06-14"
+    },
+    {
+     "blueside": "Team Dignitas",
+     "redside": "Gravity",
+     "result": "0 - 1",
+     "date": "2015-06-14"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Team Liquid",
+     "result": "0 - 1",
+     "date": "2015-06-14"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Team Dragon Knights",
+     "result": "1 - 0",
+     "date": "2015-06-14"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Team 8",
+     "result": "1 - 0",
+     "date": "2015-06-14"
+    },
+    {
+     "blueside": "Gravity",
+     "redside": "Counter Logic Gaming",
+     "result": "0 - 1",
+     "date": "2015-06-13"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Team Dragon Knights",
+     "result": "1 - 0",
+     "date": "2015-06-13"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Cloud 9",
+     "result": "1 - 0",
+     "date": "2015-06-13"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Team Dignitas",
+     "result": "0 - 1",
+     "date": "2015-06-13"
+    },
+    {
+     "blueside": "Enemy E-Sports",
+     "redside": "Team 8",
+     "result": "0 - 1",
+     "date": "2015-06-13"
+    },
+    {
+     "blueside": "Team 8",
+     "redside": "Team Dignitas",
+     "result": "0 - 1",
+     "date": "2015-06-07"
+    },
+    {
+     "blueside": "Team Dragon Knights",
+     "redside": "Enemy E-Sports",
+     "result": "0 - 1",
+     "date": "2015-06-07"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Team SoloMid",
+     "result": "0 - 1",
+     "date": "2015-06-07"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Gravity",
+     "result": "0 - 1",
+     "date": "2015-06-07"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Team Impulse",
+     "result": "0 - 1",
+     "date": "2015-06-07"
+    },
+    {
+     "blueside": "Team Dignitas",
+     "redside": "Team Dragon Knights",
+     "result": "1 - 0",
+     "date": "2015-06-06"
+    },
+    {
+     "blueside": "Team 8",
+     "redside": "Counter Logic Gaming",
+     "result": "0 - 1",
+     "date": "2015-06-06"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Team Impulse",
+     "result": "1 - 0",
+     "date": "2015-06-06"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Gravity",
+     "result": "0 - 1",
+     "date": "2015-06-06"
+    },
+    {
+     "blueside": "Enemy E-Sports",
+     "redside": "Team Liquid",
+     "result": "0 - 1",
+     "date": "2015-06-06"
+    },
+    {
+     "blueside": "Team Dragon Knights",
+     "redside": "Gravity",
+     "result": "0 - 1",
+     "date": "2015-05-31"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Enemy E-Sports",
+     "result": "1 - 0",
+     "date": "2015-05-31"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Counter Logic Gaming",
+     "result": "0 - 1",
+     "date": "2015-05-31"
+    },
+    {
+     "blueside": "Team Dignitas",
+     "redside": "Cloud 9",
+     "result": "1 - 0",
+     "date": "2015-05-31"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Team 8",
+     "result": "1 - 0",
+     "date": "2015-05-31"
+    },
+    {
+     "blueside": "Gravity",
+     "redside": "Enemy E-Sports",
+     "result": "0 - 1",
+     "date": "2015-05-30"
+    },
+    {
+     "blueside": "Team 8",
+     "redside": "Team Impulse",
+     "result": "0 - 1",
+     "date": "2015-05-30"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Team Dignitas",
+     "result": "1 - 0",
+     "date": "2015-05-30"
+    },
+    {
+     "blueside": "Team Dragon Knights",
+     "redside": "Team Liquid",
+     "result": "0 - 1",
+     "date": "2015-05-30"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Team SoloMid",
+     "result": "1 - 0",
+     "date": "2015-05-30"
+    }
+   ]
+  },
+  {
+   "name": "LMS Summer Playoffs 2015",
+   "region": "TW",
+   "game": [
+    {
+     "blueside": "Hong Kong Esports",
+     "redside": "AHQ E-Sports Club",
+     "result": "0 - 3",
+     "date": "2015-07-26"
+    },
+    {
+     "blueside": "Flash Wolves",
+     "redside": "Hong Kong Esports",
+     "result": "1 - 3",
+     "date": "2015-07-25"
+    },
+    {
+     "blueside": "Midnight Sun E-Sports",
+     "redside": "Hong Kong Esports",
+     "result": "1 - 3",
+     "date": "2015-07-24"
+    }
+   ]
+  },
+  {
+   "name": "EU LCS Summer 2015",
+   "region": "EUW",
+   "game": [
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Roccat",
+     "result": "0 - 1",
+     "date": "2015-07-24"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Unicorns of Love",
+     "result": "1 - 0",
+     "date": "2015-07-24"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Roccat",
+     "result": "0 - 1",
+     "date": "2015-07-24"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "Elements",
+     "result": "1 - 0",
+     "date": "2015-07-24"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2015-07-24"
+    },
+    {
+     "blueside": "Copenhagen Wolves",
+     "redside": "Giants Gaming",
+     "result": "0 - 1",
+     "date": "2015-07-24"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Gambit Gaming",
+     "result": "1 - 0",
+     "date": "2015-07-23"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Origen",
+     "result": "0 - 1",
+     "date": "2015-07-23"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "Fnatic",
+     "result": "0 - 1",
+     "date": "2015-07-23"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Unicorns of Love",
+     "result": "0 - 1",
+     "date": "2015-07-23"
+    },
+    {
+     "blueside": "Copenhagen Wolves",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2015-07-23"
+    },
+    {
+     "blueside": "Unicorns of Love",
+     "redside": "Gambit Gaming",
+     "result": "1 - 0",
+     "date": "2015-07-17"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Fnatic",
+     "result": "0 - 1",
+     "date": "2015-07-17"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "SK Gaming",
+     "result": "1 - 0",
+     "date": "2015-07-17"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Copenhagen Wolves",
+     "result": "0 - 1",
+     "date": "2015-07-17"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Roccat",
+     "result": "0 - 1",
+     "date": "2015-07-17"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Fnatic",
+     "result": "0 - 1",
+     "date": "2015-07-16"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "Origen",
+     "result": "1 - 0",
+     "date": "2015-07-16"
+    },
+    {
+     "blueside": "Unicorns of Love",
+     "redside": "SK Gaming",
+     "result": "0 - 1",
+     "date": "2015-07-16"
+    },
+    {
+     "blueside": "Copenhagen Wolves",
+     "redside": "Elements",
+     "result": "0 - 1",
+     "date": "2015-07-16"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2015-07-16"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "Copenhagen Wolves",
+     "result": "1 - 0",
+     "date": "2015-07-10"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Origen",
+     "result": "1 - 0",
+     "date": "2015-07-10"
+    },
+    {
+     "blueside": "Unicorns of Love",
+     "redside": "Elements",
+     "result": "1 - 0",
+     "date": "2015-07-10"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "Giants Gaming",
+     "result": "0 - 1",
+     "date": "2015-07-10"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "H2k-Gaming",
+     "result": "1 - 0",
+     "date": "2015-07-10"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "Gambit Gaming",
+     "result": "0 - 1",
+     "date": "2015-07-09"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Fnatic",
+     "result": "0 - 1",
+     "date": "2015-07-09"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Giants Gaming",
+     "result": "1 - 0",
+     "date": "2015-07-09"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Elements",
+     "result": "0 - 1",
+     "date": "2015-07-09"
+    },
+    {
+     "blueside": "Copenhagen Wolves",
+     "redside": "Unicorns of Love",
+     "result": "0 - 1",
+     "date": "2015-07-09"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Unicorns of Love",
+     "result": "1 - 0",
+     "date": "2015-07-03"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Origen",
+     "result": "0 - 1",
+     "date": "2015-07-03"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Copenhagen Wolves",
+     "result": "1 - 0",
+     "date": "2015-07-03"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2015-07-03"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "Giants Gaming",
+     "result": "0 - 1",
+     "date": "2015-07-03"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2015-07-02"
+    },
+    {
+     "blueside": "Unicorns of Love",
+     "redside": "Origen",
+     "result": "1 - 0",
+     "date": "2015-07-02"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Fnatic",
+     "result": "0 - 1",
+     "date": "2015-07-02"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "SK Gaming",
+     "result": "1 - 0",
+     "date": "2015-07-02"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "Copenhagen Wolves",
+     "result": "1 - 0",
+     "date": "2015-07-02"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "SK Gaming",
+     "result": "0 - 1",
+     "date": "2015-06-26"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Elements",
+     "result": "0 - 1",
+     "date": "2015-06-26"
+    },
+    {
+     "blueside": "Copenhagen Wolves",
+     "redside": "Origen",
+     "result": "0 - 1",
+     "date": "2015-06-26"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Unicorns of Love",
+     "result": "1 - 0",
+     "date": "2015-06-26"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Gambit Gaming",
+     "result": "1 - 0",
+     "date": "2015-06-26"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "SK Gaming",
+     "result": "1 - 0",
+     "date": "2015-06-25"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "H2k-Gaming",
+     "result": "1 - 0",
+     "date": "2015-06-25"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Gambit Gaming",
+     "result": "1 - 0",
+     "date": "2015-06-25"
+    },
+    {
+     "blueside": "Unicorns of Love",
+     "redside": "Giants Gaming",
+     "result": "0 - 1",
+     "date": "2015-06-25"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Copenhagen Wolves",
+     "result": "1 - 0",
+     "date": "2015-06-25"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Elements",
+     "result": "1 - 0",
+     "date": "2015-06-19"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "Unicorns of Love",
+     "result": "0 - 1",
+     "date": "2015-06-19"
+    },
+    {
+     "blueside": "Copenhagen Wolves",
+     "redside": "Fnatic",
+     "result": "0 - 1",
+     "date": "2015-06-19"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Giants Gaming",
+     "result": "1 - 0",
+     "date": "2015-06-19"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2015-06-19"
+    },
+    {
+     "blueside": "Copenhagen Wolves",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2015-06-18"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "Unicorns of Love",
+     "result": "1 - 0",
+     "date": "2015-06-18"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Fnatic",
+     "result": "0 - 1",
+     "date": "2015-06-18"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2015-06-18"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Gambit Gaming",
+     "result": "0 - 1",
+     "date": "2015-06-18"
+    },
+    {
+     "blueside": "Unicorns of Love",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2015-06-12"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "SK Gaming",
+     "result": "1 - 0",
+     "date": "2015-06-12"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Copenhagen Wolves",
+     "result": "0 - 1",
+     "date": "2015-06-12"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Origen",
+     "result": "1 - 0",
+     "date": "2015-06-12"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Giants Gaming",
+     "result": "1 - 0",
+     "date": "2015-06-12"
+    },
+    {
+     "blueside": "Copenhagen Wolves",
+     "redside": "Gambit Gaming",
+     "result": "0 - 1",
+     "date": "2015-06-11"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Elements",
+     "result": "1 - 0",
+     "date": "2015-06-11"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2015-06-11"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Giants Gaming",
+     "result": "0 - 1",
+     "date": "2015-06-11"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Unicorns of Love",
+     "result": "1 - 0",
+     "date": "2015-06-11"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Copenhagen Wolves",
+     "result": "1 - 0",
+     "date": "2015-06-05"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Elements",
+     "result": "1 - 0",
+     "date": "2015-06-05"
+    },
+    {
+     "blueside": "Unicorns of Love",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2015-06-05"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "SK Gaming",
+     "result": "1 - 0",
+     "date": "2015-06-05"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "Fnatic",
+     "result": "0 - 1",
+     "date": "2015-06-05"
+    },
+    {
+     "blueside": "Unicorns of Love",
+     "redside": "Copenhagen Wolves",
+     "result": "1 - 0",
+     "date": "2015-06-04"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "Origen",
+     "result": "0 - 1",
+     "date": "2015-06-04"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Gambit Gaming",
+     "result": "1 - 0",
+     "date": "2015-06-04"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2015-06-04"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Giants Gaming",
+     "result": "0 - 1",
+     "date": "2015-06-04"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Unicorns of Love",
+     "result": "0 - 1",
+     "date": "2015-05-29"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "SK Gaming",
+     "result": "1 - 0",
+     "date": "2015-05-29"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Gambit Gaming",
+     "result": "1 - 0",
+     "date": "2015-05-29"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Copenhagen Wolves",
+     "result": "1 - 0",
+     "date": "2015-05-29"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "H2k-Gaming",
+     "result": "1 - 0",
+     "date": "2015-05-29"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2015-05-28"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "Elements",
+     "result": "0 - 1",
+     "date": "2015-05-28"
+    },
+    {
+     "blueside": "Copenhagen Wolves",
+     "redside": "SK Gaming",
+     "result": "1 - 0",
+     "date": "2015-05-28"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Origen",
+     "result": "0 - 1",
+     "date": "2015-05-28"
+    },
+    {
+     "blueside": "Unicorns of Love",
+     "redside": "Fnatic",
+     "result": "0 - 1",
+     "date": "2015-05-28"
+    }
+   ]
+  },
+  {
+   "name": "Mid-Season Invitational 2015",
+   "region": "WR",
+   "game": [
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "Edward Gaming",
+     "result": "2 - 3",
+     "date": "2015-05-10"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "AHQ E-Sports Club",
+     "result": "3 - 0",
+     "date": "2015-05-09"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "Fnatic",
+     "result": "3 - 2",
+     "date": "2015-05-09"
+    },
+    {
+     "blueside": "AHQ E-Sports Club",
+     "redside": "SKTelecom T1",
+     "result": "0 - 1",
+     "date": "2015-05-08"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Besiktas E-Sports Club",
+     "result": "1 - 0",
+     "date": "2015-05-08"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Edward Gaming",
+     "result": "0 - 1",
+     "date": "2015-05-08"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "Fnatic",
+     "result": "1 - 0",
+     "date": "2015-05-08"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Besiktas E-Sports Club",
+     "result": "1 - 0",
+     "date": "2015-05-08"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "AHQ E-Sports Club",
+     "result": "0 - 1",
+     "date": "2015-05-08"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Fnatic",
+     "result": "1 - 0",
+     "date": "2015-05-08"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "Team SoloMid",
+     "result": "1 - 0",
+     "date": "2015-05-07"
+    },
+    {
+     "blueside": "AHQ E-Sports Club",
+     "redside": "Besiktas E-Sports Club",
+     "result": "1 - 0",
+     "date": "2015-05-07"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "Edward Gaming",
+     "result": "1 - 0",
+     "date": "2015-05-07"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "AHQ E-Sports Club",
+     "result": "0 - 1",
+     "date": "2015-05-07"
+    },
+    {
+     "blueside": "Besiktas E-Sports Club",
+     "redside": "Team SoloMid",
+     "result": "0 - 1",
+     "date": "2015-05-07"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "AHQ E-Sports Club",
+     "result": "1 - 0",
+     "date": "2015-05-07"
+    },
+    {
+     "blueside": "Besiktas E-Sports Club",
+     "redside": "SKTelecom T1",
+     "result": "0 - 1",
+     "date": "2015-05-07"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Team SoloMid",
+     "result": "1 - 0",
+     "date": "2015-05-07"
+    }
+   ]
+  },
+  {
+   "name": "LCK Spring Playoffs 2015",
+   "region": "KR",
+   "game": [
+    {
+     "blueside": "KOO Tigers",
+     "redside": "SKTelecom T1",
+     "result": "0 - 3",
+     "date": "2015-05-02"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "SKTelecom T1",
+     "result": "2 - 3",
+     "date": "2015-04-24"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Jin Air Greenwings",
+     "result": "3 - 0",
+     "date": "2015-04-17"
+    }
+   ]
+  },
+  {
+   "name": "LPL Spring Playoffs 2015",
+   "region": "CN",
+   "game": [
+    {
+     "blueside": "Edward Gaming",
+     "redside": "LGD Gaming",
+     "result": "3 - 2",
+     "date": "2015-04-26"
+    },
+    {
+     "blueside": "Snake",
+     "redside": "Invictus Gaming",
+     "result": "1 - 3",
+     "date": "2015-04-25"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Snake",
+     "result": "3 - 0",
+     "date": "2015-04-19"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Edward Gaming",
+     "result": "0 - 3",
+     "date": "2015-04-18"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "LGD Gaming",
+     "result": "0 - 3",
+     "date": "2015-04-17"
+    },
+    {
+     "blueside": "Snake",
+     "redside": "King",
+     "result": "3 - 2",
+     "date": "2015-04-16"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Invictus Gaming",
+     "result": "1 - 3",
+     "date": "2015-04-15"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Team WE",
+     "result": "3 - 2",
+     "date": "2015-04-14"
+    }
+   ]
+  },
+  {
+   "name": "International Wildcard 2015",
+   "region": "WR",
+   "game": [
+    {
+     "blueside": "INTZ e-Sports",
+     "redside": "Besiktas E-Sports Club",
+     "result": "1 - 3",
+     "date": "2015-04-25"
+    },
+    {
+     "blueside": "Bangkok Titans",
+     "redside": "Besiktas E-Sports Club",
+     "result": "0 - 3",
+     "date": "2015-04-24"
+    }
+   ]
+  },
+  {
+   "name": "NA LCS Spring Playoffs 2015",
+   "region": "NA",
+   "game": [
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Cloud 9",
+     "result": "3 - 1",
+     "date": "2015-04-19"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Team Liquid",
+     "result": "2 - 3",
+     "date": "2015-04-18"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Team Impulse",
+     "result": "3 - 1",
+     "date": "2015-04-12"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Team Liquid",
+     "result": "3 - 2",
+     "date": "2015-04-11"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Gravity",
+     "result": "3 - 1",
+     "date": "2015-04-05"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Team Liquid",
+     "result": "0 - 3",
+     "date": "2015-04-04"
+    }
+   ]
+  },
+  {
+   "name": "EU LCS Spring Playoffs 2015",
+   "region": "EUW",
+   "game": [
+    {
+     "blueside": "Fnatic",
+     "redside": "Unicorns of Love",
+     "result": "3 - 2",
+     "date": "2015-04-19"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "SK Gaming",
+     "result": "3 - 2",
+     "date": "2015-04-18"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "Unicorns of Love",
+     "result": "2 - 3",
+     "date": "2015-04-12"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "H2k-Gaming",
+     "result": "3 - 2",
+     "date": "2015-04-11"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "Unicorns of Love",
+     "result": "1 - 3",
+     "date": "2015-04-05"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Copenhagen Wolves",
+     "result": "3 - 0",
+     "date": "2015-04-04"
+    }
+   ]
+  },
+  {
+   "name": "LPL Spring 2015",
+   "region": "CN",
+   "game": [
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Master3",
+     "result": "2 - 0",
+     "date": "2015-04-12"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2015-04-12"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Gamtee",
+     "result": "2 - 0",
+     "date": "2015-04-12"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "LGD Gaming",
+     "result": "2 - 0",
+     "date": "2015-04-12"
+    },
+    {
+     "blueside": "Energy Pacemaker",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2015-04-11"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "LGD Gaming",
+     "result": "0 - 2",
+     "date": "2015-04-11"
+    },
+    {
+     "blueside": "Snake",
+     "redside": "Star Horn Royal Club",
+     "result": "2 - 0",
+     "date": "2015-04-11"
+    },
+    {
+     "blueside": "King",
+     "redside": "Gamtee",
+     "result": "1 - 1",
+     "date": "2015-04-11"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2015-04-10"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Star Horn Royal Club",
+     "result": "1 - 1",
+     "date": "2015-04-10"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Energy Pacemaker",
+     "result": "1 - 1",
+     "date": "2015-04-10"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Gamtee",
+     "result": "1 - 1",
+     "date": "2015-04-10"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Vici Gaming",
+     "result": "1 - 1",
+     "date": "2015-04-05"
+    },
+    {
+     "blueside": "King",
+     "redside": "Invictus Gaming",
+     "result": "2 - 0",
+     "date": "2015-04-05"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Energy Pacemaker",
+     "result": "2 - 0",
+     "date": "2015-04-05"
+    },
+    {
+     "blueside": "Snake",
+     "redside": "Master3",
+     "result": "1 - 1",
+     "date": "2015-04-05"
+    },
+    {
+     "blueside": "King",
+     "redside": "Team WE",
+     "result": "1 - 1",
+     "date": "2015-04-04"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Master3",
+     "result": "2 - 0",
+     "date": "2015-04-04"
+    },
+    {
+     "blueside": "Gamtee",
+     "redside": "Snake",
+     "result": "0 - 2",
+     "date": "2015-04-04"
+    },
+    {
+     "blueside": "Energy Pacemaker",
+     "redside": "Star Horn Royal Club",
+     "result": "0 - 2",
+     "date": "2015-04-04"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Team WE",
+     "result": "1 - 1",
+     "date": "2015-04-03"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Star Horn Royal Club",
+     "result": "2 - 0",
+     "date": "2015-04-03"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "King",
+     "result": "1 - 1",
+     "date": "2015-04-03"
+    },
+    {
+     "blueside": "Energy Pacemaker",
+     "redside": "OMG",
+     "result": "1 - 1",
+     "date": "2015-04-03"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "OMG",
+     "result": "2 - 0",
+     "date": "2015-03-22"
+    },
+    {
+     "blueside": "Star Horn Royal Club",
+     "redside": "Team WE",
+     "result": "0 - 2",
+     "date": "2015-03-22"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Gamtee",
+     "result": "2 - 0",
+     "date": "2015-03-22"
+    },
+    {
+     "blueside": "Snake",
+     "redside": "Energy Pacemaker",
+     "result": "2 - 0",
+     "date": "2015-03-22"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "LGD Gaming",
+     "result": "1 - 1",
+     "date": "2015-03-21"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Master3",
+     "result": "2 - 0",
+     "date": "2015-03-21"
+    },
+    {
+     "blueside": "King",
+     "redside": "OMG",
+     "result": "1 - 1",
+     "date": "2015-03-21"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Snake",
+     "result": "2 - 0",
+     "date": "2015-03-21"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Star Horn Royal Club",
+     "result": "2 - 0",
+     "date": "2015-03-20"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "OMG",
+     "result": "1 - 1",
+     "date": "2015-03-20"
+    },
+    {
+     "blueside": "Gamtee",
+     "redside": "Vici Gaming",
+     "result": "0 - 2",
+     "date": "2015-03-20"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Snake",
+     "result": "1 - 1",
+     "date": "2015-03-20"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Master3",
+     "result": "1 - 1",
+     "date": "2015-03-15"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Snake",
+     "result": "1 - 1",
+     "date": "2015-03-15"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Gamtee",
+     "result": "1 - 1",
+     "date": "2015-03-15"
+    },
+    {
+     "blueside": "King",
+     "redside": "Star Horn Royal Club",
+     "result": "1 - 1",
+     "date": "2015-03-15"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "OMG",
+     "result": "0 - 2",
+     "date": "2015-03-14"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Invictus Gaming",
+     "result": "2 - 0",
+     "date": "2015-03-14"
+    },
+    {
+     "blueside": "Energy Pacemaker",
+     "redside": "Gamtee",
+     "result": "1 - 1",
+     "date": "2015-03-14"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Snake",
+     "result": "1 - 1",
+     "date": "2015-03-14"
+    },
+    {
+     "blueside": "King",
+     "redside": "Energy Pacemaker",
+     "result": "2 - 0",
+     "date": "2015-03-13"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2015-03-13"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Vici Gaming",
+     "result": "1 - 1",
+     "date": "2015-03-13"
+    },
+    {
+     "blueside": "Gamtee",
+     "redside": "Star Horn Royal Club",
+     "result": "0 - 2",
+     "date": "2015-03-13"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Star Horn Royal Club",
+     "result": "2 - 0",
+     "date": "2015-03-08"
+    },
+    {
+     "blueside": "Snake",
+     "redside": "Edward Gaming",
+     "result": "1 - 1",
+     "date": "2015-03-08"
+    },
+    {
+     "blueside": "Gamtee",
+     "redside": "Master3",
+     "result": "1 - 1",
+     "date": "2015-03-08"
+    },
+    {
+     "blueside": "Energy Pacemaker",
+     "redside": "Vici Gaming",
+     "result": "1 - 1",
+     "date": "2015-03-08"
+    },
+    {
+     "blueside": "Gamtee",
+     "redside": "OMG",
+     "result": "1 - 1",
+     "date": "2015-03-07"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Master3",
+     "result": "0 - 2",
+     "date": "2015-03-07"
+    },
+    {
+     "blueside": "Energy Pacemaker",
+     "redside": "Invictus Gaming",
+     "result": "1 - 1",
+     "date": "2015-03-07"
+    },
+    {
+     "blueside": "King",
+     "redside": "Snake",
+     "result": "0 - 2",
+     "date": "2015-03-07"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "OMG",
+     "result": "1 - 1",
+     "date": "2015-03-06"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Snake",
+     "result": "1 - 1",
+     "date": "2015-03-06"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Star Horn Royal Club",
+     "result": "2 - 0",
+     "date": "2015-03-06"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "King",
+     "result": "1 - 1",
+     "date": "2015-03-06"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Team WE",
+     "result": "1 - 1",
+     "date": "2015-03-01"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Star Horn Royal Club",
+     "result": "1 - 1",
+     "date": "2015-03-01"
+    },
+    {
+     "blueside": "King",
+     "redside": "Edward Gaming",
+     "result": "1 - 1",
+     "date": "2015-03-01"
+    },
+    {
+     "blueside": "Energy Pacemaker",
+     "redside": "LGD Gaming",
+     "result": "1 - 1",
+     "date": "2015-03-01"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "King",
+     "result": "1 - 1",
+     "date": "2015-02-28"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Team WE",
+     "result": "0 - 2",
+     "date": "2015-02-28"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Snake",
+     "result": "2 - 0",
+     "date": "2015-02-28"
+    },
+    {
+     "blueside": "Energy Pacemaker",
+     "redside": "Star Horn Royal Club",
+     "result": "2 - 0",
+     "date": "2015-02-28"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Edward Gaming",
+     "result": "1 - 1",
+     "date": "2015-02-27"
+    },
+    {
+     "blueside": "King",
+     "redside": "Team WE",
+     "result": "2 - 0",
+     "date": "2015-02-27"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Gamtee",
+     "result": "1 - 1",
+     "date": "2015-02-27"
+    },
+    {
+     "blueside": "Energy Pacemaker",
+     "redside": "Vici Gaming",
+     "result": "0 - 2",
+     "date": "2015-02-27"
+    },
+    {
+     "blueside": "King",
+     "redside": "Invictus Gaming",
+     "result": "1 - 1",
+     "date": "2015-02-15"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Gamtee",
+     "result": "1 - 1",
+     "date": "2015-02-15"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Energy Pacemaker",
+     "result": "1 - 1",
+     "date": "2015-02-15"
+    },
+    {
+     "blueside": "Snake",
+     "redside": "Star Horn Royal Club",
+     "result": "2 - 0",
+     "date": "2015-02-15"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Vici Gaming",
+     "result": "0 - 2",
+     "date": "2015-02-14"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "OMG",
+     "result": "1 - 1",
+     "date": "2015-02-14"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Star Horn Royal Club",
+     "result": "2 - 0",
+     "date": "2015-02-14"
+    },
+    {
+     "blueside": "King",
+     "redside": "Gamtee",
+     "result": "0 - 2",
+     "date": "2015-02-14"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "King",
+     "result": "2 - 0",
+     "date": "2015-02-13"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Vici Gaming",
+     "result": "2 - 0",
+     "date": "2015-02-13"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Invictus Gaming",
+     "result": "1 - 1",
+     "date": "2015-02-13"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Energy Pacemaker",
+     "result": "2 - 0",
+     "date": "2015-02-13"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2015-02-08"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Gamtee",
+     "result": "1 - 1",
+     "date": "2015-02-08"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Snake",
+     "result": "1 - 1",
+     "date": "2015-02-08"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "King",
+     "result": "0 - 2",
+     "date": "2015-02-08"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Star Horn Royal Club",
+     "result": "1 - 1",
+     "date": "2015-02-07"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "OMG",
+     "result": "1 - 1",
+     "date": "2015-02-07"
+    },
+    {
+     "blueside": "Gamtee",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2015-02-07"
+    },
+    {
+     "blueside": "Energy Pacemaker",
+     "redside": "Snake",
+     "result": "0 - 2",
+     "date": "2015-02-07"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Star Horn Royal Club",
+     "result": "1 - 1",
+     "date": "2015-02-06"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Invictus Gaming",
+     "result": "0 - 2",
+     "date": "2015-02-06"
+    },
+    {
+     "blueside": "Energy Pacemaker",
+     "redside": "Team WE",
+     "result": "1 - 1",
+     "date": "2015-02-06"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2015-02-06"
+    },
+    {
+     "blueside": "Star Horn Royal Club",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2015-02-01"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Snake",
+     "result": "0 - 2",
+     "date": "2015-02-01"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "King",
+     "result": "2 - 0",
+     "date": "2015-02-01"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Gamtee",
+     "result": "1 - 1",
+     "date": "2015-02-01"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "OMG",
+     "result": "0 - 2",
+     "date": "2015-01-31"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Vici Gaming",
+     "result": "1 - 1",
+     "date": "2015-01-31"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Snake",
+     "result": "1 - 1",
+     "date": "2015-01-31"
+    },
+    {
+     "blueside": "Gamtee",
+     "redside": "Energy Pacemaker",
+     "result": "1 - 1",
+     "date": "2015-01-31"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2015-01-30"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Team WE",
+     "result": "2 - 0",
+     "date": "2015-01-30"
+    },
+    {
+     "blueside": "King",
+     "redside": "Star Horn Royal Club",
+     "result": "0 - 2",
+     "date": "2015-01-30"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Snake",
+     "result": "1 - 1",
+     "date": "2015-01-30"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "LGD Gaming",
+     "result": "0 - 2",
+     "date": "2015-01-25"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Vici Gaming",
+     "result": "0 - 2",
+     "date": "2015-01-25"
+    },
+    {
+     "blueside": "Gamtee",
+     "redside": "Star Horn Royal Club",
+     "result": "0 - 2",
+     "date": "2015-01-25"
+    },
+    {
+     "blueside": "King",
+     "redside": "Snake",
+     "result": "1 - 1",
+     "date": "2015-01-25"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2015-01-24"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "OMG",
+     "result": "0 - 2",
+     "date": "2015-01-24"
+    },
+    {
+     "blueside": "Gamtee",
+     "redside": "Vici Gaming",
+     "result": "1 - 1",
+     "date": "2015-01-24"
+    },
+    {
+     "blueside": "King",
+     "redside": "Energy Pacemaker",
+     "result": "2 - 0",
+     "date": "2015-01-24"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Team WE",
+     "result": "2 - 0",
+     "date": "2015-01-23"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Snake",
+     "result": "0 - 2",
+     "date": "2015-01-23"
+    },
+    {
+     "blueside": "Star Horn Royal Club",
+     "redside": "OMG",
+     "result": "0 - 2",
+     "date": "2015-01-23"
+    },
+    {
+     "blueside": "Energy Pacemaker",
+     "redside": "Invictus Gaming",
+     "result": "0 - 2",
+     "date": "2015-01-23"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Vici Gaming",
+     "result": "2 - 0",
+     "date": "2015-01-18"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Star Horn Royal Club",
+     "result": "2 - 0",
+     "date": "2015-01-18"
+    },
+    {
+     "blueside": "Energy Pacemaker",
+     "redside": "OMG",
+     "result": "0 - 2",
+     "date": "2015-01-18"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "King",
+     "result": "2 - 0",
+     "date": "2015-01-18"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Vici Gaming",
+     "result": "2 - 0",
+     "date": "2015-01-17"
+    },
+    {
+     "blueside": "Gamtee",
+     "redside": "Invictus Gaming",
+     "result": "0 - 2",
+     "date": "2015-01-17"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Snake",
+     "result": "0 - 2",
+     "date": "2015-01-17"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Star Horn Royal Club",
+     "result": "0 - 2",
+     "date": "2015-01-17"
+    },
+    {
+     "blueside": "King",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2015-01-16"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Energy Pacemaker",
+     "result": "2 - 0",
+     "date": "2015-01-16"
+    },
+    {
+     "blueside": "Gamtee",
+     "redside": "Snake",
+     "result": "0 - 2",
+     "date": "2015-01-16"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Team WE",
+     "result": "2 - 0",
+     "date": "2015-01-16"
+    }
+   ]
+  },
+  {
+   "name": "LMS Spring Playoffs 2015",
+   "region": "TW",
+   "game": [
+    {
+     "blueside": "AHQ E-Sports Club",
+     "redside": "Flash Wolves",
+     "result": "3 - 1",
+     "date": "2015-04-12"
+    },
+    {
+     "blueside": "AHQ E-Sports Club",
+     "redside": "Taipei Assassins",
+     "result": "3 - 0",
+     "date": "2015-04-11"
+    },
+    {
+     "blueside": "Hong Kong Esports",
+     "redside": "AHQ E-Sports Club",
+     "result": "0 - 3",
+     "date": "2015-04-10"
+    }
+   ]
+  },
+  {
+   "name": "Champions Spring 2015",
+   "region": "KR",
+   "game": [
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Najin e-Emfire",
+     "result": "2 - 1",
+     "date": "2015-04-11"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "SKTelecom T1",
+     "result": "0 - 2",
+     "date": "2015-04-11"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Incredible Miracle",
+     "result": "2 - 0",
+     "date": "2015-04-10"
+    },
+    {
+     "blueside": "Jin Air Greenwings",
+     "redside": "KT Rolster",
+     "result": "0 - 2",
+     "date": "2015-04-08"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Jin Air Greenwings",
+     "result": "2 - 0",
+     "date": "2015-04-04"
+    },
+    {
+     "blueside": "Incredible Miracle",
+     "redside": "KT Rolster",
+     "result": "0 - 2",
+     "date": "2015-04-04"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "SKTelecom T1",
+     "result": "0 - 2",
+     "date": "2015-04-03"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "Najin e-Emfire",
+     "result": "2 - 0",
+     "date": "2015-04-01"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "Jin Air Greenwings",
+     "result": "2 - 0",
+     "date": "2015-03-28"
+    },
+    {
+     "blueside": "Najin e-Emfire",
+     "redside": "Incredible Miracle",
+     "result": "2 - 0",
+     "date": "2015-03-28"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "CJ Entus",
+     "result": "0 - 2",
+     "date": "2015-03-27"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "KOO Tigers",
+     "result": "2 - 1",
+     "date": "2015-03-27"
+    },
+    {
+     "blueside": "Jin Air Greenwings",
+     "redside": "Incredible Miracle",
+     "result": "2 - 0",
+     "date": "2015-03-25"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "CJ Entus",
+     "result": "2 - 0",
+     "date": "2015-03-21"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 0",
+     "date": "2015-03-21"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "Incredible Miracle",
+     "result": "2 - 0",
+     "date": "2015-03-20"
+    },
+    {
+     "blueside": "Najin e-Emfire",
+     "redside": "Jin Air Greenwings",
+     "result": "0 - 2",
+     "date": "2015-03-20"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "KT Rolster",
+     "result": "2 - 1",
+     "date": "2015-03-18"
+    },
+    {
+     "blueside": "Incredible Miracle",
+     "redside": "Samsung Galaxy",
+     "result": "1 - 2",
+     "date": "2015-03-07"
+    },
+    {
+     "blueside": "Jin Air Greenwings",
+     "redside": "KOO Tigers",
+     "result": "0 - 2",
+     "date": "2015-03-07"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "KT Rolster",
+     "result": "2 - 1",
+     "date": "2015-03-06"
+    },
+    {
+     "blueside": "Najin e-Emfire",
+     "redside": "CJ Entus",
+     "result": "0 - 2",
+     "date": "2015-03-06"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "KOO Tigers",
+     "result": "0 - 2",
+     "date": "2015-03-04"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "Najin e-Emfire",
+     "result": "0 - 2",
+     "date": "2015-02-28"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "SKTelecom T1",
+     "result": "0 - 2",
+     "date": "2015-02-28"
+    },
+    {
+     "blueside": "Incredible Miracle",
+     "redside": "KOO Tigers",
+     "result": "0 - 2",
+     "date": "2015-02-27"
+    },
+    {
+     "blueside": "Jin Air Greenwings",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 0",
+     "date": "2015-02-27"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "Najin e-Emfire",
+     "result": "2 - 1",
+     "date": "2015-02-25"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "KOO Tigers",
+     "result": "1 - 2",
+     "date": "2015-02-14"
+    },
+    {
+     "blueside": "Najin e-Emfire",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 1",
+     "date": "2015-02-14"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "Jin Air Greenwings",
+     "result": "2 - 1",
+     "date": "2015-02-13"
+    },
+    {
+     "blueside": "Incredible Miracle",
+     "redside": "CJ Entus",
+     "result": "1 - 2",
+     "date": "2015-02-11"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "Incredible Miracle",
+     "result": "0 - 2",
+     "date": "2015-02-07"
+    },
+    {
+     "blueside": "Jin Air Greenwings",
+     "redside": "CJ Entus",
+     "result": "2 - 0",
+     "date": "2015-02-07"
+    },
+    {
+     "blueside": "Najin e-Emfire",
+     "redside": "KOO Tigers",
+     "result": "0 - 2",
+     "date": "2015-02-06"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 0",
+     "date": "2015-02-04"
+    },
+    {
+     "blueside": "Incredible Miracle",
+     "redside": "Najin e-Emfire",
+     "result": "0 - 2",
+     "date": "2015-01-31"
+    },
+    {
+     "blueside": "Jin Air Greenwings",
+     "redside": "SKTelecom T1",
+     "result": "2 - 0",
+     "date": "2015-01-31"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "KT Rolster",
+     "result": "2 - 0",
+     "date": "2015-01-30"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 0",
+     "date": "2015-01-30"
+    },
+    {
+     "blueside": "Incredible Miracle",
+     "redside": "Jin Air Greenwings",
+     "result": "2 - 1",
+     "date": "2015-01-28"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "KT Rolster",
+     "result": "0 - 2",
+     "date": "2015-01-24"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "KOO Tigers",
+     "result": "0 - 2",
+     "date": "2015-01-24"
+    },
+    {
+     "blueside": "Jin Air Greenwings",
+     "redside": "Najin e-Emfire",
+     "result": "2 - 0",
+     "date": "2015-01-23"
+    },
+    {
+     "blueside": "Incredible Miracle",
+     "redside": "SKTelecom T1",
+     "result": "0 - 2",
+     "date": "2015-01-23"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "CJ Entus",
+     "result": "1 - 2",
+     "date": "2015-01-21"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "Jin Air Greenwings",
+     "result": "2 - 1",
+     "date": "2015-01-17"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Incredible Miracle",
+     "result": "0 - 2",
+     "date": "2015-01-17"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Najin e-Emfire",
+     "result": "2 - 1",
+     "date": "2015-01-16"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "SKTelecom T1",
+     "result": "0 - 2",
+     "date": "2015-01-16"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 0",
+     "date": "2015-01-14"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "CJ Entus",
+     "result": "0 - 2",
+     "date": "2015-01-10"
+    },
+    {
+     "blueside": "Najin e-Emfire",
+     "redside": "KT Rolster",
+     "result": "2 - 0",
+     "date": "2015-01-10"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Jin Air Greenwings",
+     "result": "1 - 2",
+     "date": "2015-01-09"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "Incredible Miracle",
+     "result": "2 - 0",
+     "date": "2015-01-09"
+    },
+    {
+     "blueside": "Najin e-Emfire",
+     "redside": "SKTelecom T1",
+     "result": "1 - 2",
+     "date": "2015-01-07"
+    }
+   ]
+  },
+  {
+   "name": "NA LCS Spring 2015",
+   "region": "NA",
+   "game": [
+    {
+     "blueside": "Cloud 9",
+     "redside": "Counter Logic Gaming",
+     "result": "1 - 0",
+     "date": "2015-03-30"
+    },
+    {
+     "blueside": "Team 8",
+     "redside": "Team Liquid",
+     "result": "0 - 1",
+     "date": "2015-03-30"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Team Impulse",
+     "result": "0 - 1",
+     "date": "2015-03-30"
+    },
+    {
+     "blueside": "Gravity",
+     "redside": "Team 8",
+     "result": "1 - 0",
+     "date": "2015-03-30"
+    },
+    {
+     "blueside": "Team Dignitas",
+     "redside": "Team Liquid",
+     "result": "0 - 1",
+     "date": "2015-03-30"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Team SoloMid",
+     "result": "1 - 0",
+     "date": "2015-03-30"
+    },
+    {
+     "blueside": "Winterfox",
+     "redside": "Team Coast",
+     "result": "1 - 0",
+     "date": "2015-03-30"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Team Dignitas",
+     "result": "0 - 1",
+     "date": "2015-03-29"
+    },
+    {
+     "blueside": "Team Coast",
+     "redside": "Team SoloMid",
+     "result": "0 - 1",
+     "date": "2015-03-29"
+    },
+    {
+     "blueside": "Winterfox",
+     "redside": "Team Liquid",
+     "result": "1 - 0",
+     "date": "2015-03-29"
+    },
+    {
+     "blueside": "Team 8",
+     "redside": "Counter Logic Gaming",
+     "result": "0 - 1",
+     "date": "2015-03-29"
+    },
+    {
+     "blueside": "Gravity",
+     "redside": "Cloud 9",
+     "result": "0 - 1",
+     "date": "2015-03-29"
+    },
+    {
+     "blueside": "Team Coast",
+     "redside": "Team Liquid",
+     "result": "0 - 1",
+     "date": "2015-03-23"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Winterfox",
+     "result": "1 - 0",
+     "date": "2015-03-23"
+    },
+    {
+     "blueside": "Team 8",
+     "redside": "Cloud 9",
+     "result": "1 - 0",
+     "date": "2015-03-23"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Counter Logic Gaming",
+     "result": "1 - 0",
+     "date": "2015-03-23"
+    },
+    {
+     "blueside": "Team Dignitas",
+     "redside": "Gravity",
+     "result": "0 - 1",
+     "date": "2015-03-23"
+    },
+    {
+     "blueside": "Winterfox",
+     "redside": "Team 8",
+     "result": "0 - 1",
+     "date": "2015-03-22"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Team Dignitas",
+     "result": "1 - 0",
+     "date": "2015-03-22"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Gravity",
+     "result": "0 - 1",
+     "date": "2015-03-22"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Cloud 9",
+     "result": "0 - 1",
+     "date": "2015-03-22"
+    },
+    {
+     "blueside": "Team Coast",
+     "redside": "Team Impulse",
+     "result": "0 - 1",
+     "date": "2015-03-22"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Team Coast",
+     "result": "1 - 0",
+     "date": "2015-03-09"
+    },
+    {
+     "blueside": "Gravity",
+     "redside": "Winterfox",
+     "result": "1 - 0",
+     "date": "2015-03-09"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Team Impulse",
+     "result": "0 - 1",
+     "date": "2015-03-09"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Team 8",
+     "result": "1 - 0",
+     "date": "2015-03-09"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Team Dignitas",
+     "result": "1 - 0",
+     "date": "2015-03-09"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Team 8",
+     "result": "0 - 1",
+     "date": "2015-03-08"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Cloud 9",
+     "result": "1 - 0",
+     "date": "2015-03-08"
+    },
+    {
+     "blueside": "Winterfox",
+     "redside": "Team SoloMid",
+     "result": "0 - 1",
+     "date": "2015-03-08"
+    },
+    {
+     "blueside": "Gravity",
+     "redside": "Counter Logic Gaming",
+     "result": "0 - 1",
+     "date": "2015-03-08"
+    },
+    {
+     "blueside": "Team Dignitas",
+     "redside": "Team Coast",
+     "result": "1 - 0",
+     "date": "2015-03-08"
+    },
+    {
+     "blueside": "Team 8",
+     "redside": "Team Dignitas",
+     "result": "1 - 0",
+     "date": "2015-03-02"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Team Liquid",
+     "result": "0 - 1",
+     "date": "2015-03-02"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Team SoloMid",
+     "result": "1 - 0",
+     "date": "2015-03-02"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Winterfox",
+     "result": "1 - 0",
+     "date": "2015-03-02"
+    },
+    {
+     "blueside": "Gravity",
+     "redside": "Team Coast",
+     "result": "1 - 0",
+     "date": "2015-03-02"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Winterfox",
+     "result": "1 - 0",
+     "date": "2015-03-01"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Team Dignitas",
+     "result": "1 - 0",
+     "date": "2015-03-01"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Gravity",
+     "result": "1 - 0",
+     "date": "2015-03-01"
+    },
+    {
+     "blueside": "Team 8",
+     "redside": "Team Impulse",
+     "result": "1 - 0",
+     "date": "2015-03-01"
+    },
+    {
+     "blueside": "Team Coast",
+     "redside": "Cloud 9",
+     "result": "0 - 1",
+     "date": "2015-03-01"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Gravity",
+     "result": "1 - 0",
+     "date": "2015-02-23"
+    },
+    {
+     "blueside": "Team Coast",
+     "redside": "Team 8",
+     "result": "0 - 1",
+     "date": "2015-02-23"
+    },
+    {
+     "blueside": "Winterfox",
+     "redside": "Team Dignitas",
+     "result": "0 - 1",
+     "date": "2015-02-23"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Team SoloMid",
+     "result": "1 - 0",
+     "date": "2015-02-23"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Counter Logic Gaming",
+     "result": "1 - 0",
+     "date": "2015-02-23"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Team Coast",
+     "result": "1 - 0",
+     "date": "2015-02-22"
+    },
+    {
+     "blueside": "Team Dignitas",
+     "redside": "Counter Logic Gaming",
+     "result": "0 - 1",
+     "date": "2015-02-22"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Team Impulse",
+     "result": "1 - 0",
+     "date": "2015-02-22"
+    },
+    {
+     "blueside": "Team 8",
+     "redside": "Gravity",
+     "result": "0 - 1",
+     "date": "2015-02-22"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Winterfox",
+     "result": "0 - 1",
+     "date": "2015-02-22"
+    },
+    {
+     "blueside": "Team Dignitas",
+     "redside": "Team 8",
+     "result": "1 - 0",
+     "date": "2015-02-16"
+    },
+    {
+     "blueside": "Gravity",
+     "redside": "Team Liquid",
+     "result": "1 - 0",
+     "date": "2015-02-16"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Team SoloMid",
+     "result": "0 - 1",
+     "date": "2015-02-16"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Team Coast",
+     "result": "1 - 0",
+     "date": "2015-02-16"
+    },
+    {
+     "blueside": "Winterfox",
+     "redside": "Cloud 9",
+     "result": "1 - 0",
+     "date": "2015-02-16"
+    },
+    {
+     "blueside": "Gravity",
+     "redside": "Team SoloMid",
+     "result": "0 - 1",
+     "date": "2015-02-15"
+    },
+    {
+     "blueside": "Team 8",
+     "redside": "Team Liquid",
+     "result": "0 - 1",
+     "date": "2015-02-15"
+    },
+    {
+     "blueside": "Team Dignitas",
+     "redside": "Cloud 9",
+     "result": "0 - 1",
+     "date": "2015-02-15"
+    },
+    {
+     "blueside": "Winterfox",
+     "redside": "Team Impulse",
+     "result": "1 - 0",
+     "date": "2015-02-15"
+    },
+    {
+     "blueside": "Team Coast",
+     "redside": "Counter Logic Gaming",
+     "result": "0 - 1",
+     "date": "2015-02-15"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Team Impulse",
+     "result": "1 - 0",
+     "date": "2015-02-09"
+    },
+    {
+     "blueside": "Team 8",
+     "redside": "Winterfox",
+     "result": "1 - 0",
+     "date": "2015-02-09"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Team Dignitas",
+     "result": "0 - 1",
+     "date": "2015-02-09"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Gravity",
+     "result": "1 - 0",
+     "date": "2015-02-09"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Team Coast",
+     "result": "1 - 0",
+     "date": "2015-02-09"
+    },
+    {
+     "blueside": "Winterfox",
+     "redside": "Counter Logic Gaming",
+     "result": "0 - 1",
+     "date": "2015-02-08"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Team Coast",
+     "result": "1 - 0",
+     "date": "2015-02-08"
+    },
+    {
+     "blueside": "Team Dignitas",
+     "redside": "Team SoloMid",
+     "result": "0 - 1",
+     "date": "2015-02-08"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Team 8",
+     "result": "1 - 0",
+     "date": "2015-02-08"
+    },
+    {
+     "blueside": "Gravity",
+     "redside": "Team Impulse",
+     "result": "0 - 1",
+     "date": "2015-02-08"
+    },
+    {
+     "blueside": "Team Coast",
+     "redside": "Gravity",
+     "result": "0 - 1",
+     "date": "2015-02-02"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Team 8",
+     "result": "1 - 0",
+     "date": "2015-02-02"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Team Liquid",
+     "result": "1 - 0",
+     "date": "2015-02-02"
+    },
+    {
+     "blueside": "Team Dignitas",
+     "redside": "Winterfox",
+     "result": "0 - 1",
+     "date": "2015-02-02"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Cloud 9",
+     "result": "1 - 0",
+     "date": "2015-02-02"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Winterfox",
+     "result": "1 - 0",
+     "date": "2015-02-01"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Counter Logic Gaming",
+     "result": "0 - 1",
+     "date": "2015-02-01"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Team Liquid",
+     "result": "1 - 0",
+     "date": "2015-02-01"
+    },
+    {
+     "blueside": "Team 8",
+     "redside": "Team Coast",
+     "result": "1 - 0",
+     "date": "2015-02-01"
+    },
+    {
+     "blueside": "Gravity",
+     "redside": "Team Dignitas",
+     "result": "1 - 0",
+     "date": "2015-02-01"
+    },
+    {
+     "blueside": "Team 8",
+     "redside": "Team SoloMid",
+     "result": "1 - 0",
+     "date": "2015-01-26"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Gravity",
+     "result": "0 - 1",
+     "date": "2015-01-26"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Counter Logic Gaming",
+     "result": "1 - 0",
+     "date": "2015-01-26"
+    },
+    {
+     "blueside": "Team Coast",
+     "redside": "Winterfox",
+     "result": "1 - 0",
+     "date": "2015-01-26"
+    },
+    {
+     "blueside": "Team Dignitas",
+     "redside": "Team Impulse",
+     "result": "0 - 1",
+     "date": "2015-01-26"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Team 8",
+     "result": "1 - 0",
+     "date": "2015-01-25"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Team Liquid",
+     "result": "0 - 1",
+     "date": "2015-01-25"
+    },
+    {
+     "blueside": "Winterfox",
+     "redside": "Gravity",
+     "result": "1 - 0",
+     "date": "2015-01-25"
+    },
+    {
+     "blueside": "Team Coast",
+     "redside": "Team Dignitas",
+     "result": "0 - 1",
+     "date": "2015-01-25"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Cloud 9",
+     "result": "1 - 0",
+     "date": "2015-01-25"
+    }
+   ]
+  },
+  {
+   "name": "EU LCS Spring 2015",
+   "region": "EUW",
+   "game": [
+    {
+     "blueside": "MeetYourMakers",
+     "redside": "Giants Gaming",
+     "result": "0 - 1",
+     "date": "2015-03-28"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Unicorns of Love",
+     "result": "1 - 0",
+     "date": "2015-03-28"
+    },
+    {
+     "blueside": "MeetYourMakers",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2015-03-28"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "SK Gaming",
+     "result": "0 - 1",
+     "date": "2015-03-28"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Elements",
+     "result": "1 - 0",
+     "date": "2015-03-28"
+    },
+    {
+     "blueside": "Copenhagen Wolves",
+     "redside": "Giants Gaming",
+     "result": "0 - 1",
+     "date": "2015-03-28"
+    },
+    {
+     "blueside": "Unicorns of Love",
+     "redside": "Gambit Gaming",
+     "result": "0 - 1",
+     "date": "2015-03-27"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Elements",
+     "result": "0 - 1",
+     "date": "2015-03-27"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "MeetYourMakers",
+     "result": "1 - 0",
+     "date": "2015-03-27"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Fnatic",
+     "result": "0 - 1",
+     "date": "2015-03-27"
+    },
+    {
+     "blueside": "Copenhagen Wolves",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2015-03-27"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Gambit Gaming",
+     "result": "0 - 1",
+     "date": "2015-03-21"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Roccat",
+     "result": "0 - 1",
+     "date": "2015-03-21"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "Copenhagen Wolves",
+     "result": "1 - 0",
+     "date": "2015-03-21"
+    },
+    {
+     "blueside": "Unicorns of Love",
+     "redside": "Fnatic",
+     "result": "1 - 0",
+     "date": "2015-03-21"
+    },
+    {
+     "blueside": "MeetYourMakers",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2015-03-21"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "SK Gaming",
+     "result": "0 - 1",
+     "date": "2015-03-20"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "H2k-Gaming",
+     "result": "1 - 0",
+     "date": "2015-03-20"
+    },
+    {
+     "blueside": "Copenhagen Wolves",
+     "redside": "Unicorns of Love",
+     "result": "0 - 1",
+     "date": "2015-03-20"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Fnatic",
+     "result": "0 - 1",
+     "date": "2015-03-20"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "MeetYourMakers",
+     "result": "0 - 1",
+     "date": "2015-03-20"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "Giants Gaming",
+     "result": "1 - 0",
+     "date": "2015-03-07"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Copenhagen Wolves",
+     "result": "1 - 0",
+     "date": "2015-03-07"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "MeetYourMakers",
+     "result": "1 - 0",
+     "date": "2015-03-07"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Unicorns of Love",
+     "result": "0 - 1",
+     "date": "2015-03-07"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "SK Gaming",
+     "result": "0 - 1",
+     "date": "2015-03-07"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Unicorns of Love",
+     "result": "1 - 0",
+     "date": "2015-03-06"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "Fnatic",
+     "result": "1 - 0",
+     "date": "2015-03-06"
+    },
+    {
+     "blueside": "Copenhagen Wolves",
+     "redside": "Elements",
+     "result": "1 - 0",
+     "date": "2015-03-06"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Gambit Gaming",
+     "result": "1 - 0",
+     "date": "2015-03-06"
+    },
+    {
+     "blueside": "MeetYourMakers",
+     "redside": "Giants Gaming",
+     "result": "1 - 0",
+     "date": "2015-03-06"
+    },
+    {
+     "blueside": "Unicorns of Love",
+     "redside": "MeetYourMakers",
+     "result": "0 - 1",
+     "date": "2015-02-28"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2015-02-28"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "Elements",
+     "result": "1 - 0",
+     "date": "2015-02-28"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Copenhagen Wolves",
+     "result": "1 - 0",
+     "date": "2015-02-28"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Giants Gaming",
+     "result": "1 - 0",
+     "date": "2015-02-28"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "Copenhagen Wolves",
+     "result": "1 - 0",
+     "date": "2015-02-27"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "MeetYourMakers",
+     "result": "1 - 0",
+     "date": "2015-02-27"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2015-02-27"
+    },
+    {
+     "blueside": "Unicorns of Love",
+     "redside": "SK Gaming",
+     "result": "1 - 0",
+     "date": "2015-02-27"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Fnatic",
+     "result": "0 - 1",
+     "date": "2015-02-27"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2015-02-21"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Unicorns of Love",
+     "result": "1 - 0",
+     "date": "2015-02-21"
+    },
+    {
+     "blueside": "Copenhagen Wolves",
+     "redside": "MeetYourMakers",
+     "result": "1 - 0",
+     "date": "2015-02-21"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Elements",
+     "result": "1 - 0",
+     "date": "2015-02-21"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Gambit Gaming",
+     "result": "0 - 1",
+     "date": "2015-02-21"
+    },
+    {
+     "blueside": "Unicorns of Love",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2015-02-20"
+    },
+    {
+     "blueside": "MeetYourMakers",
+     "redside": "Gambit Gaming",
+     "result": "0 - 1",
+     "date": "2015-02-20"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "SK Gaming",
+     "result": "1 - 0",
+     "date": "2015-02-20"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Giants Gaming",
+     "result": "0 - 1",
+     "date": "2015-02-20"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Copenhagen Wolves",
+     "result": "0 - 1",
+     "date": "2015-02-20"
+    },
+    {
+     "blueside": "MeetYourMakers",
+     "redside": "Unicorns of Love",
+     "result": "0 - 1",
+     "date": "2015-02-14"
+    },
+    {
+     "blueside": "Copenhagen Wolves",
+     "redside": "Fnatic",
+     "result": "1 - 0",
+     "date": "2015-02-14"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "Elements",
+     "result": "1 - 0",
+     "date": "2015-02-14"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "Giants Gaming",
+     "result": "1 - 0",
+     "date": "2015-02-14"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2015-02-14"
+    },
+    {
+     "blueside": "Copenhagen Wolves",
+     "redside": "SK Gaming",
+     "result": "0 - 1",
+     "date": "2015-02-13"
+    },
+    {
+     "blueside": "Unicorns of Love",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2015-02-13"
+    },
+    {
+     "blueside": "MeetYourMakers",
+     "redside": "Fnatic",
+     "result": "0 - 1",
+     "date": "2015-02-13"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Elements",
+     "result": "1 - 0",
+     "date": "2015-02-13"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Gambit Gaming",
+     "result": "0 - 1",
+     "date": "2015-02-13"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "SK Gaming",
+     "result": "0 - 1",
+     "date": "2015-02-07"
+    },
+    {
+     "blueside": "Unicorns of Love",
+     "redside": "Copenhagen Wolves",
+     "result": "0 - 1",
+     "date": "2015-02-07"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "MeetYourMakers",
+     "result": "1 - 0",
+     "date": "2015-02-07"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "H2k-Gaming",
+     "result": "1 - 0",
+     "date": "2015-02-07"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Giants Gaming",
+     "result": "1 - 0",
+     "date": "2015-02-07"
+    },
+    {
+     "blueside": "Copenhagen Wolves",
+     "redside": "Gambit Gaming",
+     "result": "1 - 0",
+     "date": "2015-02-06"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Giants Gaming",
+     "result": "1 - 0",
+     "date": "2015-02-06"
+    },
+    {
+     "blueside": "MeetYourMakers",
+     "redside": "Elements",
+     "result": "0 - 1",
+     "date": "2015-02-06"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Unicorns of Love",
+     "result": "0 - 1",
+     "date": "2015-02-06"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "SK Gaming",
+     "result": "0 - 1",
+     "date": "2015-02-06"
+    },
+    {
+     "blueside": "MeetYourMakers",
+     "redside": "Copenhagen Wolves",
+     "result": "1 - 0",
+     "date": "2015-01-31"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "Unicorns of Love",
+     "result": "1 - 0",
+     "date": "2015-01-31"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2015-01-31"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2015-01-31"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "Fnatic",
+     "result": "0 - 1",
+     "date": "2015-01-31"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Copenhagen Wolves",
+     "result": "1 - 0",
+     "date": "2015-01-30"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "Gambit Gaming",
+     "result": "1 - 0",
+     "date": "2015-01-30"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2015-01-30"
+    },
+    {
+     "blueside": "Unicorns of Love",
+     "redside": "Giants Gaming",
+     "result": "1 - 0",
+     "date": "2015-01-30"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "MeetYourMakers",
+     "result": "1 - 0",
+     "date": "2015-01-30"
+    },
+    {
+     "blueside": "Unicorns of Love",
+     "redside": "Elements",
+     "result": "0 - 1",
+     "date": "2015-01-24"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "H2k-Gaming",
+     "result": "1 - 0",
+     "date": "2015-01-24"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Gambit Gaming",
+     "result": "1 - 0",
+     "date": "2015-01-24"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Copenhagen Wolves",
+     "result": "1 - 0",
+     "date": "2015-01-24"
+    },
+    {
+     "blueside": "MeetYourMakers",
+     "redside": "SK Gaming",
+     "result": "0 - 1",
+     "date": "2015-01-24"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "Unicorns of Love",
+     "result": "0 - 1",
+     "date": "2015-01-23"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2015-01-23"
+    },
+    {
+     "blueside": "Copenhagen Wolves",
+     "redside": "H2k-Gaming",
+     "result": "1 - 0",
+     "date": "2015-01-23"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "MeetYourMakers",
+     "result": "1 - 0",
+     "date": "2015-01-23"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Fnatic",
+     "result": "0 - 1",
+     "date": "2015-01-23"
+    }
+   ]
+  },
+  {
+   "name": "IEM Katowice 2015",
+   "region": "WR",
+   "game": [
+    {
+     "blueside": "Team WE",
+     "redside": "Team SoloMid",
+     "result": "0 - 3",
+     "date": "2015-03-15"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "Team WE",
+     "result": "1 - 2",
+     "date": "2015-03-14"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Flash Wolves",
+     "result": "2 - 1",
+     "date": "2015-03-14"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "CJ Entus",
+     "result": "1 - 0",
+     "date": "2015-03-14"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "Flash Wolves",
+     "result": "0 - 1",
+     "date": "2015-03-14"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Gambit Gaming",
+     "result": "1 - 0",
+     "date": "2015-03-13"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "CJ Entus",
+     "result": "1 - 0",
+     "date": "2015-03-13"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Team SoloMid",
+     "result": "0 - 1",
+     "date": "2015-03-13"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "CJ Entus",
+     "result": "0 - 1",
+     "date": "2015-03-13"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Flash Wolves",
+     "result": "0 - 1",
+     "date": "2015-03-13"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "SK Gaming",
+     "result": "1 - 0",
+     "date": "2015-03-13"
+    },
+    {
+     "blueside": "SK Gaming",
+     "redside": "Flash Wolves",
+     "result": "1 - 0",
+     "date": "2015-03-13"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "Cloud 9",
+     "result": "1 - 0",
+     "date": "2015-03-13"
+    }
+   ]
+  },
+  {
+   "name": "IEM Cologne 2014",
+   "region": "WR",
+   "game": [
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Gambit Gaming",
+     "result": "1 - 3",
+     "date": "2014-12-21"
+    },
+    {
+     "blueside": "Gambit Gaming",
+     "redside": "Team Dignitas",
+     "result": "2 - 0",
+     "date": "2014-12-20"
+    },
+    {
+     "blueside": "Counter Logic Gaming",
+     "redside": "Roccat",
+     "result": "2 - 1",
+     "date": "2014-12-20"
+    },
+    {
+     "blueside": "Aces High Esports Club",
+     "redside": "Team Dignitas",
+     "result": "1 - 2",
+     "date": "2014-12-19"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Dolphins of Wall Street",
+     "result": "2 - 0",
+     "date": "2014-12-19"
+    }
+   ]
+  },
+  {
+   "name": "OGN Champions Preseason 2015",
+   "region": "KR",
+   "game": [
+    {
+     "blueside": "CJ Entus",
+     "redside": "KOO Tigers",
+     "result": "0 - 2",
+     "date": "2014-12-20"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "Incredible Miracle",
+     "result": "2 - 0",
+     "date": "2014-12-20"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "KT Rolster",
+     "result": "1 - 1",
+     "date": "2014-12-18"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Jin Air Greenwings",
+     "result": "0 - 2",
+     "date": "2014-12-18"
+    },
+    {
+     "blueside": "Incredible Miracle",
+     "redside": "Najin e-Emfire",
+     "result": "0 - 2",
+     "date": "2014-12-17"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 0",
+     "date": "2014-12-17"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Najin e-Emfire",
+     "result": "1 - 1",
+     "date": "2014-12-13"
+    },
+    {
+     "blueside": "Jin Air Greenwings",
+     "redside": "KT Rolster",
+     "result": "0 - 2",
+     "date": "2014-12-13"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "CJ Entus",
+     "result": "1 - 1",
+     "date": "2014-12-11"
+    },
+    {
+     "blueside": "Najin e-Emfire",
+     "redside": "SKTelecom T1",
+     "result": "0 - 2",
+     "date": "2014-12-11"
+    },
+    {
+     "blueside": "KOO Tigers",
+     "redside": "Jin Air Greenwings",
+     "result": "2 - 0",
+     "date": "2014-12-10"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Incredible Miracle",
+     "result": "1 - 1",
+     "date": "2014-12-10"
+    },
+    {
+     "blueside": "Najin e-Emfire",
+     "redside": "CJ Entus",
+     "result": "2 - 0",
+     "date": "2014-12-06"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "SKTelecom T1",
+     "result": "1 - 1",
+     "date": "2014-12-06"
+    },
+    {
+     "blueside": "Jin Air Greenwings",
+     "redside": "Najin e-Emfire",
+     "result": "0 - 2",
+     "date": "2014-12-04"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "Samsung Galaxy",
+     "result": "1 - 1",
+     "date": "2014-12-04"
+    },
+    {
+     "blueside": "Incredible Miracle",
+     "redside": "CJ Entus",
+     "result": "0 - 2",
+     "date": "2014-12-03"
+    },
+    {
+     "blueside": "SKTelecom T1",
+     "redside": "KOO Tigers",
+     "result": "2 - 0",
+     "date": "2014-12-03"
+    }
+   ]
+  },
+  {
+   "name": "IEM San Jose 2014",
+   "region": "WR",
+   "game": [
+    {
+     "blueside": "Cloud 9",
+     "redside": "Unicorns of Love",
+     "result": "3 - 0",
+     "date": "2014-12-07"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Cloud 9",
+     "result": "1 - 2",
+     "date": "2014-12-07"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Unicorns of Love",
+     "result": "0 - 2",
+     "date": "2014-12-06"
+    },
+    {
+     "blueside": "paiN Gaming",
+     "redside": "Cloud 9",
+     "result": "0 - 2",
+     "date": "2014-12-06"
+    },
+    {
+     "blueside": "Lyon Gaming",
+     "redside": "Unicorns of Love",
+     "result": "0 - 2",
+     "date": "2014-12-06"
+    }
+   ]
+  }
+ ]
+}

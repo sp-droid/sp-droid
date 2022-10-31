@@ -1,0 +1,217 @@
+albanian : (103, 132, 85)
+
+andalusian : (67, 153, 46)
+
+bedouin : (67, 153, 47)
+
+qatabanian : (67, 153, 48)
+
+hadhrami : (67, 153, 49)
+
+makan : (67, 153, 50)
+
+egyptianara : (67, 153, 51)
+
+somali : (67, 153, 52)
+
+cyrenaican : (67, 153, 53)
+
+nizism : (67, 153, 54)
+
+maghrebi : (67, 153, 55)
+
+syrian : (102, 19, 186)
+
+armenian : (204, 183, 1)
+
+old_prus : (126, 145, 94)
+
+lithu : (126, 145, 95)
+
+latvia : (126, 145, 96)
+
+basque : (196, 107, 73)
+
+berber : (219, 146, 64)
+
+irish : (16, 153, 95)
+
+scottish : (17, 153, 95)
+
+welsh : (18, 153, 95)
+
+cornish : (19, 153, 95)
+
+manx : (20, 153, 95)
+
+breton : (21, 153, 95)
+
+primitiveculture : (1, 0, 0)
+
+egyptian : (178, 160, 1)
+
+coptic : (178, 160, 2)
+
+georgian : (226, 153, 213)
+
+flemish : (76, 58, 51)
+
+prussian : (76, 58, 52)
+
+holsatian : (76, 58, 53)
+
+westphalian : (76, 58, 54)
+
+dutch : (76, 58, 55)
+
+frisian : (76, 58, 56)
+
+saxon : (76, 58, 57)
+
+norsaxon : (76, 58, 58)
+
+austrian : (76, 58, 59)
+
+bavarian : (76, 58, 60)
+
+swabian : (76, 58, 61)
+
+franconian : (76, 58, 62)
+
+alemannic : (76, 58, 63)
+
+rheinlander : (76, 58, 64)
+
+swiss : (76, 58, 65)
+
+tirole : (76, 58, 66)
+
+teuton : (76, 58, 67)
+
+english : (76, 58, 68)
+
+danish : (76, 58, 69)
+
+norwegian : (76, 58, 70)
+
+swedish : (76, 58, 71)
+
+gutnish : (76, 58, 72)
+
+hebrew : (150, 135, 183)
+
+greekk : (62, 75, 204)
+
+greco_pontic : (63, 75, 204)
+
+gothic : (64, 75, 204)
+
+alans : (223, 77, 91)
+
+persian : (223, 78, 91)
+
+kurds : (223, 79, 91)
+
+afghans : (223, 80, 91)
+
+balochi : (223, 81, 91)
+
+lurish : (223, 82, 91)
+
+sogdian : (223, 83, 91)
+
+piedmontese : (140, 13, 12)
+
+sotirol : (140, 14, 12)
+
+genoese : (140, 15, 12)
+
+tuscan : (140, 16, 12)
+
+sardinian : (140, 17, 12)
+
+umbrian : (140, 18, 12)
+
+venetian : (140, 19, 12)
+
+emilian : (140, 20, 12)
+
+lombard : (140, 21, 12)
+
+neapolitan : (140, 22, 12)
+
+sicilian : (140, 23, 12)
+
+friulian : (140, 24, 12)
+
+vlach : (140, 25, 12)
+
+burgundian : (140, 26, 12)
+
+francien : (140, 27, 12)
+
+norman : (140, 28, 12)
+
+occitan : (140, 29, 12)
+
+gascon : (140, 30, 12)
+
+walloon : (140, 31, 12)
+
+castleon : (140, 32, 12)
+
+aragonese : (140, 33, 12)
+
+catalan : (140, 34, 12)
+
+galician : (140, 35, 12)
+
+bohemian : (36, 63, 122)
+
+silesian : (37, 63, 122)
+
+polish : (38, 63, 122)
+
+pomeranian : (39, 63, 122)
+
+rani : (40, 63, 122)
+
+russian : (41, 63, 122)
+
+ucranian : (42, 63, 122)
+
+novgorodian : (43, 63, 122)
+
+bulgarian : (44, 63, 122)
+
+croatian : (45, 63, 122)
+
+serbian : (46, 63, 122)
+
+bosnian : (47, 63, 122)
+
+cuman : (183, 204, 103)
+
+azerbaijani : (183, 204, 104)
+
+turkman : (183, 204, 105)
+
+turkmen : (183, 204, 106)
+
+uyghurs : (183, 204, 107)
+
+tartars : (183, 204, 108)
+
+bulghar : (183, 204, 109)
+
+magyar : (255, 128, 127)
+
+estonia : (255, 129, 127)
+
+finnish : (255, 130, 127)
+
+sami : (255, 131, 127)
+
+permic : (255, 132, 127)
+
+A total of 108 cultures found

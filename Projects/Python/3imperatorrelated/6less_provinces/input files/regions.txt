@@ -1,0 +1,432 @@
+Madytleprea = { #2
+	areas = { Orcyrate Maroidalai }
+}
+
+Bhyrtempissa = { #4
+	areas = { Orieremos Kourmukenlia Andmisealous Antipkimdos }
+}
+
+Imaenios = { #3
+	areas = { Morganmarathlis Ialmamea Oephellestrias }
+}
+
+Caucasus = { #7
+	areas = { Katlekhaoas Artkiolia Gangheliida Eresnemuf Dimalaronia Likuai Hymarlia Lapkaiina Antikiatrea Locrkeplis Kepimbcum Meghemelia Koiedlia }
+}
+
+nymphareg = { #4
+	areas = { Dememporuf Kamaknoyra Lockordus Hubkynus }
+}
+
+Gangabosia = { #4
+	areas = { Lapithonlia Askdimaonia Cebrmetdia Halikoimos }
+}
+
+Kyremasspolis = { #9
+	areas = { Hublmonastoas Lefkkydoinda Monasherida Megalolampyra Monatgytder Madyodetta Naxkyrae Gortlefkaate Lilliloli }
+}
+
+Mantinmantinpetra = { #1
+	areas = { Oropelinon }
+}
+
+Lebeepidtes = { #6
+	areas = { Nymphasson Cniniaeia Elatcyoli Hagonlia Korinkanium Alaonllai }
+}
+
+Korihyiana = { #4
+	areas = { Olbinicoica Leimegalosse Eleuleibeae Mukhypetra }
+}
+
+Agrinhierlea = { #4
+	areas = { Kamarmukpolis Empaphiaea Amarymaronlia Demlepratrea }
+}
+
+Lilamagon = { #2
+	areas = { Decabmea Mantinmantinpetra }
+}
+
+Itanmeththena = { #5
+	areas = { Iamaon Ereseretyra Chalcnympoli Morganeleualous Bardimlia }
+}
+
+Cymclazotrias = { #1
+	areas = { Koathllai }
+}
+
+Mileitholi = { #4
+	areas = { Kanitanmea Korintmetaptiri Megalarison Opushagthus }
+}
+
+Decehellesyra = { #10
+	areas = { Adramolyida Oepmarmalis Kimmmarollai Oepaleios Elatgythmos Amphiamiuf Idaljuktus Maskoriinon Haglinmos Metmocia }
+}
+
+Low_Lands = { #9
+	areas = { flanders Lemorganrias Calymetapmea Mantastera Gytgythiiana Monastephyrrias Nymphdypetra Lilkasissa Meslarisosia }
+}
+
+Iberia = { #17
+	areas = { alentejo algarve ribatejo beira douro_e_minho aragon valencia catalunya mallorca navarra granada toledo segovia murcia cuenca la_mancha burgos jaen salamanca galicia soria sevilla cordoba valladolid vizcaya extremadura leon asturias }
+}
+
+Bybgoder = { #6
+	areas = { Meskamum Locrartemai Malleolia Hermdimus Berkamarlia Agrinchyoli }
+}
+
+Methodydus = { #3
+	areas = { Mullilmos Leikyrelia Epikorimenus }
+}
+
+Mashriq = { #1
+	areas = { Niamonaosia Laodiclazolia Deceknoae Hemedeceuf Ialoresila Kamaleprdos Leonlefkainon Delmisdia }
+}
+
+Anatolia = { #7
+	areas = { Namarmmenus Neachamosia Kerkingoissa Imbrmaretta Lebkonae Chytabuf Nygytium Oncarlis Gormilllea Kamaigosoli Calmorgus Gouraegonia Histrepidtiri Argemporpolis Lamibergpetra Jukmonastioli Methodydus Mamethoica Caryalioas }
+}
+
+Lapgournene = { #4
+	areas = { Dornalia Momethaica Megamegalonae Empcymlia }
+}
+
+Oeperytheia = { #3
+	areas = { Mylagoaea Golghethus Kourimethorea }
+}
+
+West_Africa = { #4
+	areas = { Maneacia Amnilarisatrea Morganantigsos Oresitaila Mesemmagnethrae Maraterythinda Bhyrtclazcia Mylgythiera Korinclalia Mukecorctherna Ephlamponia Klazoartus Nykythrae Chalcoroonia Metapoagrinine Idadelesmos Korialinissa Antiphellessos Colomillinda Lebmallila Aytlarcum Kerankthrae Challekhpolis Laodlepreida Itanmeththena Akrknidum Klachallai Hubmarmayra Aegklaztrias }
+}
+
+Magolida = { #10
+	areas = { Leonlamioas Mukejuktes Mukedymita Naxmorgansos Argolynalous Bhyrtkalliina Metkorios Chalcoroeia Gythdelphthrae Kasastyra }
+}
+
+Kynkudus = { #4
+	areas = { Lefkahagtrias Koragrinlia Ankcyosse Monaitaina }
+}
+
+Nymphasson = { #4
+	areas = { Doryelaai Olbgythrea Kydoempthus Lariialymea }
+}
+
+Edeithanene = { #4
+	areas = { Korintorestder Aigaskpolis Bougelessa Muolyai }
+}
+
+Kamarmorgalia = { #2
+	areas = { Declapilea Gangmetapothus }
+}
+
+Cheimbum = { #5
+	areas = { Carylefkaoli Edkiothus Demetmonates Herorelea Kerkialyita }
+}
+
+Astedinda = { #4
+	areas = { Erylampsaeia Gorepidessa Mocnymphera Kyelaalous }
+}
+
+Athaskina = { #4
+	areas = { Cleolaodiai Corcasklera Lammadlia Odeolbiine }
+}
+
+South_Africa = { #9
+	areas = { Naubythlia Gangodllai Kalklacum Opuhagiai Gorthymos Abcormenus Demeteublia Chekyretherna Edcormea Epidgytios Larmorglea Doralethena Juknodus Imbclazothus }
+}
+
+Berkamarlia = { #6
+	areas = { Lilaabpetra Ialithathrae Chalinonia Hyekamalis Lilamagon Elkorinthica }
+}
+
+Eubkameirida = { #5
+	areas = { Morganganinon Koriorestpetra Amargortydos Chagonlia Hagimantines }
+}
+
+Elatmilletta = { #3
+	areas = { Lisonissa Kougorinda Histrmalai }
+}
+
+Alinmaronlia = { #4
+	areas = { Dimalarion Onathlia Elklaum Ialeretcia }
+}
+
+Oncarlis = { #1
+	areas = { Elenymphiana }
+}
+
+Kyditaum = { #8
+	areas = { Gelmillllai Metakulia Milknidrea Mukcrotita Morganempium Lauorestalous Nympoentes Chalcactllai }
+}
+
+Hermkimmertiri = { #3
+	areas = { Decebythum Morgkameiissa Kumislis }
+}
+
+Megalborysinda = { #4
+	areas = { Kameircniatrea Kyremasspolis Leprebergine Ceborestcum }
+}
+
+Japan = { #1
+	areas = { Lapithlalia }
+}
+
+Kasmorgantes = { #4
+	areas = { Mesedidmenus Maronitanthrae Berdioica Artemkorinththena }
+}
+
+Lamibergpetra = { #5
+	areas = { Diddemmea Ithachaica Korinthhynae Ydheresmos Aegkallicia }
+}
+
+Chalckasmlia = { #5
+	areas = { Hermkimmertiri Helorila Kamarargosse Naydessa Korinmarlia }
+}
+
+Scandinavia = { #2
+	areas = { Dioskorilia Linklazorias Lapitmetaplia Antiantilia Megaloaskcia Ephylefkapolis Dorcallithos Methaastpetra Koihieene Gorgiknidai Aigithatrias Megahierauf Lampscebai Chytmethyra Hermachyra Larisakrdia Kataiaila Ydaigosthena Kameleslia Cleoedaea Megallaolea Kordicthos Alehemerea Morgkorinthlia Hilamea Morgamaratthos Cheapalia Morgalinate }
+}
+
+Lismetcia = { #4
+	areas = { Kororictrias Lefkaknosos Gametaoli Lildelene }
+}
+
+France = { #21
+	areas = { provence dauphine normandy champagne saintonge anjou burgundy limousin gascogne gascognewip auvergne ile_de_france alencon britanny Itacorcia bourbon picardy touraine poitou orleans guyenne berry }
+}
+
+Bythkasos = { #1
+	areas = { Hellesgondus }
+}
+
+Meseepitrias = { #5
+	areas = { Methnymida Kameihisissa Lindleprtiri Kouridicaeathena Keiotrias }
+}
+
+Mocborysios = { #4
+	areas = { Maralampsrias Mantasilia Juagrinene Jukkniica }
+}
+
+Aigmarmalia = { #3
+	areas = { Nyaphithera Morganitanaea Argleibethena }
+}
+
+Italia = { #3
+	areas = { turin monferrato genoa nizza brescia modena Hieramochum parma Onchherthrae pisa firenze Monastikorilia Ephyrhethrae Monastchetiri Ereclazoosse Klazkaatrea ferrara Kanngolgthos padua Ambrliida Byzhalicthena Empomeson Imbrelion Eleumantinder perugia roma ascoli_ aquila Jukleontuf Emporkiolia fondi Mulcalylea Kydoclazoissa palermo messina siracusa Odeslison foggia Ialeoeia isernia napoli taranto Megaloedila basilicata }
+}
+
+Kameirmethader = { #4
+	areas = { Mukmoate Odeoenatrea Morgachytai Chacolcia }
+}
+
+Golgnicolia = { #11
+	areas = { Dellebeder Arsleonene Eresneathena Apollmassnes Lilalilalia Marmlamthrae Hikamarai Kynmesthrae Laulapsos Askgortessa Larisdiosmos }
+}
+
+Britain = { #15
+	areas = { meath desmond leinster ulster connacht thomond isle_of_man hamilton ross orkney the_isles buccleuch albany welsh_march westminster sussex york lancaster lincoln northumberland kent cornwall bedford somerset hereford gloucester wales norfolk }
+}
+
+Aytdyosse = { #3
+	areas = { Nymphhemeroai Kameilampslea Colartemyra }
+}
+
+Lamlekllai = { #3
+	areas = { Clazoodealous Monaodtes Klaopusera }
+}
+
+Lapithchaltiri = { #4
+	areas = { Argmetapllai Olymgelpetra Imaenios Aytkylis }
+}
+
+Baltic = { #6
+	areas = { Epimassate Chalckasmlia Dicaeakorinuf Kydomethorias Katmaroetta Kamargoonia Gortyasisos Methuidaoas Delleontonia Kimmdyion Marmaina Kimmerlaolia }
+}
+
+Histhyelia = { #4
+	areas = { Gelkoinda Knolauthos Milleblea Dimagolglia }
+}
+
+Persia = { #3
+	areas = { Olereium Gazkamecum Crotbyllsos Haglekica Olygourlia Itanhiermea Antikameirlia Gorkydoion }
+}
+
+Chegangoas = { #5
+	areas = { Neaneida Madytepidion Crotkorinthalous Hecleoalous Miseleonene }
+}
+
+Knokyrenate = { #3
+	areas = { Aytmaraon Arggournlia Kaniasmos }
+}
+
+Indochina = { #3
+	areas = { Gonorictes Orestoreslis Bybidaosia Kaskannonia Corcgourntiri Nicooropllai Neamarila Knidempooli Askchallia Naueubcia Ialykamcia Nicorcholia Korinthedllai Mukenmonatalous Neacoloeia Amnioene Kykasmyra }
+}
+
+Kalklacum = { #4
+	areas = { Leopusos Aigcaline Bergheliyra Lekhoriclia }
+}
+
+Knosleprsos = { #3
+	areas = { Callimonthos Cebelattes Ithanmassder }
+}
+
+Maratlintes = { #5
+	areas = { Histgourmos Ephyrkiocia Larisepiai Erykaesmos Golgnicolia }
+}
+
+Carymetapoinda = { #1
+	areas = { Orchgesos }
+}
+
+Naueubcia = { #3
+	areas = { Kourdymus Korinkamellai Abklazotherna }
+}
+
+Balkans = { #7
+	areas = { Dornyum Larididita Empalinnae Aenbhyrtthus Hieragorlia Emporolosia Cyrialytiri Dylaptes Edgorgion Kameirmegcum Golgalitiri Kemesemyra Kouithlia Dimajuinda Ormonastae Kouramaryios Muchiai Hermidececia Corcknosoli Marmethoium Carymetapoinda Marhagios Alacalita Kannchersosia Berghemetiri Lineida Orchoaeniana Monaadramthos Gourcaryine Hieragazcum Helinysosia Hermiolia Millmetaponlia Methamithera Kameargyrsos Lepreleorea Marephethena Edkyrenmenus Clazoepiium }
+}
+
+Argemporpolis = { #4
+	areas = { Lepolyinda Argyrdemtiri Knosleprsos Lemukum }
+}
+
+Metmocia = { #5
+	areas = { Imiolctrias Dececoloai Hisempoosse Gorgicleothena Knidastene }
+}
+
+Millmetaponlia = { #8
+	areas = { Dioandissa Agrinimbtes Marmmetapodus Hagmonasita Knosdimdia Didymarmaus Lampsajuktes Gortmiseissa }
+}
+
+Kydknossine = { #5
+	areas = { Halicmethaium Immassaetta Chegangoas Nyhieratrias Artemkerkilia }
+}
+
+Maghreb = { #8
+	areas = { LefkamucumX Kudiosmea Klazojuklis Hermaraththena Kidemene Ydhiethera Aegmegalida Histhyelia Askgaosse Alinmaronlia Chalimetta Histrdyosia Helnemdia Artbyzalous Abmetine Opuhieraita Naxkimmerinda Morgacarcum Western_Sahara }
+}
+
+Koathllai = { #1
+	areas = { Nympkalliae }
+}
+
+Kamarmukpolis = { #3
+	areas = { Demactdia Nymelpetra Lebelauica }
+}
+
+Arabia = { #3
+	areas = { KlazkaatreaX Clazogonita Hermopoas Gythieubita Crolepreate OephellesissaX Lilakyita Lesimida Orohierthena Hublilaai }
+}
+
+Cniniaeia = { #8
+	areas = { Hecyrthos Cythbergthus Masdimthera Gorghiosse Laodolbimos Marmaaphiosia Gorolynlea Kamamonaslea }
+}
+
+Demactdia = { #4
+	areas = { Gorhelioli Amiknidthus Bybgoder Iolapieia }
+}
+
+Egypt = { #14
+	areas = { Ioiolum Dicidauf Gokatita Lekabdia Ephekercia Manbrates Methoelatnae Methamukemea Lindkyrenmos Imgazsos Ololissa Boukymos Gyrthgonera }
+}
+
+Cniamithos = { #6
+	areas = { Ashiica Laodkallithera Neoptherna Onchkynthena Lapliica Leprecololia }
+}
+
+Nemassaida = { #5
+	areas = { Dorymallnes Opuskellai Athaskina Iaolon Malldemeton }
+}
+
+Indonesia = { #4
+	areas = { Golgoepene Oneleudos Eubephetiri Callichytaea Leoolblis Aenchalissa Olymonaae Gangabosia Kalliboumos Hermdimathrae Chamcleoum Lampsherea Arsklazolea Emphublatrea Mantinkouridia Cebrmoralous }
+}
+
+Lariknosyra = { #4
+	areas = { Ialmisealous Gyrthachnae Hieralilainon Borysmetapontes }
+}
+
+Nacleolia = { #3
+	areas = { Koitannae Masskimmelia Bythmassiana }
+}
+
+Germania = { #6
+	areas = { Cherscololi Monastigeletta Asslekhrea Korintdicaeaosse Odessaegllai Ephemonastpetra Cheropthera Lefkakerkmos Alinandrrias Antignymphum Cololinera Monoastnympdus bar franche_comte Deljuate Heramnitherna lorraine Histrgorgilia Onchnystes Demetkameithrae Chalcherthos Artemkorpetra Nymphaigososse Metapkimmsos Ialyhagipolis Dimaaleida Lapgournene Morgankorrea Kerkidioinon Lilaimbon Gonapollera Gorgigothera Demcharea Millmethalia Cyknioli Millliosia Histelatios }
+}
+
+Hermmoroli = { #4
+	areas = { Byblilamenus Dimaelon Barmetalia Byllankium }
+}
+
+Mankorinttrias = { #6
+	areas = { Olynonina Idalmethocum Apollmagnellai Artemmantilea Olmarias Kykorinthica }
+}
+
+Nyalintiri = { #4
+	areas = { Asklmukecia Boryskourites Lecnioli Monasaegoli }
+}
+
+Boumonoastai = { #5
+	areas = { Kimdemetrias Metapokytherna Deceodessuf Imbrorchmos Hermmagtrias }
+}
+
+Nyaphithera = { #4
+	areas = { Madartemeia Lekhknossalous Kepknorea Larihermita }
+}
+
+Marmaklazocia = { #4
+	areas = { Lamlekllai Abgortiana Klazonymphthera Cythcalyllai }
+}
+
+Alanymae = { #4
+	areas = { Lanaate Madytklazoinon Empcaldia Carydemai }
+}
+
+Odeoenatrea = { #3
+	areas = { Nicolynsos Kouedina Madhubtiri }
+}
+
+Kamaigosoli = { #4
+	areas = { Dioschalcum Opgytine Astoresate Demetantiginon }
+}
+
+Australia = { #4
+	areas = { Metaponganmea Kameirlisnes Edeithanene Gournlilmenus Adramathtes Lebeiasissa Alinantider Achlarcia Marohelia Madkameirita Arsleibeaea Mocborysios }
+}
+
+Artemmantilea = { #1
+	areas = { Bhyrtkoipolis }
+}
+
+India = { #3
+	areas = { Amamukenthus Eddymlia Claemporon Carleion Eledymetta Argyrgeina Dimakorinyra Opuslepdos Lapiartemdus Kecnilia Calonlea Maramallon Gythbyllyra Megalopumos Megalephydos Epidmetaporias Argiacum Amarlarisetta Epidkuene Kamacansos Byllkoureia Hyeassine Bythkasos Akrgazine Kynkudus Oromarmeia Neamisecia Actbergrias Hemekydessa Empodelica Kimmenympila Ereedlia Monastilisissa Ithierthus }
+}
+
+Gythlampnae = { #5
+	areas = { Morgangornes Akrmapetra Ithagyrthetta Bythgortyina Kamaaigosthus }
+}
+
+Hemedeceuf = { #5
+	areas = { Erytherylia Nicoeatrea Cebmiscum Leonoreita Hierempum }
+}
+
+Halicodlis = { #3
+	areas = { Knimorgaaea Hierimbrica Lindlepreila }
+}
+
+Klazoartus = { #4
+	areas = { Nirkamaessa Colochyrias Decnympnes Erylefknae }
+}
+
+East_Africa = { #5
+	areas = { Niahalictes Katiolcoas Kokerkinetta Oeperytheia Morhitrias Chalauum Orcholebdos Leomancum Leontoeyra Lapithchaltiri Leonorchothena Kanaxoas Imbrlapius Hermikamaosia Olbeubera Magolida Orlamai Halicgythiatrea Leicleorias Milmisthos }
+}
+
+Maodelia = { #4
+	areas = { Lekhkander Lismetcia Gelidalyra Athgaae }
+}
+
+extraregion = { #125
+	areas = { AsklmukeciaX MadytlepreaX BhyrtempissaX ImaeniosX nympharegX GangabosiaX MantinmantinpetraX LebeepidtesX ChytabufX MegclaliaX KorihyianaX KimmgolusX AgrinhierleaX ItanmeththenaX CymclazotriasX MileitholiX KimmermassmeaX MetapaegdiaX LindleprtiriX ImbrmarettaX MorganantigsosX LeprlefkatheraX BybgoderX HelomethualousX MethodydusX KorinthedllaiX LapgourneneX LampshereaX OeperytheiaX KacebinaX ChaklaaeaX KynkudusX NymphassonX EdeithaneneX KamarmorgaliaX CheimbumX KoragrinliaX AstedindaX KoriorestpetraX KournemateX AthaskinaX MonaodtesX LaodlepreidaX BerkamarliaX EubkameiridaX HagimantinesX ElatmillettaX ClazoepiiumX AlinmaronliaX MarkioineX HermkimmertiriX MegalborysindaX KerkiklaznaeX KamelaociaX ActbergriasX KasmorgantesX LamibergpetraX ChalckasmliaX MadkameiritaX LismetciaX BythkasosX MeseepitriasX DimalaroniaX MocborysiosX AigmarmaliaX AytdyosseX LapithchaltiriX GazkamecumX DemchareaX ArsleibeaeaX HisthyeliaX HalicmethaiumX ChegangoasX KnokyrenateX MaramallonX KalklacumX KnosleprsosX MaratlintesX CarymetapoindaX NaueubciaX AstoresateX KykorinthicaX ArgemporpolisX DemetlapitiumX MetmociaX KoathllaiX GanmukeosseX MalleoliaX KamemadytineX DemactdiaX ErykaesmosX NemassaidaX BardimliaX LariknosyraX NacleoliaX LindlepreilaX HydidyciaX HermmoroliX MankorinttriasX NyalintiriX BoumonoastaiX NyaphitheraX MarmaklazociaX AlanymaeX OdeoenatreaX KamaigosoliX DeclapileaX MillebleaX LefmukliaX ArtemmantileaX KalliolydiaX ClaemporonX MorgkorinthliaX GythlampnaeX MegaloedilaX HemedeceufX HalicodlisX KlazoartusX MarhagiosX HermidececiaX MaodeliaX }
+}
+

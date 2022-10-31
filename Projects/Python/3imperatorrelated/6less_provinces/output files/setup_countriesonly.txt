@@ -1,0 +1,1372 @@
+country = {
+	countries = {
+		ALA = {
+			#104,104,104
+			government = aristocratic_monarchy
+			primary_culture = nizism
+			religion = islam_shia
+			historical_regnal_numbers = { Hassan = 2 KiyaBuzurg = 1	Muhammad = 1 }
+			capital = 4603	#Alamut State
+			own_control_core = 	{ 4603 }
+		}
+		ALM = {
+			#19,51,8
+			government = aristocratic_monarchy
+			primary_culture = berber
+			religion = islam_sunni
+			historical_regnal_numbers = { Muhammad = 1 AlMumin = 1 Yusuf = 1 AlMansur = 1 }
+			capital = 4345	#Almohads
+			own_control_core = 	{ 26 31 37 45 52 133 138 209 365 514 554 634 668 693 868 875 880 887 910 958 988 1066 1099 1146 1150 1215 1248 1283 1295 1307 1422 1425 1445 1451 1478 1497 1510 1513 1515 1529 1550 1554 1566 1571 1573 1656 1698 1712 1774 1803 1804 1810 1853 1856 1867 1873 1884 1896 1919 1934 1945 1960 2036 2038 2049 2070 2089 2148 2190 2252 2253 2271 2272 2278 2305 2343 2364 2365 2387 2411 2412 2433 2450 2455 2457 2479 2483 2505 2520 2541 2562 2566 2569 2572 2582 2608 2635 2647 2649 2664 2695 2697 2708 2741 2768 2878 2926 2931 2956 2969 2970 2972 2976 2988 2989 3009 3055 3061 3086 3115 3116 3136 3155 3224 3229 3261 3265 3279 3280 3285 3316 3337 3353 3373 3400 3436 3459 3467 3499 3506 3566 3567 3584 3590 3592 3620 3633 3646 3688 3703 3705 3710 3720 3722 3752 3783 3797 3813 3849 3856 3858 3863 3869 3888 3904 3928 3933 3961 3980 4009 4013 4067 4072 4074 4083 4086 4114 4115 4117 4145 4149 4155 4165 4174 4200 4208 4212 4247 4262 4296 4320 4330 4343 4345 4371 4377 4406 4424 4425 4459 4537 4558 4591 4621 4646 4673 4698 4703 4718 4731 4739 4740 4766 4772 4811 4828 4844 4860 4863 }
+		}
+		ANT = {
+			#186,52,48
+			government = aristocratic_monarchy
+			primary_culture = francien
+			religion = roman_catholic
+			historical_regnal_numbers = { Bohemond = 3 Constance = 1 Raimond = 1 Renaud = 1	}
+			capital = 1808	#Antioquia
+			own_control_core = 	{ 1808 2648 3354 }
+		}
+		AYY = {
+			#30,99,36
+			government = aristocratic_monarchy
+			primary_culture = egyptianara
+			religion = islam_sunni
+			historical_regnal_numbers = { SalahalDin = 1 AlAziz = 1 AlMansur = 1 }
+			capital = 13	#Ayyubids
+			own_control_core = 	{ 13 304 321 334 415 421 440 496 542 611 631 669 704 712 800 867 926 993 1015 1080 1188 1202 1255 1269 1288 1311 1314 1366 1459 1489 1494 1519 1556 1572 1607 1616 1617 1689 1695 1710 1836 1865 1872 1874 1878 1888 1890 1891 1927 1936 1964 2112 2119 2147 2160 2163 2164 2201 2237 2260 2276 2279 2281 2289 2291 2298 2316 2329 2336 2384 2393 2415 2417 2420 2435 2445 2456 2462 2468 2474 2486 2488 2544 2570 2583 2588 2592 2619 2627 2650 2666 2745 2752 2841 2844 2862 2872 2873 2900 2905 2906 2908 2934 2952 3035 3063 3138 3144 3195 3236 3246 3266 3282 3310 3368 3375 3471 3475 3496 3523 3583 3615 3643 3644 3647 3669 3692 3693 3756 3789 3817 3866 3868 3898 3907 3911 3929 3952 3979 4047 4053 4054 4059 4089 4113 4116 4167 4203 4230 4242 4295 4303 4311 4318 4332 4338 4348 4356 4381 4400 4435 4437 4463 4513 4515 4524 4564 4596 4616 4629 4633 4648 4651 4689 4699 4725 4758 4761 4806 4831 4832 4840 }
+		}
+		CIL = {
+			#221,168,22
+			government = aristocratic_monarchy
+			primary_culture = armenian
+			religion = oriental_orthodox
+			historical_regnal_numbers = {}
+			capital = 94	#Cilicia
+			own_control_core = 	{ 94 649 1379 1511 2029 2065 2177 2642 2663 2674 2735 3006 3087 3561 3874 4112 }
+		}
+		CYP = {
+			#144,153,104
+			government = aristocratic_monarchy
+			primary_culture = francien
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1895	#Cyprus
+			own_control_core = 	{ 1895 2879 3949 }
+		}
+		GEN = {
+			#255,231,79
+			government = aristocratic_monarchy
+			primary_culture = genoese
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 4285
+			own_control_core = 	{ 1855 2241 2374 2504 2632 2923 4285 4560 }
+		}
+		JER = {
+			#103,165,219
+			government = aristocratic_monarchy
+			primary_culture = francien
+			religion = roman_catholic
+			historical_regnal_numbers = { Godefroy = 1 Baudouin = 5 Melisende = 1 Foulque = 1 Amaury = 2 Sibylle = 1 Gi = 1 Conraa = 1 Henri = 1 }
+			capital = 9	#Jerusalem
+			own_control_core = 	{ 9 694 3112 3689 4050 }
+		}
+		LAT = {
+			#86,65,25
+			government = aristocratic_monarchy
+			primary_culture = flemish
+			religion = roman_catholic
+			historical_regnal_numbers = { Constantine = 10 Constans = 2 Julian = 1 Jovian = 1 Valentinian = 1 Valens = 1 Gratian = 1 Theodosius = 3 Arcadius = 1 Pulcheria = 1 Marcian = 1 Leo = 6 Zeno = 1 Basiliscus = 1 Anastasius = 2 Justin = 2 Justinian = 2 Tiberius = 3 Maurice = 1 Phocas = 1 Heraclius = 1 Heraklonas = 1 Leontios = 1 Philippikos = 1 Artabasdos = 1 Irene = 1 Nikephoros = 3 Staurakios = 1 Michael = 7 Theophilos = 1 Basil = 2 Alexander = 1 Romanos = 4 John = 2 Zoe = 1 Theodora = 1 Isaac = 2 Alexios = 5 Manuel = 1 Andronikos = 1 }
+			capital = 4730
+			own_control_core = 	{ 8 27 243 316 327 362 509 583 635 667 760 1004 1078 1137 1259 1436 1509 1524 1535 1594 1603 1622 1623 1825 1848 1962 2082 2128 2129 2151 2225 2235 2258 2438 2440 2517 2618 2622 2769 2790 2792 2825 2830 2855 2863 2897 2932 2968 2995 3013 3023 3036 3076 3078 3103 3113 3161 3175 3189 3198 3227 3263 3274 3286 3306 3338 3358 3366 3402 3439 3450 3460 3494 3538 3571 3575 3588 3606 3607 3617 3675 3676 3678 3686 3708 3716 3762 3763 3785 3871 3872 3923 3970 3993 4062 4108 4119 4127 4181 4189 4216 4271 4350 4401 4438 4568 4625 4664 4666 4709 4730 }
+		}
+		NIC = {
+			#142,7,47
+			government = aristocratic_monarchy
+			primary_culture = greekk
+			religion = orthodox_catholic
+			historical_regnal_numbers = { Constantine = 10 Constans = 2 Julian = 1 Jovian = 1 Valentinian = 1 Valens = 1 Gratian = 1 Theodosius = 3 Arcadius = 1 Pulcheria = 1 Marcian = 1 Leo = 6 Zeno = 1 Basiliscus = 1 Anastasius = 2 Justin = 2 Justinian = 2 Tiberius = 3 Maurice = 1 Phocas = 1 Heraclius = 1 Heraklonas = 1 Leontios = 1 Philippikos = 1 Artabasdos = 1 Irene = 1 Nikephoros = 3 Staurakios = 1 Michael = 7 Theophilos = 1 Basil = 2 Alexander = 1 Romanos = 4 John = 2 Zoe = 1 Theodora = 1 Isaac = 2 Alexios = 5 Manuel = 1 Andronikos = 1 }
+			capital = 235	#Nicaea
+			own_control_core = 	{ 235 307 317 469 543 581 664 825 826 906 1006 1024 1082 1177 1205 1232 1275 1281 1294 1302 1442 1495 1702 1842 1846 1866 1871 1943 2084 2124 2134 2246 2301 2333 2424 2452 2534 2605 2606 2636 2796 2797 2812 2846 2896 3034 3037 3056 3100 3121 3142 3197 3212 3223 3339 3345 3399 3424 3427 3428 3447 3493 3624 3659 3695 3784 3842 3877 3906 3919 3937 3959 4040 4046 4048 4075 4084 4103 4190 4233 4237 4286 4307 4394 4467 4502 4522 4552 4598 4620 4694 4721 4744 4814 4826 4839 4858 4864 4878 }
+		}
+		PAP = {
+			#209,183,140
+			government = aristocratic_monarchy
+			primary_culture = umbrian
+			religion = roman_catholic
+			historical_regnal_numbers = { Petrus = 1 Linus = 1 Anacletus = 1 Clemens = 3 Evaristus = 1 Alexander = 3 Xystus = 3 Telesphorus = 1 Hyginus = 1 Pius = 1 Anicetus = 1 Soterius = 1 Eleutherius = 1 Victor = 3 Zephyrinus = 1 Callistus = 1 Urbanus = 3 Pontianus = 1 Anterus = 1 Fabianus = 1 Cornelius = 1 Lucius = 3 Stephanus = 10 Dionysius = 1 Felix = 4 Eutychianus = 1 Caius = 1 Marcellinus = 1 Marcellus = 1 Eusebius = 1 Miltiades = 1 Silvester = 3 Marcus = 1 Iulius = 1 Liberius = 1 Damasus = 2 Siricius = 1 Anastasius = 4 Innocentius = 2 Zosimus = 1 Bonifacius = 6 Coelestinus = 3 Leo = 9 Hilarius = 1 Simplicius = 1 Gelasius = 2 Symmachus = 1 Hormisdas = 1 Ioannes = 19 Agapetus = 2 Silverius = 1 Vigilius = 1 Pelagius = 2 Benedictus = 10 Gregorius = 8 Sabinianus = 1 Adeodatus = 2 Honorius = 2 Severinus = 1 Theodorus = 2 Martinus = 1 Eugenius = 3 Vitalianus = 1 Donus = 1 Agatho = 1 Conon = 1 Sergius = 4 Sisinnius = 1 Constantinus = 1 Zacharias = 1 Paulus = 1 Hadrianus = 4 Paschalis = 2 Valentinus = 1 Nicolaus = 2 Marinus = 2 Formosus = 1 Romanus = 1 Lando = 1}
+			capital = 2564	#Papal States
+			own_control_core = 	{ 329 599 789 843 907 1368 2229 2295 2325 2416 2564 2581 2694 3032 3140 3172 3192 3213 3272 3291 3463 3511 3653 3704 3743 3744 4007 4008 4132 4164 4253 4277 4360 4378 4590 4767 }
+		}
+		PIS = {
+			#137,94,59
+			government = aristocratic_monarchy
+			primary_culture = tuscan
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1545	#Pisa
+			own_control_core = 	{ 1545 1654 1788 2254 2832 2869 3043 4430 4464 }
+		}
+		RUM = {
+			#224,33,55
+			government = aristocratic_monarchy
+			primary_culture = turkman
+			religion = islam_sunni
+			historical_regnal_numbers = { Suleiman = 1 KilijArslan = 2 MalikShah = 1 Masud = 1 Kaykhusraw = 1 }
+			capital = 517	#Rum
+			own_control_core = 	{ 517 1025 1180 1201 1361 1384 1431 1471 1662 1734 1789 1801 1806 1816 1926 2025 2030 2172 2214 2242 2340 2371 2439 2508 2537 2547 2626 2641 2691 2716 2759 2762 2840 3012 3097 3146 3183 3201 3222 3256 3270 3336 3347 3363 3371 3380 3418 3443 3482 3498 3553 3587 3632 3680 3764 3772 3803 3816 3859 3864 3920 3948 3975 4016 4037 4039 4150 4175 4221 4244 4336 4427 4436 4458 4469 4534 4677 4716 4719 4763 4874 4877 }
+		}
+		TRB = {
+			#129,142,95
+			government = aristocratic_monarchy
+			primary_culture = greekk
+			religion = orthodox_catholic
+			historical_regnal_numbers = { Constantine = 10 Constans = 2 Julian = 1 Jovian = 1 Valentinian = 1 Valens = 1 Gratian = 1 Theodosius = 3 Arcadius = 1 Pulcheria = 1 Marcian = 1 Leo = 6 Zeno = 1 Basiliscus = 1 Anastasius = 2 Justin = 2 Justinian = 2 Tiberius = 3 Maurice = 1 Phocas = 1 Heraclius = 1 Heraklonas = 1 Leontios = 1 Philippikos = 1 Artabasdos = 1 Irene = 1 Nikephoros = 3 Staurakios = 1 Michael = 7 Theophilos = 1 Basil = 2 Alexander = 1 Romanos = 4 John = 2 Zoe = 1 Theodora = 1 Isaac = 2 Alexios = 5 Manuel = 1 Andronikos = 1 }
+			capital = 389	#Trebizond
+			own_control_core = 	{ 389 708 848 983 1282 1508 1725 1766 2135 2142 2406 2482 2529 2535 2638 2655 2715 2730 2755 3149 3278 3317 3386 3415 3481 3576 3745 3792 3981 3995 4281 4299 4504 4607 4669 4872 }
+		}
+		TRI = {
+			#96,78,57
+			government = aristocratic_monarchy
+			primary_culture = francien
+			religion = roman_catholic
+			historical_regnal_numbers = { Raimond = 4 AlfonsJordan = 1 GuilhemJordan = 1 Bertrand = 1 Pons = 1 }
+			capital = 2111	#Tripoli
+			own_control_core = 	{ 1062 2111 }
+		}
+		CO1 = {
+			#105,235,233
+			government = aristocratic_monarchy
+			primary_culture = sardinian
+			religion = roman_catholic
+			historical_regnal_numbers = { Manfredo = 1 Baldo = 1 Constantine = 3 Saltaro = 1 Torchitorio = 1 Ittocorre = 1 Comita = 1 Barisone = 2 }
+			capital = 551	#Gallura
+			own_control_core = 	{ 551 4516 }
+		}
+		CO2 = {
+			#75,188,188
+			government = aristocratic_monarchy
+			primary_culture = sardinian
+			religion = roman_catholic
+			historical_regnal_numbers = { Gonario = 2 Comita = 2 Barisone = 2 AndreaTanca = 1 Marianus = 1 Constantine = 2 }
+			capital = 436	#Logudoro
+			own_control_core = 	{ 436 }
+		}
+		CO3 = {
+			#119,181,175
+			government = aristocratic_monarchy
+			primary_culture = sardinian
+			religion = roman_catholic
+			historical_regnal_numbers = { Gonario = 2 Barisone = 2 Marianus = 1	Orzocorre = 3 Torbeno = 1 Comita = 2 Constantine = 1 Pedru = 1 }
+			capital = 2405	#Arborea
+			own_control_core = 	{ 2405 }
+		}
+		CO4 = {
+			#89,195,234
+			government = aristocratic_monarchy
+			primary_culture = sardinian
+			religion = roman_catholic
+			historical_regnal_numbers = { Marianus = 2 Orzocorre = 1 Constantine = 2 Pedru = 1 }
+			capital = 3014	#Cagliari
+			own_control_core = 	{ 3014 3597 4793 }
+		}
+		CAS = {
+			#250,213,24
+			government = aristocratic_monarchy
+			primary_culture = castleon
+			religion = roman_catholic
+			historical_regnal_numbers = { Fernando = 1 Sancho = 3 Alfonso = 7 Urraca = 1 }
+			capital = 391	#Castile
+			own_control_core = 	{ 391 478 575 727 814 905 1240 1301 1356 1367 1371 1435 1632 1671 1736 1857 1971 1981 2021 2069 2322 2334 2447 2484 2516 2550 2614 2615 2621 2660 2690 2737 2764 2856 2891 3104 3128 3180 3200 3242 3341 3431 3485 3534 3547 3649 3652 3668 3768 3808 3878 3910 3915 4010 4198 4256 4266 4443 4492 4535 4569 4602 4675 4726 4787 4843 }
+		}
+		NAV = {
+			#255,217,104
+			government = aristocratic_monarchy
+			primary_culture = basque
+			religion = roman_catholic
+			historical_regnal_numbers = { Antso = 6	Jimeno = 1 Gartzea = 4 Petri = 1 Alfonso = 1 }
+			capital = 1575	#Navarra
+			own_control_core = 	{ 1575 2169 2561 2670 2836 3253 3382 3812 4027 4267 4420 }
+		}
+		POR = {
+			#255,114,112
+			government = aristocratic_monarchy
+			primary_culture = galician
+			religion = roman_catholic
+			historical_regnal_numbers = { Afonso = 1 }
+			capital = 3645	#Portugal
+			own_control_core = 	{ 1370 2019 2055 2215 2324 2408 2775 2808 2845 3521 3539 3645 3677 3736 3793 3806 3827 3892 3897 4020 4144 4206 4720 4769 4869 }
+		}
+		ARA = {
+			#153,39,35
+			government = aristocratic_monarchy
+			primary_culture = aragonese
+			religion = roman_catholic
+			historical_regnal_numbers = { Ramiro = 2 Shanco = 1 Petri = 1 Alfonso = 2 Petronilla = 1 }
+			capital = 3320	#Aragon
+			own_control_core = 	{ 23 1123 1245 1310 1350 2051 2194 2218 2338 2399 3057 3094 3095 3260 3320 3392 3614 3702 3734 4346 4395 4575 4807 }
+		}
+		LEO = {
+			#63,104,181
+			government = aristocratic_monarchy
+			primary_culture = castleon
+			religion = roman_catholic
+			historical_regnal_numbers = { Ordono = 4 Alfonso = 8 Garciia = 1 Froila = 2	Ramiro = 3 Sancho = 2 Vermudo = 3 Fernando = 2 Urraca = 1 }
+			capital = 1456	#Leon - could be 
+			own_control_core = 	{ 151 297 337 1058 1364 1372 1406 1433 1456 1540 1813 1930 2180 2367 2497 2577 2584 2651 2677 2717 3084 3091 3179 3335 3696 3721 3754 3765 3946 4052 4186 4240 4255 4638 }
+		}
+		SIC = {
+			#71,70,135
+			government = aristocratic_monarchy
+			primary_culture = sicilian
+			religion = roman_catholic
+			historical_regnal_numbers = { Ruggeru = 3 Simon = 1 Gugghiermu = 3 Tancred = 1 Constance = 1 Heinrich = 1 Friedrich = 1 }
+			capital = 1470	#Sicily
+			own_control_core = 	{ 240 467 518 530 703 725 982 1053 1075 1093 1328 1329 1470 1559 1592 1707 1733 1745 1758 1840 1875 1923 1952 1974 1980 1985 2016 2022 2046 2056 2114 2131 2193 2332 2377 2413 2461 2499 2511 2557 2802 2809 2880 2883 2892 3060 3066 3099 3106 3243 3250 3543 3551 3578 3601 3626 3657 3666 3700 3776 3828 3940 3985 4015 4095 4210 4217 4333 4452 4470 4517 4541 4644 4671 4695 4705 4777 }
+		}
+		SER = {
+			#132,68,57
+			government = aristocratic_monarchy
+			primary_culture = serbian
+			religion = orthodox_catholic
+			historical_regnal_numbers = { Dobroslav = 2 Vladimir = 2 Dorde = 1 Mihailo = 2 Uros = 2	}
+			capital = 595	#Serbia
+			own_control_core = 	{ 595 639 997 1217 1235 1276 1512 1678 1724 1961 2368 2495 2506 2526 2610 2644 2686 3127 3190 3228 3294 3684 3810 3945 4130 4238 4272 4391 4418 4451 4589 4670 }
+		}
+		BUL = {
+			#74,60,86
+			government = aristocratic_monarchy
+			primary_culture = bulgarian
+			religion = orthodox_catholic
+			historical_regnal_numbers = { Boris = 2 Vladimir = 1 Simeon = 1 Petar = 2 Roman = 1 Samuel = 1 GavrilRadomir = 1 IvanVladislav = 1 PeterDelyan = 1 ConstantineBodin = 1 IvanAsen = 1 }
+			capital = 571	#Bulgaria
+			own_control_core = 	{ 571 759 992 1130 1161 1292 1300 1349 1757 1760 1905 1916 2185 2397 2470 2672 2704 2740 2748 2979 2992 3082 3169 3206 3396 3410 3536 3605 3706 3724 3731 3801 3857 3916 3965 3967 4033 4196 4246 4572 4624 4665 4749 4774 4775 }
+		}
+		BRI = {
+			#63,44,84
+			government = aristocratic_monarchy
+			primary_culture = breton
+			religion = roman_catholic
+			historical_regnal_numbers = { Alan = 4 Drogon = 1 Hoel = 2 Guerech = 1 Konan = 4 Jafrez = 2 Eozen = 2 Hawiz = 1 Berta = 1 Konstanza = 1 Ranulf = 1 Gi = 1 Arzhur = 1 }
+			capital = 96	#Brittany
+			own_control_core = 	{ 96 101 564 1070 1360 1454 1722 1915 1958 2041 2232 2350 2391 2579 2699 2909 2949 2959 3188 3535 3986 4195 4801 }
+		}
+		ENG = {
+			#170,29,29
+			government = aristocratic_monarchy
+			primary_culture = english
+			religion = roman_catholic
+			historical_regnal_numbers = { William = 2 Henry = 2 Stephen = 1 Matilda = 1 Richard = 1 }
+			capital = 2766	#England
+			own_control_core = 	{ 86 459 484 486 613 643 695 809 816 873 883 895 942 986 1060 1203 1244 1263 1297 1514 1547 1549 1569 1570 1618 1647 1670 1672 1692 1693 1701 1877 1939 1944 1955 1972 1978 2012 2035 2074 2085 2136 2210 2265 2290 2319 2375 2398 2414 2430 2454 2476 2498 2507 2574 2629 2696 2700 2734 2761 2763 2766 2780 2820 2826 2828 2868 2887 2894 2904 2912 2925 2973 3031 3042 3050 3083 3153 3173 3191 3259 3355 3411 3465 3546 3548 3585 3591 3593 3612 3616 3635 3694 3718 3770 3865 3867 3882 3890 4003 4049 4051 4097 4191 4220 4268 4291 4293 4442 4456 4490 4491 4507 4528 4573 4592 4753 4760 4771 4804 4808 4815 4819 4833 4838 4866 4882 }
+		}
+		DHB = {
+			#167,128,78
+			government = aristocratic_monarchy
+			primary_culture = welsh
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1165	#Deheubarth
+			own_control_core = 	{ 1165 2206 4506 4539 4636 }
+		}
+		GWY = {
+			#142,103,74
+			government = aristocratic_monarchy
+			primary_culture = welsh
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 844	#Gwynedd
+			own_control_core = 	{ 844 892 1924 3275 4140 4692 }
+		}
+		POW = {
+			#121,83,62
+			government = aristocratic_monarchy
+			primary_culture = welsh
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 2044	#Powys Fadog
+			own_control_core = 	{ 2044 }
+		}
+		SCO = {
+			#226,172,54
+			government = aristocratic_monarchy
+			primary_culture = scottish
+			religion = roman_catholic
+			historical_regnal_numbers = { Cinaed = 3 Domnall = 3 Causantin = 3 Aed = 1 Giric = 1 MaelColuim = 4 Ildulb = 1 Dub = 1 Cuilen = 1 Amlaib = 1 Donnchad = 2 MacBethad = 1 Lulach = 1 Etgar = 1 Alaxandair = 1 Dabid = 1 }
+			capital = 532	#Scotland
+			own_control_core = 	{ 532 630 767 1021 1479 1482 1714 1732 2156 2243 2532 2597 2607 2890 3181 3204 3273 3394 3510 3542 3549 3557 3582 3639 3750 3930 3960 4071 4096 4421 4479 4518 4526 4544 4599 4810 4823 4835 4851 4873 }
+		}
+		FRA = {
+			#26,42,132
+			government = aristocratic_monarchy
+			primary_culture = francien
+			religion = roman_catholic
+			historical_regnal_numbers = { Charles = 3 Louis = 7 Carloman = 2 Eudes = 1 Robert = 2 Raoul = 1 Lothaire = 1 Hughes = 1 Henri = 1 Philippe = 1 }
+			capital = 2743	#France
+			own_control_core = 	{ 189 203 264 485 673 746 753 754 859 956 984 996 1037 1061 1064 1088 1155 1220 1250 1337 1359 1447 1467 1493 1567 1590 1637 1646 1682 1685 1687 1720 1777 1798 1821 1823 1847 1850 1876 1892 1912 1913 1938 1940 1984 2067 2076 2120 2126 2217 2321 2347 2349 2351 2434 2436 2538 2568 2631 2701 2743 2744 2784 2907 2991 3186 3209 3315 3404 3568 3569 3579 3621 3987 3988 4104 4194 4269 4314 4369 4370 4403 4415 4449 4477 4495 4520 4532 4563 4582 4586 4601 4619 4645 4662 4680 4764 4773 }
+		}
+		IR1 = {
+			#62,117,50
+			government = aristocratic_monarchy
+			primary_culture = irish
+			religion = roman_catholic
+			historical_regnal_numbers = { Tadhg = 1 Cormac = 1 Donogh = 1 DermotMor = 1 }
+			capital = 521
+			own_control_core = 	{ 521 2062 2806 3473 4023 4875 }
+		}
+		IR2 = {
+			#71,142,89
+			government = aristocratic_monarchy
+			primary_culture = irish
+			religion = roman_catholic
+			historical_regnal_numbers = { Amalgaid = 1 NathI = 1 AilillMolt = 1 DauiTengaUma = 1 EoganBel = 1 AilillInbanda = 1 EchuTirmcharna = 1 Aed = 4 Uatu = 1 Colman = 1 Rogallach = 1 Loingsech = 1 GuaireAidne = 1 CennFaelad = 1 DunchadMuirisci = 1 FergalAidne = 1 MuiredachMuillethan = 1 Cellach = 1 Indrechtach = 2 Domnall = 3 Cathal = 1 AedBalb = 1 Forggus = 1 AilillMedraige = 1 DubIndrecht = 1 DonnCothaid = 1 Flaithri = 1 Artgal = 1 Tipraite = 1 Cinaed = 1 Colla = 1 Muirgius = 1 Diarmait = 1 Cathal = 4 Murchad = 1 Fergus = 1 Finsnechta = 1 Mugron = 1 Conchobar = 2 Tadg = 4 Fergal = 1 ArtUallach = 1 Ruaidri = 2 Flaithbertaigh = 1 Tairrdelbach = 1 ConchobarMaenmaige = 1	CathalCarragh = 1 }
+			capital = 1122
+			own_control_core = 	{ 1122 2088 2589 2733 2850 3049 3326 3388 3416 3773 4161 4615 }
+		}
+		IR3 = {
+			#79,107,50
+			government = aristocratic_monarchy
+			primary_culture = irish
+			religion = roman_catholic
+			historical_regnal_numbers = { Forga = 1 MuiredachMuinderg = 1 Eochaid = 9 Cairell = 2 Fergnae = 1 Demman = 1 Baetan = 1 AedDub = 1 Fiachnae = 4 CongalCaech = 1 Dunchad = 1 MaelCobo = 1 Blathmac = 1 CongalCennfota = 1 Fergus = 1 BeccBairrche = 1 CuChuaran = 1 AedRoin = 1 Cathussach = 1 Bressal = 1 Tommaltach = 1 MaelBressail = 1 Muiredach = 3 Matudan = 3 Lethlobar = 1 Cathalan = 1 Ainbith = 1 Eochocan = 1 Airemon = 1 Becc = 1 MaelMocheirge = 1 Aitith = 1 CennEtig = 1 Aed = 4 Dubgall = 1 Loingsech = 1 Ardgal = 1 Niall = 3 GillaComgaill = 1	MaelRuanaid = 1 DubTuinne = 1 Domnall = 1 Donnchad = 2 CuUlad = 2 Lochlainn = 1 DonnSleibe = 2 AedMeranach = 1 Goll = 1 Ragnall = 1 Magnus = 1 Ruaidri = 1 }
+			capital = 2410
+			own_control_core = 	{ 2410 2598 3518 3879 4349 }
+		}
+		IR4 = {
+			#100,147,94
+			government = aristocratic_monarchy
+			primary_culture = irish
+			religion = roman_catholic
+			historical_regnal_numbers = { Conchobhar = 1 Toirdhealbhach = 1 Muircheartach = 1 DomhnallMor = 1 ConchobharRuadh = 1 }
+			capital = 1599
+			own_control_core = 	{ 1599 1624 3170 3729 }
+		}
+		IR5 = {
+			#95,175,91
+			government = aristocratic_monarchy
+			primary_culture = irish
+			religion = roman_catholic
+			historical_regnal_numbers = { DomnallMidi = 1 Fallomon = 1 DonnchadMidi = 1	Domnall = 5 Muiredach = 1 Diarmait = 2 Conchobar = 6 Niall = 1 MaelRuanaid = 1 Fland = 1 MaelSechnaill = 2 Lorcan = 1 Donnchad = 5 FlannSinna = 1 DonnchadDonn = 1 Oengus = 1 FergalGot = 1 Aed = 1 Carlus = 1 DonnchadFinn = 1 Muirchertach = 2 MaelSechnaillGot = 1 Roen = 1 Murchad = 2 MaelSechlainnBan = 1 MaelSechlainn = 2 }
+			capital = 2339
+			own_control_core = 	{ 2339 2710 3914 4085 }
+		}
+		IR6 = {
+			#68,124,64
+			government = aristocratic_monarchy
+			primary_culture = irish
+			religion = roman_catholic
+			historical_regnal_numbers = { Colga = 1 CairpreDaimArgat = 1 DaimineDaimArgat = 1 ConallDerg = 1 Becc = 1 Aed = 1 MaelOdharMacha = 1 Dunchad = 1 MaelFothartaig = 1 CuMasach = 1 Gofraidh = 1 Foghartaigh = 1 Congalach = 1 MaelPadraig = 1 MaolCraoibh = 1 Fogarthach = 1 Egneach = 1 Donnacan = 1 Cathalan = 1 GillaColuim = 1 Leathlobair = 2 Aodh = 1 CuCaishil = 1 GiollaCrist = 1 Donnchadh = 1 Murchard = 1 Muirchertach = 1 }
+			capital = 1501
+			own_control_core = 	{ 1501 2103 2911 3663 3852 4005 }
+		}
+		IR7 = {
+			#81,135,78
+			government = aristocratic_monarchy
+			primary_culture = irish
+			religion = roman_catholic
+			historical_regnal_numbers = { UgaineMor = 1 LoegaireLorc = 1 AilillAine = 1 CobthachCoelBreg = 1 LabraidLoingsech = 1 CathairMor = 1 FiachaBaicheda = 1 BressalBelach = 1 EnnaeCennsalach = 1 Muiredach = 5 Moenach = 1 Crimthann = 2 Fincath = 1 Fraech = 1 Ailill = 2 Cormac = 1 Coirpre = 1 ColmanMar = 1 AedDub = 1 AedDibchine = 1 Brandub = 1 Ronan = 1 Faelan = 3 CrundmaelErbuilc = 1 Fiannamail = 1 BranMut = 1 CellachCualann = 1 Murchad = 4 Dunchad = 1 BranBecc = 1 Aed = 1 Cellach = 3 Ruaidri = 1 BranArdchenn = 1 FinsnechtaCethardec = 1 Bran = 2 Lorcan = 2 Tuathal = 2 Ruarc = 1 Muirecan = 1 Dunlaing = 2 Domnall = 2 Cerball = 1 Augaire = 2 BranFionn = 1 Ugaire = 1 DomnallClaen = 1 Donnchad = 3 Maelmorda = 1 Donncuan = 1 Diarmait = 4 Enna = 2 Donnchadh = 1 Conchobar = 1 DomhnallCaomhanach = 1 }
+			capital = 1996
+			own_control_core = 	{ 1996 3264 }
+		}
+		DAN = {
+			#137,63,61
+			government = aristocratic_monarchy
+			primary_culture = danish
+			religion = roman_catholic
+			historical_regnal_numbers = { Gorm = 1 Harald = 3 Svend = 3 Knud = 6 Hardeknud = 1 Magnus = 1 Oluf = 1 Erik = 3 Niels = 1 Valdemar = 1 }
+			capital = 4313	#Denmark
+			own_control_core = 	{ 1081 1214 1346 1605 1843 1851 2168 2171 2509 2706 3025 3221 3329 3331 3412 3454 3619 3978 3982 4014 4076 4313 4454 4455 4472 4496 4548 4608 4654 4674 4791 4830 4849 }
+		}
+		VEN = {
+			#216,118,6
+			government = aristocratic_monarchy
+			primary_culture = venetian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1392	#Venice
+			own_control_core = 	{ 1392 1582 1730 2109 2866 4824 }
+		}
+		HUN = {
+			#186,100,87
+			government = aristocratic_monarchy
+			primary_culture = magyar
+			religion = roman_catholic
+			historical_regnal_numbers = { Levedi = 1 Aalmos = 1 Aarpaad = 1 Zoltaan = 1 Fajsz = 1 Taksony = 1 Geeza = 2 Istvaan = 4 Peeter = 1 Saamuel = 1 Andraas = 1 Beela = 3 Salamon = 1 Laaszloo = 2 Kaalmaan = 1 }
+			capital = 1376	#Hungary
+			own_control_core = 	{ 35 211 368 412 585 608 660 721 771 836 901 904 1059 1104 1136 1305 1309 1376 1395 1473 1486 1504 1516 1583 1601 1610 1631 1644 1673 1703 1705 1728 1764 1858 1920 1995 2032 2043 2048 2064 2087 2094 2115 2121 2141 2145 2149 2153 2161 2176 2188 2200 2219 2222 2270 2292 2296 2303 2308 2372 2382 2422 2472 2490 2513 2518 2530 2571 2590 2599 2600 2620 2676 2679 2684 2776 2782 2794 2800 2847 2871 2876 2886 2895 2938 2962 2984 3000 3003 3017 3024 3027 3030 3041 3045 3070 3119 3122 3177 3199 3207 3231 3283 3289 3295 3350 3362 3367 3423 3426 3442 3476 3501 3563 3581 3586 3589 3608 3610 3638 3648 3655 3707 3738 3753 3774 3778 3800 3811 3819 3831 3838 3873 3891 3896 3917 3918 3924 3958 3974 3990 3996 4019 4022 4092 4100 4101 4129 4166 4184 4205 4209 4243 4263 4323 4342 4353 4366 4368 4417 4484 4508 4578 4628 4640 4676 4734 4750 4752 4770 4871 }
+		}
+		POL = {
+			#127,53,53
+			government = aristocratic_monarchy
+			primary_culture = polish
+			religion = roman_catholic
+			historical_regnal_numbers = { Mieszko = 3 Boleslaw = 4 Bezprym = 1 OttoBoleslawowic = 1 Dytryk = 1 Kazimierz = 2 wladis = 2 Zbygniew = 1 Leszek = 1 }	
+			capital = 3092	#Poland from 507, to Krakow
+			own_control_core = 	{ 403 520 1147 1148 1174 1362 1429 1481 1585 1661 1756 1802 1838 1854 1859 1881 1907 1928 1969 2015 2054 2061 2066 2092 2102 2223 2236 2251 2285 2302 2312 2326 2342 2491 2525 2551 2612 2640 2681 2687 2718 2760 2777 2817 2864 2882 2939 2954 2961 3002 3011 3085 3092 3174 3378 3379 3417 3524 3530 3630 3670 3725 3777 3840 3895 3921 4236 4249 4290 4339 4445 4457 4500 4550 4553 4556 4600 4729 4733 4737 4738 4782 4827 4829 }
+		}
+		MAZ = {
+			#198,83,83
+			government = aristocratic_monarchy
+			primary_culture = polish
+			religion = roman_catholic
+			historical_regnal_numbers = { Leszek = 2 Kazimierz = 1 }
+			capital = 1091	#Mazovia
+			own_control_core = 	{ 1091 1141 1440 1611 1885 1967 2033 2042 2543 2546 2823 2982 2987 3021 3218 3322 3478 3558 3685 3766 3767 3935 4282 4287 4468 4478 4527 4701 4728 4780 4792 }
+		}
+		POM = {
+			#65,91,49
+			government = aristocratic_monarchy
+			primary_culture = pomeranian
+			religion = roman_catholic
+			historical_regnal_numbers = { Warcislaw = 2 Racibor = 1 Kasimir = 1 Swietopelk = 1 Boguslaw = 1 }
+			capital = 1117	#Pomerania
+			own_control_core = 	{ 1117 1206 1213 1321 1369 1746 1835 1987 2150 2341 2441 2573 2616 2709 2998 3053 3105 3141 3258 3318 3594 3908 4036 4093 4172 4178 4322 4398 4433 }
+		}
+		SIL = {
+			#92,122,75
+			government = aristocratic_monarchy
+			primary_culture = silesian
+			religion = roman_catholic
+			historical_regnal_numbers = { Boleslaw = 1 }
+			capital = 449	#Silesia
+			own_control_core = 	{ 449 856 894 930 1347 1965 2565 2613 2675 2810 3102 3359 3421 3527 3625 3739 3760 3951 4024 4111 4375 4402 4783 4820 4821 4825 4847 4859 }
+		}
+		PPP = {
+			#51,58,0
+			government = aristocratic_monarchy
+			primary_culture = old_prus
+			religion = pagan_romuva
+			historical_regnal_numbers = {}
+			capital = 847	#Old prussians
+			own_control_core = 	{ 847 1419 1711 1739 2095 2139 2199 2361 2685 2799 3202 3255 3349 3389 3664 4107 4325 4419 4510 4717 4837 }
+		}
+		BOH = {
+			#142,109,52
+			government = aristocratic_monarchy
+			primary_culture = bohemian
+			religion = roman_catholic
+			historical_regnal_numbers = { Borivoj = 2 Spytihnev = 1 Vratislav = 2 Vaaclav = 2 Boleslav = 4 Vladivoj = 1 Jaromiir = 1 Oldrich = 1 Bretislav = 3 Spytihnev = 1 Konraad = 2 Svatopluk = 1 Vladislav = 3 Sobeslav = 2 Bedrich = 1 }
+			capital = 1830	#Bohemia
+			own_control_core = 	{ 18 610 766 786 896 1052 1149 1477 1727 1741 1830 1922 1973 1986 2031 2068 2137 2152 2195 2284 2286 2419 2501 2601 2689 2821 2843 2901 2914 2941 3093 3262 3429 3574 3711 3740 3809 3835 3853 4131 4137 4138 4152 4176 4183 4257 4383 4476 4501 4657 4784 4855 }
+		}
+		AQU = {
+			#101,110,211
+			government = aristocratic_monarchy
+			primary_culture = friulian
+			religion = roman_catholic
+			historical_regnal_numbers = { Mark = 1 Hermagorus = 1 Hilarius = 1 Chrysogonus = 2 Theodore = 1 Agapitus = 1 Benedictus = 1 Fortunatianus = 1 Valerianus = 1 Chromatius = 1 Augustinus = 1 Adelphus = 1 Maximus = 1 Januarius = 1 Secundus = 1 Nicetas = 1 Marcellianus = 1 Marcellinus = 1 Stephen = 1 Macedonius = 1 Paulinus = 2 Probinus = 1 Elia = 1 Severus = 1 John = 4 Marcianus = 1 Fortunatus = 1 Felix = 1 Agathon = 1 Petrus = 1 Serenus = 1 Calixtus = 1 Siguald = 1 Ursus = 2 Maxentius = 1 Andreas = 1 Venantius = 1 Theutmar = 1 Lupus = 2 Valpert = 1 Frederick = 2 Leo = 1 Engelfred = 1 Rodoald = 1 Poppo = 1 Eberhard = 1 Gotebald = 1 Ravengerius = 1 Sigehard = 1 Henry = 1 Svatobor = 1 Ulrich = 2 Gerard = 1 Pellegrino = 2 Godfrey = 1 }
+			capital = 148	#Aquilea
+			own_control_core = 	{ 148 315 1988 2047 2927 3220 3267 3541 3984 4331 4754 }
+		}
+		LUB = {
+			#193,168,162
+			government = merchant_republic
+			primary_culture = holsatian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 4168	#Lubeck
+			own_control_core = 	{ 4168 }
+		}
+		KRA = {
+			#130,177,204
+			government = aristocratic_monarchy
+			primary_culture = austrian
+			religion = roman_catholic
+			historical_regnal_numbers = { Poppo = 2 Ulric = 2 Engelbert = 2 Berthold = 1 }
+			capital = 3216	#Krain
+			own_control_core = 	{ 3216 3598 3628 4355 }
+		}
+		CAR = {
+			#194,204,126
+			government = aristocratic_monarchy
+			primary_culture = austrian
+			religion = roman_catholic
+			historical_regnal_numbers = { Heinrich = 6 Otto = 1 Conrad = 3 Adalbero = 1 Welf = 1 Berthold = 1 Luitpold = 1 Engelbert = 1 Ulrich = 2 Herman = 1 }
+			capital = 1241	#Carinthia
+			own_control_core = 	{ 1241 1882 2053 2162 2212 2409 2427 3217 3425 3556 3728 4041 }
+		}
+		TIR = {
+			#147,60,47
+			government = aristocratic_monarchy
+			primary_culture = tirole
+			religion = roman_catholic
+			historical_regnal_numbers = { Albrecht = 3 Berthold = 2 Heinrich = 1 }
+			capital = 1849	#Tirol
+			own_control_core = 	{ 1849 2975 3088 3458 4365 4643 }
+		}
+		AUS = {
+			#255,226,211
+			government = aristocratic_monarchy
+			primary_culture = austrian
+			religion = roman_catholic
+			historical_regnal_numbers = { Luitpold = 5 Heinrich = 2 Adalbert = 2 Ernst = 1 Friedrich = 1 }
+			capital = 614
+			own_control_core = 	{ 614 797 1553 1790 2357 2536 2751 2946 3015 3150 3276 3293 3323 3492 3641 3815 4002 4142 4232 4429 4447 4461 4580 4652 4687 4846 }
+		}
+		SLZ = {
+			#137,116,52
+			government = aristocratic_monarchy
+			primary_culture = austrian
+			religion = roman_catholic
+			historical_regnal_numbers = { Maximus = 1 Ruprecht = 1 Vitalis = 1 Erkenfried = 1 Ansologus = 1 Ottokar = 1 Flobrigis = 1 John = 1 Virgilius = 1 Arno = 1 Adalram = 1 Leutram = 1 Adalwin = 1 Adalbert = 3 Dietmar = 2 Pilgrim = 1 Egilholf = 1 Herhold = 1 Friedrich = 1 Hartwig = 1 Guunther = 1 Baldwin = 1 Gebhard = 1 Thiemo = 1 Konrad = 2 Eberhard = 1 }
+			capital = 1396	#Salzburg
+			own_control_core = 	{ 1396 1488 3052 }
+		}
+		TRN = {
+			#201,131,108
+			government = aristocratic_monarchy
+			primary_culture = sotirol
+			religion = roman_catholic
+			historical_regnal_numbers = { Abbondanzio = 1 Vigilius = 1 Regippus = 1 Quartinus = 1 Peregrinus = 1 Gratiosmus = 1 Theodor = 1 Agnellus = 1 Veregundus = 1 Manasses = 2 Vitalis = 2 Stablisianus = 1 Dominicus = 1	Rusticus = 1 Romanus = 1 Correntianus = 2 Sidesicus = 1 John = 2 Maximus = 1 Mammo = 1 Marianus = 1 Dominator = 1 Ursus = 1 Clementianus = 1 Amator = 1 Hildegar = 1 Wolderich = 1 Daniel = 1 Heimpert = 1 Udalschalk = 1 Adelchis = 1 Fridebert = 1 Gisulf = 1 Berthold = 1 Jakob = 1 Conrad = 1 Bernard = 2 Lantram = 1 Arnold = 2 Arimond = 1 Raimondo = 1 Ulrich = 2 Azzo = 1 Heinrich = 1 Adalberon = 1 Gebhard = 1 Albrecht = 3 Altmann = 1 Eberhard = 1 Salomon = 1 }
+			capital = 1465	#Trento
+			own_control_core = 	{ 1465 }
+		}
+		VER = {
+			#95,137,63
+			government = aristocratic_monarchy
+			primary_culture = venetian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 878	#Verona
+			own_control_core = 	{ 878 1378 1449 1796 1818 2178 2192 2522 2953 3552 3737 4509 }
+		}
+		MAN = {
+			#147,70,73
+			government = aristocratic_monarchy
+			primary_culture = lombard
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 2157	#Mantua
+			own_control_core = 	{ 2157 }
+		}
+		SIE = {
+			#150,125,87
+			government = aristocratic_monarchy
+			primary_culture = tuscan
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 2327	#Siena
+			own_control_core = 	{ 2327 3545 3672 3989 4222 }
+		}
+		FLO = {
+			#188,71,69
+			government = aristocratic_monarchy
+			primary_culture = tuscan
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 3922	#Florence
+			own_control_core = 	{ 1397 3072 3735 3922 4393 }
+		}
+		LUC = {
+			#85,137,147
+			government = aristocratic_monarchy
+			primary_culture = tuscan
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 109	#Lucca
+			own_control_core = 	{ 109 3139 3651 }
+		}
+		PAR = {
+			#153,144,64
+			government = aristocratic_monarchy
+			primary_culture = emilian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1296	#Parma
+			own_control_core = 	{ 1296 1475 2839 3240 3515 3595 3781 3912 }
+		}
+		BRR = {
+			#51,84,31
+			government = aristocratic_monarchy
+			primary_culture = lombard
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 411	#Brescia
+			own_control_core = 	{ 411 2673 2903 3401 3464 }
+		}
+		HLS = {
+			#204,123,120
+			government = aristocratic_monarchy
+			primary_culture = holsatian
+			religion = roman_catholic
+			historical_regnal_numbers = { Oluf = 1 Erik = 3 Niels = 1 Adolph = 3 Knud = 2 Magnus = 1 Heinrich = 1 Svend = 1 Valdemar = 1 }
+			capital = 1352	#Holstein
+			own_control_core = 	{ 1352 1809 1918 2209 2323 2807 2965 2967 3455 3490 }
+		}
+		HAM = {
+			#196,96,47
+			government = merchant_republic
+			primary_culture = norsaxon
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 381	#Hamburg
+			own_control_core = 	{ 381 2268 2602 4102 4170 4446 }
+		}
+		MKL = {
+			#42,96,83
+			government = aristocratic_monarchy
+			primary_culture = saxon
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1211	#Mecklenburg
+			own_control_core = 	{ 1211 1505 2226 2428 2494 2603 2795 2944 3234 3361 3384 4087 4133 4250 4376 4712 }
+		}
+		BRA = {
+			#104,67,61
+			government = aristocratic_monarchy
+			primary_culture = saxon
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 628
+			own_control_core = 	{ 628 1315 1389 1460 1602 1663 1697 2072 2330 2356 3185 3333 3445 3483 3782 4035 4234 4481 4497 4610 4735 4818 }
+		}
+		MLO = {
+			#255,48,47
+			government = aristocratic_monarchy
+			primary_culture = lombard
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1812	#Milan
+			own_control_core = 	{ 937 1355 1748 1763 1812 2283 2359 2500 2978 3727 3883 3886 3955 3963 4219 4714 4802 }
+		}
+		MAG = {
+			#181,108,90
+			government = aristocratic_monarchy
+			primary_culture = norsaxon
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 909
+			own_control_core = 	{ 909 1022 2183 2865 }
+		}
+		ANH = {
+			#173,83,92
+			government = aristocratic_monarchy
+			primary_culture = saxon
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1043
+			own_control_core = 	{ 1043 1139 1653 2105 2933 2947 3484 4487 4656 4817 }
+		}
+		SAX = {
+			#132,103,114
+			government = aristocratic_monarchy
+			primary_culture = saxon
+			religion = roman_catholic
+			historical_regnal_numbers = { Otto = 3 }
+			capital = 236
+			own_control_core = 	{ 236 658 1911 2107 2187 2363 2727 2917 3064 3107 3247 3334 3440 3477 3540 3550 3943 4227 4639 4748 }
+		}
+		MON = {
+			#119,153,61
+			government = aristocratic_monarchy
+			primary_culture = piedmontese
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 364
+			own_control_core = 	{ 364 4090 }
+		}
+		CUN = {
+			#239,218,141
+			government = aristocratic_monarchy
+			primary_culture = piedmontese
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 453
+			own_control_core = 	{ 453 785 1906 2448 }
+		}
+		SW1 = {
+			#137,100,83
+			government = aristocratic_monarchy
+			primary_culture = swiss
+			religion = roman_catholic
+			diplomatic_stance=trading_stance
+			capital = 1115
+			own_control_core = 	{ 2426 2771 2885 3005 4465 }
+		}
+		SW2 = {
+			#191,150,135
+			government = aristocratic_monarchy
+			primary_culture = swiss
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1197
+			own_control_core = 	{ 1197 1977 2475 2774 3474 3715 }
+		}
+		SW3 = {
+			#160,116,106
+			government = aristocratic_monarchy
+			primary_culture = swiss
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 4259
+			own_control_core = 	{ 4259 }
+		}
+		ZAH = {
+			#124,125,92
+			government = aristocratic_monarchy
+			primary_culture = burgundian
+			religion = roman_catholic
+			historical_regnal_numbers = { Berthold = 4 }
+			capital = 1164
+			own_control_core = 	{ 1115 1589 1898 2256 2425 2849 2851 2955 2977 3875 }
+		}
+		LYB = {
+			#58,96,0
+			government = aristocratic_monarchy
+			primary_culture = berber
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 162
+			own_control_core = 	{ 162 172 223 291 318 408 1092 1135 1576 1883 1941 2023 2052 2110 2380 2388 2665 3395 3403 3444 3469 3631 4474 4635 4809 }
+		}
+		BAV = {
+			#40,82,107
+			government = aristocratic_monarchy
+			primary_culture = bavarian
+			religion = roman_catholic
+			diplomatic_stance=trading_stance
+			capital = 466
+			own_control_core = 	{ 466 729 927 2040 2097 2175 2269 2609 3385 3927 4073 4274 4626 4653 4715 }
+		}
+		BA2 = {
+			#69,99,119
+			government = aristocratic_monarchy
+			primary_culture = bavarian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 3487
+			own_control_core = 	{ 3487 3954 }
+		}
+		BA3 = {
+			#95,134,170
+			government = aristocratic_monarchy
+			primary_culture = bavarian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1775
+			own_control_core = 	{ 1775 2028 2245 2263 2510 2916 4795 }
+		}
+		BA4 = {
+			#52,106,137
+			government = aristocratic_monarchy
+			primary_culture = bavarian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1199
+			own_control_core = 	{ 1199 2358 4566 }
+		}
+		CUM = {
+			#204,156,112
+			government = tribal_federation
+			primary_culture = cuman
+			religion = tengri_rel
+			historical_regnal_numbers = {}
+			capital = 51
+			own_control_core = 	{ 51 139 210 249 302 439 456 473 580 604 609 663 666 677 692 793 795 837 889 903 920 934 945 963 1050 1138 1145 1175 1208 1226 1243 1344 1375 1408 1426 1457 1463 1507 1522 1531 1558 1574 1588 1629 1643 1660 1690 1735 1738 1755 1780 1783 1785 1800 1807 1826 1828 1832 1833 1864 1893 1979 2017 2057 2071 2083 2091 2098 2118 2159 2173 2181 2182 2231 2239 2249 2250 2257 2262 2267 2275 2306 2309 2320 2344 2362 2392 2423 2429 2444 2519 2521 2524 2542 2563 2586 2587 2595 2623 2624 2661 2662 2723 2757 2773 2803 2813 2835 2852 2854 2899 2920 2986 3010 3038 3044 3046 3067 3068 3077 3079 3081 3098 3110 3130 3135 3148 3165 3194 3230 3235 3239 3271 3281 3284 3298 3305 3308 3313 3356 3360 3393 3435 3480 3502 3505 3509 3513 3517 3526 3529 3537 3544 3560 3600 3642 3650 3658 3661 3682 3683 3709 3726 3733 3747 3749 3787 3790 3814 3841 3854 3855 3862 3885 3887 3889 3926 3939 3947 3983 4034 4038 4043 4068 4070 4121 4141 4146 4162 4171 4177 4204 4226 4239 4248 4316 4352 4357 4361 4363 4390 4426 4434 4511 4530 4543 4557 4567 4570 4574 4606 4609 4631 4642 4672 4682 4704 4742 4743 4746 4776 4800 4813 4868 }
+		}
+		ALN = {
+			#168,119,74
+			government = tribal_kingdom
+			primary_culture = alans
+			religion = orthodox_catholic
+			historical_regnal_numbers = {}
+			capital = 30
+			own_control_core = 	{ 30 34 44 299 638 893 1184 1377 1933 2189 2523 2703 2729 2754 2804 2981 3090 3215 3296 3414 4045 4081 4109 4135 4354 4392 4605 4630 4862 }
+		}
+		GEO = {
+			#158,101,103
+			government = aristocratic_monarchy
+			primary_culture = georgian
+			religion = orthodox_catholic
+			historical_regnal_numbers = {}
+			capital = 15
+			own_control_core = 	{ 15 369 897 1100 1246 1257 1438 1502 1518 1530 1538 1704 1709 1794 2026 2227 2233 2248 2259 2274 2288 2345 2373 2381 2548 2580 2591 2724 2770 2772 2781 2867 2874 2945 3001 3008 3062 3065 3205 3369 3451 3488 3507 3622 3634 3713 3741 3802 3823 3971 4173 4215 4298 4317 4347 4367 4416 4547 4751 4757 }
+		}
+		ARM = {
+			#127,86,51
+			government = aristocratic_monarchy
+			primary_culture = armenian
+			religion = oriental_orthodox
+			historical_regnal_numbers = {}
+			capital = 717
+			own_control_core = 	{ 717 1331 2310 2464 2637 2739 2822 2957 3269 3441 3452 3832 3997 4228 4302 4611 }
+		}
+		AZZ = {
+			#107,32,38
+			government = aristocratic_monarchy
+			primary_culture = azerbaijani
+			religion = islam_sunni
+			historical_regnal_numbers = {}
+			capital = 764
+			own_control_core = 	{ 764 978 1002 1503 2039 2443 2707 3277 3794 3845 4018 4028 4351 4525 4727 }
+		}
+		ABS = {
+			#126,173,79
+			government = aristocratic_monarchy
+			primary_culture = qatabanian
+			religion = islam_sunni
+			historical_regnal_numbers = {}
+			capital = 118
+			own_control_core = 	{ 118 406 513 625 637 1056 1113 1299 1306 }
+		}
+		GAV = {
+			#206,195,72
+			government = aristocratic_monarchy
+			primary_culture = ucranian
+			religion = orthodox_catholic
+			historical_regnal_numbers = {}
+			capital = 234
+			own_control_core = 	{ 234 524 842 947 1020 1274 1640 1696 1737 1742 1751 1771 1897 2099 2337 2386 2451 2502 2688 2805 2816 2889 2919 2983 2999 3016 3129 3137 3184 3196 3407 3419 3554 3604 3627 3748 3751 3788 3821 3968 4044 4065 4218 4241 4251 4292 4310 4423 4581 4632 4762 4834 4854 }
+		}
+		SWE = {
+			#46,70,102
+			government = aristocratic_monarchy
+			primary_culture = swedish
+			religion = roman_catholic
+			historical_regnal_numbers = { Sverker = 1 }
+			capital = 225
+			own_control_core = 	{ 225 375 472 546 763 834 1105 1170 1345 1462 1579 1612 1657 1676 1779 1839 1953 2086 2106 2154 2244 2378 2396 2442 2643 2654 2765 2893 2936 2980 3117 3151 3208 3210 3251 3365 3448 3573 3609 3671 3717 3880 3925 3938 3964 3992 4011 4080 4088 4099 4264 4275 4385 4404 4431 4521 4559 4658 4768 4861 4865 }
+		}
+		NOR = {
+			#87,138,150
+			government = aristocratic_monarchy
+			primary_culture = norwegian
+			religion = roman_catholic
+			historical_regnal_numbers = { Inge = 1 }
+			capital = 2299	#Norway
+			own_control_core = 	{ 260 900 1014 1412 1500 1658 1681 1776 1935 1966 2208 2261 2264 2299 2402 2407 2481 2693 2930 3018 3019 3132 3134 3203 3232 3245 3468 3514 3516 3719 3755 3847 3901 3957 4025 4091 4276 4280 4380 4576 4594 4679 4779 4794 }
+		}
+		KIE = {
+			#113,110,137
+			government = aristocratic_monarchy
+			primary_culture = ucranian
+			religion = orthodox_catholic
+			historical_regnal_numbers = {}
+			capital = 1163	#Kiev
+			own_control_core = 	{ 448 783 1018 1101 1163 1480 1584 1675 1942 2198 2401 2531 2604 2680 2705 2711 2722 2915 2940 2996 3051 3108 3491 3973 4017 4153 4312 4396 4462 4499 }
+		}
+		NOV = {
+			#55,76,23
+			government = aristocratic_monarchy
+			primary_culture = novgorodian
+			religion = orthodox_catholic
+			historical_regnal_numbers = {}
+			capital = 4549	#Novgorod
+			own_control_core = 	{ 641 680 879 1090 1095 1129 1354 1416 1548 1827 1868 1968 2144 2191 2196 2228 2255 2459 2496 2512 2639 2698 2731 2753 2884 2898 3048 3125 3126 3182 3257 3288 3314 3324 3383 3433 3500 3654 3829 3851 3899 4063 4147 4151 4301 4321 4405 4439 4473 4542 4549 4577 4641 4741 }
+		}
+		CUR = {
+			#105,119,77
+			government = aristocratic_monarchy
+			primary_culture = latvia
+			religion = pagan_romuva
+			historical_regnal_numbers = {}
+			capital = 587	#Curonia
+			own_control_core = 	{ 587 773 1417 1909 2656 2966 3489 }
+		}
+		OSE = {
+			#95,75,114
+			government = aristocratic_monarchy
+			primary_culture = estonia
+			religion = pagan_suomenusko
+			historical_regnal_numbers = {}
+			capital = 226	#Osilia
+			own_control_core = 	{ 226 1604 4328 }
+		}
+		LIO = {
+			#181,128,146
+			government = aristocratic_monarchy
+			primary_culture = latvia
+			religion = pagan_romuva
+			historical_regnal_numbers = {}
+			capital = 3844	#Livonia
+			own_control_core = 	{ 902 1200 1317 1322 3319 3844 4079 4235 4685 }
+		}
+		SEM = {
+			#145,103,117
+			government = aristocratic_monarchy
+			primary_culture = latvia
+			religion = pagan_romuva
+			historical_regnal_numbers = {}
+			capital = 1634	#Semigalia
+			own_control_core = 	{ 1634 2811 2924 3248 3746 }
+		}
+		ROT = {
+			#86,57,114
+			government = aristocratic_monarchy
+			primary_culture = estonia
+			religion = pagan_suomenusko
+			historical_regnal_numbers = {}
+			capital = 1357	#Rotalia
+			own_control_core = 	{ 1357 1963 2719 }
+		}
+		VIR = {
+			#86,85,113
+			government = aristocratic_monarchy
+			primary_culture = estonia
+			religion = pagan_suomenusko
+			historical_regnal_numbers = {}
+			capital = 3214	#Vironia
+			own_control_core = 	{ 3214 3966 4397 }
+		}
+		REV = {
+			#86,57,89
+			government = aristocratic_monarchy
+			primary_culture = estonia
+			religion = pagan_suomenusko
+			historical_regnal_numbers = {}
+			capital = 550	#Revala
+			own_control_core = 	{ 550 1374 3022 4441 }
+		}
+		AQT = {
+			#199,64,64
+			government = aristocratic_monarchy
+			primary_culture = occitan
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 3143	#Aquitaine
+			own_control_core = 	{ 715 960 1036 1109 1114 1124 1158 1191 1227 1237 1521 1615 1650 1786 1948 2003 2080 2240 2514 2556 2558 2785 2786 2860 3143 3297 3300 3342 3344 3376 3759 3931 4030 4125 4159 4193 4231 4408 4412 4450 4480 4690 4781 4850 }
+		}
+		BEN = {
+			#244,56,67
+			government = aristocratic_monarchy
+			primary_culture = gascon
+			religion = roman_catholic
+			historical_regnal_numbers = { Gaston = 5 }
+			capital = 1077	#Bearn
+			own_control_core = 	{ 1077 2125 2370 2858 3531 4493 4498 4785 4879 }
+		}
+		BRG = {
+			#128,38,93
+			government = aristocratic_monarchy
+			primary_culture = burgundian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 812	#Burgundy
+			own_control_core = 	{ 812 959 1005 1160 1166 1225 1578 1688 1999 2293 2446 3101 4315 4326 4407 4414 4585 }
+		}
+		BUG = {
+			#15,28,91
+			government = aristocratic_monarchy
+			primary_culture = burgundian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 2294	#Bourgogne
+			own_control_core = 	{ 342 840 948 952 1382 1638 1680 1718 1797 1814 2294 2395 2671 3152 3187 3299 3674 3758 4110 4192 4413 4745 4799 }
+		}
+		DAU = {
+			#241,245,193
+			government = aristocratic_monarchy
+			primary_culture = occitan
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1717	#Dauphine
+			own_control_core = 	{ 1717 3950 4597 }
+		}
+		FOL = {
+			#204,209,67
+			government = aristocratic_monarchy
+			primary_culture = occitan
+			religion = roman_catholic
+			historical_regnal_numbers = { Bertrand = 1 }
+			capital = 820	#Forcalquier
+			own_control_core = 	{ 820 991 1178 1319 1343 2861 3422 3457 4229 4812 }
+		}
+		POV = {
+			#242,188,131
+			government = aristocratic_monarchy
+			primary_culture = occitan
+			religion = roman_catholic
+			historical_regnal_numbers = { Alfonso = 1 RamonBer = 4 }
+			capital = 97	#Provence
+			own_control_core = 	{ 97 432 1831 1886 2280 2458 2554 2857 3268 3348 3533 4410 4708 }
+		}
+		SAV = {
+			#211,140,135
+			government = aristocratic_monarchy
+			primary_culture = occitan
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 980	#Savoy
+			own_control_core = 	{ 980 1112 1164 2004 2746 2942 3956 4006 4223 }
+		}
+		TOL = {
+			#99,179,68
+			government = aristocratic_monarchy
+			primary_culture = occitan
+			religion = roman_catholic
+			historical_regnal_numbers = { Raymond = 5 }
+			capital = 4308	#Toulouse
+			own_control_core = 	{ 557 684 1108 1591 1700 1761 1844 1869 2205 2277 2634 2702 2990 3074 3111 3301 3409 3629 3730 4308 4329 4372 4587 4663 4711 4713 4797 }
+		}
+		SPO = {
+			#160,152,109
+			government = aristocratic_monarchy
+			primary_culture = umbrian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1365	#Spoleto
+			own_control_core = 	{ 1365 1560 2318 3007 3370 4482 4697 }
+		}
+		TEU = {
+			#81,69,53
+			government = aristocratic_monarchy
+			primary_culture = teuton
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1342	#Teutonic Order
+			own_control_core = 	{ 1342 }
+		}
+		NUR = {
+			#175,99,66
+			government = aristocratic_monarchy
+			primary_culture = franconian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 2948	#Nurenberg
+			own_control_core = 	{ 2948 }
+		}
+		BAM = {
+			#173,144,116
+			government = aristocratic_monarchy
+			primary_culture = franconian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1261	#Bamberg
+			own_control_core = 	{ 1261 1595 2238 4786 }
+		}
+		WUZ = {
+			#119,102,80
+			government = aristocratic_monarchy
+			primary_culture = franconian
+			religion = roman_catholic
+			historical_regnal_numbers = { Heinreich = 3 }
+			capital = 1852	#Wuzburg
+			own_control_core = 	{ 1852 2567 2692 3691 3712 4533 4867 }
+		}
+		ANS = {
+			#109,54,68
+			government = aristocratic_monarchy
+			primary_culture = franconian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1552	#Ansbach
+			own_control_core = 	{ 1552 1580 1596 1666 1820 2006 2113 2779 3328 3779 4384 }
+		}
+		WUT = {
+			#94,117,75
+			government = aristocratic_monarchy
+			primary_culture = swabian
+			religion = roman_catholic
+			historical_regnal_numbers = { Ludwig = 3 }
+			capital = 29
+			own_control_core = 	{ 29 310 522 1815 2009 2383 2489 2553 2732 3118 3528 3687 3825 4060 4128 4294 4755 }
+		}
+		ULM = {
+			#234,202,192
+			government = aristocratic_monarchy
+			primary_culture = swabian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 2167
+			own_control_core = 	{ 2167 }
+		}
+		RAV = {
+			#44,112,78
+			government = aristocratic_monarchy
+			primary_culture = swabian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1044
+			own_control_core = 	{ 1044 1772 3351 4252 4593 4668 }
+		}
+		FRI = {
+			#153,96,61
+			government = aristocratic_monarchy
+			primary_culture = frisian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 2287
+			own_control_core = 	{ 2287 2453 3219 3420 3850 3902 3903 4483 }
+		}
+		FLA = {
+			#67,91,96
+			government = aristocratic_monarchy
+			primary_culture = dutch
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1198
+			own_control_core = 	{ 1198 1532 1719 1765 1956 2081 3405 4058 4157 4254 4706 }
+		}
+		HOL = {
+			#114,70,66
+			government = aristocratic_monarchy
+			primary_culture = dutch
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1126
+			own_control_core = 	{ 1126 2304 2315 2838 2922 3998 4098 4211 4306 4583 }
+		}
+		PFA = {
+			#159,234,168
+			government = aristocratic_monarchy
+			primary_culture = alemannic
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1096
+			own_control_core = 	{ 1096 1609 1993 2077 2140 2964 3029 4179 4260 4660 }
+		}
+		MAI = {
+			#136,132,188
+			government = aristocratic_monarchy
+			primary_culture = franconian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1496
+			own_control_core = 	{ 1496 1706 2096 2814 2877 2963 3307 3824 4154 }
+		}
+		BAD = {
+			#88,91,50
+			government = aristocratic_monarchy
+			primary_culture = alemannic
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 435
+			own_control_core = 	{ 435 446 1268 2431 3039 3096 3302 4139 4816 }
+		}
+		ALS = {
+			#219,180,63
+			government = aristocratic_monarchy
+			primary_culture = alemannic
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 502
+			own_control_core = 	{ 502 619 2203 3168 4304 4565 }
+		}
+		BRN = {
+			#137,105,71
+			government = aristocratic_monarchy
+			primary_culture = norsaxon
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 765
+			own_control_core = 	{ 765 1664 2059 2726 2937 2971 2985 3159 3462 3962 4077 4324 4700 4805 }
+		}
+		BRE = {
+			#56,79,91
+			government = aristocratic_monarchy
+			primary_culture = norsaxon
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1811
+			own_control_core = 	{ 1811 2063 2576 2921 3330 3572 3599 3893 4655 }
+		}
+		COL = {
+			#77,84,39
+			government = aristocratic_monarchy
+			primary_culture = rheinlander
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1047
+			own_control_core = 	{ 1047 1762 3327 }
+		}
+		MTZ = {
+			#109,101,135
+			government = aristocratic_monarchy
+			primary_culture = alemannic
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 808
+			own_control_core = 	{ 808 1914 2079 2403 2555 3761 4270 4661 }
+		}
+		LOR = {
+			#125,122,168
+			government = aristocratic_monarchy
+			primary_culture = burgundian
+			religion = roman_catholic
+			diplomatic_stance=trading_stance
+			capital = 869
+			own_control_core = 	{ 869 1071 1799 2394 3033 3437 3472 3512 4057 4453 4696 }
+		}
+		UTR = {
+			#188,166,75
+			government = aristocratic_monarchy
+			primary_culture = dutch
+			religion = roman_catholic
+			historical_regnal_numbers = { Dietrich = 1 }
+			capital = 3145
+			own_control_core = 	{ 3145 3162 4876 }
+		}
+		GEL = {
+			#109,54,56
+			government = aristocratic_monarchy
+			primary_culture = dutch
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 2331
+			own_control_core = 	{ 2331 2487 3679 4789 }
+		}
+		OLD = {
+			#124,102,89
+			government = aristocratic_monarchy
+			primary_culture = norsaxon
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1970
+			own_control_core = 	{ 1970 2213 2798 4012 }
+		}
+		MUN = {
+			#196,119,102
+			government = aristocratic_monarchy
+			primary_culture = westphalian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 549
+			own_control_core = 	{ 549 734 1260 1304 1446 1992 2143 2480 4004 4722 }
+		}
+		BRB = {
+			#98,124,82
+			government = aristocratic_monarchy
+			primary_culture = flemish
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 380
+			own_control_core = 	{ 380 1316 1563 1665 2234 2418 2848 2870 3430 3805 4122 4273 4341 }
+		}
+		LUX = {
+			#101,124,87
+			government = aristocratic_monarchy
+			primary_culture = rheinlander
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 3131
+			own_control_core = 	{ 3131 3249 3602 }
+		}
+		LIE = {
+			#92,76,113
+			government = aristocratic_monarchy
+			primary_culture = rheinlander
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1910
+			own_control_core = 	{ 1910 2060 2132 3290 4523 4627 }
+		}
+		TRE = {
+			#183,98,58
+			government = aristocratic_monarchy
+			primary_culture = rheinlander
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1544
+			own_control_core = 	{ 1544 2366 3311 3432 3519 4300 4340 4382 }
+		}
+		FRK = {
+			#216,164,80
+			government = aristocratic_monarchy
+			primary_culture = franconian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1904
+			own_control_core = 	{ 1904 }
+		}
+		HES = {
+			#101,145,130
+			government = aristocratic_monarchy
+			primary_culture = westphalian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1476
+			own_control_core = 	{ 1476 1652 1975 2174 2184 2527 2549 2625 3292 3495 3667 3799 3905 4279 4283 4432 4702 }
+		}
+		LUN = {
+			#112,75,91
+			government = aristocratic_monarchy
+			primary_culture = westphalian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1394
+			own_control_core = 	{ 1394 1989 2008 2738 2833 3807 4379 4736 }
+		}
+		CLE = {
+			#137,116,82
+			government = aristocratic_monarchy
+			primary_culture = rheinlander
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 214
+			own_control_core = 	{ 214 1908 2133 2837 4723 }
+		}
+		HAI = {
+			#122,45,78
+			government = aristocratic_monarchy
+			primary_culture = walloon
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 594
+			own_control_core = 	{ 594 1324 3775 3804 4160 4245 4319 }
+		}
+		RET = {
+			#130,65,76
+			government = aristocratic_monarchy
+			primary_culture = walloon
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 281
+			own_control_core = 	{ 281 1750 1752 1931 2630 4880 }
+		}
+		EPI = {
+			#165,162,79
+			government = aristocratic_monarchy
+			primary_culture = greekk
+			religion = orthodox_catholic
+			historical_regnal_numbers = {}
+			capital = 886
+			own_control_core = 	{ 886 1116 1386 1542 1597 2127 2352 2404 2469 2596 2652 2767 2958 2974 2994 3040 3332 3461 3640 3837 4061 4163 4207 4258 4545 4667 }
+		}
+		TES = {
+			#68,175,149
+			government = aristocratic_monarchy
+			primary_culture = piedmontese
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 1216
+			own_control_core = 	{ 1216 1258 1991 2313 2314 2463 2471 2560 2720 3114 3160 3723 3798 3870 3991 4288 4588 4796 }
+		}
+		ATH = {
+			#147,173,147
+			government = aristocratic_monarchy
+			primary_culture = burgundian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 2014	#Athens
+			own_control_core = 	{ 3 363 805 1293 1403 1483 1744 1782 2013 2014 2093 2353 2657 2749 3413 4064 4224 }
+		}
+		ACC = {
+			#75,193,156
+			government = aristocratic_monarchy
+			primary_culture = burgundian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 434
+			own_control_core = 	{ 434 1182 1308 1312 1880 2220 2354 2379 2793 3069 3309 3377 3860 4327 4471 4845 }
+		}
+		RUG = {
+			#119,91,0
+			government = aristocratic_monarchy
+			primary_culture = rani
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 3636
+			own_control_core = 	{ 2460 3636 }
+		}
+		PMR = {
+			#109,0,0
+			government = aristocratic_monarchy
+			primary_culture = pomeranian
+			religion = roman_catholic
+			historical_regnal_numbers = {}
+			capital = 3364
+			own_control_core = 	{ 1555 1726 2266 2935 3346 3364 3449 3780 3941 4659 }
+		}
+	}
+}

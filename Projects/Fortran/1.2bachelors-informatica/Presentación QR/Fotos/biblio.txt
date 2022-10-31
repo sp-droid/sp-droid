@@ -1,0 +1,3 @@
+http://www.cs.nthu.edu.tw/~cherung/teaching/2008cs3331/chap4%20example.pdf                      Ejemplo factorizado vía Gram-Schmidt, Householder y por Gievens
+http://davidstutz.de/matrix-decompositions/matrix-decompositions/ 				Ídem + Algoritmos y un programa que factoriza por lo que quieras, con pasos
+https://rosettacode.org/wiki/QR_decomposition						

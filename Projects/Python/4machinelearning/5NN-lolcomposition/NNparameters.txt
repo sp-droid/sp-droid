@@ -1,0 +1,6 @@
+NNlayer1 arguments:
+(152, 20)
+leakyReLU
+NNlayer2 arguments:
+(20, 1)
+sigmoid

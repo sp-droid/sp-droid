@@ -1,0 +1,6 @@
+definition.xlsx
+heightmap.png, make sure the format is correct (8bit grayscale)
+place in the main folder the province map with all seas colored yellow you can find as a byproduct of the locator script, or make it here
+
+the result is a heightmap that matches exactly with the provinces.png, but we want some gradual elevation near the sea, so select the sea in the heightmap (colored
+0,0,0) and apply gaussian blur. If you apply the blur to all the picture, you distort unnecessary parts of the image and potentially destroy islands

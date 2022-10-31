@@ -1,0 +1,180 @@
+Maghreb_region = { #19
+	areas = { Maghreb0_area Maghreb1_area Maghreb7_area Maghreb8_area Maghreb6_area Maghreb4_area Maghreb3_area Maghreb9_area Maghreb5_area Maghreb2_area Maghreb17_area Maghreb15_area Maghreb16_area Maghreb13_area Maghreb12_area Maghreb11_area Maghreb14_area Maghreb10_area Maghreb18_area }
+}
+
+Haemus_region = { #39
+	areas = { Haemus23_area Haemus19_area Haemus4_area Haemus20_area Haemus21_area Haemus17_area Haemus2_area Haemus26_area Haemus22_area Haemus18_area Haemus6_area Haemus7_area Haemus3_area Haemus14_area Haemus25_area Haemus24_area Haemus1_area Haemus0_area Haemus15_area Haemus16_area Haemus12_area Haemus5_area Haemus29_area Haemus30_area Haemus13_area Haemus11_area Haemus10_area Haemus28_area Haemus9_area Haemus27_area Haemus32_area Haemus8_area Haemus31_area Haemus33_area Haemus36_area Haemus38_area Haemus37_area Haemus34_area Haemus35_area }
+}
+
+Tartaria_region = { #9
+	areas = { Tartaria0_area Tartaria1_area Tartaria2_area Tartaria3_area Tartaria4_area Tartaria5_area Tartaria6_area Tartaria7_area Tartaria8_area }
+}
+
+India_region = { #12
+	areas = { India0_area India1_area India2_area India3_area India4_area India5_area India6_area India7_area India8_area India9_area India10_area India11_area }
+}
+
+Francia_region = { #25
+	areas = { Francia2_area Francia1_area Francia17_area Francia0_area Francia3_area Francia4_area Francia9_area Francia6_area Francia18_area Francia12_area Francia13_area Francia14_area Francia19_area Francia24_area Francia22_area Francia10_area Francia20_area Francia23_area Francia5_area Francia15_area Francia21_area Francia11_area Francia8_area Francia7_area Francia16_area }
+}
+
+Nusantara_region = { #12
+	areas = { Nusantara0_area Nusantara1_area Nusantara2_area Nusantara3_area Nusantara4_area Nusantara5_area Nusantara6_area Nusantara7_area Nusantara8_area Nusantara9_area Nusantara10_area Nusantara11_area }
+}
+
+Guinea_region = { #9
+	areas = { Guinea0_area Guinea1_area Guinea2_area Guinea3_area Guinea4_area Guinea5_area Guinea6_area Guinea7_area Guinea8_area }
+}
+
+Cape_region = { #9
+	areas = { Cape0_area Cape1_area Cape2_area Cape3_area Cape4_area Cape5_area Cape6_area Cape7_area St_Helena_area }
+}
+
+Anatolia_region = { #20
+	areas = { Anatolia6_area Anatolia1_area Anatolia7_area Anatolia3_area Anatolia5_area Anatolia14_area Anatolia4_area Anatolia13_area Anatolia0_area Anatolia8_area Anatolia2_area Anatolia12_area Anatolia9_area Anatolia10_area Anatolia11_area Anatolia17_area Anatolia19_area Anatolia16_area Anatolia15_area Anatolia18_area }
+}
+
+Mashriq_region = { #9
+	areas = { Mashriq0_area Mashriq1_area Mashriq2_area Mashriq3_area Mashriq4_area Mashriq5_area Mashriq6_area Mashriq7_area Mashriq8_area }
+}
+
+Egypt_region = { #14
+	areas = { Egypt0_area Egypt3_area Egypt9_area Egypt11_area Egypt10_area Egypt1_area Egypt13_area Egypt5_area Egypt12_area Egypt2_area Egypt6_area Egypt8_area Egypt4_area Egypt7_area }
+}
+
+Caucasus_region = { #6
+	areas = { Caucasus0_area Caucasus1_area Caucasus2_area Caucasus3_area Caucasus4_area Caucasus5_area }
+}
+
+Cathay_region = { #12
+	areas = { Cathay0_area Cathay1_area Cathay2_area Cathay3_area Cathay4_area Cathay5_area Cathay6_area Cathay7_area Cathay8_area Cathay9_area Cathay10_area Cathay11_area }
+}
+
+Nippon_region = { #6
+	areas = { Nippon0_area Nippon1_area Nippon2_area Nippon3_area Nippon4_area Nippon5_area }
+}
+
+Iberia_region = { #28
+	areas = { Iberia8_area Iberia7_area Iberia6_area Iberia5_area Iberia13_area Iberia9_area Iberia14_area Iberia20_area Iberia24_area Iberia15_area Iberia17_area Iberia10_area Iberia16_area Iberia11_area Iberia12_area Iberia22_area Iberia23_area Iberia18_area Iberia26_area Iberia27_area Iberia21_area Iberia25_area Iberia4_area Iberia0_area Iberia3_area Iberia19_area Iberia1_area Iberia2_area }
+}
+
+Greater_Russia_region = { #15
+	areas = { Greater_Russia0_area Greater_Russia11_area Greater_Russia14_area Greater_Russia13_area Greater_Russia3_area Greater_Russia1_area Greater_Russia12_area Greater_Russia6_area Greater_Russia5_area Greater_Russia10_area Greater_Russia4_area Greater_Russia2_area Greater_Russia9_area Greater_Russia8_area Greater_Russia7_area }
+}
+
+Brazil_region = { #11
+	areas = { Brazil0_area Brazil1_area Brazil2_area Brazil3_area Brazil4_area Brazil5_area Brazil6_area Brazil7_area Brazil8_area Brazil9_area Brazil10_area }
+}
+
+Cauli_region = { #2
+	areas = { Cauli0_area Cauli1_area }
+}
+
+Colombia_region = { #5
+	areas = { Colombia0_area Colombia1_area Colombia2_area Colombia3_area Colombia4_area }
+}
+
+Mesoamerica_region = { #8
+	areas = { Mesoamerica0_area Mesoamerica1_area Mesoamerica2_area Mesoamerica3_area Mesoamerica4_area Mesoamerica5_area Mesoamerica6_area Mesoamerica7_area }
+}
+
+Midwest_region = { #8
+	areas = { Midwest0_area Midwest1_area Midwest2_area Midwest3_area Midwest4_area Midwest5_area Midwest6_area Midwest7_area }
+}
+
+Britannia_region = { #28
+	areas = { Britannia27_area Britannia20_area Britannia14_area Britannia22_area Britannia18_area Britannia15_area Britannia16_area Britannia19_area Britannia25_area Britannia23_area Britannia24_area Britannia17_area Britannia11_area Britannia12_area Britannia13_area Britannia9_area Britannia26_area Britannia8_area Britannia21_area Britannia7_area Britannia6_area Britannia10_area Britannia2_area Britannia3_area Britannia0_area Britannia5_area Britannia4_area Britannia1_area }
+}
+
+Andes_region = { #10
+	areas = { Andes0_area Andes1_area Andes2_area Andes3_area Andes4_area Andes5_area Andes6_area Andes7_area Andes8_area Andes9_area }
+}
+
+Italia_region = { #39
+	areas = { Italia36_area Italia37_area Italia38_area Italia32_area Italia33_area Italia31_area Italia30_area Italia35_area Italia29_area Italia34_area Italia15_area Italia21_area Italia22_area Italia25_area Italia28_area Italia26_area Italia20_area Italia19_area Italia13_area Italia23_area Italia11_area Italia24_area Italia14_area Italia12_area Italia8_area Italia16_area Italia10_area Italia5_area Italia9_area Italia4_area Italia7_area Italia6_area Italia27_area Italia2_area Italia18_area Italia1_area Italia0_area Italia3_area Italia17_area }
+}
+
+Scandia_region = { #28
+	areas = { Scandia5_area Scandia0_area Scandia1_area Scandia4_area Scandia3_area Scandia2_area Scandia23_area Scandia13_area Scandia25_area Scandia20_area Scandia17_area Scandia11_area Scandia14_area Scandia26_area Scandia18_area Scandia15_area Scandia10_area Scandia19_area Scandia22_area Scandia24_area Scandia7_area Scandia12_area Scandia9_area Scandia21_area Scandia6_area Scandia8_area Scandia16_area Scandia27_area }
+}
+
+Pacific_Coast_region = { #8
+	areas = { Pacific_Coast0_area Pacific_Coast1_area Pacific_Coast2_area Pacific_Coast3_area Pacific_Coast4_area Pacific_Coast5_area Pacific_Coast6_area Pacific_Coast7_area }
+}
+
+Baltic_region = { #10
+	areas = { Baltic9_area Baltic6_area Baltic7_area Baltic4_area Baltic5_area Baltic8_area Baltic3_area Baltic2_area Baltic0_area Baltic1_area }
+}
+
+The_Horn_region = { #10
+	areas = { The_Horn0_area The_Horn1_area The_Horn2_area The_Horn3_area The_Horn4_area The_Horn5_area The_Horn6_area The_Horn7_area The_Horn8_area The_Horn9_area }
+}
+
+Siberia_region = { #4
+	areas = { Siberia0_area Siberia1_area Siberia2_area Siberia3_area }
+}
+
+Caribbean_region = { #5
+	areas = { Caribbean0_area Caribbean1_area Caribbean2_area Caribbean3_area Caribbean4_area }
+}
+
+Champa_region = { #11
+	areas = { Champa0_area Champa1_area Champa2_area Champa3_area Champa4_area Champa5_area Champa6_area Champa7_area Champa8_area Champa9_area Champa10_area }
+}
+
+Terra_Australis_region = { #12
+	areas = { Terra_Australis0_area Terra_Australis1_area Terra_Australis2_area Terra_Australis3_area Terra_Australis4_area Terra_Australis5_area Terra_Australis6_area Terra_Australis7_area Terra_Australis8_area Terra_Australis9_area Terra_Australis10_area Terra_Australis11_area }
+}
+
+Great_Plains_region = { #9
+	areas = { Great_Plains0_area Great_Plains1_area Great_Plains2_area Great_Plains3_area Great_Plains4_area Great_Plains5_area Great_Plains6_area Great_Plains7_area Great_Plains8_area }
+}
+
+Micronesia_region = { #3
+	areas = { Demactdia_area Nymelpetra_area Lebelauica_area }
+}
+
+Germania_region = { #38
+	areas = { Germania30_area Germania31_area Germania34_area Germania19_area Germania33_area Germania1_area Germania2_area Germania3_area Germania26_area Germania32_area Germania35_area Germania24_area Germania18_area Germania36_area Germania37_area Germania25_area Germania11_area Germania10_area Germania21_area Germania14_area Germania27_area Germania8_area Germania23_area Germania29_area Germania9_area Germania7_area Germania20_area Germania15_area Germania22_area Germania28_area Germania17_area Germania4_area Germania12_area Germania0_area Germania5_area Germania16_area Germania13_area Germania6_area }
+}
+
+Sarmatia_region = { #31
+	areas = { Sarmatia29_area Sarmatia1_area Sarmatia28_area Sarmatia24_area Sarmatia25_area Sarmatia30_area Sarmatia0_area Sarmatia27_area Sarmatia26_area Sarmatia14_area Sarmatia23_area Sarmatia18_area Sarmatia16_area Sarmatia22_area Sarmatia20_area Sarmatia21_area Sarmatia17_area Sarmatia19_area Sarmatia15_area Sarmatia12_area Sarmatia7_area Sarmatia13_area Sarmatia8_area Sarmatia9_area Sarmatia10_area Sarmatia3_area Sarmatia4_area Sarmatia11_area Sarmatia5_area Sarmatia2_area Sarmatia6_area }
+}
+
+Low_Lands_region = { #9
+	areas = { Low_Lands7_area Low_Lands4_area Low_Lands2_area Low_Lands3_area Low_Lands5_area Low_Lands1_area Low_Lands6_area Low_Lands8_area Low_Lands0_area }
+}
+
+Carpathia_region = { #17
+	areas = { Carpathia6_area Carpathia4_area Carpathia3_area Carpathia5_area Carpathia2_area Carpathia0_area Carpathia9_area Carpathia1_area Carpathia15_area Carpathia12_area Carpathia13_area Carpathia10_area Carpathia14_area Carpathia8_area Carpathia11_area Carpathia7_area Carpathia16_area }
+}
+
+Arabia_region = { #6
+	areas = { Arabia0_area Arabia1_area Arabia2_area Arabia3_area Arabia4_area Arabia5_area }
+}
+
+Sogdiana_region = { #5
+	areas = { Sogdiana0_area Sogdiana1_area Sogdiana2_area Sogdiana3_area Sogdiana4_area }
+}
+
+East_Coast_region = { #5
+	areas = { East_Coast0_area East_Coast1_area East_Coast2_area East_Coast3_area East_Coast4_area }
+}
+
+Uralia_region = { #5
+	areas = { Uralia0_area Uralia1_area Uralia2_area Uralia3_area Uralia4_area }
+}
+
+Persia_region = { #8
+	areas = { Persia0_area Persia1_area Persia2_area Persia3_area Persia4_area Persia5_area Persia6_area Persia7_area }
+}
+
+Pontic_Steppe_region = { #7
+	areas = { Pontic_Steppe0_area Pontic_Steppe1_area Pontic_Steppe2_area Pontic_Steppe3_area Pontic_Steppe4_area Pontic_Steppe5_area Pontic_Steppe6_area }
+}
+
+Hudson_Bay_region = { #4
+	areas = { Hudson_Bay0_area Hudson_Bay1_area Hudson_Bay2_area Hudson_Bay3_area }
+}
+

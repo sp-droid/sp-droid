@@ -1,0 +1,3804 @@
+flanders = { #9
+	provinces = { 594 1198 1532 1563 1765 1956 2081 3405 4157 }
+}
+
+Erytherylia = { #1
+	provinces = { 918 }
+}
+
+Asklmukecia = { #1
+	provinces = { 596 }
+}
+
+Artkiolia = { #10
+	provinces = { 15 1518 1538 2026 2248 2288 2770 2867 3065 3369 }
+}
+
+Imaenios = { #1
+	provinces = { 1546 }
+}
+
+roma = { #6
+	provinces = { 329 2564 2694 3213 4008 4164 }
+}
+
+Kourmukenlia = { #1
+	provinces = { 1600 }
+}
+
+Nymphaigososse = { #12
+	provinces = { 1852 2174 2184 2567 2625 2692 2779 3307 3691 3824 4154 4432 }
+}
+
+Gangabosia = { #1
+	provinces = { 276 }
+}
+
+Kyremasspolis = { #1
+	provinces = { 425 }
+}
+
+Mantinmantinpetra = { #9
+	provinces = { 1395 1516 2188 2296 2571 4323 4342 4366 4750 }
+}
+
+Lecnioli = { #1
+	provinces = { 815 }
+}
+
+Chytabuf = { #10
+	provinces = { 389 983 1282 1926 2755 3415 3481 3745 3981 4504 }
+}
+
+Empcaldia = { #1
+	provinces = { 341 }
+}
+
+Colochyrias = { #1
+	provinces = { 180 }
+}
+
+fondi = { #5
+	provinces = { 1559 2332 2581 2892 3743 }
+}
+
+Klazkaatrea = { #1
+	provinces = { 7 }
+}
+
+Lilamagon = { #1
+	provinces = { 51 }
+}
+
+Itanmeththena = { #1
+	provinces = { 308 }
+}
+
+Miseleonene = { #1
+	provinces = { 1267 }
+}
+
+navarra = { #8
+	provinces = { 1575 2561 2670 2904 3253 3812 4267 4420 }
+}
+
+anjou = { #16
+	provinces = { 1687 1850 1938 2080 2120 2217 2347 2786 3315 3404 3569 3988 4369 4370 4532 4781 }
+}
+
+burgundy = { #13
+	provinces = { 342 840 948 1680 1688 2294 2436 2671 3674 4192 4413 4586 4645 }
+}
+
+limousin = { #9
+	provinces = { 1124 1158 2556 3297 3376 3759 3931 4412 4480 }
+}
+
+gascogne = { #25
+	provinces = { 816 1077 1263 1297 1569 1618 1647 1767 1877 2125 2370 2629 2780 2828 2858 3531 4191 4490 4493 4498 4507 4713 4785 4879 4882 }
+}
+
+ile_de_france = { #17
+	provinces = { 673 1037 1064 1359 1447 1567 1646 1821 1984 2349 2538 2631 2743 2744 4403 4520 4601 }
+}
+
+Lindleprtiri = { #1
+	provinces = { 1557 }
+}
+
+Imbrmaretta = { #14
+	provinces = { 1180 1725 1801 2406 2626 2691 2730 3183 3278 3380 3482 3764 4299 4534 }
+}
+
+Morganantigsos = { #1
+	provinces = { 107 }
+}
+
+Itanhiermea = { #1
+	provinces = { 916 }
+}
+
+Bybgoder = { #1
+	provinces = { 252 }
+}
+
+Methodydus = { #10
+	provinces = { 906 1177 1281 2424 2605 3100 3197 3427 3428 3906 }
+}
+
+Mylgythiera = { #1
+	provinces = { 946 }
+}
+
+Korinthedllai = { #1
+	provinces = { 490 }
+}
+
+Lapgournene = { #12
+	provinces = { 1580 1596 2006 2009 2167 3328 3528 3779 4060 4128 4755 4867 }
+}
+
+Lampsherea = { #1
+	provinces = { 600 }
+}
+
+parma = { #5
+	provinces = { 1296 1763 2978 3727 3781 }
+}
+
+Oeperytheia = { #1
+	provinces = { 647 }
+}
+
+Magolida = { #1
+	provinces = { 140 }
+}
+
+Kynkudus = { #1
+	provinces = { 1320 }
+}
+
+Mukmoate = { #13
+	provinces = { 1585 1611 2054 2066 2777 2961 3379 3725 4236 4249 4445 4728 4729 }
+}
+
+Nymphasson = { #1
+	provinces = { 529 }
+}
+
+Edeithanene = { #1
+	provinces = { 572 }
+}
+
+Mukecorctherna = { #1
+	provinces = { 157 }
+}
+
+Koragrinlia = { #1
+	provinces = { 874 }
+}
+
+Koriorestpetra = { #1
+	provinces = { 98 }
+}
+
+Lockordus = { #1
+	provinces = { 150 }
+}
+
+Athaskina = { #1
+	provinces = { 267 }
+}
+
+Monaodtes = { #6
+	provinces = { 124 2335 2628 4021 4637 4848 }
+}
+
+Laodlepreida = { #1
+	provinces = { 623 }
+}
+
+Berkamarlia = { #1
+	provinces = { 155 }
+}
+
+Hagimantines = { #1
+	provinces = { 626 }
+}
+
+Artemkerkilia = { #6
+	provinces = { 210 1522 2803 3081 3360 4672 }
+}
+
+Clazoepiium = { #11
+	provinces = { 211 1764 2200 2518 2847 3289 3610 3819 4209 4243 4676 }
+}
+
+Alinmaronlia = { #13
+	provinces = { 1451 1573 1656 2148 2343 2635 2649 2970 3061 3592 4377 4425 4537 }
+}
+
+Oncarlis = { #10
+	provinces = { 1025 2030 2537 2840 2896 3097 3256 3803 3920 4874 }
+}
+
+Hermkimmertiri = { #1
+	provinces = { 451 }
+}
+
+Actbergrias = { #1
+	provinces = { 303 }
+}
+
+Lamibergpetra = { #10
+	provinces = { 235 1943 2235 2796 3037 3624 4108 4694 4721 4864 }
+}
+
+Chalckasmlia = { #1
+	provinces = { 1605 }
+}
+
+isernia = { #6
+	provinces = { 240 982 2114 2318 4541 4697 }
+}
+
+Madkameirita = { #1
+	provinces = { 1587 }
+}
+
+Lismetcia = { #1
+	provinces = { 919 }
+}
+
+Golgoepene = { #1
+	provinces = { 1012 }
+}
+
+Bythkasos = { #1
+	provinces = { 553 }
+}
+
+Ydheresmos = { #1
+	provinces = { 227 }
+}
+
+Dimalaronia = { #9
+	provinces = { 2310 2464 2637 2957 3441 3452 3832 4302 4611 }
+}
+
+Mocborysios = { #1
+	provinces = { 287 }
+}
+
+guyenne = { #16
+	provinces = { 486 1615 1761 1786 1844 1939 2240 2700 2826 2860 2990 3301 4231 4268 4372 4797 }
+}
+
+dauphine = { #9
+	provinces = { 820 980 1112 1166 1717 2746 3422 3950 4223 }
+}
+
+Leoolblis = { #1
+	provinces = { 568 }
+}
+
+Golgnicolia = { #1
+	provinces = { 516 }
+}
+
+Chacolcia = { #12
+	provinces = { 2285 2312 2675 2817 2864 3421 3524 3760 4024 4783 4825 4859 }
+}
+
+Delmisdia = { #1
+	provinces = { 513 }
+}
+
+Lamlekllai = { #1
+	provinces = { 66 }
+}
+
+Lapithchaltiri = { #1
+	provinces = { 998 }
+}
+
+Lepreleorea = { #13
+	provinces = { 1582 2048 2109 2590 2679 2684 2886 3017 3177 3220 3423 3586 4355 }
+}
+
+Gazkamecum = { #1
+	provinces = { 25 }
+}
+
+Demcharea = { #11
+	provinces = { 1206 1602 1661 1663 1838 1969 2573 2681 2709 3670 4398 }
+}
+
+Arsleibeaea = { #11
+	provinces = { 1383 1870 1982 2204 2467 2789 2859 3075 3303 3406 4158 }
+}
+
+Linklazorias = { #8
+	provinces = { 540 689 829 1008 2683 2834 3848 4105 }
+}
+
+Oepmarmalis = { #12
+	provinces = { 680 1095 1354 1416 2884 3028 3126 3193 3257 3433 3829 4147 }
+}
+
+Histhyelia = { #10
+	provinces = { 172 223 318 1135 1883 2110 2380 2665 3395 4635 }
+}
+
+Halicmethaium = { #12
+	provinces = { 1751 1771 1897 2099 2386 2688 3137 3184 3407 3554 3604 4581 }
+}
+
+Chegangoas = { #12
+	provinces = { 249 1208 1640 1738 1783 2239 2519 2623 3682 3887 4530 4854 }
+}
+
+Maramallon = { #1
+	provinces = { 752 }
+}
+
+Kalklacum = { #1
+	provinces = { 990 }
+}
+
+Knosleprsos = { #1
+	provinces = { 733 }
+}
+
+Carymetapoinda = { #10
+	provinces = { 509 2830 2968 3023 3113 3450 3606 3675 3762 4271 }
+}
+
+Naueubcia = { #1
+	provinces = { 1289 }
+}
+
+Leicleorias = { #1
+	provinces = { 1249 }
+}
+
+Astoresate = { #1
+	provinces = { 93 }
+}
+
+Imbrorchmos = { #1
+	provinces = { 190 }
+}
+
+Kykorinthica = { #1
+	provinces = { 111 }
+}
+
+Argemporpolis = { #36
+	provinces = { 94 1275 2065 2177 2663 2674 3006 3087 3498 3561 3874 3877 4150 4237 13 649 1062 1379 1808 2111 2619 3354 2650 3063 3868 4629 1607 1874 2029 2570 2648 3368 3979 4112 4603 4435 }
+}
+
+Metmocia = { #12
+	provinces = { 724 999 1577 2311 2477 2783 3123 3357 3732 3876 4213 4612 }
+}
+
+Millmetaponlia = { #4
+	provinces = { 368 2087 2094 2372 }
+}
+
+Koathllai = { #1
+	provinces = { 320 }
+}
+
+Korintdicaeaosse = { #11
+	provinces = { 381 765 2268 2602 2937 3462 3572 3599 3893 3962 4446 }
+}
+
+Kamarmukpolis = { #1
+	provinces = { 175 }
+}
+
+Malleolia = { #1
+	provinces = { 1238 }
+}
+
+hamilton = { #9
+	provinces = { 767 1732 3557 3582 4479 4518 4599 4823 4873 }
+}
+
+Monoastnympdus = { #11
+	provinces = { 734 1260 1394 1446 1664 2063 3292 3495 3905 4283 4324 }
+}
+
+Cniniaeia = { #1
+	provinces = { 586 }
+}
+
+Monastephyrrias = { #7
+	provinces = { 1316 1665 2234 2848 2922 3430 4341 }
+}
+
+Demactdia = { #5
+	provinces = { 510 1492 1668 4305 4647 }
+}
+
+Kamarargosse = { #1
+	provinces = { 748 }
+}
+
+Eubephetiri = { #1
+	provinces = { 888 }
+}
+
+Erykaesmos = { #1
+	provinces = { 849 }
+}
+
+Bardimlia = { #1
+	provinces = { 10 }
+}
+
+Klaopusera = { #7
+	provinces = { 1085 1648 1674 2585 4214 4475 4822 }
+}
+
+Lindlepreila = { #1
+	provinces = { 197 }
+}
+
+york = { #10
+	provinces = { 695 942 2375 2925 3083 3591 3867 4573 4753 4833 }
+}
+
+Mukenmonatalous = { #1
+	provinces = { 822 }
+}
+
+firenze = { #6
+	provinces = { 109 3072 3139 3651 3735 3922 }
+}
+
+Nyaphithera = { #1
+	provinces = { 158 }
+}
+
+Odeoenatrea = { #11
+	provinces = { 1362 1859 2015 2251 2491 2687 2718 2760 3085 3092 3895 }
+}
+
+Kamaigosoli = { #10
+	provinces = { 581 1205 1302 1702 1866 2084 3142 3212 4286 4814 }
+}
+
+Declapilea = { #1
+	provinces = { 2791 }
+}
+
+Milleblea = { #1
+	provinces = { 33 }
+}
+
+Artemmantilea = { #1
+	provinces = { 110 }
+}
+
+sevilla = { #15
+	provinces = { 1896 2412 2926 3261 3265 3279 3646 3705 3710 3849 3933 4009 4155 4424 4673 }
+}
+
+Claemporon = { #1
+	provinces = { 464 }
+}
+
+Morgkorinthlia = { #8
+	provinces = { 375 763 1462 3717 3938 4080 4385 4779 }
+}
+
+Megaloedila = { #12
+	provinces = { 530 1093 1758 2461 2499 2511 2809 3106 3828 3940 3985 4517 }
+}
+
+Hemedeceuf = { #1
+	provinces = { 993 }
+}
+
+Kykasmyra = { #1
+	provinces = { 359 }
+}
+
+Leprecololia = { #12
+	provinces = { 306 899 1134 1393 1683 1902 1946 2165 2787 3156 4188 4309 }
+}
+
+Klazoartus = { #1
+	provinces = { 217 }
+}
+
+Marhagios = { #10
+	provinces = { 1078 1623 1825 2082 2622 2769 3076 3607 3993 4625 }
+}
+
+provence = { #18
+	provinces = { 97 432 991 1178 1319 1343 1831 1886 2280 2554 2857 2861 3268 3457 3533 4229 4410 4812 }
+}
+
+Hermidececia = { #10
+	provinces = { 327 667 1846 1848 2863 3460 4127 4190 4664 4189 }
+}
+
+Kameargyrsos = { #13
+	provinces = { 1631 1644 1703 1730 2794 3648 3707 3738 3811 3917 3918 3958 4578 }
+}
+
+Didymarmaus = { #12
+	provinces = { 610 927 2175 2609 2946 3385 3487 3954 4002 4501 4580 4652 }
+}
+
+Kouedina = { #1
+	provinces = { 215 }
+}
+
+Opuslepdos = { #1
+	provinces = { 336 }
+}
+
+Leimegalosse = { #1
+	provinces = { 2108 }
+}
+
+Madhubtiri = { #1
+	provinces = { 149 }
+}
+
+meath = { #5
+	provinces = { 1501 1996 2339 3914 4085 }
+}
+
+Milknidrea = { #13
+	provinces = { 524 947 1742 2451 2502 2816 2999 3016 3627 3821 3968 4065 4310 }
+}
+
+Alinantider = { #1
+	provinces = { 802 }
+}
+
+Lariialymea = { #1
+	provinces = { 136 }
+}
+
+Gorgicleothena = { #1
+	provinces = { 528 }
+}
+
+Morganempium = { #12
+	provinces = { 842 1802 1928 2805 3530 3748 3751 4044 4251 4553 4556 4834 }
+}
+
+Jukkniica = { #1
+	provinces = { 117 }
+}
+
+Kimmdyion = { #7
+	provinces = { 1634 2020 2682 2811 3844 4079 4685 }
+}
+
+Kimdemetrias = { #1
+	provinces = { 981 }
+}
+
+Hublmonastoas = { #11
+	provinces = { 889 963 2159 2595 2757 2813 3051 3513 3841 4543 4704 }
+}
+
+Maneacia = { #1
+	provinces = { 548 }
+}
+
+Gorhelioli = { #1
+	provinces = { 372 }
+}
+
+Dornyum = { #7
+	provinces = { 434 1312 2379 2793 3309 4471 4845 }
+}
+
+Larididita = { #9
+	provinces = { 363 1293 1483 1782 2014 2353 2657 2749 4064 }
+}
+
+Knimorgaaea = { #1
+	provinces = { 831 }
+}
+
+galicia = { #15
+	provinces = { 1364 1372 1433 1456 2367 2584 2677 2717 3084 3179 3765 4052 4255 4638 297 }
+}
+
+Oromarmeia = { #1
+	provinces = { 338 }
+}
+
+Hublilaai = { #5
+	provinces = { 1523 2593 2667 2678 2831 }
+}
+
+Lapitmetaplia = { #6
+	provinces = { 231 242 2116 2216 3999 4613 }
+}
+
+Nymphdypetra = { #9
+	provinces = { 935 1126 2304 2315 2838 3145 3998 4098 4583 }
+}
+
+Empodelica = { #1
+	provinces = { 578 }
+}
+
+somerset = { #8
+	provinces = { 1514 2498 2887 3259 3411 4003 4051 4838 }
+}
+
+Callichytaea = { #1
+	provinces = { 749 }
+}
+
+Kaniasmos = { #1
+	provinces = { 653 }
+}
+
+Malldemeton = { #1
+	provinces = { 1106 }
+}
+
+Lapliica = { #11
+	provinces = { 602 962 1065 1156 1353 1770 1805 1994 2002 4561 4617 }
+}
+
+Dimagolglia = { #1
+	provinces = { 461 }
+}
+
+Marmaina = { #11
+	provinces = { 587 773 1417 1625 1909 2656 2924 2966 3248 3489 3746 }
+}
+
+Knidastene = { #1
+	provinces = { 1027 }
+}
+
+modena = { #5
+	provinces = { 2839 3240 3515 3595 3912 }
+}
+
+foggia = { #6
+	provinces = { 725 1875 2022 3700 4015 4452 }
+}
+
+Metakulia = { #11
+	provinces = { 1018 1101 1696 2401 2705 2722 2983 3108 4017 4462 4762 }
+}
+
+jaen = { #6
+	provinces = { 1566 1960 2569 3961 4074 4646 }
+}
+
+Korintorestder = { #1
+	provinces = { 1691 }
+}
+
+Klachallai = { #1
+	provinces = { 113 }
+}
+
+Empaphiaea = { #1
+	provinces = { 898 }
+}
+
+Ydaigosthena = { #4
+	provinces = { 1500 3925 3992 4025 }
+}
+
+Elatgythmos = { #11
+	provinces = { 14 53 1517 1713 2307 2473 2540 2725 3565 4026 4143 }
+}
+
+Hermopoas = { #1
+	provinces = { 421 }
+}
+
+Lilalilalia = { #12
+	provinces = { 614 904 2490 2689 2821 3015 3838 3891 4100 4138 4383 4640 }
+}
+
+Hellesgondus = { #1
+	provinces = { 872 }
+}
+
+Bhyrtkoipolis = { #1
+	provinces = { 4204 }
+}
+
+Golgalitiri = { #4
+	provinces = { 1437 2241 2910 3497 }
+}
+
+Lekhoriclia = { #1
+	provinces = { 738 }
+}
+
+Lefkakerkmos = { #12
+	provinces = { 909 1022 1389 1697 2105 2183 2865 3445 4035 4481 4712 4818 }
+}
+
+Alaonllai = { #1
+	provinces = { 46 }
+}
+
+Koihieene = { #4
+	provinces = { 1681 1776 4276 4380 }
+}
+
+Lepolyinda = { #1
+	provinces = { 131 }
+}
+
+Amamukenthus = { #1
+	provinces = { 385 }
+}
+
+Madartemeia = { #1
+	provinces = { 442 }
+}
+
+Kimmenympila = { #1
+	provinces = { 184 }
+}
+
+Naxmorgansos = { #11
+	provinces = { 1633 1723 2645 2801 2875 3133 3456 3769 4182 4584 4803 }
+}
+
+Demetmonates = { #1
+	provinces = { 646 }
+}
+
+Elenymphiana = { #3
+	provinces = { 1895 2879 3949 }
+}
+
+Naxkyrae = { #10
+	provinces = { 1457 1643 1785 2091 2173 2309 2542 3044 3502 3726 }
+}
+
+Aytkylis = { #1
+	provinces = { 890 }
+}
+
+Antipkimdos = { #1
+	provinces = { 165 }
+}
+
+Lapiartemdus = { #1
+	provinces = { 491 }
+}
+
+Hecleoalous = { #1
+	provinces = { 2 }
+}
+
+Laodiclazolia = { #14
+	provinces = { 631 1519 1888 1936 2112 2336 2415 2445 2583 2752 3310 4053 4242 4463 }
+}
+
+Decabmea = { #10
+	provinces = { 677 1828 1979 2586 2920 3529 3800 4129 4567 4609 }
+}
+
+poitou = { #11
+	provinces = { 1036 1109 1114 1227 1650 2514 3143 3300 4125 4408 4450 }
+}
+
+Idalmethocum = { #1
+	provinces = { 742 }
+}
+
+Dememporuf = { #1
+	provinces = { 1186 }
+}
+
+cuenca = { #7
+	provinces = { 1867 2364 3128 3200 3485 4198 4828 }
+}
+
+Aytmaraon = { #1
+	provinces = { 322 }
+}
+
+Decebythum = { #1
+	provinces = { 940 }
+}
+
+salamanca = { #6
+	provinces = { 151 2021 3431 3696 3754 4186 }
+}
+
+Gormilllea = { #9
+	provinces = { 307 317 469 664 1006 2301 3345 4075 4233 }
+}
+
+Amnilarisatrea = { #1
+	provinces = { 534 }
+}
+
+Arggournlia = { #1
+	provinces = { 1239 }
+}
+
+Delleontonia = { #12
+	provinces = { 309 770 902 1317 1950 2155 2929 2943 3319 3504 4106 4440 }
+}
+
+Hieramochum = { #8
+	provinces = { 1355 1748 1812 2359 3464 3955 3963 4802 }
+}
+
+Hagonlia = { #1
+	provinces = { 591 }
+}
+
+Oresitaila = { #1
+	provinces = { 186 }
+}
+
+Askgortessa = { #12
+	provinces = { 1728 1920 1995 2032 2043 2292 2776 2938 3024 3924 4628 4770 }
+}
+
+Histrmalai = { #1
+	provinces = { 728 }
+}
+
+Juknodus = { #9
+	provinces = { 780 1157 1787 1819 1976 2668 3226 4032 4618 }
+}
+
+Larihermita = { #1
+	provinces = { 846 }
+}
+
+granada = { #14
+	provinces = { 26 693 958 1066 1295 1513 1550 1804 2931 3459 3688 3752 4371 4739 }
+}
+
+normandy = { #18
+	provinces = { 189 203 753 859 956 1088 1220 1682 1940 2321 2351 2701 2991 3209 4194 4415 4563 4619 }
+}
+
+Ambrliida = { #5
+	provinces = { 2478 3458 3580 3596 3826 }
+}
+
+Edkiothus = { #1
+	provinces = { 57 }
+}
+
+Alacalita = { #7
+	provinces = { 1161 1300 3169 3724 4196 4246 4568 }
+}
+
+Bhyrtclazcia = { #1
+	provinces = { 1089 }
+}
+
+Empomeson = { #1
+	provinces = { 1465 }
+}
+
+Cleoedaea = { #5
+	provinces = { 1536 2960 3026 3573 3699 }
+}
+
+Neoptherna = { #10
+	provinces = { 538 775 1151 1541 2559 3453 3673 3796 4056 4488 }
+}
+
+Madyodetta = { #12
+	provinces = { 1344 1833 1893 2661 3235 3356 3733 3862 4038 4361 4606 4642 }
+}
+
+Golghethus = { #1
+	provinces = { 782 }
+}
+
+Dicaeakorinuf = { #12
+	provinces = { 1419 1440 1711 1739 2042 2685 2799 2987 3255 3349 4107 4780 }
+}
+
+Methaastpetra = { #6
+	provinces = { 1081 2965 3455 4454 4472 4548 }
+}
+
+Meghemelia = { #12
+	provinces = { 30 34 44 299 1933 2981 3068 3215 3939 4109 4215 4757 }
+}
+
+Haglekica = { #1
+	provinces = { 625 }
+}
+
+Hierimbrica = { #1
+	provinces = { 400 }
+}
+
+Demlepratrea = { #1
+	provinces = { 262 }
+}
+
+Doryelaai = { #1
+	provinces = { 943 }
+}
+
+Byblilamenus = { #1
+	provinces = { 1034 }
+}
+
+Gorgiknidai = { #7
+	provinces = { 1105 1779 1839 2244 2693 3901 4275 }
+}
+
+Argmetapllai = { #1
+	provinces = { 2297 }
+}
+
+Ephekercia = { #11
+	provinces = { 611 800 926 1689 2160 2260 2289 3929 4116 4515 4806 }
+}
+
+Arsklazolea = { #1
+	provinces = { 665 }
+}
+
+Gorepidessa = { #1
+	provinces = { 21 }
+}
+
+Gonorictes = { #1
+	provinces = { 536 }
+}
+
+Lilaimbon = { #11
+	provinces = { 797 1858 2422 2751 3293 3425 3641 3815 4447 4508 4687 }
+}
+
+Jukmonastioli = { #12
+	provinces = { 826 1232 1842 2134 2534 3424 3493 3659 4394 4502 4598 4744 }
+}
+
+Olymonaae = { #1
+	provinces = { 83 }
+}
+
+Lammadlia = { #1
+	provinces = { 376 }
+}
+
+Kameleslia = { #8
+	provinces = { 1346 1843 2509 3221 3331 3412 3978 3982 }
+}
+
+Lebmallila = { #1
+	provinces = { 339 }
+}
+
+Askchallia = { #1
+	provinces = { 1120 }
+}
+
+Leonlefkainon = { #1
+	provinces = { 406 }
+}
+
+Kouramaryios = { #9
+	provinces = { 2225 2438 2995 3036 3189 3274 3571 3617 4401 }
+}
+
+Chalinonia = { #1
+	provinces = { 837 }
+}
+
+Muchiai = { #7
+	provinces = { 805 2313 2314 2560 2720 3413 3798 }
+}
+
+Kaskannonia = { #1
+	provinces = { 355 }
+}
+
+Challekhpolis = { #1
+	provinces = { 2005 }
+}
+
+Mulcalylea = { #6
+	provinces = { 843 3192 3272 3291 4132 4277 }
+}
+
+Hilamea = { #8
+	provinces = { 470 834 1579 2893 3448 4011 4521 4768 }
+}
+
+Ithanmassder = { #1
+	provinces = { 333 }
+}
+
+Chalauum = { #1
+	provinces = { 84 }
+}
+
+Ydhiethera = { #12
+	provinces = { 634 1856 2036 2479 2541 3086 3155 3620 3722 4145 4406 4860 }
+}
+
+Masskimmelia = { #1
+	provinces = { 137 }
+}
+
+Helnemdia = { #9
+	provinces = { 868 1286 1510 1863 2902 4013 4086 4718 4852 }
+}
+
+Dioschalcum = { #1
+	provinces = { 247 }
+}
+
+Edcormea = { #10
+	provinces = { 714 1194 1236 1270 1330 1699 1998 2346 4031 4055 }
+}
+
+Methamukemea = { #16
+	provinces = { 1080 1572 1865 1891 2906 3475 3615 3644 3952 4054 4513 1759 2101 3080 3681 4334 }
+}
+
+Emphublatrea = { #1
+	provinces = { 911 }
+}
+
+Lampsajuktes = { #13
+	provinces = { 766 896 1477 1830 2031 2152 2187 2286 3540 3740 4152 4476 4855 }
+}
+
+Dimajuinda = { #7
+	provinces = { 2463 3114 3640 3676 3716 4062 4258 }
+}
+
+Hieralilainon = { #1
+	provinces = { 1949 }
+}
+
+Orchgesos = { #1
+	provinces = { 64 }
+}
+
+bourbon = { #10
+	provinces = { 485 754 952 960 1718 1720 1913 3568 3987 4269 }
+}
+
+Maralampsrias = { #1
+	provinces = { 979 }
+}
+
+Kanngolgthos = { #5
+	provinces = { 878 1449 1818 2192 2522 }
+}
+
+Adramolyida = { #9
+	provinces = { 879 2512 2898 3314 3500 3654 4405 4439 4741 }
+}
+
+Manbrates = { #10
+	provinces = { 1617 1872 1890 2276 2291 3138 3282 3756 4230 4303 }
+}
+
+pisa = { #5
+	provinces = { 1545 1788 2869 3043 4464 }
+}
+
+Laodolbimos = { #11
+	provinces = { 589 2011 2045 2400 2712 2756 3047 3054 3665 4225 4554 }
+}
+
+Boryskourites = { #1
+	provinces = { 891 }
+}
+
+Mantasilia = { #1
+	provinces = { 199 }
+}
+
+Aigcaline = { #1
+	provinces = { 792 }
+}
+
+Lebeiasissa = { #1
+	provinces = { 125 }
+}
+
+Millmethalia = { #10
+	provinces = { 1321 1746 2341 2998 3053 3258 3908 4036 4093 4172 }
+}
+
+Metkorios = { #14
+	provinces = { 1207 1323 1606 2421 2993 3059 3818 3843 3913 4335 4428 4529 4595 4857 }
+}
+
+Mantinkouridia = { #1
+	provinces = { 525 }
+}
+
+valladolid = { #12
+	provinces = { 727 814 1356 2069 2484 2621 3104 3534 3878 3910 4535 4675 }
+}
+
+Emporkiolia = { #4
+	provinces = { 599 907 3545 4222 }
+}
+
+Empcymlia = { #1
+	provinces = { 590 }
+}
+
+Lildelene = { #1
+	provinces = { 498 }
+}
+
+Nympoentes = { #12
+	provinces = { 723 1737 2721 2728 2889 3788 3900 4358 4510 4614 4649 4856 }
+}
+
+mallorca = { #3
+	provinces = { 2562 3858 4117 }
+}
+
+Leonlamioas = { #14
+	provinces = { 663 691 1226 1243 1398 1735 2633 3079 3230 3313 3505 3972 4146 4776 }
+}
+
+Imiolctrias = { #1
+	provinces = { 642 }
+}
+
+Chalimetta = { #7
+	provinces = { 875 1422 1712 1803 2695 3567 4200 }
+}
+
+Dorymallnes = { #1
+	provinces = { 823 }
+}
+
+Morgkameiissa = { #1
+	provinces = { 924 }
+}
+
+Lesimida = { #10
+	provinces = { 1015 2281 2393 2417 2435 2908 3471 3496 4203 4651 }
+}
+
+Ereseretyra = { #1
+	provinces = { 431 }
+}
+
+Hyeassine = { #1
+	provinces = { 925 }
+}
+
+Korintmetaptiri = { #1
+	provinces = { 39 }
+}
+
+Gelidalyra = { #1
+	provinces = { 181 }
+}
+
+Hemekydessa = { #1
+	provinces = { 565 }
+}
+
+catalunya = { #19
+	provinces = { 23 1123 1245 1310 1350 2051 2194 2218 2338 2365 3094 3095 3320 3392 3614 3734 4346 4395 4575 }
+}
+
+Deljuate = { #2
+	provinces = { 3039 435 }
+}
+
+Hermdimathrae = { #1
+	provinces = { 987 }
+}
+
+Monasaegoli = { #1
+	provinces = { 964 }
+}
+
+Lebelauica = { #3
+	provinces = { 163 1721 2466 }
+}
+
+Leonorchothena = { #1
+	provinces = { 1251 }
+}
+
+Lilliloli = { #12
+	provinces = { 580 945 2071 2444 2986 3308 3661 3749 4043 4177 4434 4746 }
+}
+
+Cebrmoralous = { #1
+	provinces = { 92 }
+}
+
+Milmisthos = { #1
+	provinces = { 1291 }
+}
+
+Kamamonaslea = { #11
+	provinces = { 28 386 1424 1543 1636 2385 3109 3397 4042 4078 4634 }
+}
+
+Carylefkaoli = { #1
+	provinces = { 1620 }
+}
+
+Locrartemai = { #1
+	provinces = { 1694 }
+}
+
+Onchnystes = { #10
+	provinces = { 1396 2357 2536 3052 3276 3323 4232 4429 4461 4846 }
+}
+
+Ashiica = { #12
+	provinces = { 810 1016 1218 1399 1917 1997 2166 2742 3071 3786 4571 4842 }
+}
+
+Demetkameithrae = { #10
+	provinces = { 310 1496 1815 2096 2383 2489 2732 2877 3118 4179 }
+}
+
+cornwall = { #5
+	provinces = { 1203 2430 3191 4456 4808 }
+}
+
+isle_of_man = { #1
+	provinces = { 260 }
+}
+
+ribatejo = { #5
+	provinces = { 1370 2019 2775 3645 4769 }
+}
+
+Leonoreita = { #1
+	provinces = { 430 }
+}
+
+Marmlamthrae = { #13
+	provinces = { 1705 2064 2176 2382 2600 2676 3045 3070 3122 3774 4101 4184 4353 }
+}
+
+Antiantilia = { #7
+	provinces = { 1185 1277 2646 3058 3124 3698 4684 }
+}
+
+Alehemerea = { #5
+	provinces = { 1861 1925 3154 3577 4069 }
+}
+
+Cheropthera = { #9
+	provinces = { 1505 2428 2494 2795 2944 3234 4087 4250 4376 }
+}
+
+Naxkimmerinda = { #10
+	provinces = { 1283 1884 2387 2457 3116 3136 3353 3928 4149 4208 }
+}
+
+Kudiosmea = { #1
+	provinces = { 1341 }
+}
+
+Meslarisosia = { #2
+	provinces = { 1752 2630 }
+}
+
+Kanaxoas = { #1
+	provinces = { 559 }
+}
+
+Antikameirlia = { #1
+	provinces = { 976 }
+}
+
+Leikyrelia = { #8
+	provinces = { 978 1002 2653 3205 3845 4018 4028 4362 }
+}
+
+Gorgigothera = { #12
+	provinces = { 1213 1987 2150 2226 2460 2603 3141 3361 3636 4133 4178 4433 }
+}
+
+Maraterythinda = { #1
+	provinces = { 1373 }
+}
+
+Kororictrias = { #1
+	provinces = { 813 }
+}
+
+Kerankthrae = { #1
+	provinces = { 454 }
+}
+
+Chytmethyra = { #7
+	provinces = { 1170 2154 2643 2654 3151 4099 4559 }
+}
+
+Megalephydos = { #1
+	provinces = { 279 }
+}
+
+Apollmagnellai = { #1
+	provinces = { 1118 }
+}
+
+Corcknosoli = { #15
+	provinces = { 316 362 760 1436 1622 2129 2790 3103 3198 3227 3588 3686 3872 4119 4709 }
+}
+
+bar = { #11
+	provinces = { 808 869 1071 1914 3437 3472 3512 3602 3761 4270 4453 }
+}
+
+valencia = { #12
+	provinces = { 1099 1698 2505 2566 2582 2647 2956 3285 3720 4067 4343 4459 }
+}
+
+Kerkialyita = { #1
+	provinces = { 497 }
+}
+
+Chalcnympoli = { #1
+	provinces = { 650 }
+}
+
+Mamethoica = { #11
+	provinces = { 8 2333 2855 3013 3161 3339 3538 3708 3785 3970 4216 }
+}
+
+Morganeleualous = { #1
+	provinces = { 598 }
+}
+
+buccleuch = { #7
+	provinces = { 3273 3549 3585 3930 3960 4526 4835 }
+}
+
+Lemukum = { #1
+	provinces = { 622 }
+}
+
+leon = { #10
+	provinces = { 1058 1540 1930 2180 2322 2497 2856 3335 3915 4240 }
+}
+
+Eledymetta = { #1
+	provinces = { 1464 }
+}
+
+Muolyai = { #1
+	provinces = { 615 }
+}
+
+Megahierauf = { #6
+	provinces = { 1014 1412 2402 3018 4091 4280 }
+}
+
+Demeteublia = { #12
+	provinces = { 588 1007 1385 1619 1769 1834 1983 2390 3157 3343 3757 4124 }
+}
+
+Dimakorinyra = { #1
+	provinces = { 407 }
+}
+
+Mukejuktes = { #11
+	provinces = { 1144 1209 1265 1947 2010 3120 3241 3434 3520 3820 4555 }
+}
+
+perugia = { #8
+	provinces = { 1368 3032 3172 3704 4253 4378 4393 4590 }
+}
+
+genoa = { #5
+	provinces = { 1855 2374 2923 4285 4560 }
+}
+
+Oepaleios = { #12
+	provinces = { 1023 1474 1868 2191 3125 3182 3383 4151 4387 4473 4542 4549 }
+}
+
+Ialithathrae = { #1
+	provinces = { 1954 }
+}
+
+Morganitanaea = { #1
+	provinces = { 228 }
+}
+
+Ephyrhethrae = { #1
+	provinces = { 69 }
+}
+
+Gorkydoion = { #1
+	provinces = { 1957 }
+}
+
+Metapoagrinine = { #1
+	provinces = { 1029 }
+}
+
+Naydessa = { #1
+	provinces = { 627 }
+}
+
+Kemesemyra = { #6
+	provinces = { 3 1744 2013 2596 3040 4207 }
+}
+
+berry = { #9
+	provinces = { 746 1590 1823 1847 1948 2003 2126 3342 4764 }
+}
+
+Amarlarisetta = { #1
+	provinces = { 161 }
+}
+
+Gorthymos = { #1
+	provinces = { 59 }
+}
+
+Maroidalai = { #1
+	provinces = { 1271 }
+}
+
+Dorcallithos = { #8
+	provinces = { 1214 3329 3619 4014 4313 4608 4791 4849 }
+}
+
+Imbclazothus = { #11
+	provinces = { 399 861 1455 1527 1716 1753 1795 2465 2829 3225 3836 }
+}
+
+Antignymphum = { #12
+	provinces = { 1578 1589 1898 2425 2849 2851 2955 2977 3096 4315 4326 2446 }
+}
+
+Hymarlia = { #11
+	provinces = { 2189 2249 2262 2429 2662 3296 3435 3642 4226 4316 4570 }
+}
+
+Dioskorilia = { #5
+	provinces = { 1090 1968 2360 4029 4321 }
+}
+
+Chalcherthos = { #10
+	provinces = { 466 1044 1849 2975 3088 3927 4274 4365 4626 4643 }
+}
+
+Megalolampyra = { #10
+	provinces = { 456 1690 2524 2624 3098 3194 3393 3600 4162 4743 }
+}
+
+Amiknidthus = { #1
+	provinces = { 656 }
+}
+
+Hermachyra = { #4
+	provinces = { 1046 3132 3514 3516 }
+}
+
+Epimassate = { #12
+	provinces = { 1555 1726 2266 2935 3105 3346 3364 3449 3780 3941 4322 4659 }
+}
+
+Aigaskpolis = { #1
+	provinces = { 1045 }
+}
+
+Immassaetta = { #12
+	provinces = { 795 920 1274 1780 1832 2773 3010 3129 3196 4292 4574 4631 }
+}
+
+Kydoempthus = { #1
+	provinces = { 1133 }
+}
+
+Herorelea = { #1
+	provinces = { 1153 }
+}
+
+Argolynalous = { #13
+	provinces = { 1050 1588 1807 2057 2250 2267 3517 3747 3787 4068 4120 4359 4557 }
+}
+
+Helinysosia = { #8
+	provinces = { 2128 3078 3338 3358 3575 3763 4438 4451 }
+}
+
+Hermiolia = { #5
+	provinces = { 639 1386 2352 2404 2610 }
+}
+
+Monastilisissa = { #1
+	provinces = { 821 }
+}
+
+hereford = { #6
+	provinces = { 1692 2290 2507 2894 4804 4819 }
+}
+
+Leopusos = { #1
+	provinces = { 1469 }
+}
+
+wales = { #4
+	provinces = { 892 3275 4140 4692 }
+}
+
+Carydemai = { #1
+	provinces = { 340 }
+}
+
+Larisdiosmos = { #8
+	provinces = { 1610 2161 2472 3207 3501 3589 3655 3831 }
+}
+
+Morgamaratthos = { #9
+	provinces = { 1345 1657 2171 2378 2396 2765 2936 3208 3365 }
+}
+
+Aigithatrias = { #4
+	provinces = { 2442 3210 3964 4264 }
+}
+
+Odeslison = { #5
+	provinces = { 467 1952 2193 3066 4333 }
+}
+
+Megalopumos = { #1
+	provinces = { 429 }
+}
+
+Naubythlia = { #1
+	provinces = { 866 }
+}
+
+Helorila = { #1
+	provinces = { 1072 }
+}
+
+Metaponganmea = { #1
+	provinces = { 1069 }
+}
+
+Aegmegalida = { #11
+	provinces = { 365 1146 1445 1515 2433 2608 2697 3224 3633 4114 4698 }
+}
+
+Olbinicoica = { #1
+	provinces = { 2355 }
+}
+
+Mantastera = { #14
+	provinces = { 380 1324 2060 3131 3290 3775 3804 4160 4245 4273 4300 4319 4382 4627 }
+}
+
+Hieragazcum = { #5
+	provinces = { 635 2151 2618 2897 4666 }
+}
+
+taranto = { #11
+	provinces = { 1707 1985 2046 2413 2802 2883 3250 3578 4095 4217 4671 }
+}
+
+Gonapollera = { #12
+	provinces = { 18 1149 1553 1790 1986 2195 3150 3262 3711 4142 4176 4657 }
+}
+
+Juagrinene = { #1
+	provinces = { 1049 }
+}
+
+Hikamarai = { #13
+	provinces = { 35 721 771 1104 2115 2308 3030 3199 3231 3563 3753 3896 4417 }
+}
+
+orkney = { #3
+	provinces = { 2261 2264 3468 }
+}
+
+Colartemyra = { #1
+	provinces = { 229 }
+}
+
+Caryalioas = { #14
+	provinces = { 543 1082 1442 2452 2606 2812 2846 3121 3919 3937 4046 4103 4858 4878 }
+}
+
+albany = { #10
+	provinces = { 1021 1482 2243 2597 3181 3510 3750 4071 4096 4810 }
+}
+
+Ioiolum = { #11
+	provinces = { 1311 1459 1836 2201 2745 2862 3195 3236 3907 4832 4840 }
+}
+
+Cythbergthus = { #11
+	provinces = { 1561 1645 1749 2146 2575 3244 3381 3697 3834 3977 4678 }
+}
+
+alentejo = { #10
+	provinces = { 1497 2055 2271 2483 2808 3888 4020 4262 4703 4869 }
+}
+
+Ialmisealous = { #1
+	provinces = { 387 }
+}
+
+Morganganinon = { #1
+	provinces = { 682 }
+}
+
+Corcgourntiri = { #1
+	provinces = { 1028 }
+}
+
+Kameihisissa = { #1
+	provinces = { 1098 }
+}
+
+Lapithlalia = { #1
+	provinces = { 1204 }
+}
+
+Ialmamea = { #1
+	provinces = { 1102 }
+}
+
+britanny = { #26
+	provinces = { 96 101 564 996 1070 1360 1454 1722 1915 1958 2041 2232 2350 2391 2579 2699 2785 2909 2949 2959 3188 3535 3986 4159 4195 4801 }
+}
+
+franche_comte = { #10
+	provinces = { 812 959 1005 1160 1225 1999 2293 2394 4414 4585 }
+}
+
+Marmethoium = { #10
+	provinces = { 583 1004 1524 1535 1603 2258 2792 3286 3306 4730 }
+}
+
+Itacorcia = { #5
+	provinces = { 1164 2004 2942 3101 4407 }
+}
+
+Ormonastae = { #7
+	provinces = { 1216 1509 1991 3723 3991 4588 4796 }
+}
+
+Epidmetaporias = { #1
+	provinces = { 82 }
+}
+
+Histrepidtiri = { #11
+	provinces = { 2025 2172 2214 2641 3270 3336 3443 3587 4037 4039 4244 }
+}
+
+Hubkynus = { #1
+	provinces = { 371 }
+}
+
+ulster = { #16
+	provinces = { 895 1570 1670 2088 2103 2410 2598 2850 2911 3518 3663 3852 3879 3882 4005 4349 }
+}
+
+thomond = { #6
+	provinces = { 1599 1624 2085 3170 3694 4866 }
+}
+
+Boukymos = { #8
+	provinces = { 499 972 1899 2007 3438 3936 4082 4123 }
+}
+
+Lapithonlia = { #1
+	provinces = { 90 }
+}
+
+Elkorinthica = { #1
+	provinces = { 473 }
+}
+
+Lemorganrias = { #1
+	provinces = { 3446 }
+}
+
+Dornalia = { #1
+	provinces = { 1256 }
+}
+
+Dimaelon = { #1
+	provinces = { 360 }
+}
+
+Epikorimenus = { #8
+	provinces = { 2039 2443 2707 3277 3794 4351 4525 4727 }
+}
+
+Maronitanthrae = { #1
+	provinces = { 1032 }
+}
+
+Kourdymus = { #1
+	provinces = { 255 }
+}
+
+Askdimaonia = { #1
+	provinces = { 850 }
+}
+
+Korinthhynae = { #1
+	provinces = { 348 }
+}
+
+Hubmarmayra = { #1
+	provinces = { 944 }
+}
+
+Crotbyllsos = { #1
+	provinces = { 1503 }
+}
+
+Amphiamiuf = { #10
+	provinces = { 641 1129 1827 2459 2731 3048 3288 3324 3899 4641 }
+}
+
+Idaljuktus = { #12
+	provinces = { 968 1472 1791 2018 2211 2493 3791 3846 4364 4374 4422 4691 }
+}
+
+Gorolynlea = { #12
+	provinces = { 448 1163 1480 1675 1942 2940 2996 3973 4153 4312 4396 4499 }
+}
+
+Gametaoli = { #1
+	provinces = { 204 }
+}
+
+Doralethena = { #12
+	provinces = { 1223 1262 1279 1313 1613 1754 1822 1937 2000 2515 3408 4373 }
+}
+
+leinster = { #10
+	provinces = { 873 1547 1549 2136 2696 2710 3042 3264 3612 4528 }
+}
+
+Haglinmos = { #6
+	provinces = { 640 2207 2815 3287 4001 4187 }
+}
+
+asturias = { #6
+	provinces = { 337 1406 1813 2651 3721 3808 }
+}
+
+Agrinimbtes = { #12
+	provinces = { 894 930 2092 2565 2613 2882 3359 3739 3951 4402 4820 4847 }
+}
+
+Corcasklera = { #1
+	provinces = { 607 }
+}
+
+Mylagoaea = { #1
+	provinces = { 311 }
+}
+
+Lefkkydoinda = { #10
+	provinces = { 609 1145 1629 2182 2423 2835 3110 3148 3526 4363 }
+}
+
+Nirkamaessa = { #1
+	provinces = { 811 }
+}
+
+Lineida = { #7
+	provinces = { 27 243 2932 3263 3801 3871 4350 }
+}
+
+champagne = { #17
+	provinces = { 281 1061 1382 1638 1750 1797 1814 2395 2568 3152 3299 3579 4110 4680 4745 4799 4880 }
+}
+
+Orchoaeniana = { #14
+	provinces = { 992 1130 1258 2397 2470 2672 2704 2748 2979 3206 3439 3605 4624 4665 }
+}
+
+Bergheliyra = { #1
+	provinces = { 142 }
+}
+
+Chalcoroonia = { #1
+	provinces = { 156 }
+}
+
+Elatcyoli = { #1
+	provinces = { 579 }
+}
+
+the_isles = { #8
+	provinces = { 630 900 2890 3232 3245 3542 3847 4679 }
+}
+
+beira = { #10
+	provinces = { 2215 2324 2845 3521 3677 3736 3793 3806 3897 4720 }
+}
+
+Megalarison = { #1
+	provinces = { 479 }
+}
+
+Kumislis = { #1
+	provinces = { 877 }
+}
+
+Akrgazine = { #1
+	provinces = { 1169 }
+}
+
+Kamaaigosthus = { #3
+	provinces = { 688 687 686 }
+}
+
+Agrinchyoli = { #1
+	provinces = { 1171 }
+}
+
+Iolapieia = { #1
+	provinces = { 474 }
+}
+
+segovia = { #6
+	provinces = { 1240 1371 1971 2614 3652 4569 }
+}
+
+Gokatita = { #10
+	provinces = { 284 1196 1255 2824 2905 3246 3656 4047 4332 4531 }
+}
+
+Monasherida = { #12
+	provinces = { 1175 2118 2306 2392 2852 2854 3239 3544 3709 3790 3885 4121 }
+}
+
+Mukedymita = { #11
+	provinces = { 1407 1409 2075 2533 2658 3321 3325 3562 3637 3771 4778 }
+}
+
+Odessaegllai = { #10
+	provinces = { 1811 1989 2008 2059 2726 3159 3807 4077 4700 4805 }
+}
+
+Katiolcoas = { #1
+	provinces = { 914 }
+}
+
+Callimonthos = { #1
+	provinces = { 769 }
+}
+
+Cherscololi = { #12
+	provinces = { 1970 2213 2453 2576 2798 2921 3330 3850 3902 3903 4012 4655 }
+}
+
+Nicooropllai = { #1
+	provinces = { 427 }
+}
+
+Gangmetapothus = { #1
+	provinces = { 1903 }
+}
+
+Oephellestrias = { #1
+	provinces = { 659 }
+}
+
+Methuidaoas = { #11
+	provinces = { 226 1200 1322 1357 1374 1604 1963 2719 4235 4328 4441 }
+}
+
+Maskoriinon = { #12
+	provinces = { 32 1179 1781 2073 2255 2617 3163 3167 3233 4148 4386 4514 }
+}
+
+Larmorglea = { #11
+	provinces = { 743 1035 1327 1334 1651 2594 2827 3304 3532 4409 4798 }
+}
+
+Korinkamellai = { #1
+	provinces = { 1639 }
+}
+
+Leprebergine = { #1
+	provinces = { 367 }
+}
+
+Kameirmegcum = { #5
+	provinces = { 886 2652 2994 3332 4667 }
+}
+
+alencon = { #6
+	provinces = { 1155 1250 1493 1876 1912 2434 }
+}
+
+lorraine = { #16
+	provinces = { 502 619 1799 2077 2079 2203 2403 2555 3033 3168 3302 4057 4304 4565 4661 4696 }
+}
+
+Morgankorrea = { #9
+	provinces = { 1115 1197 2256 2426 2771 2885 3474 3875 4465 }
+}
+
+Marmmetapodus = { #10
+	provinces = { 2525 2551 2612 2954 3102 3527 3777 3921 4457 4737 }
+}
+
+Erylampsaeia = { #1
+	provinces = { 1729 }
+}
+
+Lampscebai = { #9
+	provinces = { 546 1612 2086 2221 2282 3251 4197 4404 4431 }
+}
+
+Lekhknossalous = { #1
+	provinces = { 745 }
+}
+
+Kameirlisnes = { #1
+	provinces = { 294 }
+}
+
+Bybidaosia = { #1
+	provinces = { 603 }
+}
+
+Madytklazoinon = { #1
+	provinces = { 989 }
+}
+
+Morgalinate = { #5
+	provinces = { 271 556 1432 2449 3352 }
+}
+
+Metapkimmsos = { #12
+	provinces = { 1052 1595 1922 2068 2097 2601 2941 3440 3477 3809 4183 4786 }
+}
+
+Neamisecia = { #1
+	provinces = { 67 }
+}
+
+Kepimbcum = { #13
+	provinces = { 903 2083 2098 2362 2754 3046 3077 3165 3480 3854 3889 4171 4426 }
+}
+
+desmond = { #10
+	provinces = { 521 1972 2062 2806 3473 3546 3729 3770 4023 4875 }
+}
+
+Olmarias = { #1
+	provinces = { 761 }
+}
+
+Hyekamalis = { #1
+	provinces = { 401 }
+}
+
+Keiotrias = { #1
+	provinces = { 1642 }
+}
+
+Morgachytai = { #11
+	provinces = { 1854 1881 1907 2061 2102 2342 2939 3021 4282 4287 4339 }
+}
+
+Kataiaila = { #8
+	provinces = { 225 472 1676 1953 2106 4088 4658 4865 }
+}
+
+soria = { #6
+	provinces = { 1301 2169 4256 4266 4443 4787 }
+}
+
+Ialoresila = { #1
+	provinces = { 1695 }
+}
+
+Dioandissa = { #11
+	provinces = { 449 658 856 2072 2107 2914 3334 3782 3943 4735 4748 }
+}
+
+Abcormenus = { #12
+	provinces = { 326 1222 1413 1686 1894 2078 2122 3158 4156 4411 4707 4747 }
+}
+
+Gelmillllai = { #13
+	provinces = { 234 1091 1141 1967 2199 2543 2823 2982 3478 3685 3935 4478 4792 }
+}
+
+Olygourlia = { #1
+	provinces = { 1747 }
+}
+
+Gelkoinda = { #1
+	provinces = { 1057 }
+}
+
+Akrknidum = { #1
+	provinces = { 444 }
+}
+
+Kamacansos = { #1
+	provinces = { 2545 }
+}
+
+Marohelia = { #1
+	provinces = { 423 }
+}
+
+ascoli_ = { #5
+	provinces = { 1560 2295 3463 3744 4482 }
+}
+
+Arsleonene = { #12
+	provinces = { 1673 2149 3041 3119 3367 3442 3476 3974 3996 4019 4263 4484 }
+}
+
+Barmetalia = { #1
+	provinces = { 178 }
+}
+
+aquila = { #6
+	provinces = { 1365 1745 2229 3007 3140 3370 }
+}
+
+Hermdimus = { #1
+	provinces = { 1176 }
+}
+
+orleans = { #10
+	provinces = { 984 1637 1798 2784 3187 3621 3758 4449 4495 4662 }
+}
+
+Imgazsos = { #8
+	provinces = { 496 1616 2468 2841 2872 3375 3583 4758 }
+}
+
+Cheapalia = { #6
+	provinces = { 736 1593 2492 2669 3176 4494 }
+}
+
+Megamegalonae = { #1
+	provinces = { 208 }
+}
+
+Ephylefkapolis = { #11
+	provinces = { 1851 2168 2706 3025 3454 4076 4455 4496 4654 4674 4830 }
+}
+
+basilicata = { #6
+	provinces = { 1733 2131 2377 3543 4210 4695 }
+}
+
+Aegklaztrias = { #1
+	provinces = { 263 }
+}
+
+Mukhypetra = { #1
+	provinces = { 552 }
+}
+
+Asslekhrea = { #12
+	provinces = { 1047 1544 1762 2132 2331 2366 3311 3432 3519 4340 4523 4789 }
+}
+
+aragon = { #14
+	provinces = { 575 1215 2049 2399 2615 2690 2836 3057 3260 3382 3702 4027 4807 4863 }
+}
+
+Hagmonasita = { #12
+	provinces = { 786 1727 2137 2810 2843 3574 3625 3835 3853 4131 4375 4821 }
+}
+
+Methamithera = { #17
+	provinces = { 585 901 1217 1512 1678 2141 2368 2495 3000 3003 3190 3294 3362 3873 3945 4130 4205 }
+}
+
+Clazoodealous = { #6
+	provinces = { 633 2432 2552 2818 3387 4466 }
+}
+
+Orestoreslis = { #1
+	provinces = { 261 }
+}
+
+Gortyasisos = { #10
+	provinces = { 1932 2714 2819 2888 3147 3252 3822 4000 4512 4790 }
+}
+
+Olbgythrea = { #1
+	provinces = { 584 }
+}
+
+Bougelessa = { #1
+	provinces = { 1487 }
+}
+
+Larisepiai = { #1
+	provinces = { 1272 }
+}
+
+Ereedlia = { #1
+	provinces = { 1562 }
+}
+
+Cebelattes = { #1
+	provinces = { 250 }
+}
+
+Epidgytios = { #11
+	provinces = { 697 1031 1252 1421 1649 1845 1900 2788 3374 4448 4489 }
+}
+
+Kamargoonia = { #11
+	provinces = { 1885 2033 2546 3218 3322 3558 3766 3767 4468 4527 4701 }
+}
+
+brescia = { #7
+	provinces = { 411 2157 2376 2673 2903 3401 4509 }
+}
+
+Dicidauf = { #14
+	provinces = { 304 1710 2164 2329 2456 2666 3035 3523 3669 3789 4295 4318 4596 4689 }
+}
+
+Akrmapetra = { #1
+	provinces = { 312 }
+}
+
+Kannchersosia = { #16
+	provinces = { 571 1292 1349 1760 1916 2185 2740 3396 3402 3536 3706 3857 3916 3967 4749 4774 }
+}
+
+Gyrthachnae = { #1
+	provinces = { 1229 }
+}
+
+Monastikorilia = { #1
+	provinces = { 4 }
+}
+
+Bythmassiana = { #1
+	provinces = { 278 }
+}
+
+Nygytium = { #40
+	provinces = { 517 1431 1734 1789 2147 2163 2170 2340 2735 2762 3553 3680 3817 3859 3975 4016 4167 4311 4458 4716 440 1556 1927 2316 2934 3866 3898 4059 4400 4524 4648 704 712 3647 4338 4356 1511 2642 4089 4699 }
+}
+
+Crotkorinthalous = { #1
+	provinces = { 784 }
+}
+
+Nicorcholia = { #1
+	provinces = { 817 }
+}
+
+Hierempum = { #1
+	provinces = { 127 }
+}
+
+Lauorestalous = { #12
+	provinces = { 2531 2604 2711 2758 2915 3166 3211 3254 3419 3503 3564 4218 }
+}
+
+ferrara = { #6
+	provinces = { 1475 1796 2178 2325 3511 4360 }
+}
+
+Olereium = { #1
+	provinces = { 755 }
+}
+
+Diddemmea = { #1
+	provinces = { 573 }
+}
+
+Kidemene = { #13
+	provinces = { 245 1669 4265 4756 4853 36 862 1333 1990 2197 3237 3238 3795 }
+}
+
+Ialykamcia = { #1
+	provinces = { 574 }
+}
+
+Orcholebdos = { #1
+	provinces = { 273 }
+}
+
+Cebmiscum = { #1
+	provinces = { 828 }
+}
+
+Ephlamponia = { #1
+	provinces = { 1444 }
+}
+
+Hermikamaosia = { #1
+	provinces = { 134 }
+}
+
+Lindkyrenmos = { #9
+	provinces = { 1326 1358 1621 2237 2588 2844 3522 3570 4761 }
+}
+
+Amarymaronlia = { #1
+	provinces = { 651 }
+}
+
+Monaitaina = { #1
+	provinces = { 147 }
+}
+
+Dimaaleida = { #10
+	provinces = { 1241 1488 2053 2212 2409 3004 3492 3556 3728 3934 }
+}
+
+Ithierthus = { #1
+	provinces = { 526 }
+}
+
+douro_e_minho = { #7
+	provinces = { 2408 3091 3539 3827 3892 4144 4206 }
+}
+
+Byllankium = { #1
+	provinces = { 450 }
+}
+
+Crolepreate = { #1
+	provinces = { 1336 }
+}
+
+Hermmagtrias = { #1
+	provinces = { 120 }
+}
+
+Cleolaodiai = { #1
+	provinces = { 1901 }
+}
+
+toledo = { #8
+	provinces = { 1367 1857 2737 2764 2891 4010 4296 4492 }
+}
+
+Nymphhemeroai = { #1
+	provinces = { 1339 }
+}
+
+Nicoeatrea = { #1
+	provinces = { 123 }
+}
+
+Orlamai = { #1
+	provinces = { 788 }
+}
+
+Methnymida = { #1
+	provinces = { 857 }
+}
+
+Knolauthos = { #1
+	provinces = { 2186 }
+}
+
+Dececoloai = { #1
+	provinces = { 726 }
+}
+
+Kimmmarollai = { #12
+	provinces = { 1548 2144 2196 2228 2496 2639 2698 2753 3851 4063 4301 4577 }
+}
+
+Locrkeplis = { #3
+	provinces = { 3802 3823 4547 }
+}
+
+Andmisealous = { #1
+	provinces = { 395 }
+}
+
+Edkyrenmenus = { #12
+	provinces = { 1059 1309 1583 1601 2145 2530 2871 3027 3283 3350 3581 4871 }
+}
+
+Amargortydos = { #1
+	provinces = { 100 }
+}
+
+Chalcoroeia = { #12
+	provinces = { 159 1568 2273 3020 3178 3603 3833 3969 4297 4337 4460 4579 }
+}
+
+Kynmesthrae = { #12
+	provinces = { 1020 1147 1481 2236 2337 2919 3378 4241 4423 4500 4632 4738 }
+}
+
+Monastchetiri = { #1
+	provinces = { 17 }
+}
+
+Athgaae = { #1
+	provinces = { 1159 }
+}
+
+Erylefknae = { #1
+	provinces = { 1030 }
+}
+
+Histelatios = { #11
+	provinces = { 236 1261 1911 2238 2363 2917 3247 3550 3712 4227 4533 }
+}
+
+Kecnilia = { #1
+	provinces = { 1042 }
+}
+
+Kasastyra = { #10
+	provinces = { 439 934 1426 1826 3067 3298 3537 3855 3947 4352 }
+}
+
+Histrgorgilia = { #12
+	provinces = { 1199 1775 2245 2269 2300 2358 2916 3217 4566 4653 4715 4795 }
+}
+
+gascognewip = { #23
+	provinces = { 557 684 1108 1591 1700 1777 1869 2205 2277 2634 2702 3074 3111 3409 3629 3730 4308 4329 4582 4587 4597 4663 4711 }
+}
+
+Olynonina = { #1
+	provinces = { 298 }
+}
+
+Iamaon = { #1
+	provinces = { 851 }
+}
+
+Gorghiosse = { #12
+	provinces = { 50 1284 1793 2117 2247 2328 2485 2928 3470 3861 4136 4538 }
+}
+
+Ithachaica = { #1
+	provinces = { 597 }
+}
+
+Gournlilmenus = { #1
+	provinces = { 1234 }
+}
+
+Morganmarathlis = { #1
+	provinces = { 143 }
+}
+
+Colomillinda = { #1
+	provinces = { 507 }
+}
+
+Marmaaphiosia = { #13
+	provinces = { 783 1402 1452 1584 1659 2611 2680 3171 3479 4180 4503 4551 4688 }
+}
+
+Artbyzalous = { #12
+	provinces = { 133 138 554 910 1425 1529 2253 2450 3373 3797 3813 4174 }
+}
+
+Ankcyosse = { #1
+	provinces = { 830 }
+}
+
+Gythieubita = { #1
+	provinces = { 970 }
+}
+
+Chagonlia = { #1
+	provinces = { 492 }
+}
+
+Amnioene = { #1
+	provinces = { 533 }
+}
+
+Aegkallicia = { #1
+	provinces = { 487 }
+}
+
+vizcaya = { #9
+	provinces = { 391 478 1435 1632 1736 1981 2334 3649 3768 }
+}
+
+Halikoimos = { #1
+	provinces = { 489 }
+}
+
+Korinmarlia = { #1
+	provinces = { 495 }
+}
+
+Ceborestcum = { #1
+	provinces = { 330 }
+}
+
+Morhitrias = { #1
+	provinces = { 1335 }
+}
+
+Dellebeder = { #11
+	provinces = { 1305 1376 1486 1504 2153 2219 2270 2782 2984 4734 4752 }
+}
+
+Kanitanmea = { #1
+	provinces = { 1132 }
+}
+
+Knidempooli = { #1
+	provinces = { 187 }
+}
+
+Korialinissa = { #1
+	provinces = { 791 }
+}
+
+Lekhkander = { #1
+	provinces = { 480 }
+}
+
+auvergne = { #9
+	provinces = { 264 715 1191 1467 1685 3186 4030 4193 4477 }
+}
+
+Laodkallithera = { #7
+	provinces = { 711 1887 3340 3976 4201 4604 4623 }
+}
+
+Calonlea = { #1
+	provinces = { 393 }
+}
+
+Kalliboumos = { #1
+	provinces = { 864 }
+}
+
+Kouridicaeathena = { #1
+	provinces = { 126 }
+}
+
+turin = { #9
+	provinces = { 364 1906 2283 2448 3883 4090 4259 4540 4714 }
+}
+
+Gortmiseissa = { #12
+	provinces = { 1347 1741 1973 2284 2419 2501 2901 3093 3429 4137 4257 4784 }
+}
+
+Bythgortyina = { #1
+	provinces = { 289 }
+}
+
+gloucester = { #5
+	provinces = { 1693 1955 2210 2973 4293 }
+}
+
+Onchkynthena = { #7
+	provinces = { 719 1189 1817 1860 2090 2437 3508 }
+}
+
+Koiedlia = { #9
+	provinces = { 893 1377 2591 2804 3414 4045 4354 4392 4630 }
+}
+
+extremadura = { #13
+	provinces = { 668 1150 1307 1934 1945 2577 3506 3566 3946 3980 4072 4591 4772 }
+}
+
+Artemkorinththena = { #1
+	provinces = { 562 }
+}
+
+Gythdelphthrae = { #12
+	provinces = { 885 1408 1499 1608 2231 2503 2521 3038 3509 3658 3926 4390 }
+}
+
+Opushagthus = { #1
+	provinces = { 2024 }
+}
+
+murcia = { #8
+	provinces = { 880 1571 2305 2411 2708 2988 3436 3783 }
+}
+
+Empalinnae = { #4
+	provinces = { 1137 2246 2825 4307 }
+}
+
+Megallaolea = { #8
+	provinces = { 1935 2208 2299 2930 3134 3719 3755 4576 }
+}
+
+napoli = { #6
+	provinces = { 1053 1974 2557 3060 3243 4644 }
+}
+
+Marephethena = { #10
+	provinces = { 595 1276 2303 2686 2895 3461 3608 3684 4391 4418 }
+}
+
+Monatgytder = { #11
+	provinces = { 793 1375 2198 2344 3271 3281 3491 3560 3983 4034 4070 }
+}
+
+Emporolosia = { #10
+	provinces = { 1182 1308 1439 1880 2220 2354 3069 3377 3860 4327 }
+}
+
+Iaolon = { #1
+	provinces = { 1125 }
+}
+
+padua = { #12
+	provinces = { 1378 2927 3552 3737 3884 4505 1392 1988 2866 2953 4331 4824 }
+}
+
+Opgytine = { #1
+	provinces = { 544 }
+}
+
+Kyelaalous = { #1
+	provinces = { 471 }
+}
+
+Calymetapmea = { #1
+	provinces = { 3249 }
+}
+
+Cyrialytiri = { #5
+	provinces = { 1294 3034 3056 3447 3073 }
+}
+
+touraine = { #6
+	provinces = { 1237 1337 1521 1892 3344 4850 }
+}
+
+Kerkidioinon = { #9
+	provinces = { 1772 1977 2475 3351 3715 4252 4593 4668 4870 }
+}
+
+Orieremos = { #1
+	provinces = { 690 }
+}
+
+Byzhalicthena = { #15
+	provinces = { 148 1731 1882 2047 2162 2427 3216 3541 3598 3628 4041 4754 315 3267 3984 }
+}
+
+Olymgelpetra = { #1
+	provinces = { 1131 }
+}
+
+Kameilampslea = { #1
+	provinces = { 22 }
+}
+
+burgos = { #14
+	provinces = { 905 1671 2447 2516 2550 2660 3180 3242 3341 3547 3668 4602 4726 4843 }
+}
+
+Orohierthena = { #8
+	provinces = { 794 1269 1391 1929 2123 2951 3693 4788 }
+}
+
+Ephemonastpetra = { #11
+	provinces = { 1352 1809 1918 2209 2323 2807 2967 3490 4102 4168 4170 }
+}
+
+Gytgythiiana = { #7
+	provinces = { 1910 2418 2870 2997 4122 4211 4306 }
+}
+
+Kepknorea = { #1
+	provinces = { 194 }
+}
+
+Apollmassnes = { #11
+	provinces = { 660 1148 1174 1473 1756 1965 2326 2620 3840 4111 4733 }
+}
+
+Madytepidion = { #1
+	provinces = { 605 }
+}
+
+Halicgythiatrea = { #1
+	provinces = { 1193 }
+}
+
+messina = { #5
+	provinces = { 1329 1923 2016 3551 3666 }
+}
+
+Opuhieraita = { #12
+	provinces = { 1411 1635 1784 2179 2918 3337 3690 4094 4546 4681 4683 1168 }
+}
+
+Achlarcia = { #1
+	provinces = { 122 }
+}
+
+Onchherthrae = { #5
+	provinces = { 1397 2254 2327 3672 3989 }
+}
+
+Chamcleoum = { #1
+	provinces = { 1400 }
+}
+
+Mukcrotita = { #13
+	provinces = { 205 398 1628 2130 2578 2853 2881 2913 3391 3618 4444 4686 4836 }
+}
+
+Koitannae = { #1
+	provinces = { 913 }
+}
+
+Histgourmos = { #1
+	provinces = { 1677 }
+}
+
+Kameircniatrea = { #2
+	provinces = { 196 182 }
+}
+
+Nicolynsos = { #1
+	provinces = { 11 }
+}
+
+Argyrdemtiri = { #1
+	provinces = { 452 }
+}
+
+Lefkaknosos = { #1
+	provinces = { 379 }
+}
+
+Eresnemuf = { #10
+	provinces = { 1257 1709 1794 2345 2781 2874 2945 3008 3971 4416 }
+}
+
+nizza = { #5
+	provinces = { 2458 2504 2632 3348 4708 }
+}
+
+Argiacum = { #1
+	provinces = { 16 }
+}
+
+Argleibethena = { #1
+	provinces = { 392 }
+}
+
+Neaneida = { #1
+	provinces = { 1743 }
+}
+
+Cythcalyllai = { #1
+	provinces = { 966 }
+}
+
+norfolk = { #9
+	provinces = { 1244 1701 2012 2035 2074 2734 2820 2868 4592 }
+}
+
+Carleion = { #1
+	provinces = { 768 }
+}
+
+welsh_march = { #10
+	provinces = { 844 1165 1924 2044 2206 2761 3355 4506 4539 4636 }
+}
+
+westminster = { #1
+	provinces = { 2766 }
+}
+
+sussex = { #5
+	provinces = { 459 1978 2265 2574 3153 }
+}
+
+Mesemmagnethrae = { #1
+	provinces = { 1224 }
+}
+
+lancaster = { #10
+	provinces = { 532 883 1479 1672 2156 3204 3865 4097 4291 4544 }
+}
+
+kent = { #5
+	provinces = { 3718 4049 4220 4760 4815 }
+}
+
+lincoln = { #9
+	provinces = { 613 2319 2476 2763 3465 3593 3635 3890 4771 }
+}
+
+la_mancha = { #8
+	provinces = { 45 1554 2070 2768 2972 3869 4115 4247 }
+}
+
+Histrdyosia = { #9
+	provinces = { 685 1248 1862 2317 3559 3703 4485 4486 4724 }
+}
+
+Momethaica = { #1
+	provinces = { 347 }
+}
+
+Byllkoureia = { #1
+	provinces = { 458 }
+}
+
+Imbrlapius = { #1
+	provinces = { 824 }
+}
+
+Hisempoosse = { #1
+	provinces = { 739 }
+}
+
+Abmetine = { #10
+	provinces = { 1919 2572 2664 2969 3467 3584 3590 4165 4320 4844 }
+}
+
+Ithagyrthetta = { #1
+	provinces = { 675 }
+}
+
+Oropelinon = { #1
+	provinces = { 681 }
+}
+
+Kokerkinetta = { #1
+	provinces = { 419 }
+}
+
+Katmaroetta = { #12
+	provinces = { 520 1117 1369 1429 1835 2441 2616 3002 3174 3594 4290 4829 }
+}
+
+Korinkanium = { #1
+	provinces = { 1490 }
+}
+
+Lisonissa = { #1
+	provinces = { 772 }
+}
+
+Kydoclazoissa = { #10
+	provinces = { 436 551 1654 2405 2832 3014 3597 4430 4516 4793 }
+}
+
+Hermaraththena = { #11
+	provinces = { 1478 1774 1810 2038 2190 2252 2388 3280 3904 4731 4811 }
+}
+
+Monaadramthos = { #10
+	provinces = { 997 1724 2440 2506 2526 3127 3228 3810 4238 4272 }
+}
+
+Gourcaryine = { #13
+	provinces = { 1235 1259 1597 1961 1962 2127 2469 2644 2958 3175 3678 4589 4670 }
+}
+
+Mullilmos = { #9
+	provinces = { 1100 1438 2227 2259 2274 3488 3507 4317 4367 }
+}
+
+Nykythrae = { #1
+	provinces = { 43 }
+}
+
+Metapokytherna = { #1
+	provinces = { 654 }
+}
+
+Lefkahagtrias = { #1
+	provinces = { 1280 }
+}
+
+Abgortiana = { #1
+	provinces = { 168 }
+}
+
+Clazogonita = { #1
+	provinces = { 145 }
+}
+
+Ephyrkiocia = { #1
+	provinces = { 324 }
+}
+
+Lilakyita = { #10
+	provinces = { 40 154 212 422 1363 1443 1539 1824 3486 4261 }
+}
+
+Oneleudos = { #1
+	provinces = { 779 }
+}
+
+Chalcactllai = { #12
+	provinces = { 1231 1534 1708 1921 2659 2750 3089 3466 3944 4344 4650 4759 }
+}
+
+Kourimethorea = { #1
+	provinces = { 1498 }
+}
+
+Leomancum = { #1
+	provinces = { 845 }
+}
+
+Kimmerlaolia = { #9
+	provinces = { 550 3022 3214 3611 3623 3966 4118 4284 4397 }
+}
+
+Megaloaskcia = { #7
+	provinces = { 1441 1448 2736 3742 3932 4066 4289 }
+}
+
+Katlekhaoas = { #10
+	provinces = { 369 717 1704 2739 2822 3062 3269 3622 3997 4228 }
+}
+
+algarve = { #5
+	provinces = { 2089 3009 4330 4558 4740 }
+}
+
+Masdimthera = { #12
+	provinces = { 1484 1551 2034 2050 2100 2778 3830 3942 4169 4399 4693 4732 }
+}
+
+Chekyretherna = { #10
+	provinces = { 855 1221 1410 1466 1506 1655 2389 2950 3839 4562 }
+}
+
+Mesedidmenus = { #1
+	provinces = { 268 }
+}
+
+Korinclalia = { #1
+	provinces = { 741 }
+}
+
+Aenbhyrtthus = { #6
+	provinces = { 1403 2093 4224 4288 4826 4839 }
+}
+
+Methoelatnae = { #9
+	provinces = { 408 2119 2298 3469 3631 3692 4113 4616 4725 }
+}
+
+Hieragorlia = { #3
+	provinces = { 825 2124 4620 }
+}
+
+Kouithlia = { #4
+	provinces = { 1594 2471 3160 3870 }
+}
+
+Gouraegonia = { #13
+	provinces = { 1201 1384 1806 3012 3201 3222 3223 3632 3864 4221 4336 4436 4763 }
+}
+
+Deceodessuf = { #1
+	provinces = { 428 }
+}
+
+Likuai = { #10
+	provinces = { 2373 2381 2580 2724 2772 3001 3634 3713 4298 4347 }
+}
+
+Cyknioli = { #12
+	provinces = { 628 1211 1460 2330 2356 3185 3318 3333 3384 3483 4497 4610 }
+}
+
+Ialeretcia = { #1
+	provinces = { 506 }
+}
+
+Ereclazoosse = { #1
+	provinces = { 71 }
+}
+
+Dylaptes = { #7
+	provinces = { 1871 2517 3366 3398 3494 3923 4181 }
+}
+
+Argyrgeina = { #1
+	provinces = { 1450 }
+}
+
+Lapkaiina = { #12
+	provinces = { 302 1558 1800 2181 2275 2563 3284 3650 4239 4511 4800 4813 }
+}
+
+Lekabdia = { #10
+	provinces = { 321 867 1489 1964 2462 3144 3266 3643 4348 737 }
+}
+
+Ialeoeia = { #5
+	provinces = { 2056 2880 3601 3626 4777 }
+}
+
+palermo = { #7
+	provinces = { 518 703 1075 1470 1592 1840 4470 }
+}
+
+Kerkingoissa = { #10
+	provinces = { 1361 1471 1662 2439 2716 2759 3418 3772 3792 3948 }
+}
+
+Imbrelion = { #2
+	provinces = { 3956 4006 }
+}
+
+Opuskellai = { #1
+	provinces = { 218 }
+}
+
+Neacoloeia = { #1
+	provinces = { 420 }
+}
+
+Cebrmetdia = { #1
+	provinces = { 258 }
+}
+
+Elklaum = { #1
+	provinces = { 1387 }
+}
+
+Neamarila = { #1
+	provinces = { 301 }
+}
+
+Jukleontuf = { #5
+	provinces = { 789 2416 3653 4007 4767 }
+}
+
+Heramnitherna = { #10
+	provinces = { 1476 1904 1975 2527 2814 2963 3327 3667 3799 4279 }
+}
+
+Idadelesmos = { #1
+	provinces = { 99 }
+}
+
+Klazonymphthera = { #1
+	provinces = { 270 }
+}
+
+Lilkasissa = { #13
+	provinces = { 2287 2487 2837 3162 3219 3420 3679 3805 4389 4483 4536 4722 4876 }
+}
+
+Morgacarcum = { #11
+	provinces = { 37 514 887 1853 2272 2455 2976 3115 3400 3856 4212 }
+}
+
+Nympkalliae = { #1
+	provinces = { 839 }
+}
+
+siracusa = { #6
+	provinces = { 1328 1980 3099 3657 3776 4705 }
+}
+
+Morgangornes = { #1
+	provinces = { 523 }
+}
+
+Hecyrthos = { #11
+	provinces = { 965 3662 3714 3881 3953 3994 4134 4278 4388 4519 4765 }
+}
+
+Orcyrate = { #1
+	provinces = { 1526 }
+}
+
+Meskamum = { #1
+	provinces = { 1026 }
+}
+
+Eddymlia = { #1
+	provinces = { 1119 }
+}
+
+Kamaleprdos = { #1
+	provinces = { 1113 }
+}
+
+Aenchalissa = { #1
+	provinces = { 1381 }
+}
+
+Larisakrdia = { #9
+	provinces = { 1658 1966 2407 2481 3019 3203 3957 4594 4794 }
+}
+
+Onathlia = { #1
+	provinces = { 193 }
+}
+
+Edgorgion = { #8
+	provinces = { 1116 1542 2767 2974 3837 4061 4163 4545 }
+}
+
+Eleumantinder = { #2
+	provinces = { 2774 3164 }
+}
+
+Calmorgus = { #10
+	provinces = { 1024 1495 2797 3842 3959 4040 4048 4084 4467 4522 }
+}
+
+Deceknoae = { #1
+	provinces = { 1366 }
+}
+
+Askgaosse = { #12
+	provinces = { 291 1092 1576 1873 1941 2023 2052 3403 3444 3499 4474 4809 }
+}
+
+Gythbyllyra = { #1
+	provinces = { 1111 }
+}
+
+bedford = { #7
+	provinces = { 986 1944 2454 3050 3173 3548 4442 }
+}
+
+Decnympnes = { #1
+	provinces = { 121 }
+}
+
+Monastigeletta = { #10
+	provinces = { 214 549 1304 1908 1992 2133 2143 2480 4004 4723 }
+}
+
+Opuhagiai = { #1
+	provinces = { 177 }
+}
+
+Millliosia = { #11
+	provinces = { 1139 1315 2727 2933 2947 3064 3107 4234 4487 4656 4817 }
+}
+
+Eleuleibeae = { #1
+	provinces = { 720 }
+}
+
+connacht = { #10
+	provinces = { 1122 2589 2733 3049 3326 3388 3416 3773 4161 4615 }
+}
+
+Gyrthgonera = { #10
+	provinces = { 542 1494 1878 2279 2488 2873 2900 2952 3911 4633 }
+}
+
+Abklazotherna = { #1
+	provinces = { 414 }
+}
+
+Alinandrrias = { #9
+	provinces = { 1096 1609 1706 1993 2140 2964 3029 4260 4660 }
+}
+
+Dimalarion = { #1
+	provinces = { 722 }
+}
+
+Epidkuene = { #1
+	provinces = { 1083 }
+}
+
+Lilaabpetra = { #1
+	provinces = { 666 }
+}
+
+Knosdimdia = { #11
+	provinces = { 403 2223 2302 2640 3011 3417 3630 4550 4600 4782 4827 }
+}
+
+Antiphellessos = { #1
+	provinces = { 939 }
+}
+
+monferrato = { #6
+	provinces = { 453 785 937 2500 3886 4219 }
+}
+
+Niamonaosia = { #24
+	provinces = { 9 669 694 1342 3112 3689 4564 4831 334 2539 4050 2027 415 1188 1314 2384 2420 2474 2486 2544 2592 2627 4381 4437 }
+}
+
+Eresneathena = { #12
+	provinces = { 608 2121 2599 2800 2876 2962 3295 3638 3990 4022 4166 4368 }
+}
+
+Bhyrtkalliina = { #12
+	provinces = { 796 1520 2230 2842 3312 3390 3555 3613 3701 4185 4199 4710 }
+}
+
+Ialyhagipolis = { #12
+	provinces = { 729 1552 1666 1820 2028 2040 2113 2263 2510 2948 4073 4384 }
+}
+
+cordoba = { #5
+	provinces = { 209 2878 3055 3316 4345 }
+}
+
+Kydomethorias = { #11
+	provinces = { 847 2095 2139 2361 3202 3389 3664 4325 4419 4717 4837 }
+}
+
+Odeolbiine = { #1
+	provinces = { 876 }
+}
+
+Ololissa = { #7
+	provinces = { 1418 2001 3525 4126 4202 4841 4881 }
+}
+
+Laulapsos = { #8
+	provinces = { 412 836 1136 2222 2513 3426 3778 4092 }
+}
+
+picardy = { #11
+	provinces = { 1719 1931 2067 2076 2907 4058 4104 4254 4314 4706 4773 }
+}
+
+Klazojuklis = { #12
+	provinces = { 31 52 988 2278 2520 2741 2989 3229 3863 4083 4621 4766 }
+}
+
+Nymelpetra = { #2
+	provinces = { 1086 2528 }
+}
+
+Antikiatrea = { #10
+	provinces = { 638 1184 2523 2703 2729 3090 4081 4135 4605 4862 }
+}
+
+Lanaate = { #1
+	provinces = { 219 }
+}
+
+northumberland = { #5
+	provinces = { 1060 2398 2414 2912 3616 }
+}
+
+Kamaknoyra = { #1
+	provinces = { 832 }
+}
+
+Mocnymphera = { #1
+	provinces = { 577 }
+}
+
+Gangheliida = { #10
+	provinces = { 897 1246 1502 1530 2233 2548 3451 3741 4173 4751 }
+}
+
+Lebkonae = { #15
+	provinces = { 708 848 1508 1766 2135 2142 2482 2535 2638 2715 3317 3386 3995 4607 4669 }
+}
+
+Kordicthos = { #6
+	provinces = { 2980 3117 3609 3671 3880 4861 }
+}
+
+Berdioica = { #1
+	provinces = { 233 }
+}
+
+ross = { #7
+	provinces = { 1714 2532 2607 3394 3639 4421 4851 }
+}
+
+Kougorinda = { #1
+	provinces = { 974 }
+}
+
+Aytlarcum = { #1
+	provinces = { 220 }
+}
+
+Nyhieratrias = { #12
+	provinces = { 692 1138 1531 1574 1660 3130 3305 3814 4141 4248 4357 4682 }
+}
+
+Borysmetapontes = { #1
+	provinces = { 1533 }
+}
+
+Gortlefkaate = { #11
+	provinces = { 1507 1755 2017 2320 2587 2723 2899 3135 3683 4742 4868 }
+}
+
+Olbeubera = { #1
+	provinces = { 863 }
+}
+
+Demetantiginon = { #1
+	provinces = { 293 }
+}
+
+Namarmmenus = { #15
+	provinces = { 1816 2242 2371 2508 2529 2547 3146 3347 3363 3371 3816 4469 4677 4719 4877 }
+}
+
+Cololinera = { #13
+	provinces = { 1043 1652 1653 2549 2738 2833 2971 2985 3484 4379 4639 4702 4736 }
+}
+
+Leontoeyra = { #1
+	provinces = { 953 }
+}
+
+Neachamosia = { #12
+	provinces = { 2636 2655 3149 3399 3576 3695 3784 4175 4281 4427 4552 4872 }
+}
+
+Adramathtes = { #1
+	provinces = { 253 }
+}
+
+Artemkorpetra = { #12
+	provinces = { 29 446 522 1268 2431 2553 3005 3687 3825 4139 4294 4816 }
+}
+
+Niahalictes = { #1
+	provinces = { 969 }
+}
+
+Gangodllai = { #1
+	provinces = { 683 }
+}
+
+Berghemetiri = { #11
+	provinces = { 759 1757 1905 2992 3082 3410 3731 3965 4033 4572 4775 }
+}
+
+saintonge = { #8
+	provinces = { 86 484 643 809 2558 3031 4491 4690 }
+}
+
+AsklmukeciaX = { #6
+	provinces = { 629 5 72 73 70 20 }
+}
+
+MadytlepreaX = { #2
+	provinces = { 397 1598 }
+}
+
+BhyrtempissaX = { #5
+	provinces = { 1128 1667 1003 1230 6 }
+}
+
+ImaeniosX = { #3
+	provinces = { 915 1013 1087 }
+}
+
+nympharegX = { #4
+	provinces = { 1528 1390 716 985 }
+}
+
+GangabosiaX = { #5
+	provinces = { 740 1348 115 1273 130 }
+}
+
+MantinmantinpetraX = { #2
+	provinces = { 762 679 }
+}
+
+LebeepidtesX = { #6
+	provinces = { 1427 787 732 672 632 433 }
+}
+
+ChytabufX = { #5
+	provinces = { 198 88 799 170 505 }
+}
+
+MegclaliaX = { #4
+	provinces = { 76 1181 1187 801 }
+}
+
+KorihyianaX = { #5
+	provinces = { 1889 1162 1325 2369 1715 }
+}
+
+KimmgolusX = { #4
+	provinces = { 1010 955 819 216 }
+}
+
+AgrinhierleaX = { #4
+	provinces = { 19 929 153 332 }
+}
+
+KlazkaatreaX = { #1
+	provinces = { 319 }
+}
+
+ItanmeththenaX = { #5
+	provinces = { 463 776 493 908 1614 }
+}
+
+CymclazotriasX = { #1
+	provinces = { 295 }
+}
+
+MileitholiX = { #4
+	provinces = { 335 388 1684 1051 }
+}
+
+LefkamucumX = { #2
+	provinces = { 1491 162 }
+}
+
+KimmermassmeaX = { #6
+	provinces = { 116 576 494 349 563 468 }
+}
+
+MetapaegdiaX = { #4
+	provinces = { 118 1306 1056 637 }
+}
+
+LindleprtiriX = { #5
+	provinces = { 61 238 49 706 344 }
+}
+
+ImbrmarettaX = { #3
+	provinces = { 382 366 4622 }
+}
+
+MorganantigsosX = { #3
+	provinces = { 361 1073 1461 }
+}
+
+LeprlefkatheraX = { #3
+	provinces = { 1202 1331 1299 }
+}
+
+BybgoderX = { #6
+	provinces = { 1253 1127 1233 2713 2138 670 }
+}
+
+HelomethualousX = { #2
+	provinces = { 923 1154 }
+}
+
+MethodydusX = { #1
+	provinces = { 378 }
+}
+
+KorinthedllaiX = { #1
+	provinces = { 1192 }
+}
+
+LapgourneneX = { #5
+	provinces = { 314 1009 55 179 508 }
+}
+
+LampshereaX = { #7
+	provinces = { 244 54 390 206 104 928 1143 }
+}
+
+OeperytheiaX = { #4
+	provinces = { 936 1626 700 1485 }
+}
+
+KacebinaX = { #6
+	provinces = { 758 519 547 1318 1405 102 }
+}
+
+ChaklaaeaX = { #4
+	provinces = { 237 103 1332 515 }
+}
+
+KynkudusX = { #5
+	provinces = { 798 702 413 248 128 }
+}
+
+NymphassonX = { #5
+	provinces = { 1068 74 1340 2104 636 }
+}
+
+EdeithaneneX = { #4
+	provinces = { 932 1038 232 975 }
+}
+
+KamarmorgaliaX = { #3
+	provinces = { 1458 62 781 }
+}
+
+CheimbumX = { #6
+	provinces = { 85 1228 1879 620 47 417 }
+}
+
+KoragrinliaX = { #4
+	provinces = { 655 1055 185 481 }
+}
+
+AstedindaX = { #4
+	provinces = { 1290 300 1212 933 }
+}
+
+KoriorestpetraX = { #1
+	provinces = { 2202 }
+}
+
+KournemateX = { #5
+	provinces = { 531 971 353 343 601 }
+}
+
+AthaskinaX = { #5
+	provinces = { 1011 441 774 701 1586 }
+}
+
+MonaodtesX = { #1
+	provinces = { 3372 }
+}
+
+LaodlepreidaX = { #1
+	provinces = { 3909 }
+}
+
+BerkamarliaX = { #6
+	provinces = { 221 1338 1107 2257 139 1864 }
+}
+
+EubkameiridaX = { #6
+	provinces = { 68 1017 751 871 1195 500 }
+}
+
+HagimantinesX = { #1
+	provinces = { 2348 }
+}
+
+ElatmillettaX = { #3
+	provinces = { 1581 1103 931 }
+}
+
+ClazoepiiumX = { #2
+	provinces = { 1414 957 }
+}
+
+AlinmaronliaX = { #5
+	provinces = { 1001 286 144 1679 835 }
+}
+
+MarkioineX = { #2
+	provinces = { 202 79 }
+}
+
+HermkimmertiriX = { #4
+	provinces = { 1285 106 511 256 }
+}
+
+MegalborysindaX = { #4
+	provinces = { 1420 402 570 251 }
+}
+
+KerkiklaznaeX = { #1
+	provinces = { 2747 }
+}
+
+KamelaociaX = { #5
+	provinces = { 354 1428 950 995 195 }
+}
+
+ActbergriasX = { #1
+	provinces = { 1287 }
+}
+
+KasmorgantesX = { #5
+	provinces = { 60 274 78 75 967 }
+}
+
+LamibergpetraX = { #6
+	provinces = { 818 954 1537 756 282 296 }
+}
+
+ChalckasmliaX = { #5
+	provinces = { 105 678 709 938 222 }
+}
+
+MadkameiritaX = { #5
+	provinces = { 171 323 445 201 757 }
+}
+
+LismetciaX = { #5
+	provinces = { 224 567 1388 1278 865 }
+}
+
+BythkasosX = { #1
+	provinces = { 1773 }
+}
+
+MeseepitriasX = { #5
+	provinces = { 1740 1210 41 1627 2158 }
+}
+
+DimalaroniaX = { #1
+	provinces = { 1564 }
+}
+
+MocborysiosX = { #4
+	provinces = { 503 290 1142 884 }
+}
+
+AigmarmaliaX = { #3
+	provinces = { 257 1415 447 }
+}
+
+AytdyosseX = { #4
+	provinces = { 305 1264 63 1641 }
+}
+
+LapithchaltiriX = { #5
+	provinces = { 977 949 384 858 437 }
+}
+
+GazkamecumX = { #5
+	provinces = { 504 1401 624 1768 383 }
+}
+
+DemchareaX = { #6
+	provinces = { 462 288 358 272 1054 1067 }
+}
+
+ArsleibeaeaX = { #2
+	provinces = { 87 1074 }
+}
+
+HisthyeliaX = { #5
+	provinces = { 1951 213 38 731 707 }
+}
+
+HalicmethaiumX = { #4
+	provinces = { 160 764 618 457 }
+}
+
+ChegangoasX = { #5
+	provinces = { 405 593 24 1792 1254 }
+}
+
+KnokyrenateX = { #4
+	provinces = { 2224 854 1048 1468 }
+}
+
+MaramallonX = { #4
+	provinces = { 81 912 1298 351 }
+}
+
+KalklacumX = { #5
+	provinces = { 112 671 2058 860 648 }
+}
+
+KnosleprsosX = { #3
+	provinces = { 119 1453 410 }
+}
+
+MaratlintesX = { #5
+	provinces = { 527 1247 1094 838 207 }
+}
+
+CarymetapoindaX = { #2
+	provinces = { 1097 1303 }
+}
+
+NaueubciaX = { #3
+	provinces = { 132 1173 1351 }
+}
+
+AstoresateX = { #4
+	provinces = { 396 606 699 356 }
+}
+
+KykorinthicaX = { #5
+	provinces = { 661 56 91 778 488 }
+}
+
+ArgemporpolisX = { #5
+	provinces = { 806 1219 1630 881 852 }
+}
+
+DemetlapitiumX = { #5
+	provinces = { 973 882 265 777 275 }
+}
+
+MetmociaX = { #5
+	provinces = { 841 1837 2037 1039 735 }
+}
+
+Western_Sahara = { #5
+	provinces = { 1829 535 1841 3894 3660 }
+}
+
+KoathllaiX = { #1
+	provinces = { 1525 }
+}
+
+GanmukeosseX = { #4
+	provinces = { 1242 350 1423 917 }
+}
+
+MalleoliaX = { #4
+	provinces = { 674 345 12 555 }
+}
+
+KamemadytineX = { #5
+	provinces = { 331 460 146 42 1183 }
+}
+
+OephellesissaX = { #3
+	provinces = { 644 652 1288 }
+}
+
+DemactdiaX = { #4
+	provinces = { 582 1063 370 730 }
+}
+
+ErykaesmosX = { #4
+	provinces = { 239 1121 921 833 }
+}
+
+NemassaidaX = { #6
+	provinces = { 569 416 803 662 1152 676 }
+}
+
+BardimliaX = { #5
+	provinces = { 1434 922 1959 277 710 }
+}
+
+LariknosyraX = { #5
+	provinces = { 377 374 645 477 696 }
+}
+
+NacleoliaX = { #4
+	provinces = { 129 77 621 592 }
+}
+
+LindlepreilaX = { #1
+	provinces = { 1430 }
+}
+
+HydidyciaX = { #3
+	provinces = { 616 804 560 }
+}
+
+HermmoroliX = { #5
+	provinces = { 200 438 539 1565 80 }
+}
+
+MankorinttriasX = { #6
+	provinces = { 1079 373 1380 1084 1019 1140 }
+}
+
+NyalintiriX = { #5
+	provinces = { 566 744 705 404 58 }
+}
+
+BoumonoastaiX = { #5
+	provinces = { 152 501 409 426 541 }
+}
+
+NyaphitheraX = { #5
+	provinces = { 394 269 230 89 166 }
+}
+
+MarmaklazociaX = { #4
+	provinces = { 418 713 561 328 }
+}
+
+AlanymaeX = { #4
+	provinces = { 174 241 1000 292 }
+}
+
+OdeoenatreaX = { #4
+	provinces = { 483 114 853 512 }
+}
+
+KamaigosoliX = { #4
+	provinces = { 424 169 1190 750 }
+}
+
+DeclapileaX = { #4
+	provinces = { 657 1167 482 280 }
+}
+
+MillebleaX = { #4
+	provinces = { 537 455 192 1041 }
+}
+
+LefmukliaX = { #5
+	provinces = { 65 283 176 994 135 }
+}
+
+ArtemmantileaX = { #2
+	provinces = { 1463 604 }
+}
+
+KalliolydiaX = { #4
+	provinces = { 285 1040 164 612 }
+}
+
+ClaemporonX = { #4
+	provinces = { 961 141 1033 475 }
+}
+
+MorgkorinthliaX = { #1
+	provinces = { 1778 }
+}
+
+GythlampnaeX = { #6
+	provinces = { 188 1076 1110 807 191 476 }
+}
+
+MegaloedilaX = { #5
+	provinces = { 167 443 108 558 1172 }
+}
+
+HemedeceufX = { #6
+	provinces = { 357 941 325 352 465 870 }
+}
+
+HalicodlisX = { #3
+	provinces = { 1266 545 617 }
+}
+
+KlazoartusX = { #5
+	provinces = { 1404 266 259 173 698 }
+}
+
+MarhagiosX = { #3
+	provinces = { 183 246 48 }
+}
+
+HermidececiaX = { #5
+	provinces = { 95 827 718 790 313 }
+}
+
+MaodeliaX = { #4
+	provinces = { 346 951 747 254 }
+}
+

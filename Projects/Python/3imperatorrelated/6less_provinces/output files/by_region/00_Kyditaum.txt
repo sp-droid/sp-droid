@@ -1,0 +1,1176 @@
+	205={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="marble"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 }
+		#
+	}
+
+	234={
+		terrain="marsh"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 }
+		#
+	}
+
+	398={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 }
+		#
+	}
+
+	524={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 }
+		#
+	}
+
+	723={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 }
+		#
+	}
+
+	842={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 }
+		#
+	}
+
+	947={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="fur"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 }
+		#
+	}
+
+	1018={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 }
+		#
+	}
+
+	1091={
+		terrain="forest"
+		culture="polish"
+		religion="pagan_romuva"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 }
+		#
+	}
+
+	1101={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 }
+		#
+	}
+
+	1141={
+		terrain="forest"
+		culture="polish"
+		religion="roman_catholic"
+		trade_goods="olive"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 }
+		#
+	}
+
+	1231={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 }
+		#
+	}
+
+	1534={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="marble"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 }
+		#
+	}
+
+	1628={
+		terrain="plains"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 }
+		#
+	}
+
+	1696={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 }
+		#
+	}
+
+	1708={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 }
+		#
+	}
+
+	1737={
+		terrain="forest"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 }
+		#
+	}
+
+	1742={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 }
+		#
+	}
+
+	1802={
+		terrain="marsh"
+		culture="polish"
+		religion="orthodox_catholic"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 }
+		#
+	}
+
+	1921={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 }
+		#
+	}
+
+	1928={
+		terrain="plains"
+		culture="polish"
+		religion="orthodox_catholic"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 }
+		#
+	}
+
+	1967={
+		terrain="forest"
+		culture="polish"
+		religion="orthodox_catholic"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 }
+		#
+	}
+
+	2130={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 }
+		#
+	}
+
+	2199={
+		terrain="forest"
+		culture="old_prus"
+		religion="pagan_romuva"
+		trade_goods="spices"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 }
+		#
+	}
+
+	2401={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 }
+		#
+	}
+
+	2451={
+		terrain="marsh"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 }
+		#
+	}
+
+	2502={
+		terrain="forest"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="marble"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 }
+		#
+	}
+
+	2531={
+		terrain="forest"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 }
+		#
+	}
+
+	2543={
+		terrain="forest"
+		culture="polish"
+		religion="pagan_romuva"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 }
+		#
+	}
+
+	2578={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 }
+		#
+	}
+
+	2604={
+		terrain="forest"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 }
+		#
+	}
+
+	2659={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 }
+		#
+	}
+
+	2705={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="papyrus"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 }
+		#
+	}
+
+	2711={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 }
+		#
+	}
+
+	2721={
+		terrain="plains"
+		culture="primitiveculture"
+		religion="pagan_romuva"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 }
+		#
+	}
+
+	2722={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 }
+		#
+	}
+
+	2728={
+		terrain="plains"
+		culture="primitiveculture"
+		religion="pagan_romuva"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 }
+		#
+	}
+
+	2750={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 }
+		#
+	}
+
+	2758={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 }
+		#
+	}
+
+	2805={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="wild_game"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 }
+		#
+	}
+
+	2816={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 }
+		#
+	}
+
+	2823={
+		terrain="plains"
+		culture="polish"
+		religion="pagan_romuva"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 }
+		#
+	}
+
+	2853={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 }
+		#
+	}
+
+	2881={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 }
+		#
+	}
+
+	2889={
+		terrain="forest"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 }
+		#
+	}
+
+	2913={
+		terrain="plains"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 }
+		#
+	}
+
+	2915={
+		terrain="forest"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 }
+		#
+	}
+
+	2982={
+		terrain="marsh"
+		culture="polish"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 }
+		#
+	}
+
+	2983={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 }
+		#
+	}
+
+	2999={
+		terrain="marsh"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 }
+		#
+	}
+
+	3016={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 }
+		#
+	}
+
+	3089={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 }
+		#
+	}
+
+	3108={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 }
+		#
+	}
+
+	3166={
+		terrain="marsh"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="gems"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 }
+		#
+	}
+
+	3211={
+		terrain="marsh"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 }
+		#
+	}
+
+	3254={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 }
+		#
+	}
+
+	3391={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 }
+		#
+	}
+
+	3419={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 }
+		#
+	}
+
+	3466={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="marble"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 }
+		#
+	}
+
+	3478={
+		terrain="forest"
+		culture="polish"
+		religion="roman_catholic"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 }
+		#
+	}
+
+	3503={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 }
+		#
+	}
+
+	3530={
+		terrain="plains"
+		culture="polish"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 }
+		#
+	}
+
+	3564={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 }
+		#
+	}
+
+	3618={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 }
+		#
+	}
+
+	3627={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="amber"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 }
+		#
+	}
+
+	3685={
+		terrain="forest"
+		culture="polish"
+		religion="roman_catholic"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 }
+		#
+	}
+
+	3748={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="horses"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 }
+		#
+	}
+
+	3751={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 }
+		#
+	}
+
+	3788={
+		terrain="plains"
+		culture="ucranian"
+		religion="pagan_romuva"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 }
+		#
+	}
+
+	3821={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 }
+		#
+	}
+
+	3900={
+		terrain="plains"
+		culture="primitiveculture"
+		religion="pagan_romuva"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 }
+		#
+	}
+
+	3935={
+		terrain="forest"
+		culture="polish"
+		religion="orthodox_catholic"
+		trade_goods="marble"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 }
+		#
+	}
+
+	3944={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 }
+		#
+	}
+
+	3968={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 }
+		#
+	}
+
+	4017={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 }
+		#
+	}
+
+	4044={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 }
+		#
+	}
+
+	4065={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 }
+		#
+	}
+
+	4218={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 }
+		#
+	}
+
+	4251={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="fur"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 }
+		#
+	}
+
+	4310={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="stone"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 }
+		#
+	}
+
+	4344={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 }
+		#
+	}
+
+	4358={
+		terrain="plains"
+		culture="primitiveculture"
+		religion="pagan_romuva"
+		trade_goods="leather"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 }
+		#
+	}
+
+	4444={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 }
+		#
+	}
+
+	4462={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 }
+		#
+	}
+
+	4478={
+		terrain="forest"
+		culture="polish"
+		religion="pagan_romuva"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 }
+		#
+	}
+
+	4510={
+		terrain="plains"
+		culture="old_prus"
+		religion="pagan_romuva"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 }
+		#
+	}
+
+	4553={
+		terrain="marsh"
+		culture="polish"
+		religion="orthodox_catholic"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 }
+		#
+	}
+
+	4556={
+		terrain="plains"
+		culture="polish"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 }
+		#
+	}
+
+	4614={
+		terrain="plains"
+		culture="primitiveculture"
+		religion="pagan_romuva"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 }
+		#
+	}
+
+	4649={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="steppe_horses"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 }
+		#
+	}
+
+	4650={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="leather"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 }
+		#
+	}
+
+	4686={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 }
+		#
+	}
+
+	4759={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 }
+		#
+	}
+
+	4762={
+		terrain="plains"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 }
+		#
+	}
+
+	4792={
+		terrain="forest"
+		culture="polish"
+		religion="orthodox_catholic"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 }
+		#
+	}
+
+	4834={
+		terrain="marsh"
+		culture="ucranian"
+		religion="orthodox_catholic"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 }
+		#
+	}
+
+	4836={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 }
+		#
+	}
+
+	4856={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="orthodox_catholic"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 }
+		#
+	}
+

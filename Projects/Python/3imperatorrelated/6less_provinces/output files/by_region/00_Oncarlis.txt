@@ -1,0 +1,36 @@
+	1895={
+		terrain="drylands"
+		culture="francien"
+		religion="orthodox_catholic"
+		trade_goods="dates"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 10 }
+		#
+	}
+
+	2879={
+		terrain="drylands"
+		culture="francien"
+		religion="orthodox_catholic"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 }
+		#
+	}
+
+	3949={
+		terrain="hills"
+		culture="francien"
+		religion="orthodox_catholic"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 }
+		#
+	}
+

@@ -1,0 +1,270 @@
+﻿	4={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="primitiveculture" religion="kamuy_rel" }
+		#
+	}
+
+	5={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="fur"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	7={
+		terrain="mountain"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-8
+		#
+		#
+		freemen={amount= 2 culture="primitiveculture" religion="kamuy_rel" }
+		#
+	}
+
+	17={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 7 } # Total-11
+		#
+		#
+		freemen={amount= 4 culture="primitiveculture" religion="kamuy_rel" }
+		#
+	}
+
+	20={
+		terrain="plains"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 7 } # Total-7
+		#
+		#
+		#
+		#
+	}
+
+	69={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="kamuy_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 8 } # Total-8
+		#
+		#
+		#
+		#
+	}
+
+	70={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="kamuy_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-7
+		#
+		#
+		freemen={amount= 3 culture="primitiveculture" religion="mahayana_rel" }
+		#
+	}
+
+	71={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-9
+		#
+		#
+		freemen={amount= 4 culture="primitiveculture" religion="kamuy_rel" }
+		#
+	}
+
+	72={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-10
+		#
+		#
+		freemen={amount= 2 culture="primitiveculture" religion="kamuy_rel" }
+		#
+	}
+
+	73={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 11 } # Total-11
+		#
+		#
+		#
+		#
+	}
+
+	295={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	629={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 6 } # Total-6
+		#
+		#
+		#
+		#
+	}
+
+	872={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 9 } # Total-9
+		#
+		#
+		#
+		#
+	}
+
+	1204={
+		terrain="marsh"
+		culture="primitiveculture"
+		religion="kamuy_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1287={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="kamuy_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1564={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 7 } # Total-7
+		#
+		#
+		#
+		#
+	}
+
+	1773={
+		terrain="plains"
+		culture="primitiveculture"
+		religion="mahayana_rel"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-8
+		#
+		#
+		#
+		#
+	}
+
+	1889={
+		terrain="forest"
+		culture="primitiveculture"
+		religion="kamuy_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+

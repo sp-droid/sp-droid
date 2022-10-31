@@ -1,0 +1,94 @@
+!!!Subrutina que resuelve sistemas de ecuaciones lineales de solución única por el método de factorización LU
+subroutine metlu(A,R)
+    REAL*8,intent(in)    ::  A(:,:)
+    REAL*8,allocatable,intent(inout)    ::  R(:)
+
+    integer ::  n, i, j, m, z
+    REAL*8  ::  h
+    REAL*8,allocatable  ::  AB(:,:), L(:,:), U(:,:), P(:,:), Y(:)
+
+    !AB es la ampliada, R es el vector con los resultados, L(lower), U(upper), P(permutación) y el resto son variables locales auxiliares
+    n = size(A,1)
+    allocate(AB(n,n+1))
+    allocate(L(n,n))
+    allocate(U(n,n))
+    allocate(P(n,n))
+    allocate(Y(n))
+
+    !Inicialización
+    AB(:,:) = A(:,:)
+    U(:,:) = A(:,1:n)
+    R(:) = AB(:,n+1)
+    P = 0
+    L = 0
+    Y = 0
+    do i = 1,n
+        P(i,i) = 1
+        L(i,i) = 1
+    enddo
+    
+    !Cálculo de U, L y P
+    do j = 1,n
+        do m = j,n
+            if(abs(U(j,j))<abs(U(m,j))) then
+                !Sin pivote si funciona...
+                U(j,:) = U(j,:) + U(m,:)
+                U(m,:) = U(j,:) - U(m,:)
+                U(j,:) = U(j,:) - U(m,:)
+                P(j,:) = P(j,:) + P(m,:)
+                P(m,:) = P(j,:) - P(m,:)
+                P(j,:) = P(j,:) - P(m,:)
+            endif
+        enddo
+        do i = j+1,n
+            if(j==n) EXIT
+            h = U(i,j)/U(j,j)
+            U(i,:) = U(i,:) -h*U(j,:)
+            L(i,j) = h
+        enddo
+    enddo
+    
+    R = matmul(P,R)
+
+    write(*,*) "MATRIZ L"
+    do i = 1,n
+        write(*,*) L(i,:)
+    enddo
+        write(*,*) "MATRIZ U"
+        do i = 1,n
+            write(*,*) U(i,:)
+        enddo
+        write(*,*) "MATRIZ P"
+        do i = 1,n
+            write(*,*) P(i,:)
+        enddo
+
+    !Resolvemos Ly = Pb
+    do m = 1,n
+        do z = 1,m-1
+            if(m==1) EXIT
+            Y(m) = Y(m) + Y(z)*L(m,z)
+        enddo
+        Y(m) = (R(m)-Y(m))/L(m,m)
+    enddo
+    R = 0
+    !Resolvemos Ux = y
+    do m = n,1,-1
+        do z = n,m+1,-1
+            if(m==n) EXIT
+            R(m) = R(m) + R(z)*U(m,z)
+        enddo
+        R(m) = (Y(m)-R(m))/U(m,m)
+    enddo
+
+        deallocate(AB)
+        allocate(AB(n,n))
+    L = matmul(P,L)
+    AB = matmul(L,U)
+    do i = 1,n
+        write(*,*) AB(i,:)
+    enddo
+    write(*,*) "---"
+    write(*,*) Y(:)
+
+end subroutine

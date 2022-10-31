@@ -1,0 +1,6052 @@
+{
+ "tournaments": [
+  {
+   "name": "IEM Oakland 2016",
+   "region": "WR",
+   "game": [
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "Flash Wolves",
+     "result": "3 - 2",
+     "date": "2016-11-21"
+    },
+    {
+     "blueside": "Flash Wolves",
+     "redside": "Longzhu Gaming",
+     "result": "2 - 0",
+     "date": "2016-11-20"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Unicorns Of Love",
+     "result": "1 - 2",
+     "date": "2016-11-20"
+    },
+    {
+     "blueside": "Chiefs eSports Club",
+     "redside": "Longzhu Gaming",
+     "result": "0 - 2",
+     "date": "2016-11-19"
+    },
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "INTZ eSports",
+     "result": "2 - 0",
+     "date": "2016-11-19"
+    }
+   ]
+  },
+  {
+   "name": "World Championship 2016",
+   "region": "WR",
+   "game": [
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "SK Telecom T1",
+     "result": "2 - 3",
+     "date": "2016-10-30"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "H2k-Gaming",
+     "result": "3 - 0",
+     "date": "2016-10-23"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "SK Telecom T1",
+     "result": "2 - 3",
+     "date": "2016-10-22"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Albus NoX Luna",
+     "result": "3 - 0",
+     "date": "2016-10-17"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "Edward Gaming",
+     "result": "3 - 1",
+     "date": "2016-10-16"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "Royal Never Give Up",
+     "result": "3 - 1",
+     "date": "2016-10-15"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Cloud 9",
+     "result": "3 - 0",
+     "date": "2016-10-14"
+    },
+    {
+     "blueside": "Flash Wolves",
+     "redside": "SK Telecom T1",
+     "result": "0 - 1",
+     "date": "2016-10-09"
+    },
+    {
+     "blueside": "I MAY",
+     "redside": "Cloud 9",
+     "result": "0 - 1",
+     "date": "2016-10-09"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "I MAY",
+     "result": "1 - 0",
+     "date": "2016-10-09"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Flash Wolves",
+     "result": "0 - 1",
+     "date": "2016-10-09"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "SK Telecom T1",
+     "result": "0 - 1",
+     "date": "2016-10-09"
+    },
+    {
+     "blueside": "I MAY",
+     "redside": "Flash Wolves",
+     "result": "1 - 0",
+     "date": "2016-10-09"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Team SoloMid",
+     "result": "1 - 0",
+     "date": "2016-10-08"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "Samsung Galaxy",
+     "result": "0 - 1",
+     "date": "2016-10-08"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Royal Never Give Up",
+     "result": "1 - 0",
+     "date": "2016-10-08"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Splyce",
+     "result": "1 - 0",
+     "date": "2016-10-08"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "Royal Never Give Up",
+     "result": "1 - 0",
+     "date": "2016-10-08"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Team SoloMid",
+     "result": "1 - 0",
+     "date": "2016-10-08"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Edward Gaming",
+     "result": "1 - 0",
+     "date": "2016-10-07"
+    },
+    {
+     "blueside": "ahq eSports",
+     "redside": "Edward Gaming",
+     "result": "0 - 1",
+     "date": "2016-10-07"
+    },
+    {
+     "blueside": "INTZ eSports",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2016-10-07"
+    },
+    {
+     "blueside": "INTZ eSports",
+     "redside": "ahq eSports",
+     "result": "0 - 1",
+     "date": "2016-10-07"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Edward Gaming",
+     "result": "1 - 0",
+     "date": "2016-10-07"
+    },
+    {
+     "blueside": "ahq eSports",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2016-10-07"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "INTZ eSports",
+     "result": "1 - 0",
+     "date": "2016-10-07"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "Albus NoX Luna",
+     "result": "1 - 0",
+     "date": "2016-10-06"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "CLG",
+     "result": "1 - 0",
+     "date": "2016-10-06"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "Albus NoX Luna",
+     "result": "1 - 0",
+     "date": "2016-10-06"
+    },
+    {
+     "blueside": "Albus NoX Luna",
+     "redside": "ROX Tigers",
+     "result": "1 - 0",
+     "date": "2016-10-06"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "G2 Esports",
+     "result": "1 - 0",
+     "date": "2016-10-06"
+    },
+    {
+     "blueside": "Albus NoX Luna",
+     "redside": "CLG",
+     "result": "1 - 0",
+     "date": "2016-10-06"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "ROX Tigers",
+     "result": "0 - 1",
+     "date": "2016-10-06"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "I MAY",
+     "result": "1 - 0",
+     "date": "2016-10-02"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "Flash Wolves",
+     "result": "0 - 1",
+     "date": "2016-10-02"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "ROX Tigers",
+     "result": "1 - 0",
+     "date": "2016-10-02"
+    },
+    {
+     "blueside": "Albus NoX Luna",
+     "redside": "G2 Esports",
+     "result": "1 - 0",
+     "date": "2016-10-02"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "H2k-Gaming",
+     "result": "1 - 0",
+     "date": "2016-10-02"
+    },
+    {
+     "blueside": "ahq eSports",
+     "redside": "INTZ eSports",
+     "result": "1 - 0",
+     "date": "2016-10-02"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Samsung Galaxy",
+     "result": "0 - 1",
+     "date": "2016-10-01"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "Team SoloMid",
+     "result": "0 - 1",
+     "date": "2016-10-01"
+    },
+    {
+     "blueside": "I MAY",
+     "redside": "SK Telecom T1",
+     "result": "0 - 1",
+     "date": "2016-10-01"
+    },
+    {
+     "blueside": "Flash Wolves",
+     "redside": "Cloud 9",
+     "result": "0 - 1",
+     "date": "2016-10-01"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "G2 Esports",
+     "result": "1 - 0",
+     "date": "2016-10-01"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Albus NoX Luna",
+     "result": "0 - 1",
+     "date": "2016-10-01"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "ahq eSports",
+     "result": "1 - 0",
+     "date": "2016-09-30"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "INTZ eSports",
+     "result": "1 - 0",
+     "date": "2016-09-30"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Splyce",
+     "result": "1 - 0",
+     "date": "2016-09-30"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Samsung Galaxy",
+     "result": "1 - 0",
+     "date": "2016-09-30"
+    },
+    {
+     "blueside": "Flash Wolves",
+     "redside": "I MAY",
+     "result": "0 - 1",
+     "date": "2016-09-30"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "Cloud 9",
+     "result": "1 - 0",
+     "date": "2016-09-30"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Royal Never Give Up",
+     "result": "0 - 1",
+     "date": "2016-09-29"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Splyce",
+     "result": "1 - 0",
+     "date": "2016-09-29"
+    },
+    {
+     "blueside": "INTZ eSports",
+     "redside": "Edward Gaming",
+     "result": "1 - 0",
+     "date": "2016-09-29"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "ahq eSports",
+     "result": "0 - 1",
+     "date": "2016-09-29"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "Albus NoX Luna",
+     "result": "1 - 0",
+     "date": "2016-09-29"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "CLG",
+     "result": "0 - 1",
+     "date": "2016-09-29"
+    }
+   ]
+  },
+  {
+   "name": "NA Regional Qualifiers 2016",
+   "region": "NA",
+   "game": [
+    {
+     "blueside": "Immortals",
+     "redside": "Cloud 9",
+     "result": "1 - 3",
+     "date": "2016-09-05"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "EnVyUs",
+     "result": "3 - 0",
+     "date": "2016-09-04"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "EnVyUs",
+     "result": "0 - 3",
+     "date": "2016-09-03"
+    }
+   ]
+  },
+  {
+   "name": "EU Regional Qualifiers 2016",
+   "region": "EUW",
+   "game": [
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "Splyce",
+     "result": "2 - 3",
+     "date": "2016-09-05"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Unicorns Of Love",
+     "result": "0 - 3",
+     "date": "2016-09-04"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Unicorns Of Love",
+     "result": "0 - 3",
+     "date": "2016-09-03"
+    }
+   ]
+  },
+  {
+   "name": "IWC Qualifier 2016",
+   "region": "WR",
+   "game": [
+    {
+     "blueside": "Lyon Gaming",
+     "redside": "Albus NoX Luna",
+     "result": "2 - 3",
+     "date": "2016-09-04"
+    },
+    {
+     "blueside": "INTZ eSports",
+     "redside": "Dark Passage",
+     "result": "3 - 2",
+     "date": "2016-09-03"
+    },
+    {
+     "blueside": "Chiefs eSports Club",
+     "redside": "Rampage",
+     "result": "0 - 1",
+     "date": "2016-08-29"
+    },
+    {
+     "blueside": "Dark Passage",
+     "redside": "Saigon Jokers",
+     "result": "1 - 0",
+     "date": "2016-08-29"
+    },
+    {
+     "blueside": "Lyon Gaming",
+     "redside": "Albus NoX Luna",
+     "result": "0 - 1",
+     "date": "2016-08-29"
+    },
+    {
+     "blueside": "Saigon Jokers",
+     "redside": "INTZ eSports",
+     "result": "0 - 1",
+     "date": "2016-08-28"
+    },
+    {
+     "blueside": "Dark Passage",
+     "redside": "Chiefs eSports Club",
+     "result": "1 - 0",
+     "date": "2016-08-28"
+    },
+    {
+     "blueside": "Kaos Latin Gamers",
+     "redside": "Saigon Jokers",
+     "result": "1 - 0",
+     "date": "2016-08-28"
+    },
+    {
+     "blueside": "INTZ eSports",
+     "redside": "Albus NoX Luna",
+     "result": "1 - 0",
+     "date": "2016-08-28"
+    },
+    {
+     "blueside": "Lyon Gaming",
+     "redside": "Rampage",
+     "result": "1 - 0",
+     "date": "2016-08-28"
+    },
+    {
+     "blueside": "Saigon Jokers",
+     "redside": "Albus NoX Luna",
+     "result": "0 - 1",
+     "date": "2016-08-27"
+    },
+    {
+     "blueside": "INTZ eSports",
+     "redside": "Dark Passage",
+     "result": "1 - 0",
+     "date": "2016-08-27"
+    },
+    {
+     "blueside": "Albus NoX Luna",
+     "redside": "Kaos Latin Gamers",
+     "result": "1 - 0",
+     "date": "2016-08-27"
+    },
+    {
+     "blueside": "Chiefs eSports Club",
+     "redside": "Lyon Gaming",
+     "result": "0 - 1",
+     "date": "2016-08-27"
+    },
+    {
+     "blueside": "Rampage",
+     "redside": "Kaos Latin Gamers",
+     "result": "1 - 0",
+     "date": "2016-08-27"
+    },
+    {
+     "blueside": "Lyon Gaming",
+     "redside": "Saigon Jokers",
+     "result": "1 - 0",
+     "date": "2016-08-26"
+    },
+    {
+     "blueside": "Dark Passage",
+     "redside": "Rampage",
+     "result": "1 - 0",
+     "date": "2016-08-26"
+    },
+    {
+     "blueside": "Chiefs eSports Club",
+     "redside": "INTZ eSports",
+     "result": "1 - 0",
+     "date": "2016-08-26"
+    },
+    {
+     "blueside": "Kaos Latin Gamers",
+     "redside": "Lyon Gaming",
+     "result": "0 - 1",
+     "date": "2016-08-26"
+    },
+    {
+     "blueside": "Albus NoX Luna",
+     "redside": "Dark Passage",
+     "result": "0 - 1",
+     "date": "2016-08-26"
+    },
+    {
+     "blueside": "Saigon Jokers",
+     "redside": "Chiefs eSports Club",
+     "result": "0 - 1",
+     "date": "2016-08-25"
+    },
+    {
+     "blueside": "INTZ eSports",
+     "redside": "Rampage",
+     "result": "1 - 0",
+     "date": "2016-08-25"
+    },
+    {
+     "blueside": "Dark Passage",
+     "redside": "Lyon Gaming",
+     "result": "0 - 1",
+     "date": "2016-08-25"
+    },
+    {
+     "blueside": "Chiefs eSports Club",
+     "redside": "Kaos Latin Gamers",
+     "result": "1 - 0",
+     "date": "2016-08-25"
+    },
+    {
+     "blueside": "Rampage",
+     "redside": "Albus NoX Luna",
+     "result": "0 - 1",
+     "date": "2016-08-25"
+    },
+    {
+     "blueside": "Rampage",
+     "redside": "Saigon Jokers",
+     "result": "1 - 0",
+     "date": "2016-08-24"
+    },
+    {
+     "blueside": "Lyon Gaming",
+     "redside": "INTZ eSports",
+     "result": "1 - 0",
+     "date": "2016-08-24"
+    },
+    {
+     "blueside": "Kaos Latin Gamers",
+     "redside": "Dark Passage",
+     "result": "0 - 1",
+     "date": "2016-08-24"
+    },
+    {
+     "blueside": "Albus NoX Luna",
+     "redside": "Chiefs eSports Club",
+     "result": "1 - 0",
+     "date": "2016-08-24"
+    },
+    {
+     "blueside": "Kaos Latin Gamers",
+     "redside": "INTZ eSports",
+     "result": "0 - 1",
+     "date": "2016-08-24"
+    }
+   ]
+  },
+  {
+   "name": "LMS Regional Qualifiers 2016",
+   "region": "TW",
+   "game": [
+    {
+     "blueside": "ahq eSports",
+     "redside": "Machi eSports",
+     "result": "3 - 0",
+     "date": "2016-09-04"
+    },
+    {
+     "blueside": "J Team",
+     "redside": "Machi eSports",
+     "result": "2 - 3",
+     "date": "2016-09-03"
+    },
+    {
+     "blueside": "ahq eSports",
+     "redside": "Hong Kong Esports",
+     "result": "3 - 0",
+     "date": "2016-09-02"
+    }
+   ]
+  },
+  {
+   "name": "LCK Regional Qualifiers 2016",
+   "region": "KR",
+   "game": [
+    {
+     "blueside": "KT Rolster",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 3",
+     "date": "2016-09-03"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Afreeca Freecs",
+     "result": "3 - 1",
+     "date": "2016-09-01"
+    },
+    {
+     "blueside": "Afreeca Freecs",
+     "redside": "Jin Air Green Wings",
+     "result": "3 - 2",
+     "date": "2016-08-29"
+    }
+   ]
+  },
+  {
+   "name": "EU LCS Summer Playoffs 2016",
+   "region": "EUW",
+   "game": [
+    {
+     "blueside": "Splyce",
+     "redside": "G2 Esports",
+     "result": "1 - 3",
+     "date": "2016-08-28"
+    },
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "H2k-Gaming",
+     "result": "1 - 3",
+     "date": "2016-08-27"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "Unicorns Of Love",
+     "result": "3 - 1",
+     "date": "2016-08-21"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Splyce",
+     "result": "2 - 3",
+     "date": "2016-08-20"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Fnatic",
+     "result": "3 - 0",
+     "date": "2016-08-16"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Unicorns Of Love",
+     "result": "1 - 3",
+     "date": "2016-08-13"
+    }
+   ]
+  },
+  {
+   "name": "NA LCS Summer Playoffs 2016",
+   "region": "NA",
+   "game": [
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Cloud 9",
+     "result": "3 - 1",
+     "date": "2016-08-28"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "CLG",
+     "result": "3 - 2",
+     "date": "2016-08-27"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "CLG",
+     "result": "3 - 0",
+     "date": "2016-08-21"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "Cloud 9",
+     "result": "2 - 3",
+     "date": "2016-08-20"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Team Liquid",
+     "result": "3 - 1",
+     "date": "2016-08-14"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "EnVyUs",
+     "result": "3 - 1",
+     "date": "2016-08-13"
+    }
+   ]
+  },
+  {
+   "name": "LPL Regional Qualifiers 2016",
+   "region": "CN",
+   "game": [
+    {
+     "blueside": "I MAY",
+     "redside": "Team WE",
+     "result": "3 - 2",
+     "date": "2016-08-28"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Snake eSports",
+     "result": "3 - 2",
+     "date": "2016-08-27"
+    },
+    {
+     "blueside": "Snake eSports",
+     "redside": "Vici Gaming",
+     "result": "3 - 2",
+     "date": "2016-08-27"
+    }
+   ]
+  },
+  {
+   "name": "LCK Spring Promo 2017",
+   "region": "KR",
+   "game": [
+    {
+     "blueside": "ESC Ever",
+     "redside": "CJ Entus",
+     "result": "3 - 0",
+     "date": "2016-08-27"
+    },
+    {
+     "blueside": "ESC Ever",
+     "redside": "Kongdoo Monster",
+     "result": "1 - 3",
+     "date": "2016-08-25"
+    },
+    {
+     "blueside": "SBENU Sonicboom",
+     "redside": "CJ Entus",
+     "result": "0 - 2",
+     "date": "2016-08-22"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Kongdoo Monster",
+     "result": "0 - 2",
+     "date": "2016-08-22"
+    },
+    {
+     "blueside": "SBENU Sonicboom",
+     "redside": "ESC Ever",
+     "result": "1 - 2",
+     "date": "2016-08-22"
+    }
+   ]
+  },
+  {
+   "name": "LPL Summer Playoffs 2016",
+   "region": "CN",
+   "game": [
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Royal Never Give Up",
+     "result": "3 - 0",
+     "date": "2016-08-26"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "I MAY",
+     "result": "1 - 3",
+     "date": "2016-08-15"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Snake eSports",
+     "result": "0 - 2",
+     "date": "2016-08-15"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "I MAY",
+     "result": "3 - 2",
+     "date": "2016-08-14"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Team WE",
+     "result": "3 - 2",
+     "date": "2016-08-14"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Vici Gaming",
+     "result": "3 - 1",
+     "date": "2016-08-12"
+    },
+    {
+     "blueside": "Snake eSports",
+     "redside": "I MAY",
+     "result": "1 - 3",
+     "date": "2016-08-12"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "I MAY",
+     "result": "0 - 2",
+     "date": "2016-08-10"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Game Talents",
+     "result": "3 - 0",
+     "date": "2016-08-10"
+    }
+   ]
+  },
+  {
+   "name": "LMS Summer Playoffs 2016",
+   "region": "TW",
+   "game": [
+    {
+     "blueside": "J Team",
+     "redside": "Flash Wolves",
+     "result": "0 - 3",
+     "date": "2016-08-21"
+    },
+    {
+     "blueside": "Flash Wolves",
+     "redside": "ahq eSports",
+     "result": "3 - 2",
+     "date": "2016-08-18"
+    },
+    {
+     "blueside": "ahq eSports",
+     "redside": "Hong Kong Esports",
+     "result": "3 - 0",
+     "date": "2016-08-17"
+    }
+   ]
+  },
+  {
+   "name": "LCK Summer Playoffs 2016",
+   "region": "KR",
+   "game": [
+    {
+     "blueside": "ROX Tigers",
+     "redside": "KT Rolster",
+     "result": "3 - 2",
+     "date": "2016-08-20"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "SK Telecom T1",
+     "result": "3 - 2",
+     "date": "2016-08-12"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "Samsung Galaxy",
+     "result": "3 - 0",
+     "date": "2016-08-10"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Afreeca Freecs",
+     "result": "2 - 0",
+     "date": "2016-08-08"
+    }
+   ]
+  },
+  {
+   "name": "LPL Summer 2016",
+   "region": "CN",
+   "game": [
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "NewBee",
+     "result": "2 - 1",
+     "date": "2016-08-07"
+    },
+    {
+     "blueside": "Snake eSports",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2016-08-07"
+    },
+    {
+     "blueside": "Saint Gaming",
+     "redside": "Game Talents",
+     "result": "1 - 2",
+     "date": "2016-08-07"
+    },
+    {
+     "blueside": "I MAY",
+     "redside": "Royal Never Give Up",
+     "result": "0 - 2",
+     "date": "2016-08-06"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "LGD Gaming",
+     "result": "0 - 2",
+     "date": "2016-08-06"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Team WE",
+     "result": "2 - 0",
+     "date": "2016-08-06"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2016-08-05"
+    },
+    {
+     "blueside": "Saint Gaming",
+     "redside": "Snake eSports",
+     "result": "1 - 2",
+     "date": "2016-08-05"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Vici Gaming",
+     "result": "1 - 2",
+     "date": "2016-08-04"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Royal Never Give Up",
+     "result": "1 - 2",
+     "date": "2016-08-04"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Royal Never Give Up",
+     "result": "2 - 1",
+     "date": "2016-07-31"
+    },
+    {
+     "blueside": "I MAY",
+     "redside": "Vici Gaming",
+     "result": "0 - 2",
+     "date": "2016-07-31"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Team WE",
+     "result": "2 - 1",
+     "date": "2016-07-31"
+    },
+    {
+     "blueside": "Snake eSports",
+     "redside": "NewBee",
+     "result": "2 - 0",
+     "date": "2016-07-30"
+    },
+    {
+     "blueside": "Game Talents",
+     "redside": "Invictus Gaming",
+     "result": "0 - 2",
+     "date": "2016-07-30"
+    },
+    {
+     "blueside": "Saint Gaming",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2016-07-30"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Vici Gaming",
+     "result": "2 - 0",
+     "date": "2016-07-29"
+    },
+    {
+     "blueside": "I MAY",
+     "redside": "Team WE",
+     "result": "1 - 2",
+     "date": "2016-07-29"
+    },
+    {
+     "blueside": "Game Talents",
+     "redside": "NewBee",
+     "result": "2 - 0",
+     "date": "2016-07-28"
+    },
+    {
+     "blueside": "Saint Gaming",
+     "redside": "Invictus Gaming",
+     "result": "1 - 2",
+     "date": "2016-07-28"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Snake eSports",
+     "result": "1 - 2",
+     "date": "2016-07-24"
+    },
+    {
+     "blueside": "Saint Gaming",
+     "redside": "NewBee",
+     "result": "1 - 2",
+     "date": "2016-07-24"
+    },
+    {
+     "blueside": "Game Talents",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2016-07-24"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Royal Never Give Up",
+     "result": "1 - 2",
+     "date": "2016-07-23"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Team WE",
+     "result": "1 - 2",
+     "date": "2016-07-23"
+    },
+    {
+     "blueside": "I MAY",
+     "redside": "LGD Gaming",
+     "result": "2 - 0",
+     "date": "2016-07-23"
+    },
+    {
+     "blueside": "Game Talents",
+     "redside": "Snake eSports",
+     "result": "1 - 2",
+     "date": "2016-07-22"
+    },
+    {
+     "blueside": "NewBee",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2016-07-22"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Royal Never Give Up",
+     "result": "2 - 1",
+     "date": "2016-07-21"
+    },
+    {
+     "blueside": "I MAY",
+     "redside": "OMG",
+     "result": "2 - 1",
+     "date": "2016-07-21"
+    },
+    {
+     "blueside": "Snake eSports",
+     "redside": "Vici Gaming",
+     "result": "2 - 1",
+     "date": "2016-07-17"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "I MAY",
+     "result": "2 - 0",
+     "date": "2016-07-17"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "LGD Gaming",
+     "result": "0 - 2",
+     "date": "2016-07-16"
+    },
+    {
+     "blueside": "Game Talents",
+     "redside": "OMG",
+     "result": "0 - 2",
+     "date": "2016-07-16"
+    },
+    {
+     "blueside": "Saint Gaming",
+     "redside": "Royal Never Give Up",
+     "result": "0 - 2",
+     "date": "2016-07-16"
+    },
+    {
+     "blueside": "NewBee",
+     "redside": "Team WE",
+     "result": "0 - 2",
+     "date": "2016-07-15"
+    },
+    {
+     "blueside": "Snake eSports",
+     "redside": "I MAY",
+     "result": "0 - 2",
+     "date": "2016-07-15"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "LGD Gaming",
+     "result": "2 - 1",
+     "date": "2016-07-14"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Invictus Gaming",
+     "result": "2 - 0",
+     "date": "2016-07-14"
+    },
+    {
+     "blueside": "Saint Gaming",
+     "redside": "OMG",
+     "result": "2 - 0",
+     "date": "2016-07-10"
+    },
+    {
+     "blueside": "NewBee",
+     "redside": "LGD Gaming",
+     "result": "2 - 1",
+     "date": "2016-07-10"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Team WE",
+     "result": "2 - 0",
+     "date": "2016-07-09"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Snake eSports",
+     "result": "2 - 0",
+     "date": "2016-07-09"
+    },
+    {
+     "blueside": "Game Talents",
+     "redside": "Vici Gaming",
+     "result": "0 - 2",
+     "date": "2016-07-09"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "NewBee",
+     "result": "2 - 0",
+     "date": "2016-07-08"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "I MAY",
+     "result": "1 - 2",
+     "date": "2016-07-08"
+    },
+    {
+     "blueside": "Game Talents",
+     "redside": "Royal Never Give Up",
+     "result": "1 - 2",
+     "date": "2016-07-07"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Saint Gaming",
+     "result": "2 - 0",
+     "date": "2016-07-07"
+    },
+    {
+     "blueside": "NewBee",
+     "redside": "Royal Never Give Up",
+     "result": "1 - 2",
+     "date": "2016-06-26"
+    },
+    {
+     "blueside": "Game Talents",
+     "redside": "I MAY",
+     "result": "0 - 2",
+     "date": "2016-06-26"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Saint Gaming",
+     "result": "2 - 0",
+     "date": "2016-06-25"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Vici Gaming",
+     "result": "2 - 0",
+     "date": "2016-06-25"
+    },
+    {
+     "blueside": "Snake eSports",
+     "redside": "OMG",
+     "result": "2 - 0",
+     "date": "2016-06-25"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Team WE",
+     "result": "1 - 2",
+     "date": "2016-06-24"
+    },
+    {
+     "blueside": "NewBee",
+     "redside": "I MAY",
+     "result": "0 - 2",
+     "date": "2016-06-24"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "OMG",
+     "result": "2 - 1",
+     "date": "2016-06-23"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Saint Gaming",
+     "result": "2 - 1",
+     "date": "2016-06-23"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Snake eSports",
+     "result": "1 - 2",
+     "date": "2016-06-19"
+    },
+    {
+     "blueside": "Game Talents",
+     "redside": "LGD Gaming",
+     "result": "2 - 0",
+     "date": "2016-06-19"
+    },
+    {
+     "blueside": "Saint Gaming",
+     "redside": "I MAY",
+     "result": "0 - 2",
+     "date": "2016-06-18"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Royal Never Give Up",
+     "result": "0 - 2",
+     "date": "2016-06-18"
+    },
+    {
+     "blueside": "NewBee",
+     "redside": "Vici Gaming",
+     "result": "2 - 0",
+     "date": "2016-06-18"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Snake eSports",
+     "result": "2 - 0",
+     "date": "2016-06-17"
+    },
+    {
+     "blueside": "Game Talents",
+     "redside": "Team WE",
+     "result": "2 - 1",
+     "date": "2016-06-17"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "OMG",
+     "result": "1 - 2",
+     "date": "2016-06-16"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Royal Never Give Up",
+     "result": "2 - 1",
+     "date": "2016-06-16"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "OMG",
+     "result": "2 - 1",
+     "date": "2016-06-12"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "I MAY",
+     "result": "2 - 0",
+     "date": "2016-06-12"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Vici Gaming",
+     "result": "2 - 0",
+     "date": "2016-06-12"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Game Talents",
+     "result": "2 - 0",
+     "date": "2016-06-11"
+    },
+    {
+     "blueside": "NewBee",
+     "redside": "Saint Gaming",
+     "result": "2 - 1",
+     "date": "2016-06-11"
+    },
+    {
+     "blueside": "Snake eSports",
+     "redside": "Invictus Gaming",
+     "result": "2 - 0",
+     "date": "2016-06-11"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "OMG",
+     "result": "2 - 0",
+     "date": "2016-06-10"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "LGD Gaming",
+     "result": "2 - 0",
+     "date": "2016-06-10"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Invictus Gaming",
+     "result": "2 - 1",
+     "date": "2016-06-09"
+    },
+    {
+     "blueside": "Snake eSports",
+     "redside": "Saint Gaming",
+     "result": "2 - 0",
+     "date": "2016-06-09"
+    },
+    {
+     "blueside": "NewBee",
+     "redside": "Snake eSports",
+     "result": "0 - 2",
+     "date": "2016-06-05"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Game Talents",
+     "result": "2 - 0",
+     "date": "2016-06-05"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Saint Gaming",
+     "result": "2 - 0",
+     "date": "2016-06-05"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "LGD Gaming",
+     "result": "2 - 1",
+     "date": "2016-06-04"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "I MAY",
+     "result": "2 - 1",
+     "date": "2016-06-04"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "OMG",
+     "result": "2 - 0",
+     "date": "2016-06-04"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Saint Gaming",
+     "result": "2 - 1",
+     "date": "2016-06-03"
+    },
+    {
+     "blueside": "NewBee",
+     "redside": "Game Talents",
+     "result": "0 - 2",
+     "date": "2016-06-03"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "I MAY",
+     "result": "2 - 1",
+     "date": "2016-06-02"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "LGD Gaming",
+     "result": "2 - 0",
+     "date": "2016-06-02"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "OMG",
+     "result": "2 - 0",
+     "date": "2016-05-29"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Vici Gaming",
+     "result": "2 - 0",
+     "date": "2016-05-29"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "I MAY",
+     "result": "0 - 2",
+     "date": "2016-05-29"
+    },
+    {
+     "blueside": "NewBee",
+     "redside": "Invictus Gaming",
+     "result": "2 - 1",
+     "date": "2016-05-28"
+    },
+    {
+     "blueside": "Game Talents",
+     "redside": "Saint Gaming",
+     "result": "2 - 0",
+     "date": "2016-05-28"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Snake eSports",
+     "result": "2 - 0",
+     "date": "2016-05-28"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "I MAY",
+     "result": "0 - 2",
+     "date": "2016-05-27"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Team WE",
+     "result": "2 - 1",
+     "date": "2016-05-27"
+    },
+    {
+     "blueside": "Snake eSports",
+     "redside": "Game Talents",
+     "result": "1 - 2",
+     "date": "2016-05-26"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "NewBee",
+     "result": "2 - 1",
+     "date": "2016-05-26"
+    }
+   ]
+  },
+  {
+   "name": "EU LCS 2017 Spring Promo",
+   "region": "EUW",
+   "game": [
+    {
+     "blueside": "FC Schalke 04",
+     "redside": "Misfits",
+     "result": "1 - 3",
+     "date": "2016-08-07"
+    },
+    {
+     "blueside": "FC Schalke 04",
+     "redside": "Roccat",
+     "result": "1 - 3",
+     "date": "2016-08-05"
+    },
+    {
+     "blueside": "Misfits",
+     "redside": "Origen",
+     "result": "2 - 3",
+     "date": "2016-08-05"
+    },
+    {
+     "blueside": "Millenium",
+     "redside": "Roccat",
+     "result": "2 - 3",
+     "date": "2016-08-04"
+    }
+   ]
+  },
+  {
+   "name": "NA LCS 2017 Spring Promo",
+   "region": "NA",
+   "game": [
+    {
+     "blueside": "Echo Fox",
+     "redside": "NRG eSports",
+     "result": "3 - 0",
+     "date": "2016-08-07"
+    },
+    {
+     "blueside": "Echo Fox",
+     "redside": "Phoenix1",
+     "result": "0 - 3",
+     "date": "2016-08-06"
+    },
+    {
+     "blueside": "NRG eSports",
+     "redside": "Cloud9 Challenger",
+     "result": "0 - 3",
+     "date": "2016-08-05"
+    },
+    {
+     "blueside": "Echo Fox",
+     "redside": "Liquid A",
+     "result": "3 - 2",
+     "date": "2016-08-04"
+    }
+   ]
+  },
+  {
+   "name": "LCK Summer 2016",
+   "region": "KR",
+   "game": [
+    {
+     "blueside": "KT Rolster",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 0",
+     "date": "2016-08-06"
+    },
+    {
+     "blueside": "Jin Air Green Wings",
+     "redside": "ESC Ever",
+     "result": "2 - 1",
+     "date": "2016-08-06"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "Longzhu Gaming",
+     "result": "0 - 2",
+     "date": "2016-08-05"
+    },
+    {
+     "blueside": "Afreeca Freecs",
+     "redside": "ROX Tigers",
+     "result": "0 - 2",
+     "date": "2016-08-05"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "CJ Entus",
+     "result": "2 - 0",
+     "date": "2016-08-04"
+    },
+    {
+     "blueside": "MVP",
+     "redside": "ROX Tigers",
+     "result": "0 - 2",
+     "date": "2016-08-03"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "Jin Air Green Wings",
+     "result": "2 - 1",
+     "date": "2016-08-03"
+    },
+    {
+     "blueside": "ESC Ever",
+     "redside": "CJ Entus",
+     "result": "1 - 2",
+     "date": "2016-08-02"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Afreeca Freecs",
+     "result": "2 - 1",
+     "date": "2016-08-01"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "ROX Tigers",
+     "result": "0 - 2",
+     "date": "2016-07-30"
+    },
+    {
+     "blueside": "MVP",
+     "redside": "Samsung Galaxy",
+     "result": "1 - 2",
+     "date": "2016-07-30"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "ESC Ever",
+     "result": "2 - 1",
+     "date": "2016-07-29"
+    },
+    {
+     "blueside": "Longzhu Gaming",
+     "redside": "Afreeca Freecs",
+     "result": "2 - 1",
+     "date": "2016-07-29"
+    },
+    {
+     "blueside": "MVP",
+     "redside": "Jin Air Green Wings",
+     "result": "2 - 0",
+     "date": "2016-07-28"
+    },
+    {
+     "blueside": "ESC Ever",
+     "redside": "SK Telecom T1",
+     "result": "0 - 2",
+     "date": "2016-07-27"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "Longzhu Gaming",
+     "result": "2 - 0",
+     "date": "2016-07-27"
+    },
+    {
+     "blueside": "Afreeca Freecs",
+     "redside": "Jin Air Green Wings",
+     "result": "1 - 2",
+     "date": "2016-07-26"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "SK Telecom T1",
+     "result": "1 - 2",
+     "date": "2016-07-25"
+    },
+    {
+     "blueside": "ESC Ever",
+     "redside": "MVP",
+     "result": "2 - 1",
+     "date": "2016-07-23"
+    },
+    {
+     "blueside": "Afreeca Freecs",
+     "redside": "SK Telecom T1",
+     "result": "2 - 0",
+     "date": "2016-07-23"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "CJ Entus",
+     "result": "2 - 0",
+     "date": "2016-07-22"
+    },
+    {
+     "blueside": "Longzhu Gaming",
+     "redside": "Jin Air Green Wings",
+     "result": "2 - 1",
+     "date": "2016-07-22"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "ESC Ever",
+     "result": "2 - 0",
+     "date": "2016-07-21"
+    },
+    {
+     "blueside": "Afreeca Freecs",
+     "redside": "CJ Entus",
+     "result": "2 - 1",
+     "date": "2016-07-20"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "SK Telecom T1",
+     "result": "0 - 2",
+     "date": "2016-07-20"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "MVP",
+     "result": "2 - 0",
+     "date": "2016-07-19"
+    },
+    {
+     "blueside": "Longzhu Gaming",
+     "redside": "ROX Tigers",
+     "result": "0 - 2",
+     "date": "2016-07-18"
+    },
+    {
+     "blueside": "Longzhu Gaming",
+     "redside": "ESC Ever",
+     "result": "2 - 1",
+     "date": "2016-07-16"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "ROX Tigers",
+     "result": "0 - 2",
+     "date": "2016-07-16"
+    },
+    {
+     "blueside": "MVP",
+     "redside": "Afreeca Freecs",
+     "result": "0 - 2",
+     "date": "2016-07-15"
+    },
+    {
+     "blueside": "Jin Air Green Wings",
+     "redside": "KT Rolster",
+     "result": "1 - 2",
+     "date": "2016-07-15"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Longzhu Gaming",
+     "result": "0 - 2",
+     "date": "2016-07-14"
+    },
+    {
+     "blueside": "ESC Ever",
+     "redside": "Afreeca Freecs",
+     "result": "2 - 1",
+     "date": "2016-07-13"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "KT Rolster",
+     "result": "2 - 0",
+     "date": "2016-07-13"
+    },
+    {
+     "blueside": "Jin Air Green Wings",
+     "redside": "Samsung Galaxy",
+     "result": "0 - 2",
+     "date": "2016-07-12"
+    },
+    {
+     "blueside": "MVP",
+     "redside": "SK Telecom T1",
+     "result": "0 - 2",
+     "date": "2016-07-11"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "Jin Air Green Wings",
+     "result": "2 - 1",
+     "date": "2016-07-09"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "KT Rolster",
+     "result": "2 - 1",
+     "date": "2016-07-09"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "MVP",
+     "result": "1 - 2",
+     "date": "2016-07-08"
+    },
+    {
+     "blueside": "Longzhu Gaming",
+     "redside": "Samsung Galaxy",
+     "result": "0 - 2",
+     "date": "2016-07-08"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "ROX Tigers",
+     "result": "2 - 0",
+     "date": "2016-07-07"
+    },
+    {
+     "blueside": "Jin Air Green Wings",
+     "redside": "CJ Entus",
+     "result": "0 - 2",
+     "date": "2016-07-06"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "ESC Ever",
+     "result": "2 - 0",
+     "date": "2016-07-06"
+    },
+    {
+     "blueside": "Longzhu Gaming",
+     "redside": "MVP",
+     "result": "0 - 2",
+     "date": "2016-07-05"
+    },
+    {
+     "blueside": "Afreeca Freecs",
+     "redside": "KT Rolster",
+     "result": "2 - 1",
+     "date": "2016-07-04"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "ESC Ever",
+     "result": "1 - 2",
+     "date": "2016-06-29"
+    },
+    {
+     "blueside": "Afreeca Freecs",
+     "redside": "MVP",
+     "result": "2 - 1",
+     "date": "2016-06-29"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "Jin Air Green Wings",
+     "result": "2 - 1",
+     "date": "2016-06-28"
+    },
+    {
+     "blueside": "MVP",
+     "redside": "Longzhu Gaming",
+     "result": "2 - 0",
+     "date": "2016-06-27"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "Afreeca Freecs",
+     "result": "2 - 0",
+     "date": "2016-06-25"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "KT Rolster",
+     "result": "1 - 2",
+     "date": "2016-06-25"
+    },
+    {
+     "blueside": "Longzhu Gaming",
+     "redside": "SK Telecom T1",
+     "result": "0 - 2",
+     "date": "2016-06-24"
+    },
+    {
+     "blueside": "ESC Ever",
+     "redside": "Samsung Galaxy",
+     "result": "1 - 2",
+     "date": "2016-06-24"
+    },
+    {
+     "blueside": "Jin Air Green Wings",
+     "redside": "ROX Tigers",
+     "result": "0 - 2",
+     "date": "2016-06-23"
+    },
+    {
+     "blueside": "MVP",
+     "redside": "CJ Entus",
+     "result": "2 - 0",
+     "date": "2016-06-22"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "Afreeca Freecs",
+     "result": "0 - 2",
+     "date": "2016-06-22"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "KT Rolster",
+     "result": "0 - 2",
+     "date": "2016-06-21"
+    },
+    {
+     "blueside": "Jin Air Green Wings",
+     "redside": "MVP",
+     "result": "0 - 2",
+     "date": "2016-06-20"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Samsung Galaxy",
+     "result": "1 - 2",
+     "date": "2016-06-18"
+    },
+    {
+     "blueside": "ESC Ever",
+     "redside": "KT Rolster",
+     "result": "0 - 2",
+     "date": "2016-06-18"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "Longzhu Gaming",
+     "result": "2 - 0",
+     "date": "2016-06-17"
+    },
+    {
+     "blueside": "Jin Air Green Wings",
+     "redside": "SK Telecom T1",
+     "result": "2 - 1",
+     "date": "2016-06-17"
+    },
+    {
+     "blueside": "Afreeca Freecs",
+     "redside": "ESC Ever",
+     "result": "0 - 2",
+     "date": "2016-06-16"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Longzhu Gaming",
+     "result": "0 - 2",
+     "date": "2016-06-15"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "CJ Entus",
+     "result": "2 - 1",
+     "date": "2016-06-15"
+    },
+    {
+     "blueside": "Jin Air Green Wings",
+     "redside": "Afreeca Freecs",
+     "result": "2 - 0",
+     "date": "2016-06-14"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "MVP",
+     "result": "2 - 0",
+     "date": "2016-06-13"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 0",
+     "date": "2016-06-11"
+    },
+    {
+     "blueside": "MVP",
+     "redside": "ESC Ever",
+     "result": "2 - 0",
+     "date": "2016-06-11"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "Afreeca Freecs",
+     "result": "2 - 0",
+     "date": "2016-06-10"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Jin Air Green Wings",
+     "result": "0 - 2",
+     "date": "2016-06-10"
+    },
+    {
+     "blueside": "ESC Ever",
+     "redside": "Longzhu Gaming",
+     "result": "0 - 2",
+     "date": "2016-06-09"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "ROX Tigers",
+     "result": "1 - 2",
+     "date": "2016-06-08"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Jin Air Green Wings",
+     "result": "2 - 0",
+     "date": "2016-06-08"
+    },
+    {
+     "blueside": "Longzhu Gaming",
+     "redside": "CJ Entus",
+     "result": "1 - 2",
+     "date": "2016-06-07"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "SK Telecom T1",
+     "result": "0 - 2",
+     "date": "2016-06-06"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Afreeca Freecs",
+     "result": "0 - 2",
+     "date": "2016-06-04"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "SK Telecom T1",
+     "result": "0 - 2",
+     "date": "2016-06-04"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "MVP",
+     "result": "2 - 0",
+     "date": "2016-06-03"
+    },
+    {
+     "blueside": "ESC Ever",
+     "redside": "ROX Tigers",
+     "result": "0 - 2",
+     "date": "2016-06-03"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "CJ Entus",
+     "result": "2 - 0",
+     "date": "2016-06-02"
+    },
+    {
+     "blueside": "Longzhu Gaming",
+     "redside": "KT Rolster",
+     "result": "1 - 2",
+     "date": "2016-06-01"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "MVP",
+     "result": "2 - 1",
+     "date": "2016-06-01"
+    },
+    {
+     "blueside": "ESC Ever",
+     "redside": "Jin Air Green Wings",
+     "result": "1 - 2",
+     "date": "2016-05-31"
+    },
+    {
+     "blueside": "Afreeca Freecs",
+     "redside": "Samsung Galaxy",
+     "result": "0 - 2",
+     "date": "2016-05-30"
+    },
+    {
+     "blueside": "Jin Air Green Wings",
+     "redside": "Longzhu Gaming",
+     "result": "2 - 0",
+     "date": "2016-05-28"
+    },
+    {
+     "blueside": "MVP",
+     "redside": "KT Rolster",
+     "result": "0 - 2",
+     "date": "2016-05-27"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "Samsung Galaxy",
+     "result": "0 - 2",
+     "date": "2016-05-26"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "ESC Ever",
+     "result": "0 - 2",
+     "date": "2016-05-25"
+    },
+    {
+     "blueside": "Afreeca Freecs",
+     "redside": "Longzhu Gaming",
+     "result": "2 - 0",
+     "date": "2016-05-25"
+    }
+   ]
+  },
+  {
+   "name": "NA LCS Summer 2016",
+   "region": "NA",
+   "game": [
+    {
+     "blueside": "EnVyUs",
+     "redside": "Echo Fox",
+     "result": "2 - 0",
+     "date": "2016-07-31"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Cloud 9",
+     "result": "0 - 2",
+     "date": "2016-07-31"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Apex Gaming",
+     "result": "1 - 2",
+     "date": "2016-07-31"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "NRG eSports",
+     "result": "2 - 1",
+     "date": "2016-07-31"
+    },
+    {
+     "blueside": "Phoenix1",
+     "redside": "Immortals",
+     "result": "1 - 2",
+     "date": "2016-07-30"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Echo Fox",
+     "result": "2 - 0",
+     "date": "2016-07-30"
+    },
+    {
+     "blueside": "Apex Gaming",
+     "redside": "Team Liquid",
+     "result": "2 - 1",
+     "date": "2016-07-30"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "NRG eSports",
+     "result": "2 - 1",
+     "date": "2016-07-30"
+    },
+    {
+     "blueside": "Phoenix1",
+     "redside": "EnVyUs",
+     "result": "2 - 1",
+     "date": "2016-07-30"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "Team SoloMid",
+     "result": "0 - 2",
+     "date": "2016-07-30"
+    },
+    {
+     "blueside": "Echo Fox",
+     "redside": "CLG",
+     "result": "0 - 2",
+     "date": "2016-07-24"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Phoenix1",
+     "result": "2 - 0",
+     "date": "2016-07-24"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "EnVyUs",
+     "result": "2 - 0",
+     "date": "2016-07-24"
+    },
+    {
+     "blueside": "NRG eSports",
+     "redside": "Team Liquid",
+     "result": "0 - 2",
+     "date": "2016-07-24"
+    },
+    {
+     "blueside": "Apex Gaming",
+     "redside": "Immortals",
+     "result": "0 - 2",
+     "date": "2016-07-23"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Phoenix1",
+     "result": "1 - 2",
+     "date": "2016-07-23"
+    },
+    {
+     "blueside": "EnVyUs",
+     "redside": "Cloud 9",
+     "result": "0 - 2",
+     "date": "2016-07-23"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Team Liquid",
+     "result": "2 - 1",
+     "date": "2016-07-23"
+    },
+    {
+     "blueside": "Echo Fox",
+     "redside": "Apex Gaming",
+     "result": "1 - 2",
+     "date": "2016-07-23"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "NRG eSports",
+     "result": "2 - 0",
+     "date": "2016-07-23"
+    },
+    {
+     "blueside": "EnVyUs",
+     "redside": "Apex Gaming",
+     "result": "2 - 1",
+     "date": "2016-07-17"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Team SoloMid",
+     "result": "0 - 2",
+     "date": "2016-07-17"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "Echo Fox",
+     "result": "2 - 0",
+     "date": "2016-07-17"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "CLG",
+     "result": "1 - 2",
+     "date": "2016-07-17"
+    },
+    {
+     "blueside": "Phoenix1",
+     "redside": "Team Liquid",
+     "result": "0 - 2",
+     "date": "2016-07-16"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Apex Gaming",
+     "result": "2 - 1",
+     "date": "2016-07-16"
+    },
+    {
+     "blueside": "NRG eSports",
+     "redside": "EnVyUs",
+     "result": "2 - 0",
+     "date": "2016-07-16"
+    },
+    {
+     "blueside": "Echo Fox",
+     "redside": "Team SoloMid",
+     "result": "0 - 2",
+     "date": "2016-07-16"
+    },
+    {
+     "blueside": "Phoenix1",
+     "redside": "NRG eSports",
+     "result": "2 - 1",
+     "date": "2016-07-16"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "CLG",
+     "result": "2 - 1",
+     "date": "2016-07-16"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Echo Fox",
+     "result": "2 - 1",
+     "date": "2016-07-10"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Phoenix1",
+     "result": "2 - 1",
+     "date": "2016-07-10"
+    },
+    {
+     "blueside": "NRG eSports",
+     "redside": "Cloud 9",
+     "result": "0 - 2",
+     "date": "2016-07-10"
+    },
+    {
+     "blueside": "Apex Gaming",
+     "redside": "Team SoloMid",
+     "result": "0 - 2",
+     "date": "2016-07-10"
+    },
+    {
+     "blueside": "EnVyUs",
+     "redside": "CLG",
+     "result": "0 - 2",
+     "date": "2016-07-09"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Immortals",
+     "result": "1 - 2",
+     "date": "2016-07-09"
+    },
+    {
+     "blueside": "Phoenix1",
+     "redside": "Echo Fox",
+     "result": "2 - 1",
+     "date": "2016-07-09"
+    },
+    {
+     "blueside": "NRG eSports",
+     "redside": "Apex Gaming",
+     "result": "0 - 2",
+     "date": "2016-07-09"
+    },
+    {
+     "blueside": "EnVyUs",
+     "redside": "Immortals",
+     "result": "0 - 2",
+     "date": "2016-07-09"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Cloud 9",
+     "result": "2 - 0",
+     "date": "2016-07-09"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "Cloud 9",
+     "result": "2 - 0",
+     "date": "2016-07-03"
+    },
+    {
+     "blueside": "Apex Gaming",
+     "redside": "Phoenix1",
+     "result": "1 - 2",
+     "date": "2016-07-03"
+    },
+    {
+     "blueside": "Echo Fox",
+     "redside": "NRG eSports",
+     "result": "0 - 2",
+     "date": "2016-07-03"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Team SoloMid",
+     "result": "0 - 2",
+     "date": "2016-07-03"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "EnVyUs",
+     "result": "2 - 0",
+     "date": "2016-07-02"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "Apex Gaming",
+     "result": "2 - 0",
+     "date": "2016-07-02"
+    },
+    {
+     "blueside": "Phoenix1",
+     "redside": "Team SoloMid",
+     "result": "0 - 2",
+     "date": "2016-07-02"
+    },
+    {
+     "blueside": "NRG eSports",
+     "redside": "CLG",
+     "result": "0 - 2",
+     "date": "2016-07-02"
+    },
+    {
+     "blueside": "Echo Fox",
+     "redside": "EnVyUs",
+     "result": "1 - 2",
+     "date": "2016-07-02"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Team Liquid",
+     "result": "1 - 2",
+     "date": "2016-07-02"
+    },
+    {
+     "blueside": "Apex Gaming",
+     "redside": "Echo Fox",
+     "result": "2 - 0",
+     "date": "2016-06-26"
+    },
+    {
+     "blueside": "Phoenix1",
+     "redside": "CLG",
+     "result": "0 - 2",
+     "date": "2016-06-26"
+    },
+    {
+     "blueside": "EnVyUs",
+     "redside": "Team SoloMid",
+     "result": "0 - 2",
+     "date": "2016-06-26"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "NRG eSports",
+     "result": "2 - 0",
+     "date": "2016-06-26"
+    },
+    {
+     "blueside": "NRG eSports",
+     "redside": "Phoenix1",
+     "result": "2 - 1",
+     "date": "2016-06-25"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "Team Liquid",
+     "result": "2 - 0",
+     "date": "2016-06-25"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Echo Fox",
+     "result": "2 - 1",
+     "date": "2016-06-25"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "EnVyUs",
+     "result": "2 - 0",
+     "date": "2016-06-25"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Apex Gaming",
+     "result": "2 - 0",
+     "date": "2016-06-25"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Immortals",
+     "result": "1 - 2",
+     "date": "2016-06-25"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "EnVyUs",
+     "result": "1 - 2",
+     "date": "2016-06-19"
+    },
+    {
+     "blueside": "Echo Fox",
+     "redside": "Immortals",
+     "result": "0 - 2",
+     "date": "2016-06-19"
+    },
+    {
+     "blueside": "Apex Gaming",
+     "redside": "Cloud 9",
+     "result": "1 - 2",
+     "date": "2016-06-19"
+    },
+    {
+     "blueside": "NRG eSports",
+     "redside": "Team SoloMid",
+     "result": "0 - 2",
+     "date": "2016-06-19"
+    },
+    {
+     "blueside": "Phoenix1",
+     "redside": "Apex Gaming",
+     "result": "1 - 2",
+     "date": "2016-06-18"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "NRG eSports",
+     "result": "2 - 1",
+     "date": "2016-06-18"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Echo Fox",
+     "result": "2 - 0",
+     "date": "2016-06-18"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "EnVyUs",
+     "result": "2 - 0",
+     "date": "2016-06-18"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Phoenix1",
+     "result": "2 - 0",
+     "date": "2016-06-18"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Team SoloMid",
+     "result": "1 - 2",
+     "date": "2016-06-18"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Cloud 9",
+     "result": "0 - 2",
+     "date": "2016-06-12"
+    },
+    {
+     "blueside": "Echo Fox",
+     "redside": "Team Liquid",
+     "result": "0 - 2",
+     "date": "2016-06-12"
+    },
+    {
+     "blueside": "EnVyUs",
+     "redside": "Phoenix1",
+     "result": "2 - 0",
+     "date": "2016-06-12"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Immortals",
+     "result": "2 - 1",
+     "date": "2016-06-12"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Apex Gaming",
+     "result": "2 - 0",
+     "date": "2016-06-11"
+    },
+    {
+     "blueside": "Phoenix1",
+     "redside": "Cloud 9",
+     "result": "1 - 2",
+     "date": "2016-06-11"
+    },
+    {
+     "blueside": "NRG eSports",
+     "redside": "Echo Fox",
+     "result": "2 - 0",
+     "date": "2016-06-11"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "CLG",
+     "result": "1 - 2",
+     "date": "2016-06-11"
+    },
+    {
+     "blueside": "Apex Gaming",
+     "redside": "EnVyUs",
+     "result": "1 - 2",
+     "date": "2016-06-11"
+    },
+    {
+     "blueside": "NRG eSports",
+     "redside": "Immortals",
+     "result": "1 - 2",
+     "date": "2016-06-11"
+    },
+    {
+     "blueside": "Echo Fox",
+     "redside": "Cloud 9",
+     "result": "1 - 2",
+     "date": "2016-06-05"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "Phoenix1",
+     "result": "2 - 0",
+     "date": "2016-06-05"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Team Liquid",
+     "result": "2 - 0",
+     "date": "2016-06-05"
+    },
+    {
+     "blueside": "Apex Gaming",
+     "redside": "CLG",
+     "result": "2 - 1",
+     "date": "2016-06-05"
+    },
+    {
+     "blueside": "Apex Gaming",
+     "redside": "NRG eSports",
+     "result": "2 - 0",
+     "date": "2016-06-04"
+    },
+    {
+     "blueside": "EnVyUs",
+     "redside": "Team Liquid",
+     "result": "2 - 0",
+     "date": "2016-06-04"
+    },
+    {
+     "blueside": "Echo Fox",
+     "redside": "Phoenix1",
+     "result": "2 - 0",
+     "date": "2016-06-04"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Immortals",
+     "result": "1 - 2",
+     "date": "2016-06-04"
+    },
+    {
+     "blueside": "EnVyUs",
+     "redside": "NRG eSports",
+     "result": "2 - 1",
+     "date": "2016-06-03"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "CLG",
+     "result": "2 - 0",
+     "date": "2016-06-03"
+    }
+   ]
+  },
+  {
+   "name": "EU LCS Summer 2016",
+   "region": "EUW",
+   "game": [
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Fnatic",
+     "result": "1 - 0",
+     "date": "2016-07-31"
+    },
+    {
+     "blueside": "Vitality",
+     "redside": "FC Schalke 04",
+     "result": "1 - 0",
+     "date": "2016-07-31"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "Fnatic",
+     "result": "2 - 0",
+     "date": "2016-07-31"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "H2k-Gaming",
+     "result": "0 - 2",
+     "date": "2016-07-31"
+    },
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "Splyce",
+     "result": "2 - 0",
+     "date": "2016-07-31"
+    },
+    {
+     "blueside": "FC Schalke 04",
+     "redside": "Vitality",
+     "result": "1 - 1",
+     "date": "2016-07-31"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Roccat",
+     "result": "2 - 0",
+     "date": "2016-07-31"
+    },
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "H2k-Gaming",
+     "result": "0 - 2",
+     "date": "2016-07-30"
+    },
+    {
+     "blueside": "FC Schalke 04",
+     "redside": "Giants Gaming",
+     "result": "1 - 1",
+     "date": "2016-07-30"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Splyce",
+     "result": "0 - 2",
+     "date": "2016-07-30"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Roccat",
+     "result": "1 - 1",
+     "date": "2016-07-30"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "Vitality",
+     "result": "1 - 1",
+     "date": "2016-07-30"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Vitality",
+     "result": "2 - 0",
+     "date": "2016-07-22"
+    },
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "Roccat",
+     "result": "2 - 0",
+     "date": "2016-07-22"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "FC Schalke 04",
+     "result": "2 - 0",
+     "date": "2016-07-22"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Splyce",
+     "result": "0 - 2",
+     "date": "2016-07-22"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Fnatic",
+     "result": "1 - 1",
+     "date": "2016-07-22"
+    },
+    {
+     "blueside": "FC Schalke 04",
+     "redside": "Roccat",
+     "result": "0 - 2",
+     "date": "2016-07-21"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "Unicorns Of Love",
+     "result": "2 - 0",
+     "date": "2016-07-21"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Giants Gaming",
+     "result": "0 - 2",
+     "date": "2016-07-21"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Vitality",
+     "result": "2 - 0",
+     "date": "2016-07-21"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Splyce",
+     "result": "0 - 2",
+     "date": "2016-07-21"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Roccat",
+     "result": "2 - 0",
+     "date": "2016-07-15"
+    },
+    {
+     "blueside": "FC Schalke 04",
+     "redside": "Fnatic",
+     "result": "1 - 1",
+     "date": "2016-07-15"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "H2k-Gaming",
+     "result": "2 - 0",
+     "date": "2016-07-15"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Splyce",
+     "result": "0 - 2",
+     "date": "2016-07-15"
+    },
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "Vitality",
+     "result": "1 - 1",
+     "date": "2016-07-15"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "H2k-Gaming",
+     "result": "2 - 0",
+     "date": "2016-07-14"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "FC Schalke 04",
+     "result": "1 - 1",
+     "date": "2016-07-14"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Vitality",
+     "result": "0 - 2",
+     "date": "2016-07-14"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "Splyce",
+     "result": "1 - 1",
+     "date": "2016-07-14"
+    },
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "Giants Gaming",
+     "result": "2 - 0",
+     "date": "2016-07-14"
+    },
+    {
+     "blueside": "FC Schalke 04",
+     "redside": "Splyce",
+     "result": "0 - 2",
+     "date": "2016-07-09"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "H2k-Gaming",
+     "result": "2 - 0",
+     "date": "2016-07-09"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "Roccat",
+     "result": "2 - 0",
+     "date": "2016-07-09"
+    },
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "Fnatic",
+     "result": "1 - 1",
+     "date": "2016-07-09"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Vitality",
+     "result": "0 - 2",
+     "date": "2016-07-09"
+    },
+    {
+     "blueside": "FC Schalke 04",
+     "redside": "H2k-Gaming",
+     "result": "0 - 2",
+     "date": "2016-07-08"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "Giants Gaming",
+     "result": "1 - 1",
+     "date": "2016-07-08"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Splyce",
+     "result": "0 - 2",
+     "date": "2016-07-08"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Unicorns Of Love",
+     "result": "0 - 2",
+     "date": "2016-07-08"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Vitality",
+     "result": "2 - 0",
+     "date": "2016-07-08"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Fnatic",
+     "result": "2 - 0",
+     "date": "2016-07-01"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "Origen",
+     "result": "1 - 1",
+     "date": "2016-07-01"
+    },
+    {
+     "blueside": "Vitality",
+     "redside": "Splyce",
+     "result": "0 - 2",
+     "date": "2016-07-01"
+    },
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "FC Schalke 04",
+     "result": "1 - 1",
+     "date": "2016-07-01"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "H2k-Gaming",
+     "result": "1 - 1",
+     "date": "2016-07-01"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "G2 Esports",
+     "result": "0 - 2",
+     "date": "2016-06-30"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Origen",
+     "result": "1 - 1",
+     "date": "2016-06-30"
+    },
+    {
+     "blueside": "Vitality",
+     "redside": "FC Schalke 04",
+     "result": "1 - 1",
+     "date": "2016-06-30"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Giants Gaming",
+     "result": "0 - 2",
+     "date": "2016-06-30"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "Unicorns Of Love",
+     "result": "1 - 1",
+     "date": "2016-06-30"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "Origen",
+     "result": "1 - 1",
+     "date": "2016-06-24"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Unicorns Of Love",
+     "result": "0 - 2",
+     "date": "2016-06-24"
+    },
+    {
+     "blueside": "Vitality",
+     "redside": "G2 Esports",
+     "result": "1 - 1",
+     "date": "2016-06-24"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Fnatic",
+     "result": "0 - 2",
+     "date": "2016-06-24"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "FC Schalke 04",
+     "result": "0 - 2",
+     "date": "2016-06-24"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "H2k-Gaming",
+     "result": "1 - 1",
+     "date": "2016-06-23"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Unicorns Of Love",
+     "result": "1 - 1",
+     "date": "2016-06-23"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Origen",
+     "result": "1 - 1",
+     "date": "2016-06-23"
+    },
+    {
+     "blueside": "Vitality",
+     "redside": "Giants Gaming",
+     "result": "1 - 1",
+     "date": "2016-06-23"
+    },
+    {
+     "blueside": "FC Schalke 04",
+     "redside": "G2 Esports",
+     "result": "1 - 1",
+     "date": "2016-06-23"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Origen",
+     "result": "2 - 0",
+     "date": "2016-06-17"
+    },
+    {
+     "blueside": "Vitality",
+     "redside": "H2k-Gaming",
+     "result": "0 - 2",
+     "date": "2016-06-17"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "Fnatic",
+     "result": "0 - 2",
+     "date": "2016-06-17"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "FC Schalke 04",
+     "result": "0 - 2",
+     "date": "2016-06-17"
+    },
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "G2 Esports",
+     "result": "0 - 2",
+     "date": "2016-06-17"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "Giants Gaming",
+     "result": "2 - 0",
+     "date": "2016-06-16"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "G2 Esports",
+     "result": "1 - 1",
+     "date": "2016-06-16"
+    },
+    {
+     "blueside": "Vitality",
+     "redside": "Unicorns Of Love",
+     "result": "2 - 0",
+     "date": "2016-06-16"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "FC Schalke 04",
+     "result": "2 - 0",
+     "date": "2016-06-16"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Origen",
+     "result": "0 - 2",
+     "date": "2016-06-16"
+    },
+    {
+     "blueside": "FC Schalke 04",
+     "redside": "Origen",
+     "result": "1 - 1",
+     "date": "2016-06-10"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Unicorns Of Love",
+     "result": "2 - 0",
+     "date": "2016-06-10"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Fnatic",
+     "result": "2 - 0",
+     "date": "2016-06-10"
+    },
+    {
+     "blueside": "Vitality",
+     "redside": "Roccat",
+     "result": "0 - 2",
+     "date": "2016-06-10"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "G2 Esports",
+     "result": "0 - 2",
+     "date": "2016-06-10"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "FC Schalke 04",
+     "result": "2 - 0",
+     "date": "2016-06-09"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "G2 Esports",
+     "result": "1 - 1",
+     "date": "2016-06-09"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Unicorns Of Love",
+     "result": "2 - 0",
+     "date": "2016-06-09"
+    },
+    {
+     "blueside": "Vitality",
+     "redside": "Origen",
+     "result": "1 - 1",
+     "date": "2016-06-09"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Giants Gaming",
+     "result": "2 - 0",
+     "date": "2016-06-09"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "FC Schalke 04",
+     "result": "1 - 1",
+     "date": "2016-06-03"
+    },
+    {
+     "blueside": "Vitality",
+     "redside": "Fnatic",
+     "result": "1 - 1",
+     "date": "2016-06-03"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "G2 Esports",
+     "result": "0 - 2",
+     "date": "2016-06-03"
+    },
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "Origen",
+     "result": "2 - 0",
+     "date": "2016-06-03"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "Roccat",
+     "result": "1 - 1",
+     "date": "2016-06-03"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Giants Gaming",
+     "result": "2 - 0",
+     "date": "2016-06-02"
+    },
+    {
+     "blueside": "FC Schalke 04",
+     "redside": "Unicorns Of Love",
+     "result": "2 - 0",
+     "date": "2016-06-02"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "Vitality",
+     "result": "1 - 1",
+     "date": "2016-06-02"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Roccat",
+     "result": "1 - 1",
+     "date": "2016-06-02"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "G2 Esports",
+     "result": "0 - 2",
+     "date": "2016-06-02"
+    }
+   ]
+  },
+  {
+   "name": "Mid-Season Invitational 2016",
+   "region": "WR",
+   "game": [
+    {
+     "blueside": "CLG",
+     "redside": "SK Telecom T1",
+     "result": "0 - 3",
+     "date": "2016-05-15"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Flash Wolves",
+     "result": "3 - 1",
+     "date": "2016-05-14"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "SK Telecom T1",
+     "result": "1 - 3",
+     "date": "2016-05-13"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "SK Telecom T1",
+     "result": "0 - 1",
+     "date": "2016-05-08"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "CLG",
+     "result": "0 - 1",
+     "date": "2016-05-08"
+    },
+    {
+     "blueside": "SuperMassive",
+     "redside": "Flash Wolves",
+     "result": "0 - 1",
+     "date": "2016-05-08"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "G2 Esports",
+     "result": "1 - 0",
+     "date": "2016-05-08"
+    },
+    {
+     "blueside": "Flash Wolves",
+     "redside": "CLG",
+     "result": "0 - 1",
+     "date": "2016-05-08"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "SuperMassive",
+     "result": "1 - 0",
+     "date": "2016-05-08"
+    },
+    {
+     "blueside": "SuperMassive",
+     "redside": "SK Telecom T1",
+     "result": "0 - 1",
+     "date": "2016-05-07"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Royal Never Give Up",
+     "result": "1 - 0",
+     "date": "2016-05-07"
+    },
+    {
+     "blueside": "Flash Wolves",
+     "redside": "G2 Esports",
+     "result": "1 - 0",
+     "date": "2016-05-07"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "CLG",
+     "result": "1 - 0",
+     "date": "2016-05-07"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Flash Wolves",
+     "result": "1 - 0",
+     "date": "2016-05-07"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "SuperMassive",
+     "result": "1 - 0",
+     "date": "2016-05-07"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "Royal Never Give Up",
+     "result": "0 - 1",
+     "date": "2016-05-06"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "SuperMassive",
+     "result": "1 - 0",
+     "date": "2016-05-06"
+    },
+    {
+     "blueside": "Flash Wolves",
+     "redside": "SK Telecom T1",
+     "result": "1 - 0",
+     "date": "2016-05-06"
+    },
+    {
+     "blueside": "SuperMassive",
+     "redside": "G2 Esports",
+     "result": "0 - 1",
+     "date": "2016-05-06"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "SK Telecom T1",
+     "result": "1 - 0",
+     "date": "2016-05-06"
+    },
+    {
+     "blueside": "Flash Wolves",
+     "redside": "Royal Never Give Up",
+     "result": "0 - 1",
+     "date": "2016-05-06"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "Flash Wolves",
+     "result": "0 - 1",
+     "date": "2016-05-05"
+    },
+    {
+     "blueside": "SuperMassive",
+     "redside": "CLG",
+     "result": "1 - 0",
+     "date": "2016-05-05"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "G2 Esports",
+     "result": "1 - 0",
+     "date": "2016-05-05"
+    },
+    {
+     "blueside": "Flash Wolves",
+     "redside": "SuperMassive",
+     "result": "1 - 0",
+     "date": "2016-05-05"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "Royal Never Give Up",
+     "result": "0 - 1",
+     "date": "2016-05-05"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "G2 Esports",
+     "result": "1 - 0",
+     "date": "2016-05-05"
+    },
+    {
+     "blueside": "SuperMassive",
+     "redside": "Royal Never Give Up",
+     "result": "0 - 1",
+     "date": "2016-05-04"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "SK Telecom T1",
+     "result": "0 - 1",
+     "date": "2016-05-04"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Flash Wolves",
+     "result": "1 - 0",
+     "date": "2016-05-04"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "SuperMassive",
+     "result": "1 - 0",
+     "date": "2016-05-04"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "Flash Wolves",
+     "result": "0 - 1",
+     "date": "2016-05-04"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "CLG",
+     "result": "1 - 0",
+     "date": "2016-05-04"
+    }
+   ]
+  },
+  {
+   "name": "LCK Summer Promo 2016",
+   "region": "KR",
+   "game": [
+    {
+     "blueside": "Kongdoo Monster",
+     "redside": "MVP",
+     "result": "1 - 3",
+     "date": "2016-04-29"
+    },
+    {
+     "blueside": "SBENU Sonicboom",
+     "redside": "ESC Ever",
+     "result": "0 - 3",
+     "date": "2016-04-28"
+    }
+   ]
+  },
+  {
+   "name": "LPL Spring Playoffs 2016",
+   "region": "CN",
+   "game": [
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Edward Gaming",
+     "result": "3 - 1",
+     "date": "2016-04-23"
+    },
+    {
+     "blueside": "Qiao Gu Reapers",
+     "redside": "Team WE",
+     "result": "0 - 3",
+     "date": "2016-04-18"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Team WE",
+     "result": "3 - 2",
+     "date": "2016-04-17"
+    },
+    {
+     "blueside": "Snake eSports",
+     "redside": "Edward Gaming",
+     "result": "0 - 3",
+     "date": "2016-04-15"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Vici Gaming",
+     "result": "3 - 1",
+     "date": "2016-04-15"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Snake eSports",
+     "result": "0 - 2",
+     "date": "2016-04-13"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "LGD Gaming",
+     "result": "2 - 1",
+     "date": "2016-04-13"
+    }
+   ]
+  },
+  {
+   "name": "IWCI Playoffs 2016",
+   "region": "WR",
+   "game": [
+    {
+     "blueside": "SuperMassive",
+     "redside": "Hard Random",
+     "result": "3 - 1",
+     "date": "2016-04-23"
+    },
+    {
+     "blueside": "SuperMassive",
+     "redside": "Saigon Jokers",
+     "result": "3 - 0",
+     "date": "2016-04-21"
+    },
+    {
+     "blueside": "Hard Random",
+     "redside": "INTZ eSports",
+     "result": "3 - 0",
+     "date": "2016-04-20"
+    }
+   ]
+  },
+  {
+   "name": "LCK Spring Playoffs 2016",
+   "region": "KR",
+   "game": [
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "ROX Tigers",
+     "result": "3 - 1",
+     "date": "2016-04-23"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "KT Rolster",
+     "result": "3 - 0",
+     "date": "2016-04-16"
+    },
+    {
+     "blueside": "Jin Air Green Wings",
+     "redside": "SK Telecom T1",
+     "result": "1 - 3",
+     "date": "2016-04-15"
+    },
+    {
+     "blueside": "Jin Air Green Wings",
+     "redside": "Afreeca Freecs",
+     "result": "2 - 0",
+     "date": "2016-04-13"
+    }
+   ]
+  },
+  {
+   "name": "NA LCS Spring Playoffs 2016",
+   "region": "NA",
+   "game": [
+    {
+     "blueside": "CLG",
+     "redside": "Team SoloMid",
+     "result": "3 - 2",
+     "date": "2016-04-17"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "Team Liquid",
+     "result": "3 - 0",
+     "date": "2016-04-16"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "Team SoloMid",
+     "result": "0 - 3",
+     "date": "2016-04-10"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Team Liquid",
+     "result": "3 - 2",
+     "date": "2016-04-09"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "NRG eSports",
+     "result": "3 - 0",
+     "date": "2016-04-03"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Team SoloMid",
+     "result": "1 - 3",
+     "date": "2016-04-02"
+    }
+   ]
+  },
+  {
+   "name": "EU LCS Spring Playoffs 2016",
+   "region": "EUW",
+   "game": [
+    {
+     "blueside": "Origen",
+     "redside": "G2 Esports",
+     "result": "1 - 3",
+     "date": "2016-04-17"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Fnatic",
+     "result": "2 - 3",
+     "date": "2016-04-16"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "Fnatic",
+     "result": "3 - 1",
+     "date": "2016-04-10"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "H2k-Gaming",
+     "result": "3 - 2",
+     "date": "2016-04-09"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Unicorns Of Love",
+     "result": "3 - 0",
+     "date": "2016-04-03"
+    },
+    {
+     "blueside": "Vitality",
+     "redside": "Fnatic",
+     "result": "1 - 3",
+     "date": "2016-04-02"
+    }
+   ]
+  },
+  {
+   "name": "LMS Spring Playoffs 2016",
+   "region": "TW",
+   "game": [
+    {
+     "blueside": "ahq eSports",
+     "redside": "Flash Wolves",
+     "result": "0 - 3",
+     "date": "2016-04-17"
+    },
+    {
+     "blueside": "Flash Wolves",
+     "redside": "Machi eSports",
+     "result": "3 - 0",
+     "date": "2016-04-16"
+    },
+    {
+     "blueside": "Machi eSports",
+     "redside": "Taipei Assassins",
+     "result": "3 - 2",
+     "date": "2016-04-15"
+    }
+   ]
+  },
+  {
+   "name": "LPL Spring 2016",
+   "region": "CN",
+   "game": [
+    {
+     "blueside": "Energy Pacemaker",
+     "redside": "Master3",
+     "result": "2 - 0",
+     "date": "2016-04-10"
+    },
+    {
+     "blueside": "Snake eSports",
+     "redside": "LGD Gaming",
+     "result": "1 - 2",
+     "date": "2016-04-10"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Qiao Gu Reapers",
+     "result": "2 - 1",
+     "date": "2016-04-10"
+    },
+    {
+     "blueside": "HY Gaming",
+     "redside": "Vici Gaming",
+     "result": "0 - 2",
+     "date": "2016-04-09"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2016-04-09"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Invictus Gaming",
+     "result": "2 - 1",
+     "date": "2016-04-09"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "LGD Gaming",
+     "result": "0 - 2",
+     "date": "2016-04-08"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Snake eSports",
+     "result": "1 - 2",
+     "date": "2016-04-08"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Vici Gaming",
+     "result": "1 - 2",
+     "date": "2016-04-07"
+    },
+    {
+     "blueside": "HY Gaming",
+     "redside": "Royal Never Give Up",
+     "result": "0 - 2",
+     "date": "2016-04-07"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "OMG",
+     "result": "2 - 0",
+     "date": "2016-04-03"
+    },
+    {
+     "blueside": "HY Gaming",
+     "redside": "Invictus Gaming",
+     "result": "0 - 2",
+     "date": "2016-04-03"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2016-04-03"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "LGD Gaming",
+     "result": "0 - 2",
+     "date": "2016-04-02"
+    },
+    {
+     "blueside": "Energy Pacemaker",
+     "redside": "Snake eSports",
+     "result": "1 - 2",
+     "date": "2016-04-02"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Qiao Gu Reapers",
+     "result": "1 - 2",
+     "date": "2016-04-02"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Invictus Gaming",
+     "result": "2 - 1",
+     "date": "2016-04-01"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Edward Gaming",
+     "result": "1 - 2",
+     "date": "2016-04-01"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Snake eSports",
+     "result": "0 - 2",
+     "date": "2016-03-31"
+    },
+    {
+     "blueside": "Energy Pacemaker",
+     "redside": "Qiao Gu Reapers",
+     "result": "2 - 1",
+     "date": "2016-03-31"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Master3",
+     "result": "2 - 0",
+     "date": "2016-03-27"
+    },
+    {
+     "blueside": "Snake eSports",
+     "redside": "Qiao Gu Reapers",
+     "result": "2 - 0",
+     "date": "2016-03-27"
+    },
+    {
+     "blueside": "Energy Pacemaker",
+     "redside": "LGD Gaming",
+     "result": "1 - 2",
+     "date": "2016-03-27"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Vici Gaming",
+     "result": "2 - 1",
+     "date": "2016-03-26"
+    },
+    {
+     "blueside": "HY Gaming",
+     "redside": "OMG",
+     "result": "0 - 2",
+     "date": "2016-03-26"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2016-03-26"
+    },
+    {
+     "blueside": "Energy Pacemaker",
+     "redside": "Team WE",
+     "result": "1 - 2",
+     "date": "2016-03-25"
+    },
+    {
+     "blueside": "Qiao Gu Reapers",
+     "redside": "LGD Gaming",
+     "result": "0 - 2",
+     "date": "2016-03-25"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Invictus Gaming",
+     "result": "1 - 2",
+     "date": "2016-03-24"
+    },
+    {
+     "blueside": "HY Gaming",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2016-03-24"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Snake eSports",
+     "result": "2 - 1",
+     "date": "2016-03-20"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Energy Pacemaker",
+     "result": "2 - 0",
+     "date": "2016-03-20"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "OMG",
+     "result": "2 - 1",
+     "date": "2016-03-19"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Master3",
+     "result": "2 - 1",
+     "date": "2016-03-19"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Qiao Gu Reapers",
+     "result": "1 - 2",
+     "date": "2016-03-19"
+    },
+    {
+     "blueside": "HY Gaming",
+     "redside": "LGD Gaming",
+     "result": "0 - 2",
+     "date": "2016-03-18"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Energy Pacemaker",
+     "result": "2 - 0",
+     "date": "2016-03-18"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Master3",
+     "result": "2 - 0",
+     "date": "2016-03-17"
+    },
+    {
+     "blueside": "Snake eSports",
+     "redside": "Royal Never Give Up",
+     "result": "0 - 2",
+     "date": "2016-03-17"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Master3",
+     "result": "1 - 2",
+     "date": "2016-03-13"
+    },
+    {
+     "blueside": "HY Gaming",
+     "redside": "Team WE",
+     "result": "0 - 2",
+     "date": "2016-03-13"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Qiao Gu Reapers",
+     "result": "0 - 2",
+     "date": "2016-03-12"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Vici Gaming",
+     "result": "2 - 0",
+     "date": "2016-03-12"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Snake eSports",
+     "result": "2 - 1",
+     "date": "2016-03-12"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Invictus Gaming",
+     "result": "2 - 0",
+     "date": "2016-03-11"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Energy Pacemaker",
+     "result": "2 - 0",
+     "date": "2016-03-11"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "LGD Gaming",
+     "result": "2 - 1",
+     "date": "2016-03-10"
+    },
+    {
+     "blueside": "HY Gaming",
+     "redside": "Qiao Gu Reapers",
+     "result": "0 - 2",
+     "date": "2016-03-10"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Energy Pacemaker",
+     "result": "2 - 1",
+     "date": "2016-02-28"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Invictus Gaming",
+     "result": "0 - 2",
+     "date": "2016-02-28"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Snake eSports",
+     "result": "1 - 2",
+     "date": "2016-02-27"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Vici Gaming",
+     "result": "0 - 2",
+     "date": "2016-02-27"
+    },
+    {
+     "blueside": "HY Gaming",
+     "redside": "Master3",
+     "result": "2 - 0",
+     "date": "2016-02-27"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Qiao Gu Reapers",
+     "result": "2 - 0",
+     "date": "2016-02-26"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Energy Pacemaker",
+     "result": "2 - 0",
+     "date": "2016-02-26"
+    },
+    {
+     "blueside": "HY Gaming",
+     "redside": "Snake eSports",
+     "result": "0 - 2",
+     "date": "2016-02-25"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Edward Gaming",
+     "result": "1 - 2",
+     "date": "2016-02-25"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Qiao Gu Reapers",
+     "result": "1 - 2",
+     "date": "2016-02-21"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Master3",
+     "result": "2 - 0",
+     "date": "2016-02-21"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Royal Never Give Up",
+     "result": "0 - 2",
+     "date": "2016-02-20"
+    },
+    {
+     "blueside": "Snake eSports",
+     "redside": "Invictus Gaming",
+     "result": "2 - 0",
+     "date": "2016-02-20"
+    },
+    {
+     "blueside": "HY Gaming",
+     "redside": "Energy Pacemaker",
+     "result": "0 - 2",
+     "date": "2016-02-20"
+    },
+    {
+     "blueside": "Qiao Gu Reapers",
+     "redside": "OMG",
+     "result": "2 - 0",
+     "date": "2016-02-19"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Master3",
+     "result": "2 - 1",
+     "date": "2016-02-19"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Team WE",
+     "result": "0 - 2",
+     "date": "2016-02-18"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Edward Gaming",
+     "result": "0 - 2",
+     "date": "2016-02-18"
+    },
+    {
+     "blueside": "Qiao Gu Reapers",
+     "redside": "Snake eSports",
+     "result": "2 - 0",
+     "date": "2016-01-31"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Energy Pacemaker",
+     "result": "2 - 0",
+     "date": "2016-01-31"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Team WE",
+     "result": "0 - 2",
+     "date": "2016-01-31"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "HY Gaming",
+     "result": "2 - 0",
+     "date": "2016-01-30"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "OMG",
+     "result": "2 - 0",
+     "date": "2016-01-30"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Royal Never Give Up",
+     "result": "2 - 1",
+     "date": "2016-01-30"
+    },
+    {
+     "blueside": "Snake eSports",
+     "redside": "Team WE",
+     "result": "2 - 1",
+     "date": "2016-01-29"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Master3",
+     "result": "0 - 2",
+     "date": "2016-01-29"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "HY Gaming",
+     "result": "2 - 0",
+     "date": "2016-01-28"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "Vici Gaming",
+     "result": "2 - 1",
+     "date": "2016-01-28"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "OMG",
+     "result": "0 - 2",
+     "date": "2016-01-24"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "HY Gaming",
+     "result": "2 - 0",
+     "date": "2016-01-24"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Vici Gaming",
+     "result": "2 - 0",
+     "date": "2016-01-24"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Team WE",
+     "result": "0 - 2",
+     "date": "2016-01-23"
+    },
+    {
+     "blueside": "Qiao Gu Reapers",
+     "redside": "Master3",
+     "result": "2 - 0",
+     "date": "2016-01-23"
+    },
+    {
+     "blueside": "Snake eSports",
+     "redside": "Energy Pacemaker",
+     "result": "2 - 1",
+     "date": "2016-01-23"
+    },
+    {
+     "blueside": "Invictus Gaming",
+     "redside": "HY Gaming",
+     "result": "2 - 0",
+     "date": "2016-01-22"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "Royal Never Give Up",
+     "result": "0 - 2",
+     "date": "2016-01-22"
+    },
+    {
+     "blueside": "Qiao Gu Reapers",
+     "redside": "Energy Pacemaker",
+     "result": "2 - 0",
+     "date": "2016-01-21"
+    },
+    {
+     "blueside": "Snake eSports",
+     "redside": "Master3",
+     "result": "0 - 2",
+     "date": "2016-01-21"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Snake eSports",
+     "result": "1 - 2",
+     "date": "2016-01-17"
+    },
+    {
+     "blueside": "Master3",
+     "redside": "Energy Pacemaker",
+     "result": "0 - 2",
+     "date": "2016-01-17"
+    },
+    {
+     "blueside": "Qiao Gu Reapers",
+     "redside": "Team WE",
+     "result": "2 - 0",
+     "date": "2016-01-17"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Invictus Gaming",
+     "result": "0 - 2",
+     "date": "2016-01-16"
+    },
+    {
+     "blueside": "OMG",
+     "redside": "HY Gaming",
+     "result": "2 - 1",
+     "date": "2016-01-16"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "Royal Never Give Up",
+     "result": "1 - 2",
+     "date": "2016-01-16"
+    },
+    {
+     "blueside": "LGD Gaming",
+     "redside": "Qiao Gu Reapers",
+     "result": "0 - 2",
+     "date": "2016-01-15"
+    },
+    {
+     "blueside": "Team WE",
+     "redside": "Energy Pacemaker",
+     "result": "2 - 1",
+     "date": "2016-01-15"
+    },
+    {
+     "blueside": "Vici Gaming",
+     "redside": "OMG",
+     "result": "2 - 0",
+     "date": "2016-01-14"
+    },
+    {
+     "blueside": "Edward Gaming",
+     "redside": "Royal Never Give Up",
+     "result": "0 - 2",
+     "date": "2016-01-14"
+    }
+   ]
+  },
+  {
+   "name": "LCK Spring 2016",
+   "region": "KR",
+   "game": [
+    {
+     "blueside": "Jin Air Green Wings",
+     "redside": "Longzhu Gaming",
+     "result": "1 - 2",
+     "date": "2016-04-09"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "Kongdoo Monster",
+     "result": "2 - 1",
+     "date": "2016-04-09"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "SBENU Sonicboom",
+     "result": "2 - 0",
+     "date": "2016-04-08"
+    },
+    {
+     "blueside": "Afreeca Freecs",
+     "redside": "CJ Entus",
+     "result": "2 - 0",
+     "date": "2016-04-08"
+    },
+    {
+     "blueside": "Kongdoo Monster",
+     "redside": "Samsung Galaxy",
+     "result": "1 - 2",
+     "date": "2016-04-07"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "Jin Air Green Wings",
+     "result": "2 - 0",
+     "date": "2016-04-07"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "SK Telecom T1",
+     "result": "2 - 0",
+     "date": "2016-04-06"
+    },
+    {
+     "blueside": "Afreeca Freecs",
+     "redside": "Longzhu Gaming",
+     "result": "2 - 1",
+     "date": "2016-04-06"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "Afreeca Freecs",
+     "result": "2 - 0",
+     "date": "2016-04-02"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 1",
+     "date": "2016-04-02"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "KT Rolster",
+     "result": "0 - 2",
+     "date": "2016-04-01"
+    },
+    {
+     "blueside": "SBENU Sonicboom",
+     "redside": "Longzhu Gaming",
+     "result": "2 - 0",
+     "date": "2016-04-01"
+    },
+    {
+     "blueside": "Kongdoo Monster",
+     "redside": "SK Telecom T1",
+     "result": "0 - 2",
+     "date": "2016-03-31"
+    },
+    {
+     "blueside": "Jin Air Green Wings",
+     "redside": "Afreeca Freecs",
+     "result": "0 - 2",
+     "date": "2016-03-31"
+    },
+    {
+     "blueside": "Longzhu Gaming",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 0",
+     "date": "2016-03-30"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "KT Rolster",
+     "result": "1 - 2",
+     "date": "2016-03-30"
+    },
+    {
+     "blueside": "SBENU Sonicboom",
+     "redside": "Afreeca Freecs",
+     "result": "1 - 2",
+     "date": "2016-03-26"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "CJ Entus",
+     "result": "2 - 0",
+     "date": "2016-03-26"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Jin Air Green Wings",
+     "result": "2 - 1",
+     "date": "2016-03-25"
+    },
+    {
+     "blueside": "Kongdoo Monster",
+     "redside": "ROX Tigers",
+     "result": "0 - 2",
+     "date": "2016-03-25"
+    },
+    {
+     "blueside": "Longzhu Gaming",
+     "redside": "SK Telecom T1",
+     "result": "0 - 2",
+     "date": "2016-03-24"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "Afreeca Freecs",
+     "result": "1 - 2",
+     "date": "2016-03-24"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "ROX Tigers",
+     "result": "0 - 2",
+     "date": "2016-03-23"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "SBENU Sonicboom",
+     "result": "2 - 0",
+     "date": "2016-03-23"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Jin Air Green Wings",
+     "result": "1 - 2",
+     "date": "2016-03-19"
+    },
+    {
+     "blueside": "Kongdoo Monster",
+     "redside": "SBENU Sonicboom",
+     "result": "0 - 2",
+     "date": "2016-03-19"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Afreeca Freecs",
+     "result": "1 - 2",
+     "date": "2016-03-18"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "ROX Tigers",
+     "result": "0 - 2",
+     "date": "2016-03-18"
+    },
+    {
+     "blueside": "SBENU Sonicboom",
+     "redside": "KT Rolster",
+     "result": "0 - 2",
+     "date": "2016-03-17"
+    },
+    {
+     "blueside": "Longzhu Gaming",
+     "redside": "CJ Entus",
+     "result": "1 - 2",
+     "date": "2016-03-17"
+    },
+    {
+     "blueside": "Afreeca Freecs",
+     "redside": "Kongdoo Monster",
+     "result": "2 - 1",
+     "date": "2016-03-16"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "Jin Air Green Wings",
+     "result": "2 - 0",
+     "date": "2016-03-16"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "ROX Tigers",
+     "result": "2 - 1",
+     "date": "2016-03-12"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "Longzhu Gaming",
+     "result": "2 - 0",
+     "date": "2016-03-12"
+    },
+    {
+     "blueside": "Jin Air Green Wings",
+     "redside": "Kongdoo Monster",
+     "result": "2 - 0",
+     "date": "2016-03-11"
+    },
+    {
+     "blueside": "Afreeca Freecs",
+     "redside": "SK Telecom T1",
+     "result": "1 - 2",
+     "date": "2016-03-11"
+    },
+    {
+     "blueside": "SBENU Sonicboom",
+     "redside": "ROX Tigers",
+     "result": "0 - 2",
+     "date": "2016-03-10"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 0",
+     "date": "2016-03-10"
+    },
+    {
+     "blueside": "Jin Air Green Wings",
+     "redside": "KT Rolster",
+     "result": "2 - 0",
+     "date": "2016-03-09"
+    },
+    {
+     "blueside": "Longzhu Gaming",
+     "redside": "Kongdoo Monster",
+     "result": "2 - 0",
+     "date": "2016-03-09"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "SBENU Sonicboom",
+     "result": "2 - 1",
+     "date": "2016-03-04"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "Longzhu Gaming",
+     "result": "2 - 0",
+     "date": "2016-03-03"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "KT Rolster",
+     "result": "0 - 2",
+     "date": "2016-03-03"
+    },
+    {
+     "blueside": "Kongdoo Monster",
+     "redside": "CJ Entus",
+     "result": "1 - 2",
+     "date": "2016-03-02"
+    },
+    {
+     "blueside": "SBENU Sonicboom",
+     "redside": "Jin Air Green Wings",
+     "result": "0 - 2",
+     "date": "2016-03-02"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Kongdoo Monster",
+     "result": "2 - 1",
+     "date": "2016-02-25"
+    },
+    {
+     "blueside": "Longzhu Gaming",
+     "redside": "KT Rolster",
+     "result": "1 - 2",
+     "date": "2016-02-24"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "SBENU Sonicboom",
+     "result": "2 - 0",
+     "date": "2016-02-24"
+    },
+    {
+     "blueside": "SBENU Sonicboom",
+     "redside": "Samsung Galaxy",
+     "result": "0 - 2",
+     "date": "2016-02-20"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "Afreeca Freecs",
+     "result": "1 - 2",
+     "date": "2016-02-20"
+    },
+    {
+     "blueside": "Jin Air Green Wings",
+     "redside": "ROX Tigers",
+     "result": "0 - 2",
+     "date": "2016-02-19"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "CJ Entus",
+     "result": "2 - 1",
+     "date": "2016-02-19"
+    },
+    {
+     "blueside": "Kongdoo Monster",
+     "redside": "Afreeca Freecs",
+     "result": "0 - 2",
+     "date": "2016-02-18"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "Longzhu Gaming",
+     "result": "0 - 2",
+     "date": "2016-02-18"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "CJ Entus",
+     "result": "2 - 1",
+     "date": "2016-02-17"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "Jin Air Green Wings",
+     "result": "1 - 2",
+     "date": "2016-02-17"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "KT Rolster",
+     "result": "2 - 0",
+     "date": "2016-02-13"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Afreeca Freecs",
+     "result": "2 - 1",
+     "date": "2016-02-13"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "Kongdoo Monster",
+     "result": "2 - 0",
+     "date": "2016-02-12"
+    },
+    {
+     "blueside": "Longzhu Gaming",
+     "redside": "SBENU Sonicboom",
+     "result": "2 - 1",
+     "date": "2016-02-12"
+    },
+    {
+     "blueside": "Kongdoo Monster",
+     "redside": "Longzhu Gaming",
+     "result": "0 - 2",
+     "date": "2016-02-05"
+    },
+    {
+     "blueside": "Jin Air Green Wings",
+     "redside": "Samsung Galaxy",
+     "result": "1 - 2",
+     "date": "2016-02-05"
+    },
+    {
+     "blueside": "SBENU Sonicboom",
+     "redside": "SK Telecom T1",
+     "result": "0 - 2",
+     "date": "2016-02-04"
+    },
+    {
+     "blueside": "Afreeca Freecs",
+     "redside": "ROX Tigers",
+     "result": "1 - 2",
+     "date": "2016-02-04"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "Longzhu Gaming",
+     "result": "2 - 1",
+     "date": "2016-02-03"
+    },
+    {
+     "blueside": "Kongdoo Monster",
+     "redside": "KT Rolster",
+     "result": "0 - 2",
+     "date": "2016-02-03"
+    },
+    {
+     "blueside": "Jin Air Green Wings",
+     "redside": "SBENU Sonicboom",
+     "result": "2 - 0",
+     "date": "2016-01-30"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 0",
+     "date": "2016-01-30"
+    },
+    {
+     "blueside": "Longzhu Gaming",
+     "redside": "Afreeca Freecs",
+     "result": "2 - 0",
+     "date": "2016-01-29"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "Kongdoo Monster",
+     "result": "2 - 1",
+     "date": "2016-01-29"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "Samsung Galaxy",
+     "result": "2 - 0",
+     "date": "2016-01-28"
+    },
+    {
+     "blueside": "Jin Air Green Wings",
+     "redside": "CJ Entus",
+     "result": "2 - 0",
+     "date": "2016-01-28"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "SK Telecom T1",
+     "result": "2 - 1",
+     "date": "2016-01-27"
+    },
+    {
+     "blueside": "Afreeca Freecs",
+     "redside": "SBENU Sonicboom",
+     "result": "2 - 0",
+     "date": "2016-01-27"
+    },
+    {
+     "blueside": "Longzhu Gaming",
+     "redside": "ROX Tigers",
+     "result": "0 - 2",
+     "date": "2016-01-23"
+    },
+    {
+     "blueside": "SBENU Sonicboom",
+     "redside": "Kongdoo Monster",
+     "result": "1 - 2",
+     "date": "2016-01-23"
+    },
+    {
+     "blueside": "Afreeca Freecs",
+     "redside": "Jin Air Green Wings",
+     "result": "1 - 2",
+     "date": "2016-01-22"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "SK Telecom T1",
+     "result": "0 - 2",
+     "date": "2016-01-22"
+    },
+    {
+     "blueside": "SBENU Sonicboom",
+     "redside": "CJ Entus",
+     "result": "1 - 2",
+     "date": "2016-01-21"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "ROX Tigers",
+     "result": "1 - 2",
+     "date": "2016-01-21"
+    },
+    {
+     "blueside": "Kongdoo Monster",
+     "redside": "Jin Air Green Wings",
+     "result": "0 - 2",
+     "date": "2016-01-20"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Longzhu Gaming",
+     "result": "2 - 1",
+     "date": "2016-01-20"
+    },
+    {
+     "blueside": "Jin Air Green Wings",
+     "redside": "SK Telecom T1",
+     "result": "2 - 0",
+     "date": "2016-01-16"
+    },
+    {
+     "blueside": "Afreeca Freecs",
+     "redside": "Samsung Galaxy",
+     "result": "0 - 2",
+     "date": "2016-01-16"
+    },
+    {
+     "blueside": "ROX Tigers",
+     "redside": "CJ Entus",
+     "result": "2 - 0",
+     "date": "2016-01-15"
+    },
+    {
+     "blueside": "KT Rolster",
+     "redside": "SBENU Sonicboom",
+     "result": "2 - 0",
+     "date": "2016-01-15"
+    },
+    {
+     "blueside": "Samsung Galaxy",
+     "redside": "Kongdoo Monster",
+     "result": "2 - 0",
+     "date": "2016-01-14"
+    },
+    {
+     "blueside": "Longzhu Gaming",
+     "redside": "Jin Air Green Wings",
+     "result": "2 - 0",
+     "date": "2016-01-14"
+    },
+    {
+     "blueside": "Afreeca Freecs",
+     "redside": "KT Rolster",
+     "result": "0 - 2",
+     "date": "2016-01-13"
+    },
+    {
+     "blueside": "CJ Entus",
+     "redside": "SK Telecom T1",
+     "result": "0 - 2",
+     "date": "2016-01-13"
+    }
+   ]
+  },
+  {
+   "name": "NA LCS Summer Promo 2016",
+   "region": "NA",
+   "game": [
+    {
+     "blueside": "Apex Gaming",
+     "redside": "TDK",
+     "result": "3 - 0",
+     "date": "2016-04-08"
+    },
+    {
+     "blueside": "Renegades",
+     "redside": "TDK",
+     "result": "3 - 0",
+     "date": "2016-04-07"
+    },
+    {
+     "blueside": "Apex Gaming",
+     "redside": "Team Impulse",
+     "result": "1 - 3",
+     "date": "2016-04-07"
+    },
+    {
+     "blueside": "TDK",
+     "redside": "Dignitas",
+     "result": "3 - 0",
+     "date": "2016-04-06"
+    }
+   ]
+  },
+  {
+   "name": "EU LCS Summer Promo 2016",
+   "region": "EUW",
+   "game": [
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Huma",
+     "result": "3 - 1",
+     "date": "2016-03-27"
+    },
+    {
+     "blueside": "Huma",
+     "redside": "Roccat",
+     "result": "1 - 3",
+     "date": "2016-03-26"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Splyce",
+     "result": "2 - 3",
+     "date": "2016-03-26"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Copenhagen Wolves",
+     "result": "3 - 2",
+     "date": "2016-03-24"
+    }
+   ]
+  },
+  {
+   "name": "NA LCS Spring 2016",
+   "region": "NA",
+   "game": [
+    {
+     "blueside": "Team Impulse",
+     "redside": "Renegades",
+     "result": "0 - 1",
+     "date": "2016-03-20"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "NRG eSports",
+     "result": "0 - 1",
+     "date": "2016-03-20"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Dignitas",
+     "result": "1 - 0",
+     "date": "2016-03-20"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Immortals",
+     "result": "0 - 1",
+     "date": "2016-03-20"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Cloud 9",
+     "result": "1 - 0",
+     "date": "2016-03-20"
+    },
+    {
+     "blueside": "Renegades",
+     "redside": "Echo Fox",
+     "result": "1 - 0",
+     "date": "2016-03-20"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Echo Fox",
+     "result": "1 - 0",
+     "date": "2016-03-19"
+    },
+    {
+     "blueside": "Dignitas",
+     "redside": "Team Liquid",
+     "result": "0 - 1",
+     "date": "2016-03-19"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "Team SoloMid",
+     "result": "1 - 0",
+     "date": "2016-03-19"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "NRG eSports",
+     "result": "1 - 0",
+     "date": "2016-03-19"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Renegades",
+     "result": "0 - 1",
+     "date": "2016-03-19"
+    },
+    {
+     "blueside": "Echo Fox",
+     "redside": "CLG",
+     "result": "0 - 1",
+     "date": "2016-03-13"
+    },
+    {
+     "blueside": "Dignitas",
+     "redside": "Immortals",
+     "result": "0 - 1",
+     "date": "2016-03-13"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Renegades",
+     "result": "0 - 1",
+     "date": "2016-03-13"
+    },
+    {
+     "blueside": "NRG eSports",
+     "redside": "Team Liquid",
+     "result": "1 - 0",
+     "date": "2016-03-13"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Team Impulse",
+     "result": "1 - 0",
+     "date": "2016-03-13"
+    },
+    {
+     "blueside": "Echo Fox",
+     "redside": "Dignitas",
+     "result": "1 - 0",
+     "date": "2016-03-12"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Team Impulse",
+     "result": "1 - 0",
+     "date": "2016-03-12"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Team Liquid",
+     "result": "0 - 1",
+     "date": "2016-03-12"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "NRG eSports",
+     "result": "1 - 0",
+     "date": "2016-03-12"
+    },
+    {
+     "blueside": "Renegades",
+     "redside": "Cloud 9",
+     "result": "0 - 1",
+     "date": "2016-03-12"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "Echo Fox",
+     "result": "1 - 0",
+     "date": "2016-02-28"
+    },
+    {
+     "blueside": "Renegades",
+     "redside": "Dignitas",
+     "result": "1 - 0",
+     "date": "2016-02-28"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Team SoloMid",
+     "result": "1 - 0",
+     "date": "2016-02-28"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "CLG",
+     "result": "0 - 1",
+     "date": "2016-02-28"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "NRG eSports",
+     "result": "1 - 0",
+     "date": "2016-02-28"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Dignitas",
+     "result": "1 - 0",
+     "date": "2016-02-27"
+    },
+    {
+     "blueside": "NRG eSports",
+     "redside": "Renegades",
+     "result": "1 - 0",
+     "date": "2016-02-27"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "CLG",
+     "result": "0 - 1",
+     "date": "2016-02-27"
+    },
+    {
+     "blueside": "Echo Fox",
+     "redside": "Team SoloMid",
+     "result": "0 - 1",
+     "date": "2016-02-27"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Team Liquid",
+     "result": "0 - 1",
+     "date": "2016-02-27"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Immortals",
+     "result": "0 - 1",
+     "date": "2016-02-21"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Echo Fox",
+     "result": "0 - 1",
+     "date": "2016-02-21"
+    },
+    {
+     "blueside": "NRG eSports",
+     "redside": "Cloud 9",
+     "result": "0 - 1",
+     "date": "2016-02-21"
+    },
+    {
+     "blueside": "Dignitas",
+     "redside": "Team SoloMid",
+     "result": "1 - 0",
+     "date": "2016-02-21"
+    },
+    {
+     "blueside": "Renegades",
+     "redside": "CLG",
+     "result": "0 - 1",
+     "date": "2016-02-21"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Echo Fox",
+     "result": "0 - 1",
+     "date": "2016-02-20"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Team Impulse",
+     "result": "1 - 0",
+     "date": "2016-02-20"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Cloud 9",
+     "result": "0 - 1",
+     "date": "2016-02-20"
+    },
+    {
+     "blueside": "Renegades",
+     "redside": "Immortals",
+     "result": "0 - 1",
+     "date": "2016-02-20"
+    },
+    {
+     "blueside": "NRG eSports",
+     "redside": "Dignitas",
+     "result": "1 - 0",
+     "date": "2016-02-20"
+    },
+    {
+     "blueside": "Dignitas",
+     "redside": "Team Impulse",
+     "result": "0 - 1",
+     "date": "2016-02-14"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Renegades",
+     "result": "1 - 0",
+     "date": "2016-02-14"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "Cloud 9",
+     "result": "1 - 0",
+     "date": "2016-02-14"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Team SoloMid",
+     "result": "0 - 1",
+     "date": "2016-02-14"
+    },
+    {
+     "blueside": "Echo Fox",
+     "redside": "NRG eSports",
+     "result": "1 - 0",
+     "date": "2016-02-14"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "Dignitas",
+     "result": "1 - 0",
+     "date": "2016-02-13"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Team SoloMid",
+     "result": "0 - 1",
+     "date": "2016-02-13"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Team Liquid",
+     "result": "1 - 0",
+     "date": "2016-02-13"
+    },
+    {
+     "blueside": "NRG eSports",
+     "redside": "CLG",
+     "result": "0 - 1",
+     "date": "2016-02-13"
+    },
+    {
+     "blueside": "Echo Fox",
+     "redside": "Renegades",
+     "result": "1 - 0",
+     "date": "2016-02-13"
+    },
+    {
+     "blueside": "Dignitas",
+     "redside": "Echo Fox",
+     "result": "1 - 0",
+     "date": "2016-02-07"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "CLG",
+     "result": "0 - 1",
+     "date": "2016-02-07"
+    },
+    {
+     "blueside": "Renegades",
+     "redside": "Team SoloMid",
+     "result": "0 - 1",
+     "date": "2016-02-07"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "NRG eSports",
+     "result": "1 - 0",
+     "date": "2016-02-07"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "Team Liquid",
+     "result": "1 - 0",
+     "date": "2016-02-07"
+    },
+    {
+     "blueside": "NRG eSports",
+     "redside": "Team Impulse",
+     "result": "1 - 0",
+     "date": "2016-02-06"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Echo Fox",
+     "result": "1 - 0",
+     "date": "2016-02-06"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Immortals",
+     "result": "0 - 1",
+     "date": "2016-02-06"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Renegades",
+     "result": "1 - 0",
+     "date": "2016-02-06"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Dignitas",
+     "result": "1 - 0",
+     "date": "2016-02-06"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Renegades",
+     "result": "1 - 0",
+     "date": "2016-01-31"
+    },
+    {
+     "blueside": "Echo Fox",
+     "redside": "Immortals",
+     "result": "0 - 1",
+     "date": "2016-01-31"
+    },
+    {
+     "blueside": "Dignitas",
+     "redside": "Cloud 9",
+     "result": "0 - 1",
+     "date": "2016-01-31"
+    },
+    {
+     "blueside": "NRG eSports",
+     "redside": "Team SoloMid",
+     "result": "1 - 0",
+     "date": "2016-01-31"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "Team Impulse",
+     "result": "1 - 0",
+     "date": "2016-01-31"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "Renegades",
+     "result": "1 - 0",
+     "date": "2016-01-30"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Echo Fox",
+     "result": "1 - 0",
+     "date": "2016-01-30"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "NRG eSports",
+     "result": "1 - 0",
+     "date": "2016-01-30"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Team SoloMid",
+     "result": "0 - 1",
+     "date": "2016-01-30"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Dignitas",
+     "result": "1 - 0",
+     "date": "2016-01-30"
+    },
+    {
+     "blueside": "Renegades",
+     "redside": "Team Impulse",
+     "result": "0 - 1",
+     "date": "2016-01-24"
+    },
+    {
+     "blueside": "Echo Fox",
+     "redside": "Team Liquid",
+     "result": "0 - 1",
+     "date": "2016-01-24"
+    },
+    {
+     "blueside": "CLG",
+     "redside": "Cloud 9",
+     "result": "0 - 1",
+     "date": "2016-01-24"
+    },
+    {
+     "blueside": "NRG eSports",
+     "redside": "Immortals",
+     "result": "0 - 1",
+     "date": "2016-01-24"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Dignitas",
+     "result": "1 - 0",
+     "date": "2016-01-24"
+    },
+    {
+     "blueside": "Dignitas",
+     "redside": "Renegades",
+     "result": "1 - 0",
+     "date": "2016-01-23"
+    },
+    {
+     "blueside": "Team Liquid",
+     "redside": "CLG",
+     "result": "0 - 1",
+     "date": "2016-01-23"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Immortals",
+     "result": "0 - 1",
+     "date": "2016-01-23"
+    },
+    {
+     "blueside": "Team Impulse",
+     "redside": "Cloud 9",
+     "result": "1 - 0",
+     "date": "2016-01-23"
+    },
+    {
+     "blueside": "Immortals",
+     "redside": "Team Impulse",
+     "result": "1 - 0",
+     "date": "2016-01-17"
+    },
+    {
+     "blueside": "Echo Fox",
+     "redside": "Cloud 9",
+     "result": "0 - 1",
+     "date": "2016-01-17"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Team Liquid",
+     "result": "1 - 0",
+     "date": "2016-01-17"
+    },
+    {
+     "blueside": "Dignitas",
+     "redside": "CLG",
+     "result": "1 - 0",
+     "date": "2016-01-17"
+    },
+    {
+     "blueside": "Renegades",
+     "redside": "NRG eSports",
+     "result": "0 - 1",
+     "date": "2016-01-17"
+    },
+    {
+     "blueside": "Echo Fox",
+     "redside": "Team Impulse",
+     "result": "1 - 0",
+     "date": "2016-01-16"
+    },
+    {
+     "blueside": "Renegades",
+     "redside": "Team Liquid",
+     "result": "1 - 0",
+     "date": "2016-01-16"
+    },
+    {
+     "blueside": "Dignitas",
+     "redside": "NRG eSports",
+     "result": "0 - 1",
+     "date": "2016-01-16"
+    },
+    {
+     "blueside": "Cloud 9",
+     "redside": "Immortals",
+     "result": "0 - 1",
+     "date": "2016-01-16"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "CLG",
+     "result": "0 - 1",
+     "date": "2016-01-16"
+    }
+   ]
+  },
+  {
+   "name": "EU LCS Spring 2016",
+   "region": "EUW",
+   "game": [
+    {
+     "blueside": "G2 Esports",
+     "redside": "Unicorns Of Love",
+     "result": "1 - 0",
+     "date": "2016-03-18"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2016-03-18"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Fnatic",
+     "result": "1 - 0",
+     "date": "2016-03-18"
+    },
+    {
+     "blueside": "Vitality",
+     "redside": "Splyce",
+     "result": "1 - 0",
+     "date": "2016-03-18"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Elements",
+     "result": "1 - 0",
+     "date": "2016-03-18"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "G2 Esports",
+     "result": "0 - 1",
+     "date": "2016-03-17"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Vitality",
+     "result": "1 - 0",
+     "date": "2016-03-17"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Unicorns Of Love",
+     "result": "0 - 1",
+     "date": "2016-03-17"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Fnatic",
+     "result": "1 - 0",
+     "date": "2016-03-17"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Origen",
+     "result": "0 - 1",
+     "date": "2016-03-17"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Origen",
+     "result": "0 - 1",
+     "date": "2016-03-11"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2016-03-11"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Vitality",
+     "result": "0 - 1",
+     "date": "2016-03-11"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Unicorns Of Love",
+     "result": "1 - 0",
+     "date": "2016-03-11"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "Giants Gaming",
+     "result": "1 - 0",
+     "date": "2016-03-11"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Splyce",
+     "result": "0 - 1",
+     "date": "2016-03-10"
+    },
+    {
+     "blueside": "Vitality",
+     "redside": "G2 Esports",
+     "result": "0 - 1",
+     "date": "2016-03-10"
+    },
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "Origen",
+     "result": "0 - 1",
+     "date": "2016-03-10"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2016-03-10"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Giants Gaming",
+     "result": "1 - 0",
+     "date": "2016-03-10"
+    },
+    {
+     "blueside": "Vitality",
+     "redside": "Elements",
+     "result": "1 - 0",
+     "date": "2016-02-26"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2016-02-26"
+    },
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "Splyce",
+     "result": "1 - 0",
+     "date": "2016-02-26"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2016-02-26"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "G2 Esports",
+     "result": "0 - 1",
+     "date": "2016-02-26"
+    },
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "Roccat",
+     "result": "0 - 1",
+     "date": "2016-02-25"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "Origen",
+     "result": "0 - 1",
+     "date": "2016-02-25"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Fnatic",
+     "result": "1 - 0",
+     "date": "2016-02-25"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Vitality",
+     "result": "0 - 1",
+     "date": "2016-02-25"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "Elements",
+     "result": "1 - 0",
+     "date": "2016-02-25"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "G2 Esports",
+     "result": "0 - 1",
+     "date": "2016-02-19"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "Fnatic",
+     "result": "1 - 0",
+     "date": "2016-02-19"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2016-02-19"
+    },
+    {
+     "blueside": "Vitality",
+     "redside": "Unicorns Of Love",
+     "result": "1 - 0",
+     "date": "2016-02-19"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Elements",
+     "result": "1 - 0",
+     "date": "2016-02-19"
+    },
+    {
+     "blueside": "Vitality",
+     "redside": "H2k-Gaming",
+     "result": "1 - 0",
+     "date": "2016-02-18"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "G2 Esports",
+     "result": "1 - 0",
+     "date": "2016-02-18"
+    },
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "Giants Gaming",
+     "result": "1 - 0",
+     "date": "2016-02-18"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Splyce",
+     "result": "1 - 0",
+     "date": "2016-02-18"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Origen",
+     "result": "0 - 1",
+     "date": "2016-02-18"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "Giants Gaming",
+     "result": "1 - 0",
+     "date": "2016-02-12"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2016-02-12"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "G2 Esports",
+     "result": "0 - 1",
+     "date": "2016-02-12"
+    },
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "Fnatic",
+     "result": "1 - 0",
+     "date": "2016-02-12"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Vitality",
+     "result": "0 - 1",
+     "date": "2016-02-12"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Giants Gaming",
+     "result": "0 - 1",
+     "date": "2016-02-11"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "Vitality",
+     "result": "0 - 1",
+     "date": "2016-02-11"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Splyce",
+     "result": "1 - 0",
+     "date": "2016-02-11"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Elements",
+     "result": "1 - 0",
+     "date": "2016-02-11"
+    },
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2016-02-11"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Fnatic",
+     "result": "0 - 1",
+     "date": "2016-02-05"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Giants Gaming",
+     "result": "1 - 0",
+     "date": "2016-02-05"
+    },
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "Vitality",
+     "result": "1 - 0",
+     "date": "2016-02-05"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2016-02-05"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "Splyce",
+     "result": "1 - 0",
+     "date": "2016-02-05"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Splyce",
+     "result": "1 - 0",
+     "date": "2016-02-04"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Unicorns Of Love",
+     "result": "0 - 1",
+     "date": "2016-02-04"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "Origen",
+     "result": "1 - 0",
+     "date": "2016-02-04"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Fnatic",
+     "result": "0 - 1",
+     "date": "2016-02-04"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Vitality",
+     "result": "0 - 1",
+     "date": "2016-02-04"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2016-01-29"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Splyce",
+     "result": "1 - 0",
+     "date": "2016-01-29"
+    },
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "G2 Esports",
+     "result": "0 - 1",
+     "date": "2016-01-29"
+    },
+    {
+     "blueside": "Vitality",
+     "redside": "Giants Gaming",
+     "result": "1 - 0",
+     "date": "2016-01-29"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Elements",
+     "result": "1 - 0",
+     "date": "2016-01-29"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Vitality",
+     "result": "1 - 0",
+     "date": "2016-01-28"
+    },
+    {
+     "blueside": "Unicorns Of Love",
+     "redside": "Elements",
+     "result": "1 - 0",
+     "date": "2016-01-28"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "Fnatic",
+     "result": "1 - 0",
+     "date": "2016-01-28"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2016-01-28"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Splyce",
+     "result": "0 - 1",
+     "date": "2016-01-28"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "H2k-Gaming",
+     "result": "0 - 1",
+     "date": "2016-01-22"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2016-01-22"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Unicorns Of Love",
+     "result": "0 - 1",
+     "date": "2016-01-22"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "Giants Gaming",
+     "result": "1 - 0",
+     "date": "2016-01-22"
+    },
+    {
+     "blueside": "Vitality",
+     "redside": "Origen",
+     "result": "1 - 0",
+     "date": "2016-01-22"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "H2k-Gaming",
+     "result": "1 - 0",
+     "date": "2016-01-21"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "Vitality",
+     "result": "0 - 1",
+     "date": "2016-01-21"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Unicorns Of Love",
+     "result": "1 - 0",
+     "date": "2016-01-21"
+    },
+    {
+     "blueside": "Roccat",
+     "redside": "Elements",
+     "result": "0 - 1",
+     "date": "2016-01-21"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "G2 Esports",
+     "result": "0 - 1",
+     "date": "2016-01-21"
+    },
+    {
+     "blueside": "G2 Esports",
+     "redside": "Roccat",
+     "result": "1 - 0",
+     "date": "2016-01-15"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Origen",
+     "result": "1 - 0",
+     "date": "2016-01-15"
+    },
+    {
+     "blueside": "Vitality",
+     "redside": "Fnatic",
+     "result": "1 - 0",
+     "date": "2016-01-15"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "Elements",
+     "result": "0 - 1",
+     "date": "2016-01-15"
+    },
+    {
+     "blueside": "Giants Gaming",
+     "redside": "Unicorns Of Love",
+     "result": "0 - 1",
+     "date": "2016-01-15"
+    },
+    {
+     "blueside": "Vitality",
+     "redside": "Roccat",
+     "result": "0 - 1",
+     "date": "2016-01-14"
+    },
+    {
+     "blueside": "Splyce",
+     "redside": "Unicorns Of Love",
+     "result": "0 - 1",
+     "date": "2016-01-14"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Giants Gaming",
+     "result": "1 - 0",
+     "date": "2016-01-14"
+    },
+    {
+     "blueside": "Elements",
+     "redside": "G2 Esports",
+     "result": "0 - 1",
+     "date": "2016-01-14"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Origen",
+     "result": "1 - 0",
+     "date": "2016-01-14"
+    }
+   ]
+  },
+  {
+   "name": "IEM Katowice 2016",
+   "region": "WR",
+   "game": [
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "Fnatic",
+     "result": "3 - 0",
+     "date": "2016-03-06"
+    },
+    {
+     "blueside": "Royal Never Give Up",
+     "redside": "Fnatic",
+     "result": "1 - 2",
+     "date": "2016-03-06"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "Team SoloMid",
+     "result": "2 - 0",
+     "date": "2016-03-06"
+    },
+    {
+     "blueside": "Qiao Gu Reapers",
+     "redside": "Fnatic",
+     "result": "1 - 2",
+     "date": "2016-03-05"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "CLG",
+     "result": "2 - 1",
+     "date": "2016-03-05"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "Qiao Gu Reapers",
+     "result": "1 - 0",
+     "date": "2016-03-05"
+    },
+    {
+     "blueside": "Qiao Gu Reapers",
+     "redside": "Fnatic",
+     "result": "1 - 0",
+     "date": "2016-03-05"
+    },
+    {
+     "blueside": "SK Telecom T1",
+     "redside": "CLG",
+     "result": "1 - 0",
+     "date": "2016-03-05"
+    },
+    {
+     "blueside": "ESC Ever",
+     "redside": "Team SoloMid",
+     "result": "0 - 2",
+     "date": "2016-03-04"
+    },
+    {
+     "blueside": "Team SoloMid",
+     "redside": "Origen",
+     "result": "2 - 1",
+     "date": "2016-03-04"
+    },
+    {
+     "blueside": "ESC Ever",
+     "redside": "Royal Never Give Up",
+     "result": "0 - 1",
+     "date": "2016-03-04"
+    },
+    {
+     "blueside": "Origen",
+     "redside": "Royal Never Give Up",
+     "result": "0 - 1",
+     "date": "2016-03-04"
+    },
+    {
+     "blueside": "ESC Ever",
+     "redside": "Team SoloMid",
+     "result": "1 - 0",
+     "date": "2016-03-04"
+    }
+   ]
+  },
+  {
+   "name": "IEM Cologne 2015",
+   "region": "WR",
+   "game": [
+    {
+     "blueside": "Qiao Gu Reapers",
+     "redside": "ESC Ever",
+     "result": "2 - 3",
+     "date": "2015-12-20"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "ESC Ever",
+     "result": "1 - 2",
+     "date": "2015-12-19"
+    },
+    {
+     "blueside": "Fnatic",
+     "redside": "Qiao Gu Reapers",
+     "result": "1 - 2",
+     "date": "2015-12-19"
+    },
+    {
+     "blueside": "H2k-Gaming",
+     "redside": "Cloud 9",
+     "result": "2 - 1",
+     "date": "2015-12-18"
+    },
+    {
+     "blueside": "Dignitas",
+     "redside": "Qiao Gu Reapers",
+     "result": "1 - 2",
+     "date": "2015-12-18"
+    }
+   ]
+  }
+ ]
+}

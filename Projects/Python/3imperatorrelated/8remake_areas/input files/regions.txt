@@ -1,0 +1,180 @@
+Maghreb_region = { #19
+	areas = { Lefkamucum_area Kudiosmea_area Klazojuklis_area Hermaraththena_area Kidemene_area Ydhiethera_area Aegmegalida_area Histhyelia_area Askgaosse_area Alinmaronlia_area Chalimetta_area Histrdyosia_area Helnemdia_area Artbyzalous_area Abmetine_area Opuhieraita_area Naxkimmerinda_area Morgacarcum_area Western_Sahara_area }
+}
+
+Haemus_region = { #39
+	areas = { Dornyum_area Larididita_area Empalinnae_area Aenbhyrtthus_area Hieragorlia_area Emporolosia_area Cyrialytiri_area Dylaptes_area Edgorgion_area Kameirmegcum_area Golgalitiri_area Kemesemyra_area Kouithlia_area Dimajuinda_area Ormonastae_area Kouramaryios_area Muchiai_area Hermidececia_area Corcknosoli_area Marmethoium_area Carymetapoinda_area Marhagios_area Alacalita_area Kannchersosia_area Berghemetiri_area Lineida_area Orchoaeniana_area Monaadramthos_area Gourcaryine_area Hieragazcum_area Helinysosia_area Hermiolia_area Millmetaponlia_area Methamithera_area Kameargyrsos_area Lepreleorea_area Marephethena_area Edkyrenmenus_area Clazoepiium_area }
+}
+
+Tartaria_region = { #9
+	areas = { Tartaria0_area Tartaria1_area Tartaria2_area Tartaria3_area Tartaria4_area Tartaria5_area Tartaria6_area Tartaria7_area Tartaria8_area }
+}
+
+India_region = { #12
+	areas = { India0_area India1_area India2_area India3_area India4_area India5_area India6_area India7_area India8_area India9_area India10_area India11_area }
+}
+
+Francia_region = { #25
+	areas = { bar_area franche_comte_area Lorraine_area provence_area dauphine_area normandy_area champagne_area saintonge_area anjou_area burgundy_area limousin_area gascogne_area gascognewip_area auvergne_area ile_de_france_area alencon_area britanny_area Itacorcia_area bourbon_area picardy_area touraine_area poitou_area orleans_area guyenne_area berry_area }
+}
+
+Nusantara_region = { #12
+	areas = { Nusantara0_area Nusantara1_area Nusantara2_area Nusantara3_area Nusantara4_area Nusantara5_area Nusantara6_area Nusantara7_area Nusantara8_area Nusantara9_area Nusantara10_area Nusantara11_area }
+}
+
+Guinea_region = { #9
+	areas = { Guinea0_area Guinea1_area Guinea2_area Guinea3_area Guinea4_area Guinea5_area Guinea6_area Guinea7_area Guinea8_area }
+}
+
+Cape_region = { #8
+	areas = { Cape0_area Cape1_area Cape2_area Cape3_area Cape4_area Cape5_area Cape6_area Cape7_area St_Helena_area }
+}
+
+Anatolia_region = { #20
+	areas = { Elenymphiana_area Namarmmenus_area Neachamosia_area Kerkingoissa_area Imbrmaretta_area Lebkonae_area Chytabuf_area Nygytium_area Oncarlis_area Gormilllea_area Kamaigosoli_area Calmorgus_area Gouraegonia_area Histrepidtiri_area Argemporpolis_area Lamibergpetra_area Jukmonastioli_area Methodydus_area Mamethoica_area Caryalioas_area }
+}
+
+Mashriq_region = { #9
+	areas = { Mashriq0_area Mashriq1_area Mashriq2_area Mashriq3_area Mashriq4_area Mashriq5_area Mashriq6_area Mashriq7_area Mashriq8_area }
+}
+
+Egypt_region = { #14
+	areas = { Oropelinon_area Ioiolum_area Dicidauf_area Gokatita_area Lekabdia_area Ephekercia_area Manbrates_area Methoelatnae_area Methamukemea_area Lindkyrenmos_area Imgazsos_area Ololissa_area Boukymos_area Gyrthgonera_area }
+}
+
+Caucasus_region = { #6
+	areas = { Caucasus0_area Caucasus1_area Caucasus2_area Caucasus3_area Caucasus4_area Caucasus5_area }
+}
+
+Cathay_region = { #12
+	areas = { Cathay0_area Cathay1_area Cathay2_area Cathay3_area Cathay4_area Cathay5_area Cathay6_area Cathay7_area Cathay8_area Cathay9_area Cathay10_area Cathay11_area }
+}
+
+Nippon_region = { #6
+	areas = { Nippon0_area Nippon1_area Nippon2_area Nippon3_area Nippon4_area Nippon5_area }
+}
+
+Iberia_region = { #28
+	areas = { alentejo_area algarve_area ribatejo_area beira_area douro_e_minho_area aragon_area valencia_area catalunya_area mallorca_area navarra_area granada_area toledo_area segovia_area murcia_area cuenca_area la_mancha_area burgos_area jaen_area salamanca_area galicia_area soria_area sevilla_area cordoba_area valladolid_area vizcaya_area extremadura_area leon_area asturias_area }
+}
+
+Greater_Russia_region = { #15
+	areas = { Bhyrtkalliina_area Hecyrthos_area Cythbergthus_area Masdimthera_area Gorghiosse_area Kamamonaslea_area Adramolyida_area Oepmarmalis_area Kimmmarollai_area Oepaleios_area Amphiamiuf_area Idaljuktus_area Maskoriinon_area Haglinmos_area Metmocia_area }
+}
+
+Brazil_region = { #11
+	areas = { Brazil0_area Brazil1_area Brazil2_area Brazil3_area Brazil4_area Brazil5_area Brazil6_area Brazil7_area Brazil8_area Brazil9_area Brazil10_area }
+}
+
+Cauli_region = { #2
+	areas = { Cauli0_area Cauli1_area }
+}
+
+Colombia_region = { #5
+	areas = { Colombia0_area Colombia1_area Colombia2_area Colombia3_area Colombia4_area }
+}
+
+Mesoamerica_region = { #8
+	areas = { Mesoamerica0_area Mesoamerica1_area Mesoamerica2_area Mesoamerica3_area Mesoamerica4_area Mesoamerica5_area Mesoamerica6_area Mesoamerica7_area }
+}
+
+Midwest_region = { #8
+	areas = { Midwest0_area Midwest1_area Midwest2_area Midwest3_area Midwest4_area Midwest5_area Midwest6_area Midwest7_area }
+}
+
+Britannia_region = { #28
+	areas = { meath_area desmond_area leinster_area ulster_area connacht_area thomond_area isle_of_man_area hamilton_area ross_area orkney_area the_isles_area buccleuch_area albany_area welsh_march_area westminster_area sussex_area york_area lancaster_area lincoln_area northumberland_area kent_area cornwall_area bedford_area somerset_area hereford_area gloucester_area wales_area norfolk_area }
+}
+
+Andes_region = { #10
+	areas = { Andes0_area Andes1_area Andes2_area Andes3_area Andes4_area Andes5_area Andes6_area Andes7_area Andes8_area Andes9_area }
+}
+
+Italia_region = { #39
+	areas = { turin_area monferrato_area genoa_area nizza_area brescia_area modena_area Hieramochum_area parma_area Onchherthrae_area pisa_area firenze_area ferrara_area Kanngolgthos_area padua_area Ambrliida_area Byzhalicthena_area Empomeson_area Imbrelion_area Eleumantinder_area perugia_area roma_area ascoli__area aquila_area Jukleontuf_area Emporkiolia_area fondi_area Mulcalylea_area Kydoclazoissa_area palermo_area messina_area siracusa_area Odeslison_area foggia_area Ialeoeia_area isernia_area napoli_area taranto_area Megaloedila_area basilicata_area }
+}
+
+Scandia_region = { #28
+	areas = { Elatgythmos_area Dioskorilia_area Linklazorias_area Lapitmetaplia_area Antiantilia_area Megaloaskcia_area Ephylefkapolis_area Dorcallithos_area Methaastpetra_area Koihieene_area Gorgiknidai_area Aigithatrias_area Megahierauf_area Lampscebai_area Chytmethyra_area Hermachyra_area Larisakrdia_area Kataiaila_area Ydaigosthena_area Kameleslia_area Cleoedaea_area Megallaolea_area Kordicthos_area Alehemerea_area Morgkorinthlia_area Hilamea_area Morgamaratthos_area Cheapalia_area }
+}
+
+Pacific_Coast_region = { #8
+	areas = { Pacific_Coast0_area Pacific_Coast1_area Pacific_Coast2_area Pacific_Coast3_area Pacific_Coast4_area Pacific_Coast5_area Pacific_Coast6_area Pacific_Coast7_area }
+}
+
+Baltic_region = { #10
+	areas = { Epimassate_area Chalckasmlia_area Dicaeakorinuf_area Kydomethorias_area Gortyasisos_area Methuidaoas_area Delleontonia_area Kimmdyion_area Marmaina_area Kimmerlaolia_area }
+}
+
+The_Horn_region = { #10
+	areas = { The_Horn0_area The_Horn1_area The_Horn2_area The_Horn3_area The_Horn4_area The_Horn5_area The_Horn6_area The_Horn7_area The_Horn8_area The_Horn9_area }
+}
+
+Siberia_region = { #4
+	areas = { Siberia0_area Siberia1_area Siberia2_area Siberia3_area }
+}
+
+Caribbean_region = { #5
+	areas = { Caribbean0_area Caribbean1_area Caribbean2_area Caribbean3_area Caribbean4_area }
+}
+
+Champa_region = { #11
+	areas = { Champa0_area Champa1_area Champa2_area Champa3_area Champa4_area Champa5_area Champa6_area Champa7_area Champa8_area Champa9_area Champa10_area }
+}
+
+Terra_Australis_region = { #12
+	areas = { Terra_Australis0_area Terra_Australis1_area Terra_Australis2_area Terra_Australis3_area Terra_Australis4_area Terra_Australis5_area Terra_Australis6_area Terra_Australis7_area Terra_Australis8_area Terra_Australis9_area Terra_Australis10_area Terra_Australis11_area }
+}
+
+Great_Plains_region = { #9
+	areas = { Great_Plains0_area Great_Plains1_area Great_Plains2_area Great_Plains3_area Great_Plains4_area Great_Plains5_area Great_Plains6_area Great_Plains7_area Great_Plains8_area }
+}
+
+Micronesia_region = { #3
+	areas = { Demactdia_area Nymelpetra_area Lebelauica_area }
+}
+
+Germania_region = { #38
+	areas = { Alsace_area Dioandissa_area Lampsajuktes_area Didymarmaus_area Cherscololi_area Monastigeletta_area Asslekhrea_area Korintdicaeaosse_area Odessaegllai_area Ephemonastpetra_area Cheropthera_area Lefkakerkmos_area Alinandrrias_area Antignymphum_area Cololinera_area Monoastnympdus_area Deljuate_area Heramnitherna_area Histrgorgilia_area Onchnystes_area Demetkameithrae_area Chalcherthos_area Artemkorpetra_area Nymphaigososse_area Metapkimmsos_area Ialyhagipolis_area Dimaaleida_area Lapgournene_area Morgankorrea_area Kerkidioinon_area Lilaimbon_area Gonapollera_area Gorgigothera_area Demcharea_area Millmethalia_area Cyknioli_area Millliosia_area Histelatios_area }
+}
+
+Sarmatia_region = { #31
+	areas = { Marmaaphiosia_area Laodolbimos_area Agrinimbtes_area Marmmetapodus_area Hagmonasita_area Knosdimdia_area Gortmiseissa_area Mukmoate_area Odeoenatrea_area Morgachytai_area Chacolcia_area Katmaroetta_area Kynmesthrae_area Kamargoonia_area Gorolynlea_area Gelmillllai_area Metakulia_area Milknidrea_area Mukcrotita_area Morganempium_area Lauorestalous_area Nympoentes_area Chalcactllai_area Hublmonastoas_area Lefkkydoinda_area Monasherida_area Megalolampyra_area Monatgytder_area Naxkyrae_area Gortlefkaate_area Lilliloli_area }
+}
+
+Low_Lands_region = { #9
+	areas = { flanders_area Lemorganrias_area Calymetapmea_area Mantastera_area Gytgythiiana_area Monastephyrrias_area Nymphdypetra_area Lilkasissa_area Meslarisosia_area }
+}
+
+Carpathia_region = { #17
+	areas = { Decabmea_area Mantinmantinpetra_area Halicmethaium_area Immassaetta_area Chegangoas_area Nyhieratrias_area Artemkerkilia_area Dellebeder_area Arsleonene_area Eresneathena_area Apollmassnes_area Lilalilalia_area Marmlamthrae_area Hikamarai_area Laulapsos_area Askgortessa_area Larisdiosmos_area }
+}
+
+Arabia_region = { #6
+	areas = { Arabia0_area Arabia1_area Arabia2_area Arabia3_area Arabia4_area Arabia5_area }
+}
+
+Sogdiana_region = { #5
+	areas = { Sogdiana0_area Sogdiana1_area Sogdiana2_area Sogdiana3_area Sogdiana4_area }
+}
+
+East_Coast_region = { #5
+	areas = { East_Coast0_area East_Coast1_area East_Coast2_area East_Coast3_area East_Coast4_area }
+}
+
+Uralia_region = { #5
+	areas = { Uralia0_area Uralia1_area Uralia2_area Uralia3_area Uralia4_area }
+}
+
+Persia_region = { #8
+	areas = { Persia0_area Persia1_area Persia2_area Persia3_area Persia4_area Persia5_area Persia6_area Persia7_area }
+}
+
+Pontic_Steppe_region = { #7
+	areas = { Pontic_Steppe0_area Pontic_Steppe1_area Pontic_Steppe2_area Pontic_Steppe3_area Pontic_Steppe4_area Pontic_Steppe5_area Pontic_Steppe6_area }
+}
+
+Hudson_Bay_region = { #4
+	areas = { Hudson_Bay0_area Hudson_Bay1_area Hudson_Bay2_area Hudson_Bay3_area }
+}
+

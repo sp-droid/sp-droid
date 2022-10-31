@@ -1,0 +1,660 @@
+﻿	42={
+		terrain="drylands"
+		culture="primitiveculture"
+		religion="animist_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	48={
+		terrain="jungle"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="olive"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	49={
+		terrain="savanna"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	61={
+		terrain="savanna"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	84={
+		terrain="savanna"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="fur"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	88={
+		terrain="jungle"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	95={
+		terrain="hills"
+		culture="bedouin"
+		religion="sunni_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 3 } # Total-7
+		#
+		#
+		freemen={amount= 1 culture="bedouin" religion="ibadi_rel" }
+		freemen={amount= 1 culture="primitiveculture" religion="sunni_rel" }
+	}
+
+	134={
+		terrain="jungle"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="horses"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	140={
+		terrain="steppes"
+		culture="primitiveculture"
+		religion="oriental_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-4
+		#
+		#
+		freemen={amount= 2 culture="primitiveculture" religion="animist_rel" }
+		#
+	}
+
+	170={
+		terrain="savanna"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	183={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	198={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	238={
+		terrain="mountain"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="fur"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	246={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="elephants"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	273={
+		terrain="savanna"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	280={
+		terrain="savanna"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-8
+		#
+		#
+		#
+		#
+	}
+
+	313={
+		terrain="jungle"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	344={
+		terrain="jungle"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="base_metals"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 9 } # Total-9
+		#
+		#
+		#
+		#
+	}
+
+	419={
+		terrain="jungle"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 8 } # Total-8
+		#
+		#
+		#
+		#
+	}
+
+	482={
+		terrain="jungle"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	505={
+		terrain="jungle"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	559={
+		terrain="jungle"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 9 } # Total-9
+		#
+		port_building=1
+		#
+		#
+	}
+
+	647={
+		terrain="jungle"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	657={
+		terrain="marsh"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="base_metals"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	706={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	718={
+		terrain="mountain"
+		culture="primitiveculture"
+		religion="oriental_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 6 } # Total-10
+		#
+		#
+		freemen={amount= 2 culture="primitiveculture" religion="animist_rel" }
+		freemen={amount= 2 culture="primitiveculture" religion="sunni_rel" }
+	}
+
+	788={
+		terrain="mountain"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 4 } # Total-10
+		#
+		#
+		freemen={amount= 2 culture="egyptian" religion="ancentralism_rel" }
+		freemen={amount= 2 culture="primitiveculture" religion="oriental_rel" }
+	}
+
+	790={
+		terrain="steppes"
+		culture="primitiveculture"
+		religion="animist_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	799={
+		terrain="mountain"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 11 } # Total-11
+		#
+		#
+		#
+		#
+	}
+
+	824={
+		terrain="savanna"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	827={
+		terrain="mountain"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-10
+		#
+		#
+		freemen={amount= 4 culture="primitiveculture" religion="sunni_rel" }
+		freemen={amount= 2 culture="primitiveculture" religion="oriental_rel" }
+	}
+
+	845={
+		terrain="savanna"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="horses"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	863={
+		terrain="savanna"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	914={
+		terrain="steppes"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="leather"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	953={
+		terrain="savanna"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 10 } # Total-10
+		#
+		port_building=1
+		#
+		#
+	}
+
+	969={
+		terrain="savanna"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	998={
+		terrain="jungle"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="camel"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 9 } # Total-9
+		#
+		#
+		#
+		#
+	}
+
+	1167={
+		terrain="jungle"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1183={
+		terrain="steppes"
+		culture="primitiveculture"
+		religion="animist_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1193={
+		terrain="drylands"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-7
+		#
+		#
+		freemen={amount= 3 culture="primitiveculture" religion="sunni_rel" }
+		freemen={amount= 1 culture="bedouin" religion="sunni_rel" }
+	}
+
+	1249={
+		terrain="drylands"
+		culture="bedouin"
+		religion="ibadi_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-7
+		#
+		#
+		freemen={amount= 3 culture="bedouin" religion="sunni_rel" }
+		freemen={amount= 1 culture="primitiveculture" religion="sunni_rel" }
+	}
+
+	1251={
+		terrain="hills"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="marble"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1291={
+		terrain="mountain"
+		culture="primitiveculture"
+		religion="animist_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1335={
+		terrain="savanna"
+		culture="primitiveculture"
+		religion="ancentralism_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+

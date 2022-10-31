@@ -1,0 +1,1440 @@
+﻿	226={
+		terrain="plains"
+		culture="estonia"
+		religion="suomenusko_rel"
+		trade_goods="horses"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	309={
+		terrain="forest"
+		culture="latvia"
+		religion="romuva_rel"
+		trade_goods="dates"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	550={
+		terrain="plains"
+		culture="estonia"
+		religion="suomenusko_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	587={
+		terrain="plains"
+		culture="latvia"
+		religion="romuva_rel"
+		trade_goods="fur"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	770={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	773={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-4
+		#
+		#
+		freemen={amount= 1 culture="old_prus" religion="romuva_rel" }
+		#
+	}
+
+	847={
+		terrain="forest"
+		culture="old_prus"
+		religion="romuva_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	902={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="dates"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1200={
+		terrain="forest"
+		culture="latvia"
+		religion="romuva_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1317={
+		terrain="forest"
+		culture="latvia"
+		religion="romuva_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1322={
+		terrain="forest"
+		culture="latvia"
+		religion="romuva_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1357={
+		terrain="forest"
+		culture="estonia"
+		religion="suomenusko_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1374={
+		terrain="plains"
+		culture="estonia"
+		religion="suomenusko_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1417={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1419={
+		terrain="plains"
+		culture="old_prus"
+		religion="romuva_rel"
+		trade_goods="leather"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-3
+		#
+		#
+		freemen={amount= 1 culture="polish" religion="catholic_rel" }
+		freemen={amount= 1 culture="old_prus" religion="nordic_rel" }
+	}
+
+	1440={
+		terrain="plains"
+		culture="polish"
+		religion="catholic_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-4
+		#
+		#
+		freemen={amount= 1 culture="polish" religion="romuva_rel" }
+		#
+	}
+
+	1555={
+		terrain="plains"
+		culture="old_prus"
+		religion="nordic_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 4 } # Total-5
+		#
+		#
+		freemen={amount= 1 culture="polish" religion="romuva_rel" }
+		#
+	}
+
+	1604={
+		terrain="plains"
+		culture="estonia"
+		religion="suomenusko_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1605={
+		terrain="forest"
+		culture="danish"
+		religion="catholic_rel"
+		trade_goods="gems"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 9 } # Total-11
+		#
+		port_building=1
+		freemen={amount= 2 culture="pomeranian" religion="catholic_rel" }
+		#
+	}
+
+	1625={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	1634={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-2
+		#
+		#
+		freemen={amount= 1 culture="latvia" religion="romuva_rel" }
+		#
+	}
+
+	1711={
+		terrain="plains"
+		culture="old_prus"
+		religion="romuva_rel"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-4
+		#
+		#
+		freemen={amount= 1 culture="old_prus" religion="nordic_rel" }
+		#
+	}
+
+	1726={
+		terrain="forest"
+		culture="pomeranian"
+		religion="nordic_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	1739={
+		terrain="forest"
+		culture="old_prus"
+		religion="catholic_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 2 } # Total-5
+		#
+		#
+		freemen={amount= 2 culture="polish" religion="catholic_rel" }
+		freemen={amount= 1 culture="old_prus" religion="romuva_rel" }
+	}
+
+	1909={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="honey"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 3 } # Total-5
+		#
+		#
+		freemen={amount= 2 culture="old_prus" religion="romuva_rel" }
+		#
+	}
+
+	1932={
+		terrain="forest"
+		culture="lithu"
+		religion="slavic_rel"
+		trade_goods="dates"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 3 } # Total-5
+		#
+		#
+		freemen={amount= 2 culture="russian" religion="slavic_rel" }
+		#
+	}
+
+	1950={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	1963={
+		terrain="forest"
+		culture="estonia"
+		religion="suomenusko_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2020={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="honey"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-4
+		#
+		#
+		freemen={amount= 1 culture="lithu" religion="slavic_rel" }
+		#
+	}
+
+	2042={
+		terrain="plains"
+		culture="polish"
+		religion="catholic_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-3
+		#
+		#
+		freemen={amount= 1 culture="old_prus" religion="nordic_rel" }
+		freemen={amount= 1 culture="polish" religion="romuva_rel" }
+	}
+
+	2095={
+		terrain="forest"
+		culture="old_prus"
+		religion="romuva_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	2139={
+		terrain="forest"
+		culture="old_prus"
+		religion="romuva_rel"
+		trade_goods="marble"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	2155={
+		terrain="forest"
+		culture="latvia"
+		religion="romuva_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2266={
+		terrain="plains"
+		culture="old_prus"
+		religion="nordic_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-3
+		#
+		#
+		freemen={amount= 1 culture="polish" religion="catholic_rel" }
+		freemen={amount= 1 culture="pomeranian" religion="nordic_rel" }
+	}
+
+	2361={
+		terrain="forest"
+		culture="old_prus"
+		religion="romuva_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	2656={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2682={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 5 } # Total-5
+		#
+		#
+		#
+		#
+	}
+
+	2685={
+		terrain="plains"
+		culture="old_prus"
+		religion="romuva_rel"
+		trade_goods="horses"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	2714={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	2719={
+		terrain="forest"
+		culture="estonia"
+		religion="suomenusko_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2799={
+		terrain="forest"
+		culture="old_prus"
+		religion="romuva_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-4
+		#
+		#
+		freemen={amount= 1 culture="old_prus" religion="catholic_rel" }
+		#
+	}
+
+	2811={
+		terrain="plains"
+		culture="latvia"
+		religion="romuva_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2819={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	2888={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-3
+		#
+		#
+		#
+		#
+	}
+
+	2924={
+		terrain="plains"
+		culture="latvia"
+		religion="romuva_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2929={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2935={
+		terrain="forest"
+		culture="polish"
+		religion="catholic_rel"
+		trade_goods="honey"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-3
+		#
+		#
+		freemen={amount= 1 culture="pomeranian" religion="nordic_rel" }
+		freemen={amount= 1 culture="pomeranian" religion="catholic_rel" }
+	}
+
+	2943={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	2966={
+		terrain="plains"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="cloth"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	2987={
+		terrain="plains"
+		culture="polish"
+		religion="catholic_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-5
+		#
+		#
+		freemen={amount= 1 culture="old_prus" religion="catholic_rel" }
+		freemen={amount= 1 culture="old_prus" religion="romuva_rel" }
+	}
+
+	3022={
+		terrain="plains"
+		culture="estonia"
+		religion="suomenusko_rel"
+		trade_goods="fur"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 5 } # Total-5
+		#
+		port_building=1
+		#
+		#
+	}
+
+	3105={
+		terrain="forest"
+		culture="pomeranian"
+		religion="nordic_rel"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-5
+		#
+		#
+		freemen={amount= 2 culture="pomeranian" religion="catholic_rel" }
+		#
+	}
+
+	3147={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	3202={
+		terrain="forest"
+		culture="old_prus"
+		religion="romuva_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	3214={
+		terrain="plains"
+		culture="estonia"
+		religion="suomenusko_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3248={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3252={
+		terrain="forest"
+		culture="lithu"
+		religion="slavic_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-3
+		#
+		#
+		freemen={amount= 1 culture="lithu" religion="romuva_rel" }
+		freemen={amount= 1 culture="russian" religion="slavic_rel" }
+	}
+
+	3255={
+		terrain="forest"
+		culture="old_prus"
+		religion="catholic_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-3
+		#
+		#
+		freemen={amount= 1 culture="polish" religion="catholic_rel" }
+		freemen={amount= 1 culture="old_prus" religion="romuva_rel" }
+	}
+
+	3319={
+		terrain="forest"
+		culture="latvia"
+		religion="romuva_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3346={
+		terrain="forest"
+		culture="pomeranian"
+		religion="nordic_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-3
+		#
+		#
+		freemen={amount= 1 culture="old_prus" religion="nordic_rel" }
+		#
+	}
+
+	3349={
+		terrain="forest"
+		culture="old_prus"
+		religion="romuva_rel"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-3
+		#
+		#
+		#
+		#
+	}
+
+	3364={
+		terrain="plains"
+		culture="old_prus"
+		religion="nordic_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-2
+		#
+		#
+		freemen={amount= 1 culture="pomeranian" religion="nordic_rel" }
+		#
+	}
+
+	3389={
+		terrain="forest"
+		culture="old_prus"
+		religion="romuva_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 5 } # Total-5
+		#
+		port_building=1
+		#
+		#
+	}
+
+	3449={
+		terrain="forest"
+		culture="pomeranian"
+		religion="nordic_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	3489={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-3
+		#
+		#
+		#
+		#
+	}
+
+	3504={
+		terrain="marsh"
+		culture="estonia"
+		religion="romuva_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3611={
+		terrain="forest"
+		culture="estonia"
+		religion="romuva_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3623={
+		terrain="forest"
+		culture="estonia"
+		religion="romuva_rel"
+		trade_goods="hemp"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3664={
+		terrain="forest"
+		culture="old_prus"
+		religion="romuva_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-4
+		#
+		#
+		freemen={amount= 2 culture="lithu" religion="romuva_rel" }
+		#
+	}
+
+	3746={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-3
+		#
+		#
+		freemen={amount= 1 culture="latvia" religion="romuva_rel" }
+		#
+	}
+
+	3780={
+		terrain="plains"
+		culture="old_prus"
+		religion="nordic_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-4
+		#
+		#
+		freemen={amount= 1 culture="old_prus" religion="romuva_rel" }
+		#
+	}
+
+	3822={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-2
+		#
+		#
+		freemen={amount= 1 culture="lithu" religion="slavic_rel" }
+		#
+	}
+
+	3844={
+		terrain="forest"
+		culture="latvia"
+		religion="romuva_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	3941={
+		terrain="plains"
+		culture="pomeranian"
+		religion="nordic_rel"
+		trade_goods="fish"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-3
+		#
+		#
+		freemen={amount= 1 culture="old_prus" religion="nordic_rel" }
+		#
+	}
+
+	3966={
+		terrain="plains"
+		culture="estonia"
+		religion="suomenusko_rel"
+		trade_goods="dates"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4000={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-5
+		#
+		#
+		freemen={amount= 2 culture="lithu" religion="slavic_rel" }
+		#
+	}
+
+	4079={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-3
+		#
+		#
+		#
+		#
+	}
+
+	4106={
+		terrain="forest"
+		culture="estonia"
+		religion="romuva_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4107={
+		terrain="plains"
+		culture="old_prus"
+		religion="romuva_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	4118={
+		terrain="forest"
+		culture="estonia"
+		religion="romuva_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4235={
+		terrain="forest"
+		culture="latvia"
+		religion="romuva_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4284={
+		terrain="marsh"
+		culture="estonia"
+		religion="romuva_rel"
+		trade_goods="earthware"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4322={
+		terrain="forest"
+		culture="pomeranian"
+		religion="nordic_rel"
+		trade_goods="salt"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-3
+		#
+		#
+		#
+		#
+	}
+
+	4325={
+		terrain="forest"
+		culture="old_prus"
+		religion="romuva_rel"
+		trade_goods="vegetables"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-2
+		#
+		#
+		freemen={amount= 1 culture="lithu" religion="romuva_rel" }
+		#
+	}
+
+	4328={
+		terrain="plains"
+		culture="estonia"
+		religion="suomenusko_rel"
+		trade_goods="leather"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4397={
+		terrain="plains"
+		culture="estonia"
+		religion="orthodox_rel"
+		trade_goods="olive"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 1 } # Total-1
+		#
+		#
+		#
+		#
+	}
+
+	4419={
+		terrain="forest"
+		culture="old_prus"
+		religion="romuva_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	4440={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-3
+		#
+		#
+		#
+		#
+	}
+
+	4441={
+		terrain="plains"
+		culture="estonia"
+		religion="suomenusko_rel"
+		trade_goods="marble"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="city"
+		freemen={amount= 3 } # Total-3
+		#
+		port_building=1
+		#
+		#
+	}
+
+	4512={
+		terrain="plains"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-3
+		#
+		#
+		#
+		#
+	}
+
+	4659={
+		terrain="plains"
+		culture="old_prus"
+		religion="nordic_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 2 } # Total-2
+		#
+		#
+		#
+		#
+	}
+
+	4685={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="wine"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 3 } # Total-5
+		#
+		#
+		freemen={amount= 2 culture="latvia" religion="romuva_rel" }
+		#
+	}
+
+	4717={
+		terrain="forest"
+		culture="old_prus"
+		religion="romuva_rel"
+		trade_goods="wood"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 4 } # Total-4
+		#
+		#
+		#
+		#
+	}
+
+	4780={
+		terrain="plains"
+		culture="polish"
+		religion="catholic_rel"
+		trade_goods="grain"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-5
+		#
+		#
+		#
+		#
+	}
+
+	4790={
+		terrain="forest"
+		culture="lithu"
+		religion="romuva_rel"
+		trade_goods="cattle"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-5
+		#
+		#
+		#
+		#
+	}
+
+	4837={
+		terrain="forest"
+		culture="old_prus"
+		religion="romuva_rel"
+		trade_goods="honey"
+		civilization_value=0
+		barbarian_power=0
+		province_rank="settlement"
+		freemen={amount= 5 } # Total-5
+		#
+		#
+		#
+		#
+	}
+

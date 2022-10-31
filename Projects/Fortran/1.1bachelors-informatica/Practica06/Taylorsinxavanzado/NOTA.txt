@@ -1,0 +1,15 @@
+Antes de que corrija el programa, ha de saber un par de cosas acerca del funcionamiento del mismo:
+
+-Sé que pidió las versiones separadas pero como la versión simple era corta consideré que podía fusionarlos.
+
+-En la segunda funcionalidad del programa (poner algo distinto de v1 o V1 al principio), después de crear el archivo, le pedirá si quiere exportar los valores de una 
+ serie de puntos en el intervalo [-15,15], definidos con el desarrollo de n términos (n derivada del cálculo del punto con la tolerancia deseada), a un 
+ archivo exceldata.txt. La cantidad de puntos dependerá del intervalo entre ellos mismos, si es 15, serían -15,0,15
+
+NOTA: Los puntos no salen como enteros porque me era más fácil que no lo fueran, pero se podía haber hecho de esa manera. Es más, está un poco mal solo por el hecho de que 
+si definimos el intervalo entre puntos como 0.2, lo que no puede ser es que el segundo punto sea el -14.8000002 ~ -14.8 pero no igual a -14.8
+
+-Con el archivo exceldata.txt, que también contiene el valor real de la función seno en esos puntos, se puede alimentar una plantilla de excel que visualiza aproximadamente
+ la diferencia entre la función real y la del desarrollo. 
+
+Todo esto lo hice para mi y acabó en el programa, si quiere lo quito.

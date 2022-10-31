@@ -1,0 +1,9 @@
+Until i have universal indicators all of these measures are conservative to ph=7.
+
+6.25L Home hard tap water with 1.5mL ph2.3, 8º acidity vinegar --> Around pH7
+2L pH7 water + 1.0mL 8º acidity vinegar --> pH4, 0.004º acidity vinegar
+
+Soil solutions:
+6.25L pH7 water + 2 drops 8º acidity vinegar --> 6.25L ph4.93
+6.25L pH7 water + 10mL 0.004º acidity vinegar --> 6.25L ph5.99
+6.25L pH7 water + 3mL 0.004º acidity vinegar --> 6.25L ph6.47
