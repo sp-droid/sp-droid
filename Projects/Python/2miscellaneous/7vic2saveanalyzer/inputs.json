@@ -1,0 +1,15 @@
+{
+	"factoryLevel": 1,
+	"infrastructureLvL": 0,
+	"statePops": 533450,
+	"inputEfficiency": 0,
+	"outputEfficiency": 0,
+	"throughput": 0,
+	"localThroughput": 0,
+	"factoryRGObonus": 0,
+	"maintenanceGoods": 100,
+	"employment": 100,
+	"Ncraftsmen": 10000,
+	"Nclerks": 0,
+	"Ncapitalists": 0
+}

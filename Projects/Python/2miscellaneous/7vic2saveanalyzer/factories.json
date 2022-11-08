@@ -1,0 +1,385 @@
+{
+	"steel_factory": {
+		"baseInput": {
+			"iron": 20,
+			"coal": 5
+		},
+		"baseOutput": {
+			"steel": 20
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	},
+	"aeroplane_factory": {
+		"baseInput": {
+			"machine_parts": 1.11,
+			"electric_gear": 2,
+			"rubber": 1,
+			"lumber": 3.3
+		},
+		"baseOutput": {
+			"aeroplanes": 0.91
+		},
+		"maintenance": {
+			"cement": 0.5
+		}
+	},
+	"barrel_factory": {
+		"baseInput": {
+			"automobiles": 0.3,
+			"machine_parts": 0.85,
+			"electric_gear": 1,
+			"rubber": 1
+		},
+		"baseOutput": {
+			"barrels": 1
+		},
+		"maintenance": {
+			"cement": 0.5
+		}
+	},
+	"automobile_factory": {
+		"baseInput": {
+			"machine_parts": 1.05,
+			"electric_gear": 1.5,
+			"rubber": 1,
+			"steel": 2.25
+		},
+		"baseOutput": {
+			"automobiles": 1.43
+		},
+		"maintenance": {
+			"cement": 0.5
+		}
+	},
+	"radio_factory": {
+		"baseInput": {
+			"glass": 10,
+			"electric_gear": 3
+		},
+		"baseOutput": {
+			"radio": 6.5
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	},
+	"telephone_factory": {
+		"baseInput": {
+			"glass": 15,
+			"electric_gear": 2.5
+		},
+		"baseOutput": {
+			"telephones": 6.5
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	},
+	"electric_gear_factory": {
+		"baseInput": {
+			"rubber": 4,
+			"coal": 5,
+			"iron": 5
+		},
+		"baseOutput": {
+			"electric_gear": 5
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	},
+	"machine_parts_factory": {
+		"baseInput": {
+			"steel": 9,
+			"coal": 5
+		},
+		"baseOutput": {
+			"machine_parts": 2
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	},
+	"synthetic_oil_factory": {
+		"baseInput": {
+			"coal": 12
+		},
+		"baseOutput": {
+			"oil": 2.5
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	},
+	"fuel_refinery": {
+		"baseInput": {
+			"oil": 2.5
+		},
+		"baseOutput": {
+			"fuel": 2
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	},
+	"steamer_shipyard": {
+		"baseInput": {
+			"steel": 22,
+			"coal": 30
+		},
+		"baseOutput": {
+			"steamer_convoy": 3
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	},
+	"luxury_clothes_factory": {
+		"baseInput": {
+			"regular_clothes": 0.9,
+			"silk": 3.9
+		},
+		"baseOutput": {
+			"luxury_clothes": 1
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	},
+	"luxury_furniture_factory": {
+		"baseInput": {
+			"furniture": 2,
+			"tropical_wood": 7.5
+		},
+		"baseOutput": {
+			"luxury_furniture": 1.1
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	},
+	"artillery_factory": {
+		"baseInput": {
+			"explosives": 1,
+			"steel": 8
+		},
+		"baseOutput": {
+			"artillery": 1.3
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	},
+	"clipper_shipyard": {
+		"baseInput": {
+			"fabric": 100,
+			"timber": 100,
+			"steel": 30
+		},
+		"baseOutput": {
+			"clipper_convoy": 10
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	},
+	"small_arms_factory": {
+		"baseInput": {
+			"ammunition": 2,
+			"steel": 3
+		},
+		"baseOutput": {
+			"small_arms": 2
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	},
+	"furniture_factory": {
+		"baseInput": {
+			"lumber": 20,
+			"timber": 20
+		},
+		"baseOutput": {
+			"furniture": 12
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	},
+	"paper_mill": {
+		"baseInput": {
+			"timber": 50
+		},
+		"baseOutput": {
+			"paper": 15
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	},
+	"regular_clothes_factory": {
+		"baseInput": {
+			"fabric": 40
+		},
+		"baseOutput": {
+			"regular_clothes": 15
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	},
+	"explosives_factory": {
+		"baseInput": {
+			"fertilizer": 3,
+			"ammunition": 0.8
+		},
+		"baseOutput": {
+			"explosives": 3
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	},
+	"ammunition_factory": {
+		"baseInput": {
+			"sulphur": 2,
+			"iron": 4
+		},
+		"baseOutput": {
+			"ammunition": 2
+		},
+		"maintenance": {
+			"cement": 0.25
+		}
+	},
+	"canned_food_factory": {
+		"baseInput": {
+			"iron": 0.5,
+			"cattle": 4,
+			"grain": 4,
+			"fish": 4
+		},
+		"baseOutput": {
+			"canned_food": 2
+		},
+		"maintenance": {
+			"cement": 0.25
+		}
+	},
+	"dye_factory": {
+		"baseInput": {
+			"coal": 9
+		},
+		"baseOutput": {
+			"dye": 2.5
+		},
+		"maintenance": {
+			"cement": 0.25
+		}
+	},
+	"liquor_distillery": {
+		"baseInput": {
+			"grain": 5,
+			"glass": 4
+		},
+		"baseOutput": {
+			"liquor": 5
+		},
+		"maintenance": {
+			"cement": 0.25
+		}
+	},
+	"winery": {
+		"baseInput": {
+			"fruit": 5,
+			"glass": 5
+		},
+		"baseOutput": {
+			"wine": 3.5
+		},
+		"maintenance": {
+			"cement": 0.25
+		}
+	},
+	"lumber_mill": {
+		"baseInput": {
+			"timber": 100
+		},
+		"baseOutput": {
+			"lumber": 110
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	},
+	"fabric_factory": {
+		"baseInput": {
+			"cotton": 18,
+			"dye": 2
+		},
+		"baseOutput": {
+			"fabric": 45
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	},
+	"cement_factory": {
+		"baseInput": {
+			"coal": 12
+		},
+		"baseOutput": {
+			"cement": 3
+		},
+		"maintenance": {
+			"iron": 2.3,
+			"machine_parts": 0.05
+		}
+	},
+	"glass_factory": {
+		"baseInput": {
+			"coal": 14
+		},
+		"baseOutput": {
+			"glass": 18
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	},
+	"fertilizer_factory": {
+		"baseInput": {
+			"sulphur": 6
+		},
+		"baseOutput": {
+			"fertilizer": 5
+		},
+		"maintenance": {
+			"cement": 0.5,
+			"machine_parts": 0.05
+		}
+	}
+}
