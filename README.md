@@ -20,7 +20,6 @@
 
 ### 📚 &nbsp;To fully learn next
 
-![Rust](https://img.shields.io/badge/Rust-000?logo=rust&logoColor=fff&style=for-the-badge)&nbsp;
 ![Nim](https://img.shields.io/badge/Nim-FFE953?logo=nim&logoColor=000&style=for-the-badge)&nbsp;
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge)&nbsp;
 
