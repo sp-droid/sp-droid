@@ -25,6 +25,7 @@
 
 ### ⚡ &nbsp;Frameworks
 ![Keras](https://img.shields.io/badge/Keras-D00000?logo=keras&logoColor=fff&style=for-the-badge)&nbsp;
+![RevealJS](https://img.shields.io/badge/reveal.js-F2E142?logo=revealdotjs&logoColor=000&style=flat)&nbsp;
 
 ### 🎨 &nbsp;Tools
 
