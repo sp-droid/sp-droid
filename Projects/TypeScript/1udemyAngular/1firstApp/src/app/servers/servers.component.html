@@ -1,2 +1,55 @@
-<app-server></app-server>
-<app-server></app-server>
+<label>Server name</label>
+<!-- <input 
+    type="text" 
+    class="form-control"
+    (input)="onUpdateServerName($event)"> -->
+<input 
+    type="text" 
+    class="form-control"
+    [(ngModel)]="serverName"> 
+<!-- FormsModule has to be imported for this (two-way binding) to work -->
+<p>{{serverName}}</p>
+<button 
+    class="btn btn-primary"
+    [disabled]="!allowNewServer"
+    (click)="onCreateServer()">
+Add server
+</button>
+<!-- <p>{{serverCreationStatus}}</p> -->
+<p *ngIf="serverCreated; else noServer">Server was created, server name is {{serverName}}</p>
+<ng-template #noServer>
+    <p>No server was created!</p>
+</ng-template>
+<app-server *ngFor="let server of servers"></app-server>
+
+<hr>
+<h3>Assignment 2:</h3>
+<input 
+    type="text" 
+    class="form-control"
+    [(ngModel)]="username">
+<p>{{username}}</p>
+<button 
+    class="btn btn-primary"
+    [disabled]="checkUsername()"
+    (click)="onResetUsername()">
+    <!-- Alternative
+    [disabled]="username === ''" 
+    (click)="username = ''">-->
+Reset username
+</button>
+<hr>
+
+<hr>
+<h3>Assignment 3:</h3>
+<button 
+    class="btn btn-primary"
+    (click)="onDisplayPassword()">
+Display details
+</button>
+<p *ngIf="passwordDisplayed">Secret password = tuna</p>
+<p 
+    *ngFor="let log of logs; index as i"
+    [ngStyle]="{backgroundColor: i > 3 ? 'blue': 'default'}"
+    [ngClass]="{greaterThan5: i > 3}">Element {{i+1}}: {{log}}</p>
+<hr>
