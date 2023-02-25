@@ -21,7 +21,7 @@
 
 ### ⚙️ &nbsp;Engines
 
-![Blender](https://img.shields.io/badge/Blender-F5792A?logo=blender&logoColor=fff&style=for-the-badge)&nbsp;
+![Blender (learning)](https://img.shields.io/badge/Blender-F5792A?logo=blender&logoColor=fff&style=for-the-badge)&nbsp;
 
 ### ⚡ &nbsp;Frameworks
 ![Keras](https://img.shields.io/badge/Keras-D00000?logo=keras&logoColor=fff&style=for-the-badge)&nbsp;
@@ -35,7 +35,7 @@
 ![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff&style=for-the-badge)&nbsp;
 ![Markdown](https://img.shields.io/badge/Markdown-000?logo=markdown&logoColor=fff&style=for-the-badge)&nbsp;
 ![Gimp](https://img.shields.io/badge/GIMP-5C5543?logo=gimp&logoColor=fff&style=for-the-badge)&nbsp;
-![Blender](https://img.shields.io/badge/Blender-F5792A?logo=blender&logoColor=fff&style=for-the-badge)&nbsp;
+![Unity (learning)](https://img.shields.io/badge/Unity-FFF?logo=unity&logoColor=000&style=for-the-badge)&nbsp;
 ![MSOffice](https://img.shields.io/badge/Microsoft%20Office-D83B01?logo=microsoftoffice&logoColor=fff&style=for-the-badge)&nbsp;
 
 ## Github Stats
