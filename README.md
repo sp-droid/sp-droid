@@ -15,17 +15,18 @@
 
 ![Fortran](https://img.shields.io/badge/Fortran-734F96?logo=fortran&logoColor=fff&style=for-the-badge)&nbsp;
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge)&nbsp;
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=for-the-badge)&nbsp;
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)&nbsp;
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=fff&style=for-the-badge)&nbsp;
 
-### 📚 &nbsp;To fully learn next
+### ⚙️ &nbsp;Engines
 
-![Nim](https://img.shields.io/badge/Nim-FFE953?logo=nim&logoColor=000&style=for-the-badge)&nbsp;
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge)&nbsp;
+![Blender](https://img.shields.io/badge/Blender-F5792A?logo=blender&logoColor=fff&style=for-the-badge)&nbsp;
 
 ### ⚡ &nbsp;Frameworks
 ![Keras](https://img.shields.io/badge/Keras-D00000?logo=keras&logoColor=fff&style=for-the-badge)&nbsp;
 ![RevealJS](https://img.shields.io/badge/reveal.js-F2E142?logo=revealdotjs&logoColor=000&style=for-the-badge)&nbsp;
+![Angular](https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=fff&style=for-the-badge)&nbsp;
 
 ### 🎨 &nbsp;Tools
 
