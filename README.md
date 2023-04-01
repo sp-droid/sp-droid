@@ -21,10 +21,12 @@
 ### ⚙️ &nbsp;Engines
 
 ![Blender](https://img.shields.io/badge/Blender-F5792A?logo=blender&logoColor=fff&style=for-the-badge)&nbsp;
+![UE5](https://img.shields.io/badge/Unreal%20Engine-0E1128?logo=unrealengine&logoColor=fff&style=for-the-badge)&nbsp;
 
 ### ⚡ &nbsp;Frameworks
 ![Keras](https://img.shields.io/badge/Keras-D00000?logo=keras&logoColor=fff&style=for-the-badge)&nbsp;
 ![RevealJS](https://img.shields.io/badge/reveal.js-F2E142?logo=revealdotjs&logoColor=000&style=for-the-badge)&nbsp;
+![Electron](https://img.shields.io/badge/Electron-47848F?logo=electron&logoColor=fff&style=for-the-badge)&nbsp;
 
 ### 🎨 &nbsp;Tools
 
@@ -38,8 +40,6 @@
 ### 📚 &nbsp;Currently learning
 
 ![Angular](https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=fff&style=for-the-badge)&nbsp;
-![Electron](https://img.shields.io/badge/Electron-47848F?logo=electron&logoColor=fff&style=for-the-badge)&nbsp;
-![UE5](https://img.shields.io/badge/Unreal%20Engine-0E1128?logo=unrealengine&logoColor=fff&style=for-the-badge)&nbsp;
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=for-the-badge)&nbsp;
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=for-the-badge)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=for-the-badge)
