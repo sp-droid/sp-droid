@@ -6,7 +6,7 @@ https://github.com/sp-droid/myrepo/raw/main/Projects/Python/3imperatorrelated/9f
 - Program folder
 - main.ipynb notebook with the code, fine tuned for ck3
 - **To open and run the notebook it's recommended to have either JupyterLab, Visual Studio Code or any code editor that can run notebooks**
-- Be sure you have the following libraries installed for it to work, aside from **Python3: numpy, PIL, tqdm and joblib**
+- Be sure you have the following libraries installed for it to work, aside from **Python3: numpy, pillow, tqdm and joblib**
 - An example of input, ck3's heightmap, downscaled by a factor of 4, white (255,255,255) under sea level, black (0,0,0) above + gaussian blur with radius=1, although the last thing is not necessary at all.
 ![normal_input2](https://user-images.githubusercontent.com/52839915/175094023-2860834a-66a6-487c-8b12-456b15b10aa1.png)
 - Rivers can be done automatically too but I didn't need it for now, if u implement it be sure to open an issue/throw a pull request! (rivers near the coast will flow towards it properly tho)
