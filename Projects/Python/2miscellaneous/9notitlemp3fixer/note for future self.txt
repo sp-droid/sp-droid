@@ -1,0 +1,4 @@
+Place the songs in the "tracks" folder
+Make sure every song has this format "AUTHOR - YEAR - TITLE"
+run the main.py
+Songs have new metadata
