@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!-- Icons from https://fontawesome.com/v4/icons/ -->
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Cheatsheet Concept</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bulma Version 0.9.0-->
+    <link rel='stylesheet' href='https://unpkg.com/bulma@0.9.0/css/bulma.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/css/OverlayScrollbars.min.css'>	  
+    <link rel='stylesheet' href="../css/prism.css">
+    <link rel="stylesheet" href="../css/cheatsheet.css">
+    <script src="https://kit.fontawesome.com/7dc3015a44.js" crossorigin="anonymous"></script>
+    <script defer src="pynterface.js"></script>
+  </head>
+  <body>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="columns">
+            <div class="column is-12">
+                <div class="container content">
+                    <h1 class="title">valiLib<em>UI</em></h1>
+                    <h3 class="subtitle">
+                        Validation library graphic interface
+                    </h3>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-3">
+                    <aside class="is-medium menu">
+                        <p class="menu-label">
+                            steps
+                        </p>
+                        <ul class="menu-list">
+                            <li class="is-right" onclick="enableConfigPage()"><a class="is-active"><i class="fa fa-cog"></i> Configuration Setup</a></li>
+                            <li onclick="enableExecutePage()"><a class="is-active"><i class="fa fa-spinner"></i> Execution</a></li>
+                            <li onclick="enableResultsPage()"><a class="is-active"><i class="fa fa-check-circle-o"></i> Results</a></li>
+                        </ul>
+                        <p class="menu-label">
+                            Output folder files
+                        </p>
+                        <ul class="menu-list">
+                            <li><span class="tag is-white is-medium"><a href="C:/Users/a1pab/Desktop/Airbus/UPM-A/example/output/s18-mspSMALL--smalltest--basic_stats.html">s18-mspSMALL--smalltest--basic_stats</a></span></li>
+                            <li><span class="tag is-white is-medium"><a href="C:/Users/a1pab/Desktop/Airbus/UPM-A/example/output/s18-mspSMALL--smalltest--run_model.html">s18-mspSMALL--smalltest--run_model</a></span></li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="column is-9">
+                    <div class="content is-medium" id="configPage">
+                        <h3 class="title is-3">Configuration Setup</h3>
+                        <div class="box">
+                            <h4 class="title is-5">JSON configuration file</h4>
+                            <article class="message is-primary">
+                                <span class="icon has-text-primary">
+                                    <i class="fa fa-info-circle"></i>
+                                </span>
+                                <div class="message-body">
+                                    It's possible to create a new file in a determined location or select an existing one
+                                </div>
+                            </article>
+                            <div class="containerStyle" id="jsonPathDiv">
+                                <div style="width:80%; flex-grow: 1;">
+                                    <input type="text" class="input is-link is-small" placeholder="Path to JSON file" id="configPathText" style="width:60%;">
+                                    <button class="button is-link is-light is-small" id="configPathButton" style="width:56px;">Browse</button>
+                                </div>
+                                <div>
+                                    <button 
+                                        class="button is-primary is-small" 
+                                        id="configLoadButton" 
+                                        disabled
+                                        title="Locate a valid .json file"
+                                        style="width:56px;">Load</button>
+                                    <button 
+                                        class="button is-primary is-small" 
+                                        id="configCreateButton"
+                                        disabled 
+                                        title="Set up a desired path (with extension .json)"
+                                        style="width:56px;">Create</button>
+                                </div>
+                            </div>
+                            <hr>
+                            <div>
+                                <div class="select is-info is-rounded is-small">
+                                    <select id="jsonDisplayFont">
+                                        <option value="10">10px fontsize</option>
+                                        <option value="12"selected>12px fontsize</option>
+                                        <option value="14">14px fontsize</option>
+                                        <option value="16">16px fontsize</option>
+                                        <option value="20">20px fontsize</option>
+                                    </select>
+                                </div>
+                                <pre id="jsonDisplay"></pre>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="content is-medium" id="executePage" style="display: none;">
+                        <h3 class="title is-3">Running the program</h3>
+                        <div class="box">
+                            <h4 class="title is-5">Terminal output</h4>
+                            <div class="field">
+                                <div class="control is-loading">
+                                <textarea 
+                                    class="textarea is-info is-small" 
+                                    rows="16" 
+                                    placeholder="Console output" 
+                                    id="consoleDisplay"
+                                    readonly></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content is-medium" id="resultsPage" style="display: none;">
+                        <h3 class="title is-3">Results</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<footer class="footer">
+    <div class="columns is-mobile is-centered">
+        <div class="field is-grouped is-grouped-multiline">
+            <div class="control">
+                <i class="fa fa-moon fa-lg"></i>
+            </div>
+            <div class="control">
+                <i class="fa fa-moon-o fa-lg"></i>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="columns is-mobile is-centered">
+        <div class="field is-grouped is-grouped-multiline">
+            <div class="control">
+                <div class="tags has-addons"><a class="tag is-link" href="Link">Internal Github</a>
+                    <span class="tag is-info">License?</span>
+                </div>
+            </div>
+            <div class="control">
+                <div class="tags has-addons">
+                    <span class="tag is-dark">Based on a codepen</span>
+                    <span class="tag has-addons is-warning"><a href="https://codepen.io/melanieseltzer/pen/odOXWM"><i class="fa fa-codepen fa-lg"></i></a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/js/OverlayScrollbars.min.js'></script>  
+    
+<script>
+  window.addEventListener('resize', () => {
+  const divs = document.querySelectorAll(".menu-list");
+  if (window.innerWidth < 768){
+    divs.forEach(div => div.classList.add("tags"));
+  }
+  else {
+    divs.forEach(div => div.classList.remove("tags"));
+  }
+});
+  
+  document.addEventListener("DOMContentLoaded", function() {
+	//The first argument are the elements to which the plugin shall be initialized
+	//The second argument has to be at least a empty object or a object with your desired options
+	OverlayScrollbars(document.querySelectorAll("body"), { });
+});
+  
+</script>  
+</body>
+</html>
