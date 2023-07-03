@@ -30,11 +30,11 @@ language: spanish
 
 ## Preparación
 
-1. Poner entre 1.2 y 1.5 L [agua] en un caldero con un poco de [sal] y el [pollo].
+1. Poner 1 L [agua] en un caldero con un poco de [sal] (no dejarlo para el final) y el [pollo]. 
 
 2. Añadir [cebolla] [tomate] cortados a la mitad, [zanahorias] sin piel, [pimiento] en tiras y [ajos] pelados.
 
-3. Una vez empiece a hervir, bajar el fuego a medio, añadir 1 tsp. [pimentón], 2 tbsp [aceite] y contar 45 minutos.
+3. Una vez empiece a hervir, bajar el fuego a medio, añadir 1 tsp. [pimentón], 2 tbsp [aceite] y contar 45 minutos. Importante cubrir
 
 4. Bajar el fuego un poco y cortamos [zanahorias] en rodajas gordas, [pollo] en trozos más pequeños y sacamos [cebolla] [tomate]. Pelar [tomate], escachar ambos y devolver [tomate] y sólo el jugo [cebolla]. Añadir [sal] al gusto.
 
