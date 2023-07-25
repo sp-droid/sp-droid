@@ -1,13 +1,33 @@
-import pydirectinput as pyd
-import pyautogui as pya
-import pyperclip
+import json
 import time
+from pathlib import Path
+
+import pyperclip
+import pyautogui as pya
+import pydirectinput as pyd
 
 pyd.PAUSE = 0.000
 pya.PAUSE = 0.000
 interval = 0.02
 
-time.sleep(1)
+jsonPath = Path(__file__).parent.resolve() / 'accountDetails.json'
+
+# One time detail input
+if Path(jsonPath).exists():
+    with open(jsonPath, mode='r') as file:
+        details = json.load(file)
+else:
+    print('(One time only) please input your account id and password to access ESA Public')
+    details = {}
+    details['id'] = input('Account id:\n')
+    details['password'] = input('Account password:\n')
+
+    if details['id'] == '' or details['password'] == '': raise ValueError("Fields can't be empty")
+
+    with open(jsonPath, mode='w') as file:
+        json.dump(details, file, indent=2)
+        print(f'File saved to: {jsonPath}')
+    print('If you want to change them, edit the new accountDetails.json file or delete it and restart')
 
 # Open browser
 pya.hotkey('super')
@@ -28,18 +48,23 @@ time.sleep(0.1)
 pya.hotkey('ctrl', 'v')
 time.sleep(0.1)
 pya.hotkey('enter')
-time.sleep(6)
+
+condition = True
+while condition:
+    time.sleep(0.5)
+    _, _, b = pya.pixel(155, 185)
+    if b > 110 and b < 220: condition = False
 
 # Enter credentials
 pyd.click(836, 367)
 time.sleep(0.1)
-pyperclip.copy('6n611cdp')
+pyperclip.copy(details['id'])
 time.sleep(0.1)
 pya.hotkey('ctrl', 'v')
 time.sleep(0.1)
 pyd.click(845, 449)
 time.sleep(0.1)
-pyperclip.copy('33vm5uq2')
+pyperclip.copy(details['password'])
 time.sleep(0.1)
 pya.hotkey('ctrl', 'v')
 time.sleep(0.1)
