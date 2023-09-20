@@ -39,7 +39,11 @@ time.sleep(0.5)
 pya.hotkey('enter')
 time.sleep(2)
 pya.hotkey('super','up')
-time.sleep(1)
+time.sleep(0.3)
+pya.hotkey('super','up')
+time.sleep(0.3)
+pya.hotkey('super','up')
+time.sleep(0.3)
 
 # Enter logging address
 pyd.click(222, 65)
@@ -49,11 +53,12 @@ pya.hotkey('ctrl', 'v')
 time.sleep(0.1)
 pya.hotkey('enter')
 
+time.sleep(2)
 condition = True
 while condition:
     time.sleep(0.5)
-    _, _, b = pya.pixel(155, 185)
-    if b > 110 and b < 220: condition = False
+    r, g, b = pya.pixel(155, 185)
+    if b > 110 and b < 200 and g > 40 and g < 130 and r > 20 and r < 80: condition = False
 
 # Enter credentials
 pyd.click(836, 367)
