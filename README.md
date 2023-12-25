@@ -38,10 +38,10 @@
 ![Gimp](https://img.shields.io/badge/GIMP-5C5543?logo=gimp&logoColor=fff&style=for-the-badge)&nbsp;
 ![MSOffice](https://img.shields.io/badge/Microsoft%20Office-D83B01?logo=microsoftoffice&logoColor=fff&style=for-the-badge)&nbsp;
 
-### 📚 &nbsp;Currently learning
+[//]: # (### 📚 &nbsp;Currently learning)
 
-![Angular](https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=fff&style=for-the-badge)&nbsp;
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=for-the-badge)&nbsp;
+[//]: # (![Angular](https://img.shields.io/badge/Angular-DD0031?logo=angular&logoColor=fff&style=for-the-badge)&nbsp;)
+[//]: # (![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=for-the-badge)&nbsp;)
 
 ## Github Stats
 
