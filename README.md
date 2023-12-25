@@ -1,9 +1,6 @@
 [//]: # (https://codepen.io/RedSparr0w/full/PxgPdG This page is awesome to make badges like the matlabicon.svg I uploaded)
 [//]: # (https://dev.to/envoy_/150-badges-for-github-pnk This one has a lot of them)
 [//]: # (https://badges.pages.dev/?q=python This one too)
-## Hello fellows
-
-<a href="https://github.com/DenverCoder1/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com?&font=IBM+Plex+Sans&color=abcdef&size=20&lines=Welcome+to+my+GitHub+Profile!;I'm+an+Aerospace+engineer;I+work+in+ML+validation+techniques;I+love+modding" /></a>
 
 ## Contact
 <a href="https://www.linkedin.com/in/pablo-arbelo-cabrera-051a951a2/" target="_blank">
