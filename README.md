@@ -44,7 +44,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=for-the-badge)&nbsp;
 
 ## Github Stats
-<img height=200 align="center" src="https://github-readme-stats-sp-droid.vercel.app/api?username=sp-droid&hide_title=true&hide_border=true&rank_icon=percentile&show_icons=true&include_all_commits=true&count_private=true&line_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" /><!-- wi*quL3fcV -->
+<img height=200 align="center" src="https://github-readme-stats-sp-droid.vercel.app/api?username=sp-droid&hide_title=true&hide_border=true&rank_icon=github&show_icons=true&include_all_commits=true&count_private=true&line_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" /><!-- wi*quL3fcV -->
 <img height=200 align="center" src="https://github-readme-stats-sp-droid.vercel.app/api/top-langs/?username=sp-droid&hide_title=true&hide_border=true&layout=donut&hide=jupyter%20notebook,ShaderLab,HLSL,SCSS,GLSL,HTML,c%2B%2B,Makefile,Batchfile,Markdown&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" />
 
 
