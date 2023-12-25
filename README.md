@@ -44,12 +44,9 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=for-the-badge)&nbsp;
 
 ## Github Stats
-<a>
-    <img align="center" src="https://github-readme-stats-sp-droid.vercel.app/api?username=sp-droid&hide_title=true&hide_border=true&rank_icon=percentile&include_all_commits=true&show_icons=true&include_all_commits=true&count_private=true&line_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" />
-</a>
-<a>
-    <img align="center" src="https://github-readme-stats-sp-droid.vercel.app/api/top-langs/?username=sp-droid&hide_title=true&hide_border=true&layout=donut&hide=jupyter%20notebook,ShaderLab,HLSL,SCSS,GLSL,HTML,c%2B%2B,Makefile,Batchfile,Markdown&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" />
-</a>
+
+<img align="center" src="https://github-readme-stats-sp-droid.vercel.app/api?username=sp-droid&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&count_private=true&line_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" />
+<img align="center" src="https://github-readme-stats-sp-droid.vercel.app/api/top-langs/?username=sp-droid&hide_title=true&hide_border=true&layout=donut&hide=jupyter%20notebook,ShaderLab,HLSL,SCSS,GLSL,HTML,c%2B%2B,Makefile,Batchfile,Markdown&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" />
 
 
 ![](https://raw.githubusercontent.com/sp-droid/github-stats/master/generated/overview.svg#gh-dark-mode-only)
