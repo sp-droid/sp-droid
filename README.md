@@ -45,7 +45,7 @@
 
 ## Github Stats
 <img height="137px" src="https://github-readme-stats-sp-droid.vercel.app/api?username=sp-droid&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&count_private=true&line_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" /><!-- wi*quL3fcV -->
-<img height="137px" src="https://github-readme-stats-sp-droid.vercel.app/api/top-langs/?username=sp-droid&hide=jupyter%20notebook,ShaderLab,HLSL,SCSS,GLSL,HTML,c%2B%2B,Makefile,Batchfile,Markdown&hide_title=false&hide_border=true&layout=compact&langs_count=6&exclude_repo=comp426,Redventures-Movie-Quotes&text_color=000&icon_color=fff&bg_color=0,52fa5a,4dfcff,c64dff&theme=graywhite" />
+<img height="137px" src="https://github-readme-stats-sp-droid.vercel.app/api/top-langs/?username=sp-droid&layout=donut&hide=jupyter%20notebook,ShaderLab,HLSL,SCSS,GLSL,HTML,c%2B%2B,Makefile,Batchfile,Markdown&hide_title=false&hide_border=true&layout=compact&langs_count=6&exclude_repo=comp426,Redventures-Movie-Quotes&text_color=000&icon_color=fff&bg_color=0,52fa5a,4dfcff,c64dff&theme=graywhite" />
 
 
 ![](https://raw.githubusercontent.com/sp-droid/github-stats/master/generated/overview.svg#gh-dark-mode-only)
