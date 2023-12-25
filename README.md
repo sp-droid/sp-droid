@@ -5,6 +5,12 @@
 
 <a href="https://github.com/DenverCoder1/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com?&font=IBM+Plex+Sans&color=abcdef&size=20&lines=Welcome+to+my+GitHub+Profile!;I'm+an+Aerospace+engineer;I+work+in+ML+validation+techniques;I+love+modding" /></a>
 
+## Contact
+<a href="https://www.linkedin.com/in/pablo-arbelo-cabrera-051a951a2/" target="_blank">
+    <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+<a href="https://stackoverflow.com/users/13675395/michael-bay" target="_blank">
+    <img alt="Stack Overflow" src="https://img.shields.io/badge/Stack_Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white"></a> 
+
 ## Skills
 ### 📝 &nbsp;Professional Proficiency in
 
@@ -47,9 +53,3 @@
 
 ![](https://raw.githubusercontent.com/sp-droid/github-stats/master/generated/overview.svg#gh-dark-mode-only)
 ![](https://raw.githubusercontent.com/sp-droid/github-stats/master/generated/overview.svg#gh-light-mode-only)
-
-## Contact
-<a href="https://www.linkedin.com/in/pablo-arbelo-cabrera-051a951a2/" target="_blank">
-    <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
-<a href="https://stackoverflow.com/users/13675395/michael-bay" target="_blank">
-    <img alt="Stack Overflow" src="https://img.shields.io/badge/Stack_Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white"></a> 
