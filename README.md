@@ -2,6 +2,8 @@
 [//]: # (https://dev.to/envoy_/150-badges-for-github-pnk This one has a lot of them)
 [//]: # (https://badges.pages.dev/?q=python This one too)
 
+[Personal website](https://sp-droid.github.io/showtime)
+
 ## Contact
 <a href="https://www.linkedin.com/in/pablo-arbelo-cabrera-051a951a2/" target="_blank">
     <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
