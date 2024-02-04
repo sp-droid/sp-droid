@@ -2,7 +2,7 @@
 [//]: # (https://dev.to/envoy_/150-badges-for-github-pnk This one has a lot of them)
 [//]: # (https://badges.pages.dev/?q=python This one too)
 
-## [Personal website](https://sp-droid.github.io/showtime)
+## <a href="https://sp-droid.github.io/showtime" target="_blank">Personal website</a>
 
 ## Contact
 <a href="https://www.linkedin.com/in/pablo-arbelo-cabrera-051a951a2/" target="_blank">
