@@ -2,7 +2,7 @@
 [//]: # (https://dev.to/envoy_/150-badges-for-github-pnk This one has a lot of them)
 [//]: # (https://badges.pages.dev/?q=python This one too)
 
-## [Personal website](https://sp-droid.github.io/showtime)
+## [Personal website (link)](https://sp-droid.github.io/showtime)
 
 ## Contact
 <a href="https://www.linkedin.com/in/pablo-arbelo-cabrera-051a951a2/" target="_blank">
@@ -22,22 +22,25 @@
 ### 📝 &nbsp;Familiar with (in descending order)
 
 ![Fortran](https://img.shields.io/badge/Fortran-734F96?logo=fortran&logoColor=fff&style=for-the-badge)&nbsp;
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)&nbsp;
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=fff&style=for-the-badge)&nbsp;
 
-### ⚙️ &nbsp;Engines & ⚡ &nbsp;Frameworks
+### ⚙️ &nbsp;Tools
 
-![Blender](https://img.shields.io/badge/Blender-F5792A?logo=blender&logoColor=fff&style=for-the-badge)&nbsp;
 ![UE5](https://img.shields.io/badge/Unreal%20Engine-0E1128?logo=unrealengine&logoColor=fff&style=for-the-badge)&nbsp;
 ![Keras](https://img.shields.io/badge/Keras-D00000?logo=keras&logoColor=fff&style=for-the-badge)&nbsp;
 
-### 🎨 &nbsp;Tools
+### 🎨 &nbsp;Tools (design)
 
-![VSCode](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?logo=visualstudiocode&logoColor=fff&style=for-the-badge)&nbsp;
-![Notepad++](https://img.shields.io/badge/Notepad%2B%2B-90E59A?logo=notepadplusplus&logoColor=000&style=for-the-badge)&nbsp;
-![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff&style=for-the-badge)&nbsp;
+![Blender](https://img.shields.io/badge/Blender-F5792A?logo=blender&logoColor=fff&style=for-the-badge)&nbsp;
+![RevealJS](https://img.shields.io/badge/reveal.js-F2E142?logo=revealdotjs&logoColor=000&style=for-the-badge)&nbsp;
 ![Markdown](https://img.shields.io/badge/Markdown-000?logo=markdown&logoColor=fff&style=for-the-badge)&nbsp;
 ![Gimp](https://img.shields.io/badge/GIMP-5C5543?logo=gimp&logoColor=fff&style=for-the-badge)&nbsp;
+
+### 🔌 &nbsp;Tools (other)
+
+![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff&style=for-the-badge)&nbsp;
+![VSCode](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?logo=visualstudiocode&logoColor=fff&style=for-the-badge)&nbsp;
+![Notepad++](https://img.shields.io/badge/Notepad%2B%2B-90E59A?logo=notepadplusplus&logoColor=000&style=for-the-badge)&nbsp;
 ![MSOffice](https://img.shields.io/badge/Microsoft%20Office-D83B01?logo=microsoftoffice&logoColor=fff&style=for-the-badge)&nbsp;
 
 ### 📚 &nbsp;Currently learning
