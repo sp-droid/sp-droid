@@ -1,7 +1,0 @@
-Place in this folder:
-- definition.csv from /map_data, transformed into a xlsx (important), careful with using weird characters such as đ
-- provinces.png from /map_data. Set anything you DONT want to change names with color black RGB = (0,0,0)
-
-The program will output a file named provincenames_l_english.yml
-
-After it finishes, open the output file, select all (Ctrl+A) and copy. Go to your /localization/english/provincenames_l_english.yml, open it, select all and paste.
