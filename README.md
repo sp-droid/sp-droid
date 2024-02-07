@@ -22,7 +22,6 @@
 ### 📝 &nbsp;Familiar with (in descending order)
 
 ![Fortran](https://img.shields.io/badge/Fortran-734F96?logo=fortran&logoColor=fff&style=for-the-badge)&nbsp;
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=fff&style=for-the-badge)&nbsp;
 
 ### ⚙️ &nbsp;Tools
 
@@ -45,7 +44,8 @@
 
 ### 📚 &nbsp;Currently learning
 ![UE5](https://img.shields.io/badge/Unreal%20Engine-0E1128?logo=unrealengine&logoColor=fff&style=for-the-badge)&nbsp;
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=fff&style=for-the-badge)&nbsp;
+![Zig](https://img.shields.io/badge/Zig-F7A41D?logo=zig&logoColor=fff&style=for-the-badge)&nbsp;
+![OpenGL](https://img.shields.io/badge/OpenGL-5586A4?logo=opengl&logoColor=fff&style=for-the-badge)&nbsp;
 
 ## Github Stats
 
