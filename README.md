@@ -32,6 +32,7 @@
 
 ![Blender](https://img.shields.io/badge/Blender-F5792A?logo=blender&logoColor=fff&style=for-the-badge)&nbsp;
 ![RevealJS](https://img.shields.io/badge/reveal.js-F2E142?logo=revealdotjs&logoColor=000&style=for-the-badge)&nbsp;
+![p5.js](https://img.shields.io/badge/p5.js-ED225D?logo=p5dotjs&logoColor=fff&style=for-the-badge)
 ![Markdown](https://img.shields.io/badge/Markdown-000?logo=markdown&logoColor=fff&style=for-the-badge)&nbsp;
 ![Gimp](https://img.shields.io/badge/GIMP-5C5543?logo=gimp&logoColor=fff&style=for-the-badge)&nbsp;
 
