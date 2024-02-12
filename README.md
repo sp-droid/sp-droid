@@ -14,7 +14,7 @@
 ### 📝 &nbsp;Professional Proficiency in
 
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=for-the-badge)&nbsp;
-![Matlab](icons/matlabicon.svg)&nbsp;
+![Matlab](icons/MATLAB.svg)&nbsp;
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=for-the-badge)&nbsp;
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=for-the-badge)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=for-the-badge)
@@ -45,8 +45,7 @@
 
 ### 📚 &nbsp;Currently learning
 ![UE5](https://img.shields.io/badge/Unreal%20Engine-0E1128?logo=unrealengine&logoColor=fff&style=for-the-badge)&nbsp;
-![C#](https://img.shields.io/badge/C%23-512BD4?logo=csharp&logoColor=fff&style=for-the-badge)&nbsp;
-![OpenGL](https://img.shields.io/badge/OpenGL-5586A4?logo=opengl&logoColor=fff&style=for-the-badge)&nbsp;
+![WebGPU](icons/WebGPU.svg)&nbsp;
 
 ## Github Stats
 
