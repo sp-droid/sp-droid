@@ -30,7 +30,7 @@ function setup() {
         hold = true;
     });
 
-    sliderScale = createSlider(4, 1000, 400, 1);
+    sliderScale = createSlider(4, 5000, 400, 1);
     sliderScale.position(20,64);
     textsliderScale = createP();
     textsliderScale.position(20,32);
