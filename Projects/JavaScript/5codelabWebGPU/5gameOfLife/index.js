@@ -119,40 +119,6 @@ const bindGroupLayout = device.createBindGroupLayout({
     }]
 });
 
-// Pipeline layout
-const pipelineLayout = device.createPipelineLayout({
-    label: "Cell pipeline layout",
-    bindGroupLayouts: [ bindGroupLayout ]
-});
-
-// Create render pipeline
-const cellPipeline = device.createRenderPipeline({
-    label: "Cell pipeline",
-    layout: pipelineLayout,
-    vertex: {
-        module: cellShaderModule,
-        entryPoint: "vertexMain",
-        buffers: [vertexBufferLayout]
-    },
-    fragment: {
-        module: cellShaderModule,
-        entryPoint: "fragmentMain",
-        targets: [{
-            format: canvasFormat
-        }]
-    }
-});
-
-// Simulation pipeline
-const simulationPipeline = device.createComputePipeline({
-    label: "Simulation pipeline",
-    layout: pipelineLayout,
-    compute: {
-        module: simulationShaderModule,
-        entryPoint: "computeMain"
-    }
-});
-
 // Create a bind group
 const bindGroups = [
     device.createBindGroup({
@@ -188,6 +154,40 @@ const bindGroups = [
         }]
     })
 ]
+
+// Pipeline layout
+const pipelineLayout = device.createPipelineLayout({
+    label: "Cell pipeline layout",
+    bindGroupLayouts: [ bindGroupLayout ]
+});
+
+// Create render pipeline
+const cellPipeline = device.createRenderPipeline({
+    label: "Cell pipeline",
+    layout: pipelineLayout,
+    vertex: {
+        module: cellShaderModule,
+        entryPoint: "vertexMain",
+        buffers: [vertexBufferLayout]
+    },
+    fragment: {
+        module: cellShaderModule,
+        entryPoint: "fragmentMain",
+        targets: [{
+            format: canvasFormat
+        }]
+    }
+});
+
+// Simulation pipeline
+const simulationPipeline = device.createComputePipeline({
+    label: "Simulation pipeline",
+    layout: pipelineLayout,
+    compute: {
+        module: simulationShaderModule,
+        entryPoint: "computeMain"
+    }
+});
 
 setInterval(updateGrid, UPDATE_INTERVAL);
 
