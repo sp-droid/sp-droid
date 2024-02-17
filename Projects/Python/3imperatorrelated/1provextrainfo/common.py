@@ -16,9 +16,15 @@ def latitudeCropImage(image: np.ndarray, MIN_LAT: float, MAX_LAT: float):
     return image[min_y:max_y+1,:]
 
 # Save image to test.png file, normalizing for uint8 grayscale values
+def smallNormImage(image: np.ndarray):
+    minValue, maxValue = np.min(image), np.max(image)
+    normImage = (image - minValue) / (maxValue - minValue) * 255
+    return Image.fromarray(np.uint8(normImage)).resize((400,200))
+
+# Save image to test.png file, normalizing for uint8 grayscale values
 def saveTestImage(image: np.ndarray):
     minValue, maxValue = np.min(image), np.max(image)
-    normImage = 255 * (image - minValue) / (maxValue - minValue)
+    normImage = (image - minValue) / (maxValue - minValue) * 255
     Image.fromarray(np.uint8(normImage)).save('test.png')
     return
 
@@ -72,7 +78,7 @@ def kernelSearchAndFixToNearest(yLimit: int, xLimit: int):
         data[y,x] = data[ry,rx]
 
     return func
-def searchAndFixToNearest(
+def GPUsearchAndFixToNearest(
         data: np.ndarray,
         maskTarget: np.ndarray,
         maskValid: np.ndarray,
@@ -96,3 +102,33 @@ def searchAndFixToNearest(
     modifiedData = gpuData.copy_to_host()
 
     return modifiedData
+
+# In 2D-RGB, given a keyed (0, 1, 2...) 2D array and a list with colors corresponding to the keys in the same order, it paints an RGB 2D array
+def kernelPaintColorKeys(yLimit: int, xLimit: int):
+    @cuda.jit
+    def func(keyedMap, colorKeys):
+        y, x = cuda.grid(2)
+        
+        # Out of bonds
+        if y >= yLimit or x >= xLimit: return
+
+        key = keyedMap[y,x,0]
+        for i in range(3): keyedMap[y,x,i] = colorKeys[key][i]
+
+    return func
+
+def GPUpaintColorKeys(keyedMap: np.ndarray, colorKeys: list):
+    yLimit, xLimit = keyedMap.shape
+
+    gpuColorKeys = cuda.to_device(colorKeys)
+    coloredMap = np.zeros(shape=(yLimit,xLimit,3), dtype=np.uint8)
+    coloredMap[:,:,0] = keyedMap
+    gpuColoredMap = cuda.to_device(coloredMap)
+
+    threadsperblock = (16,16)
+    blockspergrid = tuple(int(np.ceil(keyedMap.shape[i]/threadsperblock[i])) for i in range(2))
+
+    kernelPaintColorKeys(yLimit, xLimit)[blockspergrid, threadsperblock](gpuColoredMap, gpuColorKeys)
+    coloredMap = gpuColoredMap.copy_to_host()
+
+    return coloredMap
