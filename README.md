@@ -2,13 +2,7 @@
 [//]: # (https://dev.to/envoy_/150-badges-for-github-pnk This one has a lot of them)
 [//]: # (https://badges.pages.dev/?q=python This one too)
 
-## [Personal website (link)](https://sp-droid.github.io/showtime)
-
-## Contact
-<a href="https://www.linkedin.com/in/pablo-arbelo-cabrera-051a951a2/" target="_blank">
-    <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
-<a href="https://stackoverflow.com/users/13675395/michael-bay" target="_blank">
-    <img alt="Stack Overflow" src="https://img.shields.io/badge/Stack_Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white"></a> 
+## Contact details and more in my [personal website](https://sp-droid.github.io/showtime)
 
 ## Skills
 ### 📝 &nbsp;Professional Proficiency in
@@ -45,6 +39,7 @@
 
 ### 📚 &nbsp;Currently learning
 ![UE5](https://img.shields.io/badge/Unreal%20Engine-0E1128?logo=unrealengine&logoColor=fff&style=for-the-badge)&nbsp;
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=fff&style=for-the-badge)
 ![WebGPU](icons/WebGPU.svg)&nbsp;
 
 ## Github Stats
