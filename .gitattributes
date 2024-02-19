@@ -1,3 +1,5 @@
+*.ipynb linguist-language=python
+
 *.html linguist-detectable=false
 
 *.mk linguist-detectable=false
