@@ -4,7 +4,7 @@
 @group(0) @binding(2) var<storage, read_write> cellStateOut: array<u32>;
 
 fn cellIndex(cell: vec2u) -> u32 {
-    return (cell.y % u32(grid.y)) * u32(grid.x) + (cell.x % u32(grid.x));
+    return cell.y * u32(grid.x) + cell.x;
 }
 
 fn cellActive(x: u32, y: u32) -> u32 {

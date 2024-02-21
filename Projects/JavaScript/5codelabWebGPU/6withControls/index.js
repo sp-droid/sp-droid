@@ -9,22 +9,28 @@ const textFPS = document.getElementById("textFPS");
 const sliderFPS = document.getElementById("sliderFPS");
 const resetButton = document.getElementById("resetButton");
 
-let GRID_SIZE = sliderGridSize.value;
+let GRID_SIZEx = sliderGridSize.value;
 let UPDATE_INTERVAL = 1000/sliderFPS.value;
 
 // Constants
 const WORKGROUP_SIZE = 8;
 
 sliderGridSize.oninput = function() {
-    textGridSize.textContent = `Grid size: ${this.value} (${this.value**2} cells)`;
+    const yValue = Math.floor(canvas.height / canvas.width * this.value);
+    textGridSize.textContent = `Grid size: ${this.value}x${yValue} (${this.value*yValue} cells)`;
 }
+sliderGridSize.oninput();
     
 sliderFPS.oninput = function() {
     textFPS.textContent = `Target FPS: ${this.value}`;
 }
 resetButton.onclick = function() {
     clearInterval(gameLoop);
-    GRID_SIZE = sliderGridSize.value;
+
+    GRID_SIZEx = sliderGridSize.value;
+    squareSizeX = canvas.width / GRID_SIZEx
+    GRID_SIZEy = Math.floor(canvas.height / squareSizeX);
+    
     UPDATE_INTERVAL = 1000/sliderFPS.value;
     frameNumber = 0;
     startGame();
@@ -51,6 +57,10 @@ context.configure({
     device: device,
     format: canvasFormat
 });
+
+// Defining the scale in Y direction
+let squareSizeX = canvas.width / GRID_SIZEx;
+let GRID_SIZEy = Math.floor(canvas.height / squareSizeX);
 
 // Defining a square as two triangles
 const pos = 0.90;
@@ -120,8 +130,9 @@ function updateGrid() {
     computePass.setPipeline(simulationPipeline);
     computePass.setBindGroup(0, bindGroups[frameNumber % 2]);
 
-    const workgroupCount = Math.ceil(GRID_SIZE / WORKGROUP_SIZE);
-    computePass.dispatchWorkgroups(workgroupCount, workgroupCount);
+    const workgroupCountX = Math.ceil(GRID_SIZEx / WORKGROUP_SIZE);
+    const workgroupCountY = Math.ceil(GRID_SIZEy / WORKGROUP_SIZE);
+    computePass.dispatchWorkgroups(workgroupCountX, workgroupCountY);
 
     computePass.end();
 
@@ -140,7 +151,7 @@ function updateGrid() {
     pass.setPipeline(cellPipeline);
     pass.setBindGroup(0, bindGroups[frameNumber % 2]);
     pass.setVertexBuffer(0, vertexBuffer);
-    pass.draw(vertices.length / 2, GRID_SIZE*GRID_SIZE); // 6 vertices
+    pass.draw(vertices.length / 2, GRID_SIZEx*GRID_SIZEy); // 6 vertices
 
     pass.end();
 
@@ -150,7 +161,7 @@ function updateGrid() {
 
 function startGame() {
     // Allocating GPU memory for the gridsize using an uniform buffer
-    uniformArray = new Float32Array([GRID_SIZE, GRID_SIZE]);
+    uniformArray = new Float32Array([GRID_SIZEx, GRID_SIZEy]);
     uniformBuffer = device.createBuffer({
         label: "Grid uniforms",
         size: uniformArray.byteLength,
@@ -159,7 +170,7 @@ function startGame() {
     device.queue.writeBuffer(uniformBuffer, 0, uniformArray);
 
     // Allocating GPU memory for the cell states using a storage buffer
-    cellStateArray = new Uint32Array(GRID_SIZE * GRID_SIZE);
+    cellStateArray = new Uint32Array(GRID_SIZEx * GRID_SIZEy);
     cellStateStorage = [
         device.createBuffer({
             label: "Cell State A",
@@ -184,7 +195,7 @@ function startGame() {
         label: "Cell bind group layout",
         entries: [{
             binding: 0,
-            visibility: GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT | GPUShaderStage.COMPUTE,
+            visibility: GPUShaderStage.VERTEX | GPUShaderStage.COMPUTE,
             buffer: {} // Grid uniform buffer
         }, {
             binding: 1,

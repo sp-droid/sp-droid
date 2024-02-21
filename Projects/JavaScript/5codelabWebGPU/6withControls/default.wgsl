@@ -5,7 +5,7 @@ struct VertexInput {
 
 struct VertexOutput {
     @builtin(position) pos: vec4f,
-    @location(0) cell: vec2f
+    @location(0) cellColor: vec3f
 }
 
 @group(0) @binding(0) var<uniform> grid: vec2f;
@@ -22,16 +22,13 @@ fn vertexMain (input: VertexInput) -> VertexOutput {
 
     var output: VertexOutput;
     output.pos = vec4f(gridPos, 0, 1);
-    output.cell = cell;
+
+    let c = cell / grid;
+    output.cellColor = vec3f(c, 1-c.x);
     return output;
 }
 
-// struct FragInput {
-//     @location(0) cell: vec2f
-// }
-
 @fragment
 fn fragmentMain (input: VertexOutput) -> @location(0) vec4f {
-    let c = input.cell / grid;
-    return vec4f(c, 1-c.x, 1);
+    return vec4f(input.cellColor, 1);
 }
