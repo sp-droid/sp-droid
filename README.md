@@ -44,7 +44,7 @@
 
 ## Statistics
 
-<a href="https://sp-droid.github.io/showtime">
+<a href="https://github-readme-stats-sp-droid.vercel.app/api/top-langs/?username=sp-droid&hide_title=false&hide_border=false&layout=donut&hide=jupyter%20notebook,ShaderLab,SCSS,HTML,Makefile,Batchfile,Markdown&theme=ambient_gradient">
   <img align="center" height=162 src="https://github-readme-stats-sp-droid.vercel.app/api/top-langs/?username=sp-droid&hide_title=true&hide_border=true&layout=donut&hide=jupyter%20notebook,ShaderLab,SCSS,HTML,Makefile,Batchfile,Markdown&theme=ambient_gradient" />
 </a>
 <a href="https://wakatime.com/@spdroid">
