@@ -53,6 +53,8 @@
 
 <img align="center" src="https://raw.githubusercontent.com/sp-droid/github-stats/master/generated/overview.svg#gh-dark-mode-only" />
 
+<img align="center" src="https://raw.githubusercontent.com/sp-droid/github-stats/master/generated/overview.svg#gh-light-mode-only" />
+
 [//]: # (https://github-readme-stats-sp-droid.vercel.app/api?username=sp-droid&rank_icon=github&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&count_private=true&line_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite)
 [//]: # (https://raw.githubusercontent.com/sp-droid/github-stats/master/generated/overview.svg#gh-dark-mode-only)
 [//]: # (https://raw.githubusercontent.com/sp-droid/github-stats/master/generated/overview.svg#gh-light-mode-only)
