@@ -358,6 +358,7 @@ async function updateGrid() {
         );
 
         device.queue.submit([encoder.finish()]);
+        await device.queue.onSubmittedWorkDone();
         encoder = device.createCommandEncoder();
 
         // Compute pass
@@ -371,6 +372,7 @@ async function updateGrid() {
         computePass.end();
 
         device.queue.submit([encoder.finish()]);
+        await device.queue.onSubmittedWorkDone();
         encoder = device.createCommandEncoder();
 
         // Copy distances from GPU
@@ -392,10 +394,12 @@ async function updateGrid() {
                 minimumValueIndex = i;
             }
         })
-        console.log(minimumValueIndex)
+        // console.log(minimumValueIndex)
         stagingBuffers[1].unmap();
 
         device.queue.submit([encoder.finish()]);
+        await device.queue.onSubmittedWorkDone();
+
         encoder = device.createCommandEncoder();
         // Copy chosen cell index into uniform
         await stagingBuffers[2].mapAsync(GPUMapMode.WRITE);
@@ -436,6 +440,7 @@ async function updateGrid() {
 
         // Create a command buffer and submit it to the queue of the GPU device
         device.queue.submit([encoder.finish()]);
+        await device.queue.onSubmittedWorkDone();
     }
 }
 
