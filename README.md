@@ -48,7 +48,7 @@
   <img align="center" height=162 src="https://github-readme-stats-sp-droid.vercel.app/api/top-langs/?username=sp-droid&hide_title=true&hide_border=true&layout=donut&hide=jupyter%20notebook,ShaderLab,SCSS,HTML,Makefile,Batchfile,Markdown&theme=ambient_gradient" />
 </a>
 <a href="https://wakatime.com/@spdroid">
-  <img align="center" height=162 src="https://github-readme-stats-sp-droid.vercel.app/api/wakatime?username=spdroid&theme=ambient_gradient" />
+  <img align="center" height=162 src="https://github-readme-stats-sp-droid.vercel.app/api/wakatime?username=spdroid&layout=compact&theme=ambient_gradient" />
 </a>
 
 <img align="center" src="https://raw.githubusercontent.com/sp-droid/github-stats/master/generated/overview.svg#gh-dark-mode-only" />
