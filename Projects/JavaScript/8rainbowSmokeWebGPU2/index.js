@@ -87,7 +87,7 @@ for (let i = 0; i < colorPoolArray.length; ++i) {
     colorPoolArray[i] = Math.random();
 }
 
-// Cell state storage |X*Y
+// Cell state storage 0=inactive, 1=active, 2=painted|X*Y
 let cellStateStorage = new Uint32Array(GRID_SIZEx * GRID_SIZEy);
 for (let i = 0; i < cellStateStorage.length; ++i) {
     cellStateStorage[i] = 0;
@@ -112,6 +112,10 @@ cellStateStorage[from2Dto1Dindex(x+1, y, GRID_SIZEx)] = 1;
 cellStateStorage[from2Dto1Dindex(x-1, y, GRID_SIZEx)] = 1;
 cellStateStorage[from2Dto1Dindex(x, y+1, GRID_SIZEx)] = 1;
 cellStateStorage[from2Dto1Dindex(x, y-1, GRID_SIZEx)] = 1;
+cellStateStorage[from2Dto1Dindex(x+1, y+1, GRID_SIZEx)] = 1;
+cellStateStorage[from2Dto1Dindex(x+1, y-1, GRID_SIZEx)] = 1;
+cellStateStorage[from2Dto1Dindex(x-1, y+1, GRID_SIZEx)] = 1;
+cellStateStorage[from2Dto1Dindex(x-1, y-1, GRID_SIZEx)] = 1;
 
 function from2Dto1Dindex(x, y, gridX) {
     return y * gridX + x;
@@ -412,6 +416,9 @@ async function updateGrid() {
         await gpuReadBuffer.mapAsync(GPUMapMode.READ);
         let data2 = new Float32Array(gpuReadBuffer.getMappedRange())
 
+        if ((targetColor===1) | (targetColor===2)) {
+            console.log(data2)
+        }
         let result = 10.0;
         let minimumValueIndex = -1;
         data2.forEach((x, i) => {
