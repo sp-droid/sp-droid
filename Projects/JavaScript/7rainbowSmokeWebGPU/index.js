@@ -3,8 +3,8 @@ const canvas = document.querySelector("canvas");
 canvas.width = canvas.parentElement.clientWidth;
 canvas.height = canvas.parentElement.clientHeight;
 
-let GRID_SIZEx = 22;
-let FPS_VALUE = 0.5;
+let GRID_SIZEx = 40;
+let FPS_VALUE = 60;
 let UPDATE_INTERVAL = 1000/FPS_VALUE;
 
 // Constants
@@ -82,7 +82,7 @@ const simulationShaderModule = device.createShaderModule({
 let gridUniform = new Float32Array([GRID_SIZEx, GRID_SIZEy]);
 
 // Color pool parameter |X*Y*3
-let colorPoolArray = new Float32Array(GRID_SIZEx * GRID_SIZEy * 3);
+let colorPoolArray = new Float32Array(GRID_SIZEx * GRID_SIZEy * 3+10);
 for (let i = 0; i < colorPoolArray.length; ++i) {
     colorPoolArray[i] = Math.random();
 }
@@ -334,94 +334,127 @@ let computePipelines = [
     })
 ]
 
+let continueLoop = true;
 let gameLoop = setInterval(updateGrid, UPDATE_INTERVAL);
 
 // WebGPU functions
 async function updateGrid() {
     targetColor++;
-    if (targetColor < GRID_SIZEx * GRID_SIZEy) {
-        // Encoder that sends instructions to the GPU
-        let encoder = device.createCommandEncoder();
-
+    
+    if (continueLoop === true) {
+        /////////////////////////////////////////////////////////////////////////////////////////////
         // Copy new target color into uniform
-        await stagingBuffers[0].mapAsync(GPUMapMode.WRITE);
+        // let encoder = device.createCommandEncoder();
+        // await stagingBuffers[0].mapAsync(GPUMapMode.WRITE);
         
-        let data = new Float32Array(stagingBuffers[0].getMappedRange());
-        data.set([colorPoolArray[targetColor*3], colorPoolArray[targetColor*3+1], colorPoolArray[targetColor*3+2]]);
-        if ((targetColor === 1) | (targetColor === 2) | (targetColor === 3)) {console.log(data)}
-        stagingBuffers[0].unmap();
+        // let data = new Float32Array(stagingBuffers[0].getMappedRange());
+        
+        // data.set([colorPoolArray[targetColor*3], colorPoolArray[targetColor*3+1], colorPoolArray[targetColor*3+2]]);
+        // stagingBuffers[0].unmap();
 
-        encoder.copyBufferToBuffer(
-            stagingBuffers[0], 0,
-            computeBuffers[1], 0,
-            computeBuffers[1].size
-        );
-
-        device.queue.submit([encoder.finish()]);
-        await device.queue.onSubmittedWorkDone();
+        // encoder.copyBufferToBuffer(
+        //     stagingBuffers[0], 0,
+        //     computeBuffers[1], 0,
+        //     computeBuffers[1].size
+        // );
+        // await device.queue.submit([encoder.finish()]);
+        let encoder;
+        let data = new Float32Array([colorPoolArray[targetColor*3], colorPoolArray[targetColor*3+1], colorPoolArray[targetColor*3+2]]);
+        await device.queue.writeBuffer(computeBuffers[1], 0, data);
+        
+        /////////////////////////////////////////////////////////////////////////////////////////////
+        // COMPUTE distances
         encoder = device.createCommandEncoder();
-
-        // Compute pass
         const computePass = encoder.beginComputePass();
-        // Compute distances
         computePass.setPipeline(computePipelines[0]);
         computePass.setBindGroup(0, bindGroups[1]);
         workgroupCountX = Math.ceil(GRID_SIZEx / WORKGROUP_SIZE);
         workgroupCountY = Math.ceil(GRID_SIZEy / WORKGROUP_SIZE);
         computePass.dispatchWorkgroups(workgroupCountX, workgroupCountY);
         computePass.end();
-
-        device.queue.submit([encoder.finish()]);
-        await device.queue.onSubmittedWorkDone();
-        encoder = device.createCommandEncoder();
-
-        // Copy distances from GPU
-        await stagingBuffers[1].mapAsync(GPUMapMode.READ);
+        await device.queue.submit([encoder.finish()]);
         
+        /////////////////////////////////////////////////////////////////////////////////////////////
+        // Copy the GPU distance buffer into staging
+        // encoder = device.createCommandEncoder();
+        // encoder.copyBufferToBuffer(
+        //     computeBuffers[3], 0,
+        //     stagingBuffers[1], 0,
+        //     stagingBuffers[1].size
+        // );
+        // await device.queue.submit([encoder.finish()]);
+        
+        // // Read the staging buffer
+        // await stagingBuffers[1].mapAsync(GPUMapMode.READ);
+        // let data2 = new Float32Array(stagingBuffers[1].getMappedRange());
+
+        // let result = 10.0;
+        // let minimumValueIndex = 0;
+        // data2.forEach((x, i) => {
+        //     if (x < result) {
+        //         result = x;
+        //         minimumValueIndex = i;
+        //     }
+        // })
+        // stagingBuffers[1].unmap();
+        encoder = device.createCommandEncoder();
+        const gpuReadBuffer = device.createBuffer({
+            size: computeBuffers[3].size,
+            usage: GPUBufferUsage.COPY_DST | GPUBufferUsage.MAP_READ
+        });
         encoder.copyBufferToBuffer(
             computeBuffers[3], 0,
-            stagingBuffers[1], 0,
-            stagingBuffers[1].size
+            gpuReadBuffer, 0,
+            gpuReadBuffer.size
         );
-        
-        let data2 = new Float32Array(stagingBuffers[1].getMappedRange());
+        await device.queue.submit([encoder.finish()]);
+
+        await gpuReadBuffer.mapAsync(GPUMapMode.READ);
+        let data2 = new Float32Array(gpuReadBuffer.getMappedRange())
+
         let result = 10.0;
-        minimumValueIndex = 0;
-        if ((targetColor === 1) | (targetColor === 2) | (targetColor === 3)) {console.log(data2)}
+        let minimumValueIndex = -1;
         data2.forEach((x, i) => {
             if (x < result) {
                 result = x;
                 minimumValueIndex = i;
             }
         })
-        // console.log(minimumValueIndex)
-        stagingBuffers[1].unmap();
+        if (minimumValueIndex === -1) {
+            continueLoop = false;
+        }
 
-        device.queue.submit([encoder.finish()]);
-        await device.queue.onSubmittedWorkDone();
-
-        encoder = device.createCommandEncoder();
+        /////////////////////////////////////////////////////////////////////////////////////////////
         // Copy chosen cell index into uniform
-        await stagingBuffers[2].mapAsync(GPUMapMode.WRITE);
+        // encoder = device.createCommandEncoder();
+        // await stagingBuffers[2].mapAsync(GPUMapMode.WRITE);
         
-        let data3 = new Uint32Array(stagingBuffers[2].getMappedRange());
-        data3.set([minimumValueIndex]);
-        stagingBuffers[2].unmap();
+        // let data3 = new Uint32Array(stagingBuffers[2].getMappedRange());
+        // data3.set([minimumValueIndex]);
+        // stagingBuffers[2].unmap();
+        
+        // encoder.copyBufferToBuffer(
+        //     stagingBuffers[2], 0,
+        //     computeBuffers[2], 0,
+        //     computeBuffers[2].size
+        // );
+        // await device.queue.submit([encoder.finish()]);
+        let data3 = new Uint32Array([minimumValueIndex]);
+        await device.queue.writeBuffer(computeBuffers[2], 0, data3);
 
-        encoder.copyBufferToBuffer(
-            stagingBuffers[2], 0,
-            computeBuffers[2], 0,
-            computeBuffers[2].size
-        );
-
-        // Place pixel, activate neighbors
+        /////////////////////////////////////////////////////////////////////////////////////////////
+        // COMPUTE Place pixel, activate neighbors
+        encoder = device.createCommandEncoder();
         const computePass2 = encoder.beginComputePass();
         computePass2.setPipeline(computePipelines[1]);
         computePass2.setBindGroup(0, bindGroups[1]);
         computePass2.dispatchWorkgroups(1);
         computePass2.end();
+        await device.queue.submit([encoder.finish()]);
         
-        // Render pass
+        /////////////////////////////////////////////////////////////////////////////////////////////
+        // RENDER cells
+        encoder = device.createCommandEncoder();
         const pass = encoder.beginRenderPass({
             colorAttachments: [{
                 view: context.getCurrentTexture().createView(),
@@ -435,12 +468,9 @@ async function updateGrid() {
         pass.setBindGroup(0, bindGroups[0]);
         pass.setVertexBuffer(0, vertexBuffer);
         pass.draw(vertices.length / 2, GRID_SIZEx*GRID_SIZEy); // 6 vertices
-
         pass.end();
 
-        // Create a command buffer and submit it to the queue of the GPU device
-        device.queue.submit([encoder.finish()]);
-        await device.queue.onSubmittedWorkDone();
+        await device.queue.submit([encoder.finish()]);
     }
 }
 

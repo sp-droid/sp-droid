@@ -28,7 +28,7 @@ fn vertexMain (input: VertexInput) -> VertexOutput {
     // Cell color
     let i3 = input.instance*3u;
     //let color = vec3f(cellColor[i3], cellColor[i3+1u], cellColor[i3+2u]);
-    let color = vec3f(cellColor[i3], cellColor[i3+1u], 1-f32(cellState[u32(i)])/2);
+    let color = vec3f(cellColor[i3], cellColor[i3+1u], cellColor[i3+2u]);
     output.cellColor = vec3f(color);
     return output;
 }
