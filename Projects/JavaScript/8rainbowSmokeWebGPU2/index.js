@@ -4,7 +4,7 @@ canvas.width = canvas.parentElement.clientWidth;
 canvas.height = canvas.parentElement.clientHeight;
 
 let GRID_SIZEx = 40;
-let FPS_VALUE = 60;
+let FPS_VALUE = 120;
 let UPDATE_INTERVAL = 1000/FPS_VALUE;
 
 // Constants
@@ -416,9 +416,9 @@ async function updateGrid() {
         await gpuReadBuffer.mapAsync(GPUMapMode.READ);
         let data2 = new Float32Array(gpuReadBuffer.getMappedRange())
 
-        if ((targetColor===1) | (targetColor===2)) {
-            console.log(data2)
-        }
+        // if ((targetColor===1) | (targetColor===2)) {
+        //     console.log(data2)
+        // }
         let result = 10.0;
         let minimumValueIndex = -1;
         data2.forEach((x, i) => {

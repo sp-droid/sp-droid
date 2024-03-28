@@ -53,36 +53,36 @@ fn distancesMain(input: ComputeInput) {
     }
 
     // Iterate over painted neighbors, adding them up (average method
-    // var results = vec2f(0.0, 0.0); // First field is the number of hits, second is the distance
-    // if (input.cell.x - 1 >= 0) {
-    //     if (input.cell.y - 1 >= 0) { results += neighborDistance(input.cell.x - 1, input.cell.y - 1); }
-    //     results += neighborDistance(input.cell.x - 1, input.cell.y);
-    //     if (input.cell.y + 1 < u32(grid.y)) { results += neighborDistance(input.cell.x - 1, input.cell.y + 1); }
-    // }
-    // if (input.cell.y + 1 < u32(grid.y)) { results += neighborDistance(input.cell.x, input.cell.y + 1); }
-    // if (input.cell.y - 1 >= 0) { results += neighborDistance(input.cell.x, input.cell.y - 1); }
-    // if (input.cell.x + 1 < u32(grid.x)) {
-    //     if (input.cell.y - 1 >= 0) { results += neighborDistance(input.cell.x + 1, input.cell.y - 1); }
-    //     results += neighborDistance(input.cell.x + 1, input.cell.y);
-    //     if (input.cell.y + 1 < u32(grid.y)) { results += neighborDistance(input.cell.x + 1, input.cell.y + 1); }
-    // }
-    // distances[index1D] = results.y / results.x;
+    var results = vec2f(0.0, 0.0); // First field is the number of hits, second is the distance
+    if (input.cell.x - 1 >= 0) {
+        if (input.cell.y - 1 >= 0) { results += neighborDistance(input.cell.x - 1, input.cell.y - 1); }
+        results += neighborDistance(input.cell.x - 1, input.cell.y);
+        if (input.cell.y + 1 < u32(grid.y)) { results += neighborDistance(input.cell.x - 1, input.cell.y + 1); }
+    }
+    if (input.cell.y + 1 < u32(grid.y)) { results += neighborDistance(input.cell.x, input.cell.y + 1); }
+    if (input.cell.y - 1 >= 0) { results += neighborDistance(input.cell.x, input.cell.y - 1); }
+    if (input.cell.x + 1 < u32(grid.x)) {
+        if (input.cell.y - 1 >= 0) { results += neighborDistance(input.cell.x + 1, input.cell.y - 1); }
+        results += neighborDistance(input.cell.x + 1, input.cell.y);
+        if (input.cell.y + 1 < u32(grid.y)) { results += neighborDistance(input.cell.x + 1, input.cell.y + 1); }
+    }
+    distances[index1D] = results.y / results.x;
     
     // or picking the smallest one (minimum method)
-    var result = 10.0;
-    if (input.cell.x - 1 >= 0) {
-        if (input.cell.y - 1 >= 0) { result = min(result, neighborDistanceOnly(input.cell.x - 1, input.cell.y - 1)); }
-        result = min(result, neighborDistanceOnly(input.cell.x - 1, input.cell.y));
-        if (input.cell.y + 1 < u32(grid.y)) { result = min(result, neighborDistanceOnly(input.cell.x - 1, input.cell.y + 1)); }
-    }
-    if (input.cell.y + 1 < u32(grid.y)) { result = min(result, neighborDistanceOnly(input.cell.x, input.cell.y + 1)); }
-    if (input.cell.y - 1 >= 0) { result = min(result, neighborDistanceOnly(input.cell.x, input.cell.y - 1)); }
-    if (input.cell.x + 1 < u32(grid.x)) {
-        if (input.cell.y - 1 >= 0) { result = min(result, neighborDistanceOnly(input.cell.x + 1, input.cell.y - 1)); }
-        result = min(result, neighborDistanceOnly(input.cell.x + 1, input.cell.y));
-        if (input.cell.y + 1 < u32(grid.y)) { result = min(result, neighborDistanceOnly(input.cell.x + 1, input.cell.y + 1)); }
-    }
-    distances[index1D] = result;
+    // var result = 10.0;
+    // if (input.cell.x - 1 >= 0) {
+    //     //if (input.cell.y - 1 >= 0) { result = min(result, neighborDistanceOnly(input.cell.x - 1, input.cell.y - 1)); }
+    //     result = min(result, neighborDistanceOnly(input.cell.x - 1, input.cell.y));
+    //     //if (input.cell.y + 1 < u32(grid.y)) { result = min(result, neighborDistanceOnly(input.cell.x - 1, input.cell.y + 1)); }
+    // }
+    // if (input.cell.y + 1 < u32(grid.y)) { result = min(result, neighborDistanceOnly(input.cell.x, input.cell.y + 1)); }
+    // if (input.cell.y - 1 >= 0) { result = min(result, neighborDistanceOnly(input.cell.x, input.cell.y - 1)); }
+    // if (input.cell.x + 1 < u32(grid.x)) {
+    //     //if (input.cell.y - 1 >= 0) { result = min(result, neighborDistanceOnly(input.cell.x + 1, input.cell.y - 1)); }
+    //     result = min(result, neighborDistanceOnly(input.cell.x + 1, input.cell.y));
+    //     //if (input.cell.y + 1 < u32(grid.y)) { result = min(result, neighborDistanceOnly(input.cell.x + 1, input.cell.y + 1)); }
+    // }
+    // distances[index1D] = result;
 
 }
 
