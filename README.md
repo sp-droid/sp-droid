@@ -38,7 +38,6 @@
 ![MSOffice](https://img.shields.io/badge/Microsoft%20Office-D83B01?logo=microsoftoffice&logoColor=fff&style=for-the-badge)&nbsp;
 
 ### 📚 &nbsp;Currently learning
-![UE5](https://img.shields.io/badge/Unreal%20Engine-0E1128?logo=unrealengine&logoColor=fff&style=for-the-badge)&nbsp;
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=fff&style=for-the-badge)
 ![WebGPU](icons/WebGPU.svg)&nbsp;
 
