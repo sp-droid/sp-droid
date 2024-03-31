@@ -1,8 +1,8 @@
 Ready scripts:
 common
 pixelData
+iterativeVoronoi
 
 Left:
 preprocessing
 provinceData
-iterativeVoronoi
