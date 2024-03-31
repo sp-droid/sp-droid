@@ -4,6 +4,8 @@
 
 #include <iostream>
 #include <cassert>
+#include <vector>
+
 
 WGPUAdapter requestAdapter(WGPUInstance instance, WGPURequestAdapterOptions const* options);
 
@@ -45,6 +47,19 @@ int main(int, char**) {
     WGPUAdapter adapter = requestAdapter(instance, &adapterOpts);
 
     std::cout << "Got adapter: " << adapter << std::endl;
+
+    std::vector<WGPUFeatureName> features;
+    // First get the number of features
+    size_t featureCount = wgpuAdapterEnumerateFeatures(adapter, nullptr);
+    // Allocate memory for them
+    features.resize(featureCount);
+    // Retrieve the features
+    wgpuAdapterEnumerateFeatures(adapter, features.data());
+
+    std::cout << "Adapter features:" << std::endl;
+    for (auto f : features) {
+        std::cout << " - " << f << std::endl;
+    }
 
     // Main loop
     while (!glfwWindowShouldClose(window)) {
