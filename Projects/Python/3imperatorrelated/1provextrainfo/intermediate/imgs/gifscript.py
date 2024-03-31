@@ -17,10 +17,6 @@ sizes = (horizontalSize, int(horizontalSize/aspectRatio))
 
 filenames = [file for file in os.listdir() if file.endswith('png')]
 
-# images = []
-# for filename in tqdm(filenames):
-#     image = Image.open(filename).crop(leftTopRightBottom).resize(sizes, Image.Resampling.LANCZOS)
-#     images.append(image)
 def loadImage(filename):
     Image.MAX_IMAGE_PIXELS = None
     return Image.open(filename).crop(leftTopRightBottom).resize(sizes, Image.Resampling.LANCZOS)

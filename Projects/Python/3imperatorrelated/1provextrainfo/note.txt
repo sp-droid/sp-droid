@@ -1,0 +1,8 @@
+Ready scripts:
+common
+pixelData
+
+Left:
+preprocessing
+provinceData
+iterativeVoronoi
