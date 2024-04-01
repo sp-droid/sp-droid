@@ -24,10 +24,11 @@ def smallNormImage(image: np.ndarray):
     return Image.fromarray(np.uint8(normImage)).resize((400,200))
 
 # Save image to test.png file, normalizing for uint8 grayscale values
-def saveTestImage(image: np.ndarray):
+def saveNormImage(image: np.ndarray, filename: str=None):
+    if filename is None: filename = 'test.png'
     minValue, maxValue = np.min(image), np.max(image)
     normImage = (image - minValue) / (maxValue - minValue) * 255
-    Image.fromarray(np.uint8(normImage)).save('test.png')
+    Image.fromarray(np.uint8(normImage)).save(filename)
     return
 
 # In 2D, given a mask of target values, a mask of valid values and a data array, fix all targets to the nearest valid values
