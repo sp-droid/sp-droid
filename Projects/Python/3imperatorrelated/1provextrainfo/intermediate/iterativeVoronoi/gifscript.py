@@ -6,16 +6,17 @@ from joblib import Parallel, delayed
 
 ## OUTPUT OPTIONS
 name = 'europe'
-delay = 1 #in ms
-endDelay = 0 #in ms
+delay = 20 #in ms
+endDelay = 1000 #in ms
 leftTopRightBottom = (7352,854,10287,2504)
-horizontalSize = 600
+horizontalSize = 1920
 ## OUTPUT OPTIONS
 
 aspectRatio = (leftTopRightBottom[2]-leftTopRightBottom[0])/(leftTopRightBottom[3]-leftTopRightBottom[1])
-sizes = (horizontalSize, 340)
+sizes = (horizontalSize, int(horizontalSize/aspectRatio))
 
-filenames = [file for i, file in enumerate(os.listdir('steps')) if file.endswith('png') and i%4==0 ]
+#filenames = [file for i, file in enumerate(os.listdir('steps')) if file.endswith('png') and i%4==0 ]
+filenames = [file for file in os.listdir('steps') if file.endswith('png') ]
 
 def loadImage(filename):
     Image.MAX_IMAGE_PIXELS = None
