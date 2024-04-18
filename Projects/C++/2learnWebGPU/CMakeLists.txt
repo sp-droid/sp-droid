@@ -16,7 +16,11 @@ project(
 )
 
 # Add source to this project's executable.
-add_executable(App main.cpp)
+add_executable(App
+	main.cpp
+	webgpu-utils.h
+	webgpu-utils.cpp
+)
 
 # Add GLFW library for cross-platform window management
 add_subdirectory(libraries/glfw)
@@ -38,6 +42,7 @@ set_target_properties(App PROPERTIES
     CXX_EXTENSIONS OFF
     COMPILE_WARNING_AS_ERROR ON
 )
+
 
 if (MSVC)
     target_compile_options(App PRIVATE /W4)

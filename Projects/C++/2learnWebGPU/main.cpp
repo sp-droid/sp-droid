@@ -2,12 +2,11 @@
 #include <webgpu/webgpu.h>
 #include <glfw3webgpu.h>
 
+#include "webgpu-utils.h"
+
 #include <iostream>
 #include <cassert>
 #include <vector>
-
-
-WGPUAdapter requestAdapter(WGPUInstance instance, WGPURequestAdapterOptions const* options);
 
 int main(int, char**) {
     std::cout << "Starting program" << std::endl;
@@ -21,7 +20,7 @@ int main(int, char**) {
     // Tell GLFW not to care about the API because it does not know WebGPU and we won't use what it could by default setup for other APIs
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
     // Create the window
-    GLFWwindow* window = glfwCreateWindow(640, 480, "Learn WebGPU", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(1280, 720, "Learn WebGPU", NULL, NULL);
 
     // Create a descriptor
     WGPUInstanceDescriptor desc = {};
@@ -57,9 +56,30 @@ int main(int, char**) {
     wgpuAdapterEnumerateFeatures(adapter, features.data());
 
     std::cout << "Adapter features:" << std::endl;
-    for (auto f : features) {
-        std::cout << " - " << f << std::endl;
+    for (auto feature : features) {
+        std::cout << " - " << feature << std::endl;
     }
+	
+	std::cout << "Requesting device..." << std::endl;
+
+	WGPUDeviceDescriptor deviceDesc = {};
+    deviceDesc.nextInChain = nullptr;
+    deviceDesc.label = "My Device"; // anything works here, that's your call
+    deviceDesc.requiredFeaturesCount = 0; // we do not require any specific feature
+    deviceDesc.requiredLimits = nullptr; // we do not require any specific limit
+    deviceDesc.defaultQueue.nextInChain = nullptr;
+    deviceDesc.defaultQueue.label = "The default queue";
+	// [...] Build device descriptor
+	WGPUDevice device = requestDevice(adapter, &deviceDesc);
+
+    auto onDeviceError = [](WGPUErrorType type, char const* message, void* /* pUserData */) {
+        std::cout << "Uncaptured device error: type " << type;
+        if (message) std::cout << " (" << message << ")";
+        std::cout << std::endl;
+        };
+    wgpuDeviceSetUncapturedErrorCallback(device, onDeviceError, nullptr /* pUserData */);
+
+	std::cout << "Got device: " << device << std::endl;
 
     // Main loop
     while (!glfwWindowShouldClose(window)) {
@@ -69,6 +89,7 @@ int main(int, char**) {
     }
     
     // Clean up
+    wgpuDeviceRelease(device);
     wgpuAdapterRelease(adapter);
     wgpuSurfaceRelease(surface);
     wgpuInstanceRelease(instance);
@@ -80,53 +101,3 @@ int main(int, char**) {
     return 0;
 }
 
-/**
- * Utility function to get a WebGPU adapter, so that
- *     WGPUAdapter adapter = requestAdapter(options);
- * is roughly equivalent to
- *     const adapter = await navigator.gpu.requestAdapter(options);
- */
-WGPUAdapter requestAdapter(WGPUInstance instance, WGPURequestAdapterOptions const* options) {
-    // A simple structure holding the local information shared with the
-    // onAdapterRequestEnded callback.
-    struct UserData {
-        WGPUAdapter adapter = nullptr;
-        bool requestEnded = false;
-    };
-    UserData userData;
-
-    // Callback called by wgpuInstanceRequestAdapter when the request returns
-    // This is a C++ lambda function, but could be any function defined in the
-    // global scope. It must be non-capturing (the brackets [] are empty) so
-    // that it behaves like a regular C function pointer, which is what
-    // wgpuInstanceRequestAdapter expects (WebGPU being a C API). The workaround
-    // is to convey what we want to capture through the pUserData pointer,
-    // provided as the last argument of wgpuInstanceRequestAdapter and received
-    // by the callback as its last argument.
-    auto onAdapterRequestEnded = [](WGPURequestAdapterStatus status, WGPUAdapter adapter, char const* message, void* pUserData) {
-        UserData& userData = *reinterpret_cast<UserData*>(pUserData);
-        if (status == WGPURequestAdapterStatus_Success) {
-            userData.adapter = adapter;
-        }
-        else {
-            std::cout << "Could not get WebGPU adapter: " << message << std::endl;
-        }
-        userData.requestEnded = true;
-        };
-
-    // Call to the WebGPU request adapter procedure
-    wgpuInstanceRequestAdapter(
-        instance /* equivalent of navigator.gpu */,
-        options,
-        onAdapterRequestEnded,
-        (void*)&userData
-    );
-
-    // In theory we should wait until onAdapterReady has been called, which
-    // could take some time (what the 'await' keyword does in the JavaScript
-    // code). In practice, we know that when the wgpuInstanceRequestAdapter()
-    // function returns its callback has been called.
-    assert(userData.requestEnded);
-
-    return userData.adapter;
-}
