@@ -18,3 +18,14 @@ WGPUAdapter requestAdapter(WGPUInstance instance, WGPURequestAdapterOptions cons
  * It is very similar to requestAdapter
  */
 WGPUDevice requestDevice(WGPUAdapter adapter, WGPUDeviceDescriptor const* descriptor);
+
+/**
+ * An example of how we can inspect the capabilities of the hardware through
+ * the adapter object.
+ */
+void inspectAdapter(WGPUAdapter adapter);
+
+/**
+ * Display information about a device
+ */
+void inspectDevice(WGPUDevice device);
