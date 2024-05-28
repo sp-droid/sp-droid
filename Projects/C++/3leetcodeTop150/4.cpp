@@ -36,6 +36,6 @@ int main() {
     for (int elem : nums) {
         cout << elem << " ";
     }
-    cout << endl; // Print a newline at the end
+    cout << endl;
     return 0;
 }
