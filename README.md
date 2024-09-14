@@ -2,7 +2,7 @@
 [//]: # (https://dev.to/envoy_/150-badges-for-github-pnk This one has a lot of them)
 [//]: # (https://badges.pages.dev/?q=python This one too)
 
-## Contact details and more in my [pabloarbelo.com](https://pabloarbelo.com/)
+## Contact details and more on my website [pabloarbelo.com](https://pabloarbelo.com/)
 
 ## Skills
 ### 📝 &nbsp;Professional Proficiency in
