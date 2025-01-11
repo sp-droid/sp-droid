@@ -1,1 +1,0 @@
-[Setup](https://thenumb.at/cpp-course/sdl2/01/vsSetup.html)
