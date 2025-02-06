@@ -18,6 +18,7 @@ const faultLine = realFaultLength*courtLength/realLength;
 
 // Interface & sound
 let Vslider;
+let volumeSlider;
 let soundAttack;
 let soundDefense;
 
@@ -41,13 +42,23 @@ function setup() {
 
   Vslider = createSlider(0,2000,150);
   Vslider.position(width-180,40);
+  volumeSlider = createSlider(0, 10, 3);
+  volumeSlider.position(width-180,90);
+  volumeSlider.input(updateVolume);
+
 
   soundAttack = loadSound('soundAttack.mp3');
-  soundAttack.setVolume(0.3);
   soundDefense = loadSound('soundDefense.mp3');
+  soundAttack.setVolume(0.3);
   soundDefense.setVolume(0.3);
 
   setTimeout(startShot, 3000);
+  frameRate(144);
+}
+
+function updateVolume() {
+  soundAttack.setVolume(volumeSlider.value()/10);
+  soundDefense.setVolume(volumeSlider.value()/10);
 }
 
 function draw() {
@@ -82,9 +93,11 @@ function draw() {
   fill(255); stroke(255);
   circle(x, y, 12);
 
-  textSize(16); text(`V0 [km/h]: ${Vslider.value()}`, width-160, 34);
+  textSize(18); text(`V0 [km/h]: ${Vslider.value()}`, width-170, 34);
+  text("Volume", width-146, 86);
 
-  text(`Fastest reaction: ${Math.round(reactionTime)} ms`, 50, 50);
+  text(`Framerate: ${Math.trunc(frameRate())} fps`, 50, 50);
+  text(`Fastest reaction: ${Math.trunc(reactionTime)} ms`, 50, 80);
   if (ready === false) {
     timeStep = deltaTime/physicsTimeRatio;
     for (let i=0; i<physicsTimeRatio; i++) {
@@ -101,7 +114,7 @@ function draw() {
         ready = true;
         returnable = false;
 
-        setTimeout(startShot, 2000);
+        setTimeout(startShot, 200);
         break;
       }
     }
