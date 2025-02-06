@@ -3,7 +3,7 @@ const canvas = document.querySelector("canvas");
 canvas.width = canvas.parentElement.clientWidth;
 canvas.height = canvas.parentElement.clientHeight;
 
-let GRID_SIZEx = 40;
+let GRID_SIZEx = 160;
 let FPS_VALUE = 120;
 let UPDATE_INTERVAL = 1000/FPS_VALUE;
 
@@ -339,6 +339,7 @@ let computePipelines = [
 ]
 
 let continueLoop = true;
+UPDATE_INTERVAL = 500;
 let gameLoop = setInterval(updateGrid, UPDATE_INTERVAL);
 
 // WebGPU functions
@@ -346,28 +347,21 @@ async function updateGrid() {
     targetColor++;
     
     if (continueLoop === true) {
+        if (targetColor === 3) { continueLoop = false; }
+        console.log("NEW ITER")
+        
         /////////////////////////////////////////////////////////////////////////////////////////////
         // Copy new target color into uniform
-        // let encoder = device.createCommandEncoder();
-        // await stagingBuffers[0].mapAsync(GPUMapMode.WRITE);
-        
-        // let data = new Float32Array(stagingBuffers[0].getMappedRange());
-        
-        // data.set([colorPoolArray[targetColor*3], colorPoolArray[targetColor*3+1], colorPoolArray[targetColor*3+2]]);
-        // stagingBuffers[0].unmap();
-
-        // encoder.copyBufferToBuffer(
-        //     stagingBuffers[0], 0,
-        //     computeBuffers[1], 0,
-        //     computeBuffers[1].size
-        // );
-        // await device.queue.submit([encoder.finish()]);
+        console.time('Copy new target color into uniform')
         let encoder;
         let data = new Float32Array([colorPoolArray[targetColor*3], colorPoolArray[targetColor*3+1], colorPoolArray[targetColor*3+2]]);
+        console.log(data)
         await device.queue.writeBuffer(computeBuffers[1], 0, data);
+        console.timeEnd('Copy new target color into uniform')
         
         /////////////////////////////////////////////////////////////////////////////////////////////
         // COMPUTE distances
+        console.time('COMPUTE distances')
         encoder = device.createCommandEncoder();
         const computePass = encoder.beginComputePass();
         computePass.setPipeline(computePipelines[0]);
@@ -377,30 +371,11 @@ async function updateGrid() {
         computePass.dispatchWorkgroups(workgroupCountX, workgroupCountY);
         computePass.end();
         await device.queue.submit([encoder.finish()]);
+        console.timeEnd('COMPUTE distances')
         
         /////////////////////////////////////////////////////////////////////////////////////////////
         // Copy the GPU distance buffer into staging
-        // encoder = device.createCommandEncoder();
-        // encoder.copyBufferToBuffer(
-        //     computeBuffers[3], 0,
-        //     stagingBuffers[1], 0,
-        //     stagingBuffers[1].size
-        // );
-        // await device.queue.submit([encoder.finish()]);
-        
-        // // Read the staging buffer
-        // await stagingBuffers[1].mapAsync(GPUMapMode.READ);
-        // let data2 = new Float32Array(stagingBuffers[1].getMappedRange());
-
-        // let result = 10.0;
-        // let minimumValueIndex = 0;
-        // data2.forEach((x, i) => {
-        //     if (x < result) {
-        //         result = x;
-        //         minimumValueIndex = i;
-        //     }
-        // })
-        // stagingBuffers[1].unmap();
+        console.time('Copy the GPU distance buffer into staging')
         encoder = device.createCommandEncoder();
         const gpuReadBuffer = device.createBuffer({
             size: computeBuffers[3].size,
@@ -412,13 +387,14 @@ async function updateGrid() {
             gpuReadBuffer.size
         );
         await device.queue.submit([encoder.finish()]);
+        console.timeEnd('Copy the GPU distance buffer into staging')
 
+        /////////////////////////////////////////////////////////////////////////////////////////////
+        // Read distances and pick the smallest one's index
+        console.time("Read distances and pick the smallest one's index")
         await gpuReadBuffer.mapAsync(GPUMapMode.READ);
         let data2 = new Float32Array(gpuReadBuffer.getMappedRange())
 
-        // if ((targetColor===1) | (targetColor===2)) {
-        //     console.log(data2)
-        // }
         let result = 10.0;
         let minimumValueIndex = -1;
         data2.forEach((x, i) => {
@@ -430,27 +406,18 @@ async function updateGrid() {
         if (minimumValueIndex === -1) {
             continueLoop = false;
         }
+        console.timeEnd("Read distances and pick the smallest one's index")
 
         /////////////////////////////////////////////////////////////////////////////////////////////
         // Copy chosen cell index into uniform
-        // encoder = device.createCommandEncoder();
-        // await stagingBuffers[2].mapAsync(GPUMapMode.WRITE);
-        
-        // let data3 = new Uint32Array(stagingBuffers[2].getMappedRange());
-        // data3.set([minimumValueIndex]);
-        // stagingBuffers[2].unmap();
-        
-        // encoder.copyBufferToBuffer(
-        //     stagingBuffers[2], 0,
-        //     computeBuffers[2], 0,
-        //     computeBuffers[2].size
-        // );
-        // await device.queue.submit([encoder.finish()]);
+        console.time('Copy chosen cell index into uniform')
         let data3 = new Uint32Array([minimumValueIndex]);
         await device.queue.writeBuffer(computeBuffers[2], 0, data3);
+        console.timeEnd('Copy chosen cell index into uniform')
 
         /////////////////////////////////////////////////////////////////////////////////////////////
         // COMPUTE Place pixel, activate neighbors
+        console.time('COMPUTE Place pixel, activate neighbors')
         encoder = device.createCommandEncoder();
         const computePass2 = encoder.beginComputePass();
         computePass2.setPipeline(computePipelines[1]);
@@ -458,9 +425,11 @@ async function updateGrid() {
         computePass2.dispatchWorkgroups(1);
         computePass2.end();
         await device.queue.submit([encoder.finish()]);
+        console.timeEnd('COMPUTE Place pixel, activate neighbors')
         
         /////////////////////////////////////////////////////////////////////////////////////////////
         // RENDER cells
+        console.time('RENDER cells')
         encoder = device.createCommandEncoder();
         const pass = encoder.beginRenderPass({
             colorAttachments: [{
@@ -478,6 +447,7 @@ async function updateGrid() {
         pass.end();
 
         await device.queue.submit([encoder.finish()]);
+        console.timeEnd('RENDER cells')
     }
 }
 
