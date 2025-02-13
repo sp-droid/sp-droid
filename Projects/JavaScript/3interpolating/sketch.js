@@ -1,92 +1,155 @@
-const width = window.innerWidth;
-const height = window.innerHeight;
-
-const squareX = 500;
-const squareY = Math.round(squareX/width*height);
-const squareWidth = width / squareX;
-const squareHeight = height / squareY;
-const noiseScale = 100;
-const noiseLevel = 10;
-
-let textValue = squareY;
-let frameHistory = Array(35).fill(0);
-let positionHistory = 0;
-let frameNumber = 0;
-
 let provinceMap;
 let dimX;
 let dimY;
+let newDimX;
+let newDimY;
+
+let width;
+let height;
 
 function preload () {
     provinceMap = new arr3D();
 }
 
 function setup() {
-    createCanvas(width, height);
+    
     dimY = provinceMap.length;
     dimX = provinceMap[0].length;
-    console.log(dimX, dimY)
+
+    createCanvas(window.innerWidth, window.innerHeight);
 
     noStroke();
+    frameRate(1);
     textSize(30);
-    frameRate(60);
 }
 
+let i = 0;
+const iters = [1,2,4,8,12,16];
 function draw() {
-    frameNumber += 1;
+    const iter = iters[i]
+    i++;
+    clear();
+    const squareWidth = 8/iter;
+
+    newDimX = dimX*iter;
+    newDimY = dimY*iter;
+
+    width = newDimX*squareWidth;
+    height = newDimY*squareWidth;
+
     // Nested loops to iterate through each row and column
-    for (let i = 0; i < squareX; i++) {
-        for (let j = 0; j < squareY; j++) {
+    for (let i = 0; i < newDimX; i++) {
+        for (let j = 0; j < newDimY; j++) {
             // Calculate the top left position of each square
             let x = i * squareWidth;
-            let y = j * squareHeight;
+            let y = j * squareWidth;
 
-            x += squareWidth/2;
-            y += squareHeight/2;
+            // Normalized centers. From 0 to (N-1)
+            let centerx = (x+squareWidth/2)*newDimX/width;
+            let centery = (y+squareWidth/2)*newDimY/height;
 
-            //x += ((Math.min(1,noise(noiseScale*x*frameNumber)))*noiseLevel-0.5*noiseLevel);
-            //y += ((Math.min(1,noise(noiseScale*y*frameNumber)))*noiseLevel-0.5*noiseLevel);
+            interpDefault(centerx, centery);
 
-            // Normalized centers
-            let centerx = x/width*dimX;
-            let centery = y/height*dimY;
+            // Draw the square
+            rect(x, y, squareWidth, squareWidth);
+        };
+    };
 
-            centerx = clamp(centerx, 0, dimX-1);
-            centery = clamp(centery, 0, dimY-1);
+    for (let i = 0; i < newDimX; i++) {
+        for (let j = 0; j < newDimY; j++) {
+            // Calculate the top left position of each square
+            let x = i * squareWidth;
+            let y = j * squareWidth;
 
-            // if (frameCount/2 % 2 === 0) {
-            //     interpNearest(centerx, centery);
-            // } else {
-            //     interpMajority(centerx, centery);
-            // }
-            //interpNearest(centerx, centery); //1.751
-            //interpBilinear(centerx, centery); //1.579
+            // Normalized centers. From 0 to (N-1)
+            let centerx = (x+squareWidth/2)*dimX/width;
+            let centery = (y+squareWidth/2)*dimY/height;
+
+            interpNearest(centerx, centery); //1.751
+
+            // Draw the square
+            rect(x+width+1, y, squareWidth, squareWidth);
+        };
+    };
+    for (let i = 0; i < newDimX; i++) {
+        for (let j = 0; j < newDimY; j++) {
+            // Calculate the top left position of each square
+            let x = i * squareWidth;
+            let y = j * squareWidth;
+
+            // Normalized centers. From 0 to (N-1)
+            let centerx = (x+squareWidth/2)*dimX/width;
+            let centery = (y+squareWidth/2)*dimY/height;
+
+            interpBilinear(centerx, centery); //1.579
+
+            // Draw the square
+            rect(x, y+height+2, squareWidth, squareWidth);
+        };
+    };
+    for (let i = 0; i < newDimX; i++) {
+        for (let j = 0; j < newDimY; j++) {
+            // Calculate the top left position of each square
+            let x = i * squareWidth;
+            let y = j * squareWidth;
+
+            // Normalized centers. From 0 to (N-1)
+            let centerx = (x+squareWidth/2)*dimX/width;
+            let centery = (y+squareWidth/2)*dimY/height;
+
             interpMajority(centerx, centery); //1.565
 
             // Draw the square
-            rect(x, y, squareWidth, squareHeight);
+            rect(x+width+1, y+height+2, squareWidth, squareWidth);
         };
     };
-    if (frameNumber > 4 && frameNumber < 40) {
-        frameHistory[positionHistory] = 1000/deltaTime;
-        positionHistory += 1;
-    } else if (frameNumber === 40) {
-        noLoop();
+    for (let i = 0; i < newDimX; i++) {
+        for (let j = 0; j < newDimY; j++) {
+            // Calculate the top left position of each square
+            let x = i * squareWidth;
+            let y = j * squareWidth;
+
+            // Normalized centers. From 0 to (N-1)
+            let centerx = (x+squareWidth/2)*dimX/width;
+            let centery = (y+squareWidth/2)*dimY/height;
+            const noise1 = (noise(centerx*0.1,centery*0.1)-0.5)*3.5; // First layer of noise, targets big features. The other ones target progressively smaller ones
+            const noise2 = (noise(centerx*1,centery*1)-0.5)*1.5;
+            const noise3 = (noise(centerx*10,centery*10)-0.5)*0.5;
+            // if (i==0) {console.log((noise(y*noiseScale)-0.5)*noiseFactor)}
+            const noiseTotal = noise1+noise2+noise3;
+            centerx += noiseTotal; centery += noiseTotal;
+            centerx = clamp(centerx, 0, dimX-1);
+            centery = clamp(centery, 0, dimY-1);
+
+            interpMajority(centerx, centery); //1.565
+
+            // Draw the square
+            rect(x*2+2*width+2, y*2+1, squareWidth*2, squareWidth*2);
+        };
     };
-    const average = frameHistory.reduce((a, b) => a + b, 0)/positionHistory;
-    fill(0);
-    text([positionHistory,average], 20, 35);
+
+    fill(255);
+    text("Pixels: 64²x"+iter+"²",2.7*width, 0.1*height);
+    text(1,0.47*width, 0.98*height);
+    text(2,1.47*width, 0.98*height);
+    text(3,0.47*width, 1.08*height);
+    text(4,1.47*width, 1.08*height);
+    text(5,2.04*width, 1.03*height);
+    if (iter == iters[iters.length-1]) {
+        noLoop();
+    }
 }
 
 function clamp(value, minValue, maxValue) {
     return Math.min(maxValue, Math.max(minValue,value));
 }
 
+// CAREFUL. In reality you would use the ID of the province, not the green channel. Be sure the image has colors with unique green channel values
 function interpMajority(centerx, centery) {
-    const left = Math.floor(centerx);
-    const right = Math.ceil(centerx);
-    const up = Math.floor(centery);
-    const bottom = Math.ceil(centery);
+    const left = Math.max(0,Math.floor(centerx));
+    const right = Math.min(dimX-1,Math.ceil(centerx));
+    const up = Math.max(0,Math.floor(centery));
+    const bottom = Math.min(dimY-1,Math.ceil(centery));
 
     const candidates = [
         provinceMap[up][left][1],
