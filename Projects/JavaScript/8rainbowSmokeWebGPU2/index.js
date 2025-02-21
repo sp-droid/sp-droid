@@ -106,22 +106,41 @@ let gridUniform = new Uint32Array([GRID_SIZEx, GRID_SIZEy]);
 const nColors = GRID_SIZEx * GRID_SIZEy;
 let colorPoolStorage = new Float32Array(nColors * 3);
 
+// Initially i assumed that, on a large painting, the sampling pattern wouldn't matter, but I was very wrong. Doing it randomly vs evenly sampling colors and then
+// randomizing is the proper way
+let nColors1D = Math.ceil(nColors**(1/3));
+console.log("Missing colors: ", nColors1D**3-nColors, " out of ",nColors1D**3/1000,"K")
 if (colorOrderPrompt == 1) {
-    for (let i = 0; i < colorPoolStorage.length; ++i) {
-        colorPoolStorage[i] = Math.random();
+    let order = [...Array(nColors).keys()].sort(() => Math.random() - 0.5);
+    let i = 0;
+    for (let r=0; r<nColors1D; r++) {
+        for (let g=0; g<nColors1D; g++) {
+            for (let b=0; b<nColors1D; b++) {
+                if (i===nColors) { break; }
+                let j = order[i];
+                colorPoolStorage[3*j] = r/(nColors1D-1);
+                colorPoolStorage[3*j+1] = g/(nColors1D-1);
+                colorPoolStorage[3*j+2] = b/(nColors1D-1);
+                i++;
+            }
+        }
     }
 } else { // Ordered by hue
-    console.log(hueOffset, hueDirection)
+    let nColors1D = Math.ceil(nColors**(1/3));
+    let i = 0;
     let colors = [];
-    for (let i = 0; i < nColors; ++i) {
-        const r = Math.round(256*Math.random());
-        const g = Math.round(256*Math.random());
-        const b = Math.round(256*Math.random());
+    for (let r=0; r<nColors1D; r++) {
+        for (let g=0; g<nColors1D; g++) {
+            for (let b=0; b<nColors1D; b++) {
+                if (i===nColors) { break; }
 
-        let hue = rgbToHue(r,g,b);
-        if (hue < 0.5) { hue  = hue + 1 }
+                let hue = rgbToHue(Math.round(r/(nColors1D-1)*255), Math.round(g/(nColors1D-1)*255), Math.round(b/(nColors1D-1)*255));
 
-        colors.push({hue: hue, r: r/255, g: g/255, b: b/255})
+                colors.push({hue: hue, r: r/(nColors1D-1), g: g/(nColors1D-1), b: b/(nColors1D-1)})
+
+                i++;
+            }
+        }
     }
     colors.sort((a, b) => hueDirection*((a.hue - hueOffset + 1) % 1 - (b.hue - hueOffset + 1) % 1));
 
@@ -417,59 +436,70 @@ let computePipelines = [
 ]
 //#endregion
 
-function gameLoop() {
+const buffer = device.createBuffer({
+    size: 4, // 4 bytes (e.g., a single float or uint32)
+    usage: GPUBufferUsage.COPY_DST | GPUBufferUsage.MAP_READ, // Allow copying & CPU access
+});
+// let lastTimestamp = performance.now();
+async function gameLoop() {
     // Iteration
-    iteration++;
     if (iteration === nColors) { return; }
 
-    updateGrid();
-    requestAnimationFrame(gameLoop);
+    console.time('RENDER pass')
+    const encoder = device.createCommandEncoder();
+    updateCompute(1, encoder);
+    updateRender(encoder);
+
+    encoder.copyBufferToBuffer(computeBuffers[3], 0, buffer, 0, 4);
+    device.queue.submit([encoder.finish()]);
+
+    // Wait for GPU work to finish and map the buffer for CPU access
+    await buffer.mapAsync(GPUMapMode.READ);
+    const data = new Uint32Array(buffer.getMappedRange());
+    buffer.unmap();
+    console.timeEnd('RENDER pass')
+
+    if (iteration < 10) { requestAnimationFrame(gameLoop) };
+    // requestAnimationFrame(gameLoop)
 }
 requestAnimationFrame(gameLoop);
 
 // WebGPU functions
-async function updateGrid() {
-    // console.time('RENDER pass')
-    /////////////////////////////////////////////////////////////////////////////////////////////
-    let encoder = device.createCommandEncoder();
-    let computePass;
+async function updateCompute(nTimes, encoder) {
+    const computePass = encoder.beginComputePass();
+    computePass.setBindGroup(0, bindGroups[1]);
+    for (let i=0; i<nTimes; i++) {
+        iteration++;
+        if (iteration === nColors) { break; }
 
-    computePass = encoder.beginComputePass();
-    computePass.setPipeline(computePipelines[2]);
-    computePass.setBindGroup(0, bindGroups[1]);
-    computePass.dispatchWorkgroups(1,1,1);
-    computePass.end();
-    
-    /////////////////////////////////////////////////////////////////////////////////////////////
-    // COMPUTE distances
-    computePass = encoder.beginComputePass();
-    computePass.setPipeline(computePipelines[0]);
-    computePass.setBindGroup(0, bindGroups[1]);
-    workgroupCountX = Math.ceil(GRID_SIZEx / WORKGROUP_SIZE);
-    workgroupCountY = Math.ceil(GRID_SIZEy / WORKGROUP_SIZE);
-    computePass.dispatchWorkgroups(workgroupCountX, workgroupCountY);
-    computePass.end();
-    
-    /////////////////////////////////////////////////////////////////////////////////////////////
-    // COMPUTE minimum distance
-    computePass = encoder.beginComputePass();
-    computePass.setPipeline(computePipelines[3]);
-    computePass.setBindGroup(0, bindGroups[1]);
-    computePass.dispatchWorkgroups(1,1,1);
-    computePass.end();
+        /////////////////////////////////////////////////////////////////////////////////////////////
+        // COMPUTE advance iteration
+        computePass.setPipeline(computePipelines[2]);
+        computePass.dispatchWorkgroups(1);
 
-    /////////////////////////////////////////////////////////////////////////////////////////////
-    // COMPUTE Place pixel, activate neighbors
-    computePass = encoder.beginComputePass();
-    computePass.setPipeline(computePipelines[1]);
-    computePass.setBindGroup(0, bindGroups[1]);
-    computePass.dispatchWorkgroups(1);
+        /////////////////////////////////////////////////////////////////////////////////////////////
+        // COMPUTE distances
+        computePass.setPipeline(computePipelines[0]);
+        workgroupCountX = Math.ceil(GRID_SIZEx / WORKGROUP_SIZE);
+        workgroupCountY = Math.ceil(GRID_SIZEy / WORKGROUP_SIZE);
+        computePass.dispatchWorkgroups(workgroupCountX, workgroupCountY);
+
+        /////////////////////////////////////////////////////////////////////////////////////////////
+        // COMPUTE minimum distance
+        computePass.setPipeline(computePipelines[3]);
+        computePass.dispatchWorkgroups(1);
+
+        /////////////////////////////////////////////////////////////////////////////////////////////
+        // COMPUTE Place pixel, activate neighbors
+        computePass.setPipeline(computePipelines[1]);
+        computePass.dispatchWorkgroups(1);
+    }
     computePass.end();
-    
-    device.queue.submit([encoder.finish()]);
+}
+
+async function updateRender(encoder) {
     /////////////////////////////////////////////////////////////////////////////////////////////
     // RENDER cells
-    encoder = device.createCommandEncoder();
     const renderPass = encoder.beginRenderPass({
         colorAttachments: [{
             view: context.getCurrentTexture().createView(),
@@ -484,9 +514,6 @@ async function updateGrid() {
     renderPass.setVertexBuffer(0, vertexBuffer);
     renderPass.draw(vertices.length / 2, GRID_SIZEx*GRID_SIZEy); // 6 vertices
     renderPass.end();
-
-    device.queue.submit([encoder.finish()]);
-    // console.timeEnd('RENDER pass')
 }
 
 // Functions

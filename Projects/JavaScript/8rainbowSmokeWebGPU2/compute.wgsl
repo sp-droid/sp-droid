@@ -17,7 +17,10 @@ fn cellIndex(x: u32, y: u32, gridX: u32) -> u32 {
 }
 
 fn l2normSquared(v1: vec3f, v2: vec3f) -> f32 {
-    return pow(v1.x-v2.x,2) + pow(v1.y-v2.y,2) + pow(v1.z-v2.z,2);
+    let a = v1.x-v2.x;
+    let b = v1.y-v2.y;
+    let c = v1.z-v2.z;
+    return sqrt(a*a+b*b+c*c);
 }
 
 fn neighborDistance(x: u32, y: u32, targetColor: vec3f, gridX: u32) -> vec2f {
@@ -75,7 +78,7 @@ fn distancesAverageMethodMain(input: ComputeInput) {
         results += neighborDistance(cellX + 1, cellY, targetColor, grid.x);
         if (cellY + 1 < grid.y) { results += neighborDistance(cellX + 1, cellY + 1, targetColor, grid.x); }
     }
-    distancesGlobal[index1D] = results.y / results.x;
+    distancesGlobal[index1D] = results.y / results.x +(f32(iterationGlobal+index1D) % 13)*0.0000001;
 }
 
 @compute @workgroup_size(8, 8)
@@ -97,18 +100,18 @@ fn distancesMinimumMethodMain(input: ComputeInput) {
     // Iterate over painted neighbors, picking the smallest one (minimum method)
     var result = 10.0;
     if (cellX - 1 >= 0) {
-        //if (cellY - 1 >= 0) { result = min(result, neighborDistanceOnly(cellX - 1, cellY - 1, targetColor, grid.x)); }
+        if (cellY - 1 >= 0) { result = min(result, neighborDistanceOnly(cellX - 1, cellY - 1, targetColor, grid.x)); }
         result = min(result, neighborDistanceOnly(cellX - 1, cellY, targetColor, grid.x));
-        //if (cellY + 1 < grid.y) { result = min(result, neighborDistanceOnly(cellX - 1, cellY + 1, targetColor, grid.x)); }
+        if (cellY + 1 < grid.y) { result = min(result, neighborDistanceOnly(cellX - 1, cellY + 1, targetColor, grid.x)); }
     }
     if (cellY + 1 < grid.y) { result = min(result, neighborDistanceOnly(cellX, cellY + 1, targetColor, grid.x)); }
     if (cellY - 1 >= 0) { result = min(result, neighborDistanceOnly(cellX, cellY - 1, targetColor, grid.x)); }
     if (cellX + 1 < grid.x) {
-        //if (cellY - 1 >= 0) { result = min(result, neighborDistanceOnly(cellX + 1, cellY - 1, targetColor, grid.x)); }
+        if (cellY - 1 >= 0) { result = min(result, neighborDistanceOnly(cellX + 1, cellY - 1, targetColor, grid.x)); }
         result = min(result, neighborDistanceOnly(cellX + 1, cellY, targetColor, grid.x));
-        //if (cellY + 1 < grid.y) { result = min(result, neighborDistanceOnly(cellX + 1, cellY + 1, targetColor, grid.x)); }
+        if (cellY + 1 < grid.y) { result = min(result, neighborDistanceOnly(cellX + 1, cellY + 1, targetColor, grid.x)); }
     }
-    distancesGlobal[index1D] = result;
+    distancesGlobal[index1D] = result +(f32(iterationGlobal+index1D) % 13)*0.0000001;
 
 }
 
