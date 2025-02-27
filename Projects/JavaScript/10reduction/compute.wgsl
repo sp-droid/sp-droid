@@ -218,7 +218,7 @@ fn sumReduce6(
     if (localID < 8) { sdata[localID] += sdata[localID + 8]; } workgroupBarrier();
     if (localID < 4) { sdata[localID] += sdata[localID + 4]; } workgroupBarrier();
     if (localID < 2) { sdata[localID] += sdata[localID + 2]; } workgroupBarrier();
-    if (localID < 1) { sdata[localID] += sdata[localID + 1]; } workgroupBarrier();
+    if (localID < 1) { sdata[localID] += sdata[localID + 1]; };
 
     if (localID == 0) {
         outputGlobal[workgroupID] = sdata[0];
@@ -255,7 +255,7 @@ fn sumReduce7(
     if (localID < 8) { sdata[localID] += sdata[localID + 8]; } workgroupBarrier();
     if (localID < 4) { sdata[localID] += sdata[localID + 4]; } workgroupBarrier();
     if (localID < 2) { sdata[localID] += sdata[localID + 2]; } workgroupBarrier();
-    if (localID < 1) { sdata[localID] += sdata[localID + 1]; } workgroupBarrier();
+    if (localID < 1) { sdata[localID] += sdata[localID + 1]; }
 
     if (localID == 0) {
         atomicAdd(&outputGlobalAtomic, sdata[0]);

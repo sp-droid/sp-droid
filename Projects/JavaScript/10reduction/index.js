@@ -6,10 +6,6 @@ canvas.height = canvas.parentElement.clientHeight;
 const SIZE1D = 3072;
 
 //#region WebGPU initialization
-// Constants
-const WORKGROUP_SIZE = 8;
-let workgroupCountX;
-let workgroupCountY;
 
 // Checking WebGPU browser support
 if (!navigator.gpu) {
@@ -213,7 +209,7 @@ let computePass;
 let auxBuffer;
 let finalResultBuffer;
 let targetTime;
-const n = 400;
+const n = 10;
 await multipleChecks("reduction", 0, n);
 await multipleChecks("reduction", 1, n);
 await multipleChecks("reduction", 2, n);
