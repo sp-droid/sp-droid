@@ -1,9 +1,14 @@
+// Constants
+const COARSE_FACTOR = 32;
+let WORKGROUP_SIZE = 1024;
+
+const SIZE1D = 7168;
+const n = 100;
+
 // UI
 const canvas = document.querySelector("canvas");
 canvas.width = canvas.parentElement.clientWidth;
 canvas.height = canvas.parentElement.clientHeight;
-
-const SIZE1D = 3072;
 
 //#region WebGPU initialization
 
@@ -15,8 +20,24 @@ if (!navigator.gpu) {
 // Requesting GPU adapter
 const adapter = await navigator.gpu.requestAdapter();
 if (!adapter) { throw new Error("No appropriate GPUAdapter found.") }
+
+// Handling adapter limits
+if (adapter.limits.maxComputeWorkgroupSizeX < WORKGROUP_SIZE) {
+    WORKGROUP_SIZE = 256;
+    console.log("WORKGROUP_SIZE reduced to 256");
+}
+if (adapter.limits.maxStorageBufferBindingSize < SIZE1D*SIZE1D*4) {
+    throw new Error("Storage buffer size not supported.");
+}
+
 // Requesting GPU device
-const device = await adapter.requestDevice();
+const device = await adapter.requestDevice({
+    requiredLimits: {
+        maxComputeWorkgroupSizeX: WORKGROUP_SIZE,
+        maxComputeInvocationsPerWorkgroup: WORKGROUP_SIZE,
+        maxStorageBufferBindingSize: SIZE1D*SIZE1D*4
+    }
+});
 
 // Requesting GPU canvas context
 const context = canvas.getContext('webgpu');
@@ -27,9 +48,13 @@ context.configure({
 });
 
 // Shaders
+let fileComputeShader = await loadTextFile("compute.wgsl");
+fileComputeShader = fileComputeShader
+    .replace("$WORKGROUP_SIZE$", WORKGROUP_SIZE)
+    .replace("$COARSE_FACTOR$", COARSE_FACTOR);
 const computeShaderModule = device.createShaderModule({
     label: "Parallel reduction shader",
-    code: await loadTextFile("compute.wgsl")
+    code: fileComputeShader
 });
 
 //#endregion
@@ -40,14 +65,11 @@ const computeShaderModule = device.createShaderModule({
 const nNumbers = SIZE1D * SIZE1D;
 const numberArray = new Uint32Array(nNumbers);
 const numberArrayBytes = nNumbers*4;
-const auxZeros = new Uint32Array(Math.ceil(nNumbers/256));
+const auxZeros = new Uint32Array(Math.ceil(nNumbers/WORKGROUP_SIZE));
 console.log("Number of elements: ", nNumbers/1000000,"M, in ",numberArrayBytes/1000000, "MB");
 
-let sum = 0;
 for (let i = 0; i < nNumbers; i++) {
     numberArray[i] = Math.round(Math.random() * 10);
-
-    sum += numberArray[i];
 }
 
 //#endregion
@@ -66,12 +88,12 @@ const bufferComputeNumbers = device.createBuffer({
 })
 const bufferComputeResultA = device.createBuffer({
     label: "Result buffer A",
-    size: Math.ceil(nNumbers/256)*4,
+    size: Math.ceil(nNumbers/WORKGROUP_SIZE)*4,
     usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC
 })
 const bufferComputeResultB = device.createBuffer({
     label: "Result buffer B",
-    size: Math.ceil(nNumbers/256)*4,
+    size: Math.ceil(nNumbers/WORKGROUP_SIZE)*4,
     usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC
 })
 const bufferComputeResultAtomic = device.createBuffer({
@@ -184,20 +206,23 @@ const computePipelines = [
             module: computeShaderModule,
             entryPoint: "sumReduce7"
         }
+    }),
+    device.createComputePipeline({
+        label: "Reduce 8",
+        layout: pipelineLayout,
+        compute: {
+            module: computeShaderModule,
+            entryPoint: "sumReduce8"
+        }
     })
 ]
 //#endregion
 
 // CPU
-const startTime = performance.now();
-let result = 0;
-for (let i = 0; i < nNumbers; i++) {
-    result += numberArray[i];
-}
-const endTime = performance.now();
-const totalTime = (endTime - startTime);
-console.log(`Result CPU ST:\n${totalTime.toFixed(2)} ms [${(numberArrayBytes/1000000/totalTime).toFixed(2)} GB/s]`);
-if (result != sum) { console.error("CPU result (",sum,") not matching: ", result) }
+let startTime = performance.now();
+const sum = numberArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+let totalTime = performance.now() - startTime;
+console.log(`Result CPU sum:\n${totalTime.toFixed(2)} ms [${(numberArrayBytes/1000000/totalTime).toFixed(2)} GB/s]`);
 
 // GPU
 
@@ -209,7 +234,7 @@ let computePass;
 let auxBuffer;
 let finalResultBuffer;
 let targetTime;
-const n = 10;
+await multipleChecks("reduction", 0, 1);
 await multipleChecks("reduction", 0, n);
 await multipleChecks("reduction", 1, n);
 await multipleChecks("reduction", 2, n);
@@ -218,8 +243,8 @@ await multipleChecks("reduction", 4, n);
 await multipleChecks("reduction", 5, n);
 await multipleChecks("reduction", 6, n);
 await multipleChecks("reduction", 7, n);
+await multipleChecks("reduction", 8, n);
 await multipleChecks("naive ST", "", 1);
-
 
 function sumReduce(pipelineIndex) {
     const COARSE_FACTOR = 32;
@@ -231,7 +256,7 @@ function sumReduce(pipelineIndex) {
     computePass = encoder.beginComputePass();
     computePass.setPipeline(computePipelines[pipelineIndex+1]);
 
-    let dispatches = Math.ceil(nNumbers/256/workgroupNumberModifier);
+    let dispatches = Math.ceil(nNumbers/WORKGROUP_SIZE/workgroupNumberModifier);
 
     if (pipelineIndex == 7) {
         device.queue.writeBuffer(bufferComputeResultAtomic, 0, new Uint32Array([0]));
@@ -239,6 +264,14 @@ function sumReduce(pipelineIndex) {
         computePass.dispatchWorkgroups(dispatches,1,1);
         computePass.end();
         finalResultBuffer = bufferComputeResultAtomic
+        return;
+    }
+    if (pipelineIndex == 8) {
+        device.queue.writeBuffer(bufferComputeResultAtomic, 0, new Uint32Array([dispatches]));
+        computePass.setBindGroup(0, bindGroup);
+        computePass.dispatchWorkgroups(dispatches,1,1);
+        computePass.end();
+        finalResultBuffer = bufferComputeResultA;
         return;
     }
 
@@ -264,7 +297,7 @@ function sumReduce(pipelineIndex) {
                 { binding: 3, resource: { buffer: bufferComputeResultAtomic } }
             ]
         })
-        dispatches = Math.ceil(dispatches/256/workgroupNumberModifier);
+        dispatches = Math.ceil(dispatches/WORKGROUP_SIZE/workgroupNumberModifier);
         i++;
     }
     computePass.setBindGroup(0, bindGroup);
@@ -291,6 +324,7 @@ async function multipleChecks(algorithm, reduceVariant, nChecks) {
         totalTime += (endTime - startTime);
     }
     totalTime /= nChecks;
+    if (reduceVariant === 0 && nChecks === 1) { return;}
     if (reduceVariant === 0) { targetTime = totalTime; }
     console.log(`Result GPU ${algorithm}${reduceVariant}: (x${(targetTime/totalTime).toFixed(2)})\n${totalTime.toFixed(2)} ms [${(numberArrayBytes/1000000/totalTime).toFixed(2)} GB/s]`);
 }
@@ -319,7 +353,7 @@ async function computeAndCheck(algorithm, reduceVariant) {
     device.queue.submit([encoder.finish()]);
 
     await stagingBufferResult.mapAsync(GPUMapMode.READ);
-    result = new Uint32Array(stagingBufferResult.getMappedRange())[0];
+    const result = new Uint32Array(stagingBufferResult.getMappedRange())[0];
     if (result != sum) { console.error(`${algorithm} result (${result}) not matching true: ${sum}`) }
     stagingBufferResult.unmap();
 }
