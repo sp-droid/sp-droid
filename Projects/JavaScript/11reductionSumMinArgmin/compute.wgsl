@@ -239,7 +239,7 @@ fn reductionArgmin(
         globalID += WORKGROUP_SIZE;
         while (globalID < numWorkgroups) {
             let index2 = outputGlobal[globalID];
-            let value = inputGlobal[globalID];
+            let value = inputGlobal[index2];
             if (value < minValue) {
                 index = index2;
                 minValue = value;
