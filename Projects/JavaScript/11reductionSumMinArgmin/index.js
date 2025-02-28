@@ -1,9 +1,9 @@
 // Constants
 const COARSE_FACTOR = 32;
-let WORKGROUP_SIZE = 256;
+let WORKGROUP_SIZE = 1024;
 
-const SIZE1D = 8192;
-const n = 1000;
+const SIZE1D = 16384;
+const n = 100;
 
 // UI
 const canvas = document.querySelector("canvas");
@@ -11,6 +11,7 @@ canvas.width = canvas.parentElement.clientWidth;
 canvas.height = canvas.parentElement.clientHeight;
 
 //#region WebGPU initialization
+
 // Checking WebGPU browser support
 if (!navigator.gpu) {
     throw new Error("WebGPU not supported on this browser.");
@@ -27,13 +28,17 @@ if (adapter.limits.maxComputeWorkgroupSizeX < WORKGROUP_SIZE) {
 if (adapter.limits.maxStorageBufferBindingSize < SIZE1D*SIZE1D*4) {
     throw new Error("Storage buffer size not supported.");
 }
+if (adapter.limits.maxBufferSize < SIZE1D*SIZE1D*4) {
+    throw new Error("Storage buffer size not supported.");
+}
 
 // Requesting GPU device
 const device = await adapter.requestDevice({
     requiredLimits: {
         maxComputeWorkgroupSizeX: WORKGROUP_SIZE,
         maxComputeInvocationsPerWorkgroup: WORKGROUP_SIZE,
-        maxStorageBufferBindingSize: SIZE1D*SIZE1D*4
+        maxStorageBufferBindingSize: SIZE1D*SIZE1D*4,
+        maxBufferSize: SIZE1D*SIZE1D*4
     }
 });
 
@@ -66,8 +71,11 @@ const numberArrayBytes = nNumbers*4;
 console.log("Number of elements: ", nNumbers/1000000,"M, in ",numberArrayBytes/1000000, "MB");
 
 for (let i = 0; i < nNumbers; i++) {
-    numberArray[i] = Math.round(Math.random() * 100)+1;
+    numberArray[i] = Math.round(Math.random() * 5)+1;
 }
+
+const dispatches = Math.ceil(nNumbers/WORKGROUP_SIZE/COARSE_FACTOR);
+console.log("Dispatches: ", dispatches);
 
 //#endregion
 
@@ -83,9 +91,14 @@ const bufferComputeNumbers = device.createBuffer({
     size: numberArrayBytes,
     usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
 })
-const bufferComputeResultAtomicValue = device.createBuffer({
-    label: "Result buffer atomic",
+const bufferComputeCounterAtomic = device.createBuffer({
+    label: "Count buffer atomic",
     size: 4,
+    usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
+})
+const bufferComputeResult = device.createBuffer({
+    label: "Result buffer",
+    size: dispatches*4,
     usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC
 })
 
@@ -105,7 +118,8 @@ const bindGroupLayout = device.createBindGroupLayout({
     entries: [
         { binding: 0, visibility: GPUShaderStage.COMPUTE, buffer: { } }, // Size uniform
         { binding: 1, visibility: GPUShaderStage.COMPUTE, buffer: { type: "read-only-storage" } }, // Number buffer
-        { binding: 2, visibility: GPUShaderStage.COMPUTE, buffer: { type: "storage" } }, // Result buffer atomic sum
+        { binding: 2, visibility: GPUShaderStage.COMPUTE, buffer: { type: "storage" } }, // Counter buffer atomic
+        { binding: 3, visibility: GPUShaderStage.COMPUTE, buffer: { type: "storage" } }, // Result buffer
     ]
 })
 
@@ -116,7 +130,8 @@ let bindGroup = device.createBindGroup({
     entries: [
         { binding: 0, resource: { buffer: bufferComputeUniformSize } },
         { binding: 1, resource: { buffer: bufferComputeNumbers } },
-        { binding: 2, resource: { buffer: bufferComputeResultAtomicValue } },
+        { binding: 2, resource: { buffer: bufferComputeCounterAtomic } },
+        { binding: 3, resource: { buffer: bufferComputeResult } },
     ]
 })
 //#endregion
@@ -150,9 +165,6 @@ const computePipelineReductionArgmin = device.createComputePipeline({
         entryPoint: "reductionArgmin"
     }})
 //#endregion
-
-const dispatches = Math.ceil(nNumbers/WORKGROUP_SIZE/COARSE_FACTOR);
-console.log("Dispatches: ", dispatches);
 
 // CPU
 let startTime = performance.now();
@@ -227,18 +239,16 @@ async function multipleChecks(algorithm, nChecks) {
 async function computeAndCheck(algorithm) {
     encoder = device.createCommandEncoder();
 
+    device.queue.writeBuffer(bufferComputeCounterAtomic, 0, new Uint32Array([dispatches]));
     if (algorithm === "reductionSum") {
-        device.queue.writeBuffer(bufferComputeResultAtomicValue, 0, new Uint32Array([0]));
         reductionSum();
     } else if (algorithm === "reductionMin") {
-        device.queue.writeBuffer(bufferComputeResultAtomicValue, 0, new Uint32Array([4294967295]));
         reductionMin();
     } else if (algorithm === "reductionArgmin") {
-        device.queue.writeBuffer(bufferComputeResultAtomicValue, 0, new Uint32Array([0]));
         reductionArgmin();
     }
 
-    encoder.copyBufferToBuffer(bufferComputeResultAtomicValue, 0, stagingBufferResult, 0, 4);
+    encoder.copyBufferToBuffer(bufferComputeResult, 0, stagingBufferResult, 0, 4);
     device.queue.submit([encoder.finish()]);
 
     await stagingBufferResult.mapAsync(GPUMapMode.READ);
