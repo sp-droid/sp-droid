@@ -436,31 +436,16 @@ let computePipelines = [
 ]
 //#endregion
 
-const buffer = device.createBuffer({
-    size: 4, // 4 bytes (e.g., a single float or uint32)
-    usage: GPUBufferUsage.COPY_DST | GPUBufferUsage.MAP_READ, // Allow copying & CPU access
-});
-// let lastTimestamp = performance.now();
 async function gameLoop() {
     // Iteration
     if (iteration === nColors) { return; }
 
-    console.time('RENDER pass')
     const encoder = device.createCommandEncoder();
-    updateCompute(1, encoder);
+    updateCompute(80, encoder);
     updateRender(encoder);
-
-    encoder.copyBufferToBuffer(computeBuffers[3], 0, buffer, 0, 4);
     device.queue.submit([encoder.finish()]);
-
-    // Wait for GPU work to finish and map the buffer for CPU access
-    await buffer.mapAsync(GPUMapMode.READ);
-    const data = new Uint32Array(buffer.getMappedRange());
-    buffer.unmap();
-    console.timeEnd('RENDER pass')
-
-    if (iteration < 10) { requestAnimationFrame(gameLoop) };
-    // requestAnimationFrame(gameLoop)
+    
+    requestAnimationFrame(gameLoop)
 }
 requestAnimationFrame(gameLoop);
 
