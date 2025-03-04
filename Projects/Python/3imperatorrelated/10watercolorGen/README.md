@@ -10,8 +10,11 @@ The only parameters you really have to tune correctly are in the **last cell (wi
 
 If you are using it on Imperator, I advise you to increase the contrast 10%, brightness 10% and then lighting 4-6% with an external tool like Gimp
 
-You need to install Python and have the following modules:
-Numpy, pandas, scipy, scikit-learn, tqdm, joblib, matplotlib, PIL and dill.
+Installation with conda:
+
+- conda create -n watercolor python=3.9
+- conda activate watercolor
+- conda install numba cudatoolkit numpy pandas scipy tqdm joblib matplotlib scikit-learn ipykernel dill ipywidgets
 
 Model short explanation:
 A multistep watercolor-maps from heightmap without sea floor generator.
