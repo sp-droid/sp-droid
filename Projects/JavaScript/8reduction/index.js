@@ -3,7 +3,7 @@ const COARSE_FACTOR = 32;
 let WORKGROUP_SIZE = 1024;
 
 const SIZE1D = 7168;
-const n = 100;
+const n = 20;
 
 // UI
 const canvas = document.querySelector("canvas");
@@ -29,6 +29,7 @@ if (adapter.limits.maxComputeWorkgroupSizeX < WORKGROUP_SIZE) {
 if (adapter.limits.maxStorageBufferBindingSize < SIZE1D*SIZE1D*4) {
     throw new Error("Storage buffer size not supported.");
 }
+console.log("Device has timestamp query feature: ", adapter.features.has('timestamp-query'))
 
 // Requesting GPU device
 const device = await adapter.requestDevice({
@@ -36,7 +37,8 @@ const device = await adapter.requestDevice({
         maxComputeWorkgroupSizeX: WORKGROUP_SIZE,
         maxComputeInvocationsPerWorkgroup: WORKGROUP_SIZE,
         maxStorageBufferBindingSize: SIZE1D*SIZE1D*4
-    }
+    },
+    requiredFeatures: ['timestamp-query']
 });
 
 // Requesting GPU canvas context
@@ -225,6 +227,99 @@ let totalTime = performance.now() - startTime;
 console.log(`Result CPU sum:\n${totalTime.toFixed(2)} ms [${(numberArrayBytes/1000000/totalTime).toFixed(2)} GB/s]`);
 
 // GPU
+class TimingHelper {
+    #canTimestamp;
+    #device;
+    #querySet;
+    #resolveBuffer;
+    #resultBuffer;
+    #resultBuffers = [];
+    // state can be 'free', 'need resolve', 'wait for result'
+    #state = 'free';
+
+    constructor(device) {
+    this.#device = device;
+    this.#canTimestamp = device.features.has('timestamp-query');
+    if (this.#canTimestamp) {
+        this.#querySet = device.createQuerySet({
+        type: 'timestamp',
+        count: 2,
+        });
+        this.#resolveBuffer = device.createBuffer({
+        size: this.#querySet.count * 8,
+        usage: GPUBufferUsage.QUERY_RESOLVE | GPUBufferUsage.COPY_SRC,
+        });
+    }
+    }
+
+    #beginTimestampPass(encoder, fnName, descriptor) {
+    if (this.#canTimestamp) {
+        this.#state = 'need resolve';
+
+        const pass = encoder[fnName]({
+        ...descriptor,
+        ...{
+            timestampWrites: {
+            querySet: this.#querySet,
+            beginningOfPassWriteIndex: 0,
+            endOfPassWriteIndex: 1,
+            },
+        },
+        });
+
+        const resolve = () => this.#resolveTiming(encoder);
+        pass.end = (function(origFn) {
+        return function() {
+            origFn.call(this);
+            resolve();
+        };
+        })(pass.end);
+
+        return pass;
+    } else {
+        return encoder[fnName](descriptor);
+    }
+    }
+
+    beginRenderPass(encoder, descriptor = {}) {
+    return this.#beginTimestampPass(encoder, 'beginRenderPass', descriptor);
+    }
+
+    beginComputePass(encoder, descriptor = {}) {
+    return this.#beginTimestampPass(encoder, 'beginComputePass', descriptor);
+    }
+
+    #resolveTiming(encoder) {
+    if (!this.#canTimestamp) {
+        return;
+    }
+    this.#state = 'wait for result';
+
+    this.#resultBuffer = this.#resultBuffers.pop() || this.#device.createBuffer({
+        size: this.#resolveBuffer.size,
+        usage: GPUBufferUsage.COPY_DST | GPUBufferUsage.MAP_READ,
+    });
+
+    encoder.resolveQuerySet(this.#querySet, 0, this.#querySet.count, this.#resolveBuffer, 0);
+    encoder.copyBufferToBuffer(this.#resolveBuffer, 0, this.#resultBuffer, 0, this.#resultBuffer.size);
+    }
+
+    async getResult() { // Returns result in microseconds
+    if (!this.#canTimestamp) {
+        return 0;
+    }
+    this.#state = 'free';
+
+    const resultBuffer = this.#resultBuffer;
+    await resultBuffer.mapAsync(GPUMapMode.READ);
+    const times = new BigInt64Array(resultBuffer.getMappedRange());
+    const duration = Number((times[1] - times[0])/1000n);
+    resultBuffer.unmap();
+    this.#resultBuffers.push(resultBuffer);
+    return duration;
+    }
+}
+const timingHelper = new TimingHelper(device);
 
 let encoder;
 let computePass;
@@ -234,26 +329,25 @@ let computePass;
 let auxBuffer;
 let finalResultBuffer;
 let targetTime;
-await multipleChecks("reduction", 0, 1);
+await multipleChecks("reduction", 0, 1); // warm up
 await multipleChecks("reduction", 0, n);
-await multipleChecks("reduction", 1, n);
-await multipleChecks("reduction", 2, n);
-await multipleChecks("reduction", 3, n);
-await multipleChecks("reduction", 4, n);
-await multipleChecks("reduction", 5, n);
-await multipleChecks("reduction", 6, n);
-await multipleChecks("reduction", 7, n);
 await multipleChecks("reduction", 8, n);
+await multipleChecks("reduction", 7, n);
+await multipleChecks("reduction", 6, n);
+await multipleChecks("reduction", 5, n);
+await multipleChecks("reduction", 4, n);
+await multipleChecks("reduction", 3, n);
+await multipleChecks("reduction", 2, n);
+await multipleChecks("reduction", 1, n);
 await multipleChecks("naive ST", "", 1);
 
-function sumReduce(pipelineIndex) {
+function sumReduce(pipelineIndex, computePass) {
     const COARSE_FACTOR = 32;
 
     let workgroupNumberModifier = 1;
     if (pipelineIndex >= 6) { workgroupNumberModifier = COARSE_FACTOR; 
     } else if (pipelineIndex >= 3) { workgroupNumberModifier = 2; }
 
-    computePass = encoder.beginComputePass();
     computePass.setPipeline(computePipelines[pipelineIndex+1]);
 
     let dispatches = Math.ceil(nNumbers/WORKGROUP_SIZE/workgroupNumberModifier);
@@ -262,7 +356,6 @@ function sumReduce(pipelineIndex) {
         device.queue.writeBuffer(bufferComputeResultAtomic, 0, new Uint32Array([0]));
         computePass.setBindGroup(0, bindGroup);
         computePass.dispatchWorkgroups(dispatches,1,1);
-        computePass.end();
         finalResultBuffer = bufferComputeResultAtomic
         return;
     }
@@ -270,7 +363,6 @@ function sumReduce(pipelineIndex) {
         device.queue.writeBuffer(bufferComputeResultAtomic, 0, new Uint32Array([dispatches]));
         computePass.setBindGroup(0, bindGroup);
         computePass.dispatchWorkgroups(dispatches,1,1);
-        computePass.end();
         finalResultBuffer = bufferComputeResultA;
         return;
     }
@@ -302,28 +394,24 @@ function sumReduce(pipelineIndex) {
     }
     computePass.setBindGroup(0, bindGroup);
     computePass.dispatchWorkgroups(1,1,1);
-    computePass.end();
 }
 
-function sumST() {
-    computePass = encoder.beginComputePass();
+function sumST(computePass) {
     computePass.setPipeline(computePipelines[0]);
     computePass.setBindGroup(0, bindGroup);
     computePass.dispatchWorkgroups(1,1,1);
-    computePass.end();
 }
 
 async function multipleChecks(algorithm, reduceVariant, nChecks) {
     device.queue.writeBuffer(bufferComputeResultA, 0, auxZeros);
     device.queue.writeBuffer(bufferComputeResultB, 0, auxZeros);
-    let totalTime = 0;
+
+    totalTime = 0;
     for (let i = 0; i < nChecks; i++) {
-        const startTime = performance.now();
-        await computeAndCheck(algorithm, reduceVariant);
-        const endTime = performance.now();
-        totalTime += (endTime - startTime);
+        totalTime += await computeAndCheck(algorithm, reduceVariant);
     }
-    totalTime /= nChecks;
+    totalTime /= nChecks*1000;
+
     if (reduceVariant === 0 && nChecks === 1) { return;}
     if (reduceVariant === 0) { targetTime = totalTime; }
     console.log(`Result GPU ${algorithm}${reduceVariant}: (x${(targetTime/totalTime).toFixed(2)})\n${totalTime.toFixed(2)} ms [${(numberArrayBytes/1000000/totalTime).toFixed(2)} GB/s]`);
@@ -343,19 +431,23 @@ async function computeAndCheck(algorithm, reduceVariant) {
             { binding: 3, resource: { buffer: bufferComputeResultAtomic } }
         ]
     })
+    computePass = timingHelper.beginComputePass(encoder);
     if (algorithm === "naive ST") {
-        sumST();
+        sumST(computePass);
     } else if (algorithm === "reduction") {
-        sumReduce(reduceVariant);
+        sumReduce(reduceVariant, computePass);
     }
+    computePass.end();
 
-    encoder.copyBufferToBuffer(finalResultBuffer, 0, stagingBufferResult, 0, 4);
+    // encoder.copyBufferToBuffer(finalResultBuffer, 0, stagingBufferResult, 0, 4);
     device.queue.submit([encoder.finish()]);
 
-    await stagingBufferResult.mapAsync(GPUMapMode.READ);
-    const result = new Uint32Array(stagingBufferResult.getMappedRange())[0];
-    if (result != sum) { console.error(`${algorithm} result (${result}) not matching true: ${sum}`) }
-    stagingBufferResult.unmap();
+    // await stagingBufferResult.mapAsync(GPUMapMode.READ);
+    // const result = new Uint32Array(stagingBufferResult.getMappedRange())[0];
+    // if (result != sum) { console.error(`${algorithm} result (${result}) not matching true: ${sum}`) }
+    // stagingBufferResult.unmap();
+
+    return timingHelper.getResult();
 }
 
 // Functions
