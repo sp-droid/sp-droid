@@ -193,11 +193,11 @@ fn mainPaintFrozen(
 
     let state = globalCellState[index1D];
     if (state == 2u) {
-        const threshold = 10f;
+        const threshold = 30.;
         let progenyMax = f32(atomicLoad(&atomicMaxProgeny)) - threshold;
         let progeny = max(1f, f32(globalFrozenParentProgeny[index1D].progeny)-threshold);
         
-        let progenyIndex = u32(1000f * log(progeny)/log(progenyMax) );
+        let progenyIndex = u32(1000. * log(progeny)/log(progenyMax) );
         if (progenyIndex == 0) {
             globalCellColor[index1D] = 0x000000FFu;
         } else {

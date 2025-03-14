@@ -6,7 +6,7 @@ const canvas = document.querySelector("canvas");
 canvas.width = canvas.parentElement.clientWidth;
 canvas.height = canvas.parentElement.clientHeight;
 
-const horizontalResolutionPrompt = parseInt(prompt("Horizontal resolution:", "56"));
+const horizontalResolutionPrompt = parseInt(prompt("Horizontal resolution:", "1024"));
 const nSeedsPrompt = parseInt(prompt("Number of seeds:", "10"));
 
 let GRID_SIZEx = horizontalResolutionPrompt;
@@ -104,9 +104,11 @@ let dataGridSize = new Uint32Array([GRID_SIZEx, GRID_SIZEy]);
 const nColors = 1000;
 let dataCellColorPool = new Uint32Array(nColors);
 
+const colormap = d3.scaleSequential(d3.interpolateTurbo); // Similar to "jet"
 for (let i=0; i<nColors; i++) {
-    const [r, g, b] = evaluate_cmap(i/nColors, 'binary', true); //gist_rainbow //binary
-    dataCellColorPool[i] = (r << 24) | (g << 16) | (b << 8) | 255;
+    //const [r, g, b] = evaluate_cmap(i/nColors, 'gist_rainbow', true); //gist_rainbow //binary
+    const color = d3.color(colormap(i/nColors));
+    dataCellColorPool[i] = (color.r << 24) | (color.g << 16) | (color.b << 8) | 255;
 }
 
 let dataCellState = new Uint32Array(nCells);
