@@ -32,13 +32,14 @@ fn l2normSquared(v1: vec3f, v2: vec3f) -> f32 {
     let a = v1.x-v2.x;
     let b = v1.y-v2.y;
     let c = v1.z-v2.z;
-    return a*a+b*b+c*c;
+    return fma(a,a,fma(b,b,c*c));
 }
 
+const INV_255: f32 = 1./255.;
 fn unpackRGB(packedColor: u32) -> vec3f {
-    let r: f32 = f32((packedColor >> 24) & 0xFF)/255.0;
-    let g: f32 = f32((packedColor >> 16) & 0xFF)/255.0;
-    let b: f32 = f32((packedColor >> 8) & 0xFF)/255.0;
+    let r: f32 = f32((packedColor >> 24) & 0xFF)*INV_255;
+    let g: f32 = f32((packedColor >> 16) & 0xFF)*INV_255;
+    let b: f32 = f32((packedColor >> 8) & 0xFF)*INV_255;
 
     return vec3(r, g, b);
 }
@@ -71,9 +72,9 @@ fn randomU32(seed: u32) -> u32 { // PCG hash random int generator
     return (word >> 22u) ^ word;
 }
 
+const INV_MAX_UINT32: f32 = 1.0/4294967295.0;
 fn randomF32(seed: u32) -> f32 { // PCG hash random float generator
-    let MAX_UINT32 = 4294967295u;
-    return f32(randomU32(seed))/f32(MAX_UINT32);
+    return f32(randomU32(seed))*INV_MAX_UINT32;
 }
 
 // Calculate distance from active cells (in color) to target RGB
@@ -107,7 +108,7 @@ fn distancesAverageMethodMain(input: ComputeInput) {
         results += neighborDistance(cellX + 1, cellY, targetColor, grid.x);
         if (cellY + 1 < grid.y) { results += neighborDistance(cellX + 1, cellY + 1, targetColor, grid.x); }
     }
-    distancesGlobal[index1D] = results.y / results.x + randomF32(index1D+iterationGlobal)*1e-6;
+    distancesGlobal[index1D] = fma(randomF32(index1D+iterationGlobal), 1e-6, results.y / results.x);
 }
 
 @compute @workgroup_size(8, 8)
@@ -140,7 +141,7 @@ fn distancesMinimumMethodMain(input: ComputeInput) {
         result = min(result, neighborDistanceOnly(cellX + 1, cellY, targetColor, grid.x));
         if (cellY + 1 < grid.y) { result = min(result, neighborDistanceOnly(cellX + 1, cellY + 1, targetColor, grid.x)); }
     }
-    distancesGlobal[index1D] = result + randomF32(index1D+iterationGlobal)*1e-6;
+    distancesGlobal[index1D] = fma(randomF32(index1D+iterationGlobal), 1e-6, result);
 
 }
 
@@ -197,6 +198,8 @@ fn minSharedWithIndex(id1: u32, id2: u32) {
         sdataWithIndex[id1].value = value;
     }
 }
+
+const WORKGROUP_SIZExCOARSE_FACTOR: u32 = WORKGROUP_SIZE * COARSE_FACTOR;
 @compute @workgroup_size(WORKGROUP_SIZE)
 fn reductionArgminMain(
     @builtin(local_invocation_id) local_invocation_id: vec3u,
@@ -204,7 +207,7 @@ fn reductionArgminMain(
 ) {
     let localID = local_invocation_id.x;
     let workgroupID = workgroup_id.x;
-    var globalID = workgroupID * WORKGROUP_SIZE * COARSE_FACTOR + localID;
+    var globalID = workgroupID * WORKGROUP_SIZExCOARSE_FACTOR + localID;
     let size = gridGlobal.x*gridGlobal.y;
 
     var index = 0u;
