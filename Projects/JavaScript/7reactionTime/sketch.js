@@ -174,6 +174,7 @@ function returnShuttle(winlose) {
     flip = -1;
   } else { // Miss
     soundMistake.play();
+    reactionAverage.addSample(reactionAverage.get()+10);
     reactionTime = 3000;
   }
   returnable = false;
