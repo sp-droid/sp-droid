@@ -22,7 +22,7 @@ let volumeSlider;
 let soundAttack;
 let soundDefense;
 
-let reactionTime = 3000; let startTime = 0;
+let reactionTime = Infinity; let startTime = 0;
 
 // Simulation
 const minAngle = Math.PI/180*4;
@@ -37,20 +37,42 @@ const physicsTimeRatio = 10;
 let timeStep = 0; // 500 per second
 const cD = 0.55; const density = 1.225; const skirtArea = 0.0034212; const mass = 0.005;
 
+class NonNegativeRollingAverage {
+  #total = 0;
+  #samples = [];
+  #cursor = 0;
+  #numSamples;
+  constructor(numSamples = 30) {
+    this.#numSamples = numSamples;
+  }
+  addSample(v) {
+    if (!Number.isNaN(v) && Number.isFinite(v) && v >= 0) {
+      this.#total += v - (this.#samples[this.#cursor] || 0);
+      this.#samples[this.#cursor] = v;
+      this.#cursor = (this.#cursor + 1) % this.#numSamples;
+    }
+  }
+  get() {
+    return this.#total / this.#samples.length;
+  }
+}
+const fpsAverage = new NonNegativeRollingAverage();
+const reactionAverage = new NonNegativeRollingAverage();
+
 function setup() {
   createCanvas(width, height);
 
-  Vslider = createSlider(0,2000,150);
+  Vslider = createSlider(0,2000,200);
   Vslider.position(width-180,40);
-  volumeSlider = createSlider(0, 10, 3);
+  volumeSlider = createSlider(0, 10, 0);
   volumeSlider.position(width-180,90);
   volumeSlider.input(updateVolume);
 
 
   soundAttack = loadSound('soundAttack.mp3');
   soundDefense = loadSound('soundDefense.mp3');
-  soundAttack.setVolume(0.3);
-  soundDefense.setVolume(0.3);
+  soundMistake = loadSound('soundMistake.mp3');
+  updateVolume();
 
   setTimeout(startShot, 3000);
   frameRate(144);
@@ -59,6 +81,7 @@ function setup() {
 function updateVolume() {
   soundAttack.setVolume(volumeSlider.value()/10);
   soundDefense.setVolume(volumeSlider.value()/10);
+  //soundMistake.setVolume(volumeSlider.value()/10);
 }
 
 function draw() {
@@ -96,8 +119,9 @@ function draw() {
   textSize(18); text(`V0 [km/h]: ${Vslider.value()}`, width-170, 34);
   text("Volume", width-146, 86);
 
-  text(`Framerate: ${Math.trunc(frameRate())} fps`, 50, 50);
-  text(`Fastest reaction: ${Math.trunc(reactionTime)} ms`, 50, 80);
+  fpsAverage.addSample(1000 / deltaTime);
+  text(`Framerate: ${fpsAverage.get().toFixed(1)} fps`, 50, 50);
+  text(`Fastest / Average reaction: ${reactionTime.toFixed()} / ${reactionAverage.get().toFixed()} ms`, 50, 80);
   if (ready === false) {
     timeStep = deltaTime/physicsTimeRatio;
     for (let i=0; i<physicsTimeRatio; i++) {
@@ -138,13 +162,18 @@ function hitShuttle() {
 
 function returnShuttle(winlose) {
   if (winlose === true) {
-    if (millis() - startTime - deltaTime < reactionTime) {
-      reactionTime = millis() - startTime - deltaTime;
+    const timing = millis() - startTime - deltaTime;
+    if (timing < reactionTime) {
+      reactionTime = timing;
     }
-    v = random(250, v);
-    soundDefense.play()
+    if (millis() - startTime - deltaTime < 400) {
+      reactionAverage.addSample(timing);
+    }
+    soundDefense.play();
+    v = 200;
     flip = -1;
-  } else {
+  } else { // Miss
+    soundMistake.play();
     reactionTime = 3000;
   }
   returnable = false;
