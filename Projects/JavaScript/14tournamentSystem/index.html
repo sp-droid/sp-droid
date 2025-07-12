@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournament tool</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Tournament tool</h1>
+        <nav>
+            <button type="button" id="stage-1-button">Setup stage</button>
+            <button type="button" id="stage-2-button">Play</button>
+            <button type="button" id="stage-3-button">Results</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Stage 1: Input Participant Details -->
+        <section id="stage-1" style="display: block;">
+            <h2>Stage 1: Setup Tournament</h2>
+            <hr>
+            <form id="setup-form">
+                <label for="players-per-team">Number of Players per Team:</label>
+                <select id="players-per-team" name="players-per-team">
+                    <!-- Options from 1 to 6 -->
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <br>
+                <label for="rounds">Number of Rounds:</label>
+                <select id="rounds" name="rounds">
+                    <!-- Options from 1 to 16 -->
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                </select>
+                <br>
+                <label for="participants">Participant Names (1 for each row):</label>
+                <br>
+                <textarea id="participants" name="participants" rows="4" cols="50" required placeholder="Enter participant names..."></textarea>
+            </form>
+            <h3>Draft analysis</h3>
+            <ul>
+                <li>Number of players (+left out each round): <div><span id="analysis-total">-</span> (+<span id="analysis-leftout">-</span>)</div></li>
+                <li>Games per round / total: <div><span id="analysis-gamesPerRound">-</span> / <span id="analysis-gamesTotal">-</span></div></li>
+                <li>Probability of sharing teams with the same player at least once: <div><span id="analysis-probSameTeam">-</span> %</div></li>
+                <li>Probability of sharing games with the same player at least once: <div><span id="analysis-probSameGame">-</span> %</div></li>
+            </ul>
+        </section>
+
+        <!-- Stage 2: Display Rounds and Games -->
+        <section id="stage-2" style="display: none;">
+            <h2>Stage 2: Tournament Rounds</h2>
+            <hr>
+            <div id="rounds-container">
+                <!-- Dynamically filled by tournament.js -->
+            </div>
+            <table id="games-table">
+                <thead>
+                    <tr>
+                        <th>Game ID</th>
+                        <th>Round</th>
+                        <th>Team 1 Players</th>
+                        <th>Team 2 Players</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamically filled by tournament.js -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Stage 3: Display Results -->
+        <section id="stage-3" style="display: none;">
+            <h2>Stage 3: Final Results</h2>
+            <hr>
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Participant</th>
+                        <th>Results</th>
+                        <th>Final score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamically filled by tournament.js -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="tournament.js" defer></script>
+</body>
+</html>

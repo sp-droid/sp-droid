@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main {
+    width: 90%;
+    max-width: 800px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label, form textarea, form input, form button, form select {
+    margin: 10px 0;
+    width: 100%;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+nav button {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #0056b3; /* Add hover effect */
+    color: #ffffff; /* Ensure text remains visible */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
+button {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.introduceResult:hover {
+    cursor: pointer;
+}
+
+#stage-1-button {
+    background-color: #28a745; /* Green */
+}
+
+#stage-2-button {
+    background-color: #ffc107; /* Yellow */
+}
+
+#stage-3-button {
+    background-color: #dc3545; /* Red */
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    height: auto;
+    max-height: 150px; /* Limit the height of the dropdown */
+}
+
+select option {
+    max-height: 20px;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
