@@ -53,9 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // INITIALIZE
     showStage('stage1');
     setupTournament();
-    populateGamesTable();
-    populateWinnersTable();
-
+    
     // STAGE 1
     function setupTournament() {
         N_PLAYERS_PER_TEAM = parseInt(setupForm.elements['players-per-team'].value);
@@ -79,14 +77,15 @@ document.addEventListener('DOMContentLoaded', () => {
         gameDraft = Array.from({ length: N_ROUNDS }, (_, i) => generateRoundRandom(i));
         gameScores = Array.from({ length: N_ROUNDS }, () => Array(NteamsPerRound).fill(null));
         // gameScores = Array.from({ length: N_ROUNDS }, () => generateUniqueRandomIntegers(NteamsPerRound, 44));
+
+        populateGamesTable();
+        populateWinnersTable();
     }
 
     function generateRoundRandom(round) {
         return generateUniqueRandomIntegers(NteamsPerRound * N_PLAYERS_PER_TEAM, Nplayers - 1);
     }
 
-    console.log(gameDraft[0])
-    console.log(gameScores[0]);
     // STAGE 2
     function populateGamesTable() {
         round = 0;
