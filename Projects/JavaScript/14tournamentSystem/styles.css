@@ -6,6 +6,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    background-image: url('bg.svg');
+    background-size: cover;
+    background-color: #EDE29B;
 }
 
 header {
@@ -42,6 +45,10 @@ th, td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
+}
+
+td {
+    background-color: rgba(255, 255, 255, 0.9)
 }
 
 th {

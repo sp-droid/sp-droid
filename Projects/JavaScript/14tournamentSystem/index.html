@@ -22,8 +22,13 @@
             <h2>Stage 1: Setup Tournament</h2>
             <hr>
             <form id="setup-form">
+                <label for="tournament-format">Tournament type:</label>
+                <select id="tournament-format" name="tournament-format">
+                    <option value="1" title="Players are paired randomly, the winner being the player with the most points.">Swiss with random pairings</option>
+                </select>
+                <br>
                 <label for="players-per-team">Number of Players per Team:</label>
-                <select id="players-per-team" name="players-per-team">
+                <select id="players-per-team" name="players-per-team" title="If the participants are the teams themselves, select 1. If the participants are the individual players, choose the number of players per team.">
                     <!-- Options from 1 to 6 -->
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -59,7 +64,8 @@
                 <textarea id="participants" name="participants" rows="4" cols="50" required placeholder="Enter participant names..."></textarea>
             </form>
             <h3>Draft analysis</h3>
-            <ul>
+            <ul style="text-shadow: 1px 1px 5px rgba(255, 255, 255, 1); /* Soft white text shadow */
+    font-weight: 600;">
                 <li>Number of players (+left out each round): <div><span id="analysis-total">-</span> (+<span id="analysis-leftout">-</span>)</div></li>
                 <li>Games per round / total: <div><span id="analysis-gamesPerRound">-</span> / <span id="analysis-gamesTotal">-</span></div></li>
                 <li>Probability of sharing teams with the same player at least once: <div><span id="analysis-probSameTeam">-</span> %</div></li>
