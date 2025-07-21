@@ -71,8 +71,17 @@ document.addEventListener('DOMContentLoaded', () => {
         analysisLeftOut.textContent = Nplayers-NplayersPerRound;
         analysisGamesPerRound.textContent = NgamesPerRound;
         analysisGamesTotal.textContent = Ngames;
-        analysisProbSameTeam.textContent = (100-100*Math.pow(1-(N_PLAYERS_PER_TEAM-1)/(Nplayers-1), N_ROUNDS)).toFixed(2);
-        analysisProbSameGame.textContent = (100-100*Math.pow(1-(N_PLAYERS_PER_TEAM*2-1)/(Nplayers-1), N_ROUNDS)).toFixed(2);
+        let probPlayer = 1; let probTeam = 1; // Probability of always playing with different players
+        for (let i= 0; i < N_ROUNDS; i++) {
+            for (let k = 0; k < N_PLAYERS_PER_TEAM-1; k++) {
+                probPlayer *= (Nplayers - ((N_PLAYERS_PER_TEAM-1)*i + k + 1) ) / (Nplayers - 1 - k);
+            }
+            for (let k = 0; k < 2*N_PLAYERS_PER_TEAM-1; k++) {
+                probTeam *= (Nplayers - ((2*N_PLAYERS_PER_TEAM-1)*i + k + 1) ) / (Nplayers - 1 - k);
+            }
+        }
+        analysisProbSameTeam.textContent = (100-100*probPlayer).toFixed(2);
+        analysisProbSameGame.textContent = (100-100*probTeam).toFixed(2);
 
         gameDraft = Array.from({ length: N_ROUNDS }, (_, i) => generateRoundRandom(i));
         gameScores = Array.from({ length: N_ROUNDS }, () => Array(NteamsPerRound).fill(null));
