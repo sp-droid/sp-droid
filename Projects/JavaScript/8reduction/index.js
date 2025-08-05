@@ -2,8 +2,8 @@
 const COARSE_FACTOR = 32;
 let WORKGROUP_SIZE = 1024;
 
-const SIZE1D = 7168;
-const n = 20;
+const SIZE1D = 4096;
+const n = 5;
 
 // UI
 const canvas = document.querySelector("canvas");
@@ -30,6 +30,7 @@ if (adapter.limits.maxStorageBufferBindingSize < SIZE1D*SIZE1D*4) {
     throw new Error("Storage buffer size not supported.");
 }
 console.log("Device has timestamp query feature: ", adapter.features.has('timestamp-query'))
+console.log("Device has subgroups feature: ", adapter.features.has('subgroups'))
 
 // Requesting GPU device
 const device = await adapter.requestDevice({
@@ -38,7 +39,7 @@ const device = await adapter.requestDevice({
         maxComputeInvocationsPerWorkgroup: WORKGROUP_SIZE,
         maxStorageBufferBindingSize: SIZE1D*SIZE1D*4
     },
-    requiredFeatures: ['timestamp-query']
+    requiredFeatures: ['timestamp-query', 'subgroups']
 });
 
 // Requesting GPU canvas context
@@ -216,6 +217,22 @@ const computePipelines = [
             module: computeShaderModule,
             entryPoint: "sumReduce8"
         }
+    }),
+    device.createComputePipeline({
+        label: "Reduce 9",
+        layout: pipelineLayout,
+        compute: {
+            module: computeShaderModule,
+            entryPoint: "sumReduce9"
+        }
+    }),
+    device.createComputePipeline({
+        label: "Reduce 10",
+        layout: pipelineLayout,
+        compute: {
+            module: computeShaderModule,
+            entryPoint: "sumReduce10"
+        }
     })
 ]
 //#endregion
@@ -329,17 +346,22 @@ let computePass;
 let auxBuffer;
 let finalResultBuffer;
 let targetTime;
-await multipleChecks("reduction", 0, 1); // warm up
-await multipleChecks("reduction", 0, n);
-await multipleChecks("reduction", 8, n);
-await multipleChecks("reduction", 7, n);
-await multipleChecks("reduction", 6, n);
-await multipleChecks("reduction", 5, n);
-await multipleChecks("reduction", 4, n);
-await multipleChecks("reduction", 3, n);
-await multipleChecks("reduction", 2, n);
-await multipleChecks("reduction", 1, n);
 await multipleChecks("naive ST", "", 1);
+await multipleChecks("reduction", 0, 1); // warm up
+for (let i = 0; i < 2; i++) {
+    console.log("--------------------------------------------------");
+    await multipleChecks("reduction", 0, n);
+    await multipleChecks("reduction", 8, n);
+    await multipleChecks("reduction", 10, n);
+    await multipleChecks("reduction", 9, n);
+    await multipleChecks("reduction", 7, n);
+    await multipleChecks("reduction", 6, n);
+    await multipleChecks("reduction", 5, n);
+    await multipleChecks("reduction", 4, n);
+    await multipleChecks("reduction", 3, n);
+    await multipleChecks("reduction", 2, n);
+    await multipleChecks("reduction", 1, n);
+}
 
 function sumReduce(pipelineIndex, computePass) {
     const COARSE_FACTOR = 32;
@@ -352,7 +374,7 @@ function sumReduce(pipelineIndex, computePass) {
 
     let dispatches = Math.ceil(nNumbers/WORKGROUP_SIZE/workgroupNumberModifier);
 
-    if (pipelineIndex == 7) {
+    if (pipelineIndex == 7 || pipelineIndex == 9 || pipelineIndex == 10) {
         device.queue.writeBuffer(bufferComputeResultAtomic, 0, new Uint32Array([0]));
         computePass.setBindGroup(0, bindGroup);
         computePass.dispatchWorkgroups(dispatches,1,1);
@@ -414,7 +436,7 @@ async function multipleChecks(algorithm, reduceVariant, nChecks) {
 
     if (reduceVariant === 0 && nChecks === 1) { return;}
     if (reduceVariant === 0) { targetTime = totalTime; }
-    console.log(`Result GPU ${algorithm}${reduceVariant}: (x${(targetTime/totalTime).toFixed(2)})\n${totalTime.toFixed(2)} ms [${(numberArrayBytes/1000000/totalTime).toFixed(2)} GB/s]`);
+    console.log(`Result GPU ${algorithm}${reduceVariant}:\t(x${(targetTime/totalTime).toFixed(2)}) \t${totalTime.toFixed(2)} ms [${(numberArrayBytes/1000000/totalTime).toFixed(2)} GB/s]`);
 }
 
 async function computeAndCheck(algorithm, reduceVariant) {
@@ -439,12 +461,12 @@ async function computeAndCheck(algorithm, reduceVariant) {
     }
     computePass.end();
 
-    // encoder.copyBufferToBuffer(finalResultBuffer, 0, stagingBufferResult, 0, 4);
+    // encoder.copyBufferToBuffer(finalResultBuffer, 0, stagingBufferResult, 0, 4); # Check if the sum is correct
     device.queue.submit([encoder.finish()]);
 
     // await stagingBufferResult.mapAsync(GPUMapMode.READ);
     // const result = new Uint32Array(stagingBufferResult.getMappedRange())[0];
-    // if (result != sum) { console.error(`${algorithm} result (${result}) not matching true: ${sum}`) }
+    // if (result != sum) { console.error(`${algorithm}-${reduceVariant} result (${result}) not matching true: ${sum}`) }
     // stagingBufferResult.unmap();
 
     return timingHelper.getResult();

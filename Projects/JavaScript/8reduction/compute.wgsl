@@ -1,3 +1,5 @@
+enable subgroups;
+
 struct ComputeInput {
     @builtin(global_invocation_id) cell: vec3u
 }
@@ -333,4 +335,73 @@ fn sumReduce8(
         outputGlobal[0] = sdata[0] + sdata[1];
     }
     
+}
+
+@compute @workgroup_size(WORKGROUP_SIZE) // Single pass reduction with atomics, only subgroups used for the final sum
+fn sumReduce9(
+    @builtin(local_invocation_id) local_invocation_id: vec3u,
+    @builtin(workgroup_id) workgroup_id: vec3u
+) {
+    let localID = local_invocation_id.x;
+    let workgroupID = workgroup_id.x;
+    var globalID = workgroupID * WORKGROUP_SIZE * COARSE_FACTOR + localID;
+
+    var sum = 0u;
+    for (var tile = 0u; tile < COARSE_FACTOR; tile++) {
+        if (globalID < size) {
+            sum +=  inputGlobal[globalID];
+        }
+        
+        globalID += WORKGROUP_SIZE;
+    }
+
+    let subgroupSum = subgroupAdd(sum);
+    if (subgroupElect()) {
+        atomicAdd(&outputGlobalAtomic, subgroupSum);
+    }
+}
+
+@compute @workgroup_size(WORKGROUP_SIZE) // Single pass reduction with atomics, hybrid approach (shared memory and subgroups)
+fn sumReduce10(
+    @builtin(local_invocation_id) local_invocation_id: vec3u,
+    @builtin(workgroup_id) workgroup_id: vec3u,
+    @builtin(subgroup_size) subgroup_size: u32
+) {
+    let localID = local_invocation_id.x;
+    let workgroupID = workgroup_id.x;
+    var globalID = workgroupID * WORKGROUP_SIZE * COARSE_FACTOR + localID;
+
+    var sum = 0u;
+    for (var tile = 0u; tile < COARSE_FACTOR; tile++) {
+        if (globalID < size) {
+            sum +=  inputGlobal[globalID];
+        }
+        
+        globalID += WORKGROUP_SIZE;
+    }
+    sdata[localID] = sum;
+    workgroupBarrier();
+
+    // Shared memory reduction
+    var stride = WORKGROUP_SIZE / 2u;
+    while (stride >= subgroup_size) {
+        if (localID < stride) {
+            sdata[localID] += sdata[localID + stride];
+        }
+        workgroupBarrier();
+        stride /= 2u;
+    }
+
+    // Final subgroup reduction
+    var value: u32;
+    if (localID < subgroup_size) {
+        value = sdata[localID];
+    } else {
+        value = 0u;
+    }
+    let subgroupSum = subgroupAdd(value);
+
+    if (localID == 0) {
+        atomicAdd(&outputGlobalAtomic, subgroupSum);
+    }
 }
