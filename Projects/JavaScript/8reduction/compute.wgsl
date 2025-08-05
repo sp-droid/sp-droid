@@ -383,23 +383,15 @@ fn sumReduce10(
     workgroupBarrier();
 
     // Shared memory reduction
-    var stride = WORKGROUP_SIZE / 2u;
-    while (stride >= subgroup_size) {
-        if (localID < stride) {
-            sdata[localID] += sdata[localID + stride];
+    for (var s = WORKGROUP_SIZE/2; s >= subgroup_size; s >>= 1) {
+        if (localID < s) {
+            sdata[localID] += sdata[localID + s];
         }
         workgroupBarrier();
-        stride /= 2u;
     }
 
-    // Final subgroup reduction
-    var value: u32;
-    if (localID < subgroup_size) {
-        value = sdata[localID];
-    } else {
-        value = 0u;
-    }
-    let subgroupSum = subgroupAdd(value);
+    // Subgroup SIMD operation
+    let subgroupSum = subgroupAdd(sdata[localID]);
 
     if (localID == 0) {
         atomicAdd(&outputGlobalAtomic, subgroupSum);

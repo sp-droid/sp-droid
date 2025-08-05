@@ -3,7 +3,7 @@ const COARSE_FACTOR = 32;
 let WORKGROUP_SIZE = 1024;
 
 const SIZE1D = 4096;
-const n = 5;
+const n = 50;
 
 // UI
 const canvas = document.querySelector("canvas");
@@ -348,20 +348,19 @@ let finalResultBuffer;
 let targetTime;
 await multipleChecks("naive ST", "", 1);
 await multipleChecks("reduction", 0, 1); // warm up
-for (let i = 0; i < 2; i++) {
-    console.log("--------------------------------------------------");
-    await multipleChecks("reduction", 0, n);
-    await multipleChecks("reduction", 8, n);
-    await multipleChecks("reduction", 10, n);
-    await multipleChecks("reduction", 9, n);
-    await multipleChecks("reduction", 7, n);
-    await multipleChecks("reduction", 6, n);
-    await multipleChecks("reduction", 5, n);
-    await multipleChecks("reduction", 4, n);
-    await multipleChecks("reduction", 3, n);
-    await multipleChecks("reduction", 2, n);
-    await multipleChecks("reduction", 1, n);
-}
+
+console.log("--------------------------------------------------");
+await multipleChecks("reduction", 0, n);
+await multipleChecks("reduction", 8, n);
+await multipleChecks("reduction", 10, n);
+await multipleChecks("reduction", 9, n);
+await multipleChecks("reduction", 7, n);
+await multipleChecks("reduction", 6, n);
+await multipleChecks("reduction", 5, n);
+await multipleChecks("reduction", 4, n);
+await multipleChecks("reduction", 3, n);
+await multipleChecks("reduction", 2, n);
+await multipleChecks("reduction", 1, n);
 
 function sumReduce(pipelineIndex, computePass) {
     const COARSE_FACTOR = 32;
@@ -461,13 +460,13 @@ async function computeAndCheck(algorithm, reduceVariant) {
     }
     computePass.end();
 
-    // encoder.copyBufferToBuffer(finalResultBuffer, 0, stagingBufferResult, 0, 4); # Check if the sum is correct
+    encoder.copyBufferToBuffer(finalResultBuffer, 0, stagingBufferResult, 0, 4); // Check if the sum is correct
     device.queue.submit([encoder.finish()]);
 
-    // await stagingBufferResult.mapAsync(GPUMapMode.READ);
-    // const result = new Uint32Array(stagingBufferResult.getMappedRange())[0];
-    // if (result != sum) { console.error(`${algorithm}-${reduceVariant} result (${result}) not matching true: ${sum}`) }
-    // stagingBufferResult.unmap();
+    await stagingBufferResult.mapAsync(GPUMapMode.READ);
+    const result = new Uint32Array(stagingBufferResult.getMappedRange())[0];
+    if (result != sum) { console.error(`${algorithm}-${reduceVariant} result (${result}) not matching true: ${sum}`) }
+    stagingBufferResult.unmap();
 
     return timingHelper.getResult();
 }
