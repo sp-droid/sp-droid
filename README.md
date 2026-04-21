@@ -48,10 +48,10 @@
 </a>
 
 ---
-<img align="center" src="https://raw.githubusercontent.com/sp-droid/github-stats/master/generated/languages.svg" />
+<img align="center" src="https://github.com/sp-droid/github-stats/blob/generated/languages.svg" />
 
 ---
-<img align="center" src="https://raw.githubusercontent.com/sp-droid/github-stats/master/generated/overview.svg" />
+<img align="center" src="https://github.com/sp-droid/github-stats/blob/generated/overview.svg" />
 
 [//]: # (https://github-readme-stats-sp-droid.vercel.app/api/top-langs/?username=sp-droid&hide_title=true&hide_border=true&layout=donut&hide=jupyter%20notebook,ShaderLab,SCSS,HTML,Makefile,Batchfile,Markdown&theme=ambient_gradient NEW ONE)
 [//]: # (https://raw.githubusercontent.com/sp-droid/github-stats/master/generated/overview.svg#gh-dark-mode-only)
