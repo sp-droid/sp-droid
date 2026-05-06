@@ -44,7 +44,7 @@
 ## My 2025 in coding!
 
 <a href="https://wakatime.com/@spdroid">
-  <img align="center" src="https://raw.githubusercontent.com/sp-droid/sp-droid/main/icons/wakatime-wrapped.png" style="width:400px; height:auto;" />
+  <img align="center" src="https://raw.githubusercontent.com/sp-droid/sp-droid/main/icons/wakatime-wrapped.png" style="width:500px; height:auto;" />
 </a>
 
 ## Statistics
