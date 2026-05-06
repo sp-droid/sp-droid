@@ -41,6 +41,12 @@
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=fff&style=for-the-badge)
 ![WebGPU](icons/WebGPU.svg)&nbsp;
 
+## My 2025 in coding!
+
+<a href="https://wakatime.com/@spdroid">
+  <img align="center" src="https://raw.githubusercontent.com/sp-droid/sp-droid/main/icons/wakatime-wrapped.png" style="width:400px; height:auto;" />
+</a>
+
 ## Statistics
 
 <a href="https://wakatime.com/@spdroid">
