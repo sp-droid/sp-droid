@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+	{
+		"label": "zig run",
+		"type": "shell",
+		"command": "zig build run",
+		"problemMatcher": [],
+		"group": {
+			"kind": "build",
+			"isDefault": true
+		}
+	}
+]
+}

@@ -1,0 +1,7 @@
+*
+!.gitignore
+!/.vscode/
+!/.vscode/**
+!/src/
+!/src/**
+!/build.zig
