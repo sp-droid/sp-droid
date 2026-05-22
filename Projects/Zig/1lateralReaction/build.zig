@@ -28,7 +28,7 @@ pub fn build(b: *std.Build) !void {
     if (target.query.os_tag == .emscripten) {
         const emsdk = rlz.emsdk;
         const wasm = b.addLibrary(.{
-            .name = "Project",
+            .name = "lateralReaction",
             .root_module = exe_mod,
         });
 
@@ -61,10 +61,17 @@ pub fn build(b: *std.Build) !void {
         run_step.dependOn(emrun_step);
     } else {
         const exe = b.addExecutable(.{
-            .name = "Project",
+            .name = "lateralReaction",
             .root_module = exe_mod,
         });
         b.installArtifact(exe);
+
+        // Install resources folder next to the executable
+        b.installDirectory(.{
+            .source_dir = b.path("resources"),
+            .install_dir = .bin,
+            .install_subdir = "resources",
+        });
 
         const run_cmd = b.addRunArtifact(exe);
         run_cmd.step.dependOn(b.getInstallStep());

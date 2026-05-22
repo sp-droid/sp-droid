@@ -45,6 +45,17 @@ const GameState = struct {
     sound_cooldown: f32, // Cooldown for sound effects
     hit_sound: rl.Sound,
     miss_sound: rl.Sound,
+    // Text caching for UI
+    score_text_buf: [64:0]u8 = undefined,
+    speed_text_buf: [32:0]u8 = undefined,
+    paddle_text_buf: [32:0]u8 = undefined,
+    score_text: [:0]const u8 = "",
+    speed_text: [:0]const u8 = "",
+    paddle_text: [:0]const u8 = "",
+    last_score: i32 = 0,
+    last_attempts: i32 = 0,
+    last_current_speed: i32 = 0,
+    last_paddle_width: i32 = 0,
 };
 
 // ============================================================================
@@ -82,7 +93,8 @@ const DRAG_CONSTANT = (AIR_DENSITY * DRAG_COEFFICIENT * SHUTTLECOCK_AREA) / (2.0
 const FEEDBACK_DISPLAY_TIME = 0.4; // How long to show "Hit"/"Miss" text
 const BOUNCE_DELAY = 0.3; // Delay before resetting after collision or miss
 
-
+// Physics sub-stepping
+const PHYSICS_TIME_RATIO = 5; // Apply physics 5x per frame for accurate drag integration
 
 // UI positions
 const SPEED_SLIDER_X = SCREEN_WIDTH - 300.0; // Right side
@@ -168,6 +180,14 @@ fn initGame() GameState {
     game_state.last_feedback = FeedbackType.none;
     game_state.feedback_timer = 0;
     game_state.sound_cooldown = 0;
+    // Initialize cached text on first frame
+    game_state.last_score = 0;
+    game_state.last_attempts = 0;
+    game_state.last_current_speed = 0;
+    game_state.last_paddle_width = 0;
+    game_state.score_text = std.fmt.bufPrintZ(&game_state.score_text_buf, "Score: {d} / Attempts: {d}", .{ 0, 0 }) catch "Error";
+    game_state.speed_text = std.fmt.bufPrintZ(&game_state.speed_text_buf, "{d:.0} km/h", .{BASE_BALL_SPEED}) catch "Error";
+    game_state.paddle_text = std.fmt.bufPrintZ(&game_state.paddle_text_buf, "{d:.0}px", .{200.0}) catch "Error";
 
     // Load sound effects from resources
     game_state.hit_sound = rl.loadSound("resources/hit.wav") catch undefined;
@@ -246,80 +266,92 @@ fn updateGame(game_state: *GameState, dt: f32) void {
             fireBall(game_state);
         }
     } else if (game_state.ball.state == BallState.active) {
-        // Apply drag
-        applyDrag(&game_state.ball.velocity, dt);
+        // Sub-step physics for accurate drag integration
+        const time_step = dt / @as(f32, @floatFromInt(PHYSICS_TIME_RATIO));
 
-        // Update position: convert m/s to pixels/s using PIXELS_PER_METER
-        game_state.ball.position.x += game_state.ball.velocity.x * PIXELS_PER_METER * dt;
-        game_state.ball.position.y += game_state.ball.velocity.y * PIXELS_PER_METER * dt;
+        for (0..PHYSICS_TIME_RATIO) |_| {
+            // Apply drag with small time step
+            applyDrag(&game_state.ball.velocity, time_step);
 
-        // Bounce off walls
-        if (game_state.ball.position.x - game_state.ball.radius < 0 or
-            game_state.ball.position.x + game_state.ball.radius > SCREEN_WIDTH)
-        {
-            game_state.ball.velocity.x = -game_state.ball.velocity.x;
-            game_state.ball.position.x = clampF32(
-                game_state.ball.position.x,
-                game_state.ball.radius,
-                SCREEN_WIDTH - game_state.ball.radius,
-            );
-        }
+            // Update position: convert m/s to pixels/s using PIXELS_PER_METER
+            game_state.ball.position.x += game_state.ball.velocity.x * PIXELS_PER_METER * time_step;
+            game_state.ball.position.y += game_state.ball.velocity.y * PIXELS_PER_METER * time_step;
 
-        // Bounce off top
-        if (game_state.ball.position.y - game_state.ball.radius < 0) {
-            game_state.ball.velocity.y = -game_state.ball.velocity.y;
-            game_state.ball.position.y = game_state.ball.radius;
-        }
+            // Bounce off walls
+            if (game_state.ball.position.x - game_state.ball.radius < 0 or
+                game_state.ball.position.x + game_state.ball.radius > SCREEN_WIDTH)
+            {
+                game_state.ball.velocity.x = -game_state.ball.velocity.x;
+                game_state.ball.position.x = clampF32(
+                    game_state.ball.position.x,
+                    game_state.ball.radius,
+                    SCREEN_WIDTH - game_state.ball.radius,
+                );
+            }
 
-        // Check ball-paddle collision
-        const paddle_rect = rl.Rectangle{
-            .x = game_state.paddle.position.x,
-            .y = game_state.paddle.position.y,
-            .width = game_state.paddle.width,
-            .height = game_state.paddle.height,
-        };
+            // Bounce off top
+            if (game_state.ball.position.y - game_state.ball.radius < 0) {
+                game_state.ball.velocity.y = -game_state.ball.velocity.y;
+                game_state.ball.position.y = game_state.ball.radius;
+            }
 
-        if (rl.checkCollisionCircleRec(game_state.ball.position, game_state.ball.radius, paddle_rect)) {
-            // Ball hit the paddle
-            game_state.ball.velocity.y = -game_state.ball.velocity.y; // Bounce
-            game_state.ball.position.y = paddle_rect.y - game_state.ball.radius; // Move above paddle
-            game_state.ball.state = BallState.bouncing;
-            game_state.bounce_delay_timer = BOUNCE_DELAY;
-            game_state.score += 1;
-            game_state.current_speed += 1.0; // Increase speed by 1 km/h on hit
-            game_state.last_feedback = FeedbackType.hit;
-            game_state.feedback_timer = FEEDBACK_DISPLAY_TIME;
-            rl.playSound(game_state.hit_sound);
-        }
+            // Check ball-paddle collision
+            const paddle_rect = rl.Rectangle{
+                .x = game_state.paddle.position.x,
+                .y = game_state.paddle.position.y,
+                .width = game_state.paddle.width,
+                .height = game_state.paddle.height,
+            };
 
-        // Check if ball went below paddle (missed)
-        if (game_state.ball.position.y > SCREEN_HEIGHT) {
-            game_state.ball.state = BallState.bouncing;
-            game_state.bounce_delay_timer = BOUNCE_DELAY;
-            game_state.current_speed -= 2.0; // Decrease speed by 2 km/h on miss
-            game_state.current_speed = @max(game_state.current_speed, 10.0); // Keep minimum speed at 10 km/h
-            game_state.last_feedback = FeedbackType.miss;
-            game_state.feedback_timer = FEEDBACK_DISPLAY_TIME;
-            rl.playSound(game_state.miss_sound);
+            if (rl.checkCollisionCircleRec(game_state.ball.position, game_state.ball.radius, paddle_rect)) {
+                // Ball hit the paddle
+                game_state.ball.velocity.y = -game_state.ball.velocity.y; // Bounce
+                game_state.ball.position.y = paddle_rect.y - game_state.ball.radius; // Move above paddle
+                game_state.ball.state = BallState.bouncing;
+                game_state.bounce_delay_timer = BOUNCE_DELAY;
+                game_state.score += 1;
+                game_state.current_speed += 1.0; // Increase speed by 1 km/h on hit
+                game_state.last_feedback = FeedbackType.hit;
+                game_state.feedback_timer = FEEDBACK_DISPLAY_TIME;
+                rl.playSound(game_state.hit_sound);
+                break; // Exit physics loop
+            }
+
+            // Check if ball went below paddle (missed)
+            if (game_state.ball.position.y > SCREEN_HEIGHT) {
+                game_state.ball.state = BallState.bouncing;
+                game_state.bounce_delay_timer = BOUNCE_DELAY;
+                game_state.current_speed -= 2.0; // Decrease speed by 2 km/h on miss
+                game_state.current_speed = @max(game_state.current_speed, 10.0); // Keep minimum speed at 10 km/h
+                game_state.last_feedback = FeedbackType.miss;
+                game_state.feedback_timer = FEEDBACK_DISPLAY_TIME;
+                rl.playSound(game_state.miss_sound);
+                break; // Exit physics loop
+            }
         }
     } else if (game_state.ball.state == BallState.bouncing) {
-        // Apply drag
-        applyDrag(&game_state.ball.velocity, dt);
+        // Sub-step physics for accurate drag integration
+        const time_step = dt / @as(f32, @floatFromInt(PHYSICS_TIME_RATIO));
 
-        // Update position: convert m/s to pixels/s
-        game_state.ball.position.x += game_state.ball.velocity.x * PIXELS_PER_METER * dt;
-        game_state.ball.position.y += game_state.ball.velocity.y * PIXELS_PER_METER * dt;
+        for (0..PHYSICS_TIME_RATIO) |_| {
+            // Apply drag with small time step
+            applyDrag(&game_state.ball.velocity, time_step);
 
-        // Bounce off walls
-        if (game_state.ball.position.x - game_state.ball.radius < 0 or
-            game_state.ball.position.x + game_state.ball.radius > SCREEN_WIDTH)
-        {
-            game_state.ball.velocity.x = -game_state.ball.velocity.x;
-            game_state.ball.position.x = clampF32(
-                game_state.ball.position.x,
-                game_state.ball.radius,
-                SCREEN_WIDTH - game_state.ball.radius,
-            );
+            // Update position: convert m/s to pixels/s
+            game_state.ball.position.x += game_state.ball.velocity.x * PIXELS_PER_METER * time_step;
+            game_state.ball.position.y += game_state.ball.velocity.y * PIXELS_PER_METER * time_step;
+
+            // Bounce off walls
+            if (game_state.ball.position.x - game_state.ball.radius < 0 or
+                game_state.ball.position.x + game_state.ball.radius > SCREEN_WIDTH)
+            {
+                game_state.ball.velocity.x = -game_state.ball.velocity.x;
+                game_state.ball.position.x = clampF32(
+                    game_state.ball.position.x,
+                    game_state.ball.radius,
+                    SCREEN_WIDTH - game_state.ball.radius,
+                );
+            }
         }
     }
 }
@@ -375,14 +407,17 @@ fn drawGame(game_state: *GameState) void {
         rl.Color.yellow,
     );
 
-    // Draw score and attempts
-    var buffer: [64:0]u8 = undefined;
-    const score_text = std.fmt.bufPrintZ(
-        &buffer,
-        "Score: {d} / Attempts: {d}",
-        .{ game_state.score, game_state.attempts },
-    ) catch "Error";
-    rl.drawText(score_text, 20, 20, 20, rl.Color.white);
+    // Draw score and attempts (cached, only update if changed)
+    if (game_state.score != game_state.last_score or game_state.attempts != game_state.last_attempts) {
+        game_state.score_text = std.fmt.bufPrintZ(
+            &game_state.score_text_buf,
+            "Score: {d} / Attempts: {d}",
+            .{ game_state.score, game_state.attempts },
+        ) catch "Error";
+        game_state.last_score = game_state.score;
+        game_state.last_attempts = game_state.attempts;
+    }
+    rl.drawText(game_state.score_text, 20, 20, 20, rl.Color.white);
 
     // Draw feedback text
     if (game_state.feedback_timer > 0) {
@@ -415,10 +450,13 @@ fn drawUI(game_state: *GameState) void {
         3.0,
     );
 
-    // Display current dynamic speed
-    var current_speed_buf: [32:0]u8 = undefined;
-    const current_speed_text = std.fmt.bufPrintZ(&current_speed_buf, "{d:.0} km/h", .{game_state.current_speed}) catch "Error";
-    rl.drawText(current_speed_text, @intFromFloat(SPEED_SLIDER_X + SPEED_SLIDER_WIDTH + 15), @intFromFloat(SPEED_SLIDER_Y + 25), 14, rl.Color.yellow);
+    // Display current dynamic speed (cached, only update if changed)
+    const current_speed_int: i32 = @intFromFloat(game_state.current_speed);
+    if (current_speed_int != game_state.last_current_speed) {
+        game_state.speed_text = std.fmt.bufPrintZ(&game_state.speed_text_buf, "{d:.0} km/h", .{game_state.current_speed}) catch "Error";
+        game_state.last_current_speed = current_speed_int;
+    }
+    rl.drawText(game_state.speed_text, @intFromFloat(SPEED_SLIDER_X + SPEED_SLIDER_WIDTH + 15), @intFromFloat(SPEED_SLIDER_Y + 25), 14, rl.Color.yellow);
 
     // Draw paddle size label and slider
     const paddle_y = SPEED_SLIDER_Y + 70;
@@ -433,10 +471,13 @@ fn drawUI(game_state: *GameState) void {
     );
     game_state.paddle.width = game_state.settings.paddle_width;
 
-    // Display paddle size value
-    var size_text_buf: [32:0]u8 = undefined;
-    const size_text = std.fmt.bufPrintZ(&size_text_buf, "{d:.0}px", .{game_state.settings.paddle_width}) catch "Error";
-    rl.drawText(size_text, @intFromFloat(SPEED_SLIDER_X + SPEED_SLIDER_WIDTH + 15), @intFromFloat(paddle_y + 25), 14, rl.Color.yellow);
+    // Display paddle size value (cached, only update if changed)
+    const paddle_width_int: i32 = @intFromFloat(game_state.settings.paddle_width);
+    if (paddle_width_int != game_state.last_paddle_width) {
+        game_state.paddle_text = std.fmt.bufPrintZ(&game_state.paddle_text_buf, "{d:.0}px", .{game_state.settings.paddle_width}) catch "Error";
+        game_state.last_paddle_width = paddle_width_int;
+    }
+    rl.drawText(game_state.paddle_text, @intFromFloat(SPEED_SLIDER_X + SPEED_SLIDER_WIDTH + 15), @intFromFloat(paddle_y + 25), 14, rl.Color.yellow);
 }
 
 fn drawSlider(x: f32, y: f32, width: f32, value: *f32, min: f32, max: f32) void {
