@@ -94,7 +94,7 @@ const FEEDBACK_DISPLAY_TIME = 0.4; // How long to show "Hit"/"Miss" text
 const BOUNCE_DELAY = 0.3; // Delay before resetting after collision or miss
 
 // Physics sub-stepping
-const PHYSICS_TIME_RATIO = 5; // Apply physics 5x per frame for accurate drag integration
+const PHYSICS_TIME_RATIO = 10; // Apply physics 10x per frame for accurate drag integration
 
 // UI positions
 const SPEED_SLIDER_X = SCREEN_WIDTH - 300.0; // Right side
@@ -186,7 +186,7 @@ fn initGame() GameState {
     game_state.last_current_speed = 0;
     game_state.last_paddle_width = 0;
     game_state.score_text = std.fmt.bufPrintZ(&game_state.score_text_buf, "Score: {d} / Attempts: {d}", .{ 0, 0 }) catch "Error";
-    game_state.speed_text = std.fmt.bufPrintZ(&game_state.speed_text_buf, "{d:.0} km/h", .{BASE_BALL_SPEED}) catch "Error";
+    game_state.speed_text = std.fmt.bufPrintZ(&game_state.speed_text_buf, "{d:.0} km/h", .{BASE_BALL_SPEED * game_state.settings.speed_multiplier}) catch "Error";
     game_state.paddle_text = std.fmt.bufPrintZ(&game_state.paddle_text_buf, "{d:.0}px", .{200.0}) catch "Error";
 
     // Load sound effects from resources
@@ -450,11 +450,12 @@ fn drawUI(game_state: *GameState) void {
         3.0,
     );
 
-    // Display current dynamic speed (cached, only update if changed)
-    const current_speed_int: i32 = @intFromFloat(game_state.current_speed);
-    if (current_speed_int != game_state.last_current_speed) {
-        game_state.speed_text = std.fmt.bufPrintZ(&game_state.speed_text_buf, "{d:.0} km/h", .{game_state.current_speed}) catch "Error";
-        game_state.last_current_speed = current_speed_int;
+    // Display effective ball speed in km/h (cached, only update if changed)
+    const effective_speed: f32 = game_state.current_speed * game_state.settings.speed_multiplier;
+    const effective_speed_int: i32 = @intFromFloat(effective_speed);
+    if (effective_speed_int != game_state.last_current_speed) {
+        game_state.speed_text = std.fmt.bufPrintZ(&game_state.speed_text_buf, "{d:.0} km/h", .{effective_speed}) catch "Error";
+        game_state.last_current_speed = effective_speed_int;
     }
     rl.drawText(game_state.speed_text, @intFromFloat(SPEED_SLIDER_X + SPEED_SLIDER_WIDTH + 15), @intFromFloat(SPEED_SLIDER_Y + 25), 14, rl.Color.yellow);
 
