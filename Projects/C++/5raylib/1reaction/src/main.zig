@@ -9,6 +9,7 @@ const rl = @import("raylib");
 // ============================================================================
 
 const BallState = enum { idle, firing, active, bouncing };
+const FeedbackType = enum { none, hit, miss };
 
 const Ball = struct {
     position: rl.Vector2,
@@ -39,7 +40,7 @@ const GameState = struct {
     current_speed: f32, // Dynamic ball speed in km/h (increases on hit, decreases on miss)
     countdown_timer: f32, // Time until ball fires
     bounce_delay_timer: f32, // Delay before resetting after bounce/miss
-    last_feedback: []const u8, // "Hit" or "Miss" feedback text
+    last_feedback: FeedbackType, // Feedback type (hit, miss, or none)
     feedback_timer: f32, // How long to display feedback
     sound_cooldown: f32, // Cooldown for sound effects
     hit_sound: rl.Sound,
@@ -50,7 +51,7 @@ const GameState = struct {
 // CONSTANTS
 // ============================================================================
 
-const display_fps = 300;
+const display_fps = 1000;
 const SCREEN_WIDTH = 2560.0;
 const SCREEN_HEIGHT = 1440.0;
 const BALL_RADIUS = 15.0;
@@ -58,7 +59,13 @@ const BALL_START_X = SCREEN_WIDTH / 2.0;
 const BALL_START_Y = 100.0;
 const PADDLE_HEIGHT = 20.0;
 const PADDLE_Y = SCREEN_HEIGHT - 60.0;
-const FIRE_DELAY = 0.5; // Before ball fires
+const FIRE_DELAY = 0.3; // Before ball fires
+
+// Launch rectangle (1/4 screen width, 40 pixels tall, centered at top with 10px margin)
+const LAUNCH_RECT_WIDTH = SCREEN_WIDTH / 4.0;
+const LAUNCH_RECT_HEIGHT = 40.0;
+const LAUNCH_RECT_X = SCREEN_WIDTH / 2.0 - LAUNCH_RECT_WIDTH / 2.0;
+const LAUNCH_RECT_Y = 10.0;
 
 // Physics constants
 // Distance from ball start to bottom = 10 meters
@@ -66,17 +73,16 @@ const FIRE_DELAY = 0.5; // Before ball fires
 const PIXELS_PER_METER = (SCREEN_HEIGHT - BALL_START_Y) / 10.0; // ~98 pixels per meter
 const METERS_PER_PIXEL = 10.0 / (SCREEN_HEIGHT - BALL_START_Y); // ~0.0102 meters per pixel
 const BASE_BALL_SPEED = 450.0; // km/h
-const DRAG_COEFFICIENT = 0.55; // Badminton shuttlecock with feathered skirt
+const DRAG_COEFFICIENT = 0.45; // Badminton shuttlecock with feathered skirt
 const AIR_DENSITY = 1.225; // kg/m^3 at sea level
 const SHUTTLECOCK_MASS = 0.005; // kg (approximately 5 grams)
 const SHUTTLECOCK_AREA = 0.0034212; // m^2 (cross-sectional area including feathered skirt)
 const DRAG_CONSTANT = (AIR_DENSITY * DRAG_COEFFICIENT * SHUTTLECOCK_AREA) / (2.0 * SHUTTLECOCK_MASS);
 
-const FEEDBACK_DISPLAY_TIME = 0.5; // How long to show "Hit"/"Miss" text
-const BOUNCE_DELAY = 0.5; // Delay before resetting after collision or miss
+const FEEDBACK_DISPLAY_TIME = 0.4; // How long to show "Hit"/"Miss" text
+const BOUNCE_DELAY = 0.3; // Delay before resetting after collision or miss
 
-// Physics sub-stepping (like in sketch.js)
-const PHYSICS_TIME_RATIO = 10; // Apply physics 10x per frame for accurate drag integration
+
 
 // UI positions
 const SPEED_SLIDER_X = SCREEN_WIDTH - 300.0; // Right side
@@ -128,9 +134,11 @@ fn applyDrag(velocity: *rl.Vector2, dt: f32) void {
 fn initGame() GameState {
     var game_state: GameState = undefined;
 
-    // Initialize ball
+    // Initialize ball with random position in launch rectangle
+    const launch_x = randomF32(LAUNCH_RECT_X, LAUNCH_RECT_X + LAUNCH_RECT_WIDTH);
+    const launch_y = randomF32(LAUNCH_RECT_Y, LAUNCH_RECT_Y + LAUNCH_RECT_HEIGHT);
     game_state.ball = Ball{
-        .position = rl.Vector2{ .x = BALL_START_X, .y = BALL_START_Y },
+        .position = rl.Vector2{ .x = launch_x, .y = launch_y },
         .velocity = rl.Vector2{ .x = 0, .y = 0 },
         .radius = BALL_RADIUS,
         .state = BallState.idle,
@@ -157,7 +165,7 @@ fn initGame() GameState {
     game_state.current_speed = BASE_BALL_SPEED; // Start at base speed
     game_state.countdown_timer = FIRE_DELAY;
     game_state.bounce_delay_timer = 0;
-    game_state.last_feedback = "";
+    game_state.last_feedback = FeedbackType.none;
     game_state.feedback_timer = 0;
     game_state.sound_cooldown = 0;
 
@@ -169,7 +177,9 @@ fn initGame() GameState {
 }
 
 fn resetBall(game_state: *GameState) void {
-    game_state.ball.position = rl.Vector2{ .x = BALL_START_X, .y = BALL_START_Y };
+    const launch_x = randomF32(LAUNCH_RECT_X, LAUNCH_RECT_X + LAUNCH_RECT_WIDTH);
+    const launch_y = randomF32(LAUNCH_RECT_Y, LAUNCH_RECT_Y + LAUNCH_RECT_HEIGHT);
+    game_state.ball.position = rl.Vector2{ .x = launch_x, .y = launch_y };
     game_state.ball.velocity = rl.Vector2{ .x = 0, .y = 0 };
     game_state.ball.state = BallState.idle;
     game_state.countdown_timer = FIRE_DELAY;
@@ -178,9 +188,9 @@ fn resetBall(game_state: *GameState) void {
 }
 
 fn fireBall(game_state: *GameState) void {
-    // Choose random X position at the bottom - constrain to center area to avoid vertical walls
-    const min_x = SCREEN_WIDTH * 0.2;
-    const max_x = SCREEN_WIDTH * 0.8;
+    // Choose random X position at the bottom - allow close to walls but not touching
+    const min_x = BALL_RADIUS;
+    const max_x = SCREEN_WIDTH - BALL_RADIUS;
     const target_x = randomF32(min_x, max_x);
     game_state.ball.target_position = rl.Vector2{
         .x = target_x,
@@ -236,37 +246,32 @@ fn updateGame(game_state: *GameState, dt: f32) void {
             fireBall(game_state);
         }
     } else if (game_state.ball.state == BallState.active) {
-        // Sub-step physics for accurate drag integration
-        const time_step = dt / @as(f32, @floatFromInt(PHYSICS_TIME_RATIO));
+        // Apply drag
+        applyDrag(&game_state.ball.velocity, dt);
 
-        for (0..PHYSICS_TIME_RATIO) |_| {
-            // Apply drag with small time step
-            applyDrag(&game_state.ball.velocity, time_step);
+        // Update position: convert m/s to pixels/s using PIXELS_PER_METER
+        game_state.ball.position.x += game_state.ball.velocity.x * PIXELS_PER_METER * dt;
+        game_state.ball.position.y += game_state.ball.velocity.y * PIXELS_PER_METER * dt;
 
-            // Update position: convert m/s to pixels/s using PIXELS_PER_METER
-            game_state.ball.position.x += game_state.ball.velocity.x * PIXELS_PER_METER * time_step;
-            game_state.ball.position.y += game_state.ball.velocity.y * PIXELS_PER_METER * time_step;
-
-            // Bounce off walls
-            if (game_state.ball.position.x - game_state.ball.radius < 0 or
-                game_state.ball.position.x + game_state.ball.radius > SCREEN_WIDTH)
-            {
-                game_state.ball.velocity.x = -game_state.ball.velocity.x;
-                game_state.ball.position.x = clampF32(
-                    game_state.ball.position.x,
-                    game_state.ball.radius,
-                    SCREEN_WIDTH - game_state.ball.radius,
-                );
-            }
-
-            // Bounce off top
-            if (game_state.ball.position.y - game_state.ball.radius < 0) {
-                game_state.ball.velocity.y = -game_state.ball.velocity.y;
-                game_state.ball.position.y = game_state.ball.radius;
-            }
+        // Bounce off walls
+        if (game_state.ball.position.x - game_state.ball.radius < 0 or
+            game_state.ball.position.x + game_state.ball.radius > SCREEN_WIDTH)
+        {
+            game_state.ball.velocity.x = -game_state.ball.velocity.x;
+            game_state.ball.position.x = clampF32(
+                game_state.ball.position.x,
+                game_state.ball.radius,
+                SCREEN_WIDTH - game_state.ball.radius,
+            );
         }
 
-        // Check ball-paddle collision (after all sub-steps)
+        // Bounce off top
+        if (game_state.ball.position.y - game_state.ball.radius < 0) {
+            game_state.ball.velocity.y = -game_state.ball.velocity.y;
+            game_state.ball.position.y = game_state.ball.radius;
+        }
+
+        // Check ball-paddle collision
         const paddle_rect = rl.Rectangle{
             .x = game_state.paddle.position.x,
             .y = game_state.paddle.position.y,
@@ -282,7 +287,7 @@ fn updateGame(game_state: *GameState, dt: f32) void {
             game_state.bounce_delay_timer = BOUNCE_DELAY;
             game_state.score += 1;
             game_state.current_speed += 1.0; // Increase speed by 1 km/h on hit
-            game_state.last_feedback = "HIT +1";
+            game_state.last_feedback = FeedbackType.hit;
             game_state.feedback_timer = FEEDBACK_DISPLAY_TIME;
             rl.playSound(game_state.hit_sound);
         }
@@ -293,33 +298,28 @@ fn updateGame(game_state: *GameState, dt: f32) void {
             game_state.bounce_delay_timer = BOUNCE_DELAY;
             game_state.current_speed -= 2.0; // Decrease speed by 2 km/h on miss
             game_state.current_speed = @max(game_state.current_speed, 10.0); // Keep minimum speed at 10 km/h
-            game_state.last_feedback = "MISS";
+            game_state.last_feedback = FeedbackType.miss;
             game_state.feedback_timer = FEEDBACK_DISPLAY_TIME;
             rl.playSound(game_state.miss_sound);
         }
     } else if (game_state.ball.state == BallState.bouncing) {
-        // Sub-step physics for accurate drag integration
-        const time_step = dt / @as(f32, @floatFromInt(PHYSICS_TIME_RATIO));
+        // Apply drag
+        applyDrag(&game_state.ball.velocity, dt);
 
-        for (0..PHYSICS_TIME_RATIO) |_| {
-            // Apply drag with small time step
-            applyDrag(&game_state.ball.velocity, time_step);
+        // Update position: convert m/s to pixels/s
+        game_state.ball.position.x += game_state.ball.velocity.x * PIXELS_PER_METER * dt;
+        game_state.ball.position.y += game_state.ball.velocity.y * PIXELS_PER_METER * dt;
 
-            // Update position: convert m/s to pixels/s
-            game_state.ball.position.x += game_state.ball.velocity.x * PIXELS_PER_METER * time_step;
-            game_state.ball.position.y += game_state.ball.velocity.y * PIXELS_PER_METER * time_step;
-
-            // Bounce off walls
-            if (game_state.ball.position.x - game_state.ball.radius < 0 or
-                game_state.ball.position.x + game_state.ball.radius > SCREEN_WIDTH)
-            {
-                game_state.ball.velocity.x = -game_state.ball.velocity.x;
-                game_state.ball.position.x = clampF32(
-                    game_state.ball.position.x,
-                    game_state.ball.radius,
-                    SCREEN_WIDTH - game_state.ball.radius,
-                );
-            }
+        // Bounce off walls
+        if (game_state.ball.position.x - game_state.ball.radius < 0 or
+            game_state.ball.position.x + game_state.ball.radius > SCREEN_WIDTH)
+        {
+            game_state.ball.velocity.x = -game_state.ball.velocity.x;
+            game_state.ball.position.x = clampF32(
+                game_state.ball.position.x,
+                game_state.ball.radius,
+                SCREEN_WIDTH - game_state.ball.radius,
+            );
         }
     }
 }
@@ -386,8 +386,14 @@ fn drawGame(game_state: *GameState) void {
 
     // Draw feedback text
     if (game_state.feedback_timer > 0) {
-        const feedback_cstr: [:0]const u8 = if (std.mem.eql(u8, game_state.last_feedback, "HIT +1")) "HIT +1" else "MISS";
-        rl.drawText(feedback_cstr, 960 - 40, 540, 40, rl.Color.yellow);
+        const feedback_text: [:0]const u8 = switch (game_state.last_feedback) {
+            FeedbackType.hit => "HIT +1",
+            FeedbackType.miss => "MISS",
+            FeedbackType.none => "",
+        };
+        if (feedback_text.len > 0) {
+            rl.drawText(feedback_text, 960 - 40, 540, 40, rl.Color.yellow);
+        }
     }
 
     // Draw UI sliders
