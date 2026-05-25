@@ -56,6 +56,11 @@ const GameState = struct {
     last_attempts: i32 = 0,
     last_current_speed: i32 = 0,
     last_paddle_width: i32 = 0,
+    // Countdown timer (3 minutes)
+    timer_countdown: f32 = 180.0,
+    timer_text_buf: [32:0]u8 = undefined,
+    timer_text: [:0]const u8 = "",
+    last_timer_seconds: i32 = 180,
 };
 
 // ============================================================================
@@ -92,6 +97,9 @@ const DRAG_CONSTANT = (AIR_DENSITY * DRAG_COEFFICIENT * SHUTTLECOCK_AREA) / (2.0
 
 const FEEDBACK_DISPLAY_TIME = 0.4; // How long to show "Hit"/"Miss" text
 const BOUNCE_DELAY = 0.3; // Delay before resetting after collision or miss
+
+// Countdown timer
+const COUNTDOWN_DURATION = 180.0; // 3 minutes in seconds
 
 // Physics sub-stepping
 const PHYSICS_TIME_RATIO = 10; // Apply physics 10x per frame for accurate drag integration
@@ -185,6 +193,9 @@ fn initGame() GameState {
     game_state.last_attempts = 0;
     game_state.last_current_speed = 0;
     game_state.last_paddle_width = 0;
+    game_state.timer_countdown = COUNTDOWN_DURATION;
+    game_state.last_timer_seconds = @intFromFloat(COUNTDOWN_DURATION);
+    game_state.timer_text = std.fmt.bufPrintZ(&game_state.timer_text_buf, "3:00", .{}) catch "Error";
     game_state.score_text = std.fmt.bufPrintZ(&game_state.score_text_buf, "Score: {d} / Attempts: {d}", .{ 0, 0 }) catch "Error";
     game_state.speed_text = std.fmt.bufPrintZ(&game_state.speed_text_buf, "{d:.0} km/h", .{BASE_BALL_SPEED * game_state.settings.speed_multiplier}) catch "Error";
     game_state.paddle_text = std.fmt.bufPrintZ(&game_state.paddle_text_buf, "{d:.0}px", .{200.0}) catch "Error";
@@ -240,6 +251,11 @@ fn updateGame(game_state: *GameState, dt: f32) void {
     // Decrement sound cooldown
     if (game_state.sound_cooldown > 0) {
         game_state.sound_cooldown -= dt;
+    }
+
+    // Decrement countdown timer
+    if (game_state.timer_countdown > 0) {
+        game_state.timer_countdown -= dt;
     }
 
     // Decrement bounce delay timer
@@ -436,6 +452,9 @@ fn drawGame(game_state: *GameState) void {
 
     // Draw FPS
     rl.drawFPS(20, 60);
+
+    // Draw countdown timer
+    drawCountdownTimer(game_state);
 }
 
 fn drawUI(game_state: *GameState) void {
@@ -479,6 +498,33 @@ fn drawUI(game_state: *GameState) void {
         game_state.last_paddle_width = paddle_width_int;
     }
     rl.drawText(game_state.paddle_text, @intFromFloat(SPEED_SLIDER_X + SPEED_SLIDER_WIDTH + 15), @intFromFloat(paddle_y + 25), 14, rl.Color.yellow);
+}
+
+fn drawCountdownTimer(game_state: *GameState) void {
+    const total_seconds = @as(i32, @intFromFloat(game_state.timer_countdown));
+    
+    // Update text only when seconds change
+    if (total_seconds != game_state.last_timer_seconds) {
+        const minutes = @divTrunc(total_seconds, 60);
+        const seconds = @mod(total_seconds, 60);
+        game_state.timer_text = std.fmt.bufPrintZ(
+            &game_state.timer_text_buf,
+            "{d}:{d:0>2}",
+            .{ minutes, seconds },
+        ) catch "Error";
+        game_state.last_timer_seconds = total_seconds;
+    }
+    
+    // Determine color based on timer state
+    const timer_color: rl.Color = if (game_state.timer_countdown <= 0)
+        rl.Color.red  // Red when finished
+    else if (game_state.timer_countdown <= 30)
+        rl.Color.orange  // Orange warning (last 30 seconds)
+    else
+        rl.Color.white;  // White while counting
+    
+    // Draw timer slightly below FPS counter
+    rl.drawText(game_state.timer_text, 20, 85, 20, timer_color);
 }
 
 fn drawSlider(x: f32, y: f32, width: f32, value: *f32, min: f32, max: f32) void {
