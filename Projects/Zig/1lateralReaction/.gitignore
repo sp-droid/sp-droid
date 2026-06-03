@@ -7,3 +7,4 @@
 !/src/
 !/src/**
 !/build.zig
+!/build.zig.zon
