@@ -1,4 +1,4 @@
-// V5 neighbor preloading in the 3 closest zoom levels
+// V5, neighbor preloading in the 3 closest zoom levels
 const width = window.innerWidth;
 const height = window.innerHeight;
 

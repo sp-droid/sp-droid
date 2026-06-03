@@ -1,4 +1,4 @@
-// V7, continuous zoom
+// V6, only recomputed the cache requests when the camera moves instead of every frame
 const width = window.innerWidth;
 const height = window.innerHeight;
 
