@@ -68,26 +68,13 @@ const GameState = struct {
 // ============================================================================
 
 const display_fps = 1000;
-const SCREEN_WIDTH = 2560.0;
-const SCREEN_HEIGHT = 1440.0;
 const BALL_RADIUS = 15.0;
-const BALL_START_X = SCREEN_WIDTH / 2.0;
-const BALL_START_Y = 100.0;
-const PADDLE_HEIGHT = 20.0;
-const PADDLE_Y = SCREEN_HEIGHT - 60.0;
-const FIRE_DELAY = 0.3; // Before ball fires
 
-// Launch rectangle (1/4 screen width, 40 pixels tall, centered at top with 10px margin)
-const LAUNCH_RECT_WIDTH = SCREEN_WIDTH / 4.0;
-const LAUNCH_RECT_HEIGHT = 40.0;
-const LAUNCH_RECT_X = SCREEN_WIDTH / 2.0 - LAUNCH_RECT_WIDTH / 2.0;
-const LAUNCH_RECT_Y = 10.0;
+const FIRE_DELAY = 0.3; // Before ball fires
 
 // Physics constants
 // Distance from ball start to bottom = 10 meters
 // Pixel distance: SCREEN_HEIGHT - BALL_START_Y = 980 pixels = 10 meters
-const PIXELS_PER_METER = (SCREEN_HEIGHT - BALL_START_Y) / 10.0; // ~98 pixels per meter
-const METERS_PER_PIXEL = 10.0 / (SCREEN_HEIGHT - BALL_START_Y); // ~0.0102 meters per pixel
 const BASE_BALL_SPEED = 450.0; // km/h
 const DRAG_COEFFICIENT = 0.45; // Badminton shuttlecock with feathered skirt
 const AIR_DENSITY = 1.225; // kg/m^3 at sea level
@@ -103,11 +90,6 @@ const COUNTDOWN_DURATION = 180.0; // 3 minutes in seconds
 
 // Physics sub-stepping
 const PHYSICS_TIME_RATIO = 10; // Apply physics 10x per frame for accurate drag integration
-
-// UI positions
-const SPEED_SLIDER_X = SCREEN_WIDTH - 300.0; // Right side
-const SPEED_SLIDER_Y = 20.0;
-const SPEED_SLIDER_WIDTH = 200.0;
 
 // ============================================================================
 // UTILITY FUNCTIONS
@@ -502,7 +484,7 @@ fn drawUI(game_state: *GameState) void {
 
 fn drawCountdownTimer(game_state: *GameState) void {
     const total_seconds = @as(i32, @intFromFloat(game_state.timer_countdown));
-    
+
     // Update text only when seconds change
     if (total_seconds != game_state.last_timer_seconds) {
         const minutes = @divTrunc(total_seconds, 60);
@@ -514,15 +496,15 @@ fn drawCountdownTimer(game_state: *GameState) void {
         ) catch "Error";
         game_state.last_timer_seconds = total_seconds;
     }
-    
+
     // Determine color based on timer state
     const timer_color: rl.Color = if (game_state.timer_countdown <= 0)
-        rl.Color.red  // Red when finished
+        rl.Color.red // Red when finished
     else if (game_state.timer_countdown <= 30)
-        rl.Color.orange  // Orange warning (last 30 seconds)
+        rl.Color.orange // Orange warning (last 30 seconds)
     else
-        rl.Color.white;  // White while counting
-    
+        rl.Color.white; // White while counting
+
     // Draw timer slightly below FPS counter
     rl.drawText(game_state.timer_text, 20, 85, 20, timer_color);
 }
@@ -559,19 +541,52 @@ fn drawSlider(x: f32, y: f32, width: f32, value: *f32, min: f32, max: f32) void 
     }
 }
 
+var SCREEN_WIDTH: f32 = undefined;
+var SCREEN_HEIGHT: f32 = undefined;
+var BALL_START_X: f32 = undefined;
+var BALL_START_Y: f32 = undefined;
+var PADDLE_HEIGHT: f32 = undefined;
+var PADDLE_Y: f32 = undefined;
+var PIXELS_PER_METER: f32 = undefined;
+var METERS_PER_PIXEL: f32 = undefined;
+var LAUNCH_RECT_WIDTH: f32 = undefined;
+var LAUNCH_RECT_HEIGHT: f32 = undefined;
+var LAUNCH_RECT_X: f32 = undefined;
+var LAUNCH_RECT_Y: f32 = undefined;
+var SPEED_SLIDER_X: f32 = undefined;
+var SPEED_SLIDER_Y: f32 = undefined;
+var SPEED_SLIDER_WIDTH: f32 = undefined;
+
+fn defineConstants() void {
+    SCREEN_WIDTH = @floatFromInt(rl.getScreenWidth());
+    SCREEN_HEIGHT = @floatFromInt(rl.getScreenHeight());
+
+    BALL_START_X = SCREEN_WIDTH / 2.0;
+    BALL_START_Y = 100.0;
+    PADDLE_HEIGHT = 20.0;
+    PADDLE_Y = SCREEN_HEIGHT - 60.0;
+    PIXELS_PER_METER = (SCREEN_HEIGHT - BALL_START_Y) / 10.0; // ~98 pixels per meter
+    METERS_PER_PIXEL = 10.0 / (SCREEN_HEIGHT - BALL_START_Y); // ~0.0102 meters per pixel
+    LAUNCH_RECT_WIDTH = SCREEN_WIDTH / 4.0; // Launch rectangle (1/4 screen width, 40 pixels tall, centered at top with 10px margin)
+    LAUNCH_RECT_HEIGHT = 40.0;
+    LAUNCH_RECT_X = SCREEN_WIDTH / 2.0 - LAUNCH_RECT_WIDTH / 2.0;
+    LAUNCH_RECT_Y = 10.0;
+    // UI positions
+    SPEED_SLIDER_X = SCREEN_WIDTH - 300.0; // Right side
+    SPEED_SLIDER_Y = 20.0;
+    SPEED_SLIDER_WIDTH = 200.0;
+}
+
 // ============================================================================
 // MAIN
 // ============================================================================
 
 pub fn main() !void {
-    const screen_width: i32 = @intFromFloat(SCREEN_WIDTH);
-    const screen_height: i32 = @intFromFloat(SCREEN_HEIGHT);
-    const start_x = 0;
-    const start_y = 0;
-
-    rl.initWindow(screen_width, screen_height, "Reaction Ball Game");
+    rl.initWindow(1, 1, "Reaction Ball Game");
     defer rl.closeWindow();
-    rl.setWindowPosition(start_x, start_y);
+    rl.toggleFullscreen();
+
+    defineConstants();
 
     // Initialize audio device for sound playback
     rl.initAudioDevice();

@@ -5,7 +5,7 @@ pub fn build(b: *std.Build) !void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
-    const platform = b.option(rlz.PlatformBackend, "platform", "Platform backend") orelse .win32;
+    const platform = b.option(rlz.PlatformBackend, "platform", "Platform backend") orelse .glfw;
 
     const raylib_dep = b.dependency("raylib_zig", .{
         .target = target,
