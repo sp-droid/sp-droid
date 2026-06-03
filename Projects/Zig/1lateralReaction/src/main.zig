@@ -67,7 +67,6 @@ const GameState = struct {
 // CONSTANTS
 // ============================================================================
 
-const display_fps = 1000;
 const BALL_RADIUS = 15.0;
 
 const FIRE_DELAY = 0.3; // Before ball fires
@@ -89,7 +88,7 @@ const BOUNCE_DELAY = 0.3; // Delay before resetting after collision or miss
 const COUNTDOWN_DURATION = 180.0; // 3 minutes in seconds
 
 // Physics sub-stepping
-const PHYSICS_TIME_RATIO = 10; // Apply physics 10x per frame for accurate drag integration
+const PHYSICS_TIME_RATIO = 30; // Apply physics 30x per frame for accurate drag integration
 
 // ============================================================================
 // UTILITY FUNCTIONS
@@ -582,6 +581,8 @@ fn defineConstants() void {
 // ============================================================================
 
 pub fn main() !void {
+    rl.setConfigFlags(.{ .vsync_hint = true }); // Enable vsync
+
     rl.initWindow(1, 1, "Reaction Ball Game");
     defer rl.closeWindow();
     rl.toggleFullscreen();
@@ -592,7 +593,7 @@ pub fn main() !void {
     rl.initAudioDevice();
     defer rl.closeAudioDevice();
 
-    rl.setTargetFPS(display_fps);
+    // rl.setTargetFPS(0); // Enables vsync, syncs to monitor refresh rate
 
     var game_state = initGame();
     defer {
