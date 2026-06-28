@@ -56,6 +56,9 @@ const GameState = struct {
     last_attempts: i32 = 0,
     last_current_speed: i32 = 0,
     last_paddle_width: i32 = 0,
+    // Feedback text buffer
+    feedback_text_buf: [64:0]u8 = undefined,
+    feedback_text: [:0]const u8 = "",
     // Countdown timer (3 minutes)
     timer_countdown: f32 = 180.0,
     timer_text_buf: [32:0]u8 = undefined,
@@ -69,12 +72,14 @@ const GameState = struct {
 
 const BALL_RADIUS = 15.0;
 
-const FIRE_DELAY = 0.3; // Before ball fires
+fn getFireDelay() f32 {
+    return randomF32(0.2, 0.6); // Random delay between 0.25 and 0.45 seconds
+}
 
 // Physics constants
 // Distance from ball start to bottom = 10 meters
 // Pixel distance: SCREEN_HEIGHT - BALL_START_Y = 980 pixels = 10 meters
-const BASE_BALL_SPEED = 450.0; // km/h
+const BASE_BALL_SPEED = 500.0; // km/h
 const DRAG_COEFFICIENT = 0.45; // Badminton shuttlecock with feathered skirt
 const AIR_DENSITY = 1.225; // kg/m^3 at sea level
 const SHUTTLECOCK_MASS = 0.005; // kg (approximately 5 grams)
@@ -85,7 +90,7 @@ const FEEDBACK_DISPLAY_TIME = 0.4; // How long to show "Hit"/"Miss" text
 const BOUNCE_DELAY = 0.3; // Delay before resetting after collision or miss
 
 // Countdown timer
-const COUNTDOWN_DURATION = 180.0; // 3 minutes in seconds
+const COUNTDOWN_DURATION = 600.0; // 10 minutes in seconds
 
 // Physics sub-stepping
 const PHYSICS_TIME_RATIO = 30; // Apply physics 30x per frame for accurate drag integration
@@ -164,7 +169,7 @@ fn initGame() GameState {
     game_state.score = 0;
     game_state.attempts = 0;
     game_state.current_speed = BASE_BALL_SPEED; // Start at base speed
-    game_state.countdown_timer = FIRE_DELAY;
+    game_state.countdown_timer = getFireDelay();
     game_state.bounce_delay_timer = 0;
     game_state.last_feedback = FeedbackType.none;
     game_state.feedback_timer = 0;
@@ -194,7 +199,7 @@ fn resetBall(game_state: *GameState) void {
     game_state.ball.position = rl.Vector2{ .x = launch_x, .y = launch_y };
     game_state.ball.velocity = rl.Vector2{ .x = 0, .y = 0 };
     game_state.ball.state = BallState.idle;
-    game_state.countdown_timer = FIRE_DELAY;
+    game_state.countdown_timer = getFireDelay();
     game_state.bounce_delay_timer = 0;
     game_state.attempts += 1;
 }
@@ -310,6 +315,11 @@ fn updateGame(game_state: *GameState, dt: f32) void {
                 game_state.current_speed += 1.0; // Increase speed by 1 km/h on hit
                 game_state.last_feedback = FeedbackType.hit;
                 game_state.feedback_timer = FEEDBACK_DISPLAY_TIME;
+                game_state.feedback_text = std.fmt.bufPrintZ(
+                    &game_state.feedback_text_buf,
+                    "HIT +{d:.0} km/h",
+                    .{game_state.current_speed * game_state.settings.speed_multiplier},
+                ) catch "Error";
                 rl.playSound(game_state.hit_sound);
                 break; // Exit physics loop
             }
@@ -322,6 +332,11 @@ fn updateGame(game_state: *GameState, dt: f32) void {
                 game_state.current_speed = @max(game_state.current_speed, 10.0); // Keep minimum speed at 10 km/h
                 game_state.last_feedback = FeedbackType.miss;
                 game_state.feedback_timer = FEEDBACK_DISPLAY_TIME;
+                game_state.feedback_text = std.fmt.bufPrintZ(
+                    &game_state.feedback_text_buf,
+                    "MISS",
+                    .{},
+                ) catch "Error";
                 rl.playSound(game_state.miss_sound);
                 break; // Exit physics loop
             }
@@ -418,13 +433,8 @@ fn drawGame(game_state: *GameState) void {
 
     // Draw feedback text
     if (game_state.feedback_timer > 0) {
-        const feedback_text: [:0]const u8 = switch (game_state.last_feedback) {
-            FeedbackType.hit => "HIT +1",
-            FeedbackType.miss => "MISS",
-            FeedbackType.none => "",
-        };
-        if (feedback_text.len > 0) {
-            rl.drawText(feedback_text, 960 - 40, 540, 40, rl.Color.yellow);
+        if (game_state.feedback_text.len > 0) {
+            rl.drawText(game_state.feedback_text, 960 - 40, 540, 40, rl.Color.yellow);
         }
     }
 
