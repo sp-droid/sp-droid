@@ -13,8 +13,8 @@
         <h1>Tournament tool</h1>
         <nav>
             <button type="button" id="stage-1-button">Setup stage</button>
-            <button type="button" id="stage-2-button">Play</button>
-            <button type="button" id="stage-3-button">Results</button>
+            <button type="button" id="stage-2-button" disabled>Play</button>
+            <button type="button" id="stage-3-button" disabled>Results</button>
         </nav>
     </header>
 
@@ -22,11 +22,17 @@
         <!-- Stage 1: Input Participant Details -->
         <section id="stage-1" style="display: block;">
             <h2>Stage 1: Setup Tournament</h2>
-            <hr>
+            <hr><br>
+            <form id="tournament-name-form">
+                <label for="tournament-name">Tournament Name:</label>
+                <input type="text" id="tournament-name" name="tournament-name" placeholder="Tournament tool">
+            </form><br>
             <form id="setup-form">
                 <label for="tournament-format">Tournament type:</label>
                 <select id="tournament-format" name="tournament-format">
-                    <option value="1" title="Players are paired randomly, the winner being the player with the most points.">Swiss with random pairings</option>
+                    <option value="1" title="Players are paired randomly, the winner being the player with the most points.">All-against-All Random pairings</option>
+                    <option value="2" title="Same as random pairings, but optimized to minimize repeated matchups across rounds.">All-against-All Better random pairings</option>
+                    <option value="3" title="Same as better random pairings, but making teams more balanced through the ranking." selected>All-against-All Optimized pairings</option>
                 </select>
                 <br>
                 <label for="players-per-team">Number of Players per Team:</label>
@@ -41,44 +47,31 @@
                 </select>
                 <br>
                 <label for="rounds">Number of Rounds:</label>
-                <select id="rounds" name="rounds">
-                    <!-- Options from 1 to 16 -->
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                </select>
+                <input type="number" id="rounds" name="rounds" value="4" min="2" step="1" style="width: 100px;">
                 <br>
                 <label for="participants">Participant Names (1 for each row):</label>
                 <br>
-                <textarea id="participants" name="participants" rows="4" cols="50" required placeholder="Enter participant names..."></textarea>
+                <textarea id="participants" name="participants" rows="8" cols="50" required placeholder="Enter participant names..."></textarea>
             </form>
             <h3>Draft analysis</h3>
-            <ul style="text-shadow: 1px 1px 5px rgba(255, 255, 255, 1); /* Soft white text shadow */
-    font-weight: 600;">
+            <ul style="text-shadow: 1px 1px 5px rgba(255, 255, 255, 1); font-weight: 600;">
                 <li>Number of players (+left out each round): <div><span id="analysis-total">-</span> (+<span id="analysis-leftout">-</span>)</div></li>
                 <li>Games per round / total: <div><span id="analysis-gamesPerRound">-</span> / <span id="analysis-gamesTotal">-</span></div></li>
-                <li>Probability of sharing teams with the same player at least twice: <div><span id="analysis-probSameTeam">-</span> %</div></li>
-                <li>Probability of sharing games with the same player at least twice: <div><span id="analysis-probSameGame">-</span> %</div></li>
+                <li>Players with duplicate names: <div><span id="analysis-duplicateNames">-</span></div></li>
             </ul>
+            <button type="button" id="generate-button" style="background:linear-gradient(135deg,#27ae60,#2ecc71);color:white;border:none;padding:12px;border-radius:8px;cursor:pointer;font-size:16px;font-weight:700;box-shadow:0 4px 16px rgba(46,204,113,0.3);margin-top:12px;">Generate draft</button>
         </section>
 
         <!-- Stage 2: Display Rounds and Games -->
         <section id="stage-2" style="display: none;">
             <h2>Stage 2: Tournament Rounds</h2>
-            <hr>
+            <hr><br>
+            <strong>Highlighting games played by:</strong> <span id="highlighted-player" style="font-weight: bold; " title="Click player name to highlight">-</span>
+            <br>
+            <strong>Plays with (same team):</strong> <span id="plays-with-team">-</span>
+            <br>
+            <strong>Plays with (same game):</strong> <span id="plays-with-game">-</span>
+            <br><br>
             <div id="rounds-container">
                 <!-- Dynamically filled by tournament.js -->
             </div>
@@ -87,6 +80,7 @@
                     <tr>
                         <th>Game ID</th>
                         <th>Round</th>
+                        <th>Court</th>
                         <th>Team 1 Players</th>
                         <th>Team 2 Players</th>
                         <th>Score</th>
@@ -106,15 +100,21 @@
                 <thead>
                     <tr>
                         <th>Rank</th>
+                        <th>Category</th>
                         <th>Participant</th>
                         <th>Results</th>
-                        <th>Final score</th>
+                        <th>Games Played</th>
+                        <th>Total</th>
+                        <th>Average</th>
                     </tr>
                 </thead>
                 <tbody>
                     <!-- Dynamically filled by tournament.js -->
                 </tbody>
             </table>
+            <div id="luck-info" class="luck-info"></div>
+            <h3>Score Distribution</h3>
+            <div id="score-chart" class="score-chart"></div>
         </section>
     </main>
     <script src="tournament.js" defer></script>

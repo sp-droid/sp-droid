@@ -1,120 +1,748 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+    padding: 20px;
+    min-height: 100vh;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
     background-image: url('bg.svg');
     background-size: cover;
     background-color: #EDE29B;
+    color: #2c3e50;
+    line-height: 1.6;
 }
 
+/* ===== Header ===== */
 header {
     text-align: center;
-    margin-bottom: 20px;
-}
-
-main {
-    width: 90%;
-    max-width: 800px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form label, form textarea, form input, form button, form select {
-    margin: 10px 0;
+    margin-bottom: 24px;
     width: 100%;
 }
 
-section {
-    margin-bottom: 20px;
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+    margin: 0 0 16px 0;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-}
-
-td {
-    background-color: rgba(255, 255, 255, 0.9)
-}
-
-th {
-    background-color: #f4f4f4;
-}
-
+/* ===== Navigation ===== */
 nav {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 12px;
+    margin-bottom: 10px;
 }
 
 nav button {
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
+    border-radius: 8px;
+    padding: 12px 28px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 nav button:hover {
-    background-color: #0056b3; /* Add hover effect */
-    color: #ffffff; /* Ensure text remains visible */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
-button {
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+nav button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-.introduceResult:hover {
-    cursor: pointer;
+#stage-1-button { background: linear-gradient(135deg, #27ae60, #2ecc71); }
+#stage-2-button { background: linear-gradient(135deg, #f39c12, #f1c40f); color: #2c3e50; }
+#stage-3-button { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+
+nav button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
 }
 
-#stage-1-button {
-    background-color: #28a745; /* Green */
+/* ===== Main Container ===== */
+main {
+    width: 92%;
+    max-width: 860px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    padding: 28px 32px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-#stage-2-button {
-    background-color: #ffc107; /* Yellow */
+section {
+    margin-bottom: 0;
 }
 
-#stage-3-button {
-    background-color: #dc3545; /* Red */
+/* ===== Typography ===== */
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 8px 0;
 }
 
+h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #34495e;
+    margin: 20px 0 10px 0;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #bdc3c7, transparent);
+    margin: 8px 0 16px 0;
+}
+
+/* ===== Forms ===== */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+form textarea, form input, form select {
+    margin: 6px 0 10px 0;
+    width: 100%;
+    padding: 10px 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background: #fff;
+    color: #2c3e50;
+}
+
+form textarea:focus, form input:focus, form select:focus {
+    outline: none;
+    border-color: #4A90D9;
+    box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.15);
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* ===== Select ===== */
 select {
     width: 100%;
-    padding: 8px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    height: auto;
-    max-height: 150px; /* Limit the height of the dropdown */
+    padding: 10px 14px;
+    margin: 6px 0 10px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat right 12px center;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-select option {
-    max-height: 20px;
+select:focus {
+    outline: none;
+    border-color: #4A90D9;
+    box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.15);
+}
+
+/* ===== Buttons (global) ===== */
+button {
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ===== Tournament Name Form ===== */
+#tournament-name-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    background: #fff;
+}
+
+#tournament-name-form label {
+    font-weight: 600;
+    white-space: nowrap;
+    margin: 0;
+}
+
+#tournament-name-form input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+    margin: 0;
+}
+
+#tournament-name-form input:focus {
+    outline: none;
+    border-color: #4A90D9;
+    box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.15);
+}
+
+/* ===== Draft Analysis List ===== */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
 }
 
 ul li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 8px 14px;
+    margin: 4px 0;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* ===== Tables ===== */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+th, td {
+    padding: 10px 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #f8f9fa;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #555;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+td {
+    background-color: rgba(255, 255, 255, 0.95);
+    font-size: 14px;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+.playing-status {
+    color: #e74c3c;
+    font-weight: 700;
+    animation: fadeInOut 3.0s infinite;
+}
+
+.player-name {
+    cursor: pointer;
+    transition: color 0.15s ease;
+}
+
+.player-name:hover {
+    color: #4A90D9;
+}
+
+.introduceResult {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.introduceResult-pending {
+    color: #4A90D9;
+    font-weight: 600;
+}
+
+.introduceResult-pending:hover {
+    color: #2c6cb0;
+}
+
+.busy-warning {
+    font-size: 1.1em;
+    cursor: help;
+}
+
+.introduceResult-done {
+    color: #16a085;
+    font-weight: 600;
+}
+
+.introduceResult-done:hover {
+    color: #1abc9c;
+}
+
+/* ===== Rank Highlights ===== */
+#games-table td {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#games-table tr.highlighted-row td {
+    background-color: transparent !important;
+    font-weight: 700;
+}
+
+.rank-1 td {
+    background-color: rgba(255, 215, 0, 0.25) !important;
+}
+
+.rank-2 td {
+    background-color: rgba(192, 192, 192, 0.25) !important;
+}
+
+.rank-3 td {
+    background-color: rgba(205, 127, 50, 0.25) !important;
+}
+
+/* ===== Modal / Popup Styles ===== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translate(-50%, -40%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.modal-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 28px 32px;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    min-width: 360px;
+    max-width: 90vw;
+    max-height: 85vh;
+    overflow-y: auto;
+    animation: slideUp 0.25s ease;
+}
+
+.modal-popup h3 {
+    margin: 0 0 16px 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 12px;
+}
+
+.modal-popup label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+.modal-popup input[type="number"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-popup input[type="number"]:focus {
+    outline: none;
+    border-color: #4A90D9;
+    box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.15);
+}
+
+/* ===== Buttons inside modals ===== */
+.btn-primary {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(46, 204, 113, 0.3);
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(46, 204, 113, 0.4);
+}
+
+.btn-primary:disabled {
+    background: #bdc3c7;
+    box-shadow: none;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
+    transition: all 0.2s ease;
+}
+
+.btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(231, 76, 60, 0.4);
+}
+
+.btn-default {
+    background: #ecf0f1;
+    color: #2c3e50;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-default:hover {
+    background: #dfe4e6;
+    transform: translateY(-2px);
+}
+
+/* ===== Court Stepper ===== */
+.court-stepper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 6px 0 10px 0;
+}
+
+.court-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: #f8f9fa;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.court-btn:hover {
+    background: #e8e8e8;
+    border-color: #ccc;
+    transform: scale(1.05);
+}
+
+.court-btn:active {
+    transform: scale(0.95);
+}
+
+.court-display {
+    min-width: 36px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* ===== Player Name Links (swap) ===== */
+.player-name-link {
+    cursor: pointer;
+    color: #4A90D9;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    transition: color 0.2s ease;
+}
+
+.player-name-link:hover {
+    color: #2c6cb0;
+    text-decoration-style: solid;
+}
+
+/* ===== Swap Options ===== */
+.swap-option {
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #4A90D9;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s ease;
+    border-radius: 4px;
+}
+
+.swap-option:hover {
+    background: #f0f6ff;
+}
+
+/* ===== Team Player List (add match) ===== */
+.team-players-box {
+    min-height: 42px;
+    border: 2px dashed #ddd;
+    padding: 8px 10px;
+    margin: 6px 0;
+    border-radius: 8px;
+    background: #fafafa;
+    font-size: 14px;
+    color: #555;
+    transition: border-color 0.2s ease;
+}
+
+.team-players-box:not(:empty) {
+    border-style: solid;
+    border-color: #27ae60;
+    background: #f0faf0;
+}
+
+/* ===== Button Row ===== */
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+/* ===== Stage 2 Highlighting Section ===== */
+#stage-2 strong {
+    color: #2c3e50;
+}
+
+#stage-2 span {
+    font-weight: 600;
+}
+
+/* ===== Scrollbar for modal ===== */
+.modal-popup::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-popup::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal-popup::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    main {
+        padding: 16px;
+        width: 100%;
+    }
+    nav {
+        flex-wrap: wrap;
+    }
+    nav button {
+        flex: 1;
+        min-width: 80px;
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+    .modal-popup {
+        padding: 20px;
+        min-width: auto;
+        width: 92vw;
+    }
+    #tournament-name-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #tournament-name-form input {
+        width: 100%;
+    }
+}
+
+/* ===== Luck Info ===== */
+.luck-info {
+    text-align: center;
+    padding: 12px 16px;
+    margin: 16px 0 8px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    border: 1px solid #e8e8e8;
+    font-size: 15px;
+    color: #2c3e50;
+}
+
+.luck-info p {
+    margin: 4px 0;
+}
+
+.luck-info strong {
+    font-weight: 700;
+}
+
+.luck-lucky { color: #27ae60; }
+.luck-unlucky { color: #e74c3c; }
+
+/* ===== Score Distribution Chart ===== */
+.score-chart {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+    padding: 16px 16px 4px;
+    min-height: 300px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    border: 1px solid #e8e8e8;
+    overflow: hidden;
+}
+
+.score-chart-y-label {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 13px;
+    font-weight: 700;
+    color: #999;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    align-self: center;
+    padding: 8px 0;
+    user-select: none;
+}
+
+.score-chart-bars-area {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+}
+
+.score-chart-bars-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 6px;
+    flex: 1;
+    padding-bottom: 4px;
+    overflow: hidden;
+}
+
+.score-chart-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex: 1 1 20px;
+    min-width: 12px;
+    max-width: 48px;
+}
+
+.score-chart-bar {
+    width: 100%;
+    max-width: 36px;
+    border-radius: 4px 4px 0 0;
+    background: linear-gradient(180deg, #4A90D9, #2ecc71);
+    box-shadow: 0 2px 8px rgba(74, 144, 217, 0.25);
+    transition: height 0.3s ease;
+    min-height: 4px;
+}
+
+.score-chart-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+    padding: 2px 6px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+}
+
+.score-chart-x-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #999;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 2px 0 6px;
+    user-select: none;
+}
+
+.score-chart-empty {
+    color: #aaa;
+    font-style: italic;
+    font-size: 14px;
+    padding: 20px;
 }
