@@ -1,4 +1,4 @@
-// V7, continuous zoom
+// V7, zoomable
 const width = window.innerWidth;
 const height = window.innerHeight;
 
@@ -20,18 +20,39 @@ const MAX_CACHED_TILES = 128;
 const TILE_PIXEL_COUNT = TILE_SIZE * TILE_SIZE * 4; // RGBA
 let tileCache = new Uint8Array(MAX_CACHED_TILES * TILE_PIXEL_COUNT);
 let cachedKeys = new Map();
-let cacheIndex = 0;
+// cacheIndex replaced by trimCache returning slot directly
 const LOAD_TILE_DELAY = 100;
 let nTilesLoading = 0;
 let loadingTimeStart = 0;
 let loadingTimeEnd = 0;
 
+let zoomed = true;
+
 function setup() {
     // Create a canvas with the same dimensions as the window
     createCanvas(width, height);
+    drawingContext.imageSmoothingEnabled = false;
 
     reusableTile = createImage(TILE_SIZE, TILE_SIZE);
     reusableTile.loadPixels();
+
+    let button = createButton(`Zoom: ${zoomed ? 'ON' : 'OFF'}`);
+    button.position(20, height - 40);
+    button.mousePressed(() => {
+        const level = 2 ** zoomLevel;
+        if (zoomed) {
+            // Switching FROM zoomed TO non-zoomed: scale pan down to world coords
+            panX /= level;
+            panY /= level;
+        } else {
+            // Switching FROM non-zoomed TO zoomed: scale pan up to zoomed coords
+            panX *= level;
+            panY *= level;
+        }
+        zoomed = !zoomed;
+        button.html(`Zoom: ${zoomed ? 'ON' : 'OFF'}`);
+        movedCamera = true;
+    });
 }
 
 function draw() {
@@ -47,51 +68,93 @@ function draw() {
     // Draw the zoomed-in images
     const level = 2 ** zoomLevel;
     const tileSize = Math.max(height, width) / 2 / level;
+
+    let worldPanX = panX;
+    let worldPanY = panY;
+    if (zoomed) {
+        worldPanX /= level;
+        worldPanY /= level;
+    }
     
     // Which tile is the crosshair pointing to
-    let xTile = Math.floor((-panX+width/2) / tileSize);
-    let yTile = Math.floor((-panY+height/2) / tileSize);
+    let xTile = Math.floor((-worldPanX +width/2) / tileSize);
+    let yTile = Math.floor((-worldPanY +height/2) / tileSize);
 
     if (movedCamera) {
         cacheRequests = [];
-        rebuildCacheRequests(zoomLevel, panX, panY);
+        rebuildCacheRequests(zoomLevel, worldPanX, worldPanY);
         movedCamera = false;
     }
 
     // Calculate which tiles would be visible if we were zoomed in near the crosshair
-    const startX = Math.max(0, Math.floor((-panX+width/2 - width / 2 / level) / tileSize));
-    const startY = Math.max(0, Math.floor((-panY+height/2 - height / 2 / level) / tileSize));
-    const endX = Math.min(level * 2, Math.ceil((-panX+width/2 + width / 2 / level) / tileSize));
-    const endY = Math.min(level, Math.ceil((-panY+height/2 + height / 2 / level) / tileSize));
-    // Draw visible tiles
-    for (let y = startY; y < endY; y++) {
-        for (let x = startX; x < endX; x++) {
-            const tileID = getTileID(zoomLevel, y, x);
+    const startX = Math.max(0, Math.floor((-worldPanX +width/2 - width / 2 / level) / tileSize));
+    const startY = Math.max(0, Math.floor((-worldPanY +height/2 - height / 2 / level) / tileSize));
+    const endX = Math.min(level * 2, Math.ceil((-worldPanX +width/2 + width / 2 / level) / tileSize));
+    const endY = Math.min(level, Math.ceil((-worldPanY +height/2 + height / 2 / level) / tileSize));
 
-            const pixels = getTile(tileID);
-            if (pixels) {
-                reusableTile.pixels.set(pixels);
-                reusableTile.updatePixels();
-                image(reusableTile, x * tileSize, y * tileSize, tileSize, tileSize);
+    if (zoomed) {
+        const trueTileSize = tileSize * level;
+        // Draw visible tiles
+        for (let y = startY; y < endY; y++) {
+            for (let x = startX; x < endX; x++) {
+                const tileID = getTileID(zoomLevel, y, x);
+
+                const pixels = getTile(tileID);
+                if (pixels) {
+                    reusableTile.pixels.set(pixels);
+                    reusableTile.updatePixels();
+                    image(reusableTile, x * trueTileSize -width/2*(level-1), y * trueTileSize -height/2*(level-1), trueTileSize, trueTileSize);
+                }
             }
         }
-    }
 
-    // Draw tile borders
-    for (let y = 0; y < level; y++) {
-        for (let x = 0; x < level*2; x++) {
-            stroke(0, 255, 0); // Green borders
-            strokeWeight(2);
-            noFill();
-            rect(x * tileSize, y * tileSize, tileSize, tileSize);
+        // Draw tile borders
+        for (let y = 0; y < level; y++) {
+            for (let x = 0; x < level*2; x++) {
+                stroke(0, 255, 0); // Green borders
+                strokeWeight(2);
+                noFill();
+                rect(x * trueTileSize -width/2*(level-1), y * trueTileSize -height/2*(level-1), trueTileSize, trueTileSize);
+            }
         }
-    }
 
-    // Draw a red rectangle of what would be the visible area if we were zoomed in
-    stroke(255, 0, 0); // Red borders
-    strokeWeight(2);
-    noFill();
-    rect(-panX+width/2 - width / 2 / level, -panY+height/2 - height / 2 / level, width / level, height / level);
+        // Draw a red rectangle of what would be the visible area if we were zoomed in
+        stroke(255, 0, 0); // Red borders
+        strokeWeight(2);
+        noFill();
+        rect(-panX+width/2 - width / 2, -panY+height/2 - height / 2, width, height);
+    } else {
+        // Draw visible tiles
+        for (let y = startY; y < endY; y++) {
+            for (let x = startX; x < endX; x++) {
+                const tileID = getTileID(zoomLevel, y, x);
+
+                const pixels = getTile(tileID);
+                if (pixels) {
+                    reusableTile.pixels.set(pixels);
+                    reusableTile.updatePixels();
+                    image(reusableTile, x * tileSize, y * tileSize, tileSize, tileSize);
+                }
+            }
+        }
+
+        // Draw tile borders
+        for (let y = 0; y < level; y++) {
+            for (let x = 0; x < level*2; x++) {
+                stroke(0, 255, 0); // Green borders
+                strokeWeight(2);
+                noFill();
+                rect(x * tileSize, y * tileSize, tileSize, tileSize);
+            }
+        }
+
+        // Draw a red rectangle of what would be the visible area if we were zoomed in
+        stroke(255, 0, 0); // Red borders
+        strokeWeight(2);
+        noFill();
+        rect(-panX+width/2 - width / 2 / level, -panY+height/2 - height / 2 / level, width / level, height / level);
+    }
+    
 
     // Restore transformation state. UI after this
     pop();
@@ -125,16 +188,29 @@ function getTileID(z, y, x) {
 }
 
 function trimCache() {
-    if (cachedKeys.size < MAX_CACHED_TILES) {
-        cacheIndex = cachedKeys.size;
-        return;
+    // If cache is full, evict the oldest entry and reuse its slot
+    if (cachedKeys.size >= MAX_CACHED_TILES) {
+        const oldestKey = cachedKeys.keys().next().value; // Get the first key (oldest)
+        const evictedSlot = cachedKeys.get(oldestKey).slot;
+        console.log(`Evicting tile ${oldestKey} from cache slot ${evictedSlot}`);
+        cachedKeys.delete(oldestKey);
+        return evictedSlot;
     }
 
-    const oldestKey = cachedKeys.keys().next().value; // Get the first key (oldest)
-    cacheIndex = cachedKeys.get(oldestKey).slot;
-    
-    console.log(`Evicting tile ${oldestKey} from cache slot ${cacheIndex}`);
+    // Cache not yet full — find the first unused slot (O(n) but MAX_CACHED_TILES is small)
+    const usedSlots = new Set();
+    for (const [, entry] of cachedKeys) {
+        usedSlots.add(entry.slot);
+    }
+    for (let i = 0; i < MAX_CACHED_TILES; i++) {
+        if (!usedSlots.has(i)) return i;
+    }
+
+    // Fallback (shouldn't reach here)
+    const oldestKey = cachedKeys.keys().next().value;
+    const evictedSlot = cachedKeys.get(oldestKey).slot;
     cachedKeys.delete(oldestKey);
+    return evictedSlot;
 }
 
 function cacheTile(tileID, z, y, x) {
@@ -146,28 +222,30 @@ function cacheTile(tileID, z, y, x) {
         return null; // Too many tiles loading, skip this one for now
     }
 
-    trimCache();
-    const reservedSlot = cacheIndex;
+    const reservedSlot = trimCache();
     cachedKeys.set(tileID, {
         slot: reservedSlot,
         loading: true
     });
 
-    // Tile is not in cache and not being loaded
     nTilesLoading += 1;
     setTimeout(() => {
-        loadImage(`map/${z}/${y}/${x}.png`, (img) => {
-            img.loadPixels();
+        loadImage(`map/${z}/${y}/${x}.png`,
+            (img) => { // Success callback
+                img.loadPixels();
 
-            const arrayIndex = reservedSlot * TILE_PIXEL_COUNT;
-            if (cachedKeys.has(tileID)) { // Tile wasn't evicted while loading
-                cachedKeys.get(tileID).loading = false;
-
-                tileCache.set(img.pixels, arrayIndex);  
-
+                const arrayIndex = reservedSlot * TILE_PIXEL_COUNT;
+                if (cachedKeys.has(tileID)) { // Tile wasn't evicted while loading
+                    cachedKeys.get(tileID).loading = false;
+                    tileCache.set(img.pixels, arrayIndex);
+                }
+                nTilesLoading -= 1;
+            },
+            () => { // Failure callback — image missing or load error
+                cachedKeys.delete(tileID);
                 nTilesLoading -= 1;
             }
-        });
+        );
     }, LOAD_TILE_DELAY);
 }
 
@@ -257,8 +335,18 @@ function rebuildCacheRequests(zoomLevel, panX, panY) {
 function mouseWheel(event) {
     const newZoomLevel = zoomLevel + Math.sign(-event.delta);
     if (newZoomLevel >= 0 && newZoomLevel <= MAX_ZOOM_LEVEL) {
+        
+        const levelOld = 2 ** zoomLevel;
+
         zoomLevel = newZoomLevel;
         movedCamera = true;
+
+        // Fix pan
+        const levelNew = 2 ** zoomLevel;
+        if (zoomed) {
+            panX = panX / levelOld * levelNew;
+            panY = panY / levelOld * levelNew;
+        }
 
         loadingTimeStart = millis();
         console.log(`Zoom level: ${zoomLevel}`);
@@ -283,10 +371,11 @@ function mouseDragged() {
         lastMouseY = mouseY;
 
         movedCamera = true;
-        if (nTilesLoading > 0) {
+        if (nTilesLoading === 0) {
+            // Starting a fresh batch of loads — reset the timer
             loadingTimeStart = millis();
-            loadingTimeEnd = millis();
         }
+        loadingTimeEnd = millis();
     }
 }
 

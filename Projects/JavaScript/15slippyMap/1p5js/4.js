@@ -29,6 +29,7 @@ let loadingTimeEnd = 0;
 function setup() {
     // Create a canvas with the same dimensions as the window
     createCanvas(width, height);
+    drawingContext.imageSmoothingEnabled = false;
 
     reusableTile = createImage(TILE_SIZE, TILE_SIZE);
     reusableTile.loadPixels();

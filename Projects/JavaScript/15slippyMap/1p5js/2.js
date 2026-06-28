@@ -21,6 +21,7 @@ let loadingTimeEnd = 0;
 function setup() {
     // Create a canvas with the same dimensions as the window
     createCanvas(width, height);
+    drawingContext.imageSmoothingEnabled = false;
 }
 
 function draw() {
