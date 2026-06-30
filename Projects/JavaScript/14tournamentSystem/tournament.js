@@ -47,6 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Setup tournament
     let Nplayers, NteamsPerRound, NplayersPerRound, NgamesPerRound, Ngames, gameDraft, gameScores, gameCourts, pairingHistory;
+    let manuallyModifiedGames = new Set();
+    let manuallyModifiedExtraMatches = new Set();
     // Draft analysis
     const analysisTotal = document.getElementById('analysis-total');
     const analysisLeftOut = document.getElementById('analysis-leftout');
@@ -223,6 +225,8 @@ document.addEventListener('DOMContentLoaded', () => {
         gameDraft = null;
         gameScores = null;
         gameCourts = null;
+        manuallyModifiedGames = new Set();
+        manuallyModifiedExtraMatches = new Set();
 
         // Disable stage buttons until Generate is clicked
         stageButtons.stage2.disabled = true;
@@ -237,6 +241,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function generateTournament() {
+        manuallyModifiedGames = new Set();
+        manuallyModifiedExtraMatches = new Set();
         // Re-read form values to ensure latest data
         N_PLAYERS_PER_TEAM = parseInt(setupForm.elements['players-per-team'].value);
         N_ROUNDS = parseInt(setupForm.elements['rounds'].value);
@@ -340,6 +346,35 @@ document.addEventListener('DOMContentLoaded', () => {
                     const a = team[i], b = team[j];
                     pairingHistory.sameTeam[a].set(b, (pairingHistory.sameTeam[a].get(b) || 0) + 1);
                     pairingHistory.sameTeam[b].set(a, (pairingHistory.sameTeam[b].get(a) || 0) + 1);
+                }
+            }
+        }
+    }
+
+    function removePairingHistoryFromTeams(team1Ids, team2Ids) {
+        if (!pairingHistory) return;
+
+        // Remove same-game pairs (all players in this match)
+        const allPlayers = [...team1Ids, ...team2Ids];
+        for (let i = 0; i < allPlayers.length; i++) {
+            for (let j = i + 1; j < allPlayers.length; j++) {
+                const a = allPlayers[i], b = allPlayers[j];
+                const prevA = pairingHistory.sameGame[a].get(b) || 0;
+                if (prevA <= 1) pairingHistory.sameGame[a].delete(b); else pairingHistory.sameGame[a].set(b, prevA - 1);
+                const prevB = pairingHistory.sameGame[b].get(a) || 0;
+                if (prevB <= 1) pairingHistory.sameGame[b].delete(a); else pairingHistory.sameGame[b].set(a, prevB - 1);
+            }
+        }
+
+        // Remove same-team pairs (within each team)
+        for (const team of [team1Ids, team2Ids]) {
+            for (let i = 0; i < team.length; i++) {
+                for (let j = i + 1; j < team.length; j++) {
+                    const a = team[i], b = team[j];
+                    const prevA = pairingHistory.sameTeam[a].get(b) || 0;
+                    if (prevA <= 1) pairingHistory.sameTeam[a].delete(b); else pairingHistory.sameTeam[a].set(b, prevA - 1);
+                    const prevB = pairingHistory.sameTeam[b].get(a) || 0;
+                    if (prevB <= 1) pairingHistory.sameTeam[b].delete(a); else pairingHistory.sameTeam[b].set(a, prevB - 1);
                 }
             }
         }
@@ -451,12 +486,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const isOngoing = match.team1Score === null && match.court !== null;
 
             if (isOngoing) {
-                const team1Names = match.team1.split(',').map(name => name.trim());
-                const team2Names = match.team2.split(',').map(name => name.trim());
-                const allNames = [...team1Names, ...team2Names];
-                for (const name of allNames) {
-                    const idx = participants.findIndex(p => p.Name === name);
-                    if (idx !== -1) busyPlayerIds.add(idx);
+                if (match.team1Ids && match.team1Ids.length > 0) {
+                    for (const id of match.team1Ids) busyPlayerIds.add(id);
+                    for (const id of match.team2Ids) busyPlayerIds.add(id);
+                } else {
+                    const team1Names = match.team1.split(',').map(name => name.trim());
+                    const team2Names = match.team2.split(',').map(name => name.trim());
+                    const allNames = [...team1Names, ...team2Names];
+                    for (const name of allNames) {
+                        const idx = participants.findIndex(p => p.Name === name);
+                        if (idx !== -1) busyPlayerIds.add(idx);
+                    }
                 }
             }
         }
@@ -741,6 +781,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Add new pairing history for this round
                 updatePairingHistory(gameDraft[round]);
 
+                // Mark this game as manually modified so rebalance ignores it
+                manuallyModifiedGames.add(`${round}-${gameId}`);
+
                 // Close swap popup
                 document.body.removeChild(swapPopup);
                 document.body.removeChild(swapOverlay);
@@ -857,6 +900,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const team1Score = gameScores[round][gameId * 2];
                 const court = gameCourts[round][gameId];
                 if (team1Score !== null || court !== null) continue;
+                if (manuallyModifiedGames.has(`${round}-${gameId}`)) continue;
 
                 const startIdx = gameId * N_PLAYERS_PER_TEAM * 2;
                 const allPlayerIds = gameDraft[round].slice(startIdx, startIdx + N_PLAYERS_PER_TEAM * 2);
@@ -892,6 +936,52 @@ document.addEventListener('DOMContentLoaded', () => {
             if (pairingHistory && oldDraft) {
                 removePairingHistoryForRound(oldDraft);
                 updatePairingHistory(gameDraft[round]);
+            }
+        }
+
+        // Rebalance pending extra matches
+        for (let i = 0; i < extraMatches.length; i++) {
+            const match = extraMatches[i];
+            if (match.team1Score !== null || match.court !== null) continue;
+            if (!match.team1Ids || match.team1Ids.length === 0) continue;
+            if (manuallyModifiedExtraMatches.has(i)) continue;
+
+            const allPlayerIds = [...match.team1Ids, ...match.team2Ids];
+
+            // Sort by category rank ascending (1 = best)
+            allPlayerIds.sort((a, b) => (rankMap.get(a) || 999) - (rankMap.get(b) || 999));
+
+            const newTeam1 = [];
+            const newTeam2 = [];
+            let front = 0, back = allPlayerIds.length - 1;
+            let team1Turn = true;
+
+            // Distribute: best+worst together on Team 1, then next best+worst on Team 2, alternating
+            while (front <= back) {
+                const best = allPlayerIds[front++];
+                const worst = allPlayerIds[back--];
+                if (team1Turn) {
+                    newTeam1.push(best, worst);
+                } else {
+                    newTeam2.push(best, worst);
+                }
+                team1Turn = !team1Turn;
+            }
+
+            // Save old teams for pairing history update
+            const oldTeam1Ids = [...match.team1Ids];
+            const oldTeam2Ids = [...match.team2Ids];
+
+            // Update the match
+            match.team1Ids = newTeam1;
+            match.team2Ids = newTeam2;
+            match.team1 = newTeam1.map(id => participants[id].Name).join(', ');
+            match.team2 = newTeam2.map(id => participants[id].Name).join(', ');
+
+            // Update pairing history
+            if (pairingHistory) {
+                removePairingHistoryFromTeams(oldTeam1Ids, oldTeam2Ids);
+                updatePairingHistoryFromTeams(newTeam1, newTeam2);
             }
         }
     }
@@ -1112,6 +1202,8 @@ document.addEventListener('DOMContentLoaded', () => {
             extraMatches.push({
                 team1: team1,
                 team2: team2,
+                team1Ids: [...team1Selected],
+                team2Ids: [...team2Selected],
                 court: null,
                 team1Score: null,
                 team2Score: null
@@ -1150,13 +1242,39 @@ document.addEventListener('DOMContentLoaded', () => {
         const popup = document.createElement('div');
         popup.className = 'modal-popup';
 
-        const initialCourt = match.court; // can be null (none)
+        // Save original state so we can revert swaps on cancel
+        popup._originalTeam1Ids = match.team1Ids ? [...match.team1Ids] : null;
+        popup._originalTeam2Ids = match.team2Ids ? [...match.team2Ids] : null;
+        popup._originalTeam1 = match.team1;
+        popup._originalTeam2 = match.team2;
 
-        // Get player names for each team
-        const team1Names = match.team1;
-        const team2Names = match.team2;
+        document.body.appendChild(popup);
+        refreshIntroduceResultExtraPopup(matchIndex, popup, overlay);
+    }
 
-        popup.innerHTML = `
+    function refreshIntroduceResultExtraPopup(matchIndex, oldPopup, overlay) {
+        const match = extraMatches[matchIndex];
+        const initialCourt = match.court;
+        const team1Ids = match.team1Ids || [];
+        const team2Ids = match.team2Ids || [];
+
+        const rankMap = getPlayerRankMap();
+        const team1NamesHtml = team1Ids.length > 0
+            ? team1Ids.map(id => {
+                const rank = rankMap.get(id);
+                const rankHtml = rank ? `<sup style="font-size:0.65em;color:#888;margin-left:1px;">#${rank}</sup>` : '';
+                return `<span class="swap-player-extra player-name-link" data-player="${id}" data-team="0">${participants[id].Name}${rankHtml}</span>`;
+            }).join(', ')
+            : match.team1;
+        const team2NamesHtml = team2Ids.length > 0
+            ? team2Ids.map(id => {
+                const rank = rankMap.get(id);
+                const rankHtml = rank ? `<sup style="font-size:0.65em;color:#888;margin-left:1px;">#${rank}</sup>` : '';
+                return `<span class="swap-player-extra player-name-link" data-player="${id}" data-team="1">${participants[id].Name}${rankHtml}</span>`;
+            }).join(', ')
+            : match.team2;
+
+        oldPopup.innerHTML = `
             <h3>Enter Details for Extra Match:</h3>
             <label>Court:</label>
             <div class="court-stepper">
@@ -1165,20 +1283,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 <button id="court-plus" class="court-btn">+</button>
             </div>
             <label>Team 1 score:</label>
-            <input type="number" id="team1-score" placeholder="Enter score" />
-            <div style="font-size: 13px; color: #666; margin: 2px 0 10px 0;">${team1Names}</div>
+            <input type="number" id="team1-score" placeholder="Enter score" value="${match.team1Score !== null ? match.team1Score : ''}" />
+            <div style="font-size: 13px; color: #666; margin: 2px 0 10px 0;">${team1NamesHtml}</div>
             <label>Team 2 score:</label>
-            <input type="number" id="team2-score" placeholder="Enter score" />
-            <div style="font-size: 13px; color: #666; margin: 2px 0 10px 0;">${team2Names}</div>
+            <input type="number" id="team2-score" placeholder="Enter score" value="${match.team2Score !== null ? match.team2Score : ''}" />
+            <div style="font-size: 13px; color: #666; margin: 2px 0 10px 0;">${team2NamesHtml}</div>
             <div class="button-row">
                 <button id="ok-button" class="btn-primary">Update</button>
                 <button id="cancel-button" class="btn-danger">Cancel</button>
             </div>
         `;
 
-        document.body.appendChild(popup);
+        attachIntroduceResultExtraEvents(matchIndex, oldPopup, overlay);
+    }
 
-        let courtValue = initialCourt; // can be null (none)
+    function attachIntroduceResultExtraEvents(matchIndex, popup, overlay) {
+        const match = extraMatches[matchIndex];
+        let courtValue = match.court;
+
         document.getElementById('court-plus').addEventListener('click', () => {
             if (courtValue === null) {
                 courtValue = 1;
@@ -1218,10 +1340,128 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         document.getElementById('cancel-button').addEventListener('click', () => {
+            // Revert any swap that happened
+            if (popup._originalTeam1Ids && popup._originalTeam2Ids) {
+                const match = extraMatches[matchIndex];
+                const oldTeam1Ids = popup._originalTeam1Ids;
+                const oldTeam2Ids = popup._originalTeam2Ids;
+                const currentTeam1Ids = match.team1Ids;
+                const currentTeam2Ids = match.team2Ids;
+
+                if (currentTeam1Ids && currentTeam2Ids) {
+                    const swapped = currentTeam1Ids.some((id, i) => id !== oldTeam1Ids[i]) ||
+                                    currentTeam2Ids.some((id, i) => id !== oldTeam2Ids[i]);
+                    if (swapped && pairingHistory) {
+                        // Remove current pairing history for this match
+                        removePairingHistoryFromTeams(currentTeam1Ids, currentTeam2Ids);
+                        // Restore old teams
+                        match.team1Ids = [...oldTeam1Ids];
+                        match.team2Ids = [...oldTeam2Ids];
+                        match.team1 = oldTeam1Ids.map(id => participants[id].Name).join(', ');
+                        match.team2 = oldTeam2Ids.map(id => participants[id].Name).join(', ');
+                        // Re-add old pairing history
+                        updatePairingHistoryFromTeams(oldTeam1Ids, oldTeam2Ids);
+                    }
+                }
+            }
             document.body.removeChild(popup);
             document.body.removeChild(overlay);
         });
-    };
+
+        // Attach swap click handlers
+        document.querySelectorAll('.swap-player-extra').forEach(el => {
+            el.addEventListener('click', () => {
+                const clickedPlayerId = parseInt(el.dataset.player);
+                const teamIndex = parseInt(el.dataset.team);
+                showSwapPopupExtra(matchIndex, popup, overlay, clickedPlayerId, teamIndex);
+            });
+        });
+    }
+
+    function showSwapPopupExtra(matchIndex, mainPopup, mainOverlay, clickedPlayerId, teamIndex) {
+        const match = extraMatches[matchIndex];
+        const team1Ids = match.team1Ids || [];
+        const team2Ids = match.team2Ids || [];
+        const otherTeamIds = teamIndex === 0 ? team2Ids : team1Ids;
+
+        if (otherTeamIds.length === 0) return;
+
+        const swapOverlay = document.createElement('div');
+        swapOverlay.className = 'modal-overlay';
+        swapOverlay.style.zIndex = '1001';
+        document.body.appendChild(swapOverlay);
+
+        const swapPopup = document.createElement('div');
+        swapPopup.className = 'modal-popup';
+        swapPopup.style.zIndex = '1002';
+        swapPopup.style.minWidth = '280px';
+
+        const otherTeamOptions = otherTeamIds.map(id =>
+            `<div class="swap-option" data-target="${id}">${participants[id].Name}</div>`
+        ).join('');
+
+        swapPopup.innerHTML = `
+            <h3>Swap ${participants[clickedPlayerId].Name}</h3>
+            <p style="margin: 8px 0 14px 0; font-size: 14px; color: #666;">Choose a player from the other team to swap with:</p>
+            ${otherTeamOptions}
+            <div class="button-row" style="margin-top:14px;">
+                <button id="cancel-swap-button" class="btn-danger">Cancel</button>
+            </div>
+        `;
+
+        document.body.appendChild(swapPopup);
+
+        swapPopup.querySelectorAll('.swap-option').forEach(el => {
+            el.addEventListener('click', () => {
+                const targetPlayerId = parseInt(el.dataset.target);
+
+                // Save old teams for pairing history update
+                const oldTeam1Ids = [...team1Ids];
+                const oldTeam2Ids = [...team2Ids];
+
+                // Swap the two players
+                const idx1 = team1Ids.indexOf(clickedPlayerId);
+                const idx2 = team2Ids.indexOf(targetPlayerId);
+                if (idx1 !== -1 && idx2 !== -1) {
+                    team1Ids[idx1] = targetPlayerId;
+                    team2Ids[idx2] = clickedPlayerId;
+                } else {
+                    // Try other direction (if clicked player is in team2, target in team1)
+                    const idx1b = team2Ids.indexOf(clickedPlayerId);
+                    const idx2b = team1Ids.indexOf(targetPlayerId);
+                    if (idx1b !== -1 && idx2b !== -1) {
+                        team2Ids[idx1b] = targetPlayerId;
+                        team1Ids[idx2b] = clickedPlayerId;
+                    }
+                }
+
+                // Update pairing history
+                if (pairingHistory) {
+                    removePairingHistoryFromTeams(oldTeam1Ids, oldTeam2Ids);
+                    updatePairingHistoryFromTeams(team1Ids, team2Ids);
+                }
+
+                // Update name strings
+                match.team1 = team1Ids.map(id => participants[id].Name).join(', ');
+                match.team2 = team2Ids.map(id => participants[id].Name).join(', ');
+
+                // Mark this extra match as manually modified so rebalance ignores it
+                manuallyModifiedExtraMatches.add(matchIndex);
+
+                // Close swap popup
+                document.body.removeChild(swapPopup);
+                document.body.removeChild(swapOverlay);
+
+                // Refresh the main popup
+                refreshIntroduceResultExtraPopup(matchIndex, mainPopup, mainOverlay);
+            });
+        });
+
+        document.getElementById('cancel-swap-button').addEventListener('click', () => {
+            document.body.removeChild(swapPopup);
+            document.body.removeChild(swapOverlay);
+        });
+    }
 
     // STAGE 3
     window.editPlayer = function(playerIndex) {
@@ -1405,7 +1645,19 @@ document.addEventListener('DOMContentLoaded', () => {
         // Extra matches
         for (const match of extraMatches) {
             if (match.team1Score === null || match.team2Score === null) continue;
-            addMatchLuck(match.team1, match.team2);
+            const team1Ids = (match.team1Ids && match.team1Ids.length > 0)
+                ? match.team1Ids
+                : match.team1.split(',').map(name => {
+                    const idx = participants.findIndex(p => p.Name === name.trim());
+                    return idx !== -1 ? idx : -1;
+                  }).filter(id => id !== -1);
+            const team2Ids = (match.team2Ids && match.team2Ids.length > 0)
+                ? match.team2Ids
+                : match.team2.split(',').map(name => {
+                    const idx = participants.findIndex(p => p.Name === name.trim());
+                    return idx !== -1 ? idx : -1;
+                  }).filter(id => id !== -1);
+            addMatchLuck(team1Ids, team2Ids);
         }
 
         // Compute average luck per player
