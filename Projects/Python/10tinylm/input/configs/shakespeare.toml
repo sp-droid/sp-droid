@@ -1,0 +1,51 @@
+[run]
+checkpoint = "checkpoint_last.pt"
+description = ""
+
+[dataset]
+name = "shakespeare"
+train_path = "input/datasets/shakespeare.txt"
+validation_path = ""
+holdout_fraction = 0.1
+chunk_chars = 262144
+
+[model]
+block_size = 1024
+n_embed = 768
+n_heads = 6
+n_layers = 4
+
+[training]
+seed = 1337
+batch_size = 64
+max_steps = 3
+learning_rate = 0.0003
+min_learning_rate = 0.00003
+weight_decay = 0.1
+warmup_steps = 200
+throughput_warmup_steps = 10
+eval_interval = 10
+eval_iters = 100
+checkpoint_interval = 1000
+amp = true
+progress_prompt = "KING "
+progress_max_new_tokens = 10
+progress_samples = 3
+progress_temperature = 1.0
+
+[validation]
+lm_eval_batch_size = 8
+hellaswag_limit = 256
+generation_max_new_tokens = 128
+
+[[validation.prompts]]
+level = "easy"
+prompt = "KING "
+
+[[validation.prompts]]
+level = "medium"
+prompt = "To be, or not to be, "
+
+[[validation.prompts]]
+level = "hard"
+prompt = "The course of true love never did run "

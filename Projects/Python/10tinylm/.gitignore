@@ -1,0 +1,6 @@
+/intermediate/*
+/output/*
+/.uv-cache/
+__pycache__/
+*.pyc
+/output/*/validation.json

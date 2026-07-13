@@ -1,0 +1,51 @@
+[run]
+checkpoint = "checkpoint_last.pt"
+description = ""
+
+[dataset]
+name = "tinystories-v2-gpt4"
+train_path = "input/datasets/TinyStoriesV2-GPT4-train.txt"
+validation_path = "input/datasets/TinyStoriesV2-GPT4-valid.txt"
+holdout_fraction = 0.1
+chunk_chars = 1048576
+
+[model]
+block_size = 1024
+n_embed = 768
+n_heads = 6
+n_layers = 4
+
+[training]
+seed = 1337
+batch_size = 64
+max_steps = 40000
+learning_rate = 0.0003
+min_learning_rate = 0.00003
+weight_decay = 0.1
+warmup_steps = 200
+throughput_warmup_steps = 10
+eval_interval = 100
+eval_iters = 20
+checkpoint_interval = 1000
+amp = true
+progress_prompt = "Alice was tired so she went "
+progress_max_new_tokens = 10
+progress_samples = 3
+progress_temperature = 1.0
+
+[validation]
+lm_eval_batch_size = 8
+hellaswag_limit = 256
+generation_max_new_tokens = 128
+
+[[validation.prompts]]
+level = "easy"
+prompt = "Alice was tired so she went "
+
+[[validation.prompts]]
+level = "medium"
+prompt = "Tom put the red ball in the box. Then he gave the box to Mia. Mia opened the box and saw the "
+
+[[validation.prompts]]
+level = "hard"
+prompt = "Ben had two apples. He gave one apple to Ana. Ana gave her apple to Sam. Ben ate his apple. Who has an apple now? Answer: "
