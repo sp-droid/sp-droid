@@ -69,6 +69,24 @@ const HistoryEntry = struct {
     max_speed_kmh: f32,
 };
 
+const CueDecisionRng = struct {
+    generator: std.Random.DefaultCsprng,
+
+    fn init(io: std.Io) CueDecisionRng {
+        var seed: [std.Random.DefaultCsprng.secret_seed_length]u8 = undefined;
+        io.random(&seed);
+        return initWithSeed(seed);
+    }
+
+    fn initWithSeed(seed: [std.Random.DefaultCsprng.secret_seed_length]u8) CueDecisionRng {
+        return .{ .generator = std.Random.DefaultCsprng.init(seed) };
+    }
+
+    fn nextIsCorrect(self: *CueDecisionRng) bool {
+        return self.generator.random().boolean();
+    }
+};
+
 const HistoryState = struct {
     entries: [MAX_HISTORY_ENTRIES]HistoryEntry = undefined,
     start: usize = 0,
@@ -151,6 +169,7 @@ const GameState = struct {
     sound_cooldown: f32, // Cooldown for sound effects
     hit_sound: rl.Sound,
     miss_sound: rl.Sound,
+    cue_decision_rng: CueDecisionRng,
     session_stats: SessionStats,
     session_elapsed: f32,
     // Text caching for UI
@@ -505,7 +524,9 @@ fn prepareNextShot(game_state: *GameState) void {
     game_state.ball.state = .idle;
     game_state.ball.target_position = .{ .x = target_x, .y = target_y };
 
-    const cue_is_correct = rl.getRandomValue(0, 1) == 1;
+    // Cue truthfulness uses its own securely seeded generator. Keeping it
+    // separate avoids the low-bit cadence of Raylib's 0..1 modulo mapping.
+    const cue_is_correct = game_state.cue_decision_rng.nextIsCorrect();
     game_state.ball.cue_target_position = .{
         .x = if (cue_is_correct) target_x else chooseWrongTargetX(target_x),
         .y = target_y,
@@ -515,7 +536,7 @@ fn prepareNextShot(game_state: *GameState) void {
     game_state.bounce_delay_timer = 0;
 }
 
-fn initGame(starting_speed_kmh: f32) GameState {
+fn initGame(starting_speed_kmh: f32, cue_decision_rng: CueDecisionRng) GameState {
     const normalized_start_speed = normalizeStartingSpeed(starting_speed_kmh);
     var game_state: GameState = undefined;
 
@@ -555,6 +576,7 @@ fn initGame(starting_speed_kmh: f32) GameState {
     game_state.last_feedback = FeedbackType.none;
     game_state.feedback_timer = 0;
     game_state.sound_cooldown = 0;
+    game_state.cue_decision_rng = cue_decision_rng;
     game_state.session_stats = .{};
     game_state.session_elapsed = 0;
     // Initialize cached text on first frame
@@ -1477,7 +1499,7 @@ pub fn main(init: std.process.Init) !void {
     // rl.setTargetFPS(0); // Enables vsync, syncs to monitor refresh rate
 
     const starting_speed_kmh = loadStartingSpeed(io);
-    var game_state = initGame(starting_speed_kmh);
+    var game_state = initGame(starting_speed_kmh, CueDecisionRng.init(io));
     defer {
         rl.unloadSound(game_state.hit_sound);
     }
@@ -1572,6 +1594,26 @@ test "persisted starting speed is finite and stays inside the slider range" {
     try std.testing.expectEqual(@as(f32, 1500), normalizeStartingSpeed(2000));
     try std.testing.expectEqual(BASE_BALL_SPEED, normalizeStartingSpeed(std.math.nan(f32)));
     try std.testing.expectApproxEqAbs(@as(f32, 1.5), startingSpeedMultiplier(750), 0.0001);
+}
+
+test "cue decisions are independent rather than grouped into balanced blocks" {
+    var seed = [_]u8{0} ** std.Random.DefaultCsprng.secret_seed_length;
+    for (&seed, 0..) |*byte, index| byte.* = @truncate(index * 37 + 11);
+
+    var decision_rng = CueDecisionRng.initWithSeed(seed);
+    var correct_count: usize = 0;
+    var exactly_balanced_blocks: usize = 0;
+    for (0..1000) |_| {
+        var block_correct: usize = 0;
+        for (0..8) |_| {
+            if (decision_rng.nextIsCorrect()) block_correct += 1;
+        }
+        correct_count += block_correct;
+        if (block_correct == 4) exactly_balanced_blocks += 1;
+    }
+
+    try std.testing.expect(correct_count > 3600 and correct_count < 4400);
+    try std.testing.expect(exactly_balanced_blocks < 500);
 }
 
 test "fixed simulation clock is independent of renderer rate" {
