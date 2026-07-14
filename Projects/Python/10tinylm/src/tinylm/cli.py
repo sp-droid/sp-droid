@@ -8,6 +8,7 @@ from InquirerPy import inquirer
 
 from .config import checkpoint_path, load_config, next_run_name, project_root, report_path
 from .data import prepare_data
+from .inference import InferenceSession, discover_checkpoints, load_inference_model
 from .reporting import write_json, write_markdown
 from .training import train
 from .validation import create_report
@@ -51,6 +52,20 @@ def _choose_checkpoint(config: dict[str, object]) -> Path:
     return Path(inquirer.select(message="Choose a checkpoint:", choices=choices).execute())
 
 
+def _choose_inference_checkpoint() -> Path:
+    checkpoint_root = project_root() / "intermediate" / "checkpoints"
+    checkpoints = discover_checkpoints(checkpoint_root)
+    if not checkpoints:
+        raise FileNotFoundError(
+            f"No trained checkpoints found below {checkpoint_root}. Run Prepare and Train first."
+        )
+    choices = [
+        {"name": f"{path.parent.name} ({path.name})", "value": path}
+        for path in checkpoints
+    ]
+    return Path(inquirer.select(message="Choose a trained model:", choices=choices).execute())
+
+
 def _validation_command(checkpoint: Path) -> str:
     return "uv run python -m tinylm.validation" f" --checkpoint {_windows_quote(_relative_to_project(checkpoint))}"
 
@@ -64,16 +79,52 @@ def _run_validation(checkpoint: Path) -> None:
     print(f"Wrote validation report: {destination}")
 
 
+def _run_inference(checkpoint: Path) -> None:
+    print(f"Loading checkpoint: {_relative_to_project(checkpoint)}")
+    model, tokenizer, device = load_inference_model(checkpoint)
+    session = InferenceSession.create(model, tokenizer, device)
+    print(f"Loaded {checkpoint.parent.name} on {device}.")
+
+    while True:
+        answer = inquirer.text(
+            message='Continue (type "exit" to quit):',
+            mandatory=False,
+        ).execute()
+        text = "" if answer is None else str(answer)
+        if text.strip().casefold() == "exit":
+            print("Inference session ended.")
+            return
+        unknown_count = session.append_text(text)
+        if unknown_count:
+            print(
+                f"Warning: {unknown_count} prompt character(s) were not in this model's vocabulary "
+                "and were mapped to <unk>."
+            )
+        print("Generation:")
+        session.generate()
+
+
 def main() -> None:
     action = inquirer.select(
         message="What would you like to do?",
         choices=[
+            {"name": "Inference", "value": "inference"},
             {"name": "Prepare token data", "value": "prepare"},
             {"name": "Train", "value": "train"},
             {"name": "Validate a checkpoint", "value": "validate"},
             {"name": "All: prepare, train, then validate", "value": "all"},
         ],
     ).execute()
+
+    if action == "inference":
+        try:
+            _run_inference(_choose_inference_checkpoint())
+        except KeyboardInterrupt:
+            print("\nInference stopped.")
+        except (FileNotFoundError, OSError, RuntimeError, ValueError) as error:
+            print(f"Inference unavailable: {error}")
+        return
+
     config_path = _choose_config()
     config = load_config(config_path)
     relative_config = _relative_to_project(config_path)

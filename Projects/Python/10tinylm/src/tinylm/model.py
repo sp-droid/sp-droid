@@ -104,6 +104,21 @@ class GPTLLM(nn.Module):
         return F.cross_entropy(logits.reshape(-1, logits.size(-1)), targets.reshape(-1), reduction=reduction)
 
     @torch.inference_mode()
+    def sample_next_token(
+        self,
+        input_ids: torch.Tensor,
+        temperature: float = 0.0,
+        generator: torch.Generator | None = None,
+    ) -> torch.Tensor:
+        """Sample one token from the final position of the cropped context."""
+        context = input_ids[:, -self.block_size :]
+        logits = self(context)[:, -1, :]
+        if temperature <= 0:
+            return torch.argmax(logits, dim=-1, keepdim=True)
+        probabilities = F.softmax(logits / temperature, dim=-1)
+        return torch.multinomial(probabilities, num_samples=1, generator=generator)
+
+    @torch.inference_mode()
     def generate(
         self,
         input_ids: torch.Tensor,
@@ -114,13 +129,7 @@ class GPTLLM(nn.Module):
         """Generate with strict context cropping; temperature zero is greedy and deterministic."""
         generated = input_ids
         for _ in range(max_new_tokens):
-            context = generated[:, -self.block_size :]
-            logits = self(context)[:, -1, :]
-            if temperature <= 0:
-                next_token = torch.argmax(logits, dim=-1, keepdim=True)
-            else:
-                probabilities = F.softmax(logits / temperature, dim=-1)
-                next_token = torch.multinomial(probabilities, num_samples=1, generator=generator)
+            next_token = self.sample_next_token(generated, temperature=temperature, generator=generator)
             generated = torch.cat((generated, next_token), dim=1)
         return generated
 

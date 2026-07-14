@@ -6,8 +6,9 @@ machine-readable final validation report.
 
 ## Run an experiment
 
-Run the menu and select **Prepare**, **Train**, **Validate**, or **All**. It
-then lets you choose a TOML file from `input/configs/`.
+Run the menu and select **Inference**, **Prepare**, **Train**, **Validate**, or
+**All**. Experiment actions then let you choose a TOML file from
+`input/configs/`.
 
 ```powershell
 uv run tinylm
@@ -19,6 +20,25 @@ Configs only own the checkpoint filename.
 Prepared memory-mapped tokens go under `intermediate/data/`; checkpoints go to
 `intermediate/checkpoints/<run-name>/`; validation reports go to
 `output/<run-name>/validation.json`.
+
+## Interactive inference
+
+Select **Inference** to choose any existing run under
+`intermediate/checkpoints/`. The checkpoint supplies its own model
+configuration, weights, and character tokenizer, so inference does not need a
+TOML configuration or prepared dataset files.
+
+Enter text at `Continue (type "exit" to quit):`. Each entry is appended exactly
+to the previous prompt and generated text, and the selected model remains
+loaded for the whole session. Empty input asks the model to continue without
+adding text. Enter `exit` in any capitalization to leave the session.
+
+Generation samples at temperature `1.0` and flushes each character to the
+terminal as soon as it is produced. If the model generates the literal,
+case-sensitive text `<EOS>`, the marker is erased from the terminal and removed
+from the retained context. A turn otherwise stops after 1,000 generated tokens.
+Context is stateful but bounded by the model's `block_size`; once it fills, only
+the most recent characters remain available to the model.
 
 Training performs only its quick periodic cross-entropy and prompt check. Final
 validation scans every held-out token, generates the fixed prompt suite, runs
