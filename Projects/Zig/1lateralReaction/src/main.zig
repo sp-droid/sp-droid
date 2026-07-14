@@ -139,8 +139,9 @@ const Ball = struct {
     velocity: rl.Vector2,
     radius: f32,
     state: BallState,
-    target_position: rl.Vector2, // Real target selected before the warning appears
+    target_position: rl.Vector2, // Real target selected before the feint begins
     cue_target_position: rl.Vector2, // May intentionally disagree with target_position
+    cue_origin_position: rl.Vector2, // Keeps the pre-move short and frame-rate independent
 };
 
 const Paddle = struct {
@@ -198,7 +199,8 @@ const GameState = struct {
 // ============================================================================
 
 const BALL_RADIUS = 15.0;
-const ARROW_LEAD_TIME = 0.3;
+const CUE_LEAD_TIME = 0.3;
+const CUE_PRE_MOVE_DISTANCE = 18.0; // pixels
 const SLOW_SHOT_CHANCE_PERCENT = 10;
 const SLOW_SHOT_SPEED_REDUCTION = 100.0; // km/h
 const MIN_LAUNCH_SPEED = 10.0; // Prevent a very low setting from reversing the shot
@@ -219,7 +221,7 @@ const MONTH_NAMES = [_][]const u8{
 var history_read_buffer: [HISTORY_READ_BUFFER_SIZE]u8 = undefined;
 
 fn getFireDelay() f32 {
-    // Always leave enough time for the complete 0.3 second direction cue.
+    // Always leave enough time for the complete 0.3 second pre-move.
     return randomF32(0.45, 0.75);
 }
 
@@ -513,6 +515,29 @@ fn chooseWrongTargetX(real_target_x: f32) f32 {
         BALL_RADIUS;
 }
 
+fn cuePreMovePosition(origin: rl.Vector2, cue_target: rl.Vector2, countdown_remaining: f32) rl.Vector2 {
+    const dx = cue_target.x - origin.x;
+    const dy = cue_target.y - origin.y;
+    const length = @sqrt(dx * dx + dy * dy);
+    if (length < 0.001) return origin;
+
+    const progress = clampF32((CUE_LEAD_TIME - countdown_remaining) / CUE_LEAD_TIME, 0, 1);
+    const eased_progress = progress * progress * (3.0 - 2.0 * progress);
+    const distance = CUE_PRE_MOVE_DISTANCE * eased_progress;
+    return .{
+        .x = origin.x + (dx / length) * distance,
+        .y = origin.y + (dy / length) * distance,
+    };
+}
+
+fn updateCuePreMove(ball: *Ball, countdown_remaining: f32) void {
+    ball.position = cuePreMovePosition(
+        ball.cue_origin_position,
+        ball.cue_target_position,
+        countdown_remaining,
+    );
+}
+
 fn prepareNextShot(game_state: *GameState) void {
     const launch_x = randomF32(LAUNCH_RECT_X, LAUNCH_RECT_X + LAUNCH_RECT_WIDTH);
     const launch_y = randomF32(LAUNCH_RECT_Y, LAUNCH_RECT_Y + LAUNCH_RECT_HEIGHT);
@@ -520,6 +545,7 @@ fn prepareNextShot(game_state: *GameState) void {
     const target_y = PADDLE_Y;
 
     game_state.ball.position = .{ .x = launch_x, .y = launch_y };
+    game_state.ball.cue_origin_position = game_state.ball.position;
     game_state.ball.velocity = .{ .x = 0, .y = 0 };
     game_state.ball.state = .idle;
     game_state.ball.target_position = .{ .x = target_x, .y = target_y };
@@ -550,6 +576,7 @@ fn initGame(starting_speed_kmh: f32, cue_decision_rng: CueDecisionRng) GameState
         .state = BallState.idle,
         .target_position = rl.Vector2{ .x = 0, .y = 0 },
         .cue_target_position = rl.Vector2{ .x = 0, .y = 0 },
+        .cue_origin_position = rl.Vector2{ .x = launch_x, .y = launch_y },
     };
 
     // Initialize paddle
@@ -605,8 +632,8 @@ fn resetBall(game_state: *GameState) void {
 }
 
 fn fireBall(game_state: *GameState) void {
-    // The real target was selected before the cue, so the ball follows the
-    // warned direction only when that cue happened to be truthful.
+    // The real target was selected before the feint, so a deceptive pre-move
+    // redirects toward the actual destination at the moment of launch.
     const delta_x = game_state.ball.target_position.x - game_state.ball.position.x;
     const delta_y = game_state.ball.target_position.y - game_state.ball.position.y;
     const distance = @sqrt(delta_x * delta_x + delta_y * delta_y);
@@ -664,6 +691,7 @@ fn updateGame(game_state: *GameState, dt: f32) void {
     // Handle ball state
     if (game_state.ball.state == BallState.idle) {
         game_state.countdown_timer -= dt;
+        updateCuePreMove(&game_state.ball, game_state.countdown_timer);
         if (game_state.countdown_timer <= 0) {
             fireBall(game_state);
         }
@@ -830,13 +858,6 @@ fn drawGame(game_state: *GameState) void {
         rl.Color{ .r = 255, .g = 255, .b = 255, .a = 200 },
     );
 
-    if (game_state.ball.state == .idle and
-        game_state.countdown_timer > 0 and
-        game_state.countdown_timer <= ARROW_LEAD_TIME)
-    {
-        drawDirectionCue(&game_state.ball);
-    }
-
     // Draw paddle
     rl.drawRectangle(
         @intFromFloat(game_state.paddle.position.x),
@@ -884,43 +905,6 @@ fn drawGame(game_state: *GameState) void {
 
     // Draw countdown timer
     drawCountdownTimer(game_state);
-}
-
-fn drawDirectionCue(ball: *const Ball) void {
-    const dx = ball.cue_target_position.x - ball.position.x;
-    const dy = ball.cue_target_position.y - ball.position.y;
-    const length = @sqrt(dx * dx + dy * dy);
-    if (length < 0.001) return;
-
-    const direction = rl.Vector2{ .x = dx / length, .y = dy / length };
-    const perpendicular = rl.Vector2{ .x = -direction.y, .y = direction.x };
-    const start = rl.Vector2{
-        .x = ball.position.x + direction.x * (ball.radius + 5.0),
-        .y = ball.position.y + direction.y * (ball.radius + 5.0),
-    };
-    const tip = rl.Vector2{
-        .x = start.x + direction.x * 43.0,
-        .y = start.y + direction.y * 43.0,
-    };
-    const head_base = rl.Vector2{
-        .x = tip.x - direction.x * 12.0,
-        .y = tip.y - direction.y * 12.0,
-    };
-    const head_left = rl.Vector2{
-        .x = head_base.x + perpendicular.x * 7.5,
-        .y = head_base.y + perpendicular.y * 7.5,
-    };
-    const head_right = rl.Vector2{
-        .x = head_base.x - perpendicular.x * 7.5,
-        .y = head_base.y - perpendicular.y * 7.5,
-    };
-
-    const glow = rl.Color{ .r = 255, .g = 50, .b = 72, .a = 75 };
-    const red = rl.Color{ .r = 255, .g = 54, .b = 74, .a = 255 };
-    rl.drawLineEx(start, head_base, 7.0, glow);
-    rl.drawLineEx(start, head_base, 3.0, red);
-    rl.drawCircleV(start, 3.0, red);
-    rl.drawTriangle(tip, head_right, head_left, red);
 }
 
 fn drawCenteredText(text_value: [:0]const u8, center_x: f32, y: f32, font_size: i32, color: rl.Color) void {
@@ -1614,6 +1598,29 @@ test "cue decisions are independent rather than grouped into balanced blocks" {
 
     try std.testing.expect(correct_count > 3600 and correct_count < 4400);
     try std.testing.expect(exactly_balanced_blocks < 500);
+}
+
+test "cue pre-move follows its cue and remains a short fixed distance" {
+    const origin = rl.Vector2{ .x = 100, .y = 40 };
+    const cue_target = rl.Vector2{ .x = 200, .y = 240 };
+
+    const before_cue = cuePreMovePosition(origin, cue_target, CUE_LEAD_TIME + 0.1);
+    try std.testing.expectApproxEqAbs(origin.x, before_cue.x, 0.0001);
+    try std.testing.expectApproxEqAbs(origin.y, before_cue.y, 0.0001);
+
+    const halfway = cuePreMovePosition(origin, cue_target, CUE_LEAD_TIME / 2.0);
+    const halfway_distance = @sqrt(
+        (halfway.x - origin.x) * (halfway.x - origin.x) +
+            (halfway.y - origin.y) * (halfway.y - origin.y),
+    );
+    try std.testing.expectApproxEqAbs(CUE_PRE_MOVE_DISTANCE / 2.0, halfway_distance, 0.0001);
+
+    const completed = cuePreMovePosition(origin, cue_target, 0);
+    const completed_dx = completed.x - origin.x;
+    const completed_dy = completed.y - origin.y;
+    const completed_distance = @sqrt(completed_dx * completed_dx + completed_dy * completed_dy);
+    try std.testing.expectApproxEqAbs(CUE_PRE_MOVE_DISTANCE, completed_distance, 0.0001);
+    try std.testing.expectApproxEqAbs(@as(f32, 0), completed_dx * 200.0 - completed_dy * 100.0, 0.001);
 }
 
 test "fixed simulation clock is independent of renderer rate" {
