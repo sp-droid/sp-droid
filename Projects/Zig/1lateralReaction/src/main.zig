@@ -12,7 +12,7 @@ const builtin = @import("builtin");
 const BallState = enum { idle, active, bouncing };
 const FeedbackType = enum { none, hit, miss };
 const AppScreen = enum { game, history };
-const ChartMetric = enum { average_speed, hit_percentage };
+const ChartMetric = enum { average_speed, max_speed };
 
 const Date = struct {
     year: i32,
@@ -37,23 +37,18 @@ const WindowsTime = struct {
 
 const SessionSnapshot = struct {
     average_speed_kmh: f32,
-    hit_percentage: f32,
+    max_speed_kmh: f32,
 };
 
 const SessionStats = struct {
     launch_speed_total: f64 = 0,
     shots_launched: u32 = 0,
-    shots_resolved: u32 = 0,
-    hits: u32 = 0,
+    max_launch_speed_kmh: f32 = 0,
 
     fn recordLaunch(self: *SessionStats, speed_kmh: f32) void {
         self.launch_speed_total += @as(f64, speed_kmh);
         self.shots_launched += 1;
-    }
-
-    fn recordResult(self: *SessionStats, was_hit: bool) void {
-        self.shots_resolved += 1;
-        if (was_hit) self.hits += 1;
+        self.max_launch_speed_kmh = @max(self.max_launch_speed_kmh, speed_kmh);
     }
 
     fn snapshot(self: SessionStats) SessionSnapshot {
@@ -61,14 +56,9 @@ const SessionStats = struct {
             0.0
         else
             self.launch_speed_total / @as(f64, @floatFromInt(self.shots_launched));
-        const percentage = if (self.shots_resolved == 0)
-            0.0
-        else
-            100.0 * @as(f64, @floatFromInt(self.hits)) / @as(f64, @floatFromInt(self.shots_resolved));
-
         return .{
             .average_speed_kmh = @floatCast(average_speed),
-            .hit_percentage = @floatCast(percentage),
+            .max_speed_kmh = self.max_launch_speed_kmh,
         };
     }
 };
@@ -76,17 +66,18 @@ const SessionStats = struct {
 const HistoryEntry = struct {
     date: Date,
     average_speed_kmh: f32,
-    hit_percentage: f32,
+    max_speed_kmh: f32,
 };
 
 const HistoryState = struct {
     entries: [MAX_HISTORY_ENTRIES]HistoryEntry = undefined,
     start: usize = 0,
     count: usize = 0,
-    current_session: SessionSnapshot = .{ .average_speed_kmh = 0, .hit_percentage = 0 },
+    current_session: SessionSnapshot = .{ .average_speed_kmh = 0, .max_speed_kmh = 0 },
     session_finalized: bool = false,
     record_eligible: bool = false,
     save_succeeded: bool = false,
+    next_start_speed_kmh: f32 = BASE_BALL_SPEED,
 
     fn clear(self: *HistoryState) void {
         self.start = 0;
@@ -110,6 +101,21 @@ const HistoryState = struct {
     }
 };
 
+const FixedStepClock = struct {
+    accumulator_seconds: f64 = 0,
+
+    fn pushFrame(self: *FixedStepClock, frame_time_seconds: f32) void {
+        if (!std.math.isFinite(frame_time_seconds) or frame_time_seconds <= 0) return;
+        self.accumulator_seconds += @as(f64, @floatCast(frame_time_seconds));
+    }
+
+    fn takeStep(self: *FixedStepClock) bool {
+        if (self.accumulator_seconds < FIXED_SIMULATION_STEP_SECONDS) return false;
+        self.accumulator_seconds -= FIXED_SIMULATION_STEP_SECONDS;
+        return true;
+    }
+};
+
 const Ball = struct {
     position: rl.Vector2,
     velocity: rl.Vector2,
@@ -126,7 +132,7 @@ const Paddle = struct {
 };
 
 const GameSettings = struct {
-    speed_multiplier: f32, // 1.0 - 10.0
+    speed_multiplier: f32, // 0.5 - 3.0
     paddle_width: f32, // 50 - 300
     paddle_height: f32, // 20 (fixed for now)
 };
@@ -179,7 +185,9 @@ const SLOW_SHOT_SPEED_REDUCTION = 100.0; // km/h
 const MIN_LAUNCH_SPEED = 10.0; // Prevent a very low setting from reversing the shot
 
 const HISTORY_FILE_NAME = "history.csv";
-const HISTORY_HEADER = "date,average_ball_speed_kmh,hit_percentage\n";
+const HISTORY_HEADER = "date,average_ball_speed_kmh,max_ball_speed_kmh\n";
+const SETTINGS_FILE_NAME = "settings.csv";
+const SETTINGS_HEADER = "starting_speed_kmh\n";
 const MIN_SESSION_RECORD_SECONDS = 5.0 * 60.0;
 const MAX_HISTORY_ENTRIES = 4096;
 const HISTORY_READ_BUFFER_SIZE = 512 * 1024;
@@ -200,6 +208,8 @@ fn getFireDelay() f32 {
 // Distance from ball start to bottom = 10 meters
 // Pixel distance: SCREEN_HEIGHT - BALL_START_Y = 980 pixels = 10 meters
 const BASE_BALL_SPEED = 500.0; // km/h
+const STARTING_SPEED_MIN = BASE_BALL_SPEED * 0.5;
+const STARTING_SPEED_MAX = BASE_BALL_SPEED * 3.0;
 const DRAG_COEFFICIENT = 0.45; // Badminton shuttlecock with feathered skirt
 const AIR_DENSITY = 1.225; // kg/m^3 at sea level
 const SHUTTLECOCK_MASS = 0.005; // kg (approximately 5 grams)
@@ -212,8 +222,14 @@ const BOUNCE_DELAY = 0.3; // Delay before resetting after collision or miss
 // Countdown timer
 const COUNTDOWN_DURATION = 600.0; // 10 minutes in seconds
 
-// Physics sub-stepping
-const PHYSICS_TIME_RATIO = 30; // Apply physics 30x per frame for accurate drag integration
+// Fixed simulation timing. Rendering may run at any rate; gameplay always
+// advances in 1/240-second ticks. Eight collision/drag substeps retain roughly
+// the original integration precision without making it frame-rate dependent.
+const SIMULATION_HZ: usize = 240;
+const FIXED_SIMULATION_STEP_SECONDS: f64 = 1.0 / @as(f64, @floatFromInt(SIMULATION_HZ));
+const FIXED_SIMULATION_DT: f32 = @floatCast(FIXED_SIMULATION_STEP_SECONDS);
+const PHYSICS_SUBSTEPS_PER_TICK: usize = 8;
+const MAX_FIXED_UPDATES_PER_FRAME: usize = SIMULATION_HZ * 2;
 
 // ============================================================================
 // UTILITY FUNCTIONS
@@ -229,6 +245,49 @@ fn clampF32(value: f32, min: f32, max: f32) f32 {
     if (value < min) return min;
     if (value > max) return max;
     return value;
+}
+
+fn normalizeStartingSpeed(value: f32) f32 {
+    if (!std.math.isFinite(value)) return BASE_BALL_SPEED;
+    return clampF32(value, STARTING_SPEED_MIN, STARTING_SPEED_MAX);
+}
+
+fn startingSpeedMultiplier(speed_kmh: f32) f32 {
+    return normalizeStartingSpeed(speed_kmh) / BASE_BALL_SPEED;
+}
+
+fn loadStartingSpeed(io: std.Io) f32 {
+    var file = std.Io.Dir.cwd().openFile(io, SETTINGS_FILE_NAME, .{}) catch return BASE_BALL_SPEED;
+    defer file.close(io);
+
+    var buffer: [256]u8 = undefined;
+    const bytes_read = file.readPositionalAll(io, &buffer, 0) catch return BASE_BALL_SPEED;
+    var lines = std.mem.splitScalar(u8, buffer[0..bytes_read], '\n');
+    while (lines.next()) |raw_line| {
+        const line = std.mem.trim(u8, raw_line, " \r\t");
+        if (line.len == 0 or std.mem.eql(u8, line, "starting_speed_kmh")) continue;
+
+        const speed = std.fmt.parseFloat(f32, line) catch return BASE_BALL_SPEED;
+        return normalizeStartingSpeed(speed);
+    }
+
+    return BASE_BALL_SPEED;
+}
+
+fn saveStartingSpeed(io: std.Io, speed_kmh: f32) !void {
+    var file = try std.Io.Dir.cwd().createFile(io, SETTINGS_FILE_NAME, .{
+        .truncate = true,
+        .lock = .exclusive,
+    });
+    defer file.close(io);
+
+    var buffer: [96]u8 = undefined;
+    const contents = try std.fmt.bufPrint(
+        &buffer,
+        SETTINGS_HEADER ++ "{d:.2}\n",
+        .{normalizeStartingSpeed(speed_kmh)},
+    );
+    try file.writePositionalAll(io, contents, 0);
 }
 
 fn applyDrag(velocity: *rl.Vector2, dt: f32) void {
@@ -307,7 +366,7 @@ fn historyEntry(date: Date, snapshot: SessionSnapshot) HistoryEntry {
     return .{
         .date = date,
         .average_speed_kmh = snapshot.average_speed_kmh,
-        .hit_percentage = snapshot.hit_percentage,
+        .max_speed_kmh = snapshot.max_speed_kmh,
     };
 }
 
@@ -333,7 +392,7 @@ fn appendHistoryEntry(io: std.Io, entry: HistoryEntry) !void {
     const row = try std.fmt.bufPrint(
         &row_buffer,
         "{d:0>4}-{d:0>2}-{d:0>2},{d:.2},{d:.2}\n",
-        .{ entry.date.year, entry.date.month, entry.date.day, entry.average_speed_kmh, entry.hit_percentage },
+        .{ entry.date.year, entry.date.month, entry.date.day, entry.average_speed_kmh, entry.max_speed_kmh },
     );
     try file.writePositionalAll(io, row, write_position);
 }
@@ -368,18 +427,18 @@ fn loadHistory(io: std.Io, history: *HistoryState) !void {
 
         var columns = std.mem.splitScalar(u8, line, ',');
         const date_text = std.mem.trim(u8, columns.next() orelse continue, " \r\t");
-        const speed_text = std.mem.trim(u8, columns.next() orelse continue, " \r\t");
-        const percentage_text = std.mem.trim(u8, columns.next() orelse continue, " \r\t");
+        const average_speed_text = std.mem.trim(u8, columns.next() orelse continue, " \r\t");
+        const max_speed_text = std.mem.trim(u8, columns.next() orelse continue, " \r\t");
 
         const date = parseDate(date_text) orelse continue;
-        const average_speed = std.fmt.parseFloat(f32, speed_text) catch continue;
-        const hit_percentage = std.fmt.parseFloat(f32, percentage_text) catch continue;
-        if (!std.math.isFinite(average_speed) or average_speed < 0 or !std.math.isFinite(hit_percentage)) continue;
+        const average_speed = std.fmt.parseFloat(f32, average_speed_text) catch continue;
+        const max_speed = std.fmt.parseFloat(f32, max_speed_text) catch continue;
+        if (!std.math.isFinite(average_speed) or average_speed < 0 or !std.math.isFinite(max_speed) or max_speed < 0) continue;
 
         history.add(.{
             .date = date,
             .average_speed_kmh = average_speed,
-            .hit_percentage = clampF32(hit_percentage, 0, 100),
+            .max_speed_kmh = max_speed,
         });
     }
 }
@@ -456,7 +515,8 @@ fn prepareNextShot(game_state: *GameState) void {
     game_state.bounce_delay_timer = 0;
 }
 
-fn initGame() GameState {
+fn initGame(starting_speed_kmh: f32) GameState {
+    const normalized_start_speed = normalizeStartingSpeed(starting_speed_kmh);
     var game_state: GameState = undefined;
 
     // Initialize ball with random position in launch rectangle
@@ -478,9 +538,10 @@ fn initGame() GameState {
         .height = PADDLE_HEIGHT,
     };
 
-    // Initialize settings with defaults
+    // The persisted starting speed maps onto the existing speed multiplier,
+    // leaving the hit/miss progression logic unchanged.
     game_state.settings = GameSettings{
-        .speed_multiplier = 1.0,
+        .speed_multiplier = startingSpeedMultiplier(normalized_start_speed),
         .paddle_width = 200.0,
         .paddle_height = PADDLE_HEIGHT,
     };
@@ -505,7 +566,7 @@ fn initGame() GameState {
     game_state.last_timer_seconds = @intFromFloat(COUNTDOWN_DURATION);
     game_state.timer_text = std.fmt.bufPrintZ(&game_state.timer_text_buf, "10:00", .{}) catch "Error";
     game_state.score_text = std.fmt.bufPrintZ(&game_state.score_text_buf, "Score: {d} / Attempts: {d}", .{ 0, 0 }) catch "Error";
-    game_state.speed_text = std.fmt.bufPrintZ(&game_state.speed_text_buf, "{d:.0} km/h", .{BASE_BALL_SPEED * game_state.settings.speed_multiplier}) catch "Error";
+    game_state.speed_text = std.fmt.bufPrintZ(&game_state.speed_text_buf, "{d:.0} km/h", .{normalized_start_speed}) catch "Error";
     game_state.paddle_text = std.fmt.bufPrintZ(&game_state.paddle_text_buf, "{d:.0}px", .{200.0}) catch "Error";
 
     // Load sound effects from resources
@@ -586,9 +647,9 @@ fn updateGame(game_state: *GameState, dt: f32) void {
         }
     } else if (game_state.ball.state == BallState.active) {
         // Sub-step physics for accurate drag integration
-        const time_step = dt / @as(f32, @floatFromInt(PHYSICS_TIME_RATIO));
+        const time_step = dt / @as(f32, @floatFromInt(PHYSICS_SUBSTEPS_PER_TICK));
 
-        for (0..PHYSICS_TIME_RATIO) |_| {
+        for (0..PHYSICS_SUBSTEPS_PER_TICK) |_| {
             // Apply drag with small time step
             applyDrag(&game_state.ball.velocity, time_step);
 
@@ -630,7 +691,6 @@ fn updateGame(game_state: *GameState, dt: f32) void {
                 game_state.bounce_delay_timer = BOUNCE_DELAY;
                 game_state.score += 1;
                 game_state.attempts += 1;
-                game_state.session_stats.recordResult(true);
                 game_state.current_speed += 1.0; // Increase speed by 1 km/h on hit
                 game_state.last_feedback = FeedbackType.hit;
                 game_state.feedback_timer = FEEDBACK_DISPLAY_TIME;
@@ -648,7 +708,6 @@ fn updateGame(game_state: *GameState, dt: f32) void {
                 game_state.ball.state = BallState.bouncing;
                 game_state.bounce_delay_timer = BOUNCE_DELAY;
                 game_state.attempts += 1;
-                game_state.session_stats.recordResult(false);
                 game_state.current_speed -= 2.0; // Decrease speed by 2 km/h on miss
                 game_state.current_speed = @max(game_state.current_speed, 10.0); // Keep minimum speed at 10 km/h
                 game_state.last_feedback = FeedbackType.miss;
@@ -664,9 +723,9 @@ fn updateGame(game_state: *GameState, dt: f32) void {
         }
     } else if (game_state.ball.state == BallState.bouncing) {
         // Sub-step physics for accurate drag integration
-        const time_step = dt / @as(f32, @floatFromInt(PHYSICS_TIME_RATIO));
+        const time_step = dt / @as(f32, @floatFromInt(PHYSICS_SUBSTEPS_PER_TICK));
 
-        for (0..PHYSICS_TIME_RATIO) |_| {
+        for (0..PHYSICS_SUBSTEPS_PER_TICK) |_| {
             // Apply drag with small time step
             applyDrag(&game_state.ball.velocity, time_step);
 
@@ -692,6 +751,33 @@ fn updateGame(game_state: *GameState, dt: f32) void {
 // ============================================================================
 // RENDERING FUNCTIONS
 // ============================================================================
+
+var ui_font: ?rl.Font = null;
+
+fn drawUiText(text_value: [:0]const u8, x: i32, y: i32, font_size: i32, color: rl.Color) void {
+    if (ui_font) |font| {
+        rl.drawTextEx(
+            font,
+            text_value,
+            .{ .x = @floatFromInt(x), .y = @floatFromInt(y) },
+            @floatFromInt(font_size),
+            1.0,
+            color,
+        );
+        return;
+    }
+
+    rl.drawText(text_value, x, y, font_size, color);
+}
+
+fn measureUiText(text_value: [:0]const u8, font_size: i32) i32 {
+    if (ui_font) |font| {
+        const dimensions = rl.measureTextEx(font, text_value, @floatFromInt(font_size), 1.0);
+        return @intFromFloat(@ceil(dimensions.x));
+    }
+
+    return rl.measureText(text_value, font_size);
+}
 
 fn drawGame(game_state: *GameState) void {
     // Draw background
@@ -757,20 +843,22 @@ fn drawGame(game_state: *GameState) void {
         game_state.last_score = game_state.score;
         game_state.last_attempts = game_state.attempts;
     }
-    rl.drawText(game_state.score_text, 20, 20, 20, rl.Color.white);
+    drawUiText(game_state.score_text, 20, 20, 20, rl.Color.white);
 
     // Draw feedback text
     if (game_state.feedback_timer > 0) {
         if (game_state.feedback_text.len > 0) {
-            rl.drawText(game_state.feedback_text, 960 - 40, 540, 40, rl.Color.yellow);
+            drawUiText(game_state.feedback_text, 960 - 40, 540, 40, rl.Color.yellow);
         }
     }
 
     // Draw UI sliders
     drawUI(game_state);
 
-    // Draw FPS
-    rl.drawFPS(20, 60);
+    // Draw FPS using the same readable UI font.
+    var fps_buffer: [24:0]u8 = undefined;
+    const fps_text = std.fmt.bufPrintZ(&fps_buffer, "{d} FPS", .{rl.getFPS()}) catch "FPS";
+    drawUiText(fps_text, 20, 60, 16, rl.Color{ .r = 136, .g = 214, .b = 148, .a = 255 });
 
     // Draw countdown timer
     drawCountdownTimer(game_state);
@@ -814,8 +902,8 @@ fn drawDirectionCue(ball: *const Ball) void {
 }
 
 fn drawCenteredText(text_value: [:0]const u8, center_x: f32, y: f32, font_size: i32, color: rl.Color) void {
-    const text_width = rl.measureText(text_value, font_size);
-    rl.drawText(
+    const text_width = measureUiText(text_value, font_size);
+    drawUiText(
         text_value,
         @intFromFloat(center_x - @as(f32, @floatFromInt(text_width)) / 2.0),
         @intFromFloat(y),
@@ -827,7 +915,7 @@ fn drawCenteredText(text_value: [:0]const u8, center_x: f32, y: f32, font_size: 
 fn metricValue(entry: HistoryEntry, metric: ChartMetric) f32 {
     return switch (metric) {
         .average_speed => entry.average_speed_kmh,
-        .hit_percentage => entry.hit_percentage,
+        .max_speed => entry.max_speed_kmh,
     };
 }
 
@@ -851,15 +939,15 @@ fn drawChartTooltip(entry: HistoryEntry, metric: ChartMetric, point: rl.Vector2,
             "{d:0>4}-{d:0>2}-{d:0>2}  {d:.2} km/h",
             .{ entry.date.year, entry.date.month, entry.date.day, entry.average_speed_kmh },
         ) catch "History value",
-        .hit_percentage => std.fmt.bufPrintZ(
+        .max_speed => std.fmt.bufPrintZ(
             &text_buffer,
-            "{d:0>4}-{d:0>2}-{d:0>2}  {d:.2}%",
-            .{ entry.date.year, entry.date.month, entry.date.day, entry.hit_percentage },
+            "{d:0>4}-{d:0>2}-{d:0>2}  {d:.2} km/h",
+            .{ entry.date.year, entry.date.month, entry.date.day, entry.max_speed_kmh },
         ) catch "History value",
     };
 
     const font_size: i32 = 17;
-    const tooltip_width = @as(f32, @floatFromInt(rl.measureText(tooltip_text, font_size))) + 26.0;
+    const tooltip_width = @as(f32, @floatFromInt(measureUiText(tooltip_text, font_size))) + 26.0;
     const tooltip_height = 38.0;
     var tooltip_x = point.x - tooltip_width / 2.0;
     tooltip_x = clampF32(tooltip_x, card.x + 8.0, card.x + card.width - tooltip_width - 8.0);
@@ -881,7 +969,7 @@ fn drawChartTooltip(entry: HistoryEntry, metric: ChartMetric, point: rl.Vector2,
     rl.drawRectangleRounded(shadow_rect, 0.28, 8, rl.Color{ .r = 0, .g = 0, .b = 0, .a = 90 });
     rl.drawRectangleRounded(tooltip_rect, 0.28, 8, rl.Color{ .r = 22, .g = 28, .b = 48, .a = 250 });
     rl.drawRectangleRoundedLinesEx(tooltip_rect, 0.28, 8, 1.5, accent);
-    rl.drawText(
+    drawUiText(
         tooltip_text,
         @intFromFloat(tooltip_rect.x + 13.0),
         @intFromFloat(tooltip_rect.y + 10.0),
@@ -897,11 +985,11 @@ fn drawHistoryChart(history: *const HistoryState, card: rl.Rectangle, metric: Ch
     const secondary_text = rl.Color{ .r = 159, .g = 171, .b = 202, .a = 255 };
     const accent = switch (metric) {
         .average_speed => rl.Color{ .r = 69, .g = 218, .b = 203, .a = 255 },
-        .hit_percentage => rl.Color{ .r = 255, .g = 112, .b = 158, .a = 255 },
+        .max_speed => rl.Color{ .r = 255, .g = 164, .b = 92, .a = 255 },
     };
     const title: [:0]const u8 = switch (metric) {
         .average_speed => "Average ball speed",
-        .hit_percentage => "Hit percentage",
+        .max_speed => "Maximum ball speed",
     };
 
     const shadow = rl.Rectangle{
@@ -916,7 +1004,7 @@ fn drawHistoryChart(history: *const HistoryState, card: rl.Rectangle, metric: Ch
 
     const compact_header = card.width < 480.0;
     const title_size: i32 = if (compact_header) 20 else 24;
-    rl.drawText(title, @intFromFloat(card.x + 28.0), @intFromFloat(card.y + 24.0), title_size, rl.Color.white);
+    drawUiText(title, @intFromFloat(card.x + 28.0), @intFromFloat(card.y + 24.0), title_size, rl.Color.white);
 
     if (history.count == 0) {
         drawCenteredText("No sessions yet", card.x + card.width / 2.0, card.y + card.height / 2.0, 21, secondary_text);
@@ -927,11 +1015,11 @@ fn drawHistoryChart(history: *const HistoryState, card: rl.Rectangle, metric: Ch
     var latest_buffer: [48:0]u8 = undefined;
     const latest_text = switch (metric) {
         .average_speed => std.fmt.bufPrintZ(&latest_buffer, "Latest  {d:.1} km/h", .{latest.average_speed_kmh}) catch "Latest",
-        .hit_percentage => std.fmt.bufPrintZ(&latest_buffer, "Latest  {d:.1}%", .{latest.hit_percentage}) catch "Latest",
+        .max_speed => std.fmt.bufPrintZ(&latest_buffer, "Latest  {d:.1} km/h", .{latest.max_speed_kmh}) catch "Latest",
     };
-    const latest_width = rl.measureText(latest_text, 16);
+    const latest_width = measureUiText(latest_text, 16);
     const latest_y_offset: f32 = if (compact_header) 55.0 else 31.0;
-    rl.drawText(
+    drawUiText(
         latest_text,
         @intFromFloat(card.x + card.width - 28.0 - @as(f32, @floatFromInt(latest_width))),
         @intFromFloat(card.y + latest_y_offset),
@@ -956,22 +1044,14 @@ fn drawHistoryChart(history: *const HistoryState, card: rl.Rectangle, metric: Ch
         max_value = @max(max_value, value);
     }
 
-    switch (metric) {
-        .hit_percentage => {
-            min_value = 0;
-            max_value = 100;
-        },
-        .average_speed => {
-            const spread = max_value - min_value;
-            const padding = if (spread < 0.001)
-                @max(10.0, @abs(max_value) * 0.1)
-            else
-                @max(5.0, spread * 0.15);
-            min_value = @max(0.0, min_value - padding);
-            max_value += padding;
-            if (max_value - min_value < 1.0) max_value = min_value + 10.0;
-        },
-    }
+    const spread = max_value - min_value;
+    const padding = if (spread < 0.001)
+        @max(10.0, @abs(max_value) * 0.1)
+    else
+        @max(5.0, spread * 0.15);
+    min_value = @max(0.0, min_value - padding);
+    max_value += padding;
+    if (max_value - min_value < 1.0) max_value = min_value + 10.0;
 
     const grid_line_count: usize = 5;
     for (0..grid_line_count) |grid_index| {
@@ -983,10 +1063,10 @@ fn drawHistoryChart(history: *const HistoryState, card: rl.Rectangle, metric: Ch
         var y_label_buffer: [32:0]u8 = undefined;
         const y_label = switch (metric) {
             .average_speed => std.fmt.bufPrintZ(&y_label_buffer, "{d:.0}", .{label_value}) catch "-",
-            .hit_percentage => std.fmt.bufPrintZ(&y_label_buffer, "{d:.0}%", .{label_value}) catch "-",
+            .max_speed => std.fmt.bufPrintZ(&y_label_buffer, "{d:.0}", .{label_value}) catch "-",
         };
-        const label_width = rl.measureText(y_label, 14);
-        rl.drawText(
+        const label_width = measureUiText(y_label, 14);
+        drawUiText(
             y_label,
             @intFromFloat(plot.x - @as(f32, @floatFromInt(label_width)) - 10.0),
             @intFromFloat(y - 7.0),
@@ -1043,13 +1123,13 @@ fn drawHistoryChart(history: *const HistoryState, card: rl.Rectangle, metric: Ch
             "{s} {d}",
             .{ MONTH_NAMES[month_index], entry.date.year },
         ) catch "Date";
-        const label_width = rl.measureText(x_label, 14);
+        const label_width = measureUiText(x_label, 14);
         const label_x = clampF32(
             point_x - @as(f32, @floatFromInt(label_width)) / 2.0,
             card.x + 6.0,
             card.x + card.width - @as(f32, @floatFromInt(label_width)) - 6.0,
         );
-        rl.drawText(x_label, @intFromFloat(label_x), @intFromFloat(plot.y + plot.height + 18.0), 14, secondary_text);
+        drawUiText(x_label, @intFromFloat(label_x), @intFromFloat(plot.y + plot.height + 18.0), 14, secondary_text);
     }
 
     if (hovered_index) |index| {
@@ -1084,10 +1164,10 @@ fn drawHistoryScreen(history: *const HistoryState) void {
     var summary_buffer: [128:0]u8 = undefined;
     const summary_text = std.fmt.bufPrintZ(
         &summary_buffer,
-        "This session   {d:.1} km/h average   |   {d:.1}% hits",
-        .{ history.current_session.average_speed_kmh, history.current_session.hit_percentage },
+        "This session   {d:.1} km/h average   |   {d:.1} km/h maximum",
+        .{ history.current_session.average_speed_kmh, history.current_session.max_speed_kmh },
     ) catch "This session";
-    const summary_width = @as(f32, @floatFromInt(rl.measureText(summary_text, 17))) + 34.0;
+    const summary_width = @as(f32, @floatFromInt(measureUiText(summary_text, 17))) + 34.0;
     const summary_rect = rl.Rectangle{
         .x = screen_width / 2.0 - summary_width / 2.0,
         .y = 105.0,
@@ -1098,9 +1178,57 @@ fn drawHistoryScreen(history: *const HistoryState) void {
     rl.drawRectangleRoundedLinesEx(summary_rect, 0.4, 10, 1.0, rl.Color{ .r = 104, .g = 121, .b = 163, .a = 90 });
     drawCenteredText(summary_text, screen_width / 2.0, 115.0, 17, rl.Color{ .r = 225, .g = 232, .b = 247, .a = 255 });
 
+    const speed_control_rect = rl.Rectangle{
+        .x = NEXT_SPEED_SLIDER_X - 24.0,
+        .y = 151.0,
+        .width = NEXT_SPEED_SLIDER_WIDTH + 48.0,
+        .height = 79.0,
+    };
+    rl.drawRectangleRounded(speed_control_rect, 0.24, 10, rl.Color{ .r = 24, .g = 33, .b = 55, .a = 225 });
+    rl.drawRectangleRoundedLinesEx(speed_control_rect, 0.24, 10, 1.0, rl.Color{ .r = 81, .g = 205, .b = 193, .a = 90 });
+    drawUiText(
+        "Next session starting speed",
+        @intFromFloat(NEXT_SPEED_SLIDER_X),
+        162,
+        17,
+        rl.Color{ .r = 220, .g = 229, .b = 246, .a = 255 },
+    );
+
+    var next_speed_buffer: [32:0]u8 = undefined;
+    const next_speed_text = std.fmt.bufPrintZ(
+        &next_speed_buffer,
+        "{d:.0} km/h",
+        .{history.next_start_speed_kmh},
+    ) catch "Speed";
+    const next_speed_width = measureUiText(next_speed_text, 17);
+    drawUiText(
+        next_speed_text,
+        @as(i32, @intFromFloat(NEXT_SPEED_SLIDER_X + NEXT_SPEED_SLIDER_WIDTH)) - next_speed_width,
+        162,
+        17,
+        rl.Color{ .r = 75, .g = 224, .b = 207, .a = 255 },
+    );
+    drawSlider(
+        NEXT_SPEED_SLIDER_X,
+        NEXT_SPEED_SLIDER_Y,
+        NEXT_SPEED_SLIDER_WIDTH,
+        history.next_start_speed_kmh,
+        STARTING_SPEED_MIN,
+        STARTING_SPEED_MAX,
+    );
+    drawUiText("250", @intFromFloat(NEXT_SPEED_SLIDER_X), 207, 12, rl.Color{ .r = 137, .g = 151, .b = 182, .a = 255 });
+    const max_label_width = measureUiText("1500", 12);
+    drawUiText(
+        "1500",
+        @as(i32, @intFromFloat(NEXT_SPEED_SLIDER_X + NEXT_SPEED_SLIDER_WIDTH)) - max_label_width,
+        207,
+        12,
+        rl.Color{ .r = 137, .g = 151, .b = 182, .a = 255 },
+    );
+
     const minimum_margin = clampF32(screen_width * 0.04, 28.0, 72.0);
     const chart_gap = clampF32(screen_width * 0.02, 20.0, 38.0);
-    const earliest_chart_top = clampF32(screen_height * 0.17, 158.0, 190.0);
+    const earliest_chart_top = clampF32(screen_height * 0.23, 246.0, 270.0);
     const bottom_margin = clampF32(screen_height * 0.075, 58.0, 82.0);
     const chart_group_width = @min(1800.0, screen_width - minimum_margin * 2.0);
     const chart_left = (screen_width - chart_group_width) / 2.0;
@@ -1115,14 +1243,14 @@ fn drawHistoryScreen(history: *const HistoryState) void {
         .width = chart_width,
         .height = chart_height,
     };
-    const hit_card = rl.Rectangle{
+    const max_speed_card = rl.Rectangle{
         .x = chart_left + chart_width + chart_gap,
         .y = chart_top,
         .width = chart_width,
         .height = chart_height,
     };
     drawHistoryChart(history, speed_card, .average_speed);
-    drawHistoryChart(history, hit_card, .hit_percentage);
+    drawHistoryChart(history, max_speed_card, .max_speed);
 
     const save_text: [:0]const u8 = if (!history.record_eligible)
         "Session did not exceed 5 minutes - not added to history.csv"
@@ -1136,21 +1264,65 @@ fn drawHistoryScreen(history: *const HistoryState) void {
         rl.Color{ .r = 104, .g = 218, .b = 169, .a = 255 }
     else
         rl.Color{ .r = 255, .g = 139, .b = 139, .a = 255 };
-    rl.drawText(save_text, @intFromFloat(chart_left), screen_height_i - 35, 15, save_color);
+    drawUiText(save_text, @intFromFloat(chart_left), screen_height_i - 35, 15, save_color);
 
     const exit_text: [:0]const u8 = "Press Esc again to close";
-    const exit_width = rl.measureText(exit_text, 16);
-    rl.drawText(exit_text, screen_width_i - exit_width - @as(i32, @intFromFloat(chart_left)), screen_height_i - 36, 16, rl.Color{ .r = 174, .g = 185, .b = 211, .a = 255 });
+    const exit_width = measureUiText(exit_text, 16);
+    drawUiText(exit_text, screen_width_i - exit_width - @as(i32, @intFromFloat(chart_left)), screen_height_i - 36, 16, rl.Color{ .r = 174, .g = 185, .b = 211, .a = 255 });
 }
 
-fn drawUI(game_state: *GameState) void {
-    // Draw speed label and slider
-    rl.drawText("Speed (km/h):", @intFromFloat(SPEED_SLIDER_X), @intFromFloat(SPEED_SLIDER_Y), 16, rl.Color.white);
-    drawSlider(
+fn updateUIInput(game_state: *GameState) void {
+    updateSliderInput(
         SPEED_SLIDER_X,
         SPEED_SLIDER_Y + 25,
         SPEED_SLIDER_WIDTH,
         &game_state.settings.speed_multiplier,
+        0.5,
+        3.0,
+    );
+
+    const paddle_y = SPEED_SLIDER_Y + 70;
+    updateSliderInput(
+        SPEED_SLIDER_X,
+        paddle_y + 25,
+        SPEED_SLIDER_WIDTH,
+        &game_state.settings.paddle_width,
+        50.0,
+        300.0,
+    );
+    game_state.paddle.width = game_state.settings.paddle_width;
+}
+
+fn updateHistoryInput(history: *HistoryState) void {
+    updateSliderInput(
+        NEXT_SPEED_SLIDER_X,
+        NEXT_SPEED_SLIDER_Y,
+        NEXT_SPEED_SLIDER_WIDTH,
+        &history.next_start_speed_kmh,
+        STARTING_SPEED_MIN,
+        STARTING_SPEED_MAX,
+    );
+}
+
+fn updateSliderInput(x: f32, y: f32, width: f32, value: *f32, min: f32, max: f32) void {
+    const range = max - min;
+    const mouse_pos = rl.getMousePosition();
+    const hitbox = rl.Rectangle{ .x = x - 10.0, .y = y - 14.0, .width = width + 20.0, .height = 28.0 };
+
+    if (rl.isMouseButtonDown(.left) and rl.checkCollisionPointRec(mouse_pos, hitbox)) {
+        const new_normalized = clampF32((mouse_pos.x - x) / width, 0, 1);
+        value.* = min + new_normalized * range;
+    }
+}
+
+fn drawUI(game_state: *GameState) void {
+    // Draw speed label and slider
+    drawUiText("Speed (km/h):", @intFromFloat(SPEED_SLIDER_X), @intFromFloat(SPEED_SLIDER_Y), 16, rl.Color.white);
+    drawSlider(
+        SPEED_SLIDER_X,
+        SPEED_SLIDER_Y + 25,
+        SPEED_SLIDER_WIDTH,
+        game_state.settings.speed_multiplier,
         0.5,
         3.0,
     );
@@ -1162,20 +1334,19 @@ fn drawUI(game_state: *GameState) void {
         game_state.speed_text = std.fmt.bufPrintZ(&game_state.speed_text_buf, "{d:.0} km/h", .{effective_speed}) catch "Error";
         game_state.last_current_speed = effective_speed_int;
     }
-    rl.drawText(game_state.speed_text, @intFromFloat(SPEED_SLIDER_X + SPEED_SLIDER_WIDTH + 15), @intFromFloat(SPEED_SLIDER_Y + 25), 14, rl.Color.yellow);
+    drawUiText(game_state.speed_text, @intFromFloat(SPEED_SLIDER_X + SPEED_SLIDER_WIDTH + 15), @intFromFloat(SPEED_SLIDER_Y + 25), 14, rl.Color.yellow);
 
     // Draw paddle size label and slider
     const paddle_y = SPEED_SLIDER_Y + 70;
-    rl.drawText("Paddle Size:", @intFromFloat(SPEED_SLIDER_X), @intFromFloat(paddle_y), 16, rl.Color.white);
+    drawUiText("Paddle Size:", @intFromFloat(SPEED_SLIDER_X), @intFromFloat(paddle_y), 16, rl.Color.white);
     drawSlider(
         SPEED_SLIDER_X,
         paddle_y + 25,
         SPEED_SLIDER_WIDTH,
-        &game_state.settings.paddle_width,
+        game_state.settings.paddle_width,
         50.0,
         300.0,
     );
-    game_state.paddle.width = game_state.settings.paddle_width;
 
     // Display paddle size value (cached, only update if changed)
     const paddle_width_int: i32 = @intFromFloat(game_state.settings.paddle_width);
@@ -1183,7 +1354,7 @@ fn drawUI(game_state: *GameState) void {
         game_state.paddle_text = std.fmt.bufPrintZ(&game_state.paddle_text_buf, "{d:.0}px", .{game_state.settings.paddle_width}) catch "Error";
         game_state.last_paddle_width = paddle_width_int;
     }
-    rl.drawText(game_state.paddle_text, @intFromFloat(SPEED_SLIDER_X + SPEED_SLIDER_WIDTH + 15), @intFromFloat(paddle_y + 25), 14, rl.Color.yellow);
+    drawUiText(game_state.paddle_text, @intFromFloat(SPEED_SLIDER_X + SPEED_SLIDER_WIDTH + 15), @intFromFloat(paddle_y + 25), 14, rl.Color.yellow);
 }
 
 fn drawCountdownTimer(game_state: *GameState) void {
@@ -1210,39 +1381,30 @@ fn drawCountdownTimer(game_state: *GameState) void {
         rl.Color.white; // White while counting
 
     // Draw timer slightly below FPS counter
-    rl.drawText(game_state.timer_text, 20, 85, 20, timer_color);
+    drawUiText(game_state.timer_text, 20, 85, 20, timer_color);
 }
 
-fn drawSlider(x: f32, y: f32, width: f32, value: *f32, min: f32, max: f32) void {
-    // Draw slider background
+fn drawSlider(x: f32, y: f32, width: f32, value: f32, min: f32, max: f32) void {
+    const range = max - min;
+    const normalized = clampF32((value - min) / range, 0, 1);
+    const knob_x = x + normalized * width;
+
+    // A thicker track and filled section stay clear at high resolutions.
     rl.drawLineEx(
         rl.Vector2{ .x = x, .y = y },
         rl.Vector2{ .x = x + width, .y = y },
-        2.0,
-        rl.Color.gray,
+        6.0,
+        rl.Color{ .r = 75, .g = 86, .b = 111, .a = 220 },
     );
-
-    // Calculate knob position
-    const range = max - min;
-    const normalized = (value.* - min) / range;
-    const knob_x = x + normalized * width;
-
-    // Draw knob
-    rl.drawCircle(@intFromFloat(knob_x), @intFromFloat(y), 6, rl.Color.white);
-
-    // Check for mouse interaction
-    const mouse_pos = rl.Vector2{
-        .x = @floatFromInt(rl.getMouseX()),
-        .y = @floatFromInt(rl.getMouseY()),
-    };
-    const mouse_distance_sq = (mouse_pos.x - knob_x) * (mouse_pos.x - knob_x) +
-        (mouse_pos.y - y) * (mouse_pos.y - y);
-
-    if (mouse_distance_sq < 100 and rl.isMouseButtonDown(.left)) {
-        // Dragging knob
-        const new_normalized = clampF32((mouse_pos.x - x) / width, 0, 1);
-        value.* = min + new_normalized * range;
-    }
+    rl.drawLineEx(
+        rl.Vector2{ .x = x, .y = y },
+        rl.Vector2{ .x = knob_x, .y = y },
+        6.0,
+        rl.Color{ .r = 75, .g = 224, .b = 207, .a = 255 },
+    );
+    rl.drawCircle(@intFromFloat(knob_x), @intFromFloat(y), 11, rl.Color{ .r = 75, .g = 224, .b = 207, .a = 45 });
+    rl.drawCircle(@intFromFloat(knob_x), @intFromFloat(y), 7, rl.Color.white);
+    rl.drawCircle(@intFromFloat(knob_x), @intFromFloat(y), 3, rl.Color{ .r = 35, .g = 166, .b = 157, .a = 255 });
 }
 
 var SCREEN_WIDTH: f32 = undefined;
@@ -1260,6 +1422,9 @@ var LAUNCH_RECT_Y: f32 = undefined;
 var SPEED_SLIDER_X: f32 = undefined;
 var SPEED_SLIDER_Y: f32 = undefined;
 var SPEED_SLIDER_WIDTH: f32 = undefined;
+var NEXT_SPEED_SLIDER_X: f32 = undefined;
+var NEXT_SPEED_SLIDER_Y: f32 = undefined;
+var NEXT_SPEED_SLIDER_WIDTH: f32 = undefined;
 
 fn defineConstants() void {
     SCREEN_WIDTH = @floatFromInt(rl.getScreenWidth());
@@ -1279,6 +1444,9 @@ fn defineConstants() void {
     SPEED_SLIDER_X = SCREEN_WIDTH - 300.0; // Right side
     SPEED_SLIDER_Y = 20.0;
     SPEED_SLIDER_WIDTH = 200.0;
+    NEXT_SPEED_SLIDER_WIDTH = clampF32(SCREEN_WIDTH * 0.2, 300.0, 420.0);
+    NEXT_SPEED_SLIDER_X = SCREEN_WIDTH / 2.0 - NEXT_SPEED_SLIDER_WIDTH / 2.0;
+    NEXT_SPEED_SLIDER_Y = 198.0;
 }
 
 // ============================================================================
@@ -1296,25 +1464,34 @@ pub fn main(init: std.process.Init) !void {
 
     defineConstants();
 
+    ui_font = rl.loadFontEx("resources/AnonymousPro-Bold.ttf", 64, null) catch null;
+    if (ui_font) |font| rl.setTextureFilter(font.texture, .bilinear);
+    defer {
+        if (ui_font) |font| rl.unloadFont(font);
+    }
+
     // Initialize audio device for sound playback
     rl.initAudioDevice();
     defer rl.closeAudioDevice();
 
     // rl.setTargetFPS(0); // Enables vsync, syncs to monitor refresh rate
 
-    var game_state = initGame();
+    const starting_speed_kmh = loadStartingSpeed(io);
+    var game_state = initGame(starting_speed_kmh);
     defer {
         rl.unloadSound(game_state.hit_sound);
     }
 
     var history_state: HistoryState = .{};
+    history_state.next_start_speed_kmh = starting_speed_kmh;
+    var simulation_clock: FixedStepClock = .{};
     var current_screen: AppScreen = .game;
     var should_exit = false;
 
     // Main game loop
     while (!rl.windowShouldClose() and !should_exit) {
-        const dt = rl.getFrameTime();
-        if (current_screen == .game) game_state.session_elapsed += dt;
+        const frame_dt = rl.getFrameTime();
+        if (current_screen == .game) game_state.session_elapsed += frame_dt;
 
         if (rl.isKeyPressed(.escape)) {
             switch (current_screen) {
@@ -1327,7 +1504,18 @@ pub fn main(init: std.process.Init) !void {
         }
         if (should_exit) break;
 
-        if (current_screen == .game) updateGame(&game_state, dt);
+        switch (current_screen) {
+            .game => {
+                updateUIInput(&game_state);
+                simulation_clock.pushFrame(frame_dt);
+
+                var fixed_updates: usize = 0;
+                while (fixed_updates < MAX_FIXED_UPDATES_PER_FRAME and simulation_clock.takeStep()) : (fixed_updates += 1) {
+                    updateGame(&game_state, FIXED_SIMULATION_DT);
+                }
+            },
+            .history => updateHistoryInput(&history_state),
+        }
 
         rl.beginDrawing();
         switch (current_screen) {
@@ -1339,19 +1527,18 @@ pub fn main(init: std.process.Init) !void {
 
     // Preserve the session if the window-close control is used instead of Esc.
     if (!history_state.session_finalized) finalizeSession(io, &game_state, &history_state);
+    saveStartingSpeed(io, history_state.next_start_speed_kmh) catch {};
 }
 
-test "session snapshot uses launch speeds and resolved shots" {
+test "session snapshot tracks average and maximum launch speeds" {
     var stats: SessionStats = .{};
     stats.recordLaunch(500);
     stats.recordLaunch(400);
-    stats.recordResult(true);
-    stats.recordResult(false);
-    stats.recordResult(true);
+    stats.recordLaunch(650);
 
     const result = stats.snapshot();
-    try std.testing.expectApproxEqAbs(@as(f32, 450), result.average_speed_kmh, 0.001);
-    try std.testing.expectApproxEqAbs(@as(f32, 66.666_67), result.hit_percentage, 0.001);
+    try std.testing.expectApproxEqAbs(@as(f32, 516.666_7), result.average_speed_kmh, 0.001);
+    try std.testing.expectApproxEqAbs(@as(f32, 650), result.max_speed_kmh, 0.001);
 }
 
 test "civil date conversion handles epoch boundaries" {
@@ -1377,4 +1564,31 @@ test "only sessions longer than five minutes are recorded" {
     try std.testing.expect(!shouldRecordSession(299.999));
     try std.testing.expect(!shouldRecordSession(300.0));
     try std.testing.expect(shouldRecordSession(300.001));
+}
+
+test "persisted starting speed is finite and stays inside the slider range" {
+    try std.testing.expectEqual(@as(f32, 250), normalizeStartingSpeed(100));
+    try std.testing.expectEqual(@as(f32, 875), normalizeStartingSpeed(875));
+    try std.testing.expectEqual(@as(f32, 1500), normalizeStartingSpeed(2000));
+    try std.testing.expectEqual(BASE_BALL_SPEED, normalizeStartingSpeed(std.math.nan(f32)));
+    try std.testing.expectApproxEqAbs(@as(f32, 1.5), startingSpeedMultiplier(750), 0.0001);
+}
+
+test "fixed simulation clock is independent of renderer rate" {
+    var clock_at_60_fps: FixedStepClock = .{};
+    var steps_at_60_fps: usize = 0;
+    for (0..10) |_| {
+        clock_at_60_fps.pushFrame(1.0 / 60.0);
+        while (clock_at_60_fps.takeStep()) steps_at_60_fps += 1;
+    }
+
+    var clock_at_120_fps: FixedStepClock = .{};
+    var steps_at_120_fps: usize = 0;
+    for (0..20) |_| {
+        clock_at_120_fps.pushFrame(1.0 / 120.0);
+        while (clock_at_120_fps.takeStep()) steps_at_120_fps += 1;
+    }
+
+    try std.testing.expectEqual(@as(usize, 40), steps_at_60_fps);
+    try std.testing.expectEqual(steps_at_60_fps, steps_at_120_fps);
 }
