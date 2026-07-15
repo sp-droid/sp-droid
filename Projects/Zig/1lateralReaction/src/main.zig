@@ -395,6 +395,16 @@ fn shouldRecordSession(elapsed_seconds: f32) bool {
     return elapsed_seconds > MIN_SESSION_RECORD_SECONDS;
 }
 
+fn formatHistoryRow(buffer: *[128]u8, entry: HistoryEntry) ![]u8 {
+    if (entry.date.year < 0) return error.InvalidHistoryDate;
+    const unsigned_year: u32 = @intCast(entry.date.year);
+    return std.fmt.bufPrint(
+        buffer,
+        "{d:0>4}-{d:0>2}-{d:0>2},{d:.2},{d:.2}\n",
+        .{ unsigned_year, entry.date.month, entry.date.day, entry.average_speed_kmh, entry.max_speed_kmh },
+    );
+}
+
 fn appendHistoryEntry(io: std.Io, entry: HistoryEntry) !void {
     var file = try std.Io.Dir.cwd().createFile(io, HISTORY_FILE_NAME, .{
         .read = true,
@@ -410,11 +420,7 @@ fn appendHistoryEntry(io: std.Io, entry: HistoryEntry) !void {
     }
 
     var row_buffer: [128]u8 = undefined;
-    const row = try std.fmt.bufPrint(
-        &row_buffer,
-        "{d:0>4}-{d:0>2}-{d:0>2},{d:.2},{d:.2}\n",
-        .{ entry.date.year, entry.date.month, entry.date.day, entry.average_speed_kmh, entry.max_speed_kmh },
-    );
+    const row = try formatHistoryRow(&row_buffer, entry);
     try file.writePositionalAll(io, row, write_position);
 }
 
@@ -1557,6 +1563,18 @@ test "history dates require the CSV date shape" {
     try std.testing.expectEqual(Date{ .year = 2026, .month = 7, .day = 13 }, parseDate("2026-07-13").?);
     try std.testing.expect(parseDate("2026/07/13") == null);
     try std.testing.expect(parseDate("2026-13-01") == null);
+}
+
+test "history rows contain no prefix before a positive date" {
+    var buffer: [128]u8 = undefined;
+    const row = try formatHistoryRow(&buffer, .{
+        .date = .{ .year = 2026, .month = 7, .day = 15 },
+        .average_speed_kmh = 496.73,
+        .max_speed_kmh = 524.15,
+    });
+
+    try std.testing.expectEqualStrings("2026-07-15,496.73,524.15\n", row);
+    try std.testing.expect(std.mem.indexOfScalar(u8, row, '+') == null);
 }
 
 test "current session date is a valid calendar date" {

@@ -1,0 +1,18 @@
+.{
+    .name = .badminton_stroke_test,
+    .version = "0.1.0",
+    .fingerprint = 0x2001ff35e15baec4,
+    .minimum_zig_version = "0.16.0",
+    .dependencies = .{
+        .raylib_zig = .{
+            .url = "git+https://github.com/raylib-zig/raylib-zig?ref=devel#97be2c7ae646a2f09856604b138c427c0af1b952",
+            .hash = "raylib_zig-6.0.0-KE8REDJ4BQBu7lKwYNt6R4j5ywPeS37zqW6zrtjCcRwH",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "README.md",
+    },
+}

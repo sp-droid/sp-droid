@@ -1,0 +1,12 @@
+*
+!.gitignore
+!/.vscode/
+!/.vscode/**
+!/resources/
+!/resources/**
+!/Professional/
+!/Professional/**
+!/src/
+!/src/**
+!/build.zig
+!/build.zig.zon
