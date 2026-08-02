@@ -1,0 +1,11 @@
+# Zig build and dependency caches
+.zig-cache/
+zig-out/
+zig-pkg/
+
+# Runtime output
+simulator-preview.png
+
+# Local workspace scratch directories
+.agents/
+work/
