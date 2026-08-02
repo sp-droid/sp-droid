@@ -182,7 +182,7 @@ const GameState = struct {
     paddle_text: [:0]const u8 = "",
     last_score: i32 = 0,
     last_attempts: i32 = 0,
-    last_current_speed: i32 = 0,
+    last_displayed_speed: i32 = 0,
     last_paddle_width: i32 = 0,
     // Feedback text buffer
     feedback_text_buf: [64:0]u8 = undefined,
@@ -229,6 +229,7 @@ fn getFireDelay() f32 {
 // Distance from ball start to bottom = 10 meters
 // Pixel distance: SCREEN_HEIGHT - BALL_START_Y = 980 pixels = 10 meters
 const BASE_BALL_SPEED = 500.0; // km/h
+const NEUTRAL_SPEED_MULTIPLIER = 1.0;
 const STARTING_SPEED_MIN = BASE_BALL_SPEED * 0.5;
 const STARTING_SPEED_MAX = BASE_BALL_SPEED * 3.0;
 const DRAG_COEFFICIENT = 0.45; // Badminton shuttlecock with feathered skirt
@@ -273,8 +274,8 @@ fn normalizeStartingSpeed(value: f32) f32 {
     return clampF32(value, STARTING_SPEED_MIN, STARTING_SPEED_MAX);
 }
 
-fn startingSpeedMultiplier(speed_kmh: f32) f32 {
-    return normalizeStartingSpeed(speed_kmh) / BASE_BALL_SPEED;
+fn displayedSpeedInt(current_speed: f32, speed_multiplier: f32) i32 {
+    return @intFromFloat(@round(current_speed * speed_multiplier));
 }
 
 fn loadStartingSpeed(io: std.Io) f32 {
@@ -592,10 +593,11 @@ fn initGame(starting_speed_kmh: f32, cue_decision_rng: CueDecisionRng) GameState
         .height = PADDLE_HEIGHT,
     };
 
-    // The persisted starting speed maps onto the existing speed multiplier,
-    // leaving the hit/miss progression logic unchanged.
+    // Starting speed is the progression value itself. The neutral multiplier
+    // keeps the visible hit/miss changes at exactly +1/-2 until the player
+    // deliberately adjusts the in-game multiplier control.
     game_state.settings = GameSettings{
-        .speed_multiplier = startingSpeedMultiplier(normalized_start_speed),
+        .speed_multiplier = NEUTRAL_SPEED_MULTIPLIER,
         .paddle_width = 200.0,
         .paddle_height = PADDLE_HEIGHT,
     };
@@ -603,7 +605,7 @@ fn initGame(starting_speed_kmh: f32, cue_decision_rng: CueDecisionRng) GameState
     // Initialize game state
     game_state.score = 0;
     game_state.attempts = 0;
-    game_state.current_speed = BASE_BALL_SPEED; // Start at base speed
+    game_state.current_speed = normalized_start_speed;
     game_state.countdown_timer = getFireDelay();
     game_state.bounce_delay_timer = 0;
     game_state.last_feedback = FeedbackType.none;
@@ -615,13 +617,13 @@ fn initGame(starting_speed_kmh: f32, cue_decision_rng: CueDecisionRng) GameState
     // Initialize cached text on first frame
     game_state.last_score = 0;
     game_state.last_attempts = 0;
-    game_state.last_current_speed = 0;
+    game_state.last_displayed_speed = displayedSpeedInt(game_state.current_speed, game_state.settings.speed_multiplier);
     game_state.last_paddle_width = 0;
     game_state.timer_countdown = COUNTDOWN_DURATION;
     game_state.last_timer_seconds = @intFromFloat(COUNTDOWN_DURATION);
     game_state.timer_text = std.fmt.bufPrintZ(&game_state.timer_text_buf, "10:00", .{}) catch "Error";
     game_state.score_text = std.fmt.bufPrintZ(&game_state.score_text_buf, "Score: {d} / Attempts: {d}", .{ 0, 0 }) catch "Error";
-    game_state.speed_text = std.fmt.bufPrintZ(&game_state.speed_text_buf, "{d:.0} km/h", .{normalized_start_speed}) catch "Error";
+    game_state.speed_text = std.fmt.bufPrintZ(&game_state.speed_text_buf, "{d} km/h", .{game_state.last_displayed_speed}) catch "Error";
     game_state.paddle_text = std.fmt.bufPrintZ(&game_state.paddle_text_buf, "{d:.0}px", .{200.0}) catch "Error";
 
     // Load sound effects from resources
@@ -1340,11 +1342,10 @@ fn drawUI(game_state: *GameState) void {
     );
 
     // Display effective ball speed in km/h (cached, only update if changed)
-    const effective_speed: f32 = game_state.current_speed * game_state.settings.speed_multiplier;
-    const effective_speed_int: i32 = @intFromFloat(effective_speed);
-    if (effective_speed_int != game_state.last_current_speed) {
-        game_state.speed_text = std.fmt.bufPrintZ(&game_state.speed_text_buf, "{d:.0} km/h", .{effective_speed}) catch "Error";
-        game_state.last_current_speed = effective_speed_int;
+    const displayed_speed = displayedSpeedInt(game_state.current_speed, game_state.settings.speed_multiplier);
+    if (displayed_speed != game_state.last_displayed_speed) {
+        game_state.speed_text = std.fmt.bufPrintZ(&game_state.speed_text_buf, "{d} km/h", .{displayed_speed}) catch "Error";
+        game_state.last_displayed_speed = displayed_speed;
     }
     drawUiText(game_state.speed_text, @intFromFloat(SPEED_SLIDER_X + SPEED_SLIDER_WIDTH + 15), @intFromFloat(SPEED_SLIDER_Y + 25), 14, rl.Color.yellow);
 
@@ -1595,7 +1596,21 @@ test "persisted starting speed is finite and stays inside the slider range" {
     try std.testing.expectEqual(@as(f32, 875), normalizeStartingSpeed(875));
     try std.testing.expectEqual(@as(f32, 1500), normalizeStartingSpeed(2000));
     try std.testing.expectEqual(BASE_BALL_SPEED, normalizeStartingSpeed(std.math.nan(f32)));
-    try std.testing.expectApproxEqAbs(@as(f32, 1.5), startingSpeedMultiplier(750), 0.0001);
+}
+
+test "saved starting speed progresses by exact displayed hit and miss amounts" {
+    const starting_speed = normalizeStartingSpeed(514.88);
+    const before = displayedSpeedInt(starting_speed, NEUTRAL_SPEED_MULTIPLIER);
+    const after_hit = displayedSpeedInt(starting_speed + 1.0, NEUTRAL_SPEED_MULTIPLIER);
+    const after_miss = displayedSpeedInt(starting_speed - 2.0, NEUTRAL_SPEED_MULTIPLIER);
+
+    try std.testing.expectEqual(@as(i32, 1), after_hit - before);
+    try std.testing.expectEqual(@as(i32, -2), after_miss - before);
+}
+
+test "display cache key uses the same rounded speed shown to the player" {
+    try std.testing.expectEqual(@as(i32, 251), displayedSpeedInt(501.2, 0.5));
+    try std.testing.expectEqual(@as(i32, 515), displayedSpeedInt(514.88, 1.0));
 }
 
 test "cue decisions are independent rather than grouped into balanced blocks" {
