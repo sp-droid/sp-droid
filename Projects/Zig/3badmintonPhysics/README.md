@@ -1,5 +1,7 @@
 # AI exclusively coded project
 
+First used and then deprecated by the VR project's own physics system
+
 ## Prerequisites
 
 - Zig 0.16.0.
