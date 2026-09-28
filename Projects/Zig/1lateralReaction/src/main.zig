@@ -214,8 +214,8 @@ const MAX_HISTORY_ENTRIES = 4096;
 const HISTORY_READ_BUFFER_SIZE = 512 * 1024;
 
 const MONTH_NAMES = [_][]const u8{
-    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+    "JAN", "FEB", "MAR", "APR", "MAY", "JUN",
+    "JUL", "AUG", "SEP", "OCT", "NOV", "DEC",
 };
 
 var history_read_buffer: [HISTORY_READ_BUFFER_SIZE]u8 = undefined;
@@ -357,6 +357,22 @@ fn dateFromUnixTimestamp(timestamp: i64) Date {
         .month = @intCast(month),
         .day = @intCast(day),
     };
+}
+
+fn dateDayNumber(date: Date) i64 {
+    // Civil date conversion using the same proleptic Gregorian calendar as
+    // dateFromUnixTimestamp. The resulting number is days since 1970-01-01.
+    var year: i64 = @intCast(date.year);
+    const month: i64 = @intCast(date.month);
+    year -= if (month <= 2) 1 else 0;
+
+    const era = @divFloor(year, 400);
+    const year_of_era = year - era * 400;
+    const month_prime = month + (if (month > 2) @as(i64, -3) else 9);
+    const day_of_year = @divFloor(153 * month_prime + 2, 5) + @as(i64, @intCast(date.day)) - 1;
+    const day_of_era = year_of_era * 365 + @divFloor(year_of_era, 4) - @divFloor(year_of_era, 100) + day_of_year;
+
+    return era * 146_097 + day_of_era - 719_468;
 }
 
 fn currentDate(io: std.Io) Date {
@@ -933,11 +949,25 @@ fn metricValue(entry: HistoryEntry, metric: ChartMetric) f32 {
     };
 }
 
-fn chartPoint(plot: rl.Rectangle, index: usize, count: usize, value: f32, min_value: f32, max_value: f32) rl.Vector2 {
-    const x = if (count <= 1)
-        plot.x + plot.width / 2.0
+fn chartPoint(
+    plot: rl.Rectangle,
+    index: usize,
+    count: usize,
+    date: Date,
+    first_day: i64,
+    last_day: i64,
+    value: f32,
+    min_value: f32,
+    max_value: f32,
+) rl.Vector2 {
+    const date_range = last_day - first_day;
+    const x_ratio = if (date_range > 0)
+        @as(f32, @floatFromInt(dateDayNumber(date) - first_day)) / @as(f32, @floatFromInt(date_range))
+    else if (count <= 1)
+        0.5
     else
-        plot.x + (@as(f32, @floatFromInt(index)) / @as(f32, @floatFromInt(count - 1))) * plot.width;
+        @as(f32, @floatFromInt(index)) / @as(f32, @floatFromInt(count - 1));
+    const x = plot.x + clampF32(x_ratio, 0, 1) * plot.width;
     const normalized_y = clampF32((value - min_value) / (max_value - min_value), 0, 1);
     return .{
         .x = x,
@@ -1052,10 +1082,16 @@ fn drawHistoryChart(history: *const HistoryState, card: rl.Rectangle, metric: Ch
 
     var min_value = metricValue(history.get(0), metric);
     var max_value = min_value;
+    var first_day = dateDayNumber(history.get(0).date);
+    var last_day = first_day;
     for (1..history.count) |index| {
-        const value = metricValue(history.get(index), metric);
+        const entry = history.get(index);
+        const value = metricValue(entry, metric);
         min_value = @min(min_value, value);
         max_value = @max(max_value, value);
+        const entry_day = dateDayNumber(entry.date);
+        first_day = @min(first_day, entry_day);
+        last_day = @max(last_day, entry_day);
     }
 
     const spread = max_value - min_value;
@@ -1100,8 +1136,8 @@ fn drawHistoryChart(history: *const HistoryState, card: rl.Rectangle, metric: Ch
         for (1..history.count) |index| {
             const previous_entry = history.get(index - 1);
             const entry = history.get(index);
-            const previous_point = chartPoint(plot, index - 1, history.count, metricValue(previous_entry, metric), min_value, max_value);
-            const point = chartPoint(plot, index, history.count, metricValue(entry, metric), min_value, max_value);
+            const previous_point = chartPoint(plot, index - 1, history.count, previous_entry.date, first_day, last_day, metricValue(previous_entry, metric), min_value, max_value);
+            const point = chartPoint(plot, index, history.count, entry.date, first_day, last_day, metricValue(entry, metric), min_value, max_value);
             const glow_color = rl.Color{ .r = accent.r, .g = accent.g, .b = accent.b, .a = 42 };
             rl.drawLineEx(previous_point, point, 7.0, glow_color);
             rl.drawLineEx(previous_point, point, 2.4, accent);
@@ -1112,7 +1148,7 @@ fn drawHistoryChart(history: *const HistoryState, card: rl.Rectangle, metric: Ch
     var hovered_index: ?usize = null;
     for (0..history.count) |index| {
         const entry = history.get(index);
-        const point = chartPoint(plot, index, history.count, metricValue(entry, metric), min_value, max_value);
+        const point = chartPoint(plot, index, history.count, entry.date, first_day, last_day, metricValue(entry, metric), min_value, max_value);
         const dx = mouse.x - point.x;
         const dy = mouse.y - point.y;
         if (dx * dx + dy * dy <= 13.0 * 13.0) hovered_index = index;
@@ -1122,20 +1158,29 @@ fn drawHistoryChart(history: *const HistoryState, card: rl.Rectangle, metric: Ch
         rl.drawCircleV(point, 1.7, rl.Color.white);
     }
 
-    const x_label_count = @min(history.count, @as(usize, 4));
-    for (0..x_label_count) |label_index| {
-        const history_index = if (x_label_count <= 1)
-            0
+    const x_tick_count: usize = 5;
+    for (0..x_tick_count) |tick_index| {
+        const tick_ratio = @as(f32, @floatFromInt(tick_index)) / @as(f32, @floatFromInt(x_tick_count - 1));
+        const point_x = plot.x + tick_ratio * plot.width;
+        const tick_day = if (last_day > first_day)
+            first_day + @as(i64, @intFromFloat(@round(@as(f64, @floatFromInt(last_day - first_day)) * @as(f64, @floatFromInt(tick_index)) / @as(f64, @floatFromInt(x_tick_count - 1)))))
         else
-            (label_index * (history.count - 1)) / (x_label_count - 1);
-        const entry = history.get(history_index);
-        const point_x = chartPoint(plot, history_index, history.count, metricValue(entry, metric), min_value, max_value).x;
+            first_day;
+        const tick_date = dateFromUnixTimestamp(tick_day * 86_400);
+
+        rl.drawLineEx(
+            .{ .x = point_x, .y = plot.y + plot.height },
+            .{ .x = point_x, .y = plot.y + plot.height + 8.0 },
+            1.5,
+            rl.Color{ .r = 142, .g = 155, .b = 190, .a = 150 },
+        );
+
         var x_label_buffer: [32:0]u8 = undefined;
-        const month_index: usize = @intCast(entry.date.month - 1);
+        const month_index: usize = @intCast(tick_date.month - 1);
         const x_label = std.fmt.bufPrintZ(
             &x_label_buffer,
-            "{s} {d}",
-            .{ MONTH_NAMES[month_index], entry.date.year },
+            "{s}{d:0>2}",
+            .{ MONTH_NAMES[month_index], @mod(tick_date.year, 100) },
         ) catch "Date";
         const label_width = measureUiText(x_label, 14);
         const label_x = clampF32(
@@ -1148,7 +1193,7 @@ fn drawHistoryChart(history: *const HistoryState, card: rl.Rectangle, metric: Ch
 
     if (hovered_index) |index| {
         const entry = history.get(index);
-        const point = chartPoint(plot, index, history.count, metricValue(entry, metric), min_value, max_value);
+        const point = chartPoint(plot, index, history.count, entry.date, first_day, last_day, metricValue(entry, metric), min_value, max_value);
         rl.drawCircleV(point, 11.0, rl.Color{ .r = accent.r, .g = accent.g, .b = accent.b, .a = 58 });
         rl.drawCircleV(point, 6.0, accent);
         drawChartTooltip(entry, metric, point, card, accent);
