@@ -13,6 +13,7 @@ let GRID_SIZEx = sliderGridSize.value;
 
 // Constants
 const WORKGROUP_SIZE = 8;
+const INITIAL_LIVE_PROBABILITY = 0.25;
 let UPDATE_INTERVAL = 1000/sliderFPS.value;
 
 sliderGridSize.oninput = function() {
@@ -25,7 +26,10 @@ sliderFPS.oninput = function() {
     textFPS.textContent = `Target FPS: ${this.value}`;
 }
 resetButton.onclick = function() {
-    clearInterval(gameLoop);
+    if (animationFrameId !== null) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
+    }
 
     GRID_SIZEx = sliderGridSize.value;
     squareSizeX = canvas.width / GRID_SIZEx
@@ -33,11 +37,13 @@ resetButton.onclick = function() {
     
     UPDATE_INTERVAL = 1000/sliderFPS.value;
     frameNumber = 0;
+    lastTime = 0;
     startGame();
 }
 
 // Variables
 let frameNumber = 0;
+let animationFrameId = null;
 
 // Checking WebGPU browser support
 if (!navigator.gpu) {
@@ -126,7 +132,7 @@ async function gameLoop() {
 
     // Only proceed if the time passed is greater than the target interval (e.g., 33.33ms for 30 FPS)
     if (elapsed < UPDATE_INTERVAL) {
-        requestAnimationFrame(gameLoop);
+        animationFrameId = requestAnimationFrame(gameLoop);
         return;
     } else {
         lastTime = timestamp;
@@ -164,7 +170,7 @@ async function gameLoop() {
 
     // Create a command buffer and submit it to the queue of the GPU device
     device.queue.submit([encoder.finish()]);
-    requestAnimationFrame(gameLoop);
+    animationFrameId = requestAnimationFrame(gameLoop);
 }
 
 function startGame() {
@@ -192,9 +198,10 @@ function startGame() {
         })
     ];
 
-    // Set each cell to a random state, then copy the JavaScript array into the storage buffer.
+    // Start at the lower edge of the moderate soup range. 50% is common for
+    // soup censuses, but a lower density makes individual structures easier to see.
     for (let i = 0; i < cellStateArray.length; ++i) {
-        cellStateArray[i] = Math.random() > 0.7 ? 1 : 0;
+        cellStateArray[i] = Math.random() < INITIAL_LIVE_PROBABILITY ? 1 : 0;
     }
     device.queue.writeBuffer(cellStateStorage[0], 0, cellStateArray);
 
@@ -286,7 +293,7 @@ function startGame() {
         }
     });
 
-    requestAnimationFrame(gameLoop);
+    animationFrameId = requestAnimationFrame(gameLoop);
 }
 
 // Functions
