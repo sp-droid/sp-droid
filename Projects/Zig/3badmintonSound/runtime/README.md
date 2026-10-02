@@ -83,3 +83,29 @@ Only `zig-out/lib/badminton_audio.lib` (or Android
 `zig-out/include/badminton_audio.h` are integration artifacts. Test programs,
 the benchmark, the UI, and reference audio are outside this package and are
 not linked into the archive.
+
+## Game-synchronised features (2026-10)
+
+This runtime is kept identical to the copy vendored by the VR badminton game
+(`third_party/badminton_audio`). Beyond the original API it includes:
+
+- `region_hint` and per-impact head geometry on `BadmintonAudioHit`,
+  `badminton_audio_set_racket_geometry`, and the ordered
+  `badminton_audio_clear_transients` replay command;
+- the lightweight binaural spatializer (`badminton_spatializer_*`);
+- departing-shuttle flight noise (`shuttle_flight_gain`) and gusty swoosh
+  turbulence (no hall or echo: room acoustics depend on the court);
+- a string bed pitched by the tension/thickness chart fit
+  (`reference/string_frequency_fit.md`, new `string_diameter_mm` config
+  field, 0.61-0.70 mm), with a shuttle-skirt "thock" pulse and a low frame
+  body mode balanced against the recorded strikes;
+- an unresolved-modal residual (octave-band noise following the contact
+  pulse) that reproduces the dense broadband wash of real strikes, fitted by
+  log-mel distance (14.0 -> 8.3 dB over the first 60 ms);
+- crisp soft shots on tight strings: upper string modes from recorded
+  high-tension net shots (`reference/net.mp3`), louder and longer-ringing at
+  low speed and high tension, with the strike scaled to stay at touch
+  loudness.
+
+The new `BadmintonAudioConfig` fields are appended after `swoosh_gain`; start
+from `badminton_audio_default_config()`. The engine is about 8 KB.

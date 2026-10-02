@@ -1,6 +1,7 @@
 const std = @import("std");
 const model = @import("model.zig");
 const dsp = @import("dsp.zig");
+const live_swoosh = @import("live_swoosh.zig");
 
 const maximum_line_segments = 33;
 
@@ -155,9 +156,15 @@ const ContactState = struct {
 
 pub fn simulate(
     allocator: std.mem.Allocator,
-    profile: model.Profile,
+    requested_profile: model.Profile,
 ) !SimulationResult {
-    try model.validate(profile);
+    try model.validate(requested_profile);
+    var profile = applyStrikeVariation(requested_profile);
+    const crispness = strikeCrispness(profile.hit);
+    // A tight bed hit softly loses its energy more slowly: the bed note rings
+    // on with the crisp upper tones instead of dying as a short ping.
+    profile.model.string_damping_rate_s /= 1.0 + profile.model.upper_mode_crisp_decay * crispness;
+    const noise_offset = variationNoiseOffset(profile.hit.variation_seed);
     const hit_region = model.hitRegion(profile).?;
     var topology = try buildTopology(allocator, profile);
     defer topology.deinit();
@@ -284,11 +291,12 @@ pub fn simulate(
     var frame_hit_mode_gains: [model.frame_hit_mode_count]f64 = undefined;
     var upper_mode_filters: [model.upper_mode_count]dsp.Biquad = undefined;
     var upper_mode_acoustic_gains: [model.upper_mode_count]f64 = undefined;
-    const mean_tension_lbf =
-        0.5 * (hit.main_tension_lbf + hit.cross_tension_lbf);
+    // Upper-mode frequencies were measured on a 30 lb BG66 racket; they move
+    // with the chart-fitted bed frequency.
+    const mean_chart_hz = 0.5 * (model.chartStringFrequencyHz(hit.main_tension_lbf, params.string_diameter_mm) +
+        model.chartStringFrequencyHz(hit.cross_tension_lbf, params.string_diameter_mm));
     const upper_mode_frequency_scale =
-        @sqrt(mean_tension_lbf / 30.0) *
-        (model.bg66_diameter_mm / params.string_diameter_mm) *
+        mean_chart_hz / model.chartStringFrequencyHz(30.0, model.bg66_diameter_mm) *
         @sqrt(model.reference_string_density_kg_m3 / params.string_density_kg_m3);
     const hard_impact_amount = smoothStep01(
         (hit.relative_normal_speed_mps - params.hard_impact_threshold_mps) /
@@ -298,6 +306,8 @@ pub fn simulate(
     const upper_mode_speed_decay_scale =
         1.0 - hard_impact_amount *
             (1.0 - params.upper_mode_fast_decay_scale);
+    const upper_mode_crisp_gain = 1.0 + params.upper_mode_crisp_gain * crispness;
+    const upper_mode_crisp_decay = 1.0 + params.upper_mode_crisp_decay * crispness;
     for (
         &upper_mode_filters,
         &upper_mode_acoustic_gains,
@@ -307,6 +317,7 @@ pub fn simulate(
             mode.frequency_hz_at_30lb * upper_mode_frequency_scale;
         const decay_s = params.upper_mode_decay_ms * 0.001 *
             upper_mode_speed_decay_scale *
+            upper_mode_crisp_decay *
             mode.decay_scale *
             std.math.pow(f64, 3000.0 / @max(3000.0, frequency_hz), 0.25);
         const quality_factor = std.math.pi * frequency_hz * decay_s;
@@ -315,7 +326,7 @@ pub fn simulate(
             frequency_hz,
             quality_factor,
         );
-        acoustic_gain.* = mode.relative_gain * std.math.pow(
+        acoustic_gain.* = mode.relative_gain * upper_mode_crisp_gain * std.math.pow(
             f64,
             frequency_hz / 3000.0,
             params.upper_mode_radiation_exponent,
@@ -385,6 +396,49 @@ pub fn simulate(
         @exp(-base_dt / (params.hard_impact_decay_ms * 0.001));
     const frame_hit_transient_decay =
         @exp(-base_dt / (params.frame_hit_transient_decay_ms * 0.001));
+    const skirt_radius_m = 0.5 * params.shuttle_skirt_diameter_mm * 0.001;
+    const skirt_added_mass_ratio = (8.0 / 3.0) * params.air_density_kg_m3 *
+        skirt_radius_m * skirt_radius_m * skirt_radius_m /
+        (params.shuttle_mass_g * 0.001);
+    const shuttle_dipole_range_m = @sqrt(
+        square(params.microphone_distance_m) +
+            square(params.microphone_x_m - hit.x_mm * 0.001) +
+            square(params.microphone_y_m - hit.y_mm * 0.001),
+    );
+    // On-axis compact dipole: p = (dF/dt / c + F / r) / (4 pi r).
+    const shuttle_dipole_scale = params.shuttle_dipole_gain *
+        skirt_added_mass_ratio / (4.0 * std.math.pi * shuttle_dipole_range_m);
+    const residual_centres_hz = [_]f64{ 1000.0, 2000.0, 4000.0, 8000.0, 14000.0 };
+    // The 1 kHz octave shares the string-bed ring's range; holding it back
+    // keeps the ring above the wash's random peaks.
+    const residual_ring_octave_scale: f64 = 0.2;
+    var residual_filters: [residual_centres_hz.len]dsp.Biquad = undefined;
+    var residual_decay: [residual_centres_hz.len]f64 = undefined;
+    var residual_band_gain: [residual_centres_hz.len]f64 = undefined;
+    var residual_envelope: [residual_centres_hz.len]f64 = @splat(0.0);
+    // A soft, slow contact is long and smooth and excites far fewer of the
+    // dense high modes, so touch shots keep their clear ping: 30 % of the
+    // residual at 3 m/s rising to full strength from 15 m/s.
+    const residual_speed_weight = 0.3 + 0.7 * smoothStep01(
+        (hit.relative_normal_speed_mps - 3.0) / (15.0 - 3.0),
+    );
+    for (residual_centres_hz, 0..) |centre_hz, band| {
+        residual_filters[band] = dsp.Biquad.bandPass(
+            @floatFromInt(params.internal_sample_rate_hz),
+            centre_hz,
+            1.4,
+        );
+        // Decay time ~ 1/sqrt(f): higher modes lose energy faster.
+        const decay_s = params.modal_residual_decay_ms_at_1khz * 0.001 *
+            @sqrt(1000.0 / centre_hz);
+        residual_decay[band] = @exp(-base_dt / decay_s);
+        residual_band_gain[band] = std.math.pow(
+            f64,
+            10.0,
+            params.modal_residual_tilt_db_per_octave *
+                std.math.log2(centre_hz / 1000.0) / 20.0,
+        ) * (if (band == 0) residual_ring_octave_scale else @as(f64, 1.0));
+    }
     var contact_texture_envelope: f64 = 0.0;
     var hard_impact_envelope: f64 = 0.0;
     var frame_hit_transient_envelope: f64 = 0.0;
@@ -466,7 +520,8 @@ pub fn simulate(
 
         const source_frame = pre_roll_internal_frames + frame;
         emitStructuralPressure(&topology, &state, raw_pressure, source_frame);
-        const contact_roughness = deterministicContactNoise(frame);
+        const noise_frame = frame +% noise_offset;
+        const contact_roughness = deterministicContactNoise(noise_frame);
         const contact_force_slew = (last_force - previous_contact_force) / base_dt;
         previous_contact_force = last_force;
         contact_texture_envelope = @max(
@@ -475,12 +530,12 @@ pub fn simulate(
         );
         const burst_probability = params.contact_noise_burst_probability;
         const burst_selector = 0.5 *
-            (deterministicNoise(frame, 0xd1b5_4a32_d192_ed03) + 1.0);
+            (deterministicNoise(noise_frame, 0xd1b5_4a32_d192_ed03) + 1.0);
         const burst_threshold = 1.0 - burst_probability;
         const micro_burst = if (burst_probability > 0.0 and
             burst_selector > burst_threshold)
             ((burst_selector - burst_threshold) / burst_probability) *
-                deterministicNoise(frame, 0x94d0_49bb_1331_11eb) *
+                deterministicNoise(noise_frame, 0x94d0_49bb_1331_11eb) *
                 params.contact_noise_burst_gain
         else
             0.0;
@@ -497,7 +552,7 @@ pub fn simulate(
         const contact_activity = @sqrt(active_contact_fraction);
         const tail_grain =
             0.8 + 0.2 * deterministicInterpolatedNoise(
-                frame,
+                noise_frame,
                 256,
                 0x243f_6a88_85a3_08d3,
             );
@@ -529,7 +584,7 @@ pub fn simulate(
         const hard_impact_driver =
             0.68 * equivalent_slew_force +
             0.32 * hard_impact_envelope *
-                deterministicNoise(frame, 0x7f4a_7c15_9e37_79b9);
+                deterministicNoise(noise_frame, 0x7f4a_7c15_9e37_79b9);
         const hard_impact_pressure = if (hit_region == .strings)
             hard_impact_amount *
                 params.hard_impact_gain *
@@ -554,6 +609,28 @@ pub fn simulate(
         upper_modal_pressure *=
             params.upper_mode_gain * upper_mode_location_gain;
 
+        var residual_pressure: f64 = 0.0;
+        // String-bed residual only: a frame strike has its own hoop bank.
+        if (params.modal_residual_gain > 0.0 and hit_region == .strings) {
+            for (
+                &residual_filters,
+                &residual_envelope,
+                residual_decay,
+                residual_band_gain,
+                0..,
+            ) |*filter, *envelope, decay, band_gain, band| {
+                envelope.* = @max(last_force, envelope.* * decay);
+                residual_pressure += band_gain * envelope.* * filter.process(
+                    deterministicNoise(noise_frame, 0x3c6e_f372_fe94_f82b +% band),
+                );
+            }
+            // White noise spreads its power over the whole internal band, so
+            // scale by sqrt(rate) to keep the band level rate-independent
+            // (calibrated at 96 kHz).
+            residual_pressure *= params.modal_residual_gain * residual_speed_weight * 2.0 *
+                @sqrt(@as(f64, @floatFromInt(params.internal_sample_rate_hz)) / 96_000.0);
+        }
+
         // A direct hoop strike has two perceptually distinct pieces: the
         // very short force edge (the "tick") and a sparse, inharmonic bank of
         // local CFRP/paint/grommet modes. Carbon composite is not literally a
@@ -568,7 +645,7 @@ pub fn simulate(
         const frame_hit_driver =
             0.78 * frame_equivalent_slew_force +
             0.22 * frame_hit_transient_envelope *
-                deterministicNoise(frame, 0x6a09_e667_f3bc_c909);
+                deterministicNoise(noise_frame, 0x6a09_e667_f3bc_c909);
         const frame_hit_transient_pressure = if (hit_region == .frame)
             frame_hit_propagation_scale * params.frame_hit_transient_gain *
                 frame_hit_lowpass.process(
@@ -590,12 +667,16 @@ pub fn simulate(
         }
         frame_hit_modal_pressure *=
             frame_hit_propagation_scale * params.frame_hit_mode_gain;
+        const shuttle_dipole_pressure = shuttle_dipole_scale *
+            (contact_force_slew / params.sound_speed_mps +
+                last_force / shuttle_dipole_range_m);
         const contact_index = source_frame + topology.frame_audio_delay;
         if (contact_index < raw_pressure.len) {
             raw_pressure[contact_index] +=
                 contact_pressure + hard_impact_pressure +
                 upper_modal_pressure + frame_hit_transient_pressure +
-                frame_hit_modal_pressure;
+                frame_hit_modal_pressure + shuttle_dipole_pressure +
+                residual_pressure;
         }
 
         if (frame < visual_internal_frames and frame % visual_step == 0) {
@@ -628,6 +709,21 @@ pub fn simulate(
         diagnostics.apparent_restitution =
             contact.separation_relative_speed_mps /
             @max(1.0e-9, hit.relative_normal_speed_mps);
+        emitShuttleFlight(
+            raw_pressure,
+            profile,
+            contact.separation_time_s,
+            contact.separation_relative_speed_mps,
+            pre_roll_internal_frames,
+            noise_offset,
+        );
+    }
+
+    // Crisp soft shots are brighter, not louder: scale the whole strike so
+    // the boosted upper tones do not raise its overall level.
+    if (crispness > 0.0) {
+        const strike_scale = 1.0 / (1.0 + params.upper_mode_crisp_level_compensation * crispness);
+        for (raw_pressure) |*sample| sample.* *= strike_scale;
     }
 
     var impact_only_audio: []f32 = undefined;
@@ -654,6 +750,7 @@ pub fn simulate(
             profile,
             topology.frame_audio_delay,
             internal_frames,
+            noise_offset,
         );
         impact_only_audio = impact_component;
         audio = try dsp.decimateLowPass(
@@ -699,13 +796,24 @@ pub fn simulate(
         )]
     else
         impact_audio;
-    diagnostics.dominant_frequency_hz = try dsp.dominantFrequency(
-        allocator,
-        dominant_audio,
-        params.output_sample_rate_hz,
-        if (hit_region == .strings) 500.0 else 1500.0,
-        if (hit_region == .strings) 1800.0 else 18_000.0,
-    );
+    // String hits report the bed note: a tonal-peak search, because the
+    // dense modal residual is louder than the narrow ring in raw magnitude.
+    diagnostics.dominant_frequency_hz = if (hit_region == .strings)
+        try dsp.dominantTonalFrequency(
+            allocator,
+            dominant_audio,
+            params.output_sample_rate_hz,
+            500.0,
+            1800.0,
+        )
+    else
+        try dsp.dominantFrequency(
+            allocator,
+            dominant_audio,
+            params.output_sample_rate_hz,
+            1500.0,
+            18_000.0,
+        );
     const fft_size = chooseFftSize(audio.len);
     const spectrum = try dsp.magnitudeSpectrumDb(allocator, audio, fft_size);
     errdefer allocator.free(spectrum);
@@ -787,8 +895,10 @@ fn buildTopology(allocator: std.mem.Allocator, profile: model.Profile) !Topology
 
     var node_cursor: usize = 0;
     var line_cursor: usize = 0;
-    const main_tension = hit.main_tension_lbf * model.pounds_force_to_newtons;
-    const cross_tension = hit.cross_tension_lbf * model.pounds_force_to_newtons;
+    const main_tension = model.effectiveTensionLbf(params, hit.main_tension_lbf) *
+        model.pounds_force_to_newtons;
+    const cross_tension = model.effectiveTensionLbf(params, hit.cross_tension_lbf) *
+        model.pounds_force_to_newtons;
 
     for (0..main_count) |main_index| {
         const x = distributedCoordinate(main_index, main_count, a);
@@ -1413,11 +1523,168 @@ fn emitStructuralPressure(
     }
 }
 
+/// Aerodynamic noise of the departing shuttle. It starts at separation, is
+/// driven by the decelerating flight speed (pressure roughly proportional to
+/// U^3 like the racket swoosh) and is evaluated in retarded time, so the
+/// receding source arrives later, quieter and Doppler-lowered. Below about
+/// 40 m/s the broadband wake gives way to a narrow shaft-shedding tone.
+fn emitShuttleFlight(
+    pressure: []f64,
+    profile: model.Profile,
+    separation_time_s: f64,
+    separation_speed_mps: f64,
+    pre_roll_frames: usize,
+    noise_offset: usize,
+) void {
+    const params = profile.model;
+    const departure_speed = profile.hit.racket_speed_mps + separation_speed_mps;
+    if (params.shuttle_flight_gain <= 0.0 or
+        departure_speed <= params.shuttle_flight_threshold_mps)
+    {
+        return;
+    }
+
+    const rate: f64 = @floatFromInt(params.internal_sample_rate_hz);
+    // Quadratic drag: dv/dt = -g v^2 / v_t^2, so v = v0 / (1 + v0 t / L) and
+    // the flown distance is L ln(1 + v0 t / L) with L = v_t^2 / g.
+    const drag_length = square(params.shuttle_terminal_speed_mps) / 9.80665;
+    const initial_range = params.microphone_distance_m;
+    const sound_speed = params.sound_speed_mps;
+    // The listener stands behind and beside the stroke, so most of the flight
+    // path recedes radially from them.
+    const radial_fraction = 0.85;
+    const lateral_fraction = @sqrt(1.0 - radial_fraction * radial_fraction);
+    const vane_m = params.shuttle_flight_vane_mm * 0.001;
+    const rachis_m = params.shuttle_rachis_mm * 0.001;
+    const tonal_quality_factor = 12.0;
+    // Equalises the RMS of the narrow tonal band with the broad skirt band
+    // for the same white-noise input (bandwidth ratio square root).
+    const tonal_gain = @sqrt(tonal_quality_factor / 0.8);
+    const threshold = @max(1.0e-3, params.shuttle_flight_threshold_mps);
+    const onset_s = 0.0015;
+    const propagation_scale = params.air_density_kg_m3 / 1.204;
+
+    const separation_frame = pre_roll_frames + @as(usize, @intFromFloat(
+        @round(separation_time_s * rate),
+    ));
+    const first_arrival = separation_frame + @as(usize, @intFromFloat(
+        @floor(initial_range / sound_speed * rate),
+    ));
+    if (first_arrival >= pressure.len) return;
+
+    var skirt_band = dsp.Biquad.bandPass(rate, 2_000.0, 0.8);
+    var hiss_band = dsp.Biquad.highPass(rate, 4_000.0, 0.707);
+    var shedding_band = dsp.Biquad.bandPass(rate, 2_500.0, tonal_quality_factor);
+    var turbulence = dsp.Turbulence.init(rate, 0.22, 0.10);
+    var retune_countdown: u32 = 0;
+
+    for (first_arrival..pressure.len) |frame| {
+        const time_s = @as(f64, @floatFromInt(frame - separation_frame)) / rate;
+        // Retarded source time: tau = t - r(tau) / c (fixed point converges
+        // quickly because the source speed is well below the sound speed).
+        var tau = @max(0.0, time_s - initial_range / sound_speed);
+        var range = initial_range;
+        var distance_flown: f64 = 0.0;
+        for (0..3) |_| {
+            distance_flown = drag_length *
+                @log(1.0 + departure_speed * tau / drag_length);
+            range = @sqrt(
+                square(initial_range + radial_fraction * distance_flown) +
+                    square(lateral_fraction * distance_flown),
+            );
+            tau = @max(0.0, time_s - range / sound_speed);
+        }
+        const speed = departure_speed / (1.0 + departure_speed * tau / drag_length);
+        const radial_speed = speed *
+            (radial_fraction * (initial_range + radial_fraction * distance_flown) +
+                square(lateral_fraction) * distance_flown) / range;
+        const doppler = 1.0 / (1.0 + radial_speed / sound_speed);
+
+        if (retune_countdown == 0) {
+            const centre_hz = std.math.clamp(
+                0.2 * speed / vane_m * doppler,
+                300.0,
+                rate * 0.35,
+            );
+            replaceBiquadCoefficients(&skirt_band, dsp.Biquad.bandPass(rate, centre_hz, 0.8));
+            replaceBiquadCoefficients(
+                &hiss_band,
+                dsp.Biquad.highPass(rate, @min(rate * 0.4, 2.0 * centre_hz), 0.707),
+            );
+            const shedding_hz = std.math.clamp(
+                0.2 * speed / rachis_m * doppler,
+                300.0,
+                rate * 0.35,
+            );
+            replaceBiquadCoefficients(
+                &shedding_band,
+                dsp.Biquad.bandPass(rate, shedding_hz, tonal_quality_factor),
+            );
+            retune_countdown = 32;
+        }
+        retune_countdown -= 1;
+
+        const gate = smoothStep01((speed - threshold) / threshold);
+        if (gate <= 0.0 and tau > onset_s) break;
+        const onset = smoothStep01(tau / onset_s);
+        const amplitude = params.shuttle_flight_gain *
+            std.math.pow(f64, speed / 40.0, 3.0) *
+            gate * onset * doppler * doppler *
+            propagation_scale / range;
+        const noise_frame = frame +% noise_offset;
+        const broadband = skirt_band.process(
+            deterministicNoise(noise_frame, 0xc2b2_ae3d_27d4_eb4f),
+        ) + 0.35 * hiss_band.process(
+            deterministicNoise(noise_frame, 0x1656_67b1_9e37_79f9),
+        );
+        const shedding = shedding_band.process(
+            deterministicNoise(noise_frame, 0x8ebc_6af0_9c88_c6e3),
+        );
+        const tonal_amount = 1.0 - smoothStep01((speed - 20.0) / 20.0);
+        const source = (1.0 - 0.5 * tonal_amount) * broadband +
+            tonal_amount * 0.8 * tonal_gain * shedding;
+        pressure[frame] += amplitude *
+            turbulence.next(noise_frame, 0x27d4_eb2f_1656_67c5) *
+            source;
+    }
+}
+
+fn replaceBiquadCoefficients(destination: *dsp.Biquad, source: dsp.Biquad) void {
+    destination.b0 = source.b0;
+    destination.b1 = source.b1;
+    destination.b2 = source.b2;
+    destination.a1 = source.a1;
+    destination.a2 = source.a2;
+}
+
+/// Crispness of soft shots on tight strings: 1 at <= 5 m/s and >= 30 lbf,
+/// fading to 0 by 15 m/s or at 22 lbf (fitted to reference/net.mp3).
+fn strikeCrispness(hit: model.HitInput) f64 {
+    return (1.0 - smoothStep01((hit.relative_normal_speed_mps - 5.0) / 10.0)) *
+        smoothStep01((0.5 * (hit.main_tension_lbf + hit.cross_tension_lbf) - 22.0) / 8.0);
+}
+
+/// A nonzero seed scatters the closing speed by up to +/-4 %, the order of
+/// stroke-to-stroke variation of a practised player.
+fn applyStrikeVariation(profile: model.Profile) model.Profile {
+    if (profile.hit.variation_seed == 0) return profile;
+    var varied = profile;
+    const scatter = deterministicNoise(profile.hit.variation_seed, 0xe703_7ed1_a0b4_28db);
+    varied.hit.relative_normal_speed_mps *= 1.0 + 0.04 * scatter;
+    return varied;
+}
+
+fn variationNoiseOffset(seed: u32) usize {
+    if (seed == 0) return 0;
+    return @truncate(@as(u64, seed) *% 0x9e37_79b9_7f4a_7c15);
+}
+
 fn emitRacketSwoosh(
     pressure: []f64,
     profile: model.Profile,
     propagation_delay: usize,
     source_frame_count: usize,
+    noise_offset: usize,
 ) void {
     const params = profile.model;
     const racket_speed = profile.hit.racket_speed_mps;
@@ -1453,6 +1720,7 @@ fn emitRacketSwoosh(
     // their individual vortex tones overlap into the familiar broad "swoosh".
     var frame_band = dsp.Biquad.bandPass(sample_rate, frame_frequency_hz, 0.38);
     var string_band = dsp.Biquad.bandPass(sample_rate, string_frequency_hz, 0.48);
+    var turbulence = live_swoosh.swooshTurbulence(sample_rate);
 
     const reference_face_area =
         std.math.pi * 0.188 * 0.253 * 0.25;
@@ -1473,15 +1741,15 @@ fn emitRacketSwoosh(
 
     for (0..source_limit) |source_frame| {
         const frame_noise = frame_band.process(
-            deterministicNoise(source_frame, 0xa24b_aed4_963e_e407),
+            deterministicNoise(source_frame +% noise_offset, 0xa24b_aed4_963e_e407),
         );
         const string_noise = string_band.process(
-            deterministicNoise(source_frame, 0x9fb2_1c65_1e98_df25),
+            deterministicNoise(source_frame +% noise_offset, 0x9fb2_1c65_1e98_df25),
         );
-        const time_s = @as(f64, @floatFromInt(source_frame)) / sample_rate;
-        const turbulent_flutter =
-            1.0 + 0.10 * @sin(2.0 * std.math.pi * 31.0 * time_s) +
-            0.06 * @sin(2.0 * std.math.pi * 73.0 * time_s + 0.7);
+        const turbulent_flutter = turbulence.next(
+            source_frame +% noise_offset,
+            live_swoosh.swoosh_turbulence_salt,
+        );
         const source_pressure = calibrated_scale *
             turbulent_flutter * (0.72 * frame_noise + 0.28 * string_noise);
         pressure[source_frame + propagation_delay] += source_pressure;
@@ -1692,6 +1960,63 @@ test "short impact render is deterministic and finite" {
     for (first.audio) |sample| try std.testing.expect(std.math.isFinite(sample));
 }
 
+test "variation seeds change the strike texture but not its mechanics" {
+    const allocator = std.testing.allocator;
+    var profile = model.Profile{};
+    profile.model.internal_sample_rate_hz = 96_000;
+    profile.model.output_sample_rate_hz = 48_000;
+    profile.model.visualization_rate_hz = 8_000;
+    profile.model.duration_s = 0.06;
+    profile.model.impact_pre_roll_ms = 10.0;
+    var canonical = try simulate(allocator, profile);
+    defer canonical.deinit();
+    profile.hit.variation_seed = 7;
+    var varied = try simulate(allocator, profile);
+    defer varied.deinit();
+    try std.testing.expect(!std.mem.eql(f32, canonical.audio, varied.audio));
+    try std.testing.expectApproxEqRel(
+        canonical.diagnostics.peak_force_n,
+        varied.diagnostics.peak_force_n,
+        0.10,
+    );
+    for (varied.audio) |sample| try std.testing.expect(std.math.isFinite(sample));
+}
+
+test "a hard strike adds shuttle-flight noise after separation" {
+    const allocator = std.testing.allocator;
+    var profile = model.Profile{};
+    profile.hit.relative_normal_speed_mps = 60.0;
+    profile.hit.racket_speed_mps = 0.0;
+    profile.model.internal_sample_rate_hz = 96_000;
+    profile.model.output_sample_rate_hz = 48_000;
+    profile.model.visualization_rate_hz = 8_000;
+    profile.model.duration_s = 0.12;
+    profile.model.impact_pre_roll_ms = 10.0;
+    // Isolate the flight source from the structural ring.
+    profile.model.string_radiation_efficiency = 0.0;
+    profile.model.frame_radiation_efficiency = 0.0;
+    profile.model.upper_mode_gain = 0.0;
+    profile.model.contact_noise_gain = 0.0;
+    profile.model.hard_impact_gain = 0.0;
+    profile.model.shuttle_dipole_gain = 0.0;
+    profile.model.modal_residual_gain = 0.0;
+    var with_flight = try simulate(allocator, profile);
+    defer with_flight.deinit();
+    profile.model.shuttle_flight_gain = 0.0;
+    var silent = try simulate(allocator, profile);
+    defer silent.deinit();
+
+    const start = with_flight.impact_audio_frame + 48 * 5;
+    var flight_energy: f64 = 0.0;
+    var silent_energy: f64 = 0.0;
+    for (with_flight.audio[start..], silent.audio[start..]) |a, b| {
+        flight_energy += @as(f64, a) * a;
+        silent_energy += @as(f64, b) * b;
+    }
+    try std.testing.expect(flight_energy > 1.0e-4);
+    try std.testing.expect(flight_energy > 100.0 * silent_energy);
+}
+
 test "linearized topology is mirror symmetric and has a symmetric stiffness matrix" {
     const allocator = std.testing.allocator;
     const profile = model.Profile{};
@@ -1765,11 +2090,12 @@ test "linearized topology is mirror symmetric and has a symmetric stiffness matr
     );
 }
 
-test "dominant string frequency follows square-root tension scaling" {
+test "string bed frequency follows the tension and thickness chart fit" {
     const allocator = std.testing.allocator;
     var low_profile = shortTestProfile(0.20);
-    low_profile.hit.main_tension_lbf = 18.0;
-    low_profile.hit.cross_tension_lbf = 18.0;
+    low_profile.hit.main_tension_lbf = 22.0;
+    low_profile.hit.cross_tension_lbf = 22.0;
+    low_profile.model.string_diameter_mm = 0.70;
     low_profile.hit.relative_normal_speed_mps = 5.0;
     low_profile.model.visualization_duration_ms = 1.0;
     // This test measures the resolved string-bed family, not the separately
@@ -1777,10 +2103,13 @@ test "dominant string frequency follows square-root tension scaling" {
     low_profile.model.contact_noise_gain = 0.0;
     low_profile.model.upper_mode_gain = 0.0;
     low_profile.model.frame_radiation_efficiency = 0.0;
+    low_profile.model.modal_residual_gain = 0.0;
+    low_profile.model.shuttle_dipole_gain = 0.0;
     for (&low_profile.model.frame_modes) |*mode| mode.force_coupling = 0.0;
     var high_profile = low_profile;
     high_profile.hit.main_tension_lbf = 32.0;
     high_profile.hit.cross_tension_lbf = 32.0;
+    high_profile.model.string_diameter_mm = 0.61;
 
     var low = try simulate(allocator, low_profile);
     defer low.deinit();
@@ -1800,9 +2129,10 @@ test "dominant string frequency follows square-root tension scaling" {
         500.0,
         1600.0,
     );
-    const observed = high_peak / low_peak;
-    const expected = @sqrt(32.0 / 18.0);
-    try std.testing.expectApproxEqRel(expected, observed, 0.05);
+    // Opposite corners of the measured range: 22 lb on 0.70 mm and 32 lb on
+    // 0.61 mm strings.
+    try std.testing.expectApproxEqRel(model.chartStringFrequencyHz(22.0, 0.70), low_peak, 0.03);
+    try std.testing.expectApproxEqRel(model.chartStringFrequencyHz(32.0, 0.61), high_peak, 0.03);
 }
 
 test "left and right impacts mirror motion and preserve the magnitude spectrum" {
@@ -2030,6 +2360,12 @@ test "hard impacts trade the touch ping for a broadband attack" {
     touch_profile.hit.cross_tension_lbf = 30.0;
     touch_profile.hit.relative_normal_speed_mps = 5.0;
     touch_profile.hit.racket_speed_mps = 0.0;
+    // Isolate the speed-dependent hard-impact layer from the residual wash
+    // and from the crisp soft-shot tones.
+    touch_profile.model.modal_residual_gain = 0.0;
+    touch_profile.model.upper_mode_crisp_gain = 0.0;
+    touch_profile.model.upper_mode_crisp_decay = 0.0;
+    touch_profile.model.upper_mode_crisp_level_compensation = 0.0;
     var hard_profile = touch_profile;
     hard_profile.hit.relative_normal_speed_mps = 30.0;
 
@@ -2082,6 +2418,8 @@ test "low-speed default attack has broadband upper-frequency texture" {
     profile.hit.main_tension_lbf = 30.0;
     profile.hit.cross_tension_lbf = 30.0;
     profile.hit.relative_normal_speed_mps = 5.0;
+    // Measures the contact texture itself, so the residual wash is excluded.
+    profile.model.modal_residual_gain = 0.0;
     var result = try simulate(allocator, profile);
     defer result.deinit();
 
@@ -2123,6 +2461,7 @@ test "upper radiation modes sustain the post-contact crispness band" {
     modal_profile.hit.cross_tension_lbf = 30.0;
     modal_profile.hit.relative_normal_speed_mps = 5.0;
     modal_profile.model.contact_noise_gain = 0.0;
+    modal_profile.model.modal_residual_gain = 0.0;
     var modal = try simulate(allocator, modal_profile);
     defer modal.deinit();
 
@@ -2205,8 +2544,10 @@ test "reference calibration hits contact, spectrum, gain, and decay windows" {
 
     try std.testing.expect(result.diagnostics.contact_duration_ms >= 1.8);
     try std.testing.expect(result.diagnostics.contact_duration_ms <= 2.7);
-    try std.testing.expect(result.diagnostics.dominant_frequency_hz >= 972.0);
-    try std.testing.expect(result.diagnostics.dominant_frequency_hz <= 1188.0);
+    // The tension/thickness chart fit (reference/string_frequency_fit.md)
+    // places a 23 lb BG66 bed at 1158 Hz; the network must land within 3 %.
+    const chart_hz = model.chartStringFrequencyHz(23.0, profile.model.string_diameter_mm);
+    try std.testing.expectApproxEqRel(chart_hz, result.diagnostics.dominant_frequency_hz, 0.03);
     try std.testing.expect(result.diagnostics.peak_before_clamp >= 0.23);
     try std.testing.expect(result.diagnostics.peak_before_clamp <= 0.31);
     try std.testing.expectEqual(@as(usize, 0), result.diagnostics.clipped_samples);

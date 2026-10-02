@@ -96,6 +96,65 @@ pub const Biquad = struct {
     }
 };
 
+/// Aperiodic amplitude modulation for aeroacoustic sources. Large slow
+/// eddies (a few Hz) and finer turbulence (tens of Hz) are one-pole low-passed
+/// noise streams normalised to unit variance. Summed sinusoids, which this
+/// replaces, repeat audibly and give wind a mechanical, buzzing roughness.
+pub const Turbulence = struct {
+    gust: f64 = 0.0,
+    eddy: f64 = 0.0,
+    gust_coefficient: f64,
+    eddy_coefficient: f64,
+    gust_normalization: f64,
+    eddy_normalization: f64,
+    gust_depth: f64,
+    eddy_depth: f64,
+
+    pub fn init(sample_rate: f64, gust_depth: f64, eddy_depth: f64) Turbulence {
+        const gust_coefficient = 1.0 - @exp(-2.0 * std.math.pi * 4.0 / sample_rate);
+        const eddy_coefficient = 1.0 - @exp(-2.0 * std.math.pi * 30.0 / sample_rate);
+        return .{
+            .gust_coefficient = gust_coefficient,
+            .eddy_coefficient = eddy_coefficient,
+            // Uniform noise on [-1, 1] has variance 1/3; a one-pole low-pass
+            // with coefficient a scales variance by a / (2 - a).
+            .gust_normalization = @sqrt(3.0 * (2.0 - gust_coefficient) / gust_coefficient),
+            .eddy_normalization = @sqrt(3.0 * (2.0 - eddy_coefficient) / eddy_coefficient),
+            .gust_depth = gust_depth,
+            .eddy_depth = eddy_depth,
+        };
+    }
+
+    pub fn reset(self: *Turbulence) void {
+        self.gust = 0.0;
+        self.eddy = 0.0;
+    }
+
+    /// Returns a positive gain near one for sample `index`.
+    pub fn next(self: *Turbulence, index: u64, salt: u64) f64 {
+        self.gust += self.gust_coefficient * (hashNoise(index, salt) - self.gust);
+        self.eddy += self.eddy_coefficient *
+            (hashNoise(index, salt ^ 0x5851_f42d_4c95_7f2d) - self.eddy);
+        return @max(
+            0.1,
+            1.0 + self.gust_depth * self.gust * self.gust_normalization +
+                self.eddy_depth * self.eddy * self.eddy_normalization,
+        );
+    }
+};
+
+/// Stateless uniform noise on [-1, 1) from a sample index (SplitMix64).
+pub fn hashNoise(index: u64, salt: u64) f64 {
+    var bits = index +% salt;
+    bits = (bits ^ (bits >> 30)) *% 0xbf58_476d_1ce4_e5b9;
+    bits = (bits ^ (bits >> 27)) *% 0x94d0_49bb_1331_11eb;
+    bits ^= bits >> 31;
+    const mantissa = bits >> 11;
+    const unit = @as(f64, @floatFromInt(mantissa)) /
+        @as(f64, @floatFromInt(@as(u64, 1) << 53));
+    return unit * 2.0 - 1.0;
+}
+
 pub fn decimateLowPass(
     allocator: std.mem.Allocator,
     input: []const f64,
@@ -238,6 +297,49 @@ pub fn dominantFrequency(
         }
     }
     return @as(f64, @floatFromInt(peak_bin)) * bin_hz;
+}
+
+/// Like dominantFrequency, but scores each bin by how far it stands above
+/// the median of its +/-150 Hz neighbourhood. A narrow ringing mode wins over
+/// a louder but broad noise band.
+pub fn dominantTonalFrequency(
+    allocator: std.mem.Allocator,
+    samples: []const f32,
+    sample_rate: u32,
+    min_hz: f64,
+    max_hz: f64,
+) !f64 {
+    var fft_size: usize = 1;
+    const desired = @min(samples.len, 16_384);
+    while (fft_size * 2 <= desired) fft_size *= 2;
+    if (fft_size < 256) return 0.0;
+    const spectrum = try magnitudeSpectrumDb(allocator, samples, fft_size);
+    defer allocator.free(spectrum);
+
+    const bin_hz = @as(f64, @floatFromInt(sample_rate)) /
+        @as(f64, @floatFromInt(fft_size));
+    const first_bin: usize = @intFromFloat(@max(1.0, @ceil(min_hz / bin_hz)));
+    const last_bin: usize = @min(spectrum.len - 1, @as(usize, @intFromFloat(@floor(max_hz / bin_hz))));
+    if (first_bin > last_bin) return 0.0;
+    const half_window: usize = @max(2, @as(usize, @intFromFloat(150.0 / bin_hz)));
+    var neighbourhood: [1024]f32 = undefined;
+    if (2 * half_window + 1 > neighbourhood.len) return dominantFrequency(allocator, samples, sample_rate, min_hz, max_hz);
+
+    var best_bin = first_bin;
+    var best_score: f32 = -std.math.inf(f32);
+    for (first_bin..last_bin + 1) |bin| {
+        const lo = bin -| half_window;
+        const hi = @min(spectrum.len - 1, bin + half_window);
+        const count = hi - lo + 1;
+        @memcpy(neighbourhood[0..count], spectrum[lo .. hi + 1]);
+        std.mem.sort(f32, neighbourhood[0..count], {}, std.sort.asc(f32));
+        const score = spectrum[bin] - neighbourhood[count / 2];
+        if (score > best_score) {
+            best_score = score;
+            best_bin = bin;
+        }
+    }
+    return @as(f64, @floatFromInt(best_bin)) * bin_hz;
 }
 
 pub fn buildPcm16Wav(

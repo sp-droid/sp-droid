@@ -137,6 +137,24 @@ pub fn build(b: *std.Build) !void {
     );
     reference_render_step.dependOn(&run_reference_render.step);
 
+    const demo_render_module = b.createModule(.{
+        .root_source_file = b.path("src/demo_render.zig"),
+        .target = target,
+        .optimize = optimize,
+    });
+    demo_render_module.addImport("raylib", raylib);
+    const demo_render = b.addExecutable(.{
+        .name = "badminton-demo-render",
+        .root_module = demo_render_module,
+    });
+    demo_render.root_module.linkLibrary(raylib_dep.artifact("raylib"));
+    const run_demo_render = b.addRunArtifact(demo_render);
+    const demo_render_step = b.step(
+        "demo-render",
+        "Render strike sequences through the live swoosh, hall and limiter",
+    );
+    demo_render_step.dependOn(&run_demo_render.step);
+
     const shuttle_reference_module = b.createModule(.{
         .root_source_file = b.path("src/shuttle_reference_render.zig"),
         .target = target,

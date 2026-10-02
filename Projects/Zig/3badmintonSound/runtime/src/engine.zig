@@ -10,6 +10,12 @@ pub const HitRegion = enum(u32) {
     frame = 1,
 };
 
+pub const HitRegionHint = enum(u32) {
+    automatic = 0,
+    strings = 1,
+    frame = 2,
+};
+
 pub const SubmitResult = enum(u32) {
     accepted = 0,
     invalid = 1,
@@ -27,6 +33,11 @@ pub const Config = extern struct {
     // One fixed calibration shared by every hit; never per-hit normalization.
     master_gain: f32 = 3.5,
     swoosh_gain: f32 = 1.0,
+    // Appended fields keep the C layout of older hosts' leading members.
+    // Aerodynamic noise of the departing shuttle; zero disables it.
+    shuttle_flight_gain: f32 = 1.0,
+    // String diameter for the chart-fitted bed frequency (0.61-0.70 mm).
+    string_diameter_mm: f32 = 0.66,
 };
 
 /// The only per-impact runtime data. Collision speed is the relative normal
@@ -37,6 +48,10 @@ pub const HitEvent = extern struct {
     relative_normal_speed_mps: f32 = 5.0,
     x_mm: f32 = 0.0,
     y_mm: f32 = 0.0,
+    region_hint: u32 = @intFromEnum(HitRegionHint.automatic),
+    stringed_width_mm: f32 = 0.0,
+    stringed_height_mm: f32 = 0.0,
+    frame_radial_width_mm: f32 = 0.0,
 };
 
 pub const Stats = extern struct {
@@ -55,22 +70,73 @@ const ModalPreset = struct {
 };
 
 const string_mode_presets = [_]ModalPreset{
-    .{ .frequency_hz_at_30lb = 1289.0, .relative_gain = 1.00, .decay_scale = 1.25 },
-    .{ .frequency_hz_at_30lb = 1842.0, .relative_gain = 0.100, .decay_scale = 1.20 },
-    .{ .frequency_hz_at_30lb = 2032.0, .relative_gain = 0.631, .decay_scale = 0.95 },
-    .{ .frequency_hz_at_30lb = 2730.0, .relative_gain = 0.282, .decay_scale = 0.72 },
-    .{ .frequency_hz_at_30lb = 2920.0, .relative_gain = 1.200, .decay_scale = 1.05 },
-    .{ .frequency_hz_at_30lb = 3387.0, .relative_gain = 0.112, .decay_scale = 0.66 },
-    .{ .frequency_hz_at_30lb = 3698.0, .relative_gain = 0.200, .decay_scale = 0.78 },
-    .{ .frequency_hz_at_30lb = 4010.0, .relative_gain = 0.126, .decay_scale = 0.58 },
-    .{ .frequency_hz_at_30lb = 4440.0, .relative_gain = 0.251, .decay_scale = 0.74 },
-    .{ .frequency_hz_at_30lb = 4543.0, .relative_gain = 0.251, .decay_scale = 0.62 },
-    .{ .frequency_hz_at_30lb = 5234.0, .relative_gain = 0.200, .decay_scale = 0.56 },
-    .{ .frequency_hz_at_30lb = 6115.0, .relative_gain = 0.282, .decay_scale = 0.48 },
-    .{ .frequency_hz_at_30lb = 6848.0, .relative_gain = 0.224, .decay_scale = 0.42 },
-    .{ .frequency_hz_at_30lb = 7180.0, .relative_gain = 0.200, .decay_scale = 0.38 },
-    .{ .frequency_hz_at_30lb = 9301.0, .relative_gain = 0.020, .decay_scale = 0.28 },
+    // String-bed fundamental: chartStringFrequencyHz(30 lbf, 0.66 mm).
+    .{ .frequency_hz_at_30lb = 1343.0, .relative_gain = 1.00, .decay_scale = 1.25 },
+    // Sustained tones of three high-tension net shots (sound lab
+    // reference/net.mp3), moved to the 30 lb chart frequency; 3815 Hz is the
+    // crisp "tink". The rest are weaker tones from the earlier calibration.
+    .{ .frequency_hz_at_30lb = 2120.0, .relative_gain = 0.2702, .decay_scale = 1.33 },
+    .{ .frequency_hz_at_30lb = 2848.0, .relative_gain = 0.0364, .decay_scale = 1.33 },
+    .{ .frequency_hz_at_30lb = 3008.0, .relative_gain = 0.3482, .decay_scale = 0.95 },
+    .{ .frequency_hz_at_30lb = 3815.0, .relative_gain = 1.0000, .decay_scale = 1.00 },
+    .{ .frequency_hz_at_30lb = 4176.0, .relative_gain = 0.1041, .decay_scale = 0.97 },
+    .{ .frequency_hz_at_30lb = 4713.0, .relative_gain = 0.0751, .decay_scale = 0.75 },
+    .{ .frequency_hz_at_30lb = 5532.0, .relative_gain = 0.0735, .decay_scale = 0.91 },
+    .{ .frequency_hz_at_30lb = 3387.0, .relative_gain = 0.056, .decay_scale = 0.66 },
+    .{ .frequency_hz_at_30lb = 4440.0, .relative_gain = 0.063, .decay_scale = 0.74 },
+    .{ .frequency_hz_at_30lb = 5234.0, .relative_gain = 0.050, .decay_scale = 0.56 },
+    .{ .frequency_hz_at_30lb = 6115.0, .relative_gain = 0.070, .decay_scale = 0.48 },
+    .{ .frequency_hz_at_30lb = 6848.0, .relative_gain = 0.056, .decay_scale = 0.42 },
+    .{ .frequency_hz_at_30lb = 7180.0, .relative_gain = 0.050, .decay_scale = 0.38 },
+    .{ .frequency_hz_at_30lb = 9301.0, .relative_gain = 0.010, .decay_scale = 0.28 },
 };
+
+// Recording-calibrated balance (sound lab, 31-11 lb shuttle series): a
+// stronger bed fundamental, quieter upper radiation modes, a low frame body
+// mode and the shuttle-skirt "thock" pulse. Fitted to within 2.5 dB per
+// octave (250 Hz-16 kHz) of the recorded strikes at 15 m/s, then refitted
+// with the residual by minimising the 60 ms log-mel distance (14.0 -> 8.2 dB).
+const fundamental_gain_scale: f32 = 2.0;
+const upper_mode_gain_scale: f32 = 0.25;
+const body_mode_frequency_hz: f32 = 170.0;
+const body_mode_decay_ms: f32 = 22.0;
+const body_mode_gain: f32 = 0.0002;
+const thock_gain: f32 = 0.005;
+const noise_gain_scale: f32 = 0.2;
+
+// Unresolved modal residual (see the sound lab's modal_residual_*): octave
+// bands of noise driven by the contact force pulse, decaying faster at high
+// frequency. It turns the few resolved lines into the continuous 1-15 kHz
+// wash measured on real strikes.
+const residual_band_count = 5;
+const residual_centres_hz = [residual_band_count]f32{ 1000.0, 2000.0, 4000.0, 8000.0, 14000.0 };
+const residual_decay_ms_at_1khz: f32 = 30.0;
+const residual_tilt_db_per_octave: f32 = -3.0;
+const residual_gain: f32 = 0.3;
+const strike_level_trim: f32 = 0.38;
+
+// Crispness of soft shots on tight strings (fitted to the net shots): the
+// upper tones ring louder and longer when the contact is slow and the bed
+// tight, while the whole strike is scaled so it gets brighter, not louder.
+// The weight is 1 at <= 5 m/s and >= 30 lbf, fading to 0 by 15 m/s or 22 lbf.
+const crisp_gain: f32 = 39.050;
+const crisp_decay: f32 = 1.0;
+const crisp_level_compensation: f32 = 1.9;
+
+fn crispness(speed_mps: f32, mean_tension_lbf: f32) f32 {
+    return (1.0 - smoothStep01((speed_mps - 5.0) / 10.0)) *
+        smoothStep01((mean_tension_lbf - 22.0) / 8.0);
+}
+
+/// String-bed frequency from the quadratic fit to the measured tension and
+/// thickness chart (sound lab reference/string_frequency_fit.md). Inputs are
+/// held to the measured 22-32 lbf, 0.61-0.70 mm range.
+pub fn chartStringFrequencyHz(tension_lbf: f32, diameter_mm: f32) f32 {
+    const t = std.math.clamp(tension_lbf, 22.0, 32.0);
+    const d = std.math.clamp(diameter_mm, 0.61, 0.70);
+    return -5671.32 + 169.51 * t + 15268.2 * d - 1.14452 * t * t -
+        124.96 * t * d - 10660.6 * d * d;
+}
 
 const FramePreset = struct {
     frequency_hz: f32,
@@ -91,12 +157,22 @@ const frame_mode_presets = [_]FramePreset{
     .{ .frequency_hz = 16_100.0, .relative_gain = 0.12, .decay_ms = 4.5, .order = 8, .phase_turns = 0.19 },
 };
 
+const QueueEventKind = enum(u8) {
+    hit,
+    clear_transients,
+};
+
+const QueueEvent = struct {
+    kind: QueueEventKind,
+    hit: HitEvent = .{},
+};
+
 const EventQueue = struct {
-    storage: [event_queue_capacity]HitEvent = undefined,
+    storage: [event_queue_capacity]QueueEvent = undefined,
     write_index: std.atomic.Value(u32) align(std.atomic.cache_line) = .init(0),
     read_index: std.atomic.Value(u32) align(std.atomic.cache_line) = .init(0),
 
-    fn push(self: *EventQueue, event: HitEvent) bool {
+    fn push(self: *EventQueue, event: QueueEvent) bool {
         const write = self.write_index.load(.monotonic);
         const read = self.read_index.load(.acquire);
         if (write -% read >= event_queue_capacity) return false;
@@ -105,7 +181,7 @@ const EventQueue = struct {
         return true;
     }
 
-    fn pop(self: *EventQueue) ?HitEvent {
+    fn pop(self: *EventQueue) ?QueueEvent {
         const read = self.read_index.load(.monotonic);
         const write = self.write_index.load(.acquire);
         if (read == write) return null;
@@ -190,6 +266,25 @@ const Biquad = struct {
         self.a2 = (1.0 - alpha) / a0;
     }
 
+    fn setHighPass(
+        self: *Biquad,
+        sample_rate: f32,
+        frequency_hz: f32,
+        quality_factor: f32,
+    ) void {
+        const frequency = std.math.clamp(frequency_hz, 20.0, sample_rate * 0.45);
+        const q = @max(0.05, quality_factor);
+        const omega = 2.0 * std.math.pi * frequency / sample_rate;
+        const cosine = @cos(omega);
+        const alpha = @sin(omega) / (2.0 * q);
+        const a0 = 1.0 + alpha;
+        self.b0 = 0.5 * (1.0 + cosine) / a0;
+        self.b1 = -(1.0 + cosine) / a0;
+        self.b2 = 0.5 * (1.0 + cosine) / a0;
+        self.a1 = -2.0 * cosine / a0;
+        self.a2 = (1.0 - alpha) / a0;
+    }
+
     inline fn process(self: *Biquad, input: f32) f32 {
         const output = self.b0 * input + self.b1 * self.x1 +
             self.b2 * self.x2 - self.a1 * self.y1 - self.a2 * self.y2;
@@ -215,10 +310,82 @@ const Voice = struct {
     texture_filter: Biquad = .{},
     hard_filter: Biquad = .{},
     rng_state: u64 = 1,
+    flight: Flight = .{},
+    level_scale: f32 = 1.0,
+    // Shuttle-skirt dipole during contact: half-sine force pulse F radiates
+    // (dF/dt / c + F / r) / (4 pi r) on axis.
+    thock_index: u32 = 0,
+    thock_length: u32 = 0,
+    thock_omega: f32 = 0.0,
+    thock_slope_weight: f32 = 0.0,
+    thock_amplitude: f32 = 0.0,
+    residual_active: bool = false,
+    residual_level: f32 = 0.0,
+    residual_filters: [residual_band_count]Biquad = @splat(.{}),
+    residual_envelope: [residual_band_count]f32 = @splat(0.0),
+    residual_decay: [residual_band_count]f32 = @splat(0.0),
+    residual_band_gain: [residual_band_count]f32 = @splat(0.0),
+
+    fn startResidual(self: *Voice, sample_rate: f32, level: f32) void {
+        if (level <= 0.0) return;
+        self.residual_active = true;
+        self.residual_level = level;
+        for (residual_centres_hz, 0..) |centre_hz, band| {
+            self.residual_filters[band] = Biquad.bandPass(sample_rate, centre_hz, 1.4);
+            const decay_s = residual_decay_ms_at_1khz * 0.001 * @sqrt(1000.0 / centre_hz);
+            self.residual_decay[band] = @exp(-1.0 / (decay_s * sample_rate));
+            self.residual_band_gain[band] = std.math.pow(
+                f32,
+                10.0,
+                residual_tilt_db_per_octave * std.math.log2(centre_hz / 1000.0) / 20.0,
+            );
+            self.residual_envelope[band] = 0.0;
+        }
+    }
+
+    fn startThock(self: *Voice, sample_rate: f32, contact_s: f32, speed_mps: f32) void {
+        const samples = @max(2.0, contact_s * sample_rate);
+        self.thock_index = 0;
+        self.thock_length = @intFromFloat(samples);
+        self.thock_omega = std.math.pi / samples;
+        // Ratio of the far-field slope term to the near-field force term
+        // at 1 m: (pi / contact time) / c.
+        self.thock_slope_weight = (std.math.pi / contact_s) / 343.0;
+        // Impulse m v (1 + e) spread over the contact: peak force ~ 1 / time.
+        self.thock_amplitude = thock_gain * speed_mps * (0.00217 / contact_s);
+    }
 
     inline fn next(self: *Voice) f32 {
         var output: f32 = 0.0;
         for (self.modes[0..self.mode_count]) |*mode| output += mode.next();
+        var contact_force: f32 = 0.0;
+        if (self.thock_index < self.thock_length) {
+            const phase = @as(f32, @floatFromInt(self.thock_index)) * self.thock_omega;
+            contact_force = @sin(phase);
+            output += self.thock_amplitude *
+                (self.thock_slope_weight * @cos(phase) + contact_force) /
+                (1.0 + self.thock_slope_weight);
+            self.thock_index += 1;
+        }
+        if (self.residual_active) {
+            const noise_sample = self.noise();
+            var residual: f32 = 0.0;
+            var largest: f32 = 0.0;
+            for (
+                &self.residual_filters,
+                &self.residual_envelope,
+                self.residual_decay,
+                self.residual_band_gain,
+            ) |*filter, *envelope, decay, band_gain| {
+                envelope.* = @max(contact_force * band_gain, envelope.* * decay);
+                largest = @max(largest, envelope.*);
+                residual += envelope.* * filter.process(noise_sample);
+            }
+            output += self.residual_level * residual;
+            if (self.thock_index >= self.thock_length and largest < 1.0e-5) {
+                self.residual_active = false;
+            }
+        }
 
         if (self.texture_envelope > 1.0e-6 or self.hard_envelope > 1.0e-6) {
             const noise_sample = self.noise();
@@ -230,6 +397,10 @@ const Voice = struct {
             self.hard_envelope *= self.hard_decay;
         }
 
+        // Fixed trim keeping strike loudness at its pre-residual level; the
+        // separately calibrated flight noise is added after it.
+        output *= strike_level_trim * self.level_scale;
+        if (self.flight.active) output += self.flight.next(&self.rng_state);
         self.remaining_samples -|= 1;
         if (self.remaining_samples == 0) self.active = false;
         return output;
@@ -246,6 +417,142 @@ const Voice = struct {
     }
 };
 
+/// Departing-shuttle aerodynamic noise. Departure speed is the racket-head
+/// speed plus the bed separation speed; quadratic drag with a 6.9 m/s
+/// terminal speed reproduces the measured halving of smash speed every
+/// 3.35 m (arXiv:2601.01412). Pressure follows U^3 / r in retarded time with
+/// a receding Doppler shift. Below about 40 m/s the broadband feather wake
+/// becomes tonal shaft/thread vortex shedding (Physics of Fluids, 2026).
+/// Parameters are refreshed every 32 samples and the gain is interpolated.
+const Flight = struct {
+    active: bool = false,
+    clock: i32 = 0,
+    sample_rate: f32 = 48_000.0,
+    departure_mps: f32 = 0.0,
+    gain: f32 = 0.0,
+    amplitude: f32 = 0.0,
+    amplitude_step: f32 = 0.0,
+    tonal_amount: f32 = 0.0,
+    countdown: u8 = 0,
+    gust: f32 = 0.0,
+    gust_coefficient: f32 = 0.0,
+    skirt: Biquad = .{},
+    hiss: Biquad = .{},
+    shedding: Biquad = .{},
+
+    const drag_length_m: f32 = 6.9 * 6.9 / 9.80665;
+    const threshold_mps: f32 = 12.0;
+    const vane_m: f32 = 0.004;
+    const rachis_m: f32 = 0.0015;
+    const reference_range_m: f32 = 1.0;
+    const radial_fraction: f32 = 0.85;
+    const sound_speed_mps: f32 = 343.0;
+    const tonal_quality_factor: f32 = 12.0;
+    const update_interval: u8 = 32;
+
+    fn start(sample_rate: f32, departure_mps: f32, gain: f32, contact_samples: i32) Flight {
+        if (gain <= 0.0 or departure_mps <= threshold_mps) return .{};
+        var flight = Flight{
+            .active = true,
+            .clock = -contact_samples,
+            .sample_rate = sample_rate,
+            .departure_mps = departure_mps,
+            .gain = gain,
+            .gust_coefficient = 1.0 - @exp(-2.0 * std.math.pi * 4.0 / sample_rate),
+        };
+        flight.skirt = Biquad.bandPass(sample_rate, 2000.0, 0.8);
+        flight.hiss.setHighPass(sample_rate, 4000.0, 0.707);
+        flight.shedding = Biquad.bandPass(sample_rate, 2500.0, tonal_quality_factor);
+        return flight;
+    }
+
+    /// Seconds of audible flight, used to keep the voice alive long enough.
+    fn durationSeconds(departure_mps: f32) f32 {
+        if (departure_mps <= threshold_mps) return 0.0;
+        return drag_length_m * (departure_mps / threshold_mps - 1.0) / departure_mps;
+    }
+
+    fn refresh(self: *Flight) void {
+        const time_s = (@as(f32, @floatFromInt(self.clock)) +
+            0.5 * @as(f32, @floatFromInt(update_interval))) / self.sample_rate;
+        const lateral_fraction = @sqrt(1.0 - radial_fraction * radial_fraction);
+        var tau = @max(0.0, time_s);
+        var range = reference_range_m;
+        var flown: f32 = 0.0;
+        for (0..3) |_| {
+            flown = drag_length_m * @log(1.0 + self.departure_mps * tau / drag_length_m);
+            const radial = reference_range_m + radial_fraction * flown;
+            const lateral = lateral_fraction * flown;
+            range = @sqrt(radial * radial + lateral * lateral);
+            tau = @max(0.0, time_s - (range - reference_range_m) / sound_speed_mps);
+        }
+        const speed = self.departure_mps / (1.0 + self.departure_mps * tau / drag_length_m);
+        const radial_speed = speed * (radial_fraction *
+            (reference_range_m + radial_fraction * flown) +
+            lateral_fraction * lateral_fraction * flown) / range;
+        const doppler = 1.0 / (1.0 + radial_speed / sound_speed_mps);
+        const gate = smoothStep01((speed - threshold_mps) / threshold_mps);
+        if (gate <= 0.0 and tau > 0.0015) {
+            self.active = false;
+            return;
+        }
+        const onset = smoothStep01(tau / 0.0015);
+        const relative = speed / 40.0;
+        const target = self.gain * relative * relative * relative *
+            gate * onset * doppler * doppler * reference_range_m / range;
+        self.amplitude_step = (target - self.amplitude) /
+            @as(f32, @floatFromInt(update_interval));
+
+        const skirt_hz = std.math.clamp(0.2 * speed / vane_m * doppler, 300.0, self.sample_rate * 0.35);
+        self.skirt.setBandPass(self.sample_rate, skirt_hz, 0.8);
+        self.hiss.setHighPass(self.sample_rate, @min(self.sample_rate * 0.4, 2.0 * skirt_hz), 0.707);
+        self.shedding.setBandPass(
+            self.sample_rate,
+            std.math.clamp(0.2 * speed / rachis_m * doppler, 300.0, self.sample_rate * 0.35),
+            tonal_quality_factor,
+        );
+        self.tonal_amount = 1.0 - smoothStep01((speed - 20.0) / 20.0);
+    }
+
+    inline fn next(self: *Flight, rng_state: *u64) f32 {
+        if (self.clock < 0) {
+            self.clock += 1;
+            return 0.0;
+        }
+        if (self.countdown == 0) {
+            self.refresh();
+            if (!self.active) return 0.0;
+            self.countdown = update_interval;
+        }
+        self.countdown -= 1;
+        self.clock += 1;
+        const broadband = self.skirt.process(uniformNoise(rng_state)) +
+            0.35 * self.hiss.process(uniformNoise(rng_state));
+        const shed = self.shedding.process(uniformNoise(rng_state));
+        // sqrt(12 / 0.8): equal RMS for the narrow tonal and broad skirt bands.
+        const tonal_gain: f32 = 3.873;
+        const source = (1.0 - 0.5 * self.tonal_amount) * broadband +
+            self.tonal_amount * 0.8 * tonal_gain * shed;
+        // Unit-variance one-pole gust for uniform input: sqrt(3 (2 - a) / a).
+        self.gust += self.gust_coefficient * (uniformNoise(rng_state) - self.gust);
+        const gust_scale = @sqrt(3.0 * (2.0 - self.gust_coefficient) / self.gust_coefficient);
+        const turbulence = @max(0.1, 1.0 + 0.22 * self.gust * gust_scale);
+        const output = self.amplitude * turbulence * source;
+        self.amplitude = @max(0.0, self.amplitude + self.amplitude_step);
+        return output;
+    }
+};
+
+inline fn uniformNoise(state: *u64) f32 {
+    var value = state.*;
+    value ^= value << 13;
+    value ^= value >> 7;
+    value ^= value << 17;
+    state.* = value;
+    const upper: u32 = @truncate(value >> 32);
+    return @as(f32, @floatFromInt(upper)) * (2.0 / 4_294_967_295.0) - 1.0;
+}
+
 /// Fixed-size, allocation-free real-time synthesizer.
 ///
 /// Threading contract:
@@ -257,6 +564,7 @@ pub const Engine = struct {
     queue: EventQueue = .{},
     voices: [max_voices]Voice = @splat(.{}),
     racket_speed_bits: std.atomic.Value(u32) = .init(0),
+    racket_area_scale_bits: std.atomic.Value(u32) = .init(@bitCast(@as(f32, 1.0))),
     submitted_hits: std.atomic.Value(u64) = .init(0),
     dropped_hits: std.atomic.Value(u64) = .init(0),
     rendered_hits: std.atomic.Value(u64) = .init(0),
@@ -269,6 +577,11 @@ pub const Engine = struct {
     swoosh_frame_filter: Biquad,
     swoosh_string_filter: Biquad,
     swoosh_rng_state: u64 = 0x9e37_79b9_7f4a_7c15,
+    // Aperiodic gust modulation of the swoosh (4 Hz eddies, 30 Hz turbulence).
+    swoosh_gust: f32 = 0.0,
+    swoosh_eddy: f32 = 0.0,
+    swoosh_gust_coefficient: f32,
+    swoosh_eddy_coefficient: f32,
     compressor_envelope: f32 = 0.0,
     compressor_gain: f32 = 1.0,
     speed_smoothing_coefficient: f32,
@@ -281,6 +594,23 @@ pub const Engine = struct {
             .config = config,
             .swoosh_frame_filter = Biquad.bandPass(rate, 800.0, 0.38),
             .swoosh_string_filter = Biquad.bandPass(rate, 10_000.0, 0.48),
+            .swoosh_gust_coefficient = 1.0 - @exp(-2.0 * std.math.pi * 4.0 / rate),
+            .swoosh_eddy_coefficient = 1.0 - @exp(-2.0 * std.math.pi * 30.0 / rate),
+            .speed_smoothing_coefficient = 1.0 - @exp(-1.0 / (0.010 * rate)),
+            .compressor_release_coefficient = @exp(-1.0 / (0.040 * rate)),
+        };
+    }
+
+    /// In-place initialization for host-provided storage.
+    pub fn initInPlace(self: *Engine, config: Config) error{InvalidConfig}!void {
+        if (!validConfig(config)) return error.InvalidConfig;
+        const rate: f32 = @floatFromInt(config.sample_rate_hz);
+        self.* = .{
+            .config = config,
+            .swoosh_frame_filter = Biquad.bandPass(rate, 800.0, 0.38),
+            .swoosh_string_filter = Biquad.bandPass(rate, 10_000.0, 0.48),
+            .swoosh_gust_coefficient = 1.0 - @exp(-2.0 * std.math.pi * 4.0 / rate),
+            .swoosh_eddy_coefficient = 1.0 - @exp(-2.0 * std.math.pi * 30.0 / rate),
             .speed_smoothing_coefficient = 1.0 - @exp(-1.0 / (0.010 * rate)),
             .compressor_release_coefficient = @exp(-1.0 / (0.040 * rate)),
         };
@@ -289,7 +619,7 @@ pub const Engine = struct {
     pub fn submitHit(self: *Engine, event: HitEvent) SubmitResult {
         if (!validHit(event)) return .invalid;
         if (classifyHit(self.config, event) == null) return .outside_racket;
-        if (!self.queue.push(event)) {
+        if (!self.queue.push(.{ .kind = .hit, .hit = event })) {
             _ = self.dropped_hits.fetchAdd(1, .monotonic);
             return .queue_full;
         }
@@ -297,9 +627,31 @@ pub const Engine = struct {
         return .accepted;
     }
 
+    /// Orders a voice clear relative to hit events without touching consumer-
+    /// owned state from the producer thread. The audio callback consumes this
+    /// command in FIFO order before rendering its next sample block.
+    pub fn requestClearTransients(self: *Engine) bool {
+        return self.queue.push(.{ .kind = .clear_transients });
+    }
+
     pub fn setRacketSpeed(self: *Engine, speed_mps: f32) void {
         const speed = if (std.math.isFinite(speed_mps)) @max(0.0, speed_mps) else 0.0;
         self.racket_speed_bits.store(@bitCast(speed), .release);
+    }
+
+    pub fn setRacketGeometry(
+        self: *Engine,
+        stringed_width_mm: f32,
+        stringed_height_mm: f32,
+    ) void {
+        const area = stringed_width_mm * stringed_height_mm;
+        const reference = self.config.stringed_width_mm *
+            self.config.stringed_height_mm;
+        const scale = if (finitePositive(area) and finitePositive(reference))
+            std.math.clamp(area / reference, 0.001, 8.0)
+        else
+            1.0;
+        self.racket_area_scale_bits.store(@bitCast(scale), .release);
     }
 
     /// Overwrites a caller-owned mono float buffer at the configured sample
@@ -307,12 +659,15 @@ pub const Engine = struct {
     /// for every host callback creates one continuous stream, including exact
     /// digital silence when no hit or audible swing is active.
     pub fn renderMono(self: *Engine, output: []f32) void {
-        while (self.queue.pop()) |event| self.startVoice(event);
+        while (self.queue.pop()) |event| switch (event.kind) {
+            .hit => self.startVoice(event.hit),
+            .clear_transients => self.clearTransientState(),
+        };
 
         var active_count = self.countActiveVoices();
         const target_speed: f32 = @bitCast(self.racket_speed_bits.load(.acquire));
-        if (active_count == 0 and target_speed <= 7.0 and
-            self.smoothed_racket_speed_mps <= 7.0)
+        if (active_count == 0 and target_speed <= 2.5 and
+            self.smoothed_racket_speed_mps <= 2.5)
         {
             @memset(output, 0.0);
             self.compressor_envelope = 0.0;
@@ -322,7 +677,7 @@ pub const Engine = struct {
         }
 
         const filter_speed = @max(target_speed, self.smoothed_racket_speed_mps);
-        if (filter_speed > 7.0 and
+        if (filter_speed > 2.5 and
             @abs(filter_speed - self.swoosh_filter_speed_mps) > 0.25)
         {
             const rate: f32 = @floatFromInt(self.config.sample_rate_hz);
@@ -359,6 +714,7 @@ pub const Engine = struct {
         self.queue.reset();
         self.voices = @splat(.{});
         self.racket_speed_bits.store(0, .monotonic);
+        self.racket_area_scale_bits.store(@bitCast(@as(f32, 1.0)), .monotonic);
         self.submitted_hits.store(0, .monotonic);
         self.dropped_hits.store(0, .monotonic);
         self.rendered_hits.store(0, .monotonic);
@@ -378,6 +734,16 @@ pub const Engine = struct {
             10_000.0,
             0.48,
         );
+        self.swoosh_gust = 0.0;
+        self.swoosh_eddy = 0.0;
+        self.compressor_envelope = 0.0;
+        self.compressor_gain = 1.0;
+    }
+
+    fn clearTransientState(self: *Engine) void {
+        self.voices = @splat(.{});
+        self.active_voice_count.store(0, .release);
+        self.sequence = 0;
         self.compressor_envelope = 0.0;
         self.compressor_gain = 1.0;
     }
@@ -416,17 +782,48 @@ pub const Engine = struct {
             _ = self.rendered_hits.fetchAdd(1, .monotonic);
             return;
         }
-        switch (classifyHit(self.config, event).?) {
+        const region = classifyHit(self.config, event).?;
+        switch (region) {
             .strings => self.startStringVoice(selected, event),
             .frame => self.startFrameVoice(selected, event),
+        }
+
+        // The shuttle leaves at the racket-head speed plus the bed separation
+        // speed (restitution about 0.6 of the closing speed; the stiffer
+        // frame returns less). Separation follows a ~1.5 ms string contact.
+        const rate: f32 = @floatFromInt(self.config.sample_rate_hz);
+        const racket_speed: f32 = @bitCast(self.racket_speed_bits.load(.acquire));
+        const restitution: f32 = if (region == .strings) 0.6 else 0.35;
+        const departure = racket_speed + restitution * event.relative_normal_speed_mps;
+        selected.flight = Flight.start(
+            rate,
+            departure,
+            0.15 * self.config.shuttle_flight_gain,
+            @intFromFloat(0.0015 * rate),
+        );
+        if (selected.flight.active) {
+            const flight_samples: u32 = @intFromFloat(@ceil(@min(
+                rate * 0.75,
+                rate * (Flight.durationSeconds(departure) + 0.02),
+            )));
+            selected.remaining_samples = @max(selected.remaining_samples, flight_samples);
         }
         _ = self.rendered_hits.fetchAdd(1, .monotonic);
     }
 
     fn startStringVoice(self: *Engine, voice: *Voice, event: HitEvent) void {
         const rate: f32 = @floatFromInt(self.config.sample_rate_hz);
-        const mean_tension = 0.5 * (event.main_tension_lbf + event.cross_tension_lbf);
-        const frequency_scale = @sqrt(mean_tension / 30.0);
+        const geometry = effectiveHitGeometry(self.config, event);
+        const diameter = self.config.string_diameter_mm;
+        const mean_chart_hz = 0.5 * (chartStringFrequencyHz(event.main_tension_lbf, diameter) +
+            chartStringFrequencyHz(event.cross_tension_lbf, diameter));
+        const reference_chart_hz = chartStringFrequencyHz(30.0, 0.66);
+        const size_frequency_scale = @sqrt(
+            (self.config.stringed_width_mm * self.config.stringed_height_mm) /
+                (geometry.stringed_width_mm * geometry.stringed_height_mm),
+        );
+        const frequency_scale = mean_chart_hz / reference_chart_hz *
+            size_frequency_scale;
         const speed_scale = oneAndEighthPower(
             event.relative_normal_speed_mps / 5.0,
         );
@@ -434,8 +831,13 @@ pub const Engine = struct {
             (event.relative_normal_speed_mps - 6.5) / (20.0 - 6.5),
         );
         const decay_scale = 1.0 - 0.65 * hard_amount;
-        const nx = event.x_mm / (0.5 * self.config.stringed_width_mm);
-        const ny = event.y_mm / (0.5 * self.config.stringed_height_mm);
+        const crisp = crispness(
+            event.relative_normal_speed_mps,
+            0.5 * (event.main_tension_lbf + event.cross_tension_lbf),
+        );
+        voice.level_scale = 1.0 / (1.0 + crisp_level_compensation * crisp);
+        const nx = event.x_mm / (0.5 * geometry.stringed_width_mm);
+        const ny = event.y_mm / (0.5 * geometry.stringed_height_mm);
         const radius_squared = nx * nx + ny * ny;
         const angle = std.math.atan2(ny, nx);
         var maximum_decay_ms: f32 = 1.0;
@@ -443,6 +845,7 @@ pub const Engine = struct {
         for (string_mode_presets, 0..) |preset, index| {
             const frequency = preset.frequency_hz_at_30lb * frequency_scale;
             const decay_ms = 45.0 * decay_scale * preset.decay_scale *
+                (if (index == 0) 1.0 else 1.0 + crisp_decay * crisp) *
                 fourthRoot(3000.0 / @max(3000.0, frequency));
             maximum_decay_ms = @max(maximum_decay_ms, decay_ms);
             const location_gain = if (index == 0)
@@ -454,7 +857,11 @@ pub const Engine = struct {
             };
             var mode_gain = preset.relative_gain *
                 oneAndEighthPower(frequency / 3000.0) * location_gain;
-            if (index == 0) mode_gain *= 1.0 - 0.82 * hard_amount;
+            if (index == 0) {
+                mode_gain *= fundamental_gain_scale * (1.0 - 0.82 * hard_amount);
+            } else {
+                mode_gain *= upper_mode_gain_scale * (1.0 + crisp_gain * crisp);
+            }
             const phase = @as(f32, @floatFromInt(index + 1)) * 1.731 +
                 0.37 * nx - 0.29 * ny;
             voice.modes[index] = Mode.init(
@@ -465,14 +872,28 @@ pub const Engine = struct {
                 phase,
             );
         }
-        voice.mode_count = string_mode_presets.len;
+        voice.modes[string_mode_presets.len] = Mode.init(
+            rate,
+            body_mode_frequency_hz,
+            body_mode_decay_ms,
+            body_mode_gain * speed_scale,
+            0.0,
+        );
+        voice.mode_count = string_mode_presets.len + 1;
+        // Contact lasts longer on a slacker bed and for slower strikes
+        // (fit to the lab's coupled cork/string-bed contact).
+        const contact_s = 0.00217 *
+            std.math.pow(f32, reference_chart_hz / mean_chart_hz, 0.64) *
+            std.math.pow(f32, 15.0 / @max(1.0, event.relative_normal_speed_mps), 0.2);
+        voice.startThock(rate, contact_s, event.relative_normal_speed_mps);
+        voice.startResidual(rate, residual_gain * speed_scale);
         voice.remaining_samples = lifetimeSamples(rate, maximum_decay_ms);
         voice.texture_envelope = 1.0;
         voice.texture_decay = @exp(-1.0 / (0.018 * rate));
-        voice.texture_gain = 0.035 * speed_scale;
+        voice.texture_gain = 0.035 * noise_gain_scale * speed_scale;
         voice.hard_envelope = hard_amount;
         voice.hard_decay = @exp(-1.0 / (0.004 * rate));
-        voice.hard_gain = 0.18 *
+        voice.hard_gain = 0.18 * noise_gain_scale *
             oneAndEighthPower(event.relative_normal_speed_mps / 20.0);
         voice.texture_filter = Biquad.bandPass(rate, 2766.0, 0.36);
         voice.hard_filter = Biquad.bandPass(rate, 5550.0, 0.47);
@@ -480,15 +901,20 @@ pub const Engine = struct {
 
     fn startFrameVoice(self: *Engine, voice: *Voice, event: HitEvent) void {
         const rate: f32 = @floatFromInt(self.config.sample_rate_hz);
+        const geometry = effectiveHitGeometry(self.config, event);
+        const size_frequency_scale = @sqrt(
+            (self.config.stringed_width_mm * self.config.stringed_height_mm) /
+                (geometry.stringed_width_mm * geometry.stringed_height_mm),
+        );
         const speed_scale = oneAndSixteenthPower(
             event.relative_normal_speed_mps / 5.0,
         );
         const outer_nx = event.x_mm /
-            (0.5 * (self.config.stringed_width_mm +
-                2.0 * self.config.frame_radial_width_mm));
+            (0.5 * (geometry.stringed_width_mm +
+                2.0 * geometry.frame_radial_width_mm));
         const outer_ny = event.y_mm /
-            (0.5 * (self.config.stringed_height_mm +
-                2.0 * self.config.frame_radial_width_mm));
+            (0.5 * (geometry.stringed_height_mm +
+                2.0 * geometry.frame_radial_width_mm));
         const angle = std.math.atan2(outer_ny, outer_nx);
         var maximum_decay_ms: f32 = 1.0;
         for (frame_mode_presets, 0..) |preset, index| {
@@ -504,7 +930,7 @@ pub const Engine = struct {
             );
             voice.modes[index] = Mode.init(
                 rate,
-                preset.frequency_hz,
+                preset.frequency_hz * size_frequency_scale,
                 preset.decay_ms,
                 0.115 * speed_scale * preset.relative_gain *
                     location_gain * radiation_gain,
@@ -512,6 +938,7 @@ pub const Engine = struct {
             );
         }
         voice.mode_count = frame_mode_presets.len;
+        voice.startThock(rate, 0.0006, event.relative_normal_speed_mps);
         voice.remaining_samples = lifetimeSamples(rate, maximum_decay_ms);
         voice.texture_envelope = 0.0;
         voice.texture_decay = 0.0;
@@ -525,12 +952,33 @@ pub const Engine = struct {
 
     inline fn renderSwoosh(self: *Engine) f32 {
         const speed = self.smoothed_racket_speed_mps;
-        if (speed <= 7.0) return 0.0;
-        const amount = @max(0.0, (speed - 7.0) / (40.0 - 7.0));
-        const amplitude = 0.035 * self.config.swoosh_gain * amount * amount * amount;
+        const amplitude = swooshAmplitude(self.config.swoosh_gain, speed);
+        if (amplitude == 0.0) return 0.0;
         const noise = self.swooshNoise();
-        return amplitude * (0.72 * self.swoosh_frame_filter.process(noise) +
-            0.28 * self.swoosh_string_filter.process(noise));
+        const area_scale: f32 = @bitCast(
+            self.racket_area_scale_bits.load(.acquire),
+        );
+        return amplitude * area_scale * self.swooshTurbulence() *
+            (0.72 * self.swoosh_frame_filter.process(noise) +
+                0.28 * self.swoosh_string_filter.process(noise));
+    }
+
+    /// Aperiodic gusts: one-pole low-passed noise normalised to unit
+    /// variance, so the wind never repeats or buzzes.
+    inline fn swooshTurbulence(self: *Engine) f32 {
+        self.swoosh_gust += self.swoosh_gust_coefficient *
+            (self.swooshNoise() - self.swoosh_gust);
+        self.swoosh_eddy += self.swoosh_eddy_coefficient *
+            (self.swooshNoise() - self.swoosh_eddy);
+        const gust_scale = @sqrt(3.0 * (2.0 - self.swoosh_gust_coefficient) /
+            self.swoosh_gust_coefficient);
+        const eddy_scale = @sqrt(3.0 * (2.0 - self.swoosh_eddy_coefficient) /
+            self.swoosh_eddy_coefficient);
+        return @max(
+            0.1,
+            1.0 + 0.16 * self.swoosh_gust * gust_scale +
+                0.07 * self.swoosh_eddy * eddy_scale,
+        );
     }
 
     inline fn swooshNoise(self: *Engine) f32 {
@@ -575,16 +1023,24 @@ pub const Engine = struct {
 
 pub fn classifyHit(config: Config, event: HitEvent) ?HitRegion {
     if (!validConfig(config) or !validHit(event)) return null;
-    const inner_nx = event.x_mm / (0.5 * config.stringed_width_mm);
-    const inner_ny = event.y_mm / (0.5 * config.stringed_height_mm);
-    if (inner_nx * inner_nx + inner_ny * inner_ny < 1.0) return .strings;
+    const geometry = effectiveHitGeometry(config, event);
+    const inner_nx = event.x_mm / (0.5 * geometry.stringed_width_mm);
+    const inner_ny = event.y_mm / (0.5 * geometry.stringed_height_mm);
+    const inside_strings = inner_nx * inner_nx + inner_ny * inner_ny < 1.0;
 
-    const outer_width = config.stringed_width_mm + 2.0 * config.frame_radial_width_mm;
-    const outer_height = config.stringed_height_mm + 2.0 * config.frame_radial_width_mm;
+    const outer_width = geometry.stringed_width_mm +
+        2.0 * geometry.frame_radial_width_mm;
+    const outer_height = geometry.stringed_height_mm +
+        2.0 * geometry.frame_radial_width_mm;
     const outer_nx = event.x_mm / (0.5 * outer_width);
     const outer_ny = event.y_mm / (0.5 * outer_height);
-    if (outer_nx * outer_nx + outer_ny * outer_ny <= 1.0) return .frame;
-    return null;
+    const inside_racket = outer_nx * outer_nx + outer_ny * outer_ny <= 1.0;
+    if (!inside_racket) return null;
+    return switch (@as(HitRegionHint, @enumFromInt(event.region_hint))) {
+        .automatic => if (inside_strings) .strings else .frame,
+        .strings => if (inside_strings) .strings else null,
+        .frame => if (!inside_strings) .frame else null,
+    };
 }
 
 fn validConfig(config: Config) bool {
@@ -593,7 +1049,9 @@ fn validConfig(config: Config) bool {
         finitePositive(config.stringed_height_mm) and
         finitePositive(config.frame_radial_width_mm) and
         std.math.isFinite(config.master_gain) and config.master_gain >= 0.0 and
-        std.math.isFinite(config.swoosh_gain) and config.swoosh_gain >= 0.0;
+        std.math.isFinite(config.swoosh_gain) and config.swoosh_gain >= 0.0 and
+        std.math.isFinite(config.shuttle_flight_gain) and config.shuttle_flight_gain >= 0.0 and
+        finitePositive(config.string_diameter_mm);
 }
 
 fn validHit(event: HitEvent) bool {
@@ -601,7 +1059,38 @@ fn validHit(event: HitEvent) bool {
         finitePositive(event.cross_tension_lbf) and
         std.math.isFinite(event.relative_normal_speed_mps) and
         event.relative_normal_speed_mps >= 0.0 and
-        std.math.isFinite(event.x_mm) and std.math.isFinite(event.y_mm);
+        std.math.isFinite(event.x_mm) and std.math.isFinite(event.y_mm) and
+        event.region_hint <= @intFromEnum(HitRegionHint.frame) and
+        ((event.stringed_width_mm == 0.0 and
+            event.stringed_height_mm == 0.0 and
+            event.frame_radial_width_mm == 0.0) or
+            (finitePositive(event.stringed_width_mm) and
+                finitePositive(event.stringed_height_mm) and
+                finitePositive(event.frame_radial_width_mm)));
+}
+
+const HitGeometry = struct {
+    stringed_width_mm: f32,
+    stringed_height_mm: f32,
+    frame_radial_width_mm: f32,
+};
+
+fn effectiveHitGeometry(config: Config, event: HitEvent) HitGeometry {
+    if (finitePositive(event.stringed_width_mm) and
+        finitePositive(event.stringed_height_mm) and
+        finitePositive(event.frame_radial_width_mm))
+    {
+        return .{
+            .stringed_width_mm = event.stringed_width_mm,
+            .stringed_height_mm = event.stringed_height_mm,
+            .frame_radial_width_mm = event.frame_radial_width_mm,
+        };
+    }
+    return .{
+        .stringed_width_mm = config.stringed_width_mm,
+        .stringed_height_mm = config.stringed_height_mm,
+        .frame_radial_width_mm = config.frame_radial_width_mm,
+    };
 }
 
 fn finitePositive(value: f32) bool {
@@ -611,6 +1100,47 @@ fn finitePositive(value: f32) bool {
 fn smoothStep01(value: f32) f32 {
     const amount = std.math.clamp(value, 0.0, 1.0);
     return amount * amount * (3.0 - 2.0 * amount);
+}
+
+fn swooshAmplitude(gain: f32, speed_mps: f32) f32 {
+    if (speed_mps <= 2.5) return 0.0;
+    const onset_amount = std.math.clamp((speed_mps - 2.5) / 2.5, 0.0, 1.0);
+    const onset = onset_amount * onset_amount * (3.0 - 2.0 * onset_amount);
+    const amount = speed_mps / 40.0;
+    // Pure U^3 far-field scaling made ordinary 4-10 m/s swings effectively
+    // inaudible on headset speakers. Below the calibrated 40 m/s reference,
+    // use a U^2 perceptual playback curve; this adds 18 dB at 5 m/s while
+    // leaving the 40 m/s level unchanged. Above 40 m/s, retain the original
+    // cubic growth and the existing dynamics ceiling.
+    const velocity_curve = if (amount < 1.0)
+        amount * amount
+    else
+        amount * amount * amount;
+    return 0.035 * gain * onset * velocity_curve;
+}
+
+test "swoosh has a faint casual onset and preserves 40 mps calibration" {
+    try std.testing.expectEqual(@as(f32, 0.0), swooshAmplitude(1.0, 2.5));
+    const casual_four = swooshAmplitude(1.0, 4.0);
+    const casual_five = swooshAmplitude(1.0, 5.0);
+    try std.testing.expect(casual_four > 0.0);
+    try std.testing.expect(casual_five > casual_four);
+    try std.testing.expectApproxEqAbs(
+        @as(f32, 0.035 / 64.0),
+        casual_five,
+        0.000_000_1,
+    );
+    try std.testing.expect(swooshAmplitude(1.0, 10.0) > casual_five);
+    try std.testing.expectApproxEqAbs(
+        @as(f32, 0.035),
+        swooshAmplitude(1.0, 40.0),
+        0.000_000_1,
+    );
+    try std.testing.expectApproxEqAbs(
+        @as(f32, 0.035 * 3.375),
+        swooshAmplitude(1.0, 60.0),
+        0.000_000_1,
+    );
 }
 
 // Runtime-friendly exponent approximations. These replace general log/exp

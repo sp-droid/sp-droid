@@ -29,3 +29,12 @@ Then run:
 ```powershell
 .\zig-out\bin\badminton-sound.exe
 ```
+
+## Listening demos
+
+Render successive strikes through the same chain the app plays (hit clip,
+continuous swoosh and limiter) into `demo/`:
+
+```powershell
+zig build demo-render -Doptimize=ReleaseFast
+```

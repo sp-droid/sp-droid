@@ -17,3 +17,6 @@ __pycache__/
 /audio*.mp3
 /reference/*.wav
 /reference/generated/
+
+# Demo renders of the live playback chain
+/demo/

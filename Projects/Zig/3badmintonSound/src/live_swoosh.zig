@@ -12,7 +12,7 @@ pub const Control = struct {
     threshold_mps: f64 = 7.0,
     reference_speed_mps: f64 = 40.0,
     speed_exponent: f64 = 3.0,
-    gain: f64 = 1.20,
+    gain: f64 = 2.54,
     strouhal_number: f64 = 0.20,
     frame_diameter_mm: f64 = 10.0,
     string_diameter_mm: f64 = model.bg66_diameter_mm,
@@ -21,12 +21,14 @@ pub const Control = struct {
     head_height_mm: f64 = 253.0,
     microphone_distance_m: f64 = 1.0,
     response_ms: f64 = 18.0,
-    master_gain: f64 = 0.15,
+    master_gain: f64 = 0.071,
     compressor_threshold_dbfs: f64 = -8.0,
     compressor_ratio: f64 = 4.0,
     compressor_knee_db: f64 = 6.0,
     compressor_release_ms: f64 = 40.0,
     limiter_ceiling_dbfs: f64 = -1.0,
+    swing_build_up_ms: f64 = 0.0,
+    swing_follow_through_ms: f64 = 200.0,
 
     pub fn fromProfile(profile: model.Profile) Control {
         const params = profile.model;
@@ -53,6 +55,8 @@ pub const Control = struct {
             .compressor_knee_db = params.compressor_knee_db,
             .compressor_release_ms = params.compressor_release_ms,
             .limiter_ceiling_dbfs = params.limiter_ceiling_dbfs,
+            .swing_build_up_ms = params.swing_build_up_ms,
+            .swing_follow_through_ms = params.swing_follow_through_ms,
         };
     }
 };
@@ -65,6 +69,7 @@ pub const Generator = struct {
     current_speed_mps: f64 = 0.0,
     frame_band: dsp.Biquad,
     string_band: dsp.Biquad,
+    turbulence: dsp.Turbulence,
     previous_highpass_input: f64 = 0.0,
     previous_highpass_output: f64 = 0.0,
     compressor_gain: f64 = 1.0,
@@ -75,6 +80,7 @@ pub const Generator = struct {
         return .{
             .frame_band = dsp.Biquad.bandPass(sample_rate_hz, 140.0, 0.38),
             .string_band = dsp.Biquad.bandPass(sample_rate_hz, 2121.0, 0.48),
+            .turbulence = swooshTurbulence(sample_rate_hz),
         };
     }
 
@@ -147,10 +153,10 @@ pub const Generator = struct {
             const string_noise = self.string_band.process(
                 deterministicNoise(self.sample_index, 0x9fb2_1c65_1e98_df25),
             );
-            const time_s = @as(f64, @floatFromInt(self.sample_index)) / rate;
-            const turbulent_flutter =
-                1.0 + 0.10 * @sin(2.0 * std.math.pi * 31.0 * time_s) +
-                0.06 * @sin(2.0 * std.math.pi * 73.0 * time_s + 0.7);
+            const turbulent_flutter = self.turbulence.next(
+                self.sample_index,
+                swoosh_turbulence_salt,
+            );
             const raw = control.gain * velocity_scale * propagation_scale *
                 turbulent_flutter *
                 (0.72 * frame_noise + 0.28 * string_noise);
@@ -205,12 +211,21 @@ pub const Generator = struct {
     fn clearSignalState(self: *Generator) void {
         clearFilterState(&self.frame_band);
         clearFilterState(&self.string_band);
+        self.turbulence.reset();
         self.previous_highpass_input = 0.0;
         self.previous_highpass_output = 0.0;
         self.compressor_gain = 1.0;
         self.filter_update_countdown = 0;
     }
 };
+
+pub const swoosh_turbulence_salt: u64 = 0x2545_f491_4f6c_dd1d;
+
+/// Shared by the live source and the offline render so both have the same
+/// gusty, aperiodic wind character.
+pub fn swooshTurbulence(rate_hz: f64) dsp.Turbulence {
+    return dsp.Turbulence.init(rate_hz, 0.16, 0.07);
+}
 
 fn sanitize(input: Control) Control {
     var output = input;

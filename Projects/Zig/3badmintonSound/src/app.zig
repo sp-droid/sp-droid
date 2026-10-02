@@ -50,6 +50,9 @@ const App = struct {
     sidebar_scroll: f32 = 0.0,
     sidebar_content_height: f32 = 0.0,
     next_replay_time: f64 = 0.0,
+    // Each automatic or manual strike gets a fresh realisation, so repeated
+    // replays sound like successive real hits instead of one looped sample.
+    strike_count: u32 = 0,
     animation_started: f64 = 0.0,
     was_valid: bool = false,
     status_buffer: [192:0]u8 = undefined,
@@ -89,7 +92,7 @@ const App = struct {
 
         // Aerodynamic sound follows the current velocity every stream block,
         // even if contact coordinates are invalid or no strike is rendering.
-        self.audio.setSwoosh(self.profile);
+        self.audio.setLiveControls(self.profile);
 
         if (validationError(self.profile)) |_| {
             self.was_valid = false;
@@ -100,7 +103,7 @@ const App = struct {
             self.next_replay_time = now;
         }
         if (now >= self.next_replay_time) {
-            _ = self.worker.request(self.profile);
+            _ = self.worker.request(self.nextStrike());
             self.next_replay_time = now + self.profile.model.replay_interval_s;
         }
     }
@@ -113,6 +116,7 @@ const App = struct {
         const queued = self.audio.submit(
             completed.impact_only_audio,
             completed.output_sample_rate_hz,
+            completed.impact_audio_frame,
         ) catch |err| failed: {
             self.setStatus("Audio queue failed: {s}", .{@errorName(err)});
             break :failed false;
@@ -122,7 +126,8 @@ const App = struct {
             self.allocator.destroy(old);
         }
         self.result = completed;
-        self.animation_started = now + completed.impactTimeSeconds();
+        self.animation_started = now + completed.impactTimeSeconds() +
+            model.swingLeadSeconds(completed.params, completed.impactTimeSeconds());
         if (queued) {
             self.setStatus(
                 "Stream queued; impact in {d:.0} ms, {d:.1} Hz, {d:.1} dB GR, rendered in {d:.0} ms",
@@ -141,13 +146,22 @@ const App = struct {
             self.setStatus("Cannot render: {s}", .{@errorName(err)});
             return;
         }
-        if (self.worker.request(self.profile)) {
+        if (self.worker.request(self.nextStrike())) {
             self.next_replay_time =
                 rl.getTime() + self.profile.model.replay_interval_s;
             self.setStatus("Rendering a new strike...", .{});
         } else {
             self.setStatus("Render already in progress; request skipped", .{});
         }
+    }
+
+    fn nextStrike(self: *App) model.Profile {
+        var strike = self.profile;
+        if (strike.hit.variation_seed == 0) {
+            self.strike_count +%= 1;
+            strike.hit.variation_seed = @max(1, self.strike_count);
+        }
+        return strike;
     }
 
     fn saveProfile(self: *App) void {
@@ -346,8 +360,8 @@ fn drawSidebar(app: *App, bounds: rl.Rectangle) void {
     );
     var controls = ControlEditor.init(viewport, app.sidebar_scroll);
     if (controls.section("HIT INPUT", &app.sections.hit)) {
-        controls.slider("Main tension", "lbf", &app.profile.hit.main_tension_lbf, 1.0, 40.0);
-        controls.slider("Cross tension", "lbf", &app.profile.hit.cross_tension_lbf, 1.0, 40.0);
+        controls.slider("Main tension", "lbf", &app.profile.hit.main_tension_lbf, model.chart_min_tension_lbf, model.chart_max_tension_lbf);
+        controls.slider("Cross tension", "lbf", &app.profile.hit.cross_tension_lbf, model.chart_min_tension_lbf, model.chart_max_tension_lbf);
         controls.slider("Normal collision", "m/s", &app.profile.hit.relative_normal_speed_mps, 0.0, 120.0);
         controls.slider("Racket-head speed", "m/s", &app.profile.hit.racket_speed_mps, 0.0, 80.0);
         controls.slider(
@@ -391,7 +405,7 @@ fn drawSidebar(app: *App, bounds: rl.Rectangle) void {
         controls.sliderU32("Crosses", &app.profile.model.cross_count, 4, 32);
     }
     if (controls.section("STRING BED (BG66)", &app.sections.strings)) {
-        controls.slider("Diameter", "mm", &app.profile.model.string_diameter_mm, 0.4, 1.2);
+        controls.slider("Diameter", "mm", &app.profile.model.string_diameter_mm, model.chart_min_diameter_mm, model.chart_max_diameter_mm);
         controls.slider("Density", "kg/m3", &app.profile.model.string_density_kg_m3, 700.0, 1800.0);
         controls.slider("Young's modulus", "GPa", &app.profile.model.string_young_modulus_gpa, 1.0, 15.0);
         controls.logSlider("Small-signal damping", "1/s", &app.profile.model.string_damping_rate_s, 1.0, 1500.0);
@@ -405,6 +419,8 @@ fn drawSidebar(app: *App, bounds: rl.Rectangle) void {
     }
     if (controls.section("SHUTTLE + CONTACT", &app.sections.contact)) {
         controls.slider("Shuttle mass", "g", &app.profile.model.shuttle_mass_g, 1.0, 20.0);
+        controls.slider("Skirt diameter", "mm", &app.profile.model.shuttle_skirt_diameter_mm, 40.0, 90.0);
+        controls.slider("Skirt thock gain", "", &app.profile.model.shuttle_dipole_gain, 0.0, 20.0);
         controls.slider("Cork diameter", "mm", &app.profile.model.cork_diameter_mm, 15.0, 40.0);
         controls.logSlider("Contact stiffness", "", &app.profile.model.contact_stiffness_n_m_pow, 1.0e3, 1.0e8);
         controls.slider("Contact exponent", "", &app.profile.model.contact_exponent, 1.0, 3.0);
@@ -518,6 +534,9 @@ fn drawSidebar(app: *App, bounds: rl.Rectangle) void {
     if (controls.section("UPPER RADIATION MODES", &app.sections.upper_modes)) {
         controls.logSlider("Mode-bank gain", "", &app.profile.model.upper_mode_gain, 0.001, 30.0);
         controls.slider("Mode decay", "ms", &app.profile.model.upper_mode_decay_ms, 5.0, 100.0);
+        controls.slider("Dense residual gain", "", &app.profile.model.modal_residual_gain, 0.0, 4.0);
+        controls.slider("Residual decay @1 kHz", "ms", &app.profile.model.modal_residual_decay_ms_at_1khz, 2.0, 80.0);
+        controls.slider("Residual tilt", "dB/oct", &app.profile.model.modal_residual_tilt_db_per_octave, -9.0, 3.0);
         controls.slider("Fast-hit decay scale", "", &app.profile.model.upper_mode_fast_decay_scale, 0.05, 1.0);
         controls.slider("Contact roughness", "", &app.profile.model.upper_mode_contact_roughness, 0.0, 2.0);
         controls.slider("Acceleration weighting", "", &app.profile.model.upper_mode_radiation_exponent, 0.0, 3.0);
@@ -541,10 +560,17 @@ fn drawSidebar(app: *App, bounds: rl.Rectangle) void {
         controls.slider("Silent below", "m/s", &app.profile.model.swoosh_threshold_mps, 0.0, 20.0);
         controls.slider("Reference speed", "m/s", &app.profile.model.swoosh_reference_speed_mps, 15.0, 80.0);
         controls.slider("Velocity exponent", "", &app.profile.model.swoosh_speed_exponent, 1.0, 4.0);
-        controls.logSlider("Swoosh gain", "", &app.profile.model.swoosh_gain, 0.001, 10.0);
+        controls.logSlider("Swoosh gain", "", &app.profile.model.swoosh_gain, 0.01, 100.0);
         controls.slider("Strouhal number", "", &app.profile.model.swoosh_strouhal_number, 0.10, 0.30);
         controls.slider("Frame diameter", "mm", &app.profile.model.swoosh_frame_diameter_mm, 3.0, 25.0);
         controls.slider("Velocity response", "ms", &app.profile.model.swoosh_post_impact_decay_ms, 2.0, 80.0);
+        controls.slider("Swing build-up (0=steady)", "ms", &app.profile.model.swing_build_up_ms, 0.0, 600.0);
+        controls.slider("Follow-through", "ms", &app.profile.model.swing_follow_through_ms, 20.0, 600.0);
+        controls.logSlider("Shuttle flight gain", "", &app.profile.model.shuttle_flight_gain, 0.01, 300.0);
+        controls.slider("Flight silent below", "m/s", &app.profile.model.shuttle_flight_threshold_mps, 0.0, 40.0);
+        controls.slider("Terminal speed", "m/s", &app.profile.model.shuttle_terminal_speed_mps, 3.0, 12.0);
+        controls.slider("Feather vane scale", "mm", &app.profile.model.shuttle_flight_vane_mm, 1.0, 12.0);
+        controls.slider("Feather shaft diameter", "mm", &app.profile.model.shuttle_rachis_mm, 0.5, 4.0);
     }
     if (controls.section("AIR + RADIATION", &app.sections.acoustics)) {
         controls.slider("Air density", "kg/m3", &app.profile.model.air_density_kg_m3, 0.5, 2.0);
