@@ -104,11 +104,10 @@ let dataGridSize = new Uint32Array([GRID_SIZEx, GRID_SIZEy]);
 const nColors = 1000;
 let dataCellColorPool = new Uint32Array(nColors);
 
-const colormap = d3.scaleSequential(d3.interpolateTurbo); // Similar to "jet"
 for (let i=0; i<nColors; i++) {
-    //const [r, g, b] = evaluate_cmap(i/nColors, 'gist_rainbow', true); //gist_rainbow //binary
-    const color = d3.color(colormap(i/nColors));
-    dataCellColorPool[i] = (color.r << 24) | (color.g << 16) | (color.b << 8) | 255;
+    const grey = Math.round(i/nColors*255);
+    const [r, g, b] = [grey, grey, grey];
+    dataCellColorPool[i] = (r << 24) | (g << 16) | (b << 8) | 255;
 }
 
 let dataCellState = new Uint32Array(nCells);
@@ -179,10 +178,10 @@ const bufferatomicMaxProgeny = device.createBuffer({
     size: 4,
     usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC
 });
-const bufferStorageMaxProgenyHistory = device.createBuffer({
-    label: "Max progeny history",
-    size: 20*4,
-    usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
+const bufferStorageFrozenCount = device.createBuffer({
+    label: "Frozen cell counter",
+    size: 4,
+    usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC
 });
 
 // Writing buffers
@@ -193,7 +192,10 @@ device.queue.writeBuffer(bufferStorageCellState, 0, dataCellState);
 device.queue.writeBuffer(bufferStorageFrozenParentProgeny, 0, dataCellFrozenParentProgeny);
 device.queue.writeBuffer(bufferStorageRandom, 0, randomInts);
 device.queue.writeBuffer(bufferatomicMaxProgeny, 0, new Uint32Array([nSeeds]));
-let progressModifier = 60;
+device.queue.writeBuffer(bufferStorageFrozenCount, 0, new Uint32Array([nSeeds]));
+// Minimum steps a walker must take before it can freeze, lowered whenever growth stalls (see gameLoop)
+const PROGRESS_START = 60;
+let progressModifier = PROGRESS_START;
 device.queue.writeBuffer(bufferStorageProgressMod, 0, new Uint32Array([progressModifier]));
 
 // Bind layouts
@@ -247,7 +249,7 @@ const bindGroupLayoutCompute = device.createBindGroupLayout({
     }, {
         binding: 8,
         visibility: GPUShaderStage.COMPUTE,
-        buffer: { type: "storage" } // Max progeny history
+        buffer: { type: "storage" } // Frozen cell counter
     }]
 })
 
@@ -305,7 +307,7 @@ const bindGroupsCompute = [
         },
         {
             binding: 8,
-            resource: { buffer: bufferStorageMaxProgenyHistory }
+            resource: { buffer: bufferStorageFrozenCount }
         }]
     })
 ]
@@ -357,14 +359,6 @@ const pipelineComputeCompleteFreeze = device.createComputePipeline({
         entryPoint: "mainCompleteFreeze"
     }
 });
-const pipelineComputeDLAmaintenance = device.createComputePipeline({
-    label: "Compute pipeline mainDLAmaintenance",
-    layout: pipelineLayoutCompute,
-    compute: {
-        module: computeShaderModule,
-        entryPoint: "mainDLAmaintenance"
-    }
-});
 const pipelineComputePaintFrozen = device.createComputePipeline({
     label: "Compute pipeline mainPaintFrozen",
     layout: pipelineLayoutCompute,
@@ -385,12 +379,35 @@ const workgroupCount1D = Math.ceil(nCells/WORKGROUP_SIZE/COARSE_FACTOR);
 
 let lastTime = 0.0; const UPDATE_INTERVAL = 1000/144;
 
-const stagingBufferProgressMod = device.createBuffer({
-    label: "Staging buffer for progress modifier",
+const stagingBufferFrozenCount = device.createBuffer({
+    label: "Staging buffer for frozen cell counter",
     size: 4,
     usage: GPUBufferUsage.MAP_READ | GPUBufferUsage.COPY_DST
 });
-let remainingFrames = 200;
+
+// Once the first network is built, the remaining gaps are only a few cells wide and can't fill until the
+// progress modifier is very low. So lower it quickly whenever growth per step falls below a fraction of its peak,
+// once a minimum part of the grid is frozen so the slow start isn't mistaken for a stall.
+const PROGRESS_DECAY = 0.8;
+const STALL_RATE = 0.02;
+const STALL_MIN_FROZEN = 0.05;
+let peakFreezesPerStep = 0;
+
+// Steps per frame adapt so roughly the same number of cells freeze every frame
+const TARGET_FRAMES = 1500;
+const MIN_STEPS_PER_FRAME = 1;
+const MAX_STEPS_PER_FRAME = 2000;
+const targetFreezesPerFrame = nCells / TARGET_FRAMES;
+let stepsPerFrame = MIN_STEPS_PER_FRAME;
+let frozenCount = nSeeds;
+let stalledFrames = 0;
+let done = false;
+
+const baseTitle = document.title;
+function updateTitle() {
+    document.title = done ? `${baseTitle} · Done` : `${baseTitle} · ${Math.floor(100 * frozenCount / nCells)}%`;
+}
+
 async function gameLoop() {
     const timestamp = performance.now();
     const elapsed = timestamp - lastTime;
@@ -402,22 +419,35 @@ async function gameLoop() {
     } else {
         lastTime = timestamp;
     }
-    
+
     const encoder = device.createCommandEncoder();
-    updateCompute(500, encoder);
+    updateCompute(stepsPerFrame, encoder);
     updateRender(encoder);
 
-    encoder.copyBufferToBuffer(bufferStorageProgressMod, 0, stagingBufferProgressMod, 0, 4);
+    encoder.copyBufferToBuffer(bufferStorageFrozenCount, 0, stagingBufferFrozenCount, 0, 4);
     device.queue.submit([encoder.finish()]);
 
-    await stagingBufferProgressMod.mapAsync(GPUMapMode.READ);
-    const arrayBuffer = stagingBufferProgressMod.getMappedRange();
-    progressModifier = new Uint32Array(arrayBuffer)[0];
-    console.log("Progress Modifier Value:", progressModifier);
-    stagingBufferProgressMod.unmap();
+    await stagingBufferFrozenCount.mapAsync(GPUMapMode.READ);
+    const newFrozenCount = new Uint32Array(stagingBufferFrozenCount.getMappedRange())[0];
+    stagingBufferFrozenCount.unmap();
+    const freezes = newFrozenCount - frozenCount;
+    frozenCount = newFrozenCount;
 
-    if (progressModifier == 0) { remainingFrames -= 1; }
-    if (remainingFrames != 0) { requestAnimationFrame(gameLoop); }
+    const freezesPerStep = freezes / stepsPerFrame;
+    peakFreezesPerStep = Math.max(peakFreezesPerStep, freezesPerStep);
+    if (progressModifier > 0 && frozenCount > STALL_MIN_FROZEN * nCells && freezesPerStep < STALL_RATE * peakFreezesPerStep) {
+        progressModifier = Math.floor(progressModifier * PROGRESS_DECAY);
+        device.queue.writeBuffer(bufferStorageProgressMod, 0, new Uint32Array([progressModifier]));
+    }
+
+    const speedup = Math.min(1.5, Math.max(0.5, targetFreezesPerFrame / Math.max(1, freezes)));
+    stepsPerFrame = Math.min(MAX_STEPS_PER_FRAME, Math.max(MIN_STEPS_PER_FRAME, Math.round(stepsPerFrame * speedup)));
+
+    // Done when every cell is frozen, or nothing freezes for a while once walkers can freeze anywhere
+    stalledFrames = progressModifier == 0 && freezes == 0 ? stalledFrames + 1 : 0;
+    done = frozenCount >= nCells || stalledFrames >= 60;
+    updateTitle();
+    if (!done) { requestAnimationFrame(gameLoop); }
 }
 requestAnimationFrame(gameLoop);
 
@@ -438,9 +468,6 @@ async function updateRender(encoder) {
     computePass.setBindGroup(0, bindGroupsCompute[0]);
     computePass.setPipeline(pipelineComputeCompleteFreeze);
     computePass.dispatchWorkgroups(workgroupCountX, workgroupCountY);
-
-    computePass.setPipeline(pipelineComputeDLAmaintenance);
-    computePass.dispatchWorkgroups(1);
 
     computePass.setPipeline(pipelineComputePaintFrozen);
     computePass.dispatchWorkgroups(workgroupCountX, workgroupCountY);
